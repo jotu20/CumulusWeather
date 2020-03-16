@@ -10201,23 +10201,6 @@
             </objects>
             <point key="canvasLocation" x="3076" y="1845"/>
         </scene>
-        <!--Map View Controller-->
-        <scene sceneID="DxM-9H-GHc">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="gQg-D0-Sdm" customClass="MapViewController" customModule="Cumulus" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tbc-he-e9m">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="customControlColor"/>
-                        <viewLayoutGuide key="safeArea" id="LjZ-wl-M3w"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="atF-gE-mHE"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UUB-lC-B02" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1120.8" y="1841.8290854572715"/>
-        </scene>
         <!--Settings Table View Controller-->
         <scene sceneID="n9X-Nv-oaP">
             <objects>
@@ -11842,7 +11825,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     </tabBar>
                     <connections>
                         <segue destination="EMa-zd-tfV" kind="relationship" relationship="viewControllers" id="C81-aX-DSa"/>
-                        <segue destination="fHn-AT-iqS" kind="relationship" relationship="viewControllers" id="Hcr-Sz-Su1"/>
                         <segue destination="AfO-6y-JEH" kind="relationship" relationship="viewControllers" id="B0p-8N-eft"/>
                         <segue destination="Msi-i6-uYY" kind="relationship" relationship="viewControllers" id="oLx-3e-apf"/>
                     </connections>
@@ -11871,27 +11853,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9f-q2-fMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2063.1999999999998" y="131.78410794602701"/>
-        </scene>
-        <!--Map-->
-        <scene sceneID="j6H-6Y-bt3">
-            <objects>
-                <navigationController storyboardIdentifier="Map" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="fHn-AT-iqS" sceneMemberID="viewController">
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Map" image="Mapview button" id="OSD-Tv-b4B"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="MBr-tt-ZYu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="customControlColor"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gQg-D0-Sdm" kind="relationship" relationship="rootViewController" id="OLo-wU-xxl"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1eU-Wf-Es7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1124" y="1011"/>
         </scene>
         <!--Cumulus Pro Table View Controller-->
         <scene sceneID="GcP-vx-IuH">
@@ -12088,40 +12049,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <sections>
                             <tableViewSection id="pq9-ED-wxo">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Nmr-tP-F0n" detailTextLabel="vRs-gx-xWu" imageView="Xwh-jF-eNN" rowHeight="112" style="IBUITableViewCellStyleSubtitle" id="jnA-hl-jml">
-                                        <rect key="frame" x="0.0" y="513" width="375" height="112"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jnA-hl-jml" id="OqF-Se-m1a">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Advanced Weather Maps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nmr-tP-F0n">
-                                                    <rect key="frame" x="91" y="29" width="191.5" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    </variation>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Additional layers like alerts, heat index, and more!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vRs-gx-xWu">
-                                                    <rect key="frame" x="91" y="52.5" width="223.5" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Maps icon" id="Xwh-jF-eNN">
-                                                    <rect key="frame" x="16" y="26" width="60" height="60"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="LYZ-du-04S" detailTextLabel="mAW-lf-AeP" imageView="Oyd-cF-aQU" rowHeight="112" style="IBUITableViewCellStyleSubtitle" id="e5Y-ye-jFf">
-                                        <rect key="frame" x="0.0" y="625" width="375" height="112"/>
+                                        <rect key="frame" x="0.0" y="513" width="375" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e5Y-ye-jFf" id="Gw7-zU-WSE">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
@@ -12150,28 +12079,28 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="4dw-Dy-9zx" detailTextLabel="D8o-wo-gjT" imageView="Ghy-cP-8JV" rowHeight="112" style="IBUITableViewCellStyleSubtitle" id="ys3-Ht-aGc">
-                                        <rect key="frame" x="0.0" y="737" width="375" height="112"/>
+                                        <rect key="frame" x="0.0" y="625" width="375" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ys3-Ht-aGc" id="stt-eW-7RG">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Theme Control" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4dw-Dy-9zx">
-                                                    <rect key="frame" x="83" y="29" width="114" height="20.5"/>
+                                                    <rect key="frame" x="91" y="29" width="114" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Set the appearance of Cumulus with over 10+ themes to choose from." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D8o-wo-gjT">
-                                                    <rect key="frame" x="83" y="52.5" width="261" height="29"/>
+                                                    <rect key="frame" x="91" y="52.5" width="261" height="29"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Themes icon" id="Ghy-cP-8JV">
-                                                    <rect key="frame" x="8" y="26" width="60" height="60"/>
+                                                    <rect key="frame" x="16" y="26" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -12179,7 +12108,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="26E-mi-yzN" detailTextLabel="ASX-Kd-X9S" imageView="mbz-Ee-lyF" rowHeight="112" style="IBUITableViewCellStyleSubtitle" id="Hjg-Y0-kKA">
-                                        <rect key="frame" x="0.0" y="849" width="375" height="112"/>
+                                        <rect key="frame" x="0.0" y="737" width="375" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hjg-Y0-kKA" id="1Bp-ea-Je5">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
@@ -12208,7 +12137,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="CaE-os-b5k" detailTextLabel="DYU-VT-uSe" imageView="u1o-gf-6oD" rowHeight="112" style="IBUITableViewCellStyleSubtitle" id="GdY-ho-Mu6">
-                                        <rect key="frame" x="0.0" y="961" width="375" height="112"/>
+                                        <rect key="frame" x="0.0" y="849" width="375" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GdY-ho-Mu6" id="UxV-Mh-c3J">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
@@ -12373,871 +12302,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             </objects>
             <point key="canvasLocation" x="6798" y="2642"/>
         </scene>
-        <!--Map Layers Table View Controller-->
-        <scene sceneID="jdF-eD-bSt">
-            <objects>
-                <tableViewController modalPresentationStyle="fullScreen" clearsSelectionOnViewWillAppear="NO" id="Dp7-92-uWD" customClass="MapLayersTableViewController" customModule="Cumulus" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" dataMode="static" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="SWs-4q-oQ6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="customControlColor"/>
-                        <gestureRecognizers/>
-                        <sections>
-                            <tableViewSection headerTitle="Radar + Satellite" id="bCx-am-EKz">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="UTf-4A-BJZ">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UTf-4A-BJZ" id="Oju-Rv-sIs">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2e-NO-Oyw">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="UPI-pc-p5B"/>
-                                                        <constraint firstAttribute="height" constant="43.5" id="fN3-7B-pph"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="K2e-NO-Oyw" firstAttribute="centerY" secondItem="Oju-Rv-sIs" secondAttribute="centerY" id="1p3-M3-eiL"/>
-                                                <constraint firstItem="K2e-NO-Oyw" firstAttribute="leading" secondItem="Oju-Rv-sIs" secondAttribute="leading" constant="16" id="ai3-cR-Rwn"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="LPM-Qi-FUa" appends="YES" id="GYb-Eh-M2z"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="75o-vI-3qx">
-                                        <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="75o-vI-3qx" id="prB-aL-MH5">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visible Satellite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKb-2C-Ezn">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="3f1-hs-Fqw"/>
-                                                        <constraint firstAttribute="height" constant="43.5" id="GvO-MV-k6T"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="OKb-2C-Ezn" firstAttribute="centerY" secondItem="prB-aL-MH5" secondAttribute="centerY" id="9z2-6s-Cls"/>
-                                                <constraint firstItem="OKb-2C-Ezn" firstAttribute="leading" secondItem="prB-aL-MH5" secondAttribute="leading" constant="16" id="hh2-7T-JEW"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="JIY-09-vf6" appends="YES" id="0RP-Xk-4QC"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="jOg-pQ-dUE">
-                                        <rect key="frame" x="0.0" y="143.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jOg-pQ-dUE" id="iZt-vQ-bGB">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infrared Satellite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWb-zn-lAb">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="LZs-H8-gWG"/>
-                                                        <constraint firstAttribute="height" constant="43.5" id="MWT-4y-qCZ"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="sWb-zn-lAb" firstAttribute="centerY" secondItem="iZt-vQ-bGB" secondAttribute="centerY" id="Wca-Al-ZGf"/>
-                                                <constraint firstItem="sWb-zn-lAb" firstAttribute="leading" secondItem="iZt-vQ-bGB" secondAttribute="leading" constant="16" id="dki-ss-H9i"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="LfH-TD-RBW" appends="YES" id="nAx-iX-sS6"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="UoY-yw-YXu">
-                                        <rect key="frame" x="0.0" y="187.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UoY-yw-YXu" id="na5-yK-JwR">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water Vapor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svz-di-FV7">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="43.5" id="spM-zB-PCL"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="z1E-T7-1VC"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="svz-di-FV7" firstAttribute="centerY" secondItem="na5-yK-JwR" secondAttribute="centerY" id="nnq-kJ-hdl"/>
-                                                <constraint firstItem="svz-di-FV7" firstAttribute="leading" secondItem="na5-yK-JwR" secondAttribute="leading" constant="16" id="uwP-1g-HOg"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="OaK-TF-lgY" appends="YES" id="d8G-zF-4es"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Severe Weather" id="QJs-zu-fVC">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="c6b-Vi-63r">
-                                        <rect key="frame" x="0.0" y="287.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c6b-Vi-63r" id="dbQ-Nk-h2b">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alerts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bC-5O-tuz">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="43.5" id="Pxb-9d-rnm"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="R4W-Fm-hqk"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="1bC-5O-tuz" firstAttribute="centerY" secondItem="dbQ-Nk-h2b" secondAttribute="centerY" id="4vq-dV-GNA"/>
-                                                <constraint firstItem="1bC-5O-tuz" firstAttribute="leading" secondItem="dbQ-Nk-h2b" secondAttribute="leading" constant="16" id="Wbh-jy-Dk1"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="xhq-2D-yFK" appends="YES" id="l4X-F9-mdk"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Observations" id="Mbg-nz-dyr">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="M2N-AY-ENV">
-                                        <rect key="frame" x="0.0" y="387.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M2N-AY-ENV" id="6lc-AW-l6F">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWb-0t-K5d">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="43.5" id="GbW-DH-E7f"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="N4h-VS-Ea7"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="TWb-0t-K5d" firstAttribute="centerY" secondItem="6lc-AW-l6F" secondAttribute="centerY" id="7dK-ce-WRg"/>
-                                                <constraint firstItem="TWb-0t-K5d" firstAttribute="leading" secondItem="6lc-AW-l6F" secondAttribute="leading" constant="16" id="ScX-nq-5l3"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="AIt-f8-qlg" appends="YES" id="E0p-6D-t8a"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="Pq1-Nu-2G9">
-                                        <rect key="frame" x="0.0" y="431.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pq1-Nu-2G9" id="nDE-CU-fhH">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dew Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiC-4A-0OL">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="4CO-dt-yUN"/>
-                                                        <constraint firstAttribute="height" constant="43.5" id="cjr-5e-NTT"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="ZiC-4A-0OL" firstAttribute="leading" secondItem="nDE-CU-fhH" secondAttribute="leading" constant="16" id="fVw-rV-XFF"/>
-                                                <constraint firstItem="ZiC-4A-0OL" firstAttribute="centerY" secondItem="nDE-CU-fhH" secondAttribute="centerY" id="zBN-SR-hC1"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="tSG-UE-Czh" appends="YES" id="SKJ-ND-wcZ"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="lm4-J3-LxS">
-                                        <rect key="frame" x="0.0" y="475.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lm4-J3-LxS" id="26i-tL-JS2">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gld-Ym-X1B">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="KkQ-sv-5vp"/>
-                                                        <constraint firstAttribute="height" constant="43.5" id="w6S-It-p3Z"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="gld-Ym-X1B" firstAttribute="centerY" secondItem="26i-tL-JS2" secondAttribute="centerY" id="6TR-42-2ZB"/>
-                                                <constraint firstItem="gld-Ym-X1B" firstAttribute="leading" secondItem="26i-tL-JS2" secondAttribute="leading" constant="16" id="DBC-9n-Vjy"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="7cC-zR-vBs" appends="YES" id="d1b-56-e5i"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="Qsq-Yh-gSO">
-                                        <rect key="frame" x="0.0" y="519.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qsq-Yh-gSO" id="RiR-vX-hra">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTf-8V-58h">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="Vme-f9-y1k"/>
-                                                        <constraint firstAttribute="height" constant="43.5" id="erc-Tk-WOk"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="xTf-8V-58h" firstAttribute="centerY" secondItem="RiR-vX-hra" secondAttribute="centerY" id="7J8-Jl-6cj"/>
-                                                <constraint firstItem="xTf-8V-58h" firstAttribute="leading" secondItem="RiR-vX-hra" secondAttribute="leading" constant="16" id="wQw-3a-tV4"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="jhH-O2-o4f" appends="YES" id="aVU-6S-sxB"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="QeR-LX-ni9">
-                                        <rect key="frame" x="0.0" y="563.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QeR-LX-ni9" id="ExR-ko-eQx">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Gusts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKI-FB-5Sa">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="dw9-QH-swJ"/>
-                                                        <constraint firstAttribute="height" constant="43.5" id="jUF-g5-Kgr"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="vKI-FB-5Sa" firstAttribute="centerY" secondItem="ExR-ko-eQx" secondAttribute="centerY" id="QVs-cF-auv"/>
-                                                <constraint firstItem="vKI-FB-5Sa" firstAttribute="leading" secondItem="ExR-ko-eQx" secondAttribute="leading" constant="16" id="vr2-SH-zyQ"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="ITG-tP-UKe" appends="YES" id="SVe-59-0iC"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="IKv-KI-04T">
-                                        <rect key="frame" x="0.0" y="607.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IKv-KI-04T" id="26o-2K-v4f">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Direction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ic-E7-OA7">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="lbl-Vm-Q7H"/>
-                                                        <constraint firstAttribute="height" constant="43.5" id="wFN-xn-YQ8"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="0ic-E7-OA7" firstAttribute="centerY" secondItem="26o-2K-v4f" secondAttribute="centerY" id="8pY-w4-t1e"/>
-                                                <constraint firstItem="0ic-E7-OA7" firstAttribute="leading" secondItem="26o-2K-v4f" secondAttribute="leading" constant="16" id="B9x-kq-9wu"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="Jvv-SL-L0l" appends="YES" id="xaK-v5-rvR"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="qsa-Ah-5c7">
-                                        <rect key="frame" x="0.0" y="651.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qsa-Ah-5c7" id="J63-ft-aYp">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Chill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ow-Rj-Kza">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="mAE-Kx-kFV"/>
-                                                        <constraint firstAttribute="height" constant="43.5" id="yYT-gR-LUi"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="4ow-Rj-Kza" firstAttribute="centerY" secondItem="J63-ft-aYp" secondAttribute="centerY" id="E3p-Pt-ufW"/>
-                                                <constraint firstItem="4ow-Rj-Kza" firstAttribute="leading" secondItem="J63-ft-aYp" secondAttribute="leading" constant="16" id="vCC-wc-dJr"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="GpK-fr-Uru" appends="YES" id="LUq-SD-RLt"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="W4V-YF-bGn">
-                                        <rect key="frame" x="0.0" y="695.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W4V-YF-bGn" id="s8y-Vj-vIW">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heat Index" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6o-Bj-qlA">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="LP5-Id-beT"/>
-                                                        <constraint firstAttribute="height" constant="43.5" id="lXA-fL-MKD"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="B6o-Bj-qlA" firstAttribute="leading" secondItem="s8y-Vj-vIW" secondAttribute="leading" constant="16" id="OnN-wb-S2c"/>
-                                                <constraint firstItem="B6o-Bj-qlA" firstAttribute="centerY" secondItem="s8y-Vj-vIW" secondAttribute="centerY" id="lEz-LA-cks"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="gat-Jo-QAg" appends="YES" id="G8s-dn-yEK"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="3jX-q8-wla">
-                                        <rect key="frame" x="0.0" y="739.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3jX-q8-wla" id="eY5-J2-R7R">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feels Like" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tc-Ph-Wp1">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="bOk-XS-cpn"/>
-                                                        <constraint firstAttribute="height" constant="43.5" id="idR-jj-6dM"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="0tc-Ph-Wp1" firstAttribute="centerY" secondItem="eY5-J2-R7R" secondAttribute="centerY" id="QRH-l7-33e"/>
-                                                <constraint firstItem="0tc-Ph-Wp1" firstAttribute="leading" secondItem="eY5-J2-R7R" secondAttribute="leading" constant="16" id="lEB-T5-hgP"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="G5f-jS-VHs" appends="YES" id="7AK-cc-IYl"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="eFX-2o-up9">
-                                        <rect key="frame" x="0.0" y="783.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eFX-2o-up9" id="Tfj-sq-yn9">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Air Quality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdj-C3-GUT">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="43.5" id="IRg-2Z-f9y"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="gva-GM-Ici"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Pdj-C3-GUT" firstAttribute="centerY" secondItem="Tfj-sq-yn9" secondAttribute="centerY" id="NWB-tH-FzR"/>
-                                                <constraint firstItem="Pdj-C3-GUT" firstAttribute="leading" secondItem="Tfj-sq-yn9" secondAttribute="leading" constant="16" id="SdN-eC-MBw"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="dDo-0V-zJr" appends="YES" id="72x-Wr-ZIO"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="Bn0-Wk-eSD">
-                                        <rect key="frame" x="0.0" y="827.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bn0-Wk-eSD" id="KpX-uj-etI">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precipitation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCB-JX-28a">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="43.5" id="4Pf-bD-6Ka"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="rBk-Xd-DNA"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="eCB-JX-28a" firstAttribute="leading" secondItem="KpX-uj-etI" secondAttribute="leading" constant="16" id="e37-9l-D04"/>
-                                                <constraint firstItem="eCB-JX-28a" firstAttribute="centerY" secondItem="KpX-uj-etI" secondAttribute="centerY" id="zVH-hX-XAY"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="LXG-cc-flB" appends="YES" id="ybf-rV-LPt"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="Gtd-uj-SlZ">
-                                        <rect key="frame" x="0.0" y="871.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gtd-uj-SlZ" id="Fz6-Gj-Cjd">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visibility" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwi-qx-AnH">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="Ege-D0-caf"/>
-                                                        <constraint firstAttribute="height" constant="43.5" id="wfD-ic-ajB"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="cwi-qx-AnH" firstAttribute="centerY" secondItem="Fz6-Gj-Cjd" secondAttribute="centerY" id="Xfr-QJ-FB2"/>
-                                                <constraint firstItem="cwi-qx-AnH" firstAttribute="leading" secondItem="Fz6-Gj-Cjd" secondAttribute="leading" constant="16" id="YCo-33-DlN"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="xGT-dn-2Lt" appends="YES" id="a18-pr-lXY"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Map Settings" id="uA4-yT-5eX">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eUU-1L-NxC">
-                                        <rect key="frame" x="0.0" y="971.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eUU-1L-NxC" id="XD3-lV-IK6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map Style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezc-qo-wta">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="I3y-YW-1ds"/>
-                                                        <constraint firstAttribute="height" constant="43.5" id="yEL-5O-Ra9"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Standard" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tws-cb-HfG">
-                                                    <rect key="frame" x="255" y="12" width="110" height="20"/>
-                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="DK5-58-skP"/>
-                                                        <constraint firstAttribute="width" constant="140" id="bMM-7n-Uqw">
-                                                            <variation key="heightClass=regular-widthClass=regular" constant="135"/>
-                                                        </constraint>
-                                                        <constraint firstAttribute="height" constant="34" id="c0V-d0-HdE">
-                                                            <variation key="heightClass=regular-widthClass=regular" constant="27"/>
-                                                        </constraint>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="uos-yf-vgs"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="bMM-7n-Uqw"/>
-                                                            <exclude reference="c0V-d0-HdE"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                        <mask key="constraints">
-                                                            <exclude reference="DK5-58-skP"/>
-                                                            <include reference="bMM-7n-Uqw"/>
-                                                            <include reference="c0V-d0-HdE"/>
-                                                            <exclude reference="uos-yf-vgs"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="Dp7-92-uWD" id="LIl-mg-7lP"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="ezc-qo-wta" firstAttribute="centerY" secondItem="XD3-lV-IK6" secondAttribute="centerY" id="Ed1-U3-Dms"/>
-                                                <constraint firstAttribute="trailing" secondItem="tws-cb-HfG" secondAttribute="trailing" constant="10" id="Ik9-OQ-z9c">
-                                                    <variation key="heightClass=regular-widthClass=regular" constant="15"/>
-                                                </constraint>
-                                                <constraint firstItem="tws-cb-HfG" firstAttribute="centerY" secondItem="XD3-lV-IK6" secondAttribute="centerY" id="WMP-ag-ywI"/>
-                                                <constraint firstItem="ezc-qo-wta" firstAttribute="leading" secondItem="XD3-lV-IK6" secondAttribute="leading" constant="16" id="bqv-c3-mFd"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eso-Xo-OKR">
-                                        <rect key="frame" x="0.0" y="1015.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eso-Xo-OKR" id="wV3-fH-BUg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDq-fC-Efq">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="06D-F3-kHV"/>
-                                                        <constraint firstAttribute="height" constant="43.5" id="oAB-Lj-pI9"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="State" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jdo-nk-WRh">
-                                                    <rect key="frame" x="255" y="12" width="110" height="20"/>
-                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="255-HD-UZX"/>
-                                                        <constraint firstAttribute="height" constant="20" id="6m3-0g-qcy"/>
-                                                        <constraint firstAttribute="height" constant="34" id="hpR-HO-SSm">
-                                                            <variation key="heightClass=regular-widthClass=regular" constant="27"/>
-                                                        </constraint>
-                                                        <constraint firstAttribute="width" constant="140" id="q8z-CZ-cz1">
-                                                            <variation key="heightClass=regular-widthClass=regular" constant="135"/>
-                                                        </constraint>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="hpR-HO-SSm"/>
-                                                            <exclude reference="q8z-CZ-cz1"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                        <mask key="constraints">
-                                                            <exclude reference="255-HD-UZX"/>
-                                                            <exclude reference="6m3-0g-qcy"/>
-                                                            <include reference="hpR-HO-SSm"/>
-                                                            <include reference="q8z-CZ-cz1"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="Dp7-92-uWD" id="dxe-XE-Pt8"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="mDq-fC-Efq" firstAttribute="centerY" secondItem="wV3-fH-BUg" secondAttribute="centerY" id="KCE-Mx-PwE"/>
-                                                <constraint firstItem="Jdo-nk-WRh" firstAttribute="centerY" secondItem="wV3-fH-BUg" secondAttribute="centerY" id="Y3j-2F-BcC"/>
-                                                <constraint firstItem="mDq-fC-Efq" firstAttribute="leading" secondItem="wV3-fH-BUg" secondAttribute="leading" constant="16" id="Z3B-B1-1ia"/>
-                                                <constraint firstAttribute="trailing" secondItem="Jdo-nk-WRh" secondAttribute="trailing" constant="10" id="gKy-Gg-P2x">
-                                                    <variation key="heightClass=regular-widthClass=regular" constant="15"/>
-                                                </constraint>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aPF-ih-dIL">
-                                        <rect key="frame" x="0.0" y="1059.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aPF-ih-dIL" id="cZx-KN-JHl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Marker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7c-iw-1f2">
-                                                    <rect key="frame" x="16" y="0.5" width="230" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="43.5" id="fzb-5w-1ye"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="zGl-vg-Hh2"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqV-ZN-Do2">
-                                                    <rect key="frame" x="255" y="12" width="110" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="eEi-jC-gf4"/>
-                                                        <constraint firstAttribute="height" constant="20" id="uOC-FL-GhD"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <state key="normal" title="On">
-                                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="locationMarkerButtonTapped:" destination="Dp7-92-uWD" eventType="touchUpInside" id="sDw-cN-q5Z"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="P7c-iw-1f2" firstAttribute="centerY" secondItem="cZx-KN-JHl" secondAttribute="centerY" id="6g9-na-DHE"/>
-                                                <constraint firstItem="fqV-ZN-Do2" firstAttribute="centerY" secondItem="cZx-KN-JHl" secondAttribute="centerY" id="Gyj-Ac-R5F"/>
-                                                <constraint firstItem="P7c-iw-1f2" firstAttribute="leading" secondItem="cZx-KN-JHl" secondAttribute="leading" constant="16" id="Lmy-Oh-kcs"/>
-                                                <constraint firstAttribute="trailing" secondItem="fqV-ZN-Do2" secondAttribute="trailing" constant="10" id="k2W-bT-wic">
-                                                    <variation key="heightClass=regular-widthClass=regular" constant="15"/>
-                                                </constraint>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="Dp7-92-uWD" id="aR6-NP-fXN"/>
-                            <outlet property="delegate" destination="Dp7-92-uWD" id="Yb3-fH-pRL"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="03r-DD-Uge"/>
-                    <connections>
-                        <outlet property="airQualityLabelLeading" destination="SdN-eC-MBw" id="oBO-t6-WNz"/>
-                        <outlet property="airQualityTableCell" destination="eFX-2o-up9" id="9mF-y6-FUb"/>
-                        <outlet property="alertsLabelLeading" destination="Wbh-jy-Dk1" id="ukQ-a4-wEd"/>
-                        <outlet property="alertsTableCell" destination="c6b-Vi-63r" id="kMl-sc-itp"/>
-                        <outlet property="dewPointsLabelLeading" destination="fVw-rV-XFF" id="M1p-uk-7bC"/>
-                        <outlet property="dewPointsTableCell" destination="Pq1-Nu-2G9" id="z20-E0-C5l"/>
-                        <outlet property="feelsLikeLabelLeading" destination="lEB-T5-hgP" id="aaP-C7-R9U"/>
-                        <outlet property="feelsLikeTableCell" destination="3jX-q8-wla" id="CMK-Mn-c7W"/>
-                        <outlet property="heatIndexLabelLeading" destination="OnN-wb-S2c" id="EtB-zu-MvB"/>
-                        <outlet property="heatIndexTableCell" destination="W4V-YF-bGn" id="76a-zY-ggw"/>
-                        <outlet property="humidityLabelLeading" destination="DBC-9n-Vjy" id="B7j-Q0-gQ0"/>
-                        <outlet property="humidityTableCell" destination="lm4-J3-LxS" id="aBE-6D-tZo"/>
-                        <outlet property="infraredSatelliteLabelLeading" destination="dki-ss-H9i" id="eXe-Yy-rrA"/>
-                        <outlet property="infraredSatelliteTableCell" destination="jOg-pQ-dUE" id="zx8-ug-ycQ"/>
-                        <outlet property="locationMarkerButton" destination="fqV-ZN-Do2" id="Ik8-70-umZ"/>
-                        <outlet property="mapStyleTextField" destination="tws-cb-HfG" id="eZM-dz-iwD"/>
-                        <outlet property="precipitationLabelLeading" destination="e37-9l-D04" id="qPX-ha-3HA"/>
-                        <outlet property="precipitationTableCell" destination="Bn0-Wk-eSD" id="a84-ZW-NzX"/>
-                        <outlet property="radarLabelLeading" destination="ai3-cR-Rwn" id="Dy6-Jo-UGM"/>
-                        <outlet property="radarTableCell" destination="UTf-4A-BJZ" id="nTN-uj-zTu"/>
-                        <outlet property="temperaturesLabelLeading" destination="ScX-nq-5l3" id="Alb-06-E7b"/>
-                        <outlet property="temperaturesTableCell" destination="M2N-AY-ENV" id="Ywj-9K-zLR"/>
-                        <outlet property="visibilityLabelLeading" destination="YCo-33-DlN" id="ati-qe-Xcb"/>
-                        <outlet property="visibilityTableCell" destination="Gtd-uj-SlZ" id="Jrn-8c-Vwe"/>
-                        <outlet property="visibleSatelliteLabelLeading" destination="hh2-7T-JEW" id="WhM-tN-UhJ"/>
-                        <outlet property="visibleSatelliteTableCell" destination="75o-vI-3qx" id="L7V-EY-Yoh"/>
-                        <outlet property="waterVaporLabelLeading" destination="uwP-1g-HOg" id="Djf-gx-Hqo"/>
-                        <outlet property="waterVaporSatelliteTableCell" destination="UoY-yw-YXu" id="qKD-ew-ySa"/>
-                        <outlet property="windChillLabelLeading" destination="vCC-wc-dJr" id="clI-t5-cP6"/>
-                        <outlet property="windChillTableCell" destination="qsa-Ah-5c7" id="lyI-26-MxS"/>
-                        <outlet property="windDirectionLabelLeading" destination="B9x-kq-9wu" id="9td-GR-BYo"/>
-                        <outlet property="windDirectionTableCell" destination="IKv-KI-04T" id="GUu-ZI-0LH"/>
-                        <outlet property="windGustLabelLeading" destination="vr2-SH-zyQ" id="SV9-hs-Ttd"/>
-                        <outlet property="windGustTableCell" destination="QeR-LX-ni9" id="HEh-xA-0l6"/>
-                        <outlet property="windSpeedLabelLeading" destination="wQw-3a-tV4" id="EfO-gr-c41"/>
-                        <outlet property="windSpeedTableCell" destination="Qsq-Yh-gSO" id="Yeh-ic-FzN"/>
-                        <outlet property="zoomLevelTextField" destination="Jdo-nk-WRh" id="730-JY-bzN"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y7y-6C-AXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="LPM-Qi-FUa">
-                    <connections>
-                        <action selector="radarTapped:" destination="Dp7-92-uWD" id="1H9-6G-Ab6"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="JIY-09-vf6">
-                    <connections>
-                        <action selector="visibleSatelliteTapped:" destination="Dp7-92-uWD" id="Gpv-3M-0uX"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="LfH-TD-RBW">
-                    <connections>
-                        <action selector="infraredSatelliteTapped:" destination="Dp7-92-uWD" id="UJI-yx-CJz"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="OaK-TF-lgY">
-                    <connections>
-                        <action selector="waterVaporTapped:" destination="Dp7-92-uWD" id="WDF-Yv-Cyn"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="xhq-2D-yFK">
-                    <connections>
-                        <action selector="alertsTapped:" destination="Dp7-92-uWD" id="nEw-eI-vid"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="AIt-f8-qlg">
-                    <connections>
-                        <action selector="temperaturesTapped:" destination="Dp7-92-uWD" id="NGp-R4-ftQ"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="tSG-UE-Czh">
-                    <connections>
-                        <action selector="dewPointsTapped:" destination="Dp7-92-uWD" id="eJ2-hc-pOY"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="7cC-zR-vBs">
-                    <connections>
-                        <action selector="humidityTapped:" destination="Dp7-92-uWD" id="gMS-36-13c"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="jhH-O2-o4f">
-                    <connections>
-                        <action selector="windSpeedTapped:" destination="Dp7-92-uWD" id="SkL-Fh-Ti4"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="ITG-tP-UKe">
-                    <connections>
-                        <action selector="windGustsTapped:" destination="Dp7-92-uWD" id="PmP-MM-PcT"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="Jvv-SL-L0l">
-                    <connections>
-                        <action selector="windDirectionTapped:" destination="Dp7-92-uWD" id="A5O-XR-OxP"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="GpK-fr-Uru">
-                    <connections>
-                        <action selector="windChillTapped:" destination="Dp7-92-uWD" id="ha8-j3-8K9"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="gat-Jo-QAg">
-                    <connections>
-                        <action selector="heatIndexTapped:" destination="Dp7-92-uWD" id="flf-t4-hIb"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="G5f-jS-VHs">
-                    <connections>
-                        <action selector="feelsLikeTapped:" destination="Dp7-92-uWD" id="eMl-0q-ov2"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="dDo-0V-zJr">
-                    <connections>
-                        <action selector="airQualityTapped:" destination="Dp7-92-uWD" id="AlR-qC-RjR"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="LXG-cc-flB">
-                    <connections>
-                        <action selector="precipitationTapped:" destination="Dp7-92-uWD" id="8v2-VS-fBY"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="xGT-dn-2Lt">
-                    <connections>
-                        <action selector="visibilityTapped:" destination="Dp7-92-uWD" id="a34-ch-6zt"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="2057" y="1842"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="LBn-Ff-OtA">
-            <objects>
-                <navigationController storyboardIdentifier="MapLayers" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="EAC-fC-rhh" sceneMemberID="viewController">
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="W0i-kh-IDm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="customControlColor"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Dp7-92-uWD" kind="relationship" relationship="rootViewController" id="Ogz-A0-cTz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n4u-XR-wp0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2063" y="1011"/>
-        </scene>
         <!--Privacy Policy View Controller-->
         <scene sceneID="pd7-sK-Enp">
             <objects>
@@ -13253,10 +12317,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         <rect key="frame" x="0.0" y="8" width="375" height="659"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TY2-8m-Wx5">
-                                                <rect key="frame" x="8" y="5" width="359" height="1050"/>
+                                                <rect key="frame" x="8" y="5" width="359" height="880"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0lf-BN-8AW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="250"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="230"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMo-2L-aGo">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
@@ -13287,7 +12351,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVR-2i-7hx">
-                                                                <rect key="frame" x="0.0" y="20" width="359" height="230"/>
+                                                                <rect key="frame" x="0.0" y="20" width="359" height="210"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="4Wu-xl-B9t">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="135"/>
@@ -13296,9 +12360,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="678" id="MfP-vh-z5L">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="752"/>
                                                                     </constraint>
-                                                                    <constraint firstAttribute="height" constant="230" id="PgG-at-Bah"/>
+                                                                    <constraint firstAttribute="height" constant="210" id="PgG-at-Bah"/>
                                                                 </constraints>
-                                                                <string key="text">You may opt to grant Cumulus access to your current location to receive localized weather forecasts. Cumulus does not require access to your location however some of its features do require access to your location. For the most accurate weather forecasts location permission is recommended but is not required. You can enable location access by selecting to allow location access "While Using the App" or "Always". You can always change the location access on your devices' settings.</string>
+                                                                <string key="text">You may opt to grant Cumulus access to your location to receive localized weather forecasts. Cumulus does not require access to your location however some of its features do. For the most accurate weather forecasts location permission is recommended but is not required. You can enable location access by selecting to allow location access "While Using the App" or "Always". You can always change the location access on your devices' settings.</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -13333,7 +12397,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                         </variation>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LLQ-0W-mhI">
-                                                        <rect key="frame" x="0.0" y="270" width="359" height="460"/>
+                                                        <rect key="frame" x="0.0" y="250" width="359" height="310"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information Collection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYX-wo-RZJ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
@@ -13364,7 +12428,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6R-wc-XcV">
-                                                                <rect key="frame" x="0.0" y="20" width="359" height="440"/>
+                                                                <rect key="frame" x="0.0" y="20" width="359" height="290"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="a5y-Mh-ngw">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="215"/>
@@ -13373,9 +12437,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="678" id="ohP-Ny-WQv">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="752"/>
                                                                     </constraint>
-                                                                    <constraint firstAttribute="height" constant="440" id="sbF-sm-dpJ"/>
+                                                                    <constraint firstAttribute="height" constant="290" id="sbF-sm-dpJ"/>
                                                                 </constraints>
-                                                                <string key="text">Cumulus does not collect or store any personally identifiable information. Cumulus asks for permission to access your location but this can be changed at anytime under your devices' settings and is not required. When you allow location access to Cumulus it uses your latitude and longitude coordinates with the Dark Sky or Aeris Weather servers each time a weather request is made for your location. Your location is also used when the today widget or Siri shortcuts are enabled. Your location or coordinates are only used once each time a request is made. None of the information sent is personally identifiable or stored. When searching locations using Google servers your location is not used or personally identifiable. When viewing the radar, Aeris Weather servers are used to get data. When location access is enabled while viewing the radar your location is used but is not personally identifiable.</string>
+                                                                <mutableString key="text">Cumulus does not collect or store any personally identifiable information. Cumulus may ask for permission to access your location but this can be changed at anytime under your devices' settings and is not required. When you allow location access to Cumulus, your location is used along with the Dark Sky servers to retrieve weather forecasts for your location. Your location is also used when the today widget or Siri shortcuts are enabled. Your location is only used each time a request is made. None of the information sent is personally identifiable or stored by any third party. </mutableString>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -13410,7 +12474,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                         </variation>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Lp-yD-VMr">
-                                                        <rect key="frame" x="0.0" y="750" width="359" height="190"/>
+                                                        <rect key="frame" x="0.0" y="580" width="359" height="190"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analytics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whk-OC-UTE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
@@ -13452,7 +12516,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="752"/>
                                                                     </constraint>
                                                                 </constraints>
-                                                                <string key="text">Cumulus does not use any third party services for analytics. However, it does utilize Apple App Analytics platform to collect statistics on app crashes and usage. This information helps to diagnose and resolve any issues when encountered. This data is collected anonymously and cannot be used to personally identify users.</string>
+                                                                <string key="text">Cumulus does not use any third party services for analytics. However, it does utilize Apple's App Analytics platform to collect statistics on app crashes and usage. This information helps to diagnose and resolve any issues when encountered. This data is collected anonymously and cannot be used to personally identify users.</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -13487,7 +12551,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                         </variation>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C2q-Gf-71u">
-                                                        <rect key="frame" x="0.0" y="960" width="359" height="90"/>
+                                                        <rect key="frame" x="0.0" y="790" width="359" height="90"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBj-Pw-y14">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
@@ -13517,7 +12581,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                     </mask>
                                                                 </variation>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you have any questions, concerns, or feedback about Cumulus reach out to cumulusweatherapp@gmail.com." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgx-bo-M0w">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you have any requests, questions, concerns, or feedback about Cumulus reach out to cumulusweatherapp@gmail.com." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgx-bo-M0w">
                                                                 <rect key="frame" x="0.0" y="20" width="359" height="70"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="359" id="2M2-A5-RRu"/>
@@ -13712,7 +12776,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="135"/>
                                                                     </constraint>
                                                                 </constraints>
-                                                                <string key="text">Cumulus takes your privacy and personal data seriously. Cumulus will only collect the least information that is necessary. Individual users are never tracked and personal data is never given to third parties. You may opt to grant Cumulus access to your location for better predictions about the weather around you. However, at any time you can change this access as stated in the Privacy Policy. For more information on how Cumulus uses your location visit Privacy Policy under settings.</string>
+                                                                <string key="text">Cumulus takes your privacy and personal data seriously. Cumulus will only retrieve the least information that is necessary. Individual users are never tracked and personal data is never given to third parties. You may opt to grant Cumulus access to your location for better predictions about the weather around you. However, at any time you can change this access as stated in the Privacy Policy. For more information on how Cumulus uses your location visit Privacy Policy under settings.</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -13777,7 +12841,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                     </mask>
                                                                 </variation>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you have any questions, concerns, or feedback about Cumulus reach out to cumulusweatherapp@gmail.com." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0s8-4X-shl">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you have any requests, questions, concerns, or feedback about Cumulus reach out to cumulusweatherapp@gmail.com." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0s8-4X-shl">
                                                                 <rect key="frame" x="0.0" y="20" width="359" height="70"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="678" id="E1P-dZ-h1q">
@@ -15659,8 +14723,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <image name="Malachite icon" width="50" height="50"/>
         <image name="Mandarin Theme" width="50" height="50"/>
         <image name="Mandarin icon" width="50" height="50"/>
-        <image name="Maps icon" width="60" height="60"/>
-        <image name="Mapview button" width="45" height="45"/>
         <image name="Maximum Red Theme" width="50" height="50"/>
         <image name="Maximum Red icon" width="50" height="50"/>
         <image name="Mighty Umbrella icon" width="50" height="50"/>

@@ -24,7 +24,6 @@
 		CF622CE1228CEF1A00E2DC12 /* WeatherDataValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF622CDC228CEF0900E2DC12 /* WeatherDataValues.swift */; };
 		CF622CE2228CEF1B00E2DC12 /* WeatherDataValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF622CDC228CEF0900E2DC12 /* WeatherDataValues.swift */; };
 		CF622CE3228CEF1B00E2DC12 /* WeatherDataValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF622CDC228CEF0900E2DC12 /* WeatherDataValues.swift */; };
-		CF6B7EE62130D80E001CAE04 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B7EE52130D80E001CAE04 /* MapViewController.swift */; };
 		CF6DCF5D21B05ECA00788CB9 /* SettingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DCF5C21B05ECA00788CB9 /* SettingOptions.swift */; };
 		CF6DCF5E21B05ECF00788CB9 /* SettingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DCF5C21B05ECA00788CB9 /* SettingOptions.swift */; };
 		CF6DCF5F21B05ECF00788CB9 /* SettingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DCF5C21B05ECA00788CB9 /* SettingOptions.swift */; };
@@ -36,7 +35,6 @@
 		CF7DD5E02225B9A000E93319 /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7DD5DF2225B9A000E93319 /* TermsOfUseViewController.swift */; };
 		CF7F3390222C7FDE0031B325 /* InputFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEEC38C2225F2A100DF50BB /* InputFunctions.swift */; };
 		CF824C3A20E84EEB00E5F0A7 /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF824C3820E84EEB00E5F0A7 /* Locations.xcdatamodeld */; };
-		CF8E3B752179430C002CA7DF /* MapLayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8E3B742179430C002CA7DF /* MapLayersTableViewController.swift */; };
 		CF9477492167DF0200DA8B38 /* SiriShortcutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9477482167DF0200DA8B38 /* SiriShortcutsTableViewController.swift */; };
 		CF94774B2167E48E00DA8B38 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF94774A2167E48E00DA8B38 /* Intents.framework */; };
 		CF9477532168080900DA8B38 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9477522168080900DA8B38 /* IntentHandler.swift */; };
@@ -244,7 +242,6 @@
 		CF52ECD8210FA29D00A605A4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CF622CDA228CEE7100E2DC12 /* AerisWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerisWeatherData.swift; sourceTree = "<group>"; };
 		CF622CDC228CEF0900E2DC12 /* WeatherDataValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataValues.swift; sourceTree = "<group>"; };
-		CF6B7EE52130D80E001CAE04 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CF6DCF5C21B05ECA00788CB9 /* SettingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOptions.swift; sourceTree = "<group>"; };
 		CF6E4A9E20DACFD8002349A7 /* Cumulus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cumulus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6E4AA120DACFD8002349A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -254,7 +251,6 @@
 		CF6E4AAD20DACFD9002349A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF7DD5DF2225B9A000E93319 /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
 		CF824C3920E84EEB00E5F0A7 /* Locations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Locations.xcdatamodel; sourceTree = "<group>"; };
-		CF8E3B742179430C002CA7DF /* MapLayersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLayersTableViewController.swift; sourceTree = "<group>"; };
 		CF9477482167DF0200DA8B38 /* SiriShortcutsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriShortcutsTableViewController.swift; sourceTree = "<group>"; };
 		CF94774A2167E48E00DA8B38 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		CF9477502168080900DA8B38 /* GetForecastIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GetForecastIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -608,7 +604,6 @@
 			children = (
 				CF6E4AA120DACFD8002349A7 /* AppDelegate.swift */,
 				CF6E4AA320DACFD8002349A7 /* WeatherViewController.swift */,
-				CFD10764241FDC65007E1087 /* Weather Map  */,
 				CFD10765241FDC8F007E1087 /* Locations */,
 				CF3AAF39211B52EF0084EFF6 /* Settings */,
 				CFD10767241FDDEC007E1087 /* Values */,
@@ -645,15 +640,6 @@
 				CF1DF2DF2169B2B100BB233D /* GetForecastIntentUI.entitlements */,
 			);
 			path = GetForecastIntentUI;
-			sourceTree = "<group>";
-		};
-		CFD10764241FDC65007E1087 /* Weather Map  */ = {
-			isa = PBXGroup;
-			children = (
-				CF6B7EE52130D80E001CAE04 /* MapViewController.swift */,
-				CF8E3B742179430C002CA7DF /* MapLayersTableViewController.swift */,
-			);
-			path = "Weather Map ";
 			sourceTree = "<group>";
 		};
 		CFD10765241FDC8F007E1087 /* Locations */ = {
@@ -1178,11 +1164,9 @@
 				CF6DCF5D21B05ECA00788CB9 /* SettingOptions.swift in Sources */,
 				CF6E4AA420DACFD8002349A7 /* WeatherViewController.swift in Sources */,
 				CF622CDB228CEE7100E2DC12 /* AerisWeatherData.swift in Sources */,
-				CF8E3B752179430C002CA7DF /* MapLayersTableViewController.swift in Sources */,
 				CF9477492167DF0200DA8B38 /* SiriShortcutsTableViewController.swift in Sources */,
 				CFAB4446211F3A2000A7E3CB /* PreferencesTableViewController.swift in Sources */,
 				CFD1CD2320EE9544004ED831 /* SettingsTableViewController.swift in Sources */,
-				CF6B7EE62130D80E001CAE04 /* MapViewController.swift in Sources */,
 				CF622CDD228CEF0900E2DC12 /* WeatherDataValues.swift in Sources */,
 				CFEEC38D2225F2A100DF50BB /* InputFunctions.swift in Sources */,
 				CFC186152131B8A800F56AD0 /* CumulusProTableViewController.swift in Sources */,
@@ -1426,7 +1410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.10;
+				CURRENT_PROJECT_VERSION = 1.6.11;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1434,7 +1418,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.2;
+				MARKETING_VERSION = 1.6.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1451,7 +1435,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.10;
+				CURRENT_PROJECT_VERSION = 1.6.11;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1459,7 +1443,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.2;
+				MARKETING_VERSION = 1.6.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1474,7 +1458,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.10;
+				CURRENT_PROJECT_VERSION = 1.6.11;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntentUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1483,7 +1467,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.2;
+				MARKETING_VERSION = 1.6.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus.GetForecastIntentUI;
@@ -1501,7 +1485,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.10;
+				CURRENT_PROJECT_VERSION = 1.6.11;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntentUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1510,7 +1494,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.2;
+				MARKETING_VERSION = 1.6.3;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus.GetForecastIntentUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1527,7 +1511,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.10;
+				CURRENT_PROJECT_VERSION = 1.6.11;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1536,7 +1520,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.2;
+				MARKETING_VERSION = 1.6.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus.GetForecastIntent;
@@ -1554,7 +1538,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.10;
+				CURRENT_PROJECT_VERSION = 1.6.11;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1563,7 +1547,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.2;
+				MARKETING_VERSION = 1.6.3;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus.GetForecastIntent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1580,7 +1564,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Today/Cumulus.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.10;
+				CURRENT_PROJECT_VERSION = 1.6.11;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus Today/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1589,7 +1573,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.2;
+				MARKETING_VERSION = 1.6.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.josephszafarowicz.Cumulus.Cumulus-Today";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1605,7 +1589,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Today/Cumulus.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.10;
+				CURRENT_PROJECT_VERSION = 1.6.11;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus Today/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1614,7 +1598,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.2;
+				MARKETING_VERSION = 1.6.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.josephszafarowicz.Cumulus.Cumulus-Today";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

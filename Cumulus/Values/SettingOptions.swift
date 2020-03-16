@@ -84,9 +84,6 @@ var defaultDailyConditionValueUnit: String = ""
 
 var dataSource: String = ""
 var dataSourceChanged: Bool = false
-var mapStyle: String = ""
-var zoomLevel: String = ""
-var locationMarker: String = ""
 
 // Sets values for widget
 var universalDataSource: String = ""

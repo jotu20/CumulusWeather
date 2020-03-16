@@ -51,18 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             defaults.set(true, forKey: "weatherUnitsUSA")
         }
         
-        if (defaults.string(forKey: "mapStyle") == nil) {
-            defaults.set("Standard", forKey: "mapStyle")
-        }
-        
-        if (defaults.string(forKey: "zoomLevel") == nil) {
-            defaults.set("State", forKey: "zoomLevel")
-        }
-        
-        if (defaults.string(forKey: "locationMarker") == nil) {
-            defaults.set("On", forKey: "locationMarker")
-        }
-        
         if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Precip") == true) {
             defaults.set("Precip (%)", forKey: "defaultHourlyCondition")
         } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Temp") == true) {

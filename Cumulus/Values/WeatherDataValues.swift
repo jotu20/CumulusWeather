@@ -2085,29 +2085,6 @@ func cgFloatPrecipProb(day: CGFloat) -> Int {
     return dailyValue
 }
 
-// Get wind gust for Aeris API
-func aerisWindGust(float: CGFloat) {
-    if windGust != 0 {
-        windGust = Int(float)
-    } else if float.isNaN == true {
-        fetchDarkSkyCurrentForecastData()
-    } else {
-        windGust = 0
-    }
-}
-
-// Get wind direction for Aeris API
-func aerisWindDirection(float: CGFloat) {
-    if windDirectionDegree != 0 {
-        windDirectionDegree = Double(float)
-    } else if float.isNaN == true {
-        fetchDarkSkyCurrentForecastData()
-    } else {
-        windDirectionDegree = 0
-    }
-    windDirectionString = windDirection(degree: windDirectionDegree)
-}
-
 // Get default daily condition value
 func getDefaultDailyCondition(condition: DataPoint) -> Int {
     var value: Int = 0

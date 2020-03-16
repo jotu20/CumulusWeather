@@ -238,12 +238,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
                 userCurrentLocation = "\(city), \(state)"
             }
         }
-        
-        if universalDataSource == "Aeris Weather" {
-            fetchAerisWeatherData()
-        } else {
-            fetchDarkSkyWeatherData()
-        }
+        fetchDarkSkyWeatherData()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.setWidgetLabels()
@@ -255,12 +250,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Failed to find user's location: \(error.localizedDescription)")
         universalSettings()
-        
-        if universalDataSource == "Aeris Weather" {
-            fetchAerisWeatherData()
-        } else {
-            fetchDarkSkyWeatherData()
-        }
+        fetchDarkSkyWeatherData()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.setWidgetLabels()

@@ -73,10 +73,8 @@ class AcknowledgementsViewController: UIViewController, UITextViewDelegate {
         // Check for dark mode
         if traitCollection.userInterfaceStyle == .light {
             poweredByButton.setBackgroundImage(UIImage(named: "poweredby-oneline.pdf"), for: .normal)
-            poweredByButton2.setBackgroundImage(UIImage(named: "AerisWeather-logo-dark.pdf"), for: .normal)
         } else {
             poweredByButton.setBackgroundImage(UIImage(named: "poweredby-oneline-darkbackground.pdf"), for: .normal)
-            poweredByButton2.setBackgroundImage(UIImage(named: "AerisWeather-logo-light.pdf"), for: .normal)
         }
         
         if potentialCustomer == true {
@@ -91,11 +89,6 @@ class AcknowledgementsViewController: UIViewController, UITextViewDelegate {
 
     @IBAction func poweredByDarkSkyTapped(_ sender: UIButton) {
         let svc = SFSafariViewController(url: URL(string: "http://darksky.net/poweredby/")!)
-        present(svc, animated: true, completion: nil)
-    }
-    
-    @IBAction func poweredByAerisWeatherTapped(_ sender: UIButton) {
-        let svc = SFSafariViewController(url: URL(string: "http://www.aerisweather.com")!)
         present(svc, animated: true, completion: nil)
     }
 

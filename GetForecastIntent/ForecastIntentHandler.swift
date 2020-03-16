@@ -9,7 +9,6 @@
 import Foundation
 import CoreLocation
 import ForecastIO
-import AerisWeatherKit
 
 class ForecastIntentHandler: NSObject, ForecastIntentHandling, CLLocationManagerDelegate {
     
@@ -59,78 +58,6 @@ class ForecastIntentHandler: NSObject, ForecastIntentHandling, CLLocationManager
             case .failure(let error):
                 print(error)
             }
-        }
-        
-        if universalDataSource == "Aeris Weather" {
-            universalSettings()
-            
-            geocode(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!) { placemark, error in
-                guard let placemark = placemark, error == nil else { return }
-                
-                let place = AWFPlace(city: "\(placemark.locality!.lowercased())", state: "\(placemark.administrativeArea!.lowercased())", country: "\(placemark.country!.lowercased())")
-                
-                // Get current forecast observations
-                AWFObservations.sharedService().get(forPlace: place, options: nil) { (result) in
-                    guard let results = result?.results else { print("Data failed to load - \(String(describing: result?.error))"); return }
-                    guard let obs = results.first as? AWFObservation else { return }
-                    
-                    if universalUnits == "USA" {
-                        unitsTemperature = "F"
-                        unitsDistance = "miles"
-                        unitsWindSpeed = "mph"
-                        unitsPressure = "mB"
-                        unitsPrecipitation = "in"
-                        
-                        currentTemperature = Int(obs.tempF)
-                    }
-                    
-                    if universalUnits == "UK" {
-                        unitsTemperature = "C"
-                        unitsDistance = "miles"
-                        unitsWindSpeed = "mph"
-                        unitsPressure = "hPa"
-                        unitsPrecipitation = "mm"
-                        
-                        currentTemperature = Int(obs.tempC)
-                    }
-                    
-                    if universalUnits == "Canada" {
-                        unitsTemperature = "C"
-                        unitsDistance = "kilometers"
-                        unitsWindSpeed = "km/h"
-                        unitsPressure = "hPa"
-                        unitsPrecipitation = "mm"
-                        
-                        currentTemperature = Int(obs.tempC)
-                    }
-                    
-                    if universalUnits == "International" {
-                        unitsTemperature = "C"
-                        unitsDistance = "kilometers"
-                        unitsWindSpeed = "m/s"
-                        unitsPressure = "hPa"
-                        unitsPrecipitation = "mm"
-                        
-                        currentTemperature = Int(obs.tempC)
-                    }
-                    currentSummary = "\(obs.weather!.lowercased())"
-                }
-                
-                // MARK : Get 7-day forecast
-                let options = AWFWeatherRequestOptions()
-                options.limit = 2
-                
-                AWFForecasts.sharedService().get(forPlace: place, options: options) { (result) in
-                    guard let results = result?.results else { print("Data failed to load - \(String(describing: result?.error))"); return }
-                    guard let forecast = results.first as? AWFForecast else { return }
-                    
-                    let dayZeroArray = forecast.periods?[0]
-                    let fetchDayZeroArray = dayZeroArray
-                    dayZeroHigh = Int(fetchDayZeroArray!.maxTempF)
-                    dayZeroLow = Int(fetchDayZeroArray!.minTempF)
-                }
-            }
-            completion(ForecastIntentResponse.success(weatherSummary: "It is currently \(currentTemperature)°, \(precipHour0)% chance of precipitation, and \(currentSummary.lowercased()). Today's high is \(dayZeroHigh)° and the low is \(dayZeroLow)°."))
         }
     }
 }

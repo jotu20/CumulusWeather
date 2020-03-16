@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 import GooglePlaces
-import AerisWeatherKit
 import SwiftyStoreKit
 import CoreLocation
 import ForecastIO
@@ -42,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             defaults.set("Current condition", forKey: "defaultWidgetSlot2")
         }
         
-        if (defaults.string(forKey: "dataSource") == nil) || (defaults.bool(forKey: "cumulusPro") == false) {
+        if (defaults.string(forKey: "dataSource") == nil) || (defaults.string(forKey: "dataSource") == "AerisWeather") || (defaults.bool(forKey: "cumulusPro") == false) {
             defaults.set("Dark Sky", forKey: "dataSource")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Dark Sky", forKey: "setDataSource")
         }
@@ -149,9 +148,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             }
         }
         setButtonColor()
-        
-        // Aeris Weather initialize
-        AerisWeather.start(withApiKey: "4vXjJQln0W0Kp93PAWV7e", secret: "amBDu5REaYdpFFnuLO2Qjb0kWm5fLXAOBkAlmmTw")
         
         // Google Places initialize
         GMSPlacesClient.provideAPIKey("AIzaSyD7itQU5T62p9XCRa9qXSXvqjTCB4f9nGI")

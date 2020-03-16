@@ -9,7 +9,6 @@
 import IntentsUI
 import CoreLocation
 import ForecastIO
-import AerisWeatherKit
 
 class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocationManagerDelegate {
     
@@ -299,120 +298,6 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                 
             case .failure(let error):
                 print(error)
-            }
-        }
-        
-        if universalDataSource == "Aeris Weather" {
-            universalSettings()
-            
-            geocode(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!) { placemark, error in
-                guard let placemark = placemark, error == nil else { return }
-                
-                let place = AWFPlace(city: "\(placemark.locality!.lowercased())", state: "\(placemark.administrativeArea!.lowercased())", country: "\(placemark.country!.lowercased())")
-                
-                // Get current forecast observations
-                AWFObservations.sharedService().get(forPlace: place, options: nil) { (result) in
-                    guard let results = result?.results else { print("Data failed to load - \(String(describing: result?.error))"); return }
-                    guard let obs = results.first as? AWFObservation else { return }
-                    
-                    if universalUnits == "USA" {
-                        unitsTemperature = "F"
-                        unitsDistance = "miles"
-                        unitsWindSpeed = "mph"
-                        unitsPressure = "mB"
-                        unitsPrecipitation = "in"
-                        
-                        currentTemperature = Int(obs.tempF)
-                        apparentTemperature = Int(obs.feelslikeF)
-                        wind = Int(obs.windSpeedMPH)
-                        aerisWindGust(float: obs.windGustMPH)
-                        aerisWindDirection(float: obs.windDirectionDEG)
-                    }
-                    
-                    if universalUnits == "UK" {
-                        unitsTemperature = "C"
-                        unitsDistance = "miles"
-                        unitsWindSpeed = "mph"
-                        unitsPressure = "hPa"
-                        unitsPrecipitation = "mm"
-                        
-                        currentTemperature = Int(obs.tempC)
-                        apparentTemperature = Int(obs.feelslikeC)
-                        wind = Int(obs.windSpeedMPH)
-                        aerisWindGust(float: obs.windGustMPH)
-                        aerisWindDirection(float: obs.windDirectionDEG)
-                    }
-                    
-                    if universalUnits == "Canada" {
-                        unitsTemperature = "C"
-                        unitsDistance = "kilometers"
-                        unitsWindSpeed = "km/h"
-                        unitsPressure = "hPa"
-                        unitsPrecipitation = "mm"
-                        
-                        currentTemperature = Int(obs.tempC)
-                        apparentTemperature = Int(obs.feelslikeC)
-                        wind = Int(obs.windSpeedKMH)
-                        aerisWindGust(float: obs.windGustKMH)
-                        aerisWindDirection(float: obs.windDirectionDEG)
-                    }
-                    
-                    if universalUnits == "International" {
-                        unitsTemperature = "C"
-                        unitsDistance = "kilometers"
-                        unitsWindSpeed = "m/s"
-                        unitsPressure = "hPa"
-                        unitsPrecipitation = "mm"
-                        
-                        currentTemperature = Int(obs.tempC)
-                        apparentTemperature = Int(obs.feelslikeC)
-                        wind = kmhToMS(speed: obs.windSpeedKMH)
-                        aerisWindGust(float: CGFloat(kmhToMS(speed: obs.windGustKMH)))
-                        aerisWindDirection(float: obs.windDirectionDEG)
-                    }
-                    
-                    // Get current weather data
-                    currentCondition = "\(obs.icon!)"
-                    currentSummary = "\(obs.weather!)"
-                }
-                
-                // MARK : Get 7-day forecast
-                let options = AWFWeatherRequestOptions()
-                options.limit = 4
-                
-                AWFForecasts.sharedService().get(forPlace: place, options: options) { (result) in
-                    guard let results = result?.results else { print("Data failed to load - \(String(describing: result?.error))"); return }
-                    guard let forecast = results.first as? AWFForecast else { return }
-                    
-                    let dayZeroArray = forecast.periods?[0]
-                    let fetchDayZeroArray = dayZeroArray
-                    weatherCondition0 = "\(fetchDayZeroArray!.icon!)"
-                    dayZeroHigh = Int(fetchDayZeroArray!.maxTempF)
-                    dayZeroLow = Int(fetchDayZeroArray!.minTempF)
-                    
-                    let dayOneArray = forecast.periods?[1]
-                    let fetchDayOneArray = dayOneArray
-                    weatherCondition1 = "\(fetchDayOneArray!.icon!)"
-                    dayOneHigh = Int(fetchDayOneArray!.maxTempF)
-                    dayOneLow = Int(fetchDayOneArray!.minTempF)
-                    
-                    let dayTwoArray = forecast.periods?[2]
-                    let fetchDayTwoArray = dayTwoArray
-                    weatherCondition2 = "\(fetchDayTwoArray!.icon!)"
-                    dayTwoHigh = Int(fetchDayTwoArray!.maxTempF)
-                    dayTwoLow = Int(fetchDayTwoArray!.minTempF)
-                    
-                    let dayThreeArray = forecast.periods?[3]
-                    let fetchDayThreeArray = dayThreeArray
-                    weatherCondition3 = "\(fetchDayThreeArray!.icon!)"
-                    dayThreeHigh = Int(fetchDayThreeArray!.maxTempF)
-                    dayThreeLow = Int(fetchDayThreeArray!.minTempF)
-                }
-                
-                DispatchQueue.main.async() {
-                    self.setWeatherDataLabels()
-                    completion(true, parameters, self.desiredSize)
-                }
             }
         }
     }

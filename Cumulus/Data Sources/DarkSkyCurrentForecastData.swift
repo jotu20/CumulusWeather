@@ -54,65 +54,46 @@ public func fetchDarkSkyCurrentForecastData() {
         unitsPressure = "hPa"
         unitsPrecipitation = "mm"
     }
-        
-    if universalDataSource == "Aeris Weather" {
-        client.getForecast(location: userLocation) { result in
-            switch result {
-            case .success(let currentForecast, _):
-                TimeZone.ReferenceType.default = TimeZone(identifier: "\(currentForecast.timezone)")!
+
+    client.getForecast(location: userLocation) { result in
+        switch result {
+        case .success(let currentForecast, _):
+            TimeZone.ReferenceType.default = TimeZone(identifier: "\(currentForecast.timezone)")!
+            
+            if let current = currentForecast.currently {
+                currentCondition = "\(current.icon!.rawValue)"
+                currentTemperature = Int(current.temperature!)
+                apparentTemperature = Int(current.apparentTemperature!)
+                currentSummary = "\(current.summary!)"
+                precipitation = dailyPrecipProb(day: current)
+                humidity = dailyHumidityProb(day: current)
+                cloudCover = dailyCloudCoverProb(day: current)
+                uvIndex = Int(current.uvIndex!)
+                visibility = Int(current.visibility!)
+                pressure = Int(current.pressure!)
+                wind = Int(current.windSpeed!)
+                windGust = Int(current.windGust!)
+                windDirectionDegree = current.windBearing!
+                windDirectionString = windDirection(degree: windDirectionDegree)
                 
-                if let current = currentForecast.currently {
-                    wind = Int(current.windSpeed!)
-                    windGust = Int(current.windGust!)
-                    windDirectionDegree = current.windBearing!
-                    windDirectionString = windDirection(degree: windDirectionDegree)
-                    windSpeedHour0 = wind
+                if current.precipitationAccumulation != nil {
+                    precipAccumulation = Double(current.precipitationAccumulation!)
                 }
-            case .failure(let error):
-                print(error)
-            }
-        }
-    } else {
-        client.getForecast(location: userLocation) { result in
-            switch result {
-            case .success(let currentForecast, _):
-                TimeZone.ReferenceType.default = TimeZone(identifier: "\(currentForecast.timezone)")!
                 
-                if let current = currentForecast.currently {
-                    currentCondition = "\(current.icon!.rawValue)"
-                    currentTemperature = Int(current.temperature!)
-                    apparentTemperature = Int(current.apparentTemperature!)
-                    currentSummary = "\(current.summary!)"
-                    precipitation = dailyPrecipProb(day: current)
-                    humidity = dailyHumidityProb(day: current)
-                    cloudCover = dailyCloudCoverProb(day: current)
-                    uvIndex = Int(current.uvIndex!)
-                    visibility = Int(current.visibility!)
-                    pressure = Int(current.pressure!)
-                    wind = Int(current.windSpeed!)
-                    windGust = Int(current.windGust!)
-                    windDirectionDegree = current.windBearing!
-                    windDirectionString = windDirection(degree: windDirectionDegree)
-                    
-                    if current.precipitationAccumulation != nil {
-                        precipAccumulation = Double(current.precipitationAccumulation!)
-                    }
-                    
-                    if current.precipitationType != nil {
-                        precipitationType = "\(current.precipitationType!)"
-                    } else {
-                        precipitationType = "none"
-                    }
-                    
-                    precipHour0 = precipitation
-                    tempHour0 = currentTemperature
-                    humidityHour0 = humidity
-                    uvindexHour0 = uvIndex
-                    windSpeedHour0 = wind
-                    cloudCoverHour0 = cloudCover
-                }            case .failure(let error):
-                print(error)
-            }
+                if current.precipitationType != nil {
+                    precipitationType = "\(current.precipitationType!)"
+                } else {
+                    precipitationType = "none"
+                }
+                
+                precipHour0 = precipitation
+                tempHour0 = currentTemperature
+                humidityHour0 = humidity
+                uvindexHour0 = uvIndex
+                windSpeedHour0 = wind
+                cloudCoverHour0 = cloudCover
+            }            case .failure(let error):
+            print(error)
         }
     }
 }

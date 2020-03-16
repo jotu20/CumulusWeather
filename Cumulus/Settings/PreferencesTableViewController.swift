@@ -17,7 +17,7 @@ class PreferencesTableViewController: UITableViewController,  UITextFieldDelegat
     let defaultDailyConditionTypes = ["Precip (%)", "Humidity (%)", "UV index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
     let defaultWidgetConditionSlot1 = ["Current condition", "Feels like (°\(unitsTemperature))", "Precip (%)", "Humidity (%)", "UV index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
     let defaultWidgetConditionSlot2 = ["Current condition", "Feels like (°\(unitsTemperature))", "Precip (%)", "Humidity (%)", "UV index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
-    let dataSourceTypes = ["Dark Sky", "Aeris Weather"]
+    let dataSourceTypes = ["Dark Sky"]
     
     @IBOutlet var appIconGesture: UITapGestureRecognizer!
     @IBOutlet var colorThemeGesture: UITapGestureRecognizer!

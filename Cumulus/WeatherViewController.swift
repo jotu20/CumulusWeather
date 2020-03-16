@@ -13,7 +13,6 @@ import SafariServices
 import Intents
 import StoreKit
 import ForecastIO
-import AerisMapKit
 
 class WeatherViewController: UIViewController, CLLocationManagerDelegate, UITabBarControllerDelegate {
     
@@ -802,8 +801,6 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, UITabB
     func setupInitialData() {
         if (defaults.string(forKey: "dataSource")?.contains("Dark Sky") == true) {
             fetchDarkSkyWeatherData()
-        } else if (defaults.string(forKey: "dataSource")?.contains("Aeris Weather") == true) {
-            fetchAerisWeatherData()
         } else {
             fetchDarkSkyWeatherData()
             defaults.set("Dark Sky", forKey: "dataSource")

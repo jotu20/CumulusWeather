@@ -28,25 +28,6 @@ var userInvocationPhrase: String = ""
 var openPolicyTermsFromCumulusPro: Bool = false
 var twentyFourHourClockEnabled: Bool = false
 
-// Radar layers
-var radarLayer: Bool = false
-var visibleSatelliteLayer: Bool = false
-var infraredSatelliteLayer: Bool = false
-var waterVaporSatelliteLayer: Bool = false
-var alertsLayer: Bool = false
-var temperaturesLayer: Bool = false
-var dewPointsLayer: Bool = false
-var humidityLayer: Bool = false
-var windSpeedLayer: Bool = false
-var windGustLayer: Bool = false
-var windDirectionLayer: Bool = false
-var windChillLayer: Bool = false
-var heatIndexLayer: Bool = false
-var feelsLikeLayer: Bool = false
-var airQualityLayer: Bool = false
-var precipitationLayer: Bool = false
-var visibilityLayer: Bool = false
-
 // App icon & Color Themes
 var userSavedAppIconString: String = ""
 var randomColorEnabled: Bool = false

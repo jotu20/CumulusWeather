@@ -12,15 +12,11 @@ class TermsOfUseViewController: UIViewController {
     
     @IBOutlet weak var termsOfUseView: UIView!
     @IBOutlet weak var statementDescription1: UILabel!
-    @IBOutlet weak var statementDescription2: UILabel!
     @IBOutlet weak var statementDescription4: UILabel!
     
     @IBOutlet weak var statementTitle1Width: NSLayoutConstraint!
     @IBOutlet weak var statementDescription1Height: NSLayoutConstraint!
     @IBOutlet weak var statementDescription1Width: NSLayoutConstraint!
-    @IBOutlet weak var statementTitle2Width: NSLayoutConstraint!
-    @IBOutlet weak var statementDescription2Height: NSLayoutConstraint!
-    @IBOutlet weak var statementDescription2Width: NSLayoutConstraint!
     @IBOutlet weak var statementTitle4Width: NSLayoutConstraint!
     @IBOutlet weak var statementDescription4Height: NSLayoutConstraint!
     @IBOutlet weak var statementDescription4Width: NSLayoutConstraint!
@@ -40,11 +36,6 @@ class TermsOfUseViewController: UIViewController {
             statementDescription1Height.constant = 130
             statementDescription1Width.constant = 300
             statementDescription1.numberOfLines = 15
-                
-            statementTitle2Width.constant = 300
-            statementDescription2Height.constant = 344
-            statementDescription2Width.constant = 300
-            statementDescription2.numberOfLines = 25
                 
             statementTitle4Width.constant = 300
             statementDescription4Height.constant = 60

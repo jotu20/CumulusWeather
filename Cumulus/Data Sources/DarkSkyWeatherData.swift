@@ -67,6 +67,33 @@ public func fetchDarkSkyWeatherData() {
                 fetchDarkSkyCurrentForecastData()
             }
             
+            if let daily = currentForecast.daily {
+                // Day Zero
+                let dayZeroArray = daily.data[0]
+                let fetchDayZeroArray = dayZeroArray
+                
+                weatherCondition0 = "\(fetchDayZeroArray.icon!.rawValue)"
+                highTemperature = Int(fetchDayZeroArray.temperatureHigh ?? defaultInteger)
+                lowTemperature = Int(fetchDayZeroArray.temperatureLow ?? defaultInteger)
+                dewPoint = Int(fetchDayZeroArray.dewPoint ?? defaultInteger)
+                sunrise = sunFormat(date: fetchDayZeroArray.sunriseTime!)
+                sunset = sunFormat(date: fetchDayZeroArray.sunsetTime!)
+                sunriseDate = fetchDayZeroArray.sunriseTime!
+                sunsetDate = fetchDayZeroArray.sunsetTime!
+                dayZeroDayString = dayFormat(date: fetchDayZeroArray.time)
+                dayZeroDateString = dateFormat(date: fetchDayZeroArray.time)
+                dayZeroDate = fetchDayZeroArray.time
+                dayZeroHigh = Int(fetchDayZeroArray.temperatureHigh ?? defaultInteger)
+                dayZeroLow = Int(fetchDayZeroArray.temperatureLow ?? defaultInteger)
+                dayZeroSummaryString = "\(fetchDayZeroArray.summary ?? "\(defaultString)")"
+                dayZeroConditionValue = getDefaultDailyCondition(condition: fetchDayZeroArray)
+                dayZeroPrecip = dailyPrecipProb(day: fetchDayZeroArray)
+                dayZeroPrecipAccum = dailyPrecipAccum(day: fetchDayZeroArray)
+                dayZeroSunrise = sunFormat(date: fetchDayZeroArray.sunriseTime!)
+                dayZeroSunset = sunFormat(date: fetchDayZeroArray.sunsetTime!)
+                dayZeroMoonPhaseString = moonPhase(percentage: fetchDayZeroArray.moonPhase ?? defaultInteger * 100)
+            }
+            
             // Get minutely data through 60 minutes
             if let minutely = currentForecast.minutely {
                 minutelyChance1 = minutePrecipProb(value: 1, minute: minutely)
@@ -446,40 +473,13 @@ public func fetchDarkSkyWeatherData() {
     }
     
     // MARK: - Time Machine Day Zero
-    client.getForecast(location: userLocation, time: dayZeroDate!) { result in
+    client.getForecast(location: userLocation, time: dayZeroDate) { result in
         switch result {
         case .success(let forecast, _):
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
-        if let daily = forecast.daily {
-            // Day Zero
-            let dayZeroArray = daily.data[0]
-            let fetchDayZeroArray = dayZeroArray
-            
-            weatherCondition0 = "\(fetchDayZeroArray.icon!.rawValue)"
-            highTemperature = Int(fetchDayZeroArray.temperatureHigh ?? defaultInteger)
-            lowTemperature = Int(fetchDayZeroArray.temperatureLow ?? defaultInteger)
-            dewPoint = Int(fetchDayZeroArray.dewPoint ?? defaultInteger)
-            sunrise = sunFormat(date: fetchDayZeroArray.sunriseTime ?? Date())
-            sunset = sunFormat(date: fetchDayZeroArray.sunsetTime ?? Date())
-            sunriseDate = fetchDayZeroArray.sunriseTime ?? Date()
-            sunsetDate = fetchDayZeroArray.sunsetTime ?? Date()
-            dayZeroDayString = dayFormat(date: fetchDayZeroArray.time)
-            dayZeroDateString = dateFormat(date: fetchDayZeroArray.time)
-            dayZeroDate = fetchDayZeroArray.time
-            dayZeroHigh = Int(fetchDayZeroArray.temperatureHigh ?? defaultInteger)
-            dayZeroLow = Int(fetchDayZeroArray.temperatureLow ?? defaultInteger)
-            dayZeroSummaryString = "\(fetchDayZeroArray.summary ?? "\(defaultString)")"
-            dayZeroConditionValue = getDefaultDailyCondition(condition: fetchDayZeroArray)
-            dayZeroPrecip = dailyPrecipProb(day: fetchDayZeroArray)
-            dayZeroPrecipAccum = dailyPrecipAccum(day: fetchDayZeroArray)
-            dayZeroSunrise = sunFormat(date: fetchDayZeroArray.sunriseTime ?? Date())
-            dayZeroSunset = sunFormat(date: fetchDayZeroArray.sunsetTime ?? Date())
-            dayZeroMoonPhaseString = moonPhase(percentage: fetchDayZeroArray.moonPhase ?? defaultInteger * 100)
-        }
-            
         if let hourly = forecast.hourly {
-            dayZeroTime0 = hourTime(value: 0, hour: hourly)
+            dayTime0 = hourTime(value: 0, hour: hourly)
             dayZeroPrecip0 = hourPrecipProb(value: 0, hour: hourly)
             dayZeroTemp0 = hourTemp(value: 0, hour: hourly)
             dayZeroHumidity0 = hourHumidity(value: 0, hour: hourly)
@@ -488,7 +488,7 @@ public func fetchDarkSkyWeatherData() {
             dayZeroWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
             dayZeroCloudCover0 = hourCloudCover(value: 0, hour: hourly)
             
-            dayZeroTime1 = hourTime(value: 1, hour: hourly)
+            dayTime1 = hourTime(value: 1, hour: hourly)
             dayZeroPrecip1 = hourPrecipProb(value: 1, hour: hourly)
             dayZeroTemp1 = hourTemp(value: 1, hour: hourly)
             dayZeroHumidity1 = hourHumidity(value: 1, hour: hourly)
@@ -497,7 +497,7 @@ public func fetchDarkSkyWeatherData() {
             dayZeroWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
             dayZeroCloudCover1 = hourCloudCover(value: 1, hour: hourly)
             
-            dayZeroTime2 = hourTime(value: 2, hour: hourly)
+            dayTime2 = hourTime(value: 2, hour: hourly)
             dayZeroPrecip2 = hourPrecipProb(value: 2, hour: hourly)
             dayZeroTemp2 = hourTemp(value: 2, hour: hourly)
             dayZeroHumidity2 = hourHumidity(value: 2, hour: hourly)
@@ -506,7 +506,7 @@ public func fetchDarkSkyWeatherData() {
             dayZeroWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
             dayZeroCloudCover2 = hourCloudCover(value: 2, hour: hourly)
             
-            dayZeroTime3 = hourTime(value: 3, hour: hourly)
+            dayTime3 = hourTime(value: 3, hour: hourly)
             dayZeroPrecip3 = hourPrecipProb(value: 3, hour: hourly)
             dayZeroTemp3 = hourTemp(value: 3, hour: hourly)
             dayZeroHumidity3 = hourHumidity(value: 3, hour: hourly)
@@ -515,7 +515,7 @@ public func fetchDarkSkyWeatherData() {
             dayZeroWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
             dayZeroCloudCover3 = hourCloudCover(value: 3, hour: hourly)
             
-            dayZeroTime4 = hourTime(value: 4, hour: hourly)
+            dayTime4 = hourTime(value: 4, hour: hourly)
             dayZeroPrecip4 = hourPrecipProb(value: 4, hour: hourly)
             dayZeroTemp4 = hourTemp(value: 4, hour: hourly)
             dayZeroHumidity4 = hourHumidity(value: 4, hour: hourly)
@@ -524,7 +524,7 @@ public func fetchDarkSkyWeatherData() {
             dayZeroWindSpeed4 = hourWindSpeed(value: 4, hour: hourly)
             dayZeroCloudCover4 = hourCloudCover(value: 4, hour: hourly)
             
-            dayZeroTime5 = hourTime(value: 5, hour: hourly)
+            dayTime5 = hourTime(value: 5, hour: hourly)
             dayZeroPrecip5 = hourPrecipProb(value: 5, hour: hourly)
             dayZeroTemp5 = hourTemp(value: 5, hour: hourly)
             dayZeroHumidity5 = hourHumidity(value: 5, hour: hourly)
@@ -533,7 +533,7 @@ public func fetchDarkSkyWeatherData() {
             dayZeroWindSpeed5 = hourWindSpeed(value: 5, hour: hourly)
             dayZeroCloudCover5 = hourCloudCover(value: 5, hour: hourly)
             
-            dayZeroTime6 = hourTime(value: 6, hour: hourly)
+            dayTime6 = hourTime(value: 6, hour: hourly)
             dayZeroPrecip6 = hourPrecipProb(value: 6, hour: hourly)
             dayZeroTemp6 = hourTemp(value: 6, hour: hourly)
             dayZeroHumidity6 = hourHumidity(value: 6, hour: hourly)
@@ -542,7 +542,7 @@ public func fetchDarkSkyWeatherData() {
             dayZeroWindSpeed6 = hourWindSpeed(value: 6, hour: hourly)
             dayZeroCloudCover6 = hourCloudCover(value: 6, hour: hourly)
             
-            dayZeroTime7 = hourTime(value: 7, hour: hourly)
+            dayTime7 = hourTime(value: 7, hour: hourly)
             dayZeroPrecip7 = hourPrecipProb(value: 7, hour: hourly)
             dayZeroTemp7 = hourTemp(value: 7, hour: hourly)
             dayZeroHumidity7 = hourHumidity(value: 7, hour: hourly)
@@ -551,7 +551,7 @@ public func fetchDarkSkyWeatherData() {
             dayZeroWindSpeed7 = hourWindSpeed(value: 7, hour: hourly)
             dayZeroCloudCover7 = hourCloudCover(value: 7, hour: hourly)
             
-            dayZeroTime8 = hourTime(value: 8, hour: hourly)
+            dayTime8 = hourTime(value: 8, hour: hourly)
             dayZeroPrecip8 = hourPrecipProb(value: 8, hour: hourly)
             dayZeroTemp8 = hourTemp(value: 8, hour: hourly)
             dayZeroHumidity8 = hourHumidity(value: 8, hour: hourly)
@@ -560,7 +560,7 @@ public func fetchDarkSkyWeatherData() {
             dayZeroWindSpeed8 = hourWindSpeed(value: 8, hour: hourly)
             dayZeroCloudCover8 = hourCloudCover(value: 8, hour: hourly)
             
-            dayZeroTime9 = hourTime(value: 9, hour: hourly)
+            dayTime9 = hourTime(value: 9, hour: hourly)
             dayZeroPrecip9 = hourPrecipProb(value: 9, hour: hourly)
             dayZeroTemp9 = hourTemp(value: 9, hour: hourly)
             dayZeroHumidity9 = hourHumidity(value: 9, hour: hourly)
@@ -569,7 +569,7 @@ public func fetchDarkSkyWeatherData() {
             dayZeroWindSpeed9 = hourWindSpeed(value: 9, hour: hourly)
             dayZeroCloudCover9 = hourCloudCover(value: 9, hour: hourly)
             
-            dayZeroTime10 = hourTime(value: 10, hour: hourly)
+            dayTime10 = hourTime(value: 10, hour: hourly)
             dayZeroPrecip10 = hourPrecipProb(value: 10, hour: hourly)
             dayZeroTemp10 = hourTemp(value: 10, hour: hourly)
             dayZeroHumidity10 = hourHumidity(value: 10, hour: hourly)
@@ -578,7 +578,7 @@ public func fetchDarkSkyWeatherData() {
             dayZeroWindSpeed10 = hourWindSpeed(value: 10, hour: hourly)
             dayZeroCloudCover10 = hourCloudCover(value: 10, hour: hourly)
             
-            dayZeroTime11 = hourTime(value: 11, hour: hourly)
+            dayTime11 = hourTime(value: 11, hour: hourly)
             dayZeroPrecip11 = hourPrecipProb(value: 11, hour: hourly)
             dayZeroTemp11 = hourTemp(value: 11, hour: hourly)
             dayZeroHumidity11 = hourHumidity(value: 11, hour: hourly)
@@ -587,7 +587,7 @@ public func fetchDarkSkyWeatherData() {
             dayZeroWindSpeed11 = hourWindSpeed(value: 11, hour: hourly)
             dayZeroCloudCover11 = hourCloudCover(value: 11, hour: hourly)
             
-            dayZeroTime12 = hourTime(value: 12, hour: hourly)
+            dayTime12 = hourTime(value: 12, hour: hourly)
             dayZeroPrecip12 = hourPrecipProb(value: 12, hour: hourly)
             dayZeroTemp12 = hourTemp(value: 12, hour: hourly)
             dayZeroHumidity12 = hourHumidity(value: 12, hour: hourly)
@@ -596,7 +596,7 @@ public func fetchDarkSkyWeatherData() {
             dayZeroWindSpeed12 = hourWindSpeed(value: 12, hour: hourly)
             dayZeroCloudCover12 = hourCloudCover(value: 12, hour: hourly)
             
-            dayZeroTime13 = hourTime(value: 13, hour: hourly)
+            dayTime13 = hourTime(value: 13, hour: hourly)
             dayZeroPrecip13 = hourPrecipProb(value: 13, hour: hourly)
             dayZeroTemp13 = hourTemp(value: 13, hour: hourly)
             dayZeroHumidity13 = hourHumidity(value: 13, hour: hourly)
@@ -605,7 +605,7 @@ public func fetchDarkSkyWeatherData() {
             dayZeroWindSpeed13 = hourWindSpeed(value: 13, hour: hourly)
             dayZeroCloudCover13 = hourCloudCover(value: 13, hour: hourly)
             
-            dayZeroTime14 = hourTime(value: 14, hour: hourly)
+            dayTime14 = hourTime(value: 14, hour: hourly)
             dayZeroPrecip14 = hourPrecipProb(value: 14, hour: hourly)
             dayZeroTemp14 = hourTemp(value: 14, hour: hourly)
             dayZeroHumidity14 = hourHumidity(value: 14, hour: hourly)
@@ -614,7 +614,7 @@ public func fetchDarkSkyWeatherData() {
             dayZeroWindSpeed14 = hourWindSpeed(value: 14, hour: hourly)
             dayZeroCloudCover14 = hourCloudCover(value: 14, hour: hourly)
             
-            dayZeroTime15 = hourTime(value: 15, hour: hourly)
+            dayTime15 = hourTime(value: 15, hour: hourly)
             dayZeroPrecip15 = hourPrecipProb(value: 15, hour: hourly)
             dayZeroTemp15 = hourTemp(value: 15, hour: hourly)
             dayZeroHumidity15 = hourHumidity(value: 15, hour: hourly)
@@ -649,12 +649,11 @@ public func fetchDarkSkyWeatherData() {
             dayOneConditionValue = getDefaultDailyCondition(condition: fetchDayOneArray)
             dayOnePrecip = dailyPrecipProb(day: fetchDayOneArray)
             dayOnePrecipAccum = dailyPrecipAccum(day: fetchDayOneArray)
-            dayOneSunrise = sunFormat(date: fetchDayOneArray.sunriseTime ?? Date())
-            dayOneSunset = sunFormat(date: fetchDayOneArray.sunsetTime ?? Date())
+            dayOneSunrise = sunFormat(date: fetchDayOneArray.sunriseTime!)
+            dayOneSunset = sunFormat(date: fetchDayOneArray.sunsetTime!)
         }
             
         if let hourly = forecast.hourly {
-            dayOneTime0 = hourTime(value: 0, hour: hourly)
             dayOnePrecip0 = hourPrecipProb(value: 0, hour: hourly)
             dayOneTemp0 = hourTemp(value: 0, hour: hourly)
             dayOneHumidity0 = hourHumidity(value: 0, hour: hourly)
@@ -663,7 +662,6 @@ public func fetchDarkSkyWeatherData() {
             dayOneWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
             dayOneCloudCover0 = hourCloudCover(value: 0, hour: hourly)
             
-            dayOneTime1 = hourTime(value: 1, hour: hourly)
             dayOnePrecip1 = hourPrecipProb(value: 1, hour: hourly)
             dayOneTemp1 = hourTemp(value: 1, hour: hourly)
             dayOneHumidity1 = hourHumidity(value: 1, hour: hourly)
@@ -672,7 +670,6 @@ public func fetchDarkSkyWeatherData() {
             dayOneWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
             dayOneCloudCover1 = hourCloudCover(value: 1, hour: hourly)
             
-            dayOneTime2 = hourTime(value: 2, hour: hourly)
             dayOnePrecip2 = hourPrecipProb(value: 2, hour: hourly)
             dayOneTemp2 = hourTemp(value: 2, hour: hourly)
             dayOneHumidity2 = hourHumidity(value: 2, hour: hourly)
@@ -681,7 +678,6 @@ public func fetchDarkSkyWeatherData() {
             dayOneWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
             dayOneCloudCover2 = hourCloudCover(value: 2, hour: hourly)
             
-            dayOneTime3 = hourTime(value: 3, hour: hourly)
             dayOnePrecip3 = hourPrecipProb(value: 3, hour: hourly)
             dayOneTemp3 = hourTemp(value: 3, hour: hourly)
             dayOneHumidity3 = hourHumidity(value: 3, hour: hourly)
@@ -690,7 +686,6 @@ public func fetchDarkSkyWeatherData() {
             dayOneWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
             dayOneCloudCover3 = hourCloudCover(value: 3, hour: hourly)
             
-            dayOneTime4 = hourTime(value: 4, hour: hourly)
             dayOnePrecip4 = hourPrecipProb(value: 4, hour: hourly)
             dayOneTemp4 = hourTemp(value: 4, hour: hourly)
             dayOneHumidity4 = hourHumidity(value: 4, hour: hourly)
@@ -699,7 +694,6 @@ public func fetchDarkSkyWeatherData() {
             dayOneWindSpeed4 = hourWindSpeed(value: 4, hour: hourly)
             dayOneCloudCover4 = hourCloudCover(value: 4, hour: hourly)
             
-            dayOneTime5 = hourTime(value: 5, hour: hourly)
             dayOnePrecip5 = hourPrecipProb(value: 5, hour: hourly)
             dayOneTemp5 = hourTemp(value: 5, hour: hourly)
             dayOneHumidity5 = hourHumidity(value: 5, hour: hourly)
@@ -708,7 +702,6 @@ public func fetchDarkSkyWeatherData() {
             dayOneWindSpeed5 = hourWindSpeed(value: 5, hour: hourly)
             dayOneCloudCover5 = hourCloudCover(value: 5, hour: hourly)
             
-            dayOneTime6 = hourTime(value: 6, hour: hourly)
             dayOnePrecip6 = hourPrecipProb(value: 6, hour: hourly)
             dayOneTemp6 = hourTemp(value: 6, hour: hourly)
             dayOneHumidity6 = hourHumidity(value: 6, hour: hourly)
@@ -717,7 +710,6 @@ public func fetchDarkSkyWeatherData() {
             dayOneWindSpeed6 = hourWindSpeed(value: 6, hour: hourly)
             dayOneCloudCover6 = hourCloudCover(value: 6, hour: hourly)
             
-            dayOneTime7 = hourTime(value: 7, hour: hourly)
             dayOnePrecip7 = hourPrecipProb(value: 7, hour: hourly)
             dayOneTemp7 = hourTemp(value: 7, hour: hourly)
             dayOneHumidity7 = hourHumidity(value: 7, hour: hourly)
@@ -726,7 +718,6 @@ public func fetchDarkSkyWeatherData() {
             dayOneWindSpeed7 = hourWindSpeed(value: 7, hour: hourly)
             dayOneCloudCover7 = hourCloudCover(value: 7, hour: hourly)
             
-            dayOneTime8 = hourTime(value: 8, hour: hourly)
             dayOnePrecip8 = hourPrecipProb(value: 8, hour: hourly)
             dayOneTemp8 = hourTemp(value: 8, hour: hourly)
             dayOneHumidity8 = hourHumidity(value: 8, hour: hourly)
@@ -735,7 +726,6 @@ public func fetchDarkSkyWeatherData() {
             dayOneWindSpeed8 = hourWindSpeed(value: 8, hour: hourly)
             dayOneCloudCover8 = hourCloudCover(value: 8, hour: hourly)
             
-            dayOneTime9 = hourTime(value: 9, hour: hourly)
             dayOnePrecip9 = hourPrecipProb(value: 9, hour: hourly)
             dayOneTemp9 = hourTemp(value: 9, hour: hourly)
             dayOneHumidity9 = hourHumidity(value: 9, hour: hourly)
@@ -744,7 +734,6 @@ public func fetchDarkSkyWeatherData() {
             dayOneWindSpeed9 = hourWindSpeed(value: 9, hour: hourly)
             dayOneCloudCover9 = hourCloudCover(value: 9, hour: hourly)
             
-            dayOneTime10 = hourTime(value: 10, hour: hourly)
             dayOnePrecip10 = hourPrecipProb(value: 10, hour: hourly)
             dayOneTemp10 = hourTemp(value: 10, hour: hourly)
             dayOneHumidity10 = hourHumidity(value: 10, hour: hourly)
@@ -753,7 +742,6 @@ public func fetchDarkSkyWeatherData() {
             dayOneWindSpeed10 = hourWindSpeed(value: 10, hour: hourly)
             dayOneCloudCover10 = hourCloudCover(value: 10, hour: hourly)
             
-            dayOneTime11 = hourTime(value: 11, hour: hourly)
             dayOnePrecip11 = hourPrecipProb(value: 11, hour: hourly)
             dayOneTemp11 = hourTemp(value: 11, hour: hourly)
             dayOneHumidity11 = hourHumidity(value: 11, hour: hourly)
@@ -762,7 +750,6 @@ public func fetchDarkSkyWeatherData() {
             dayOneWindSpeed11 = hourWindSpeed(value: 11, hour: hourly)
             dayOneCloudCover11 = hourCloudCover(value: 11, hour: hourly)
             
-            dayOneTime12 = hourTime(value: 12, hour: hourly)
             dayOnePrecip12 = hourPrecipProb(value: 12, hour: hourly)
             dayOneTemp12 = hourTemp(value: 12, hour: hourly)
             dayOneHumidity12 = hourHumidity(value: 12, hour: hourly)
@@ -771,7 +758,6 @@ public func fetchDarkSkyWeatherData() {
             dayOneWindSpeed12 = hourWindSpeed(value: 12, hour: hourly)
             dayOneCloudCover12 = hourCloudCover(value: 12, hour: hourly)
             
-            dayOneTime13 = hourTime(value: 13, hour: hourly)
             dayOnePrecip13 = hourPrecipProb(value: 13, hour: hourly)
             dayOneTemp13 = hourTemp(value: 13, hour: hourly)
             dayOneHumidity13 = hourHumidity(value: 13, hour: hourly)
@@ -780,7 +766,6 @@ public func fetchDarkSkyWeatherData() {
             dayOneWindSpeed13 = hourWindSpeed(value: 13, hour: hourly)
             dayOneCloudCover13 = hourCloudCover(value: 13, hour: hourly)
             
-            dayOneTime14 = hourTime(value: 14, hour: hourly)
             dayOnePrecip14 = hourPrecipProb(value: 14, hour: hourly)
             dayOneTemp14 = hourTemp(value: 14, hour: hourly)
             dayOneHumidity14 = hourHumidity(value: 14, hour: hourly)
@@ -789,7 +774,6 @@ public func fetchDarkSkyWeatherData() {
             dayOneWindSpeed14 = hourWindSpeed(value: 14, hour: hourly)
             dayOneCloudCover14 = hourCloudCover(value: 14, hour: hourly)
             
-            dayOneTime15 = hourTime(value: 15, hour: hourly)
             dayOnePrecip15 = hourPrecipProb(value: 15, hour: hourly)
             dayOneTemp15 = hourTemp(value: 15, hour: hourly)
             dayOneHumidity15 = hourHumidity(value: 15, hour: hourly)
@@ -824,12 +808,11 @@ public func fetchDarkSkyWeatherData() {
             dayTwoConditionValue = getDefaultDailyCondition(condition: fetchDayTwoArray)
             dayTwoPrecip = dailyPrecipProb(day: fetchDayTwoArray)
             dayTwoPrecipAccum = dailyPrecipAccum(day: fetchDayTwoArray)
-            dayTwoSunrise = sunFormat(date: fetchDayTwoArray.sunriseTime ?? Date())
-            dayTwoSunset = sunFormat(date: fetchDayTwoArray.sunsetTime ?? Date())
+            dayTwoSunrise = sunFormat(date: fetchDayTwoArray.sunriseTime!)
+            dayTwoSunset = sunFormat(date: fetchDayTwoArray.sunsetTime!)
         }
             
         if let hourly = forecast.hourly {
-            dayTwoTime0 = hourTime(value: 0, hour: hourly)
             dayTwoPrecip0 = hourPrecipProb(value: 0, hour: hourly)
             dayTwoTemp0 = hourTemp(value: 0, hour: hourly)
             dayTwoHumidity0 = hourHumidity(value: 0, hour: hourly)
@@ -838,7 +821,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwoWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
             dayTwoCloudCover0 = hourCloudCover(value: 0, hour: hourly)
             
-            dayTwoTime1 = hourTime(value: 1, hour: hourly)
             dayTwoPrecip1 = hourPrecipProb(value: 1, hour: hourly)
             dayTwoTemp1 = hourTemp(value: 1, hour: hourly)
             dayTwoHumidity1 = hourHumidity(value: 1, hour: hourly)
@@ -847,7 +829,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwoWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
             dayTwoCloudCover1 = hourCloudCover(value: 1, hour: hourly)
             
-            dayTwoTime2 = hourTime(value: 2, hour: hourly)
             dayTwoPrecip2 = hourPrecipProb(value: 2, hour: hourly)
             dayTwoTemp2 = hourTemp(value: 2, hour: hourly)
             dayTwoHumidity2 = hourHumidity(value: 2, hour: hourly)
@@ -856,7 +837,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwoWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
             dayTwoCloudCover2 = hourCloudCover(value: 2, hour: hourly)
             
-            dayTwoTime3 = hourTime(value: 3, hour: hourly)
             dayTwoPrecip3 = hourPrecipProb(value: 3, hour: hourly)
             dayTwoTemp3 = hourTemp(value: 3, hour: hourly)
             dayTwoHumidity3 = hourHumidity(value: 3, hour: hourly)
@@ -865,7 +845,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwoWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
             dayTwoCloudCover3 = hourCloudCover(value: 3, hour: hourly)
             
-            dayTwoTime4 = hourTime(value: 4, hour: hourly)
             dayTwoPrecip4 = hourPrecipProb(value: 4, hour: hourly)
             dayTwoTemp4 = hourTemp(value: 4, hour: hourly)
             dayTwoHumidity4 = hourHumidity(value: 4, hour: hourly)
@@ -874,7 +853,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwoWindSpeed4 = hourWindSpeed(value: 4, hour: hourly)
             dayTwoCloudCover4 = hourCloudCover(value: 4, hour: hourly)
             
-            dayTwoTime5 = hourTime(value: 5, hour: hourly)
             dayTwoPrecip5 = hourPrecipProb(value: 5, hour: hourly)
             dayTwoTemp5 = hourTemp(value: 5, hour: hourly)
             dayTwoHumidity5 = hourHumidity(value: 5, hour: hourly)
@@ -883,7 +861,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwoWindSpeed5 = hourWindSpeed(value: 5, hour: hourly)
             dayTwoCloudCover5 = hourCloudCover(value: 5, hour: hourly)
             
-            dayTwoTime6 = hourTime(value: 6, hour: hourly)
             dayTwoPrecip6 = hourPrecipProb(value: 6, hour: hourly)
             dayTwoTemp6 = hourTemp(value: 6, hour: hourly)
             dayTwoHumidity6 = hourHumidity(value: 6, hour: hourly)
@@ -892,7 +869,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwoWindSpeed6 = hourWindSpeed(value: 6, hour: hourly)
             dayTwoCloudCover6 = hourCloudCover(value: 6, hour: hourly)
             
-            dayTwoTime7 = hourTime(value: 7, hour: hourly)
             dayTwoPrecip7 = hourPrecipProb(value: 7, hour: hourly)
             dayTwoTemp7 = hourTemp(value: 7, hour: hourly)
             dayTwoHumidity7 = hourHumidity(value: 7, hour: hourly)
@@ -901,7 +877,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwoWindSpeed7 = hourWindSpeed(value: 7, hour: hourly)
             dayTwoCloudCover7 = hourCloudCover(value: 7, hour: hourly)
             
-            dayTwoTime8 = hourTime(value: 8, hour: hourly)
             dayTwoPrecip8 = hourPrecipProb(value: 8, hour: hourly)
             dayTwoTemp8 = hourTemp(value: 8, hour: hourly)
             dayTwoHumidity8 = hourHumidity(value: 8, hour: hourly)
@@ -910,7 +885,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwoWindSpeed8 = hourWindSpeed(value: 8, hour: hourly)
             dayTwoCloudCover8 = hourCloudCover(value: 8, hour: hourly)
             
-            dayTwoTime9 = hourTime(value: 9, hour: hourly)
             dayTwoPrecip9 = hourPrecipProb(value: 9, hour: hourly)
             dayTwoTemp9 = hourTemp(value: 9, hour: hourly)
             dayTwoHumidity9 = hourHumidity(value: 9, hour: hourly)
@@ -919,7 +893,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwoWindSpeed9 = hourWindSpeed(value: 9, hour: hourly)
             dayTwoCloudCover9 = hourCloudCover(value: 9, hour: hourly)
             
-            dayTwoTime10 = hourTime(value: 10, hour: hourly)
             dayTwoPrecip10 = hourPrecipProb(value: 10, hour: hourly)
             dayTwoTemp10 = hourTemp(value: 10, hour: hourly)
             dayTwoHumidity10 = hourHumidity(value: 10, hour: hourly)
@@ -928,7 +901,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwoWindSpeed10 = hourWindSpeed(value: 10, hour: hourly)
             dayTwoCloudCover10 = hourCloudCover(value: 10, hour: hourly)
             
-            dayTwoTime11 = hourTime(value: 11, hour: hourly)
             dayTwoPrecip11 = hourPrecipProb(value: 11, hour: hourly)
             dayTwoTemp11 = hourTemp(value: 11, hour: hourly)
             dayTwoHumidity11 = hourHumidity(value: 11, hour: hourly)
@@ -937,7 +909,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwoWindSpeed11 = hourWindSpeed(value: 11, hour: hourly)
             dayTwoCloudCover11 = hourCloudCover(value: 11, hour: hourly)
             
-            dayTwoTime12 = hourTime(value: 12, hour: hourly)
             dayTwoPrecip12 = hourPrecipProb(value: 12, hour: hourly)
             dayTwoTemp12 = hourTemp(value: 12, hour: hourly)
             dayTwoHumidity12 = hourHumidity(value: 12, hour: hourly)
@@ -946,7 +917,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwoWindSpeed12 = hourWindSpeed(value: 12, hour: hourly)
             dayTwoCloudCover12 = hourCloudCover(value: 12, hour: hourly)
             
-            dayTwoTime13 = hourTime(value: 13, hour: hourly)
             dayTwoPrecip13 = hourPrecipProb(value: 13, hour: hourly)
             dayTwoTemp13 = hourTemp(value: 13, hour: hourly)
             dayTwoHumidity13 = hourHumidity(value: 13, hour: hourly)
@@ -955,7 +925,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwoWindSpeed13 = hourWindSpeed(value: 13, hour: hourly)
             dayTwoCloudCover13 = hourCloudCover(value: 13, hour: hourly)
             
-            dayTwoTime14 = hourTime(value: 14, hour: hourly)
             dayTwoPrecip14 = hourPrecipProb(value: 14, hour: hourly)
             dayTwoTemp14 = hourTemp(value: 14, hour: hourly)
             dayTwoHumidity14 = hourHumidity(value: 14, hour: hourly)
@@ -964,7 +933,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwoWindSpeed14 = hourWindSpeed(value: 14, hour: hourly)
             dayTwoCloudCover14 = hourCloudCover(value: 14, hour: hourly)
             
-            dayTwoTime15 = hourTime(value: 15, hour: hourly)
             dayTwoPrecip15 = hourPrecipProb(value: 15, hour: hourly)
             dayTwoTemp15 = hourTemp(value: 15, hour: hourly)
             dayTwoHumidity15 = hourHumidity(value: 15, hour: hourly)
@@ -999,12 +967,11 @@ public func fetchDarkSkyWeatherData() {
             dayThreeConditionValue = getDefaultDailyCondition(condition: fetchDayThreeArray)
             dayThreePrecip = dailyPrecipProb(day: fetchDayThreeArray)
             dayThreePrecipAccum = dailyPrecipAccum(day: fetchDayThreeArray)
-            dayThreeSunrise = sunFormat(date: fetchDayThreeArray.sunriseTime ?? Date())
-            dayThreeSunset = sunFormat(date: fetchDayThreeArray.sunsetTime ?? Date())
+            dayThreeSunrise = sunFormat(date: fetchDayThreeArray.sunriseTime!)
+            dayThreeSunset = sunFormat(date: fetchDayThreeArray.sunsetTime!)
         }
             
         if let hourly = forecast.hourly {
-            dayThreeTime0 = hourTime(value: 0, hour: hourly)
             dayThreePrecip0 = hourPrecipProb(value: 0, hour: hourly)
             dayThreeTemp0 = hourTemp(value: 0, hour: hourly)
             dayThreeHumidity0 = hourHumidity(value: 0, hour: hourly)
@@ -1012,8 +979,7 @@ public func fetchDarkSkyWeatherData() {
             dayThreeIndex0 = hourUVIndex(value: 0, hour: hourly)
             dayThreeWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
             dayThreeCloudCover0 = hourCloudCover(value: 0, hour: hourly)
-            
-            dayThreeTime1 = hourTime(value: 1, hour: hourly)
+
             dayThreePrecip1 = hourPrecipProb(value: 1, hour: hourly)
             dayThreeTemp1 = hourTemp(value: 1, hour: hourly)
             dayThreeHumidity1 = hourHumidity(value: 1, hour: hourly)
@@ -1021,8 +987,7 @@ public func fetchDarkSkyWeatherData() {
             dayThreeIndex1 = hourUVIndex(value: 1, hour: hourly)
             dayThreeWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
             dayThreeCloudCover1 = hourCloudCover(value: 1, hour: hourly)
-            
-            dayThreeTime2 = hourTime(value: 2, hour: hourly)
+
             dayThreePrecip2 = hourPrecipProb(value: 2, hour: hourly)
             dayThreeTemp2 = hourTemp(value: 2, hour: hourly)
             dayThreeHumidity2 = hourHumidity(value: 2, hour: hourly)
@@ -1030,8 +995,7 @@ public func fetchDarkSkyWeatherData() {
             dayThreeIndex2 = hourUVIndex(value: 2, hour: hourly)
             dayThreeWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
             dayThreeCloudCover2 = hourCloudCover(value: 2, hour: hourly)
-            
-            dayThreeTime3 = hourTime(value: 3, hour: hourly)
+
             dayThreePrecip3 = hourPrecipProb(value: 3, hour: hourly)
             dayThreeTemp3 = hourTemp(value: 3, hour: hourly)
             dayThreeHumidity3 = hourHumidity(value: 3, hour: hourly)
@@ -1039,8 +1003,7 @@ public func fetchDarkSkyWeatherData() {
             dayThreeIndex3 = hourUVIndex(value: 3, hour: hourly)
             dayThreeWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
             dayThreeCloudCover3 = hourCloudCover(value: 3, hour: hourly)
-            
-            dayThreeTime4 = hourTime(value: 4, hour: hourly)
+
             dayThreePrecip4 = hourPrecipProb(value: 4, hour: hourly)
             dayThreeTemp4 = hourTemp(value: 4, hour: hourly)
             dayThreeHumidity4 = hourHumidity(value: 4, hour: hourly)
@@ -1048,8 +1011,7 @@ public func fetchDarkSkyWeatherData() {
             dayThreeIndex4 = hourUVIndex(value: 4, hour: hourly)
             dayThreeWindSpeed4 = hourWindSpeed(value: 4, hour: hourly)
             dayThreeCloudCover4 = hourCloudCover(value: 4, hour: hourly)
-            
-            dayThreeTime5 = hourTime(value: 5, hour: hourly)
+
             dayThreePrecip5 = hourPrecipProb(value: 5, hour: hourly)
             dayThreeTemp5 = hourTemp(value: 5, hour: hourly)
             dayThreeHumidity5 = hourHumidity(value: 5, hour: hourly)
@@ -1057,8 +1019,7 @@ public func fetchDarkSkyWeatherData() {
             dayThreeIndex5 = hourUVIndex(value: 5, hour: hourly)
             dayThreeWindSpeed5 = hourWindSpeed(value: 5, hour: hourly)
             dayThreeCloudCover5 = hourCloudCover(value: 5, hour: hourly)
-            
-            dayThreeTime6 = hourTime(value: 6, hour: hourly)
+
             dayThreePrecip6 = hourPrecipProb(value: 6, hour: hourly)
             dayThreeTemp6 = hourTemp(value: 6, hour: hourly)
             dayThreeHumidity6 = hourHumidity(value: 6, hour: hourly)
@@ -1066,8 +1027,7 @@ public func fetchDarkSkyWeatherData() {
             dayThreeIndex6 = hourUVIndex(value: 6, hour: hourly)
             dayThreeWindSpeed6 = hourWindSpeed(value: 6, hour: hourly)
             dayThreeCloudCover6 = hourCloudCover(value: 6, hour: hourly)
-            
-            dayThreeTime7 = hourTime(value: 7, hour: hourly)
+
             dayThreePrecip7 = hourPrecipProb(value: 7, hour: hourly)
             dayThreeTemp7 = hourTemp(value: 7, hour: hourly)
             dayThreeHumidity7 = hourHumidity(value: 7, hour: hourly)
@@ -1075,8 +1035,7 @@ public func fetchDarkSkyWeatherData() {
             dayThreeIndex7 = hourUVIndex(value: 7, hour: hourly)
             dayThreeWindSpeed7 = hourWindSpeed(value: 7, hour: hourly)
             dayThreeCloudCover7 = hourCloudCover(value: 7, hour: hourly)
-            
-            dayThreeTime8 = hourTime(value: 8, hour: hourly)
+
             dayThreePrecip8 = hourPrecipProb(value: 8, hour: hourly)
             dayThreeTemp8 = hourTemp(value: 8, hour: hourly)
             dayThreeHumidity8 = hourHumidity(value: 8, hour: hourly)
@@ -1084,8 +1043,7 @@ public func fetchDarkSkyWeatherData() {
             dayThreeIndex8 = hourUVIndex(value: 8, hour: hourly)
             dayThreeWindSpeed8 = hourWindSpeed(value: 8, hour: hourly)
             dayThreeCloudCover8 = hourCloudCover(value: 8, hour: hourly)
-            
-            dayThreeTime9 = hourTime(value: 9, hour: hourly)
+
             dayThreePrecip9 = hourPrecipProb(value: 9, hour: hourly)
             dayThreeTemp9 = hourTemp(value: 9, hour: hourly)
             dayThreeHumidity9 = hourHumidity(value: 9, hour: hourly)
@@ -1093,8 +1051,7 @@ public func fetchDarkSkyWeatherData() {
             dayThreeIndex9 = hourUVIndex(value: 9, hour: hourly)
             dayThreeWindSpeed9 = hourWindSpeed(value: 9, hour: hourly)
             dayThreeCloudCover9 = hourCloudCover(value: 9, hour: hourly)
-            
-            dayThreeTime10 = hourTime(value: 10, hour: hourly)
+
             dayThreePrecip10 = hourPrecipProb(value: 10, hour: hourly)
             dayThreeTemp10 = hourTemp(value: 10, hour: hourly)
             dayThreeHumidity10 = hourHumidity(value: 10, hour: hourly)
@@ -1102,8 +1059,7 @@ public func fetchDarkSkyWeatherData() {
             dayThreeIndex10 = hourUVIndex(value: 10, hour: hourly)
             dayThreeWindSpeed10 = hourWindSpeed(value: 10, hour: hourly)
             dayThreeCloudCover10 = hourCloudCover(value: 10, hour: hourly)
-            
-            dayThreeTime11 = hourTime(value: 11, hour: hourly)
+
             dayThreePrecip11 = hourPrecipProb(value: 11, hour: hourly)
             dayThreeTemp11 = hourTemp(value: 11, hour: hourly)
             dayThreeHumidity11 = hourHumidity(value: 11, hour: hourly)
@@ -1111,8 +1067,7 @@ public func fetchDarkSkyWeatherData() {
             dayThreeIndex11 = hourUVIndex(value: 11, hour: hourly)
             dayThreeWindSpeed11 = hourWindSpeed(value: 11, hour: hourly)
             dayThreeCloudCover11 = hourCloudCover(value: 11, hour: hourly)
-            
-            dayThreeTime12 = hourTime(value: 12, hour: hourly)
+
             dayThreePrecip12 = hourPrecipProb(value: 12, hour: hourly)
             dayThreeTemp12 = hourTemp(value: 12, hour: hourly)
             dayThreeHumidity12 = hourHumidity(value: 12, hour: hourly)
@@ -1120,8 +1075,7 @@ public func fetchDarkSkyWeatherData() {
             dayThreeIndex12 = hourUVIndex(value: 12, hour: hourly)
             dayThreeWindSpeed12 = hourWindSpeed(value: 12, hour: hourly)
             dayThreeCloudCover12 = hourCloudCover(value: 12, hour: hourly)
-            
-            dayThreeTime13 = hourTime(value: 13, hour: hourly)
+
             dayThreePrecip13 = hourPrecipProb(value: 13, hour: hourly)
             dayThreeTemp13 = hourTemp(value: 13, hour: hourly)
             dayThreeHumidity13 = hourHumidity(value: 13, hour: hourly)
@@ -1129,8 +1083,7 @@ public func fetchDarkSkyWeatherData() {
             dayThreeIndex13 = hourUVIndex(value: 13, hour: hourly)
             dayThreeWindSpeed13 = hourWindSpeed(value: 13, hour: hourly)
             dayThreeCloudCover13 = hourCloudCover(value: 13, hour: hourly)
-            
-            dayThreeTime14 = hourTime(value: 14, hour: hourly)
+
             dayThreePrecip14 = hourPrecipProb(value: 14, hour: hourly)
             dayThreeTemp14 = hourTemp(value: 14, hour: hourly)
             dayThreeHumidity14 = hourHumidity(value: 14, hour: hourly)
@@ -1138,8 +1091,7 @@ public func fetchDarkSkyWeatherData() {
             dayThreeIndex14 = hourUVIndex(value: 14, hour: hourly)
             dayThreeWindSpeed14 = hourWindSpeed(value: 14, hour: hourly)
             dayThreeCloudCover14 = hourCloudCover(value: 14, hour: hourly)
-            
-            dayThreeTime15 = hourTime(value: 15, hour: hourly)
+
             dayThreePrecip15 = hourPrecipProb(value: 15, hour: hourly)
             dayThreeTemp15 = hourTemp(value: 15, hour: hourly)
             dayThreeHumidity15 = hourHumidity(value: 15, hour: hourly)
@@ -1174,12 +1126,11 @@ public func fetchDarkSkyWeatherData() {
             dayFourConditionValue = getDefaultDailyCondition(condition: fetchDayFourArray)
             dayFourPrecip = dailyPrecipProb(day: fetchDayFourArray)
             dayFourPrecipAccum = dailyPrecipAccum(day: fetchDayFourArray)
-            dayFourSunrise = sunFormat(date: fetchDayFourArray.sunriseTime ?? Date())
-            dayFourSunset = sunFormat(date: fetchDayFourArray.sunsetTime ?? Date())
+            dayFourSunrise = sunFormat(date: fetchDayFourArray.sunriseTime!)
+            dayFourSunset = sunFormat(date: fetchDayFourArray.sunsetTime!)
         }
             
         if let hourly = forecast.hourly {
-            dayFourTime0 = hourTime(value: 0, hour: hourly)
             dayFourPrecip0 = hourPrecipProb(value: 0, hour: hourly)
             dayFourTemp0 = hourTemp(value: 0, hour: hourly)
             dayFourHumidity0 = hourHumidity(value: 0, hour: hourly)
@@ -1187,8 +1138,7 @@ public func fetchDarkSkyWeatherData() {
             dayFourIndex0 = hourUVIndex(value: 0, hour: hourly)
             dayFourWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
             dayFourCloudCover0 = hourCloudCover(value: 0, hour: hourly)
-            
-            dayFourTime1 = hourTime(value: 1, hour: hourly)
+
             dayFourPrecip1 = hourPrecipProb(value: 1, hour: hourly)
             dayFourTemp1 = hourTemp(value: 1, hour: hourly)
             dayFourHumidity1 = hourHumidity(value: 1, hour: hourly)
@@ -1196,8 +1146,7 @@ public func fetchDarkSkyWeatherData() {
             dayFourIndex1 = hourUVIndex(value: 1, hour: hourly)
             dayFourWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
             dayFourCloudCover1 = hourCloudCover(value: 1, hour: hourly)
-            
-            dayFourTime2 = hourTime(value: 2, hour: hourly)
+
             dayFourPrecip2 = hourPrecipProb(value: 2, hour: hourly)
             dayFourTemp2 = hourTemp(value: 2, hour: hourly)
             dayFourHumidity2 = hourHumidity(value: 2, hour: hourly)
@@ -1205,8 +1154,7 @@ public func fetchDarkSkyWeatherData() {
             dayFourIndex2 = hourUVIndex(value: 2, hour: hourly)
             dayFourWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
             dayFourCloudCover2 = hourCloudCover(value: 2, hour: hourly)
-            
-            dayFourTime3 = hourTime(value: 3, hour: hourly)
+
             dayFourPrecip3 = hourPrecipProb(value: 3, hour: hourly)
             dayFourTemp3 = hourTemp(value: 3, hour: hourly)
             dayFourHumidity3 = hourHumidity(value: 3, hour: hourly)
@@ -1214,8 +1162,7 @@ public func fetchDarkSkyWeatherData() {
             dayFourIndex3 = hourUVIndex(value: 3, hour: hourly)
             dayFourWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
             dayFourCloudCover3 = hourCloudCover(value: 3, hour: hourly)
-            
-            dayFourTime4 = hourTime(value: 4, hour: hourly)
+
             dayFourPrecip4 = hourPrecipProb(value: 4, hour: hourly)
             dayFourTemp4 = hourTemp(value: 4, hour: hourly)
             dayFourHumidity4 = hourHumidity(value: 4, hour: hourly)
@@ -1223,8 +1170,7 @@ public func fetchDarkSkyWeatherData() {
             dayFourIndex4 = hourUVIndex(value: 4, hour: hourly)
             dayFourWindSpeed4 = hourWindSpeed(value: 4, hour: hourly)
             dayFourCloudCover4 = hourCloudCover(value: 4, hour: hourly)
-            
-            dayFourTime5 = hourTime(value: 5, hour: hourly)
+
             dayFourPrecip5 = hourPrecipProb(value: 5, hour: hourly)
             dayFourTemp5 = hourTemp(value: 5, hour: hourly)
             dayFourHumidity5 = hourHumidity(value: 5, hour: hourly)
@@ -1232,8 +1178,7 @@ public func fetchDarkSkyWeatherData() {
             dayFourIndex5 = hourUVIndex(value: 5, hour: hourly)
             dayFourWindSpeed5 = hourWindSpeed(value: 5, hour: hourly)
             dayFourCloudCover5 = hourCloudCover(value: 5, hour: hourly)
-            
-            dayFourTime6 = hourTime(value: 6, hour: hourly)
+
             dayFourPrecip6 = hourPrecipProb(value: 6, hour: hourly)
             dayFourTemp6 = hourTemp(value: 6, hour: hourly)
             dayFourHumidity6 = hourHumidity(value: 6, hour: hourly)
@@ -1241,8 +1186,7 @@ public func fetchDarkSkyWeatherData() {
             dayFourIndex6 = hourUVIndex(value: 6, hour: hourly)
             dayFourWindSpeed6 = hourWindSpeed(value: 6, hour: hourly)
             dayFourCloudCover6 = hourCloudCover(value: 6, hour: hourly)
-            
-            dayFourTime7 = hourTime(value: 7, hour: hourly)
+
             dayFourPrecip7 = hourPrecipProb(value: 7, hour: hourly)
             dayFourTemp7 = hourTemp(value: 7, hour: hourly)
             dayFourHumidity7 = hourHumidity(value: 7, hour: hourly)
@@ -1251,7 +1195,6 @@ public func fetchDarkSkyWeatherData() {
             dayFourWindSpeed7 = hourWindSpeed(value: 7, hour: hourly)
             dayFourCloudCover7 = hourCloudCover(value: 7, hour: hourly)
             
-            dayFourTime8 = hourTime(value: 8, hour: hourly)
             dayFourPrecip8 = hourPrecipProb(value: 8, hour: hourly)
             dayFourTemp8 = hourTemp(value: 8, hour: hourly)
             dayFourHumidity8 = hourHumidity(value: 8, hour: hourly)
@@ -1260,7 +1203,6 @@ public func fetchDarkSkyWeatherData() {
             dayFourWindSpeed8 = hourWindSpeed(value: 8, hour: hourly)
             dayFourCloudCover8 = hourCloudCover(value: 8, hour: hourly)
             
-            dayFourTime9 = hourTime(value: 9, hour: hourly)
             dayFourPrecip9 = hourPrecipProb(value: 9, hour: hourly)
             dayFourTemp9 = hourTemp(value: 9, hour: hourly)
             dayFourHumidity9 = hourHumidity(value: 9, hour: hourly)
@@ -1268,8 +1210,7 @@ public func fetchDarkSkyWeatherData() {
             dayFourIndex9 = hourUVIndex(value: 9, hour: hourly)
             dayFourWindSpeed9 = hourWindSpeed(value: 9, hour: hourly)
             dayFourCloudCover9 = hourCloudCover(value: 9, hour: hourly)
-            
-            dayFourTime10 = hourTime(value: 10, hour: hourly)
+
             dayFourPrecip10 = hourPrecipProb(value: 10, hour: hourly)
             dayFourTemp10 = hourTemp(value: 10, hour: hourly)
             dayFourHumidity10 = hourHumidity(value: 10, hour: hourly)
@@ -1277,8 +1218,7 @@ public func fetchDarkSkyWeatherData() {
             dayFourIndex10 = hourUVIndex(value: 10, hour: hourly)
             dayFourWindSpeed10 = hourWindSpeed(value: 10, hour: hourly)
             dayFourCloudCover10 = hourCloudCover(value: 10, hour: hourly)
-            
-            dayFourTime11 = hourTime(value: 11, hour: hourly)
+
             dayFourPrecip11 = hourPrecipProb(value: 11, hour: hourly)
             dayFourTemp11 = hourTemp(value: 11, hour: hourly)
             dayFourHumidity11 = hourHumidity(value: 11, hour: hourly)
@@ -1286,8 +1226,7 @@ public func fetchDarkSkyWeatherData() {
             dayFourIndex11 = hourUVIndex(value: 11, hour: hourly)
             dayFourWindSpeed11 = hourWindSpeed(value: 11, hour: hourly)
             dayFourCloudCover11 = hourCloudCover(value: 11, hour: hourly)
-            
-            dayFourTime12 = hourTime(value: 12, hour: hourly)
+
             dayFourPrecip12 = hourPrecipProb(value: 12, hour: hourly)
             dayFourTemp12 = hourTemp(value: 12, hour: hourly)
             dayFourHumidity12 = hourHumidity(value: 12, hour: hourly)
@@ -1295,8 +1234,7 @@ public func fetchDarkSkyWeatherData() {
             dayFourIndex12 = hourUVIndex(value: 12, hour: hourly)
             dayFourWindSpeed12 = hourWindSpeed(value: 12, hour: hourly)
             dayFourCloudCover12 = hourCloudCover(value: 12, hour: hourly)
-            
-            dayFourTime13 = hourTime(value: 13, hour: hourly)
+
             dayFourPrecip13 = hourPrecipProb(value: 13, hour: hourly)
             dayFourTemp13 = hourTemp(value: 13, hour: hourly)
             dayFourHumidity13 = hourHumidity(value: 13, hour: hourly)
@@ -1304,8 +1242,7 @@ public func fetchDarkSkyWeatherData() {
             dayFourIndex13 = hourUVIndex(value: 13, hour: hourly)
             dayFourWindSpeed13 = hourWindSpeed(value: 13, hour: hourly)
             dayFourCloudCover13 = hourCloudCover(value: 13, hour: hourly)
-            
-            dayFourTime14 = hourTime(value: 14, hour: hourly)
+
             dayFourPrecip14 = hourPrecipProb(value: 14, hour: hourly)
             dayFourTemp14 = hourTemp(value: 14, hour: hourly)
             dayFourHumidity14 = hourHumidity(value: 14, hour: hourly)
@@ -1313,8 +1250,7 @@ public func fetchDarkSkyWeatherData() {
             dayFourIndex14 = hourUVIndex(value: 14, hour: hourly)
             dayFourWindSpeed14 = hourWindSpeed(value: 14, hour: hourly)
             dayFourCloudCover14 = hourCloudCover(value: 14, hour: hourly)
-            
-            dayFourTime15 = hourTime(value: 15, hour: hourly)
+
             dayFourPrecip15 = hourPrecipProb(value: 15, hour: hourly)
             dayFourTemp15 = hourTemp(value: 15, hour: hourly)
             dayFourHumidity15 = hourHumidity(value: 15, hour: hourly)
@@ -1349,12 +1285,11 @@ public func fetchDarkSkyWeatherData() {
             dayFiveConditionValue = getDefaultDailyCondition(condition: fetchDayFiveArray)
             dayFivePrecip = dailyPrecipProb(day: fetchDayFiveArray)
             dayFivePrecipAccum = dailyPrecipAccum(day: fetchDayFiveArray)
-            dayFiveSunrise = sunFormat(date: fetchDayFiveArray.sunriseTime ?? Date())
-            dayFiveSunset = sunFormat(date: fetchDayFiveArray.sunsetTime ?? Date())
+            dayFiveSunrise = sunFormat(date: fetchDayFiveArray.sunriseTime!)
+            dayFiveSunset = sunFormat(date: fetchDayFiveArray.sunsetTime!)
         }
             
         if let hourly = forecast.hourly {
-            dayFiveTime0 = hourTime(value: 0, hour: hourly)
             dayFivePrecip0 = hourPrecipProb(value: 0, hour: hourly)
             dayFiveTemp0 = hourTemp(value: 0, hour: hourly)
             dayFiveHumidity0 = hourHumidity(value: 0, hour: hourly)
@@ -1362,8 +1297,7 @@ public func fetchDarkSkyWeatherData() {
             dayFiveIndex0 = hourUVIndex(value: 0, hour: hourly)
             dayFiveWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
             dayFiveCloudCover0 = hourCloudCover(value: 0, hour: hourly)
-            
-            dayFiveTime1 = hourTime(value: 1, hour: hourly)
+
             dayFivePrecip1 = hourPrecipProb(value: 1, hour: hourly)
             dayFiveTemp1 = hourTemp(value: 1, hour: hourly)
             dayFiveHumidity1 = hourHumidity(value: 1, hour: hourly)
@@ -1371,8 +1305,7 @@ public func fetchDarkSkyWeatherData() {
             dayFiveIndex1 = hourUVIndex(value: 1, hour: hourly)
             dayFiveWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
             dayFiveCloudCover1 = hourCloudCover(value: 1, hour: hourly)
-            
-            dayFiveTime2 = hourTime(value: 2, hour: hourly)
+
             dayFivePrecip2 = hourPrecipProb(value: 2, hour: hourly)
             dayFiveTemp2 = hourTemp(value: 2, hour: hourly)
             dayFiveHumidity2 = hourHumidity(value: 2, hour: hourly)
@@ -1380,8 +1313,7 @@ public func fetchDarkSkyWeatherData() {
             dayFiveIndex2 = hourUVIndex(value: 2, hour: hourly)
             dayFiveWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
             dayFiveCloudCover2 = hourCloudCover(value: 2, hour: hourly)
-            
-            dayFiveTime3 = hourTime(value: 3, hour: hourly)
+
             dayFivePrecip3 = hourPrecipProb(value: 3, hour: hourly)
             dayFiveTemp3 = hourTemp(value: 3, hour: hourly)
             dayFiveHumidity3 = hourHumidity(value: 3, hour: hourly)
@@ -1389,8 +1321,7 @@ public func fetchDarkSkyWeatherData() {
             dayFiveIndex3 = hourUVIndex(value: 3, hour: hourly)
             dayFiveWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
             dayFiveCloudCover3 = hourCloudCover(value: 3, hour: hourly)
-            
-            dayFiveTime4 = hourTime(value: 4, hour: hourly)
+
             dayFivePrecip4 = hourPrecipProb(value: 4, hour: hourly)
             dayFiveTemp4 = hourTemp(value: 4, hour: hourly)
             dayFiveHumidity4 = hourHumidity(value: 4, hour: hourly)
@@ -1398,8 +1329,7 @@ public func fetchDarkSkyWeatherData() {
             dayFiveIndex4 = hourUVIndex(value: 4, hour: hourly)
             dayFiveWindSpeed4 = hourWindSpeed(value: 4, hour: hourly)
             dayFiveCloudCover4 = hourCloudCover(value: 4, hour: hourly)
-            
-            dayFiveTime5 = hourTime(value: 5, hour: hourly)
+
             dayFivePrecip5 = hourPrecipProb(value: 5, hour: hourly)
             dayFiveTemp5 = hourTemp(value: 5, hour: hourly)
             dayFiveHumidity5 = hourHumidity(value: 5, hour: hourly)
@@ -1407,8 +1337,7 @@ public func fetchDarkSkyWeatherData() {
             dayFiveIndex5 = hourUVIndex(value: 5, hour: hourly)
             dayFiveWindSpeed5 = hourWindSpeed(value: 5, hour: hourly)
             dayFiveCloudCover5 = hourCloudCover(value: 5, hour: hourly)
-            
-            dayFiveTime6 = hourTime(value: 6, hour: hourly)
+
             dayFivePrecip6 = hourPrecipProb(value: 6, hour: hourly)
             dayFiveTemp6 = hourTemp(value: 6, hour: hourly)
             dayFiveHumidity6 = hourHumidity(value: 6, hour: hourly)
@@ -1416,8 +1345,7 @@ public func fetchDarkSkyWeatherData() {
             dayFiveIndex6 = hourUVIndex(value: 6, hour: hourly)
             dayFiveWindSpeed6 = hourWindSpeed(value: 6, hour: hourly)
             dayFiveCloudCover6 = hourCloudCover(value: 6, hour: hourly)
-            
-            dayFiveTime7 = hourTime(value: 7, hour: hourly)
+
             dayFivePrecip7 = hourPrecipProb(value: 7, hour: hourly)
             dayFiveTemp7 = hourTemp(value: 7, hour: hourly)
             dayFiveHumidity7 = hourHumidity(value: 7, hour: hourly)
@@ -1425,8 +1353,7 @@ public func fetchDarkSkyWeatherData() {
             dayFiveIndex7 = hourUVIndex(value: 7, hour: hourly)
             dayFiveWindSpeed7 = hourWindSpeed(value: 7, hour: hourly)
             dayFiveCloudCover7 = hourCloudCover(value: 7, hour: hourly)
-            
-            dayFiveTime8 = hourTime(value: 8, hour: hourly)
+
             dayFivePrecip8 = hourPrecipProb(value: 8, hour: hourly)
             dayFiveTemp8 = hourTemp(value: 8, hour: hourly)
             dayFiveHumidity8 = hourHumidity(value: 8, hour: hourly)
@@ -1434,8 +1361,7 @@ public func fetchDarkSkyWeatherData() {
             dayFiveIndex8 = hourUVIndex(value: 8, hour: hourly)
             dayFiveWindSpeed8 = hourWindSpeed(value: 8, hour: hourly)
             dayFiveCloudCover8 = hourCloudCover(value: 8, hour: hourly)
-            
-            dayFiveTime9 = hourTime(value: 9, hour: hourly)
+
             dayFivePrecip9 = hourPrecipProb(value: 9, hour: hourly)
             dayFiveTemp9 = hourTemp(value: 9, hour: hourly)
             dayFiveHumidity9 = hourHumidity(value: 9, hour: hourly)
@@ -1443,8 +1369,7 @@ public func fetchDarkSkyWeatherData() {
             dayFiveIndex9 = hourUVIndex(value: 9, hour: hourly)
             dayFiveWindSpeed9 = hourWindSpeed(value: 9, hour: hourly)
             dayFiveCloudCover9 = hourCloudCover(value: 9, hour: hourly)
-            
-            dayFiveTime10 = hourTime(value: 10, hour: hourly)
+
             dayFivePrecip10 = hourPrecipProb(value: 10, hour: hourly)
             dayFiveTemp10 = hourTemp(value: 10, hour: hourly)
             dayFiveHumidity10 = hourHumidity(value: 10, hour: hourly)
@@ -1452,8 +1377,7 @@ public func fetchDarkSkyWeatherData() {
             dayFiveIndex10 = hourUVIndex(value: 10, hour: hourly)
             dayFiveWindSpeed10 = hourWindSpeed(value: 10, hour: hourly)
             dayFiveCloudCover10 = hourCloudCover(value: 10, hour: hourly)
-            
-            dayFiveTime11 = hourTime(value: 11, hour: hourly)
+
             dayFivePrecip11 = hourPrecipProb(value: 11, hour: hourly)
             dayFiveTemp11 = hourTemp(value: 11, hour: hourly)
             dayFiveHumidity11 = hourHumidity(value: 11, hour: hourly)
@@ -1461,8 +1385,7 @@ public func fetchDarkSkyWeatherData() {
             dayFiveIndex11 = hourUVIndex(value: 11, hour: hourly)
             dayFiveWindSpeed11 = hourWindSpeed(value: 11, hour: hourly)
             dayFiveCloudCover11 = hourCloudCover(value: 11, hour: hourly)
-            
-            dayFiveTime12 = hourTime(value: 12, hour: hourly)
+
             dayFivePrecip12 = hourPrecipProb(value: 12, hour: hourly)
             dayFiveTemp12 = hourTemp(value: 12, hour: hourly)
             dayFiveHumidity12 = hourHumidity(value: 12, hour: hourly)
@@ -1470,8 +1393,7 @@ public func fetchDarkSkyWeatherData() {
             dayFiveIndex12 = hourUVIndex(value: 12, hour: hourly)
             dayFiveWindSpeed12 = hourWindSpeed(value: 12, hour: hourly)
             dayFiveCloudCover12 = hourCloudCover(value: 12, hour: hourly)
-            
-            dayFiveTime13 = hourTime(value: 13, hour: hourly)
+
             dayFivePrecip13 = hourPrecipProb(value: 13, hour: hourly)
             dayFiveTemp13 = hourTemp(value: 13, hour: hourly)
             dayFiveHumidity13 = hourHumidity(value: 13, hour: hourly)
@@ -1479,8 +1401,7 @@ public func fetchDarkSkyWeatherData() {
             dayFiveIndex13 = hourUVIndex(value: 13, hour: hourly)
             dayFiveWindSpeed13 = hourWindSpeed(value: 13, hour: hourly)
             dayFiveCloudCover13 = hourCloudCover(value: 13, hour: hourly)
-            
-            dayFiveTime14 = hourTime(value: 14, hour: hourly)
+
             dayFivePrecip14 = hourPrecipProb(value: 14, hour: hourly)
             dayFiveTemp14 = hourTemp(value: 14, hour: hourly)
             dayFiveHumidity14 = hourHumidity(value: 14, hour: hourly)
@@ -1488,8 +1409,7 @@ public func fetchDarkSkyWeatherData() {
             dayFiveIndex14 = hourUVIndex(value: 14, hour: hourly)
             dayFiveWindSpeed14 = hourWindSpeed(value: 14, hour: hourly)
             dayFiveCloudCover14 = hourCloudCover(value: 14, hour: hourly)
-            
-            dayFiveTime15 = hourTime(value: 15, hour: hourly)
+ 
             dayFivePrecip15 = hourPrecipProb(value: 15, hour: hourly)
             dayFiveTemp15 = hourTemp(value: 15, hour: hourly)
             dayFiveHumidity15 = hourHumidity(value: 15, hour: hourly)
@@ -1524,12 +1444,11 @@ public func fetchDarkSkyWeatherData() {
             daySixConditionValue = getDefaultDailyCondition(condition: fetchDaySixArray)
             daySixPrecip = dailyPrecipProb(day: fetchDaySixArray)
             daySixPrecipAccum = dailyPrecipAccum(day: fetchDaySixArray)
-            daySixSunrise = sunFormat(date: fetchDaySixArray.sunriseTime ?? Date())
-            daySixSunset = sunFormat(date: fetchDaySixArray.sunsetTime ?? Date())
+            daySixSunrise = sunFormat(date: fetchDaySixArray.sunriseTime!)
+            daySixSunset = sunFormat(date: fetchDaySixArray.sunsetTime!)
         }
             
         if let hourly = forecast.hourly {
-            daySixTime0 = hourTime(value: 0, hour: hourly)
             daySixPrecip0 = hourPrecipProb(value: 0, hour: hourly)
             daySixTemp0 = hourTemp(value: 0, hour: hourly)
             daySixHumidity0 = hourHumidity(value: 0, hour: hourly)
@@ -1537,8 +1456,7 @@ public func fetchDarkSkyWeatherData() {
             daySixIndex0 = hourUVIndex(value: 0, hour: hourly)
             daySixWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
             daySixCloudCover0 = hourCloudCover(value: 0, hour: hourly)
-            
-            daySixTime1 = hourTime(value: 1, hour: hourly)
+
             daySixPrecip1 = hourPrecipProb(value: 1, hour: hourly)
             daySixTemp1 = hourTemp(value: 1, hour: hourly)
             daySixHumidity1 = hourHumidity(value: 1, hour: hourly)
@@ -1546,8 +1464,7 @@ public func fetchDarkSkyWeatherData() {
             daySixIndex1 = hourUVIndex(value: 1, hour: hourly)
             daySixWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
             daySixCloudCover1 = hourCloudCover(value: 1, hour: hourly)
-            
-            daySixTime2 = hourTime(value: 2, hour: hourly)
+
             daySixPrecip2 = hourPrecipProb(value: 2, hour: hourly)
             daySixTemp2 = hourTemp(value: 2, hour: hourly)
             daySixHumidity2 = hourHumidity(value: 2, hour: hourly)
@@ -1555,8 +1472,7 @@ public func fetchDarkSkyWeatherData() {
             daySixIndex2 = hourUVIndex(value: 2, hour: hourly)
             daySixWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
             daySixCloudCover2 = hourCloudCover(value: 2, hour: hourly)
-            
-            daySixTime3 = hourTime(value: 3, hour: hourly)
+
             daySixPrecip3 = hourPrecipProb(value: 3, hour: hourly)
             daySixTemp3 = hourTemp(value: 3, hour: hourly)
             daySixHumidity3 = hourHumidity(value: 3, hour: hourly)
@@ -1564,8 +1480,7 @@ public func fetchDarkSkyWeatherData() {
             daySixIndex3 = hourUVIndex(value: 3, hour: hourly)
             daySixWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
             daySixCloudCover3 = hourCloudCover(value: 3, hour: hourly)
-            
-            daySixTime4 = hourTime(value: 4, hour: hourly)
+
             daySixPrecip4 = hourPrecipProb(value: 4, hour: hourly)
             daySixTemp4 = hourTemp(value: 4, hour: hourly)
             daySixHumidity4 = hourHumidity(value: 4, hour: hourly)
@@ -1573,8 +1488,7 @@ public func fetchDarkSkyWeatherData() {
             daySixIndex4 = hourUVIndex(value: 4, hour: hourly)
             daySixWindSpeed4 = hourWindSpeed(value: 4, hour: hourly)
             daySixCloudCover4 = hourCloudCover(value: 4, hour: hourly)
-            
-            daySixTime5 = hourTime(value: 5, hour: hourly)
+
             daySixPrecip5 = hourPrecipProb(value: 5, hour: hourly)
             daySixTemp5 = hourTemp(value: 5, hour: hourly)
             daySixHumidity5 = hourHumidity(value: 5, hour: hourly)
@@ -1582,8 +1496,7 @@ public func fetchDarkSkyWeatherData() {
             daySixIndex5 = hourUVIndex(value: 5, hour: hourly)
             daySixWindSpeed5 = hourWindSpeed(value: 5, hour: hourly)
             daySixCloudCover5 = hourCloudCover(value: 5, hour: hourly)
-            
-            daySixTime6 = hourTime(value: 6, hour: hourly)
+
             daySixPrecip6 = hourPrecipProb(value: 6, hour: hourly)
             daySixTemp6 = hourTemp(value: 6, hour: hourly)
             daySixHumidity6 = hourHumidity(value: 6, hour: hourly)
@@ -1591,8 +1504,7 @@ public func fetchDarkSkyWeatherData() {
             daySixIndex6 = hourUVIndex(value: 6, hour: hourly)
             daySixWindSpeed6 = hourWindSpeed(value: 6, hour: hourly)
             daySixCloudCover6 = hourCloudCover(value: 6, hour: hourly)
-            
-            daySixTime7 = hourTime(value: 7, hour: hourly)
+
             daySixPrecip7 = hourPrecipProb(value: 7, hour: hourly)
             daySixTemp7 = hourTemp(value: 7, hour: hourly)
             daySixHumidity7 = hourHumidity(value: 7, hour: hourly)
@@ -1600,8 +1512,7 @@ public func fetchDarkSkyWeatherData() {
             daySixIndex7 = hourUVIndex(value: 7, hour: hourly)
             daySixWindSpeed7 = hourWindSpeed(value: 7, hour: hourly)
             daySixCloudCover7 = hourCloudCover(value: 7, hour: hourly)
-            
-            daySixTime8 = hourTime(value: 8, hour: hourly)
+
             daySixPrecip8 = hourPrecipProb(value: 8, hour: hourly)
             daySixTemp8 = hourTemp(value: 8, hour: hourly)
             daySixHumidity8 = hourHumidity(value: 8, hour: hourly)
@@ -1609,8 +1520,7 @@ public func fetchDarkSkyWeatherData() {
             daySixIndex8 = hourUVIndex(value: 8, hour: hourly)
             daySixWindSpeed8 = hourWindSpeed(value: 8, hour: hourly)
             daySixCloudCover8 = hourCloudCover(value: 8, hour: hourly)
-            
-            daySixTime9 = hourTime(value: 9, hour: hourly)
+
             daySixPrecip9 = hourPrecipProb(value: 9, hour: hourly)
             daySixTemp9 = hourTemp(value: 9, hour: hourly)
             daySixHumidity9 = hourHumidity(value: 9, hour: hourly)
@@ -1618,8 +1528,7 @@ public func fetchDarkSkyWeatherData() {
             daySixIndex9 = hourUVIndex(value: 9, hour: hourly)
             daySixWindSpeed9 = hourWindSpeed(value: 9, hour: hourly)
             daySixCloudCover9 = hourCloudCover(value: 9, hour: hourly)
-            
-            daySixTime10 = hourTime(value: 10, hour: hourly)
+
             daySixPrecip10 = hourPrecipProb(value: 10, hour: hourly)
             daySixTemp10 = hourTemp(value: 10, hour: hourly)
             daySixHumidity10 = hourHumidity(value: 10, hour: hourly)
@@ -1627,8 +1536,7 @@ public func fetchDarkSkyWeatherData() {
             daySixIndex10 = hourUVIndex(value: 10, hour: hourly)
             daySixWindSpeed10 = hourWindSpeed(value: 10, hour: hourly)
             daySixCloudCover10 = hourCloudCover(value: 10, hour: hourly)
-            
-            daySixTime11 = hourTime(value: 11, hour: hourly)
+
             daySixPrecip11 = hourPrecipProb(value: 11, hour: hourly)
             daySixTemp11 = hourTemp(value: 11, hour: hourly)
             daySixHumidity11 = hourHumidity(value: 11, hour: hourly)
@@ -1636,8 +1544,7 @@ public func fetchDarkSkyWeatherData() {
             daySixIndex11 = hourUVIndex(value: 11, hour: hourly)
             daySixWindSpeed11 = hourWindSpeed(value: 11, hour: hourly)
             daySixCloudCover11 = hourCloudCover(value: 11, hour: hourly)
-            
-            daySixTime12 = hourTime(value: 12, hour: hourly)
+
             daySixPrecip12 = hourPrecipProb(value: 12, hour: hourly)
             daySixTemp12 = hourTemp(value: 12, hour: hourly)
             daySixHumidity12 = hourHumidity(value: 12, hour: hourly)
@@ -1645,8 +1552,7 @@ public func fetchDarkSkyWeatherData() {
             daySixIndex12 = hourUVIndex(value: 12, hour: hourly)
             daySixWindSpeed12 = hourWindSpeed(value: 12, hour: hourly)
             daySixCloudCover12 = hourCloudCover(value: 12, hour: hourly)
-            
-            daySixTime13 = hourTime(value: 13, hour: hourly)
+
             daySixPrecip13 = hourPrecipProb(value: 13, hour: hourly)
             daySixTemp13 = hourTemp(value: 13, hour: hourly)
             daySixHumidity13 = hourHumidity(value: 13, hour: hourly)
@@ -1654,8 +1560,7 @@ public func fetchDarkSkyWeatherData() {
             daySixIndex13 = hourUVIndex(value: 13, hour: hourly)
             daySixWindSpeed13 = hourWindSpeed(value: 13, hour: hourly)
             daySixCloudCover13 = hourCloudCover(value: 13, hour: hourly)
-            
-            daySixTime14 = hourTime(value: 14, hour: hourly)
+
             daySixPrecip14 = hourPrecipProb(value: 14, hour: hourly)
             daySixTemp14 = hourTemp(value: 14, hour: hourly)
             daySixHumidity14 = hourHumidity(value: 14, hour: hourly)
@@ -1664,7 +1569,6 @@ public func fetchDarkSkyWeatherData() {
             daySixWindSpeed14 = hourWindSpeed(value: 14, hour: hourly)
             daySixCloudCover14 = hourCloudCover(value: 14, hour: hourly)
             
-            daySixTime15 = hourTime(value: 15, hour: hourly)
             daySixPrecip15 = hourPrecipProb(value: 15, hour: hourly)
             daySixTemp15 = hourTemp(value: 15, hour: hourly)
             daySixHumidity15 = hourHumidity(value: 15, hour: hourly)
@@ -1699,12 +1603,11 @@ public func fetchDarkSkyWeatherData() {
             daySevenConditionValue = getDefaultDailyCondition(condition: fetchDaySevenArray)
             daySevenPrecip = dailyPrecipProb(day: fetchDaySevenArray)
             daySevenPrecipAccum = dailyPrecipAccum(day: fetchDaySevenArray)
-            daySevenSunrise = sunFormat(date: fetchDaySevenArray.sunriseTime ?? Date())
-            daySevenSunset = sunFormat(date: fetchDaySevenArray.sunsetTime ?? Date())
+            daySevenSunrise = sunFormat(date: fetchDaySevenArray.sunriseTime!)
+            daySevenSunset = sunFormat(date: fetchDaySevenArray.sunsetTime!)
         }
             
         if let hourly = forecast.hourly {
-            daySevenTime0 = hourTime(value: 0, hour: hourly)
             daySevenPrecip0 = hourPrecipProb(value: 0, hour: hourly)
             daySevenTemp0 = hourTemp(value: 0, hour: hourly)
             daySevenHumidity0 = hourHumidity(value: 0, hour: hourly)
@@ -1712,8 +1615,7 @@ public func fetchDarkSkyWeatherData() {
             daySevenIndex0 = hourUVIndex(value: 0, hour: hourly)
             daySevenWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
             daySevenCloudCover0 = hourCloudCover(value: 0, hour: hourly)
-            
-            daySevenTime1 = hourTime(value: 1, hour: hourly)
+
             daySevenPrecip1 = hourPrecipProb(value: 1, hour: hourly)
             daySevenTemp1 = hourTemp(value: 1, hour: hourly)
             daySevenHumidity1 = hourHumidity(value: 1, hour: hourly)
@@ -1721,8 +1623,7 @@ public func fetchDarkSkyWeatherData() {
             daySevenIndex1 = hourUVIndex(value: 1, hour: hourly)
             daySevenWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
             daySevenCloudCover1 = hourCloudCover(value: 1, hour: hourly)
-            
-            daySevenTime2 = hourTime(value: 2, hour: hourly)
+
             daySevenPrecip2 = hourPrecipProb(value: 2, hour: hourly)
             daySevenTemp2 = hourTemp(value: 2, hour: hourly)
             daySevenHumidity2 = hourHumidity(value: 2, hour: hourly)
@@ -1730,8 +1631,7 @@ public func fetchDarkSkyWeatherData() {
             daySevenIndex2 = hourUVIndex(value: 2, hour: hourly)
             daySevenWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
             daySevenCloudCover2 = hourCloudCover(value: 2, hour: hourly)
-            
-            daySevenTime3 = hourTime(value: 3, hour: hourly)
+
             daySevenPrecip3 = hourPrecipProb(value: 3, hour: hourly)
             daySevenTemp3 = hourTemp(value: 3, hour: hourly)
             daySevenHumidity3 = hourHumidity(value: 3, hour: hourly)
@@ -1739,8 +1639,7 @@ public func fetchDarkSkyWeatherData() {
             daySevenIndex3 = hourUVIndex(value: 3, hour: hourly)
             daySevenWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
             daySevenCloudCover3 = hourCloudCover(value: 3, hour: hourly)
-            
-            daySevenTime4 = hourTime(value: 4, hour: hourly)
+
             daySevenPrecip4 = hourPrecipProb(value: 4, hour: hourly)
             daySevenTemp4 = hourTemp(value: 4, hour: hourly)
             daySevenHumidity4 = hourHumidity(value: 4, hour: hourly)
@@ -1748,8 +1647,7 @@ public func fetchDarkSkyWeatherData() {
             daySevenIndex4 = hourUVIndex(value: 4, hour: hourly)
             daySevenWindSpeed4 = hourWindSpeed(value: 4, hour: hourly)
             daySevenCloudCover4 = hourCloudCover(value: 4, hour: hourly)
-            
-            daySevenTime5 = hourTime(value: 5, hour: hourly)
+
             daySevenPrecip5 = hourPrecipProb(value: 5, hour: hourly)
             daySevenTemp5 = hourTemp(value: 5, hour: hourly)
             daySevenHumidity5 = hourHumidity(value: 5, hour: hourly)
@@ -1757,8 +1655,7 @@ public func fetchDarkSkyWeatherData() {
             daySevenIndex5 = hourUVIndex(value: 5, hour: hourly)
             daySevenWindSpeed5 = hourWindSpeed(value: 5, hour: hourly)
             daySevenCloudCover5 = hourCloudCover(value: 5, hour: hourly)
-            
-            daySevenTime6 = hourTime(value: 6, hour: hourly)
+
             daySevenPrecip6 = hourPrecipProb(value: 6, hour: hourly)
             daySevenTemp6 = hourTemp(value: 6, hour: hourly)
             daySevenHumidity6 = hourHumidity(value: 6, hour: hourly)
@@ -1766,8 +1663,7 @@ public func fetchDarkSkyWeatherData() {
             daySevenIndex6 = hourUVIndex(value: 6, hour: hourly)
             daySevenWindSpeed6 = hourWindSpeed(value: 6, hour: hourly)
             daySevenCloudCover6 = hourCloudCover(value: 6, hour: hourly)
-            
-            daySevenTime7 = hourTime(value: 7, hour: hourly)
+
             daySevenPrecip7 = hourPrecipProb(value: 7, hour: hourly)
             daySevenTemp7 = hourTemp(value: 7, hour: hourly)
             daySevenHumidity7 = hourHumidity(value: 7, hour: hourly)
@@ -1775,8 +1671,7 @@ public func fetchDarkSkyWeatherData() {
             daySevenIndex7 = hourUVIndex(value: 7, hour: hourly)
             daySevenWindSpeed7 = hourWindSpeed(value: 7, hour: hourly)
             daySevenCloudCover7 = hourCloudCover(value: 7, hour: hourly)
-            
-            daySevenTime8 = hourTime(value: 8, hour: hourly)
+
             daySevenPrecip8 = hourPrecipProb(value: 8, hour: hourly)
             daySevenTemp8 = hourTemp(value: 8, hour: hourly)
             daySevenHumidity8 = hourHumidity(value: 8, hour: hourly)
@@ -1784,8 +1679,7 @@ public func fetchDarkSkyWeatherData() {
             daySevenIndex8 = hourUVIndex(value: 8, hour: hourly)
             daySevenWindSpeed8 = hourWindSpeed(value: 8, hour: hourly)
             daySevenCloudCover8 = hourCloudCover(value: 8, hour: hourly)
-            
-            daySevenTime9 = hourTime(value: 9, hour: hourly)
+
             daySevenPrecip9 = hourPrecipProb(value: 9, hour: hourly)
             daySevenTemp9 = hourTemp(value: 9, hour: hourly)
             daySevenHumidity9 = hourHumidity(value: 9, hour: hourly)
@@ -1793,8 +1687,7 @@ public func fetchDarkSkyWeatherData() {
             daySevenIndex9 = hourUVIndex(value: 9, hour: hourly)
             daySevenWindSpeed9 = hourWindSpeed(value: 9, hour: hourly)
             daySevenCloudCover9 = hourCloudCover(value: 9, hour: hourly)
-            
-            daySevenTime10 = hourTime(value: 10, hour: hourly)
+
             daySevenPrecip10 = hourPrecipProb(value: 10, hour: hourly)
             daySevenTemp10 = hourTemp(value: 10, hour: hourly)
             daySevenHumidity10 = hourHumidity(value: 10, hour: hourly)
@@ -1802,8 +1695,7 @@ public func fetchDarkSkyWeatherData() {
             daySevenIndex10 = hourUVIndex(value: 10, hour: hourly)
             daySevenWindSpeed10 = hourWindSpeed(value: 10, hour: hourly)
             daySevenCloudCover10 = hourCloudCover(value: 10, hour: hourly)
-            
-            daySevenTime11 = hourTime(value: 11, hour: hourly)
+
             daySevenPrecip11 = hourPrecipProb(value: 11, hour: hourly)
             daySevenTemp11 = hourTemp(value: 11, hour: hourly)
             daySevenHumidity11 = hourHumidity(value: 11, hour: hourly)
@@ -1811,8 +1703,7 @@ public func fetchDarkSkyWeatherData() {
             daySevenIndex11 = hourUVIndex(value: 11, hour: hourly)
             daySevenWindSpeed11 = hourWindSpeed(value: 11, hour: hourly)
             daySevenCloudCover11 = hourCloudCover(value: 11, hour: hourly)
-            
-            daySevenTime12 = hourTime(value: 12, hour: hourly)
+
             daySevenPrecip12 = hourPrecipProb(value: 12, hour: hourly)
             daySevenTemp12 = hourTemp(value: 12, hour: hourly)
             daySevenHumidity12 = hourHumidity(value: 12, hour: hourly)
@@ -1820,8 +1711,7 @@ public func fetchDarkSkyWeatherData() {
             daySevenIndex12 = hourUVIndex(value: 12, hour: hourly)
             daySevenWindSpeed12 = hourWindSpeed(value: 12, hour: hourly)
             daySevenCloudCover12 = hourCloudCover(value: 12, hour: hourly)
-            
-            daySevenTime13 = hourTime(value: 13, hour: hourly)
+
             daySevenPrecip13 = hourPrecipProb(value: 13, hour: hourly)
             daySevenTemp13 = hourTemp(value: 13, hour: hourly)
             daySevenHumidity13 = hourHumidity(value: 13, hour: hourly)
@@ -1829,8 +1719,7 @@ public func fetchDarkSkyWeatherData() {
             daySevenIndex13 = hourUVIndex(value: 13, hour: hourly)
             daySevenWindSpeed13 = hourWindSpeed(value: 13, hour: hourly)
             daySevenCloudCover13 = hourCloudCover(value: 13, hour: hourly)
-            
-            daySevenTime14 = hourTime(value: 14, hour: hourly)
+
             daySevenPrecip14 = hourPrecipProb(value: 14, hour: hourly)
             daySevenTemp14 = hourTemp(value: 14, hour: hourly)
             daySevenHumidity14 = hourHumidity(value: 14, hour: hourly)
@@ -1838,8 +1727,7 @@ public func fetchDarkSkyWeatherData() {
             daySevenIndex14 = hourUVIndex(value: 14, hour: hourly)
             daySevenWindSpeed14 = hourWindSpeed(value: 14, hour: hourly)
             daySevenCloudCover14 = hourCloudCover(value: 14, hour: hourly)
-            
-            daySevenTime15 = hourTime(value: 15, hour: hourly)
+
             daySevenPrecip15 = hourPrecipProb(value: 15, hour: hourly)
             daySevenTemp15 = hourTemp(value: 15, hour: hourly)
             daySevenHumidity15 = hourHumidity(value: 15, hour: hourly)
@@ -1874,12 +1762,11 @@ public func fetchDarkSkyWeatherData() {
             dayEightConditionValue = getDefaultDailyCondition(condition: fetchDayEightArray)
             dayEightPrecip = dailyPrecipProb(day: fetchDayEightArray)
             dayEightPrecipAccum = dailyPrecipAccum(day: fetchDayEightArray)
-            dayEightSunrise = sunFormat(date: fetchDayEightArray.sunriseTime ?? Date())
-            dayEightSunset = sunFormat(date: fetchDayEightArray.sunsetTime ?? Date())
+            dayEightSunrise = sunFormat(date: fetchDayEightArray.sunriseTime!)
+            dayEightSunset = sunFormat(date: fetchDayEightArray.sunsetTime!)
         }
         
         if let hourly = forecast.hourly {
-            dayEightTime0 = hourTime(value: 0, hour: hourly)
             dayEightPrecip0 = hourPrecipProb(value: 0, hour: hourly)
             dayEightTemp0 = hourTemp(value: 0, hour: hourly)
             dayEightHumidity0 = hourHumidity(value: 0, hour: hourly)
@@ -1887,8 +1774,7 @@ public func fetchDarkSkyWeatherData() {
             dayEightIndex0 = hourUVIndex(value: 0, hour: hourly)
             dayEightWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
             dayEightCloudCover0 = hourCloudCover(value: 0, hour: hourly)
-            
-            dayEightTime1 = hourTime(value: 1, hour: hourly)
+
             dayEightPrecip1 = hourPrecipProb(value: 1, hour: hourly)
             dayEightTemp1 = hourTemp(value: 1, hour: hourly)
             dayEightHumidity1 = hourHumidity(value: 1, hour: hourly)
@@ -1896,8 +1782,7 @@ public func fetchDarkSkyWeatherData() {
             dayEightIndex1 = hourUVIndex(value: 1, hour: hourly)
             dayEightWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
             dayEightCloudCover1 = hourCloudCover(value: 1, hour: hourly)
-            
-            dayEightTime2 = hourTime(value: 2, hour: hourly)
+
             dayEightPrecip2 = hourPrecipProb(value: 2, hour: hourly)
             dayEightTemp2 = hourTemp(value: 2, hour: hourly)
             dayEightHumidity2 = hourHumidity(value: 2, hour: hourly)
@@ -1905,8 +1790,7 @@ public func fetchDarkSkyWeatherData() {
             dayEightIndex2 = hourUVIndex(value: 2, hour: hourly)
             dayEightWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
             dayEightCloudCover2 = hourCloudCover(value: 2, hour: hourly)
-            
-            dayEightTime3 = hourTime(value: 3, hour: hourly)
+
             dayEightPrecip3 = hourPrecipProb(value: 3, hour: hourly)
             dayEightTemp3 = hourTemp(value: 3, hour: hourly)
             dayEightHumidity3 = hourHumidity(value: 3, hour: hourly)
@@ -1914,8 +1798,7 @@ public func fetchDarkSkyWeatherData() {
             dayEightIndex3 = hourUVIndex(value: 3, hour: hourly)
             dayEightWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
             dayEightCloudCover3 = hourCloudCover(value: 3, hour: hourly)
-            
-            dayEightTime4 = hourTime(value: 4, hour: hourly)
+
             dayEightPrecip4 = hourPrecipProb(value: 4, hour: hourly)
             dayEightTemp4 = hourTemp(value: 4, hour: hourly)
             dayEightHumidity4 = hourHumidity(value: 4, hour: hourly)
@@ -1923,8 +1806,7 @@ public func fetchDarkSkyWeatherData() {
             dayEightIndex4 = hourUVIndex(value: 4, hour: hourly)
             dayEightWindSpeed4 = hourWindSpeed(value: 4, hour: hourly)
             dayEightCloudCover4 = hourCloudCover(value: 4, hour: hourly)
-            
-            dayEightTime5 = hourTime(value: 5, hour: hourly)
+
             dayEightPrecip5 = hourPrecipProb(value: 5, hour: hourly)
             dayEightTemp5 = hourTemp(value: 5, hour: hourly)
             dayEightHumidity5 = hourHumidity(value: 5, hour: hourly)
@@ -1932,8 +1814,7 @@ public func fetchDarkSkyWeatherData() {
             dayEightIndex5 = hourUVIndex(value: 5, hour: hourly)
             dayEightWindSpeed5 = hourWindSpeed(value: 5, hour: hourly)
             dayEightCloudCover5 = hourCloudCover(value: 5, hour: hourly)
-            
-            dayEightTime6 = hourTime(value: 6, hour: hourly)
+
             dayEightPrecip6 = hourPrecipProb(value: 6, hour: hourly)
             dayEightTemp6 = hourTemp(value: 6, hour: hourly)
             dayEightHumidity6 = hourHumidity(value: 6, hour: hourly)
@@ -1941,8 +1822,7 @@ public func fetchDarkSkyWeatherData() {
             dayEightIndex6 = hourUVIndex(value: 6, hour: hourly)
             dayEightWindSpeed6 = hourWindSpeed(value: 6, hour: hourly)
             dayEightCloudCover6 = hourCloudCover(value: 6, hour: hourly)
-            
-            dayEightTime7 = hourTime(value: 7, hour: hourly)
+
             dayEightPrecip7 = hourPrecipProb(value: 7, hour: hourly)
             dayEightTemp7 = hourTemp(value: 7, hour: hourly)
             dayEightHumidity7 = hourHumidity(value: 7, hour: hourly)
@@ -1950,8 +1830,7 @@ public func fetchDarkSkyWeatherData() {
             dayEightIndex7 = hourUVIndex(value: 7, hour: hourly)
             dayEightWindSpeed7 = hourWindSpeed(value: 7, hour: hourly)
             dayEightCloudCover7 = hourCloudCover(value: 7, hour: hourly)
-            
-            dayEightTime8 = hourTime(value: 8, hour: hourly)
+
             dayEightPrecip8 = hourPrecipProb(value: 8, hour: hourly)
             dayEightTemp8 = hourTemp(value: 8, hour: hourly)
             dayEightHumidity8 = hourHumidity(value: 8, hour: hourly)
@@ -1959,8 +1838,7 @@ public func fetchDarkSkyWeatherData() {
             dayEightIndex8 = hourUVIndex(value: 8, hour: hourly)
             dayEightWindSpeed8 = hourWindSpeed(value: 8, hour: hourly)
             dayEightCloudCover8 = hourCloudCover(value: 8, hour: hourly)
-            
-            dayEightTime9 = hourTime(value: 9, hour: hourly)
+
             dayEightPrecip9 = hourPrecipProb(value: 9, hour: hourly)
             dayEightTemp9 = hourTemp(value: 9, hour: hourly)
             dayEightHumidity9 = hourHumidity(value: 9, hour: hourly)
@@ -1968,8 +1846,7 @@ public func fetchDarkSkyWeatherData() {
             dayEightIndex9 = hourUVIndex(value: 9, hour: hourly)
             dayEightWindSpeed9 = hourWindSpeed(value: 9, hour: hourly)
             dayEightCloudCover9 = hourCloudCover(value: 9, hour: hourly)
-            
-            dayEightTime10 = hourTime(value: 10, hour: hourly)
+
             dayEightPrecip10 = hourPrecipProb(value: 10, hour: hourly)
             dayEightTemp10 = hourTemp(value: 10, hour: hourly)
             dayEightHumidity10 = hourHumidity(value: 10, hour: hourly)
@@ -1977,8 +1854,7 @@ public func fetchDarkSkyWeatherData() {
             dayEightIndex10 = hourUVIndex(value: 10, hour: hourly)
             dayEightWindSpeed10 = hourWindSpeed(value: 10, hour: hourly)
             dayEightCloudCover10 = hourCloudCover(value: 10, hour: hourly)
-            
-            dayEightTime11 = hourTime(value: 11, hour: hourly)
+
             dayEightPrecip11 = hourPrecipProb(value: 11, hour: hourly)
             dayEightTemp11 = hourTemp(value: 11, hour: hourly)
             dayEightHumidity11 = hourHumidity(value: 11, hour: hourly)
@@ -1987,7 +1863,6 @@ public func fetchDarkSkyWeatherData() {
             dayEightWindSpeed11 = hourWindSpeed(value: 11, hour: hourly)
             dayEightCloudCover11 = hourCloudCover(value: 11, hour: hourly)
             
-            dayEightTime12 = hourTime(value: 12, hour: hourly)
             dayEightPrecip12 = hourPrecipProb(value: 12, hour: hourly)
             dayEightTemp12 = hourTemp(value: 12, hour: hourly)
             dayEightHumidity12 = hourHumidity(value: 12, hour: hourly)
@@ -1995,8 +1870,7 @@ public func fetchDarkSkyWeatherData() {
             dayEightIndex12 = hourUVIndex(value: 12, hour: hourly)
             dayEightWindSpeed12 = hourWindSpeed(value: 12, hour: hourly)
             dayEightCloudCover12 = hourCloudCover(value: 12, hour: hourly)
-            
-            dayEightTime13 = hourTime(value: 13, hour: hourly)
+
             dayEightPrecip13 = hourPrecipProb(value: 13, hour: hourly)
             dayEightTemp13 = hourTemp(value: 13, hour: hourly)
             dayEightHumidity13 = hourHumidity(value: 13, hour: hourly)
@@ -2004,8 +1878,7 @@ public func fetchDarkSkyWeatherData() {
             dayEightIndex13 = hourUVIndex(value: 13, hour: hourly)
             dayEightWindSpeed13 = hourWindSpeed(value: 13, hour: hourly)
             dayEightCloudCover13 = hourCloudCover(value: 13, hour: hourly)
-            
-            dayEightTime14 = hourTime(value: 14, hour: hourly)
+
             dayEightPrecip14 = hourPrecipProb(value: 14, hour: hourly)
             dayEightTemp14 = hourTemp(value: 14, hour: hourly)
             dayEightHumidity14 = hourHumidity(value: 14, hour: hourly)
@@ -2013,8 +1886,7 @@ public func fetchDarkSkyWeatherData() {
             dayEightIndex14 = hourUVIndex(value: 14, hour: hourly)
             dayEightWindSpeed14 = hourWindSpeed(value: 14, hour: hourly)
             dayEightCloudCover14 = hourCloudCover(value: 14, hour: hourly)
-            
-            dayEightTime15 = hourTime(value: 15, hour: hourly)
+
             dayEightPrecip15 = hourPrecipProb(value: 15, hour: hourly)
             dayEightTemp15 = hourTemp(value: 15, hour: hourly)
             dayEightHumidity15 = hourHumidity(value: 15, hour: hourly)
@@ -2049,12 +1921,11 @@ public func fetchDarkSkyWeatherData() {
             dayNineConditionValue = getDefaultDailyCondition(condition: fetchDayNineArray)
             dayNinePrecip = dailyPrecipProb(day: fetchDayNineArray)
             dayNinePrecipAccum = dailyPrecipAccum(day: fetchDayNineArray)
-            dayNineSunrise = sunFormat(date: fetchDayNineArray.sunriseTime ?? Date())
-            dayNineSunset = sunFormat(date: fetchDayNineArray.sunsetTime ?? Date())
+            dayNineSunrise = sunFormat(date: fetchDayNineArray.sunriseTime!)
+            dayNineSunset = sunFormat(date: fetchDayNineArray.sunsetTime!)
         }
         
         if let hourly = forecast.hourly {
-            dayNineTime0 = hourTime(value: 0, hour: hourly)
             dayNinePrecip0 = hourPrecipProb(value: 0, hour: hourly)
             dayNineTemp0 = hourTemp(value: 0, hour: hourly)
             dayNineHumidity0 = hourHumidity(value: 0, hour: hourly)
@@ -2062,8 +1933,7 @@ public func fetchDarkSkyWeatherData() {
             dayNineIndex0 = hourUVIndex(value: 0, hour: hourly)
             dayNineWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
             dayNineCloudCover0 = hourCloudCover(value: 0, hour: hourly)
-            
-            dayNineTime1 = hourTime(value: 1, hour: hourly)
+
             dayNinePrecip1 = hourPrecipProb(value: 1, hour: hourly)
             dayNineTemp1 = hourTemp(value: 1, hour: hourly)
             dayNineHumidity1 = hourHumidity(value: 1, hour: hourly)
@@ -2071,8 +1941,7 @@ public func fetchDarkSkyWeatherData() {
             dayNineIndex1 = hourUVIndex(value: 1, hour: hourly)
             dayNineWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
             dayNineCloudCover1 = hourCloudCover(value: 1, hour: hourly)
-            
-            dayNineTime2 = hourTime(value: 2, hour: hourly)
+
             dayNinePrecip2 = hourPrecipProb(value: 2, hour: hourly)
             dayNineTemp2 = hourTemp(value: 2, hour: hourly)
             dayNineHumidity2 = hourHumidity(value: 2, hour: hourly)
@@ -2080,8 +1949,7 @@ public func fetchDarkSkyWeatherData() {
             dayNineIndex2 = hourUVIndex(value: 2, hour: hourly)
             dayNineWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
             dayNineCloudCover2 = hourCloudCover(value: 2, hour: hourly)
-            
-            dayNineTime3 = hourTime(value: 3, hour: hourly)
+
             dayNinePrecip3 = hourPrecipProb(value: 3, hour: hourly)
             dayNineTemp3 = hourTemp(value: 3, hour: hourly)
             dayNineHumidity3 = hourHumidity(value: 3, hour: hourly)
@@ -2089,8 +1957,7 @@ public func fetchDarkSkyWeatherData() {
             dayNineIndex3 = hourUVIndex(value: 3, hour: hourly)
             dayNineWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
             dayNineCloudCover3 = hourCloudCover(value: 3, hour: hourly)
-            
-            dayNineTime4 = hourTime(value: 4, hour: hourly)
+
             dayNinePrecip4 = hourPrecipProb(value: 4, hour: hourly)
             dayNineTemp4 = hourTemp(value: 4, hour: hourly)
             dayNineHumidity4 = hourHumidity(value: 4, hour: hourly)
@@ -2098,8 +1965,7 @@ public func fetchDarkSkyWeatherData() {
             dayNineIndex4 = hourUVIndex(value: 4, hour: hourly)
             dayNineWindSpeed4 = hourWindSpeed(value: 4, hour: hourly)
             dayNineCloudCover4 = hourCloudCover(value: 4, hour: hourly)
-            
-            dayNineTime5 = hourTime(value: 5, hour: hourly)
+
             dayNinePrecip5 = hourPrecipProb(value: 5, hour: hourly)
             dayNineTemp5 = hourTemp(value: 5, hour: hourly)
             dayNineHumidity5 = hourHumidity(value: 5, hour: hourly)
@@ -2107,8 +1973,7 @@ public func fetchDarkSkyWeatherData() {
             dayNineIndex5 = hourUVIndex(value: 5, hour: hourly)
             dayNineWindSpeed5 = hourWindSpeed(value: 5, hour: hourly)
             dayNineCloudCover5 = hourCloudCover(value: 5, hour: hourly)
-            
-            dayNineTime6 = hourTime(value: 6, hour: hourly)
+
             dayNinePrecip6 = hourPrecipProb(value: 6, hour: hourly)
             dayNineTemp6 = hourTemp(value: 6, hour: hourly)
             dayNineHumidity6 = hourHumidity(value: 6, hour: hourly)
@@ -2116,8 +1981,7 @@ public func fetchDarkSkyWeatherData() {
             dayNineIndex6 = hourUVIndex(value: 6, hour: hourly)
             dayNineWindSpeed6 = hourWindSpeed(value: 6, hour: hourly)
             dayNineCloudCover6 = hourCloudCover(value: 6, hour: hourly)
-            
-            dayNineTime7 = hourTime(value: 7, hour: hourly)
+
             dayNinePrecip7 = hourPrecipProb(value: 7, hour: hourly)
             dayNineTemp7 = hourTemp(value: 7, hour: hourly)
             dayNineHumidity7 = hourHumidity(value: 7, hour: hourly)
@@ -2125,8 +1989,7 @@ public func fetchDarkSkyWeatherData() {
             dayNineIndex7 = hourUVIndex(value: 7, hour: hourly)
             dayNineWindSpeed7 = hourWindSpeed(value: 7, hour: hourly)
             dayNineCloudCover7 = hourCloudCover(value: 7, hour: hourly)
-            
-            dayNineTime8 = hourTime(value: 8, hour: hourly)
+
             dayNinePrecip8 = hourPrecipProb(value: 8, hour: hourly)
             dayNineTemp8 = hourTemp(value: 8, hour: hourly)
             dayNineHumidity8 = hourHumidity(value: 8, hour: hourly)
@@ -2134,8 +1997,7 @@ public func fetchDarkSkyWeatherData() {
             dayNineIndex8 = hourUVIndex(value: 8, hour: hourly)
             dayNineWindSpeed8 = hourWindSpeed(value: 8, hour: hourly)
             dayNineCloudCover8 = hourCloudCover(value: 8, hour: hourly)
-            
-            dayNineTime9 = hourTime(value: 9, hour: hourly)
+
             dayNinePrecip9 = hourPrecipProb(value: 9, hour: hourly)
             dayNineTemp9 = hourTemp(value: 9, hour: hourly)
             dayNineHumidity9 = hourHumidity(value: 9, hour: hourly)
@@ -2143,8 +2005,7 @@ public func fetchDarkSkyWeatherData() {
             dayNineIndex9 = hourUVIndex(value: 9, hour: hourly)
             dayNineWindSpeed9 = hourWindSpeed(value: 9, hour: hourly)
             dayNineCloudCover9 = hourCloudCover(value: 9, hour: hourly)
-            
-            dayNineTime10 = hourTime(value: 10, hour: hourly)
+
             dayNinePrecip10 = hourPrecipProb(value: 10, hour: hourly)
             dayNineTemp10 = hourTemp(value: 10, hour: hourly)
             dayNineHumidity10 = hourHumidity(value: 10, hour: hourly)
@@ -2152,8 +2013,7 @@ public func fetchDarkSkyWeatherData() {
             dayNineIndex10 = hourUVIndex(value: 10, hour: hourly)
             dayNineWindSpeed10 = hourWindSpeed(value: 10, hour: hourly)
             dayNineCloudCover10 = hourCloudCover(value: 10, hour: hourly)
-            
-            dayNineTime11 = hourTime(value: 11, hour: hourly)
+
             dayNinePrecip11 = hourPrecipProb(value: 11, hour: hourly)
             dayNineTemp11 = hourTemp(value: 11, hour: hourly)
             dayNineHumidity11 = hourHumidity(value: 11, hour: hourly)
@@ -2161,8 +2021,7 @@ public func fetchDarkSkyWeatherData() {
             dayNineIndex11 = hourUVIndex(value: 11, hour: hourly)
             dayNineWindSpeed11 = hourWindSpeed(value: 11, hour: hourly)
             dayNineCloudCover11 = hourCloudCover(value: 11, hour: hourly)
-            
-            dayNineTime12 = hourTime(value: 12, hour: hourly)
+
             dayNinePrecip12 = hourPrecipProb(value: 12, hour: hourly)
             dayNineTemp12 = hourTemp(value: 12, hour: hourly)
             dayNineHumidity12 = hourHumidity(value: 12, hour: hourly)
@@ -2170,8 +2029,7 @@ public func fetchDarkSkyWeatherData() {
             dayNineIndex12 = hourUVIndex(value: 12, hour: hourly)
             dayNineWindSpeed12 = hourWindSpeed(value: 12, hour: hourly)
             dayNineCloudCover12 = hourCloudCover(value: 12, hour: hourly)
-            
-            dayNineTime13 = hourTime(value: 13, hour: hourly)
+
             dayNinePrecip13 = hourPrecipProb(value: 13, hour: hourly)
             dayNineTemp13 = hourTemp(value: 13, hour: hourly)
             dayNineHumidity13 = hourHumidity(value: 13, hour: hourly)
@@ -2179,8 +2037,7 @@ public func fetchDarkSkyWeatherData() {
             dayNineIndex13 = hourUVIndex(value: 13, hour: hourly)
             dayNineWindSpeed13 = hourWindSpeed(value: 13, hour: hourly)
             dayNineCloudCover13 = hourCloudCover(value: 13, hour: hourly)
-            
-            dayNineTime14 = hourTime(value: 14, hour: hourly)
+
             dayNinePrecip14 = hourPrecipProb(value: 14, hour: hourly)
             dayNineTemp14 = hourTemp(value: 14, hour: hourly)
             dayNineHumidity14 = hourHumidity(value: 14, hour: hourly)
@@ -2188,8 +2045,7 @@ public func fetchDarkSkyWeatherData() {
             dayNineIndex14 = hourUVIndex(value: 14, hour: hourly)
             dayNineWindSpeed14 = hourWindSpeed(value: 14, hour: hourly)
             dayNineCloudCover14 = hourCloudCover(value: 14, hour: hourly)
-            
-            dayNineTime15 = hourTime(value: 15, hour: hourly)
+
             dayNinePrecip15 = hourPrecipProb(value: 15, hour: hourly)
             dayNineTemp15 = hourTemp(value: 15, hour: hourly)
             dayNineHumidity15 = hourHumidity(value: 15, hour: hourly)
@@ -2224,12 +2080,11 @@ public func fetchDarkSkyWeatherData() {
             dayTenConditionValue = getDefaultDailyCondition(condition: fetchDayTenArray)
             dayTenPrecip = dailyPrecipProb(day: fetchDayTenArray)
             dayTenPrecipAccum = dailyPrecipAccum(day: fetchDayTenArray)
-            dayTenSunrise = sunFormat(date: fetchDayTenArray.sunriseTime ?? Date())
-            dayTenSunset = sunFormat(date: fetchDayTenArray.sunsetTime ?? Date())
+            dayTenSunrise = sunFormat(date: fetchDayTenArray.sunriseTime!)
+            dayTenSunset = sunFormat(date: fetchDayTenArray.sunsetTime!)
         }
         
         if let hourly = forecast.hourly {
-            dayTenTime0 = hourTime(value: 0, hour: hourly)
             dayTenPrecip0 = hourPrecipProb(value: 0, hour: hourly)
             dayTenTemp0 = hourTemp(value: 0, hour: hourly)
             dayTenHumidity0 = hourHumidity(value: 0, hour: hourly)
@@ -2237,8 +2092,7 @@ public func fetchDarkSkyWeatherData() {
             dayTenIndex0 = hourUVIndex(value: 0, hour: hourly)
             dayTenWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
             dayTenCloudCover0 = hourCloudCover(value: 0, hour: hourly)
-            
-            dayTenTime1 = hourTime(value: 1, hour: hourly)
+
             dayTenPrecip1 = hourPrecipProb(value: 1, hour: hourly)
             dayTenTemp1 = hourTemp(value: 1, hour: hourly)
             dayTenHumidity1 = hourHumidity(value: 1, hour: hourly)
@@ -2246,8 +2100,7 @@ public func fetchDarkSkyWeatherData() {
             dayTenIndex1 = hourUVIndex(value: 1, hour: hourly)
             dayTenWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
             dayTenCloudCover1 = hourCloudCover(value: 1, hour: hourly)
-            
-            dayTenTime2 = hourTime(value: 2, hour: hourly)
+
             dayTenPrecip2 = hourPrecipProb(value: 2, hour: hourly)
             dayTenTemp2 = hourTemp(value: 2, hour: hourly)
             dayTenHumidity2 = hourHumidity(value: 2, hour: hourly)
@@ -2255,8 +2108,7 @@ public func fetchDarkSkyWeatherData() {
             dayTenIndex2 = hourUVIndex(value: 2, hour: hourly)
             dayTenWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
             dayTenCloudCover2 = hourCloudCover(value: 2, hour: hourly)
-            
-            dayTenTime3 = hourTime(value: 3, hour: hourly)
+
             dayTenPrecip3 = hourPrecipProb(value: 3, hour: hourly)
             dayTenTemp3 = hourTemp(value: 3, hour: hourly)
             dayTenHumidity3 = hourHumidity(value: 3, hour: hourly)
@@ -2264,8 +2116,7 @@ public func fetchDarkSkyWeatherData() {
             dayTenIndex3 = hourUVIndex(value: 3, hour: hourly)
             dayTenWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
             dayTenCloudCover3 = hourCloudCover(value: 3, hour: hourly)
-            
-            dayTenTime4 = hourTime(value: 4, hour: hourly)
+
             dayTenPrecip4 = hourPrecipProb(value: 4, hour: hourly)
             dayTenTemp4 = hourTemp(value: 4, hour: hourly)
             dayTenHumidity4 = hourHumidity(value: 4, hour: hourly)
@@ -2273,8 +2124,7 @@ public func fetchDarkSkyWeatherData() {
             dayTenIndex4 = hourUVIndex(value: 4, hour: hourly)
             dayTenWindSpeed4 = hourWindSpeed(value: 4, hour: hourly)
             dayTenCloudCover4 = hourCloudCover(value: 4, hour: hourly)
-            
-            dayTenTime5 = hourTime(value: 5, hour: hourly)
+
             dayTenPrecip5 = hourPrecipProb(value: 5, hour: hourly)
             dayTenTemp5 = hourTemp(value: 5, hour: hourly)
             dayTenHumidity5 = hourHumidity(value: 5, hour: hourly)
@@ -2282,8 +2132,7 @@ public func fetchDarkSkyWeatherData() {
             dayTenIndex5 = hourUVIndex(value: 5, hour: hourly)
             dayTenWindSpeed5 = hourWindSpeed(value: 5, hour: hourly)
             dayTenCloudCover5 = hourCloudCover(value: 5, hour: hourly)
-            
-            dayTenTime6 = hourTime(value: 6, hour: hourly)
+
             dayTenPrecip6 = hourPrecipProb(value: 6, hour: hourly)
             dayTenTemp6 = hourTemp(value: 6, hour: hourly)
             dayTenHumidity6 = hourHumidity(value: 6, hour: hourly)
@@ -2291,8 +2140,7 @@ public func fetchDarkSkyWeatherData() {
             dayTenIndex6 = hourUVIndex(value: 6, hour: hourly)
             dayTenWindSpeed6 = hourWindSpeed(value: 6, hour: hourly)
             dayTenCloudCover6 = hourCloudCover(value: 6, hour: hourly)
-            
-            dayTenTime7 = hourTime(value: 7, hour: hourly)
+
             dayTenPrecip7 = hourPrecipProb(value: 7, hour: hourly)
             dayTenTemp7 = hourTemp(value: 7, hour: hourly)
             dayTenHumidity7 = hourHumidity(value: 7, hour: hourly)
@@ -2300,8 +2148,7 @@ public func fetchDarkSkyWeatherData() {
             dayTenIndex7 = hourUVIndex(value: 7, hour: hourly)
             dayTenWindSpeed7 = hourWindSpeed(value: 7, hour: hourly)
             dayTenCloudCover7 = hourCloudCover(value: 7, hour: hourly)
-            
-            dayTenTime8 = hourTime(value: 8, hour: hourly)
+
             dayTenPrecip8 = hourPrecipProb(value: 8, hour: hourly)
             dayTenTemp8 = hourTemp(value: 8, hour: hourly)
             dayTenHumidity8 = hourHumidity(value: 8, hour: hourly)
@@ -2309,8 +2156,7 @@ public func fetchDarkSkyWeatherData() {
             dayTenIndex8 = hourUVIndex(value: 8, hour: hourly)
             dayTenWindSpeed8 = hourWindSpeed(value: 8, hour: hourly)
             dayTenCloudCover8 = hourCloudCover(value: 8, hour: hourly)
-            
-            dayTenTime9 = hourTime(value: 9, hour: hourly)
+
             dayTenPrecip9 = hourPrecipProb(value: 9, hour: hourly)
             dayTenTemp9 = hourTemp(value: 9, hour: hourly)
             dayTenHumidity9 = hourHumidity(value: 9, hour: hourly)
@@ -2318,8 +2164,7 @@ public func fetchDarkSkyWeatherData() {
             dayTenIndex9 = hourUVIndex(value: 9, hour: hourly)
             dayTenWindSpeed9 = hourWindSpeed(value: 9, hour: hourly)
             dayTenCloudCover9 = hourCloudCover(value: 9, hour: hourly)
-            
-            dayTenTime10 = hourTime(value: 10, hour: hourly)
+
             dayTenPrecip10 = hourPrecipProb(value: 10, hour: hourly)
             dayTenTemp10 = hourTemp(value: 10, hour: hourly)
             dayTenHumidity10 = hourHumidity(value: 10, hour: hourly)
@@ -2327,8 +2172,7 @@ public func fetchDarkSkyWeatherData() {
             dayTenIndex10 = hourUVIndex(value: 10, hour: hourly)
             dayTenWindSpeed10 = hourWindSpeed(value: 10, hour: hourly)
             dayTenCloudCover10 = hourCloudCover(value: 10, hour: hourly)
-            
-            dayTenTime11 = hourTime(value: 11, hour: hourly)
+
             dayTenPrecip11 = hourPrecipProb(value: 11, hour: hourly)
             dayTenTemp11 = hourTemp(value: 11, hour: hourly)
             dayTenHumidity11 = hourHumidity(value: 11, hour: hourly)
@@ -2336,8 +2180,7 @@ public func fetchDarkSkyWeatherData() {
             dayTenIndex11 = hourUVIndex(value: 11, hour: hourly)
             dayTenWindSpeed11 = hourWindSpeed(value: 11, hour: hourly)
             dayTenCloudCover11 = hourCloudCover(value: 11, hour: hourly)
-            
-            dayTenTime12 = hourTime(value: 12, hour: hourly)
+
             dayTenPrecip12 = hourPrecipProb(value: 12, hour: hourly)
             dayTenTemp12 = hourTemp(value: 12, hour: hourly)
             dayTenHumidity12 = hourHumidity(value: 12, hour: hourly)
@@ -2345,8 +2188,7 @@ public func fetchDarkSkyWeatherData() {
             dayTenIndex12 = hourUVIndex(value: 12, hour: hourly)
             dayTenWindSpeed12 = hourWindSpeed(value: 12, hour: hourly)
             dayTenCloudCover12 = hourCloudCover(value: 12, hour: hourly)
-            
-            dayTenTime13 = hourTime(value: 13, hour: hourly)
+
             dayTenPrecip13 = hourPrecipProb(value: 13, hour: hourly)
             dayTenTemp13 = hourTemp(value: 13, hour: hourly)
             dayTenHumidity13 = hourHumidity(value: 13, hour: hourly)
@@ -2354,8 +2196,7 @@ public func fetchDarkSkyWeatherData() {
             dayTenIndex13 = hourUVIndex(value: 13, hour: hourly)
             dayTenWindSpeed13 = hourWindSpeed(value: 13, hour: hourly)
             dayTenCloudCover13 = hourCloudCover(value: 13, hour: hourly)
-            
-            dayTenTime14 = hourTime(value: 14, hour: hourly)
+
             dayTenPrecip14 = hourPrecipProb(value: 14, hour: hourly)
             dayTenTemp14 = hourTemp(value: 14, hour: hourly)
             dayTenHumidity14 = hourHumidity(value: 14, hour: hourly)
@@ -2363,8 +2204,7 @@ public func fetchDarkSkyWeatherData() {
             dayTenIndex14 = hourUVIndex(value: 14, hour: hourly)
             dayTenWindSpeed14 = hourWindSpeed(value: 14, hour: hourly)
             dayTenCloudCover14 = hourCloudCover(value: 14, hour: hourly)
-            
-            dayTenTime15 = hourTime(value: 15, hour: hourly)
+
             dayTenPrecip15 = hourPrecipProb(value: 15, hour: hourly)
             dayTenTemp15 = hourTemp(value: 15, hour: hourly)
             dayTenHumidity15 = hourHumidity(value: 15, hour: hourly)
@@ -2399,12 +2239,11 @@ public func fetchDarkSkyWeatherData() {
             dayElevenConditionValue = getDefaultDailyCondition(condition: fetchDayElevenArray)
             dayElevenPrecip = dailyPrecipProb(day: fetchDayElevenArray)
             dayElevenPrecipAccum = dailyPrecipAccum(day: fetchDayElevenArray)
-            dayElevenSunrise = sunFormat(date: fetchDayElevenArray.sunriseTime ?? Date())
-            dayElevenSunset = sunFormat(date: fetchDayElevenArray.sunsetTime ?? Date())
+            dayElevenSunrise = sunFormat(date: fetchDayElevenArray.sunriseTime!)
+            dayElevenSunset = sunFormat(date: fetchDayElevenArray.sunsetTime!)
         }
         
         if let hourly = forecast.hourly {
-            dayElevenTime0 = hourTime(value: 0, hour: hourly)
             dayElevenPrecip0 = hourPrecipProb(value: 0, hour: hourly)
             dayElevenTemp0 = hourTemp(value: 0, hour: hourly)
             dayElevenHumidity0 = hourHumidity(value: 0, hour: hourly)
@@ -2412,8 +2251,7 @@ public func fetchDarkSkyWeatherData() {
             dayElevenIndex0 = hourUVIndex(value: 0, hour: hourly)
             dayElevenWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
             dayElevenCloudCover0 = hourCloudCover(value: 0, hour: hourly)
-            
-            dayElevenTime1 = hourTime(value: 1, hour: hourly)
+
             dayElevenPrecip1 = hourPrecipProb(value: 1, hour: hourly)
             dayElevenTemp1 = hourTemp(value: 1, hour: hourly)
             dayElevenHumidity1 = hourHumidity(value: 1, hour: hourly)
@@ -2421,8 +2259,7 @@ public func fetchDarkSkyWeatherData() {
             dayElevenIndex1 = hourUVIndex(value: 1, hour: hourly)
             dayElevenWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
             dayElevenCloudCover1 = hourCloudCover(value: 1, hour: hourly)
-            
-            dayElevenTime2 = hourTime(value: 2, hour: hourly)
+
             dayElevenPrecip2 = hourPrecipProb(value: 2, hour: hourly)
             dayElevenTemp2 = hourTemp(value: 2, hour: hourly)
             dayElevenHumidity2 = hourHumidity(value: 2, hour: hourly)
@@ -2430,8 +2267,7 @@ public func fetchDarkSkyWeatherData() {
             dayElevenIndex2 = hourUVIndex(value: 2, hour: hourly)
             dayElevenWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
             dayElevenCloudCover2 = hourCloudCover(value: 2, hour: hourly)
-            
-            dayElevenTime3 = hourTime(value: 3, hour: hourly)
+
             dayElevenPrecip3 = hourPrecipProb(value: 3, hour: hourly)
             dayElevenTemp3 = hourTemp(value: 3, hour: hourly)
             dayElevenHumidity3 = hourHumidity(value: 3, hour: hourly)
@@ -2439,8 +2275,7 @@ public func fetchDarkSkyWeatherData() {
             dayElevenIndex3 = hourUVIndex(value: 3, hour: hourly)
             dayElevenWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
             dayElevenCloudCover3 = hourCloudCover(value: 3, hour: hourly)
-            
-            dayElevenTime4 = hourTime(value: 4, hour: hourly)
+
             dayElevenPrecip4 = hourPrecipProb(value: 4, hour: hourly)
             dayElevenTemp4 = hourTemp(value: 4, hour: hourly)
             dayElevenHumidity4 = hourHumidity(value: 4, hour: hourly)
@@ -2448,8 +2283,7 @@ public func fetchDarkSkyWeatherData() {
             dayElevenIndex4 = hourUVIndex(value: 4, hour: hourly)
             dayElevenWindSpeed4 = hourWindSpeed(value: 4, hour: hourly)
             dayElevenCloudCover4 = hourCloudCover(value: 4, hour: hourly)
-            
-            dayElevenTime5 = hourTime(value: 5, hour: hourly)
+
             dayElevenPrecip5 = hourPrecipProb(value: 5, hour: hourly)
             dayElevenTemp5 = hourTemp(value: 5, hour: hourly)
             dayElevenHumidity5 = hourHumidity(value: 5, hour: hourly)
@@ -2457,8 +2291,7 @@ public func fetchDarkSkyWeatherData() {
             dayElevenIndex5 = hourUVIndex(value: 5, hour: hourly)
             dayElevenWindSpeed5 = hourWindSpeed(value: 5, hour: hourly)
             dayElevenCloudCover5 = hourCloudCover(value: 5, hour: hourly)
-            
-            dayElevenTime6 = hourTime(value: 6, hour: hourly)
+
             dayElevenPrecip6 = hourPrecipProb(value: 6, hour: hourly)
             dayElevenTemp6 = hourTemp(value: 6, hour: hourly)
             dayElevenHumidity6 = hourHumidity(value: 6, hour: hourly)
@@ -2466,8 +2299,7 @@ public func fetchDarkSkyWeatherData() {
             dayElevenIndex6 = hourUVIndex(value: 6, hour: hourly)
             dayElevenWindSpeed6 = hourWindSpeed(value: 6, hour: hourly)
             dayElevenCloudCover6 = hourCloudCover(value: 6, hour: hourly)
-            
-            dayElevenTime7 = hourTime(value: 7, hour: hourly)
+
             dayElevenPrecip7 = hourPrecipProb(value: 7, hour: hourly)
             dayElevenTemp7 = hourTemp(value: 7, hour: hourly)
             dayElevenHumidity7 = hourHumidity(value: 7, hour: hourly)
@@ -2475,8 +2307,7 @@ public func fetchDarkSkyWeatherData() {
             dayElevenIndex7 = hourUVIndex(value: 7, hour: hourly)
             dayElevenWindSpeed7 = hourWindSpeed(value: 7, hour: hourly)
             dayElevenCloudCover7 = hourCloudCover(value: 7, hour: hourly)
-            
-            dayElevenTime8 = hourTime(value: 8, hour: hourly)
+
             dayElevenPrecip8 = hourPrecipProb(value: 8, hour: hourly)
             dayElevenTemp8 = hourTemp(value: 8, hour: hourly)
             dayElevenHumidity8 = hourHumidity(value: 8, hour: hourly)
@@ -2484,8 +2315,7 @@ public func fetchDarkSkyWeatherData() {
             dayElevenIndex8 = hourUVIndex(value: 8, hour: hourly)
             dayElevenWindSpeed8 = hourWindSpeed(value: 8, hour: hourly)
             dayElevenCloudCover8 = hourCloudCover(value: 8, hour: hourly)
-            
-            dayElevenTime9 = hourTime(value: 9, hour: hourly)
+
             dayElevenPrecip9 = hourPrecipProb(value: 9, hour: hourly)
             dayElevenTemp9 = hourTemp(value: 9, hour: hourly)
             dayElevenHumidity9 = hourHumidity(value: 9, hour: hourly)
@@ -2493,8 +2323,7 @@ public func fetchDarkSkyWeatherData() {
             dayElevenIndex9 = hourUVIndex(value: 9, hour: hourly)
             dayElevenWindSpeed9 = hourWindSpeed(value: 9, hour: hourly)
             dayElevenCloudCover9 = hourCloudCover(value: 9, hour: hourly)
-            
-            dayElevenTime10 = hourTime(value: 10, hour: hourly)
+
             dayElevenPrecip10 = hourPrecipProb(value: 10, hour: hourly)
             dayElevenTemp10 = hourTemp(value: 10, hour: hourly)
             dayElevenHumidity10 = hourHumidity(value: 10, hour: hourly)
@@ -2502,8 +2331,7 @@ public func fetchDarkSkyWeatherData() {
             dayElevenIndex10 = hourUVIndex(value: 10, hour: hourly)
             dayElevenWindSpeed10 = hourWindSpeed(value: 10, hour: hourly)
             dayElevenCloudCover10 = hourCloudCover(value: 10, hour: hourly)
-            
-            dayElevenTime11 = hourTime(value: 11, hour: hourly)
+
             dayElevenPrecip11 = hourPrecipProb(value: 11, hour: hourly)
             dayElevenTemp11 = hourTemp(value: 11, hour: hourly)
             dayElevenHumidity11 = hourHumidity(value: 11, hour: hourly)
@@ -2511,8 +2339,7 @@ public func fetchDarkSkyWeatherData() {
             dayElevenIndex11 = hourUVIndex(value: 11, hour: hourly)
             dayElevenWindSpeed11 = hourWindSpeed(value: 11, hour: hourly)
             dayElevenCloudCover11 = hourCloudCover(value: 11, hour: hourly)
-            
-            dayElevenTime12 = hourTime(value: 12, hour: hourly)
+
             dayElevenPrecip12 = hourPrecipProb(value: 12, hour: hourly)
             dayElevenTemp12 = hourTemp(value: 12, hour: hourly)
             dayElevenHumidity12 = hourHumidity(value: 12, hour: hourly)
@@ -2520,8 +2347,7 @@ public func fetchDarkSkyWeatherData() {
             dayElevenIndex12 = hourUVIndex(value: 12, hour: hourly)
             dayElevenWindSpeed12 = hourWindSpeed(value: 12, hour: hourly)
             dayElevenCloudCover12 = hourCloudCover(value: 12, hour: hourly)
-            
-            dayElevenTime13 = hourTime(value: 13, hour: hourly)
+
             dayElevenPrecip13 = hourPrecipProb(value: 13, hour: hourly)
             dayElevenTemp13 = hourTemp(value: 13, hour: hourly)
             dayElevenHumidity13 = hourHumidity(value: 13, hour: hourly)
@@ -2529,8 +2355,7 @@ public func fetchDarkSkyWeatherData() {
             dayElevenIndex13 = hourUVIndex(value: 13, hour: hourly)
             dayElevenWindSpeed13 = hourWindSpeed(value: 13, hour: hourly)
             dayElevenCloudCover13 = hourCloudCover(value: 13, hour: hourly)
-            
-            dayElevenTime14 = hourTime(value: 14, hour: hourly)
+
             dayElevenPrecip14 = hourPrecipProb(value: 14, hour: hourly)
             dayElevenTemp14 = hourTemp(value: 14, hour: hourly)
             dayElevenHumidity14 = hourHumidity(value: 14, hour: hourly)
@@ -2538,8 +2363,7 @@ public func fetchDarkSkyWeatherData() {
             dayElevenIndex14 = hourUVIndex(value: 14, hour: hourly)
             dayElevenWindSpeed14 = hourWindSpeed(value: 14, hour: hourly)
             dayElevenCloudCover14 = hourCloudCover(value: 14, hour: hourly)
-            
-            dayElevenTime15 = hourTime(value: 15, hour: hourly)
+
             dayElevenPrecip15 = hourPrecipProb(value: 15, hour: hourly)
             dayElevenTemp15 = hourTemp(value: 15, hour: hourly)
             dayElevenHumidity15 = hourHumidity(value: 15, hour: hourly)
@@ -2574,13 +2398,11 @@ public func fetchDarkSkyWeatherData() {
             dayTwelveConditionValue = getDefaultDailyCondition(condition: fetchDayTwelveArray)
             dayTwelvePrecip = dailyPrecipProb(day: fetchDayTwelveArray)
             dayTwelvePrecipAccum = dailyPrecipAccum(day: fetchDayTwelveArray)
-            dayTwelveSunrise = sunFormat(date: fetchDayTwelveArray.sunriseTime ?? Date())
-            dayTwelveSunset = sunFormat(date: fetchDayTwelveArray.sunsetTime ?? Date())
+            dayTwelveSunrise = sunFormat(date: fetchDayTwelveArray.sunriseTime!)
+            dayTwelveSunset = sunFormat(date: fetchDayTwelveArray.sunsetTime!)
         }
         
         if let hourly = forecast.hourly {
-            dayTwelveTime0 = hourTime(value: 0, hour: hourly)
-            dayTwelvePrecip0 = hourPrecipProb(value: 0, hour: hourly)
             dayTwelveTemp0 = hourTemp(value: 0, hour: hourly)
             dayTwelveHumidity0 = hourHumidity(value: 0, hour: hourly)
             dayTwelveCondition0 = hourIcon(value: 0, hour: hourly)
@@ -2588,7 +2410,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwelveWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
             dayTwelveCloudCover0 = hourCloudCover(value: 0, hour: hourly)
             
-            dayTwelveTime1 = hourTime(value: 1, hour: hourly)
             dayTwelvePrecip1 = hourPrecipProb(value: 1, hour: hourly)
             dayTwelveTemp1 = hourTemp(value: 1, hour: hourly)
             dayTwelveHumidity1 = hourHumidity(value: 1, hour: hourly)
@@ -2597,7 +2418,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwelveWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
             dayTwelveCloudCover1 = hourCloudCover(value: 1, hour: hourly)
             
-            dayTwelveTime2 = hourTime(value: 2, hour: hourly)
             dayTwelvePrecip2 = hourPrecipProb(value: 2, hour: hourly)
             dayTwelveTemp2 = hourTemp(value: 2, hour: hourly)
             dayTwelveHumidity2 = hourHumidity(value: 2, hour: hourly)
@@ -2606,7 +2426,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwelveWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
             dayTwelveCloudCover2 = hourCloudCover(value: 2, hour: hourly)
             
-            dayTwelveTime3 = hourTime(value: 3, hour: hourly)
             dayTwelvePrecip3 = hourPrecipProb(value: 3, hour: hourly)
             dayTwelveTemp3 = hourTemp(value: 3, hour: hourly)
             dayTwelveHumidity3 = hourHumidity(value: 3, hour: hourly)
@@ -2615,7 +2434,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwelveWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
             dayTwelveCloudCover3 = hourCloudCover(value: 3, hour: hourly)
             
-            dayTwelveTime4 = hourTime(value: 4, hour: hourly)
             dayTwelvePrecip4 = hourPrecipProb(value: 4, hour: hourly)
             dayTwelveTemp4 = hourTemp(value: 4, hour: hourly)
             dayTwelveHumidity4 = hourHumidity(value: 4, hour: hourly)
@@ -2624,7 +2442,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwelveWindSpeed4 = hourWindSpeed(value: 4, hour: hourly)
             dayTwelveCloudCover4 = hourCloudCover(value: 4, hour: hourly)
             
-            dayTwelveTime5 = hourTime(value: 5, hour: hourly)
             dayTwelvePrecip5 = hourPrecipProb(value: 5, hour: hourly)
             dayTwelveTemp5 = hourTemp(value: 5, hour: hourly)
             dayTwelveHumidity5 = hourHumidity(value: 5, hour: hourly)
@@ -2633,7 +2450,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwelveWindSpeed5 = hourWindSpeed(value: 5, hour: hourly)
             dayTwelveCloudCover5 = hourCloudCover(value: 5, hour: hourly)
             
-            dayTwelveTime6 = hourTime(value: 6, hour: hourly)
             dayTwelvePrecip6 = hourPrecipProb(value: 6, hour: hourly)
             dayTwelveTemp6 = hourTemp(value: 6, hour: hourly)
             dayTwelveHumidity6 = hourHumidity(value: 6, hour: hourly)
@@ -2642,7 +2458,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwelveWindSpeed6 = hourWindSpeed(value: 6, hour: hourly)
             dayTwelveCloudCover6 = hourCloudCover(value: 6, hour: hourly)
             
-            dayTwelveTime7 = hourTime(value: 7, hour: hourly)
             dayTwelvePrecip7 = hourPrecipProb(value: 7, hour: hourly)
             dayTwelveTemp7 = hourTemp(value: 7, hour: hourly)
             dayTwelveHumidity7 = hourHumidity(value: 7, hour: hourly)
@@ -2651,7 +2466,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwelveWindSpeed7 = hourWindSpeed(value: 7, hour: hourly)
             dayTwelveCloudCover7 = hourCloudCover(value: 7, hour: hourly)
             
-            dayTwelveTime8 = hourTime(value: 8, hour: hourly)
             dayTwelvePrecip8 = hourPrecipProb(value: 8, hour: hourly)
             dayTwelveTemp8 = hourTemp(value: 8, hour: hourly)
             dayTwelveHumidity8 = hourHumidity(value: 8, hour: hourly)
@@ -2660,7 +2474,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwelveWindSpeed8 = hourWindSpeed(value: 8, hour: hourly)
             dayTwelveCloudCover8 = hourCloudCover(value: 8, hour: hourly)
             
-            dayTwelveTime9 = hourTime(value: 9, hour: hourly)
             dayTwelvePrecip9 = hourPrecipProb(value: 9, hour: hourly)
             dayTwelveTemp9 = hourTemp(value: 9, hour: hourly)
             dayTwelveHumidity9 = hourHumidity(value: 9, hour: hourly)
@@ -2669,7 +2482,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwelveWindSpeed9 = hourWindSpeed(value: 9, hour: hourly)
             dayTwelveCloudCover9 = hourCloudCover(value: 9, hour: hourly)
             
-            dayTwelveTime10 = hourTime(value: 10, hour: hourly)
             dayTwelvePrecip10 = hourPrecipProb(value: 10, hour: hourly)
             dayTwelveTemp10 = hourTemp(value: 10, hour: hourly)
             dayTwelveHumidity10 = hourHumidity(value: 10, hour: hourly)
@@ -2678,7 +2490,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwelveWindSpeed10 = hourWindSpeed(value: 10, hour: hourly)
             dayTwelveCloudCover10 = hourCloudCover(value: 10, hour: hourly)
             
-            dayTwelveTime11 = hourTime(value: 11, hour: hourly)
             dayTwelvePrecip11 = hourPrecipProb(value: 11, hour: hourly)
             dayTwelveTemp11 = hourTemp(value: 11, hour: hourly)
             dayTwelveHumidity11 = hourHumidity(value: 11, hour: hourly)
@@ -2687,7 +2498,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwelveWindSpeed11 = hourWindSpeed(value: 11, hour: hourly)
             dayTwelveCloudCover11 = hourCloudCover(value: 11, hour: hourly)
             
-            dayTwelveTime12 = hourTime(value: 12, hour: hourly)
             dayTwelvePrecip12 = hourPrecipProb(value: 12, hour: hourly)
             dayTwelveTemp12 = hourTemp(value: 12, hour: hourly)
             dayTwelveHumidity12 = hourHumidity(value: 12, hour: hourly)
@@ -2696,7 +2506,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwelveWindSpeed12 = hourWindSpeed(value: 12, hour: hourly)
             dayTwelveCloudCover12 = hourCloudCover(value: 12, hour: hourly)
             
-            dayTwelveTime13 = hourTime(value: 13, hour: hourly)
             dayTwelvePrecip13 = hourPrecipProb(value: 13, hour: hourly)
             dayTwelveTemp13 = hourTemp(value: 13, hour: hourly)
             dayTwelveHumidity13 = hourHumidity(value: 13, hour: hourly)
@@ -2705,7 +2514,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwelveWindSpeed13 = hourWindSpeed(value: 13, hour: hourly)
             dayTwelveCloudCover13 = hourCloudCover(value: 13, hour: hourly)
             
-            dayTwelveTime14 = hourTime(value: 14, hour: hourly)
             dayTwelvePrecip14 = hourPrecipProb(value: 14, hour: hourly)
             dayTwelveTemp14 = hourTemp(value: 14, hour: hourly)
             dayTwelveHumidity14 = hourHumidity(value: 14, hour: hourly)
@@ -2714,7 +2522,6 @@ public func fetchDarkSkyWeatherData() {
             dayTwelveWindSpeed14 = hourWindSpeed(value: 14, hour: hourly)
             dayTwelveCloudCover14 = hourCloudCover(value: 14, hour: hourly)
             
-            dayTwelveTime15 = hourTime(value: 15, hour: hourly)
             dayTwelvePrecip15 = hourPrecipProb(value: 15, hour: hourly)
             dayTwelveTemp15 = hourTemp(value: 15, hour: hourly)
             dayTwelveHumidity15 = hourHumidity(value: 15, hour: hourly)
@@ -2749,12 +2556,11 @@ public func fetchDarkSkyWeatherData() {
             dayThirteenConditionValue = getDefaultDailyCondition(condition: fetchDayThirteenArray)
             dayThirteenPrecip = dailyPrecipProb(day: fetchDayThirteenArray)
             dayThirteenPrecipAccum = dailyPrecipAccum(day: fetchDayThirteenArray)
-            dayThirteenSunrise = sunFormat(date: fetchDayThirteenArray.sunriseTime ?? Date())
-            dayThirteenSunset = sunFormat(date: fetchDayThirteenArray.sunsetTime ?? Date())
+            dayThirteenSunrise = sunFormat(date: fetchDayThirteenArray.sunriseTime!)
+            dayThirteenSunset = sunFormat(date: fetchDayThirteenArray.sunsetTime!)
         }
         
         if let hourly = forecast.hourly {
-            dayThirteenTime0 = hourTime(value: 0, hour: hourly)
             dayThirteenPrecip0 = hourPrecipProb(value: 0, hour: hourly)
             dayThirteenTemp0 = hourTemp(value: 0, hour: hourly)
             dayThirteenHumidity0 = hourHumidity(value: 0, hour: hourly)
@@ -2763,7 +2569,6 @@ public func fetchDarkSkyWeatherData() {
             dayThirteenWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
             dayThirteenCloudCover0 = hourCloudCover(value: 0, hour: hourly)
             
-            dayThirteenTime1 = hourTime(value: 1, hour: hourly)
             dayThirteenPrecip1 = hourPrecipProb(value: 1, hour: hourly)
             dayThirteenTemp1 = hourTemp(value: 1, hour: hourly)
             dayThirteenHumidity1 = hourHumidity(value: 1, hour: hourly)
@@ -2772,7 +2577,6 @@ public func fetchDarkSkyWeatherData() {
             dayThirteenWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
             dayThirteenCloudCover1 = hourCloudCover(value: 1, hour: hourly)
             
-            dayThirteenTime2 = hourTime(value: 2, hour: hourly)
             dayThirteenPrecip2 = hourPrecipProb(value: 2, hour: hourly)
             dayThirteenTemp2 = hourTemp(value: 2, hour: hourly)
             dayThirteenHumidity2 = hourHumidity(value: 2, hour: hourly)
@@ -2781,7 +2585,6 @@ public func fetchDarkSkyWeatherData() {
             dayThirteenWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
             dayThirteenCloudCover2 = hourCloudCover(value: 2, hour: hourly)
             
-            dayThirteenTime3 = hourTime(value: 3, hour: hourly)
             dayThirteenPrecip3 = hourPrecipProb(value: 3, hour: hourly)
             dayThirteenTemp3 = hourTemp(value: 3, hour: hourly)
             dayThirteenHumidity3 = hourHumidity(value: 3, hour: hourly)
@@ -2790,7 +2593,6 @@ public func fetchDarkSkyWeatherData() {
             dayThirteenWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
             dayThirteenCloudCover3 = hourCloudCover(value: 3, hour: hourly)
             
-            dayThirteenTime4 = hourTime(value: 4, hour: hourly)
             dayThirteenPrecip4 = hourPrecipProb(value: 4, hour: hourly)
             dayThirteenTemp4 = hourTemp(value: 4, hour: hourly)
             dayThirteenHumidity4 = hourHumidity(value: 4, hour: hourly)
@@ -2799,7 +2601,6 @@ public func fetchDarkSkyWeatherData() {
             dayThirteenWindSpeed4 = hourWindSpeed(value: 4, hour: hourly)
             dayThirteenCloudCover4 = hourCloudCover(value: 4, hour: hourly)
             
-            dayThirteenTime5 = hourTime(value: 5, hour: hourly)
             dayThirteenPrecip5 = hourPrecipProb(value: 5, hour: hourly)
             dayThirteenTemp5 = hourTemp(value: 5, hour: hourly)
             dayThirteenHumidity5 = hourHumidity(value: 5, hour: hourly)
@@ -2808,7 +2609,6 @@ public func fetchDarkSkyWeatherData() {
             dayThirteenWindSpeed5 = hourWindSpeed(value: 5, hour: hourly)
             dayThirteenCloudCover5 = hourCloudCover(value: 5, hour: hourly)
             
-            dayThirteenTime6 = hourTime(value: 6, hour: hourly)
             dayThirteenPrecip6 = hourPrecipProb(value: 6, hour: hourly)
             dayThirteenTemp6 = hourTemp(value: 6, hour: hourly)
             dayThirteenHumidity6 = hourHumidity(value: 6, hour: hourly)
@@ -2817,7 +2617,6 @@ public func fetchDarkSkyWeatherData() {
             dayThirteenWindSpeed6 = hourWindSpeed(value: 6, hour: hourly)
             dayThirteenCloudCover6 = hourCloudCover(value: 6, hour: hourly)
             
-            dayThirteenTime7 = hourTime(value: 7, hour: hourly)
             dayThirteenPrecip7 = hourPrecipProb(value: 7, hour: hourly)
             dayThirteenTemp7 = hourTemp(value: 7, hour: hourly)
             dayThirteenHumidity7 = hourHumidity(value: 7, hour: hourly)
@@ -2826,7 +2625,6 @@ public func fetchDarkSkyWeatherData() {
             dayThirteenWindSpeed7 = hourWindSpeed(value: 7, hour: hourly)
             dayThirteenCloudCover7 = hourCloudCover(value: 7, hour: hourly)
             
-            dayThirteenTime8 = hourTime(value: 8, hour: hourly)
             dayThirteenPrecip8 = hourPrecipProb(value: 8, hour: hourly)
             dayThirteenTemp8 = hourTemp(value: 8, hour: hourly)
             dayThirteenHumidity8 = hourHumidity(value: 8, hour: hourly)
@@ -2834,8 +2632,7 @@ public func fetchDarkSkyWeatherData() {
             dayThirteenIndex8 = hourUVIndex(value: 8, hour: hourly)
             dayThirteenWindSpeed8 = hourWindSpeed(value: 8, hour: hourly)
             dayThirteenCloudCover8 = hourCloudCover(value: 8, hour: hourly)
-            
-            dayThirteenTime9 = hourTime(value: 9, hour: hourly)
+
             dayThirteenPrecip9 = hourPrecipProb(value: 9, hour: hourly)
             dayThirteenTemp9 = hourTemp(value: 9, hour: hourly)
             dayThirteenHumidity9 = hourHumidity(value: 9, hour: hourly)
@@ -2843,8 +2640,7 @@ public func fetchDarkSkyWeatherData() {
             dayThirteenIndex9 = hourUVIndex(value: 9, hour: hourly)
             dayThirteenWindSpeed9 = hourWindSpeed(value: 9, hour: hourly)
             dayThirteenCloudCover9 = hourCloudCover(value: 9, hour: hourly)
-            
-            dayThirteenTime10 = hourTime(value: 10, hour: hourly)
+
             dayThirteenPrecip10 = hourPrecipProb(value: 10, hour: hourly)
             dayThirteenTemp10 = hourTemp(value: 10, hour: hourly)
             dayThirteenHumidity10 = hourHumidity(value: 10, hour: hourly)
@@ -2852,8 +2648,7 @@ public func fetchDarkSkyWeatherData() {
             dayThirteenIndex10 = hourUVIndex(value: 10, hour: hourly)
             dayThirteenWindSpeed10 = hourWindSpeed(value: 10, hour: hourly)
             dayThirteenCloudCover10 = hourCloudCover(value: 10, hour: hourly)
-            
-            dayThirteenTime11 = hourTime(value: 11, hour: hourly)
+
             dayThirteenPrecip11 = hourPrecipProb(value: 11, hour: hourly)
             dayThirteenTemp11 = hourTemp(value: 11, hour: hourly)
             dayThirteenHumidity11 = hourHumidity(value: 11, hour: hourly)
@@ -2861,8 +2656,7 @@ public func fetchDarkSkyWeatherData() {
             dayThirteenIndex11 = hourUVIndex(value: 11, hour: hourly)
             dayThirteenWindSpeed11 = hourWindSpeed(value: 11, hour: hourly)
             dayThirteenCloudCover11 = hourCloudCover(value: 11, hour: hourly)
-            
-            dayThirteenTime12 = hourTime(value: 12, hour: hourly)
+
             dayThirteenPrecip12 = hourPrecipProb(value: 12, hour: hourly)
             dayThirteenTemp12 = hourTemp(value: 12, hour: hourly)
             dayThirteenHumidity12 = hourHumidity(value: 12, hour: hourly)
@@ -2870,8 +2664,7 @@ public func fetchDarkSkyWeatherData() {
             dayThirteenIndex12 = hourUVIndex(value: 12, hour: hourly)
             dayThirteenWindSpeed12 = hourWindSpeed(value: 12, hour: hourly)
             dayThirteenCloudCover12 = hourCloudCover(value: 12, hour: hourly)
-            
-            dayThirteenTime13 = hourTime(value: 13, hour: hourly)
+
             dayThirteenPrecip13 = hourPrecipProb(value: 13, hour: hourly)
             dayThirteenTemp13 = hourTemp(value: 13, hour: hourly)
             dayThirteenHumidity13 = hourHumidity(value: 13, hour: hourly)
@@ -2879,8 +2672,7 @@ public func fetchDarkSkyWeatherData() {
             dayThirteenIndex13 = hourUVIndex(value: 13, hour: hourly)
             dayThirteenWindSpeed13 = hourWindSpeed(value: 13, hour: hourly)
             dayThirteenCloudCover13 = hourCloudCover(value: 13, hour: hourly)
-            
-            dayThirteenTime14 = hourTime(value: 14, hour: hourly)
+
             dayThirteenPrecip14 = hourPrecipProb(value: 14, hour: hourly)
             dayThirteenTemp14 = hourTemp(value: 14, hour: hourly)
             dayThirteenHumidity14 = hourHumidity(value: 14, hour: hourly)
@@ -2888,8 +2680,7 @@ public func fetchDarkSkyWeatherData() {
             dayThirteenIndex14 = hourUVIndex(value: 14, hour: hourly)
             dayThirteenWindSpeed14 = hourWindSpeed(value: 14, hour: hourly)
             dayThirteenCloudCover14 = hourCloudCover(value: 14, hour: hourly)
-            
-            dayThirteenTime15 = hourTime(value: 15, hour: hourly)
+
             dayThirteenPrecip15 = hourPrecipProb(value: 15, hour: hourly)
             dayThirteenTemp15 = hourTemp(value: 15, hour: hourly)
             dayThirteenHumidity15 = hourHumidity(value: 15, hour: hourly)

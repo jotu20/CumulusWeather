@@ -81,7 +81,6 @@ public func fetchDarkSkyWeatherData() {
                 sunsetDate = fetchDayZeroArray.sunsetTime!
                 dayZeroDayString = dayFormat(date: fetchDayZeroArray.time)
                 dayZeroDateString = dateFormat(date: fetchDayZeroArray.time)
-                dayZeroDate = fetchDayZeroArray.time
                 dayZeroHigh = Int(fetchDayZeroArray.temperatureHigh ?? defaultInteger)
                 dayZeroLow = Int(fetchDayZeroArray.temperatureLow ?? defaultInteger)
                 dayZeroSummaryString = "\(fetchDayZeroArray.summary ?? "\(defaultString)")"
@@ -640,7 +639,6 @@ public func fetchDarkSkyWeatherData() {
             weatherCondition1 = "\(fetchDayOneArray.icon!.rawValue)"
             dayOneDayString = dayFormat(date: fetchDayOneArray.time)
             dayOneDateString = dateFormat(date: fetchDayOneArray.time)
-            dayOneDate = fetchDayOneArray.time
             dayOneHigh = Int(fetchDayOneArray.temperatureHigh ?? defaultInteger)
             dayOneLow = Int(fetchDayOneArray.temperatureLow ?? defaultInteger)
             dayOneSummaryString = "\(fetchDayOneArray.summary ?? "\(defaultString)")"
@@ -798,7 +796,6 @@ public func fetchDarkSkyWeatherData() {
             weatherCondition2 = "\(fetchDayTwoArray.icon!.rawValue)"
             dayTwoDayString = dayFormat(date: fetchDayTwoArray.time)
             dayTwoDateString = dateFormat(date: fetchDayTwoArray.time)
-            dayTwoDate = fetchDayTwoArray.time
             dayTwoHigh = Int(fetchDayTwoArray.temperatureHigh ?? defaultInteger)
             dayTwoLow = Int(fetchDayTwoArray.temperatureLow ?? defaultInteger)
             dayTwoSummaryString = "\(fetchDayTwoArray.summary ?? "\(defaultString)")"
@@ -956,7 +953,6 @@ public func fetchDarkSkyWeatherData() {
             weatherCondition3 = "\(fetchDayThreeArray.icon!.rawValue)"
             dayThreeDayString = dayFormat(date: fetchDayThreeArray.time)
             dayThreeDateString = dateFormat(date: fetchDayThreeArray.time)
-            dayThreeDate = fetchDayThreeArray.time
             dayThreeHigh = Int(fetchDayThreeArray.temperatureHigh ?? defaultInteger)
             dayThreeLow = Int(fetchDayThreeArray.temperatureLow ?? defaultInteger)
             dayThreeSummaryString = "\(fetchDayThreeArray.summary ?? "\(defaultString)")"
@@ -1114,7 +1110,6 @@ public func fetchDarkSkyWeatherData() {
             weatherCondition4 = "\(fetchDayFourArray.icon!.rawValue)"
             dayFourDayString = dayFormat(date: fetchDayFourArray.time)
             dayFourDateString = dateFormat(date: fetchDayFourArray.time)
-            dayFourDate = fetchDayFourArray.time
             dayFourHigh = Int(fetchDayFourArray.temperatureHigh ?? defaultInteger)
             dayFourLow = Int(fetchDayFourArray.temperatureLow ?? defaultInteger)
             dayFourSummaryString = "\(fetchDayFourArray.summary ?? "\(defaultString)")"
@@ -1272,7 +1267,6 @@ public func fetchDarkSkyWeatherData() {
             weatherCondition5 = "\(fetchDayFiveArray.icon!.rawValue)"
             dayFiveDayString = dayFormat(date: fetchDayFiveArray.time)
             dayFiveDateString = dateFormat(date: fetchDayFiveArray.time)
-            dayFiveDate = fetchDayFiveArray.time
             dayFiveHigh = Int(fetchDayFiveArray.temperatureHigh ?? defaultInteger)
             dayFiveLow = Int(fetchDayFiveArray.temperatureLow ?? defaultInteger)
             dayFiveSummaryString = "\(fetchDayFiveArray.summary ?? "\(defaultString)")"
@@ -1430,7 +1424,6 @@ public func fetchDarkSkyWeatherData() {
             weatherCondition6 = "\(fetchDaySixArray.icon!.rawValue)"
             daySixDayString = dayFormat(date: fetchDaySixArray.time)
             daySixDateString = dateFormat(date: fetchDaySixArray.time)
-            daySixDate = fetchDaySixArray.time
             daySixHigh = Int(fetchDaySixArray.temperatureHigh ?? defaultInteger)
             daySixLow = Int(fetchDaySixArray.temperatureLow ?? defaultInteger)
             daySixSummaryString = "\(fetchDaySixArray.summary ?? "\(defaultString)")"
@@ -1588,7 +1581,6 @@ public func fetchDarkSkyWeatherData() {
             weatherCondition7 = "\(fetchDaySevenArray.icon!.rawValue)"
             daySevenDayString = dayFormat(date: fetchDaySevenArray.time)
             daySevenDateString = dateFormat(date: fetchDaySevenArray.time)
-            daySevenDate = fetchDaySevenArray.time
             daySevenHigh = Int(fetchDaySevenArray.temperatureHigh ?? defaultInteger)
             daySevenLow = Int(fetchDaySevenArray.temperatureLow ?? defaultInteger)
             daySevenSummaryString = "\(fetchDaySevenArray.summary ?? "\(defaultString)")"
@@ -1746,7 +1738,6 @@ public func fetchDarkSkyWeatherData() {
             weatherCondition8 = "\(fetchDayEightArray.icon!.rawValue)"
             dayEightDayString = dayFormat(date: fetchDayEightArray.time)
             dayEightDateString = dateFormat(date: fetchDayEightArray.time)
-            dayEightDate = fetchDayEightArray.time
             dayEightHigh = Int(fetchDayEightArray.temperatureHigh ?? defaultInteger)
             dayEightLow = Int(fetchDayEightArray.temperatureLow ?? defaultInteger)
             dayEightSummaryString = "\(fetchDayEightArray.summary ?? "\(defaultString)")"
@@ -1904,7 +1895,6 @@ public func fetchDarkSkyWeatherData() {
             weatherCondition9 = "\(fetchDayNineArray.icon!.rawValue)"
             dayNineDayString = dayFormat(date: fetchDayNineArray.time)
             dayNineDateString = dateFormat(date: fetchDayNineArray.time)
-            dayNineDate = fetchDayNineArray.time
             dayNineHigh = Int(fetchDayNineArray.temperatureHigh ?? defaultInteger)
             dayNineLow = Int(fetchDayNineArray.temperatureLow ?? defaultInteger)
             dayNineSummaryString = "\(fetchDayNineArray.summary ?? "\(defaultString)")"
@@ -2054,7 +2044,7 @@ public func fetchDarkSkyWeatherData() {
         switch result {
         case .success(let forecast, _):
         TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
-        
+
         if let daily = forecast.daily {
             let dayTenArray = daily.data[0]
             let fetchDayTenArray = dayTenArray
@@ -2062,7 +2052,6 @@ public func fetchDarkSkyWeatherData() {
             weatherCondition10 = "\(fetchDayTenArray.icon!.rawValue)"
             dayTenDayString = dayFormat(date: fetchDayTenArray.time)
             dayTenDateString = dateFormat(date: fetchDayTenArray.time)
-            dayTenDate = fetchDayTenArray.time
             dayTenHigh = Int(fetchDayTenArray.temperatureHigh ?? defaultInteger)
             dayTenLow = Int(fetchDayTenArray.temperatureLow ?? defaultInteger)
             dayTenSummaryString = "\(fetchDayTenArray.summary ?? "\(defaultString)")"
@@ -2072,7 +2061,7 @@ public func fetchDarkSkyWeatherData() {
             dayTenSunrise = sunFormat(date: fetchDayTenArray.sunriseTime!)
             dayTenSunset = sunFormat(date: fetchDayTenArray.sunsetTime!)
         }
-        
+
         if let hourly = forecast.hourly {
             dayTenPrecip0 = hourPrecipProb(value: 0, hour: hourly)
             dayTenTemp0 = hourTemp(value: 0, hour: hourly)
@@ -2220,7 +2209,6 @@ public func fetchDarkSkyWeatherData() {
             weatherCondition11 = "\(fetchDayElevenArray.icon!.rawValue)"
             dayElevenDayString = dayFormat(date: fetchDayElevenArray.time)
             dayElevenDateString = dateFormat(date: fetchDayElevenArray.time)
-            dayElevenDate = fetchDayElevenArray.time
             dayElevenHigh = Int(fetchDayElevenArray.temperatureHigh ?? defaultInteger)
             dayElevenLow = Int(fetchDayElevenArray.temperatureLow ?? defaultInteger)
             dayElevenSummaryString = "\(fetchDayElevenArray.summary ?? "\(defaultString)")"
@@ -2378,7 +2366,6 @@ public func fetchDarkSkyWeatherData() {
             weatherCondition12 = "\(fetchDayTwelveArray.icon!.rawValue)"
             dayTwelveDayString = dayFormat(date: fetchDayTwelveArray.time)
             dayTwelveDateString = dateFormat(date: fetchDayTwelveArray.time)
-            dayTwelveDate = fetchDayTwelveArray.time
             dayTwelveHigh = Int(fetchDayTwelveArray.temperatureHigh ?? defaultInteger)
             dayTwelveLow = Int(fetchDayTwelveArray.temperatureLow ?? defaultInteger)
             dayTwelveSummaryString = "\(fetchDayTwelveArray.summary ?? "\(defaultString)")"
@@ -2535,7 +2522,6 @@ public func fetchDarkSkyWeatherData() {
             weatherCondition13 = "\(fetchDayThirteenArray.icon!.rawValue)"
             dayThirteenDayString = dayFormat(date: fetchDayThirteenArray.time)
             dayThirteenDateString = dateFormat(date: fetchDayThirteenArray.time)
-            dayThirteenDate = fetchDayThirteenArray.time
             dayThirteenHigh = Int(fetchDayThirteenArray.temperatureHigh ?? defaultInteger)
             dayThirteenLow = Int(fetchDayThirteenArray.temperatureLow ?? defaultInteger)
             dayThirteenSummaryString = "\(fetchDayThirteenArray.summary ?? "\(defaultString)")"

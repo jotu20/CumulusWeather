@@ -657,7 +657,7 @@ var dayThirteenConditionString: String = ""
 
 // MARK: - Seven day forecast hourly values
 // Day Zero
-var dayZeroDate = Date()
+let dayZeroDate = Date()
 // Time
 var dayTime0: String = "", dayTime1: String = "", dayTime2: String = "", dayTime3: String = "", dayTime4: String = "", dayTime5: String = "", dayTime6: String = "", dayTime7: String = "", dayTime8: String = "", dayTime9: String = "", dayTime10: String = "", dayTime11: String = "", dayTime12: String = "", dayTime13: String = "", dayTime14: String = "", dayTime15: String = ""
 // Condition
@@ -678,9 +678,7 @@ var dayZeroWindSpeed0: Int = 0, dayZeroWindSpeed1: Int = 0, dayZeroWindSpeed2: I
 var dayZeroCloudCover0: Int = 0, dayZeroCloudCover1: Int = 0, dayZeroCloudCover2: Int = 0, dayZeroCloudCover3: Int = 0, dayZeroCloudCover4: Int = 0, dayZeroCloudCover5: Int = 0, dayZeroCloudCover6: Int = 0, dayZeroCloudCover7: Int = 0, dayZeroCloudCover8: Int = 0, dayZeroCloudCover9: Int = 0, dayZeroCloudCover10: Int = 0, dayZeroCloudCover11: Int = 0, dayZeroCloudCover12: Int = 0, dayZeroCloudCover13: Int = 0, dayZeroCloudCover14: Int = 0, dayZeroCloudCover15: Int = 0
 
 // Day One
-let daysToAddOne = 1
-var newDateOne = Date()
-var dayOneDate = Calendar.current.date(byAdding: .day, value: daysToAddOne, to: newDateOne)
+let dayOneDate = Calendar.current.date(byAdding: .day, value: 1, to: Date())
 // Condition
 var dayOneCondition0: String = "", dayOneCondition1: String = "", dayOneCondition2: String = "", dayOneCondition3: String = "", dayOneCondition4: String = "", dayOneCondition5: String = "", dayOneCondition6: String = "", dayOneCondition7: String = "", dayOneCondition8: String = "", dayOneCondition9: String = "", dayOneCondition10: String = "", dayOneCondition11: String = "", dayOneCondition12: String = "", dayOneCondition13: String = "", dayOneCondition14: String = "", dayOneCondition15: String = ""
 // Precip
@@ -699,9 +697,7 @@ var dayOneWindSpeed0: Int = 0, dayOneWindSpeed1: Int = 0, dayOneWindSpeed2: Int 
 var dayOneCloudCover0: Int = 0, dayOneCloudCover1: Int = 0, dayOneCloudCover2: Int = 0, dayOneCloudCover3: Int = 0, dayOneCloudCover4: Int = 0, dayOneCloudCover5: Int = 0, dayOneCloudCover6: Int = 0, dayOneCloudCover7: Int = 0, dayOneCloudCover8: Int = 0, dayOneCloudCover9: Int = 0, dayOneCloudCover10: Int = 0, dayOneCloudCover11: Int = 0, dayOneCloudCover12: Int = 0, dayOneCloudCover13: Int = 0, dayOneCloudCover14: Int = 0, dayOneCloudCover15: Int = 0
 
 // Day Two
-let daysToAddTwo = 2
-var newDateTwo = Date()
-var dayTwoDate = Calendar.current.date(byAdding: .day, value: daysToAddTwo, to: newDateTwo)
+let dayTwoDate = Calendar.current.date(byAdding: .day, value: 2, to: Date())
 // Condition
 var dayTwoCondition0: String = "", dayTwoCondition1: String = "", dayTwoCondition2: String = "", dayTwoCondition3: String = "", dayTwoCondition4: String = "", dayTwoCondition5: String = "", dayTwoCondition6: String = "", dayTwoCondition7: String = "", dayTwoCondition8: String = "", dayTwoCondition9: String = "", dayTwoCondition10: String = "", dayTwoCondition11: String = "", dayTwoCondition12: String = "", dayTwoCondition13: String = "", dayTwoCondition14: String = "", dayTwoCondition15: String = ""
 // Precip
@@ -720,9 +716,7 @@ var dayTwoWindSpeed0: Int = 0, dayTwoWindSpeed1: Int = 0, dayTwoWindSpeed2: Int 
 var dayTwoCloudCover0: Int = 0, dayTwoCloudCover1: Int = 0, dayTwoCloudCover2: Int = 0, dayTwoCloudCover3: Int = 0, dayTwoCloudCover4: Int = 0, dayTwoCloudCover5: Int = 0, dayTwoCloudCover6: Int = 0, dayTwoCloudCover7: Int = 0, dayTwoCloudCover8: Int = 0, dayTwoCloudCover9: Int = 0, dayTwoCloudCover10: Int = 0, dayTwoCloudCover11: Int = 0, dayTwoCloudCover12: Int = 0, dayTwoCloudCover13: Int = 0, dayTwoCloudCover14: Int = 0, dayTwoCloudCover15: Int = 0
 
 // Day Three
-let daysToAddThree = 3
-var newDateThree = Date()
-var dayThreeDate = Calendar.current.date(byAdding: .day, value: daysToAddThree, to: newDateThree)
+let dayThreeDate = Calendar.current.date(byAdding: .day, value: 3, to: Date())
 // Condition
 var dayThreeCondition0: String = "", dayThreeCondition1: String = "", dayThreeCondition2: String = "", dayThreeCondition3: String = "", dayThreeCondition4: String = "", dayThreeCondition5: String = "", dayThreeCondition6: String = "", dayThreeCondition7: String = "", dayThreeCondition8: String = "", dayThreeCondition9: String = "", dayThreeCondition10: String = "", dayThreeCondition11: String = "", dayThreeCondition12: String = "", dayThreeCondition13: String = "", dayThreeCondition14: String = "", dayThreeCondition15: String = ""
 // Precip
@@ -741,9 +735,7 @@ var dayThreeWindSpeed0: Int = 0, dayThreeWindSpeed1: Int = 0, dayThreeWindSpeed2
 var dayThreeCloudCover0: Int = 0, dayThreeCloudCover1: Int = 0, dayThreeCloudCover2: Int = 0, dayThreeCloudCover3: Int = 0, dayThreeCloudCover4: Int = 0, dayThreeCloudCover5: Int = 0, dayThreeCloudCover6: Int = 0, dayThreeCloudCover7: Int = 0, dayThreeCloudCover8: Int = 0, dayThreeCloudCover9: Int = 0, dayThreeCloudCover10: Int = 0, dayThreeCloudCover11: Int = 0, dayThreeCloudCover12: Int = 0, dayThreeCloudCover13: Int = 0, dayThreeCloudCover14: Int = 0, dayThreeCloudCover15: Int = 0
 
 // Day Four
-let daysToAddFour = 4
-var newDateFour = Date()
-var dayFourDate = Calendar.current.date(byAdding: .day, value: daysToAddFour, to: newDateFour)
+let dayFourDate = Calendar.current.date(byAdding: .day, value: 4, to: Date())
 // Condition
 var dayFourCondition0: String = "", dayFourCondition1: String = "", dayFourCondition2: String = "", dayFourCondition3: String = "", dayFourCondition4: String = "", dayFourCondition5: String = "", dayFourCondition6: String = "", dayFourCondition7: String = "", dayFourCondition8: String = "", dayFourCondition9: String = "", dayFourCondition10: String = "", dayFourCondition11: String = "", dayFourCondition12: String = "", dayFourCondition13: String = "", dayFourCondition14: String = "", dayFourCondition15: String = ""
 // Precip
@@ -762,9 +754,7 @@ var dayFourWindSpeed0: Int = 0, dayFourWindSpeed1: Int = 0, dayFourWindSpeed2: I
 var dayFourCloudCover0: Int = 0, dayFourCloudCover1: Int = 0, dayFourCloudCover2: Int = 0, dayFourCloudCover3: Int = 0, dayFourCloudCover4: Int = 0, dayFourCloudCover5: Int = 0, dayFourCloudCover6: Int = 0, dayFourCloudCover7: Int = 0, dayFourCloudCover8: Int = 0, dayFourCloudCover9: Int = 0, dayFourCloudCover10: Int = 0, dayFourCloudCover11: Int = 0, dayFourCloudCover12: Int = 0, dayFourCloudCover13: Int = 0, dayFourCloudCover14: Int = 0, dayFourCloudCover15: Int = 0
 
 // Day Five
-let daysToAddFive = 5
-var newDateFive = Date()
-var dayFiveDate = Calendar.current.date(byAdding: .day, value: daysToAddFive, to: newDateFive)
+let dayFiveDate = Calendar.current.date(byAdding: .day, value: 5, to: Date())
 // Condition
 var dayFiveCondition0: String = "", dayFiveCondition1: String = "", dayFiveCondition2: String = "", dayFiveCondition3: String = "", dayFiveCondition4: String = "", dayFiveCondition5: String = "", dayFiveCondition6: String = "", dayFiveCondition7: String = "", dayFiveCondition8: String = "", dayFiveCondition9: String = "", dayFiveCondition10: String = "", dayFiveCondition11: String = "", dayFiveCondition12: String = "", dayFiveCondition13: String = "", dayFiveCondition14: String = "", dayFiveCondition15: String = ""
 // Precip
@@ -783,9 +773,7 @@ var dayFiveWindSpeed0: Int = 0, dayFiveWindSpeed1: Int = 0, dayFiveWindSpeed2: I
 var dayFiveCloudCover0: Int = 0, dayFiveCloudCover1: Int = 0, dayFiveCloudCover2: Int = 0, dayFiveCloudCover3: Int = 0, dayFiveCloudCover4: Int = 0, dayFiveCloudCover5: Int = 0, dayFiveCloudCover6: Int = 0, dayFiveCloudCover7: Int = 0, dayFiveCloudCover8: Int = 0, dayFiveCloudCover9: Int = 0, dayFiveCloudCover10: Int = 0, dayFiveCloudCover11: Int = 0, dayFiveCloudCover12: Int = 0, dayFiveCloudCover13: Int = 0, dayFiveCloudCover14: Int = 0, dayFiveCloudCover15: Int = 0
 
 // Day Six
-let daysToAddSix = 6
-var newDateSix = Date()
-var daySixDate = Calendar.current.date(byAdding: .day, value: daysToAddSix, to: newDateSix)
+let daySixDate = Calendar.current.date(byAdding: .day, value: 6, to: Date())
 // Condition
 var daySixCondition0: String = "", daySixCondition1: String = "", daySixCondition2: String = "", daySixCondition3: String = "", daySixCondition4: String = "", daySixCondition5: String = "", daySixCondition6: String = "", daySixCondition7: String = "", daySixCondition8: String = "", daySixCondition9: String = "", daySixCondition10: String = "", daySixCondition11: String = "", daySixCondition12: String = "", daySixCondition13: String = "", daySixCondition14: String = "", daySixCondition15: String = ""
 // Precip
@@ -804,9 +792,7 @@ var daySixWindSpeed0: Int = 0, daySixWindSpeed1: Int = 0, daySixWindSpeed2: Int 
 var daySixCloudCover0: Int = 0, daySixCloudCover1: Int = 0, daySixCloudCover2: Int = 0, daySixCloudCover3: Int = 0, daySixCloudCover4: Int = 0, daySixCloudCover5: Int = 0, daySixCloudCover6: Int = 0, daySixCloudCover7: Int = 0, daySixCloudCover8: Int = 0, daySixCloudCover9: Int = 0, daySixCloudCover10: Int = 0, daySixCloudCover11: Int = 0, daySixCloudCover12: Int = 0, daySixCloudCover13: Int = 0, daySixCloudCover14: Int = 0, daySixCloudCover15: Int = 0
 
 // Day Seven
-let daysToAddSeven = 7
-var newDateSeven = Date()
-var daySevenDate = Calendar.current.date(byAdding: .day, value: daysToAddSeven, to: newDateSeven)
+let daySevenDate = Calendar.current.date(byAdding: .day, value: 7, to: Date())
 // Condition
 var daySevenCondition0: String = "", daySevenCondition1: String = "", daySevenCondition2: String = "", daySevenCondition3: String = "", daySevenCondition4: String = "", daySevenCondition5: String = "", daySevenCondition6: String = "", daySevenCondition7: String = "", daySevenCondition8: String = "", daySevenCondition9: String = "", daySevenCondition10: String = "", daySevenCondition11: String = "", daySevenCondition12: String = "", daySevenCondition13: String = "", daySevenCondition14: String = "", daySevenCondition15: String = ""
 // Precip
@@ -825,9 +811,7 @@ var daySevenWindSpeed0: Int = 0, daySevenWindSpeed1: Int = 0, daySevenWindSpeed2
 var daySevenCloudCover0: Int = 0, daySevenCloudCover1: Int = 0, daySevenCloudCover2: Int = 0, daySevenCloudCover3: Int = 0, daySevenCloudCover4: Int = 0, daySevenCloudCover5: Int = 0, daySevenCloudCover6: Int = 0, daySevenCloudCover7: Int = 0, daySevenCloudCover8: Int = 0, daySevenCloudCover9: Int = 0, daySevenCloudCover10: Int = 0, daySevenCloudCover11: Int = 0, daySevenCloudCover12: Int = 0, daySevenCloudCover13: Int = 0, daySevenCloudCover14: Int = 0, daySevenCloudCover15: Int = 0
 
 // Day Eight
-let daysToAddEight = 8
-var newDateEight = Date()
-var dayEightDate = Calendar.current.date(byAdding: .day, value: daysToAddEight, to: newDateEight)
+let dayEightDate = Calendar.current.date(byAdding: .day, value: 8, to: Date())
 // Condition
 var dayEightCondition0: String = "", dayEightCondition1: String = "", dayEightCondition2: String = "", dayEightCondition3: String = "", dayEightCondition4: String = "", dayEightCondition5: String = "", dayEightCondition6: String = "", dayEightCondition7: String = "", dayEightCondition8: String = "", dayEightCondition9: String = "", dayEightCondition10: String = "", dayEightCondition11: String = "", dayEightCondition12: String = "", dayEightCondition13: String = "", dayEightCondition14: String = "", dayEightCondition15: String = ""
 // Precip
@@ -846,9 +830,7 @@ var dayEightWindSpeed0: Int = 0, dayEightWindSpeed1: Int = 0, dayEightWindSpeed2
 var dayEightCloudCover0: Int = 0, dayEightCloudCover1: Int = 0, dayEightCloudCover2: Int = 0, dayEightCloudCover3: Int = 0, dayEightCloudCover4: Int = 0, dayEightCloudCover5: Int = 0, dayEightCloudCover6: Int = 0, dayEightCloudCover7: Int = 0, dayEightCloudCover8: Int = 0, dayEightCloudCover9: Int = 0, dayEightCloudCover10: Int = 0, dayEightCloudCover11: Int = 0, dayEightCloudCover12: Int = 0, dayEightCloudCover13: Int = 0, dayEightCloudCover14: Int = 0, dayEightCloudCover15: Int = 0
 
 // Day Nine
-let daysToAddNine = 9
-var newDateNine = Date()
-var dayNineDate = Calendar.current.date(byAdding: .day, value: daysToAddNine, to: newDateNine)
+let dayNineDate = Calendar.current.date(byAdding: .day, value: 9, to: Date())
 // Condition
 var dayNineCondition0: String = "", dayNineCondition1: String = "", dayNineCondition2: String = "", dayNineCondition3: String = "", dayNineCondition4: String = "", dayNineCondition5: String = "", dayNineCondition6: String = "", dayNineCondition7: String = "", dayNineCondition8: String = "", dayNineCondition9: String = "", dayNineCondition10: String = "", dayNineCondition11: String = "", dayNineCondition12: String = "", dayNineCondition13: String = "", dayNineCondition14: String = "", dayNineCondition15: String = ""
 // Precip
@@ -867,9 +849,7 @@ var dayNineWindSpeed0: Int = 0, dayNineWindSpeed1: Int = 0, dayNineWindSpeed2: I
 var dayNineCloudCover0: Int = 0, dayNineCloudCover1: Int = 0, dayNineCloudCover2: Int = 0, dayNineCloudCover3: Int = 0, dayNineCloudCover4: Int = 0, dayNineCloudCover5: Int = 0, dayNineCloudCover6: Int = 0, dayNineCloudCover7: Int = 0, dayNineCloudCover8: Int = 0, dayNineCloudCover9: Int = 0, dayNineCloudCover10: Int = 0, dayNineCloudCover11: Int = 0, dayNineCloudCover12: Int = 0, dayNineCloudCover13: Int = 0, dayNineCloudCover14: Int = 0, dayNineCloudCover15: Int = 0
 
 // Day Ten
-let daysToAddTen = 10
-var newDateTen = Date()
-var dayTenDate = Calendar.current.date(byAdding: .day, value: daysToAddTen, to: newDateTen)
+let dayTenDate = Calendar.current.date(byAdding: .day, value: 9, to: Date())
 // Condition
 var dayTenCondition0: String = "", dayTenCondition1: String = "", dayTenCondition2: String = "", dayTenCondition3: String = "", dayTenCondition4: String = "", dayTenCondition5: String = "", dayTenCondition6: String = "", dayTenCondition7: String = "", dayTenCondition8: String = "", dayTenCondition9: String = "", dayTenCondition10: String = "", dayTenCondition11: String = "", dayTenCondition12: String = "", dayTenCondition13: String = "", dayTenCondition14: String = "", dayTenCondition15: String = ""
 // Precip
@@ -888,9 +868,7 @@ var dayTenWindSpeed0: Int = 0, dayTenWindSpeed1: Int = 0, dayTenWindSpeed2: Int 
 var dayTenCloudCover0: Int = 0, dayTenCloudCover1: Int = 0, dayTenCloudCover2: Int = 0, dayTenCloudCover3: Int = 0, dayTenCloudCover4: Int = 0, dayTenCloudCover5: Int = 0, dayTenCloudCover6: Int = 0, dayTenCloudCover7: Int = 0, dayTenCloudCover8: Int = 0, dayTenCloudCover9: Int = 0, dayTenCloudCover10: Int = 0, dayTenCloudCover11: Int = 0, dayTenCloudCover12: Int = 0, dayTenCloudCover13: Int = 0, dayTenCloudCover14: Int = 0, dayTenCloudCover15: Int = 0
 
 // Day Eleven
-let daysToAddEleven = 11
-var newDateEleven = Date()
-var dayElevenDate = Calendar.current.date(byAdding: .day, value: daysToAddEleven, to: newDateEleven)
+let dayElevenDate = Calendar.current.date(byAdding: .day, value: 11, to: Date())
 // Condition
 var dayElevenCondition0: String = "", dayElevenCondition1: String = "", dayElevenCondition2: String = "", dayElevenCondition3: String = "", dayElevenCondition4: String = "", dayElevenCondition5: String = "", dayElevenCondition6: String = "", dayElevenCondition7: String = "", dayElevenCondition8: String = "", dayElevenCondition9: String = "", dayElevenCondition10: String = "", dayElevenCondition11: String = "", dayElevenCondition12: String = "", dayElevenCondition13: String = "", dayElevenCondition14: String = "", dayElevenCondition15: String = ""
 // Precip
@@ -909,9 +887,7 @@ var dayElevenWindSpeed0: Int = 0, dayElevenWindSpeed1: Int = 0, dayElevenWindSpe
 var dayElevenCloudCover0: Int = 0, dayElevenCloudCover1: Int = 0, dayElevenCloudCover2: Int = 0, dayElevenCloudCover3: Int = 0, dayElevenCloudCover4: Int = 0, dayElevenCloudCover5: Int = 0, dayElevenCloudCover6: Int = 0, dayElevenCloudCover7: Int = 0, dayElevenCloudCover8: Int = 0, dayElevenCloudCover9: Int = 0, dayElevenCloudCover10: Int = 0, dayElevenCloudCover11: Int = 0, dayElevenCloudCover12: Int = 0, dayElevenCloudCover13: Int = 0, dayElevenCloudCover14: Int = 0, dayElevenCloudCover15: Int = 0
 
 // Day Twelve
-let daysToAddTwelve = 12
-var newDateTwelve = Date()
-var dayTwelveDate = Calendar.current.date(byAdding: .day, value: daysToAddTwelve, to: newDateTwelve)
+let dayTwelveDate = Calendar.current.date(byAdding: .day, value: 12, to: Date())
 // Condition
 var dayTwelveCondition0: String = "", dayTwelveCondition1: String = "", dayTwelveCondition2: String = "", dayTwelveCondition3: String = "", dayTwelveCondition4: String = "", dayTwelveCondition5: String = "", dayTwelveCondition6: String = "", dayTwelveCondition7: String = "", dayTwelveCondition8: String = "", dayTwelveCondition9: String = "", dayTwelveCondition10: String = "", dayTwelveCondition11: String = "", dayTwelveCondition12: String = "", dayTwelveCondition13: String = "", dayTwelveCondition14: String = "", dayTwelveCondition15: String = ""
 // Precip
@@ -930,9 +906,7 @@ var dayTwelveWindSpeed0: Int = 0, dayTwelveWindSpeed1: Int = 0, dayTwelveWindSpe
 var dayTwelveCloudCover0: Int = 0, dayTwelveCloudCover1: Int = 0, dayTwelveCloudCover2: Int = 0, dayTwelveCloudCover3: Int = 0, dayTwelveCloudCover4: Int = 0, dayTwelveCloudCover5: Int = 0, dayTwelveCloudCover6: Int = 0, dayTwelveCloudCover7: Int = 0, dayTwelveCloudCover8: Int = 0, dayTwelveCloudCover9: Int = 0, dayTwelveCloudCover10: Int = 0, dayTwelveCloudCover11: Int = 0, dayTwelveCloudCover12: Int = 0, dayTwelveCloudCover13: Int = 0, dayTwelveCloudCover14: Int = 0, dayTwelveCloudCover15: Int = 0
 
 // Day Thirteen
-let daysToAddThirteen = 13
-var newDateThirteen = Date()
-var dayThirteenDate = Calendar.current.date(byAdding: .day, value: daysToAddThirteen, to: newDateThirteen)
+let dayThirteenDate = Calendar.current.date(byAdding: .day, value: 13, to: Date())
 // Condition
 var dayThirteenCondition0: String = "", dayThirteenCondition1: String = "", dayThirteenCondition2: String = "", dayThirteenCondition3: String = "", dayThirteenCondition4: String = "", dayThirteenCondition5: String = "", dayThirteenCondition6: String = "", dayThirteenCondition7: String = "", dayThirteenCondition8: String = "", dayThirteenCondition9: String = "", dayThirteenCondition10: String = "", dayThirteenCondition11: String = "", dayThirteenCondition12: String = "", dayThirteenCondition13: String = "", dayThirteenCondition14: String = "", dayThirteenCondition15: String = ""
 // Precip

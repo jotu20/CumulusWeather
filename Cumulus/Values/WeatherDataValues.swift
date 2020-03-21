@@ -1139,21 +1139,23 @@ func windDirection(degree: Double) -> String {
 
 // MARK: - Get moon phase
 func moonPhase(percentage: Double) -> String {
-    if percentage == 0 {
+    let value = percentage * 100
+    
+    if value == 0 {
         moonPhaseString = "New moon"
-    } else if percentage >= 1 && percentage <= 24 {
+    } else if value >= 1 && value <= 24 {
         moonPhaseString = "Waxing crescent"
-    } else if percentage == 25 {
+    } else if value == 25 {
         moonPhaseString = "First quarter"
-    } else if percentage >= 26 && percentage <= 49  {
+    } else if value >= 26 && value <= 49  {
         moonPhaseString = "Waxing gibbous"
-    } else if percentage == 50 {
+    } else if value == 50 {
         moonPhaseString = "Full moon"
-    } else if percentage >= 51 && percentage <= 74  {
+    } else if value >= 51 && value <= 74  {
         moonPhaseString = "Waning gibbous"
-    } else if percentage == 75 {
+    } else if value == 75 {
         moonPhaseString = "Last quarter"
-    } else if percentage >= 76 && percentage <= 100  {
+    } else if value >= 76 && value <= 100  {
         moonPhaseString = "Waning crescent"
     }
     

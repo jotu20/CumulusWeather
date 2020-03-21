@@ -90,7 +90,7 @@ public func fetchDarkSkyWeatherData() {
                 dayZeroPrecipAccum = dailyPrecipAccum(day: fetchDayZeroArray)
                 dayZeroSunrise = sunFormat(date: fetchDayZeroArray.sunriseTime!)
                 dayZeroSunset = sunFormat(date: fetchDayZeroArray.sunsetTime!)
-                dayZeroMoonPhaseString = moonPhase(percentage: fetchDayZeroArray.moonPhase ?? defaultInteger * 100)
+                dayZeroMoonPhaseString = moonPhase(percentage: fetchDayZeroArray.moonPhase ?? defaultInteger + 0.5)
             }
             
             // Get minutely data through 60 minutes

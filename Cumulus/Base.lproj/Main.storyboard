@@ -15363,7 +15363,6 @@
                         <outlet property="currentConditionStackViewWidth" destination="rlu-bD-NUf" id="fSd-ld-iIV"/>
                         <outlet property="currentConditonLabel" destination="80a-MK-d8y" id="5gD-yJ-3YH"/>
                         <outlet property="currentTemperatureLabel" destination="fn6-Ba-oDX" id="eLZ-fE-xJS"/>
-                        <outlet property="dailyStackViewBottom" destination="qb3-gq-cXW" id="V3L-ki-UbK"/>
                         <outlet property="dayEightBarWidth" destination="oio-Db-cko" id="TDO-L2-oBN"/>
                         <outlet property="dayEightCondition" destination="GZu-qk-Sdf" id="nCs-2P-NEM"/>
                         <outlet property="dayEightDay" destination="eDi-Vv-58c" id="B5n-vq-Njx"/>

@@ -1010,7 +1010,6 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, UITabB
     // MARK: - General constraints
     @IBOutlet weak var daysStackViewWidth: NSLayoutConstraint!
     @IBOutlet weak var nextDaysLabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var dailyStackViewBottom: NSLayoutConstraint!
     @IBOutlet weak var weatherAlertWidth: NSLayoutConstraint!
     
     @IBOutlet weak var dayZeroHighLowWidth: NSLayoutConstraint!
@@ -1135,37 +1134,6 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, UITabB
         defaults.set((defaults.integer(forKey: "userViewedCounter") + 1), forKey: "userViewedCounter")
         if defaults.integer(forKey: "userViewedCounter") == 10 {
             SKStoreReviewController.requestReview()
-        }
-        
-        let screenSize = UIScreen.main.bounds
-        let screenHeight = screenSize.height
-        if screenHeight == 568 {
-            // iPhone SE
-            dailyStackViewBottom.constant = 25
-        } else if screenHeight == 667 {
-            // iPhone 8
-            dailyStackViewBottom.constant = 25
-        } else if screenHeight == 736 {
-            // iPhone Plus
-            dailyStackViewBottom.constant = 95
-        } else if screenHeight == 812 {
-            // iPhone XS
-            dailyStackViewBottom.constant = 110
-        } else if screenHeight == 896 {
-            // iPhone XR & XS Max
-            dailyStackViewBottom.constant = 195
-        } else if screenHeight == 1024 {
-            // iPad 9.7"
-            dailyStackViewBottom.constant = 275
-        } else if screenHeight == 1112 {
-            // iPad 10.5"
-            dailyStackViewBottom.constant = 360
-        } else if screenHeight == 1194 {
-            // iPad 11"
-            dailyStackViewBottom.constant = 430
-        } else if screenHeight == 1366 {
-            // iPad 12.9"
-            dailyStackViewBottom.constant = 600
         }
         
         // Setup for pull to refresh

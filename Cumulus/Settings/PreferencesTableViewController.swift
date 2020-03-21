@@ -23,7 +23,6 @@ class PreferencesTableViewController: UITableViewController,  UITextFieldDelegat
     @IBOutlet var colorThemeGesture: UITapGestureRecognizer!
     @IBOutlet var siriShortcutsGesture: UITapGestureRecognizer!
     @IBOutlet weak var twentyfourHourClockSwitch: UISwitch!
-    @IBOutlet weak var distanceValueTextField: UITextField!
     
     @IBOutlet weak var defaultHourlyConditionTextField: UITextField!
     @IBOutlet weak var defaultDailyConditionTextField: UITextField!
@@ -41,7 +40,6 @@ class PreferencesTableViewController: UITableViewController,  UITextFieldDelegat
     @IBOutlet weak var defaultWidgetSlot2Width: NSLayoutConstraint!
     @IBOutlet weak var dataSourceWidth: NSLayoutConstraint!
     
-    @IBOutlet weak var distanceValueWidth: NSLayoutConstraint!
     @IBOutlet weak var defaultHourlyConditionValueWidth: NSLayoutConstraint!
     @IBOutlet weak var defaultDailyConditionValueWidth: NSLayoutConstraint!
     @IBOutlet weak var defaultWidgetSlot1ValueWidth: NSLayoutConstraint!
@@ -143,7 +141,6 @@ class PreferencesTableViewController: UITableViewController,  UITextFieldDelegat
             defaultWidgetSlot2Width.constant = 200
             dataSourceWidth.constant = 200
             
-            distanceValueWidth.constant = 40
             defaultHourlyConditionValueWidth.constant = 40
             defaultDailyConditionValueWidth.constant = 40
             defaultWidgetSlot1ValueWidth.constant = 40
@@ -191,21 +188,6 @@ class PreferencesTableViewController: UITableViewController,  UITextFieldDelegat
         } else {
             twentyfourHourClockSwitch.isOn = false
             defaults.set(false, forKey: "twentyFourHourClockEnabled")
-        }
-    }
-    
-    @IBAction func distanceValueTapped(_ sender: UITextField) {
-        weatherLoaded = false
-        distanceChange = true
-        
-        // If empty revert to 0
-        if distanceValueTextField.text == "" {
-            distanceValueTextField.text = "0"
-        }
-        
-        // If character count is greater than 3 revert to 100
-        if (distanceValueTextField.text?.count)! >= 3 {
-            distanceValueTextField.text = "100"
         }
     }
     

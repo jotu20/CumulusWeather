@@ -240,7 +240,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         }
         fetchDarkSkyWeatherData()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             self.setWidgetLabels()
             self.updateResult = .newData
         }
@@ -252,7 +252,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         universalSettings()
         fetchDarkSkyWeatherData()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             self.setWidgetLabels()
             self.updateResult = .newData
         }

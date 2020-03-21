@@ -528,7 +528,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {

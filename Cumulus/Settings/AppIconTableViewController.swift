@@ -32,7 +32,6 @@ class AppIconTableViewController: UITableViewController {
     @IBOutlet weak var cloudyDayTableCell: UITableViewCell!
     @IBOutlet weak var rainDropTableCell: UITableViewCell!
     @IBOutlet weak var locationTableCell: UITableViewCell!
-    @IBOutlet weak var radarTableCell: UITableViewCell!
     @IBOutlet weak var goldenTableCell: UITableViewCell!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,8 +84,6 @@ class AppIconTableViewController: UITableViewController {
             setSelectedCheckMark(layerString: "Rain Drop", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Location" {
             setSelectedCheckMark(layerString: "Location", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Radar" {
-            setSelectedCheckMark(layerString: "Radar", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Golden" {
             setSelectedCheckMark(layerString: "Golden", setIcon: false)
         } else {
@@ -340,17 +337,6 @@ class AppIconTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func radarTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
-            defaults.set("Radar", forKey: "userSavedAppIconString")
-            setSelectedCheckMark(layerString: "Radar", setIcon: true)
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
-            present(controller, animated: true, completion: nil)
-        }
-    }
-    
     @IBAction func goldenTapped(_ sender: UITapGestureRecognizer) {
         if (defaults.bool(forKey: "cumulusPro") == true) {
             defaults.set("Golden", forKey: "userSavedAppIconString")
@@ -390,7 +376,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -429,7 +414,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -468,7 +452,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -507,7 +490,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -585,7 +567,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -624,7 +605,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -663,7 +643,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -702,7 +681,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -741,7 +719,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -780,7 +757,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -819,7 +795,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -858,7 +833,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -897,7 +871,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -936,7 +909,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -975,7 +947,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -1014,7 +985,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -1053,7 +1023,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -1092,7 +1061,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -1131,7 +1099,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .checkmark
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -1170,7 +1137,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .checkmark
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
@@ -1209,50 +1175,10 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .checkmark
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .none
             
             if setIcon == true {
                 UIApplication.shared.setAlternateIconName("AppIcon-Location") { error in
-                    if let error = error {
-                        print(error.localizedDescription)
-                    } else {
-                        print("Success! Icon has been changed")
-                    }
-                }
-            }
-        }
-        
-        if layerString == "Radar" {
-            setTableViewCellColor(tableCell: radarTableCell)
-            
-            tuscanTableCell.accessoryType = .none
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .none
-            maximumRedTableCell.accessoryType = .none
-            dodgerBlueTableCell.accessoryType = .none
-            cottonCandyTableCell.accessoryType = .none
-            plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .none
-            carminePinkTableCell.accessoryType = .none
-            iguanaGreenTableCell.accessoryType = .none
-            darkCeruleanTableCell.accessoryType = .none
-            lightsOutTableCell.accessoryType = .none
-            twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .none
-            mightyUmbrellaTableCell.accessoryType = .none
-            eightBitTableCell.accessoryType = .none
-            thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .none
-            rainDropTableCell.accessoryType = .none
-            locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .checkmark
-            goldenTableCell.accessoryType = .none
-            
-            if setIcon == true {
-                UIApplication.shared.setAlternateIconName("AppIcon-Radar") { error in
                     if let error = error {
                         print(error.localizedDescription)
                     } else {
@@ -1287,7 +1213,6 @@ class AppIconTableViewController: UITableViewController {
             cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
             locationTableCell.accessoryType = .none
-            radarTableCell.accessoryType = .none
             goldenTableCell.accessoryType = .checkmark
             
             if setIcon == true {

@@ -3641,7 +3641,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, UITabB
         self.navigationController?.view.addSubview(loadView)
         self.setupInitialLoad()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             loadView.removeFromSuperview()
             self.setWeatherDataLabels()
         }

@@ -68,7 +68,6 @@ public func fetchDarkSkyWeatherData() {
             }
             
             if let daily = currentForecast.daily {
-                // Day Zero
                 let dayZeroArray = daily.data[0]
                 let fetchDayZeroArray = dayZeroArray
                 
@@ -635,7 +634,6 @@ public func fetchDarkSkyWeatherData() {
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
-            // Day One
             let dayOneArray = daily.data[0]
             let fetchDayOneArray = dayOneArray
             
@@ -794,7 +792,6 @@ public func fetchDarkSkyWeatherData() {
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
-            // Day Two
             let dayTwoArray = daily.data[0]
             let fetchDayTwoArray = dayTwoArray
             
@@ -953,7 +950,6 @@ public func fetchDarkSkyWeatherData() {
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
-            // Day Three
             let dayThreeArray = daily.data[0]
             let fetchDayThreeArray = dayThreeArray
             
@@ -1112,7 +1108,6 @@ public func fetchDarkSkyWeatherData() {
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
-            // Day Four
             let dayFourArray = daily.data[0]
             let fetchDayFourArray = dayFourArray
             
@@ -1271,7 +1266,6 @@ public func fetchDarkSkyWeatherData() {
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
-            // Day Five
             let dayFiveArray = daily.data[0]
             let fetchDayFiveArray = dayFiveArray
             
@@ -1430,7 +1424,6 @@ public func fetchDarkSkyWeatherData() {
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
-            // Day Six
             let daySixArray = daily.data[0]
             let fetchDaySixArray = daySixArray
             
@@ -1589,7 +1582,6 @@ public func fetchDarkSkyWeatherData() {
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
-            // Day Seven
             let daySevenArray = daily.data[0]
             let fetchDaySevenArray = daySevenArray
             
@@ -1748,7 +1740,6 @@ public func fetchDarkSkyWeatherData() {
         TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
 
         if let daily = forecast.daily {
-            // Day Eight
             let dayEightArray = daily.data[0]
             let fetchDayEightArray = dayEightArray
 
@@ -1907,7 +1898,6 @@ public func fetchDarkSkyWeatherData() {
         TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
 
         if let daily = forecast.daily {
-            // Day Eight
             let dayNineArray = daily.data[0]
             let fetchDayNineArray = dayNineArray
 
@@ -2066,7 +2056,6 @@ public func fetchDarkSkyWeatherData() {
         TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
         
         if let daily = forecast.daily {
-            // Day Ten
             let dayTenArray = daily.data[0]
             let fetchDayTenArray = dayTenArray
 
@@ -2225,7 +2214,6 @@ public func fetchDarkSkyWeatherData() {
         TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
         
         if let daily = forecast.daily {
-            // Day Eleven
             let dayElevenArray = daily.data[0]
             let fetchDayElevenArray = dayElevenArray
 
@@ -2384,7 +2372,6 @@ public func fetchDarkSkyWeatherData() {
         TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
         
         if let daily = forecast.daily {
-            // Day Twelve
             let dayTwelveArray = daily.data[0]
             let fetchDayTwelveArray = dayTwelveArray
 
@@ -2542,7 +2529,6 @@ public func fetchDarkSkyWeatherData() {
         TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
         
         if let daily = forecast.daily {
-            // Day Thirteen
             let dayThirteenArray = daily.data[0]
             let fetchDayThirteenArray = dayThirteenArray
 

@@ -679,7 +679,7 @@ var dayZeroCloudCover0: Int = 0, dayZeroCloudCover1: Int = 0, dayZeroCloudCover2
 
 // Day One
 let daysToAddOne = 1
-var newDateOne = Calendar.current.date(byAdding: .month, value: daysToAddOne, to: Date())
+var newDateOne = Calendar.current.date(byAdding: .day, value: daysToAddOne, to: Date())
 var dayOneDate = Calendar.current.date(byAdding: .day, value: daysToAddOne, to: newDateOne!)
 // Condition
 var dayOneCondition0: String = "", dayOneCondition1: String = "", dayOneCondition2: String = "", dayOneCondition3: String = "", dayOneCondition4: String = "", dayOneCondition5: String = "", dayOneCondition6: String = "", dayOneCondition7: String = "", dayOneCondition8: String = "", dayOneCondition9: String = "", dayOneCondition10: String = "", dayOneCondition11: String = "", dayOneCondition12: String = "", dayOneCondition13: String = "", dayOneCondition14: String = "", dayOneCondition15: String = ""
@@ -700,7 +700,7 @@ var dayOneCloudCover0: Int = 0, dayOneCloudCover1: Int = 0, dayOneCloudCover2: I
 
 // Day Two
 let daysToAddTwo = 2
-var newDateTwo = Calendar.current.date(byAdding: .month, value: daysToAddTwo, to: Date())
+var newDateTwo = Calendar.current.date(byAdding: .day, value: daysToAddTwo, to: Date())
 var dayTwoDate = Calendar.current.date(byAdding: .day, value: daysToAddTwo, to: newDateTwo!)
 // Condition
 var dayTwoCondition0: String = "", dayTwoCondition1: String = "", dayTwoCondition2: String = "", dayTwoCondition3: String = "", dayTwoCondition4: String = "", dayTwoCondition5: String = "", dayTwoCondition6: String = "", dayTwoCondition7: String = "", dayTwoCondition8: String = "", dayTwoCondition9: String = "", dayTwoCondition10: String = "", dayTwoCondition11: String = "", dayTwoCondition12: String = "", dayTwoCondition13: String = "", dayTwoCondition14: String = "", dayTwoCondition15: String = ""
@@ -721,7 +721,7 @@ var dayTwoCloudCover0: Int = 0, dayTwoCloudCover1: Int = 0, dayTwoCloudCover2: I
 
 // Day Three
 let daysToAddThree = 3
-var newDateThree = Calendar.current.date(byAdding: .month, value: daysToAddThree, to: Date())
+var newDateThree = Calendar.current.date(byAdding: .day, value: daysToAddThree, to: Date())
 var dayThreeDate = Calendar.current.date(byAdding: .day, value: daysToAddThree, to: newDateThree!)
 // Condition
 var dayThreeCondition0: String = "", dayThreeCondition1: String = "", dayThreeCondition2: String = "", dayThreeCondition3: String = "", dayThreeCondition4: String = "", dayThreeCondition5: String = "", dayThreeCondition6: String = "", dayThreeCondition7: String = "", dayThreeCondition8: String = "", dayThreeCondition9: String = "", dayThreeCondition10: String = "", dayThreeCondition11: String = "", dayThreeCondition12: String = "", dayThreeCondition13: String = "", dayThreeCondition14: String = "", dayThreeCondition15: String = ""
@@ -742,7 +742,7 @@ var dayThreeCloudCover0: Int = 0, dayThreeCloudCover1: Int = 0, dayThreeCloudCov
 
 // Day Four
 let daysToAddFour = 4
-var newDateFour = Calendar.current.date(byAdding: .month, value: daysToAddFour, to: Date())
+var newDateFour = Calendar.current.date(byAdding: .day, value: daysToAddFour, to: Date())
 var dayFourDate = Calendar.current.date(byAdding: .day, value: daysToAddFour, to: newDateFour!)
 // Condition
 var dayFourCondition0: String = "", dayFourCondition1: String = "", dayFourCondition2: String = "", dayFourCondition3: String = "", dayFourCondition4: String = "", dayFourCondition5: String = "", dayFourCondition6: String = "", dayFourCondition7: String = "", dayFourCondition8: String = "", dayFourCondition9: String = "", dayFourCondition10: String = "", dayFourCondition11: String = "", dayFourCondition12: String = "", dayFourCondition13: String = "", dayFourCondition14: String = "", dayFourCondition15: String = ""
@@ -763,7 +763,7 @@ var dayFourCloudCover0: Int = 0, dayFourCloudCover1: Int = 0, dayFourCloudCover2
 
 // Day Five
 let daysToAddFive = 5
-var newDateFive = Calendar.current.date(byAdding: .month, value: daysToAddFive, to: Date())
+var newDateFive = Calendar.current.date(byAdding: .day, value: daysToAddFive, to: Date())
 var dayFiveDate = Calendar.current.date(byAdding: .day, value: daysToAddFive, to: newDateFive!)
 // Condition
 var dayFiveCondition0: String = "", dayFiveCondition1: String = "", dayFiveCondition2: String = "", dayFiveCondition3: String = "", dayFiveCondition4: String = "", dayFiveCondition5: String = "", dayFiveCondition6: String = "", dayFiveCondition7: String = "", dayFiveCondition8: String = "", dayFiveCondition9: String = "", dayFiveCondition10: String = "", dayFiveCondition11: String = "", dayFiveCondition12: String = "", dayFiveCondition13: String = "", dayFiveCondition14: String = "", dayFiveCondition15: String = ""
@@ -784,7 +784,7 @@ var dayFiveCloudCover0: Int = 0, dayFiveCloudCover1: Int = 0, dayFiveCloudCover2
 
 // Day Six
 let daysToAddSix = 6
-var newDateSix = Calendar.current.date(byAdding: .month, value: daysToAddSix, to: Date())
+var newDateSix = Calendar.current.date(byAdding: .day, value: daysToAddSix, to: Date())
 var daySixDate = Calendar.current.date(byAdding: .day, value: daysToAddSix, to: newDateSix!)
 // Condition
 var daySixCondition0: String = "", daySixCondition1: String = "", daySixCondition2: String = "", daySixCondition3: String = "", daySixCondition4: String = "", daySixCondition5: String = "", daySixCondition6: String = "", daySixCondition7: String = "", daySixCondition8: String = "", daySixCondition9: String = "", daySixCondition10: String = "", daySixCondition11: String = "", daySixCondition12: String = "", daySixCondition13: String = "", daySixCondition14: String = "", daySixCondition15: String = ""
@@ -805,7 +805,7 @@ var daySixCloudCover0: Int = 0, daySixCloudCover1: Int = 0, daySixCloudCover2: I
 
 // Day Seven
 let daysToAddSeven = 7
-var newDateSeven = Calendar.current.date(byAdding: .month, value: daysToAddSeven, to: Date())
+var newDateSeven = Calendar.current.date(byAdding: .day, value: daysToAddSeven, to: Date())
 var daySevenDate = Calendar.current.date(byAdding: .day, value: daysToAddSeven, to: newDateSeven!)
 // Condition
 var daySevenCondition0: String = "", daySevenCondition1: String = "", daySevenCondition2: String = "", daySevenCondition3: String = "", daySevenCondition4: String = "", daySevenCondition5: String = "", daySevenCondition6: String = "", daySevenCondition7: String = "", daySevenCondition8: String = "", daySevenCondition9: String = "", daySevenCondition10: String = "", daySevenCondition11: String = "", daySevenCondition12: String = "", daySevenCondition13: String = "", daySevenCondition14: String = "", daySevenCondition15: String = ""
@@ -826,7 +826,7 @@ var daySevenCloudCover0: Int = 0, daySevenCloudCover1: Int = 0, daySevenCloudCov
 
 // Day Eight
 let daysToAddEight = 8
-var newDateEight = Calendar.current.date(byAdding: .month, value: daysToAddEight, to: Date())
+var newDateEight = Calendar.current.date(byAdding: .day, value: daysToAddEight, to: Date())
 var dayEightDate = Calendar.current.date(byAdding: .day, value: daysToAddEight, to: newDateEight!)
 // Condition
 var dayEightCondition0: String = "", dayEightCondition1: String = "", dayEightCondition2: String = "", dayEightCondition3: String = "", dayEightCondition4: String = "", dayEightCondition5: String = "", dayEightCondition6: String = "", dayEightCondition7: String = "", dayEightCondition8: String = "", dayEightCondition9: String = "", dayEightCondition10: String = "", dayEightCondition11: String = "", dayEightCondition12: String = "", dayEightCondition13: String = "", dayEightCondition14: String = "", dayEightCondition15: String = ""
@@ -847,7 +847,7 @@ var dayEightCloudCover0: Int = 0, dayEightCloudCover1: Int = 0, dayEightCloudCov
 
 // Day Nine
 let daysToAddNine = 9
-var newDateNine = Calendar.current.date(byAdding: .month, value: daysToAddNine, to: Date())
+var newDateNine = Calendar.current.date(byAdding: .day, value: daysToAddNine, to: Date())
 var dayNineDate = Calendar.current.date(byAdding: .day, value: daysToAddNine, to: newDateNine!)
 // Condition
 var dayNineCondition0: String = "", dayNineCondition1: String = "", dayNineCondition2: String = "", dayNineCondition3: String = "", dayNineCondition4: String = "", dayNineCondition5: String = "", dayNineCondition6: String = "", dayNineCondition7: String = "", dayNineCondition8: String = "", dayNineCondition9: String = "", dayNineCondition10: String = "", dayNineCondition11: String = "", dayNineCondition12: String = "", dayNineCondition13: String = "", dayNineCondition14: String = "", dayNineCondition15: String = ""
@@ -868,7 +868,7 @@ var dayNineCloudCover0: Int = 0, dayNineCloudCover1: Int = 0, dayNineCloudCover2
 
 // Day Ten
 let daysToAddTen = 10
-var newDateTen = Calendar.current.date(byAdding: .month, value: daysToAddTen, to: Date())
+var newDateTen = Calendar.current.date(byAdding: .day, value: daysToAddTen, to: Date())
 var dayTenDate = Calendar.current.date(byAdding: .day, value: daysToAddTen, to: newDateTen!)
 // Condition
 var dayTenCondition0: String = "", dayTenCondition1: String = "", dayTenCondition2: String = "", dayTenCondition3: String = "", dayTenCondition4: String = "", dayTenCondition5: String = "", dayTenCondition6: String = "", dayTenCondition7: String = "", dayTenCondition8: String = "", dayTenCondition9: String = "", dayTenCondition10: String = "", dayTenCondition11: String = "", dayTenCondition12: String = "", dayTenCondition13: String = "", dayTenCondition14: String = "", dayTenCondition15: String = ""
@@ -889,7 +889,7 @@ var dayTenCloudCover0: Int = 0, dayTenCloudCover1: Int = 0, dayTenCloudCover2: I
 
 // Day Eleven
 let daysToAddEleven = 11
-var newDateEleven = Calendar.current.date(byAdding: .month, value: daysToAddEleven, to: Date())
+var newDateEleven = Calendar.current.date(byAdding: .day, value: daysToAddEleven, to: Date())
 var dayElevenDate = Calendar.current.date(byAdding: .day, value: daysToAddEleven, to: newDateEleven!)
 // Condition
 var dayElevenCondition0: String = "", dayElevenCondition1: String = "", dayElevenCondition2: String = "", dayElevenCondition3: String = "", dayElevenCondition4: String = "", dayElevenCondition5: String = "", dayElevenCondition6: String = "", dayElevenCondition7: String = "", dayElevenCondition8: String = "", dayElevenCondition9: String = "", dayElevenCondition10: String = "", dayElevenCondition11: String = "", dayElevenCondition12: String = "", dayElevenCondition13: String = "", dayElevenCondition14: String = "", dayElevenCondition15: String = ""
@@ -910,7 +910,7 @@ var dayElevenCloudCover0: Int = 0, dayElevenCloudCover1: Int = 0, dayElevenCloud
 
 // Day Twelve
 let daysToAddTwelve = 12
-var newDateTwelve = Calendar.current.date(byAdding: .month, value: daysToAddTwelve, to: Date())
+var newDateTwelve = Calendar.current.date(byAdding: .day, value: daysToAddTwelve, to: Date())
 var dayTwelveDate = Calendar.current.date(byAdding: .day, value: daysToAddTwelve, to: newDateTwelve!)
 // Condition
 var dayTwelveCondition0: String = "", dayTwelveCondition1: String = "", dayTwelveCondition2: String = "", dayTwelveCondition3: String = "", dayTwelveCondition4: String = "", dayTwelveCondition5: String = "", dayTwelveCondition6: String = "", dayTwelveCondition7: String = "", dayTwelveCondition8: String = "", dayTwelveCondition9: String = "", dayTwelveCondition10: String = "", dayTwelveCondition11: String = "", dayTwelveCondition12: String = "", dayTwelveCondition13: String = "", dayTwelveCondition14: String = "", dayTwelveCondition15: String = ""
@@ -931,7 +931,7 @@ var dayTwelveCloudCover0: Int = 0, dayTwelveCloudCover1: Int = 0, dayTwelveCloud
 
 // Day Thirteen
 let daysToAddThirteen = 13
-var newDateThirteen = Calendar.current.date(byAdding: .month, value: daysToAddThirteen, to: Date())
+var newDateThirteen = Calendar.current.date(byAdding: .day, value: daysToAddThirteen, to: Date())
 var dayThirteenDate = Calendar.current.date(byAdding: .day, value: daysToAddThirteen, to: newDateThirteen!)
 // Condition
 var dayThirteenCondition0: String = "", dayThirteenCondition1: String = "", dayThirteenCondition2: String = "", dayThirteenCondition3: String = "", dayThirteenCondition4: String = "", dayThirteenCondition5: String = "", dayThirteenCondition6: String = "", dayThirteenCondition7: String = "", dayThirteenCondition8: String = "", dayThirteenCondition9: String = "", dayThirteenCondition10: String = "", dayThirteenCondition11: String = "", dayThirteenCondition12: String = "", dayThirteenCondition13: String = "", dayThirteenCondition14: String = "", dayThirteenCondition15: String = ""

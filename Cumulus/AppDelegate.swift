@@ -10,11 +10,9 @@ import UIKit
 import CoreData
 import GooglePlaces
 import SwiftyStoreKit
-import CoreLocation
-import ForecastIO
  
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
 

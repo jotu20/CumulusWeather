@@ -186,9 +186,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         super.viewDidLoad()
         self.extensionContext?.widgetLargestAvailableDisplayMode = NCWidgetDisplayMode.expanded
         locationManager.delegate = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        
         if CLLocationManager.locationServicesEnabled() {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()

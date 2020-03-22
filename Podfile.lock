@@ -1,13 +1,4 @@
 PODS:
-  - AerisWeather (3.1.7):
-    - AerisWeather/Data (= 3.1.7)
-  - AerisWeather/Core (3.1.7)
-  - AerisWeather/CoreUI (3.1.7):
-    - AerisWeather/Core
-  - AerisWeather/Data (3.1.7):
-    - AerisWeather/CoreUI
-  - AerisWeather/Maps (3.1.7):
-    - AerisWeather/Data
   - ForecastIO (8.0.0)
   - GoogleMaps/Base (3.5.0)
   - GooglePlaces (3.5.0):
@@ -15,27 +6,23 @@ PODS:
   - SwiftyStoreKit (0.15.0)
 
 DEPENDENCIES:
-  - AerisWeather (= 3.1.7)
-  - AerisWeather/Maps
   - ForecastIO (= 8.0.0)
   - GooglePlaces (= 3.5.0)
   - SwiftyStoreKit
 
 SPEC REPOS:
   trunk:
-    - AerisWeather
     - ForecastIO
     - GoogleMaps
     - GooglePlaces
     - SwiftyStoreKit
 
 SPEC CHECKSUMS:
-  AerisWeather: f37d5fa6fccd79bd5d6b2b12d7755278ba646bfc
   ForecastIO: 68f8231be20748446036263a438cc449886a65ca
   GoogleMaps: 32ca02de09de357a10ac773f2c70f1986751392d
   GooglePlaces: be6f19fe8aa6ff0b5bcccfa1b8805cc977ea1450
   SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
 
-PODFILE CHECKSUM: 41bb76a0099af3054ee36ea666c8d26b993029ce
+PODFILE CHECKSUM: 0a868dc2a73e7d1958f4b05d744d0daacc157f9d
 
 COCOAPODS: 1.8.4

@@ -14,7 +14,7 @@ import Intents
 import StoreKit
 import ForecastIO
 
-class WeatherViewController: UIViewController, CLLocationManagerDelegate, UITabBarControllerDelegate {
+class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLocationManagerDelegate {
     
     @IBOutlet var homeView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -1098,18 +1098,14 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, UITabB
     @IBOutlet weak var currentCondition10LabelWidth: NSLayoutConstraint!
     
     override func viewDidLoad() {
-        locationManager.delegate = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.delegate = self
+        locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
-        setupInitialData()
         setupInitialLoad()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
@@ -1118,6 +1114,14 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, UITabB
             }
         }
         
+        // If user has viewed 10 times request review
+        defaults.set((defaults.integer(forKey: "userViewedCounter") + 1), forKey: "userViewedCounter")
+        if defaults.integer(forKey: "userViewedCounter") == 10 {
+            SKStoreReviewController.requestReview()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         // Check for loaded weather, distance change, or color theme change
         if weatherLoaded == false || distanceChange == true || dataSourceChanged == true {
             loadingScreen()
@@ -1130,18 +1134,145 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, UITabB
             clockChanged = false
         }
         
-        // If user has viewed 10 times request review
-        defaults.set((defaults.integer(forKey: "userViewedCounter") + 1), forKey: "userViewedCounter")
-        if defaults.integer(forKey: "userViewedCounter") == 10 {
-            SKStoreReviewController.requestReview()
-        }
-        
         // Setup for pull to refresh
         scrollView.alwaysBounceVertical = true
         scrollView.bounces  = true
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
         self.scrollView.addSubview(refreshControl)
+    }
+    
+    // MARK: - Get location and weather data
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        defaults.set(false, forKey: "userDeniedLocation")
+        if userSelectedSavedLocation == true {
+            let address = "\(selectedLocation)"
+            let geoCoder = CLGeocoder()
+            geoCoder.geocodeAddressString(address) { (placemarks, error) in
+                guard
+                    let placemarks = placemarks,
+                    let location = placemarks.first?.location
+                    else {
+                        // handle no location found
+                        return
+                }
+                selectedLatitudeValue = location.coordinate.latitude
+                selectedLongitudeValue = location.coordinate.longitude
+                latitudeValue = location.coordinate.latitude
+                longitudeValue = location.coordinate.longitude
+
+                self.navigationController?.navigationBar.topItem?.title = "\(selectedLocation)"
+                self.setupInitialData()
+            }
+        } else {
+            geocode(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!) { placemark, error in
+                guard let placemark = placemark, error == nil else { return }
+                
+                latitudeValue = (manager.location?.coordinate.latitude)!
+                longitudeValue = (manager.location?.coordinate.longitude)!
+                
+                if defaults.bool(forKey: "weatherUnitsUSA") == false && defaults.bool(forKey: "weatherUnitsUK") == false && defaults.bool(forKey: "weatherUnitsCanada") == false && defaults.bool(forKey: "weatherUnitsInternational") == false {
+                    if placemark.country! == "United States" {
+                        defaults.set(true, forKey: "weatherUnitsUSA")
+                    } else if placemark.country! == "Canada" {
+                        defaults.set(true, forKey: "weatherUnitsCanada")
+                    } else if placemark.country! == "United Kingdom" {
+                        defaults.set(true, forKey: "weatherUnitsUK")
+                    } else {
+                        defaults.set(true, forKey: "weatherUnitsInternational")
+                    }
+                }
+                
+                if placemark.country! == "United States" {
+                    city = placemark.locality!
+                    state = placemark.administrativeArea!
+                    self.navigationController?.navigationBar.topItem?.title = "\(city), \(state)"
+                    userCurrentLocation = "\(city), \(state)"
+                } else {
+                    city = placemark.administrativeArea!
+                    state = placemark.country!
+                    self.navigationController?.navigationBar.topItem?.title = "\(city), \(state)"
+                    userCurrentLocation = "\(city), \(state)"
+                }
+                self.setupInitialData()
+            }
+        }
+    }
+    
+    // MARK: - Show error when location cannot be found
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Failed to find user's location: \(error.localizedDescription)")
+        defaults.set(true, forKey: "userDeniedLocation")
+        setupDeniedLocation()
+    }
+    
+    // MARK: - Fetch user location if denied location access
+    func setupDeniedLocation() {
+        placesClient = GMSPlacesClient.shared()
+        
+        if (defaults.bool(forKey: "userDeniedLocation") == true) {
+            let address = "\(defaults.string(forKey: "savedSelectedLocation") ?? "New York, NY")"
+            let geoCoder = CLGeocoder()
+            geoCoder.geocodeAddressString(address) { (placemarks, error) in
+                guard
+                    let placemarks = placemarks,
+                    let location = placemarks.first?.location
+                    else {
+                        // handle no location found
+                        return
+                }
+                selectedLatitudeValue = location.coordinate.latitude
+                selectedLongitudeValue = location.coordinate.longitude
+                latitudeValue = location.coordinate.latitude
+                longitudeValue = location.coordinate.longitude
+                defaults.set(selectedLatitudeValue, forKey: "savedSelectedLatitudeValue")
+                defaults.set(selectedLongitudeValue, forKey: "savedSelectedLongitudeValue")
+                UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(selectedLatitudeValue, forKey: "setWidgetLatitude")
+                UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(selectedLongitudeValue, forKey: "setWidgetLongitude")
+                
+                self.navigationController?.navigationBar.topItem?.title = "\(defaults.string(forKey: "savedSelectedLocation") ?? "New York, NY")"
+                self.setupInitialData()
+            }
+            setWeatherDataLabels()
+        }
+    }
+    
+    // MARK: - Setup loading screen view
+    func loadingScreen() {
+        var loadFrame : CGRect = CGRect(x: 0, y: 0, width: 815, height: 815)
+        let screenSize = UIScreen.main.bounds
+        let screenHeight = screenSize.height
+        if screenHeight >= 812 {
+            loadFrame = CGRect(x: 0, y: 0, width: 2000, height: 2000)
+        } else {
+            loadFrame = CGRect(x: 0, y: 0, width: 815, height: 815)
+        }
+        
+        let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = .medium
+        activityIndicator.startAnimating()
+        
+        let backgroundColor = UIColor(named: "customControlColor")
+        let loadView : UIView = UIView(frame: loadFrame)
+        loadView.backgroundColor = backgroundColor
+        loadView.alpha = 1.0
+        loadView.addSubview(activityIndicator)
+        self.navigationController?.view.addSubview(loadView)
+        self.setupInitialLoad()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            loadView.removeFromSuperview()
+            self.setWeatherDataLabels()
+        }
+    }
+
+    func showLocationDisabledPopUp() {
+        defaults.set(true, forKey: "userDeniedLocation")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Locations")
+        present(controller, animated: true, completion: nil)
     }
     
     // MARK: - Action to scroll to top
@@ -3487,139 +3618,6 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, UITabB
         } else {
             weatherAlertsButton.isHidden = true
         }
-    }
-    
-    // MARK: - Get location and weather data
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        defaults.set(false, forKey: "userDeniedLocation")
-        if userSelectedSavedLocation == true {
-            let address = "\(selectedLocation)"
-            let geoCoder = CLGeocoder()
-            geoCoder.geocodeAddressString(address) { (placemarks, error) in
-                guard
-                    let placemarks = placemarks,
-                    let location = placemarks.first?.location
-                    else {
-                        // handle no location found
-                        return
-                }
-                selectedLatitudeValue = location.coordinate.latitude
-                selectedLongitudeValue = location.coordinate.longitude
-                latitudeValue = location.coordinate.latitude
-                longitudeValue = location.coordinate.longitude
-
-                self.navigationController?.navigationBar.topItem?.title = "\(selectedLocation)"
-                self.setupInitialData()
-            }
-        } else {
-            geocode(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!) { placemark, error in
-                guard let placemark = placemark, error == nil else { return }
-                
-                latitudeValue = (manager.location?.coordinate.latitude)!
-                longitudeValue = (manager.location?.coordinate.longitude)!
-                
-                if defaults.bool(forKey: "weatherUnitsUSA") == false && defaults.bool(forKey: "weatherUnitsUK") == false && defaults.bool(forKey: "weatherUnitsCanada") == false && defaults.bool(forKey: "weatherUnitsInternational") == false {
-                    if placemark.country! == "United States" {
-                        defaults.set(true, forKey: "weatherUnitsUSA")
-                    } else if placemark.country! == "Canada" {
-                        defaults.set(true, forKey: "weatherUnitsCanada")
-                    } else if placemark.country! == "United Kingdom" {
-                        defaults.set(true, forKey: "weatherUnitsUK")
-                    } else {
-                        defaults.set(true, forKey: "weatherUnitsInternational")
-                    }
-                }
-                
-                if placemark.country! == "United States" {
-                    city = placemark.locality!
-                    state = placemark.administrativeArea!
-                    self.navigationController?.navigationBar.topItem?.title = "\(city), \(state)"
-                    userCurrentLocation = "\(city), \(state)"
-                } else {
-                    city = placemark.administrativeArea!
-                    state = placemark.country!
-                    self.navigationController?.navigationBar.topItem?.title = "\(city), \(state)"
-                    userCurrentLocation = "\(city), \(state)"
-                }
-                self.setupInitialData()
-            }
-        }
-    }
-    
-    // MARK: - Show error when location cannot be found
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Failed to find user's location: \(error.localizedDescription)")
-        defaults.set(true, forKey: "userDeniedLocation")
-        setupDeniedLocation()
-    }
-    
-    // MARK: - Fetch user location if denied location access
-    func setupDeniedLocation() {
-        placesClient = GMSPlacesClient.shared()
-        
-        if (defaults.bool(forKey: "userDeniedLocation") == true) {
-            let address = "\(defaults.string(forKey: "savedSelectedLocation") ?? "New York, NY")"
-            let geoCoder = CLGeocoder()
-            geoCoder.geocodeAddressString(address) { (placemarks, error) in
-                guard
-                    let placemarks = placemarks,
-                    let location = placemarks.first?.location
-                    else {
-                        // handle no location found
-                        return
-                }
-                selectedLatitudeValue = location.coordinate.latitude
-                selectedLongitudeValue = location.coordinate.longitude
-                latitudeValue = location.coordinate.latitude
-                longitudeValue = location.coordinate.longitude
-                defaults.set(selectedLatitudeValue, forKey: "savedSelectedLatitudeValue")
-                defaults.set(selectedLongitudeValue, forKey: "savedSelectedLongitudeValue")
-                UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(selectedLatitudeValue, forKey: "setWidgetLatitude")
-                UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(selectedLongitudeValue, forKey: "setWidgetLongitude")
-                
-                self.navigationController?.navigationBar.topItem?.title = "\(defaults.string(forKey: "savedSelectedLocation") ?? "New York, NY")"
-                self.setupInitialData()
-            }
-            setWeatherDataLabels()
-        }
-    }
-    
-    // MARK: - Setup loading screen view
-    func loadingScreen() {
-        var loadFrame : CGRect = CGRect(x: 0, y: 0, width: 815, height: 815)
-        let screenSize = UIScreen.main.bounds
-        let screenHeight = screenSize.height
-        if screenHeight >= 812 {
-            loadFrame = CGRect(x: 0, y: 0, width: 2000, height: 2000)
-        } else {
-            loadFrame = CGRect(x: 0, y: 0, width: 815, height: 815)
-        }
-        
-        let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
-        activityIndicator.center = self.view.center
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.style = .medium
-        activityIndicator.startAnimating()
-        
-        let backgroundColor = UIColor(named: "customControlColor")
-        let loadView : UIView = UIView(frame: loadFrame)
-        loadView.backgroundColor = backgroundColor
-        loadView.alpha = 1.0
-        loadView.addSubview(activityIndicator)
-        self.navigationController?.view.addSubview(loadView)
-        self.setupInitialLoad()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            loadView.removeFromSuperview()
-            self.setWeatherDataLabels()
-        }
-    }
-
-    func showLocationDisabledPopUp() {
-        defaults.set(true, forKey: "userDeniedLocation")
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "Locations")
-        present(controller, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

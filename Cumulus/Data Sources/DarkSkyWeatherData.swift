@@ -17,6 +17,21 @@ public func fetchDarkSkyWeatherData() {
     universalSettings()
     let userLocation = CLLocationCoordinate2D(latitude: latitudeValue, longitude: longitudeValue)
     
+    let dayZeroDate = Date()
+    let dayOneDate = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date()
+    let dayTwoDate = Calendar.current.date(byAdding: .day, value: 2, to: Date()) ?? Date()
+    let dayThreeDate = Calendar.current.date(byAdding: .day, value: 3, to: Date()) ?? Date()
+    let dayFourDate = Calendar.current.date(byAdding: .day, value: 4, to: Date()) ?? Date()
+    let dayFiveDate = Calendar.current.date(byAdding: .day, value: 5, to: Date()) ?? Date()
+    let daySixDate = Calendar.current.date(byAdding: .day, value: 6, to: Date()) ?? Date()
+    let daySevenDate = Calendar.current.date(byAdding: .day, value: 7, to: Date()) ?? Date()
+    let dayEightDate = Calendar.current.date(byAdding: .day, value: 8, to: Date()) ?? Date()
+    let dayNineDate = Calendar.current.date(byAdding: .day, value: 9, to: Date()) ?? Date()
+    let dayTenDate = Calendar.current.date(byAdding: .day, value: 10, to: Date()) ?? Date()
+    let dayElevenDate = Calendar.current.date(byAdding: .day, value: 11, to: Date()) ?? Date()
+    let dayTwelveDate = Calendar.current.date(byAdding: .day, value: 12, to: Date()) ?? Date()
+    let dayThirteenDate = Calendar.current.date(byAdding: .day, value: 13, to: Date()) ?? Date()
+    
     if universalUnits == "USA" {
         client.units = .us
         client.language = .english
@@ -627,7 +642,7 @@ public func fetchDarkSkyWeatherData() {
     }
     
     // MARK: - Time Machine Day One
-    client.getForecast(location: userLocation, time: dayOneDate!) { result in
+    client.getForecast(location: userLocation, time: dayOneDate) { result in
         switch result {
         case .success(let forecast, _):
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
@@ -784,7 +799,7 @@ public func fetchDarkSkyWeatherData() {
     }
     
     // MARK: - Time Machine Day Two
-    client.getForecast(location: userLocation, time: dayTwoDate!) { result in
+    client.getForecast(location: userLocation, time: dayTwoDate) { result in
         switch result {
         case .success(let forecast, _):
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
@@ -941,7 +956,7 @@ public func fetchDarkSkyWeatherData() {
     }
     
     // MARK: - Time Machine Day Three
-    client.getForecast(location: userLocation, time: dayThreeDate!) { result in
+    client.getForecast(location: userLocation, time: dayThreeDate) { result in
         switch result {
         case .success(let forecast, _):
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
@@ -1098,7 +1113,7 @@ public func fetchDarkSkyWeatherData() {
     }
     
     // MARK: - Time Machine Day Four
-    client.getForecast(location: userLocation, time: dayFourDate!) { result in
+    client.getForecast(location: userLocation, time: dayFourDate) { result in
         switch result {
         case .success(let forecast, _):
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
@@ -1255,7 +1270,7 @@ public func fetchDarkSkyWeatherData() {
     }
     
     // MARK: - Time Machine Day Five
-    client.getForecast(location: userLocation, time: dayFiveDate!) { result in
+    client.getForecast(location: userLocation, time: dayFiveDate) { result in
         switch result {
         case .success(let forecast, _):
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
@@ -1412,7 +1427,7 @@ public func fetchDarkSkyWeatherData() {
     }
     
     // MARK: - Time Machine Day Six
-    client.getForecast(location: userLocation, time: daySixDate!) { result in
+    client.getForecast(location: userLocation, time: daySixDate) { result in
         switch result {
         case .success(let forecast, _):
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
@@ -1569,7 +1584,7 @@ public func fetchDarkSkyWeatherData() {
     }
     
     // MARK: - Time Machine Day Seven
-    client.getForecast(location: userLocation, time: daySevenDate!) { result in
+    client.getForecast(location: userLocation, time: daySevenDate) { result in
         switch result {
         case .success(let forecast, _):
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
@@ -1726,7 +1741,7 @@ public func fetchDarkSkyWeatherData() {
     }
     
     // MARK: - Time Machine Day Eight
-    client.getForecast(location: userLocation, time: dayEightDate!) { result in
+    client.getForecast(location: userLocation, time: dayEightDate) { result in
         switch result {
         case .success(let forecast, _):
         TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
@@ -1883,7 +1898,7 @@ public func fetchDarkSkyWeatherData() {
     }
             
     // MARK: - Time Machine Day Nine
-    client.getForecast(location: userLocation, time: dayNineDate!) { result in
+    client.getForecast(location: userLocation, time: dayNineDate) { result in
     switch result {
     case .success(let forecast, _):
         TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
@@ -2038,13 +2053,13 @@ public func fetchDarkSkyWeatherData() {
             print(error)
         }
     }
-    
-    // MARK: - Time Machine Day Ten
-    client.getForecast(location: userLocation, time: dayTenDate!) { result in
-        switch result {
-        case .success(let forecast, _):
-        TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
 
+    // MARK: - Time Machine Day Ten
+    client.getForecast(location: userLocation, time: dayTenDate) { result in
+    switch result {
+    case .success(let forecast, _):
+        TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
+        
         if let daily = forecast.daily {
             let dayTenArray = daily.data[0]
             let fetchDayTenArray = dayTenArray
@@ -2061,135 +2076,264 @@ public func fetchDarkSkyWeatherData() {
             dayTenSunrise = sunFormat(date: fetchDayTenArray.sunriseTime!)
             dayTenSunset = sunFormat(date: fetchDayTenArray.sunsetTime!)
         }
-
         if let hourly = forecast.hourly {
-            dayTenPrecip0 = hourPrecipProb(value: 0, hour: hourly)
-            dayTenTemp0 = hourTemp(value: 0, hour: hourly)
-            dayTenHumidity0 = hourHumidity(value: 0, hour: hourly)
-            dayTenCondition0 = hourIcon(value: 0, hour: hourly)
-            dayTenIndex0 = hourUVIndex(value: 0, hour: hourly)
-            dayTenWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
-            dayTenCloudCover0 = hourCloudCover(value: 0, hour: hourly)
+            if hourly.data.count < 24 {
+                dayTenPrecip0 = hourPrecipProb(value: 0, hour: hourly)
+                dayTenTemp0 = hourTemp(value: 0, hour: hourly)
+                dayTenHumidity0 = hourHumidity(value: 0, hour: hourly)
+                dayTenCondition0 = hourIcon(value: 0, hour: hourly)
+                dayTenIndex0 = hourUVIndex(value: 0, hour: hourly)
+                dayTenWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
+                dayTenCloudCover0 = hourCloudCover(value: 0, hour: hourly)
 
-            dayTenPrecip1 = hourPrecipProb(value: 1, hour: hourly)
-            dayTenTemp1 = hourTemp(value: 1, hour: hourly)
-            dayTenHumidity1 = hourHumidity(value: 1, hour: hourly)
-            dayTenCondition1 = hourIcon(value: 1, hour: hourly)
-            dayTenIndex1 = hourUVIndex(value: 1, hour: hourly)
-            dayTenWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
-            dayTenCloudCover1 = hourCloudCover(value: 1, hour: hourly)
+                dayTenPrecip1 = hourPrecipProb(value: 1, hour: hourly)
+                dayTenTemp1 = hourTemp(value: 1, hour: hourly)
+                dayTenHumidity1 = hourHumidity(value: 1, hour: hourly)
+                dayTenCondition1 = hourIcon(value: 1, hour: hourly)
+                dayTenIndex1 = hourUVIndex(value: 1, hour: hourly)
+                dayTenWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
+                dayTenCloudCover1 = hourCloudCover(value: 1, hour: hourly)
 
-            dayTenPrecip2 = hourPrecipProb(value: 2, hour: hourly)
-            dayTenTemp2 = hourTemp(value: 2, hour: hourly)
-            dayTenHumidity2 = hourHumidity(value: 2, hour: hourly)
-            dayTenCondition2 = hourIcon(value: 2, hour: hourly)
-            dayTenIndex2 = hourUVIndex(value: 2, hour: hourly)
-            dayTenWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
-            dayTenCloudCover2 = hourCloudCover(value: 2, hour: hourly)
+                dayTenPrecip2 = hourPrecipProb(value: 2, hour: hourly)
+                dayTenTemp2 = hourTemp(value: 2, hour: hourly)
+                dayTenHumidity2 = hourHumidity(value: 2, hour: hourly)
+                dayTenCondition2 = hourIcon(value: 2, hour: hourly)
+                dayTenIndex2 = hourUVIndex(value: 2, hour: hourly)
+                dayTenWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
+                dayTenCloudCover2 = hourCloudCover(value: 2, hour: hourly)
 
-            dayTenPrecip3 = hourPrecipProb(value: 3, hour: hourly)
-            dayTenTemp3 = hourTemp(value: 3, hour: hourly)
-            dayTenHumidity3 = hourHumidity(value: 3, hour: hourly)
-            dayTenCondition3 = hourIcon(value: 3, hour: hourly)
-            dayTenIndex3 = hourUVIndex(value: 3, hour: hourly)
-            dayTenWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
-            dayTenCloudCover3 = hourCloudCover(value: 3, hour: hourly)
+                dayTenPrecip3 = hourPrecipProb(value: 3, hour: hourly)
+                dayTenTemp3 = hourTemp(value: 3, hour: hourly)
+                dayTenHumidity3 = hourHumidity(value: 3, hour: hourly)
+                dayTenCondition3 = hourIcon(value: 3, hour: hourly)
+                dayTenIndex3 = hourUVIndex(value: 3, hour: hourly)
+                dayTenWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
+                dayTenCloudCover3 = hourCloudCover(value: 3, hour: hourly)
 
-            dayTenPrecip4 = hourPrecipProb(value: 4, hour: hourly)
-            dayTenTemp4 = hourTemp(value: 4, hour: hourly)
-            dayTenHumidity4 = hourHumidity(value: 4, hour: hourly)
-            dayTenCondition4 = hourIcon(value: 4, hour: hourly)
-            dayTenIndex4 = hourUVIndex(value: 4, hour: hourly)
-            dayTenWindSpeed4 = hourWindSpeed(value: 4, hour: hourly)
-            dayTenCloudCover4 = hourCloudCover(value: 4, hour: hourly)
+                dayTenPrecip4 = hourPrecipProb(value: 0, hour: hourly)
+                dayTenTemp4 = hourTemp(value: 0, hour: hourly)
+                dayTenHumidity4 = hourHumidity(value: 0, hour: hourly)
+                dayTenCondition4 = hourIcon(value: 0, hour: hourly)
+                dayTenIndex4 = hourUVIndex(value: 0, hour: hourly)
+                dayTenWindSpeed4 = hourWindSpeed(value: 0, hour: hourly)
+                dayTenCloudCover4 = hourCloudCover(value: 0, hour: hourly)
 
-            dayTenPrecip5 = hourPrecipProb(value: 5, hour: hourly)
-            dayTenTemp5 = hourTemp(value: 5, hour: hourly)
-            dayTenHumidity5 = hourHumidity(value: 5, hour: hourly)
-            dayTenCondition5 = hourIcon(value: 5, hour: hourly)
-            dayTenIndex5 = hourUVIndex(value: 5, hour: hourly)
-            dayTenWindSpeed5 = hourWindSpeed(value: 5, hour: hourly)
-            dayTenCloudCover5 = hourCloudCover(value: 5, hour: hourly)
+                dayTenPrecip5 = hourPrecipProb(value: 1, hour: hourly)
+                dayTenTemp5 = hourTemp(value: 1, hour: hourly)
+                dayTenHumidity5 = hourHumidity(value: 1, hour: hourly)
+                dayTenCondition5 = hourIcon(value: 1, hour: hourly)
+                dayTenIndex5 = hourUVIndex(value: 1, hour: hourly)
+                dayTenWindSpeed5 = hourWindSpeed(value: 1, hour: hourly)
+                dayTenCloudCover5 = hourCloudCover(value: 1, hour: hourly)
 
-            dayTenPrecip6 = hourPrecipProb(value: 6, hour: hourly)
-            dayTenTemp6 = hourTemp(value: 6, hour: hourly)
-            dayTenHumidity6 = hourHumidity(value: 6, hour: hourly)
-            dayTenCondition6 = hourIcon(value: 6, hour: hourly)
-            dayTenIndex6 = hourUVIndex(value: 6, hour: hourly)
-            dayTenWindSpeed6 = hourWindSpeed(value: 6, hour: hourly)
-            dayTenCloudCover6 = hourCloudCover(value: 6, hour: hourly)
+                dayTenPrecip6 = hourPrecipProb(value: 2, hour: hourly)
+                dayTenTemp6 = hourTemp(value: 2, hour: hourly)
+                dayTenHumidity6 = hourHumidity(value: 2, hour: hourly)
+                dayTenCondition6 = hourIcon(value: 2, hour: hourly)
+                dayTenIndex6 = hourUVIndex(value: 2, hour: hourly)
+                dayTenWindSpeed6 = hourWindSpeed(value: 2, hour: hourly)
+                dayTenCloudCover6 = hourCloudCover(value: 2, hour: hourly)
 
-            dayTenPrecip7 = hourPrecipProb(value: 7, hour: hourly)
-            dayTenTemp7 = hourTemp(value: 7, hour: hourly)
-            dayTenHumidity7 = hourHumidity(value: 7, hour: hourly)
-            dayTenCondition7 = hourIcon(value: 7, hour: hourly)
-            dayTenIndex7 = hourUVIndex(value: 7, hour: hourly)
-            dayTenWindSpeed7 = hourWindSpeed(value: 7, hour: hourly)
-            dayTenCloudCover7 = hourCloudCover(value: 7, hour: hourly)
+                dayTenPrecip7 = hourPrecipProb(value: 3, hour: hourly)
+                dayTenTemp7 = hourTemp(value: 3, hour: hourly)
+                dayTenHumidity7 = hourHumidity(value: 3, hour: hourly)
+                dayTenCondition7 = hourIcon(value: 3, hour: hourly)
+                dayTenIndex7 = hourUVIndex(value: 3, hour: hourly)
+                dayTenWindSpeed7 = hourWindSpeed(value: 3, hour: hourly)
+                dayTenCloudCover7 = hourCloudCover(value: 3, hour: hourly)
 
-            dayTenPrecip8 = hourPrecipProb(value: 8, hour: hourly)
-            dayTenTemp8 = hourTemp(value: 8, hour: hourly)
-            dayTenHumidity8 = hourHumidity(value: 8, hour: hourly)
-            dayTenCondition8 = hourIcon(value: 8, hour: hourly)
-            dayTenIndex8 = hourUVIndex(value: 8, hour: hourly)
-            dayTenWindSpeed8 = hourWindSpeed(value: 8, hour: hourly)
-            dayTenCloudCover8 = hourCloudCover(value: 8, hour: hourly)
+                dayTenPrecip8 = hourPrecipProb(value: 0, hour: hourly)
+                dayTenTemp8 = hourTemp(value: 0, hour: hourly)
+                dayTenHumidity8 = hourHumidity(value: 0, hour: hourly)
+                dayTenCondition8 = hourIcon(value: 0, hour: hourly)
+                dayTenIndex8 = hourUVIndex(value: 0, hour: hourly)
+                dayTenWindSpeed8 = hourWindSpeed(value: 0, hour: hourly)
+                dayTenCloudCover8 = hourCloudCover(value: 0, hour: hourly)
 
-            dayTenPrecip9 = hourPrecipProb(value: 9, hour: hourly)
-            dayTenTemp9 = hourTemp(value: 9, hour: hourly)
-            dayTenHumidity9 = hourHumidity(value: 9, hour: hourly)
-            dayTenCondition9 = hourIcon(value: 9, hour: hourly)
-            dayTenIndex9 = hourUVIndex(value: 9, hour: hourly)
-            dayTenWindSpeed9 = hourWindSpeed(value: 9, hour: hourly)
-            dayTenCloudCover9 = hourCloudCover(value: 9, hour: hourly)
+                dayTenPrecip9 = hourPrecipProb(value: 1, hour: hourly)
+                dayTenTemp9 = hourTemp(value: 1, hour: hourly)
+                dayTenHumidity9 = hourHumidity(value: 1, hour: hourly)
+                dayTenCondition9 = hourIcon(value: 1, hour: hourly)
+                dayTenIndex9 = hourUVIndex(value: 1, hour: hourly)
+                dayTenWindSpeed9 = hourWindSpeed(value: 1, hour: hourly)
+                dayTenCloudCover9 = hourCloudCover(value: 1, hour: hourly)
 
-            dayTenPrecip10 = hourPrecipProb(value: 10, hour: hourly)
-            dayTenTemp10 = hourTemp(value: 10, hour: hourly)
-            dayTenHumidity10 = hourHumidity(value: 10, hour: hourly)
-            dayTenCondition10 = hourIcon(value: 10, hour: hourly)
-            dayTenIndex10 = hourUVIndex(value: 10, hour: hourly)
-            dayTenWindSpeed10 = hourWindSpeed(value: 10, hour: hourly)
-            dayTenCloudCover10 = hourCloudCover(value: 10, hour: hourly)
+                dayTenPrecip10 = hourPrecipProb(value: 2, hour: hourly)
+                dayTenTemp10 = hourTemp(value: 2, hour: hourly)
+                dayTenHumidity10 = hourHumidity(value: 2, hour: hourly)
+                dayTenCondition10 = hourIcon(value: 2, hour: hourly)
+                dayTenIndex10 = hourUVIndex(value: 2, hour: hourly)
+                dayTenWindSpeed10 = hourWindSpeed(value: 2, hour: hourly)
+                dayTenCloudCover10 = hourCloudCover(value: 2, hour: hourly)
 
-            dayTenPrecip11 = hourPrecipProb(value: 11, hour: hourly)
-            dayTenTemp11 = hourTemp(value: 11, hour: hourly)
-            dayTenHumidity11 = hourHumidity(value: 11, hour: hourly)
-            dayTenCondition11 = hourIcon(value: 11, hour: hourly)
-            dayTenIndex11 = hourUVIndex(value: 11, hour: hourly)
-            dayTenWindSpeed11 = hourWindSpeed(value: 11, hour: hourly)
-            dayTenCloudCover11 = hourCloudCover(value: 11, hour: hourly)
+                dayTenPrecip11 = hourPrecipProb(value: 3, hour: hourly)
+                dayTenTemp11 = hourTemp(value: 3, hour: hourly)
+                dayTenHumidity11 = hourHumidity(value: 3, hour: hourly)
+                dayTenCondition11 = hourIcon(value: 3, hour: hourly)
+                dayTenIndex11 = hourUVIndex(value: 3, hour: hourly)
+                dayTenWindSpeed11 = hourWindSpeed(value: 3, hour: hourly)
+                dayTenCloudCover11 = hourCloudCover(value: 3, hour: hourly)
 
-            dayTenPrecip12 = hourPrecipProb(value: 12, hour: hourly)
-            dayTenTemp12 = hourTemp(value: 12, hour: hourly)
-            dayTenHumidity12 = hourHumidity(value: 12, hour: hourly)
-            dayTenCondition12 = hourIcon(value: 12, hour: hourly)
-            dayTenIndex12 = hourUVIndex(value: 12, hour: hourly)
-            dayTenWindSpeed12 = hourWindSpeed(value: 12, hour: hourly)
-            dayTenCloudCover12 = hourCloudCover(value: 12, hour: hourly)
+                dayTenPrecip12 = hourPrecipProb(value: 0, hour: hourly)
+                dayTenTemp12 = hourTemp(value: 0, hour: hourly)
+                dayTenHumidity12 = hourHumidity(value: 0, hour: hourly)
+                dayTenCondition12 = hourIcon(value: 0, hour: hourly)
+                dayTenIndex12 = hourUVIndex(value: 0, hour: hourly)
+                dayTenWindSpeed12 = hourWindSpeed(value: 0, hour: hourly)
+                dayTenCloudCover12 = hourCloudCover(value: 0, hour: hourly)
 
-            dayTenPrecip13 = hourPrecipProb(value: 13, hour: hourly)
-            dayTenTemp13 = hourTemp(value: 13, hour: hourly)
-            dayTenHumidity13 = hourHumidity(value: 13, hour: hourly)
-            dayTenCondition13 = hourIcon(value: 13, hour: hourly)
-            dayTenIndex13 = hourUVIndex(value: 13, hour: hourly)
-            dayTenWindSpeed13 = hourWindSpeed(value: 13, hour: hourly)
-            dayTenCloudCover13 = hourCloudCover(value: 13, hour: hourly)
+                dayTenPrecip13 = hourPrecipProb(value: 1, hour: hourly)
+                dayTenTemp13 = hourTemp(value: 1, hour: hourly)
+                dayTenHumidity13 = hourHumidity(value: 1, hour: hourly)
+                dayTenCondition13 = hourIcon(value: 1, hour: hourly)
+                dayTenIndex13 = hourUVIndex(value: 1, hour: hourly)
+                dayTenWindSpeed13 = hourWindSpeed(value: 1, hour: hourly)
+                dayTenCloudCover13 = hourCloudCover(value: 1, hour: hourly)
 
-            dayTenPrecip14 = hourPrecipProb(value: 14, hour: hourly)
-            dayTenTemp14 = hourTemp(value: 14, hour: hourly)
-            dayTenHumidity14 = hourHumidity(value: 14, hour: hourly)
-            dayTenCondition14 = hourIcon(value: 14, hour: hourly)
-            dayTenIndex14 = hourUVIndex(value: 14, hour: hourly)
-            dayTenWindSpeed14 = hourWindSpeed(value: 14, hour: hourly)
-            dayTenCloudCover14 = hourCloudCover(value: 14, hour: hourly)
+                dayTenPrecip14 = hourPrecipProb(value: 2, hour: hourly)
+                dayTenTemp14 = hourTemp(value: 2, hour: hourly)
+                dayTenHumidity14 = hourHumidity(value: 2, hour: hourly)
+                dayTenCondition14 = hourIcon(value: 2, hour: hourly)
+                dayTenIndex14 = hourUVIndex(value: 2, hour: hourly)
+                dayTenWindSpeed14 = hourWindSpeed(value: 2, hour: hourly)
+                dayTenCloudCover14 = hourCloudCover(value: 2, hour: hourly)
 
-            dayTenPrecip15 = hourPrecipProb(value: 15, hour: hourly)
-            dayTenTemp15 = hourTemp(value: 15, hour: hourly)
-            dayTenHumidity15 = hourHumidity(value: 15, hour: hourly)
-            dayTenCondition15 = hourIcon(value: 15, hour: hourly)
-            dayTenIndex15 = hourUVIndex(value: 15, hour: hourly)
-            dayTenWindSpeed15 = hourWindSpeed(value: 15, hour: hourly)
-            dayTenCloudCover15 = hourCloudCover(value: 15, hour: hourly)
+                dayTenPrecip15 = hourPrecipProb(value: 3, hour: hourly)
+                dayTenTemp15 = hourTemp(value: 3, hour: hourly)
+                dayTenHumidity15 = hourHumidity(value: 3, hour: hourly)
+                dayTenCondition15 = hourIcon(value: 3, hour: hourly)
+                dayTenIndex15 = hourUVIndex(value: 3, hour: hourly)
+                dayTenWindSpeed15 = hourWindSpeed(value: 3, hour: hourly)
+                dayTenCloudCover15 = hourCloudCover(value: 3, hour: hourly)
+            } else {
+                dayTenPrecip0 = hourPrecipProb(value: 0, hour: hourly)
+                dayTenTemp0 = hourTemp(value: 0, hour: hourly)
+                dayTenHumidity0 = hourHumidity(value: 0, hour: hourly)
+                dayTenCondition0 = hourIcon(value: 0, hour: hourly)
+                dayTenIndex0 = hourUVIndex(value: 0, hour: hourly)
+                dayTenWindSpeed0 = hourWindSpeed(value: 0, hour: hourly)
+                dayTenCloudCover0 = hourCloudCover(value: 0, hour: hourly)
+
+                dayTenPrecip1 = hourPrecipProb(value: 1, hour: hourly)
+                dayTenTemp1 = hourTemp(value: 1, hour: hourly)
+                dayTenHumidity1 = hourHumidity(value: 1, hour: hourly)
+                dayTenCondition1 = hourIcon(value: 1, hour: hourly)
+                dayTenIndex1 = hourUVIndex(value: 1, hour: hourly)
+                dayTenWindSpeed1 = hourWindSpeed(value: 1, hour: hourly)
+                dayTenCloudCover1 = hourCloudCover(value: 1, hour: hourly)
+
+                dayTenPrecip2 = hourPrecipProb(value: 2, hour: hourly)
+                dayTenTemp2 = hourTemp(value: 2, hour: hourly)
+                dayTenHumidity2 = hourHumidity(value: 2, hour: hourly)
+                dayTenCondition2 = hourIcon(value: 2, hour: hourly)
+                dayTenIndex2 = hourUVIndex(value: 2, hour: hourly)
+                dayTenWindSpeed2 = hourWindSpeed(value: 2, hour: hourly)
+                dayTenCloudCover2 = hourCloudCover(value: 2, hour: hourly)
+
+                dayTenPrecip3 = hourPrecipProb(value: 3, hour: hourly)
+                dayTenTemp3 = hourTemp(value: 3, hour: hourly)
+                dayTenHumidity3 = hourHumidity(value: 3, hour: hourly)
+                dayTenCondition3 = hourIcon(value: 3, hour: hourly)
+                dayTenIndex3 = hourUVIndex(value: 3, hour: hourly)
+                dayTenWindSpeed3 = hourWindSpeed(value: 3, hour: hourly)
+                dayTenCloudCover3 = hourCloudCover(value: 3, hour: hourly)
+                    
+                dayTenPrecip4 = hourPrecipProb(value: 4, hour: hourly)
+                dayTenTemp4 = hourTemp(value: 4, hour: hourly)
+                dayTenHumidity4 = hourHumidity(value: 4, hour: hourly)
+                dayTenCondition4 = hourIcon(value: 4, hour: hourly)
+                dayTenIndex4 = hourUVIndex(value: 4, hour: hourly)
+                dayTenWindSpeed4 = hourWindSpeed(value: 4, hour: hourly)
+                dayTenCloudCover4 = hourCloudCover(value: 4, hour: hourly)
+
+                dayTenPrecip5 = hourPrecipProb(value: 5, hour: hourly)
+                dayTenTemp5 = hourTemp(value: 5, hour: hourly)
+                dayTenHumidity5 = hourHumidity(value: 5, hour: hourly)
+                dayTenCondition5 = hourIcon(value: 5, hour: hourly)
+                dayTenIndex5 = hourUVIndex(value: 5, hour: hourly)
+                dayTenWindSpeed5 = hourWindSpeed(value: 5, hour: hourly)
+                dayTenCloudCover5 = hourCloudCover(value: 5, hour: hourly)
+
+                dayTenPrecip6 = hourPrecipProb(value: 6, hour: hourly)
+                dayTenTemp6 = hourTemp(value: 6, hour: hourly)
+                dayTenHumidity6 = hourHumidity(value: 6, hour: hourly)
+                dayTenCondition6 = hourIcon(value: 6, hour: hourly)
+                dayTenIndex6 = hourUVIndex(value: 6, hour: hourly)
+                dayTenWindSpeed6 = hourWindSpeed(value: 6, hour: hourly)
+                dayTenCloudCover6 = hourCloudCover(value: 6, hour: hourly)
+
+                dayTenPrecip7 = hourPrecipProb(value: 7, hour: hourly)
+                dayTenTemp7 = hourTemp(value: 7, hour: hourly)
+                dayTenHumidity7 = hourHumidity(value: 7, hour: hourly)
+                dayTenCondition7 = hourIcon(value: 7, hour: hourly)
+                dayTenIndex7 = hourUVIndex(value: 7, hour: hourly)
+                dayTenWindSpeed7 = hourWindSpeed(value: 7, hour: hourly)
+                dayTenCloudCover7 = hourCloudCover(value: 7, hour: hourly)
+
+                dayTenPrecip8 = hourPrecipProb(value: 8, hour: hourly)
+                dayTenTemp8 = hourTemp(value: 8, hour: hourly)
+                dayTenHumidity8 = hourHumidity(value: 8, hour: hourly)
+                dayTenCondition8 = hourIcon(value: 8, hour: hourly)
+                dayTenIndex8 = hourUVIndex(value: 8, hour: hourly)
+                dayTenWindSpeed8 = hourWindSpeed(value: 8, hour: hourly)
+                dayTenCloudCover8 = hourCloudCover(value: 8, hour: hourly)
+
+                dayTenPrecip9 = hourPrecipProb(value: 9, hour: hourly)
+                dayTenTemp9 = hourTemp(value: 9, hour: hourly)
+                dayTenHumidity9 = hourHumidity(value: 9, hour: hourly)
+                dayTenCondition9 = hourIcon(value: 9, hour: hourly)
+                dayTenIndex9 = hourUVIndex(value: 9, hour: hourly)
+                dayTenWindSpeed9 = hourWindSpeed(value: 9, hour: hourly)
+                dayTenCloudCover9 = hourCloudCover(value: 9, hour: hourly)
+
+                dayTenPrecip10 = hourPrecipProb(value: 10, hour: hourly)
+                dayTenTemp10 = hourTemp(value: 10, hour: hourly)
+                dayTenHumidity10 = hourHumidity(value: 10, hour: hourly)
+                dayTenCondition10 = hourIcon(value: 10, hour: hourly)
+                dayTenIndex10 = hourUVIndex(value: 10, hour: hourly)
+                dayTenWindSpeed10 = hourWindSpeed(value: 10, hour: hourly)
+                dayTenCloudCover10 = hourCloudCover(value: 10, hour: hourly)
+
+                dayTenPrecip11 = hourPrecipProb(value: 11, hour: hourly)
+                dayTenTemp11 = hourTemp(value: 11, hour: hourly)
+                dayTenHumidity11 = hourHumidity(value: 11, hour: hourly)
+                dayTenCondition11 = hourIcon(value: 11, hour: hourly)
+                dayTenIndex11 = hourUVIndex(value: 11, hour: hourly)
+                dayTenWindSpeed11 = hourWindSpeed(value: 11, hour: hourly)
+                dayTenCloudCover11 = hourCloudCover(value: 11, hour: hourly)
+
+                dayTenPrecip12 = hourPrecipProb(value: 12, hour: hourly)
+                dayTenTemp12 = hourTemp(value: 12, hour: hourly)
+                dayTenHumidity12 = hourHumidity(value: 12, hour: hourly)
+                dayTenCondition12 = hourIcon(value: 12, hour: hourly)
+                dayTenIndex12 = hourUVIndex(value: 12, hour: hourly)
+                dayTenWindSpeed12 = hourWindSpeed(value: 12, hour: hourly)
+                dayTenCloudCover12 = hourCloudCover(value: 12, hour: hourly)
+
+                dayTenPrecip13 = hourPrecipProb(value: 13, hour: hourly)
+                dayTenTemp13 = hourTemp(value: 13, hour: hourly)
+                dayTenHumidity13 = hourHumidity(value: 13, hour: hourly)
+                dayTenCondition13 = hourIcon(value: 13, hour: hourly)
+                dayTenIndex13 = hourUVIndex(value: 13, hour: hourly)
+                dayTenWindSpeed13 = hourWindSpeed(value: 13, hour: hourly)
+                dayTenCloudCover13 = hourCloudCover(value: 13, hour: hourly)
+
+                dayTenPrecip14 = hourPrecipProb(value: 14, hour: hourly)
+                dayTenTemp14 = hourTemp(value: 14, hour: hourly)
+                dayTenHumidity14 = hourHumidity(value: 14, hour: hourly)
+                dayTenCondition14 = hourIcon(value: 14, hour: hourly)
+                dayTenIndex14 = hourUVIndex(value: 14, hour: hourly)
+                dayTenWindSpeed14 = hourWindSpeed(value: 14, hour: hourly)
+                dayTenCloudCover14 = hourCloudCover(value: 14, hour: hourly)
+
+                dayTenPrecip15 = hourPrecipProb(value: 15, hour: hourly)
+                dayTenTemp15 = hourTemp(value: 15, hour: hourly)
+                dayTenHumidity15 = hourHumidity(value: 15, hour: hourly)
+                dayTenCondition15 = hourIcon(value: 15, hour: hourly)
+                dayTenIndex15 = hourUVIndex(value: 15, hour: hourly)
+                dayTenWindSpeed15 = hourWindSpeed(value: 15, hour: hourly)
+                dayTenCloudCover15 = hourCloudCover(value: 15, hour: hourly)
+            }
         }
         case .failure(let error):
             print(error)
@@ -2197,7 +2341,7 @@ public func fetchDarkSkyWeatherData() {
     }
                     
     // MARK: - Time Machine Day Eleven
-    client.getForecast(location: userLocation, time: dayElevenDate!) { result in
+    client.getForecast(location: userLocation, time: dayElevenDate) { result in
     switch result {
     case .success(let forecast, _):
         TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
@@ -2354,7 +2498,7 @@ public func fetchDarkSkyWeatherData() {
     }
     
     // MARK: - Time Machine Day Twelve
-    client.getForecast(location: userLocation, time: dayTwelveDate!) { result in
+    client.getForecast(location: userLocation, time: dayTwelveDate) { result in
         switch result {
         case .success(let forecast, _):
         TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
@@ -2510,7 +2654,7 @@ public func fetchDarkSkyWeatherData() {
     }
                     
     // MARK: - Time Machine Day Thirteen
-    client.getForecast(location: userLocation, time: dayThirteenDate!) { result in
+    client.getForecast(location: userLocation, time: dayThirteenDate) { result in
     switch result {
     case .success(let forecast, _):
         TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!

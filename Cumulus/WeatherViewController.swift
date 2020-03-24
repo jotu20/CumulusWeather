@@ -1123,7 +1123,7 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
     
     override func viewWillAppear(_ animated: Bool) {
         // Check for loaded weather, distance change, or color theme change
-        if weatherLoaded == false || distanceChange == true || dataSourceChanged == true {
+        if weatherLoaded == false || distanceChange == true || dataSourceChanged == true || userChangedColorTheme == true {
             loadingScreen()
         }
         
@@ -1278,9 +1278,9 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
     // MARK: - Action to scroll to top
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         let tabBarIndex = tabBarController.selectedIndex
-        
+
         if tabBarIndex == 0 {
-            self.scrollView.setContentOffset(CGPoint.zero, animated: true)
+            scrollView.scrollToTop()
         }
     }
     
@@ -2967,4 +2967,11 @@ extension UINavigationController {
     open override var preferredStatusBarStyle: UIStatusBarStyle {
         return topViewController?.preferredStatusBarStyle ?? .default
     }
+}
+
+extension UIScrollView {
+    func scrollToTop() {
+        let desiredOffset = CGPoint(x: 0, y: -contentInset.top)
+        setContentOffset(desiredOffset, animated: true)
+   }
 }

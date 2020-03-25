@@ -393,6 +393,7 @@ class CumulusProTableViewController: UITableViewController {
             }
             else if results.restoredPurchases.count > 0 {
                 print("Restore Success: \(results.restoredPurchases)")
+                defaults.set(true, forKey: "cumulusPro")
             }
             else {
                 print("Nothing to Restore")

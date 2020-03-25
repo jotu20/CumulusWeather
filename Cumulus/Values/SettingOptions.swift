@@ -12,7 +12,6 @@ import CoreLocation
 
 let defaults = UserDefaults.standard
 
-var premiumPurchased: Bool = false
 var cumulusPro: Bool = false
 var potentialCustomer: Bool = false
 

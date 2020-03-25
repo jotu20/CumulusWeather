@@ -19,10 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         checkSavedColor()
         
-        if (defaults.bool(forKey: "premiumPurchased") == true) {
-            defaults.set(true, forKey: "cumulusPro")
-        }
-        
         if (defaults.string(forKey: "defaultHourlyCondition") == nil) {
             defaults.set("Precip (%)", forKey: "defaultHourlyCondition")
         }

@@ -1102,6 +1102,20 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         
+        if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Precip") == true {
+            hourlySegmentControl.selectedSegmentIndex = 0
+        } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Temp") == true {
+            hourlySegmentControl.selectedSegmentIndex = 1
+        } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Humidity") == true {
+            hourlySegmentControl.selectedSegmentIndex = 2
+        } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Index") == true {
+            hourlySegmentControl.selectedSegmentIndex = 3
+        } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Wind") == true {
+            hourlySegmentControl.selectedSegmentIndex = 4
+        } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Cloud") == true {
+            hourlySegmentControl.selectedSegmentIndex = 5
+        }
+        
         if CLLocationManager.locationServicesEnabled() {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
@@ -2821,19 +2835,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         setDailyConditionImages()
         
         // Check for default hourly condition value
-        if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Precip") == true {
-            hourlySegmentControl.selectedSegmentIndex = 0
-        } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Temp") == true {
-            hourlySegmentControl.selectedSegmentIndex = 1
-        } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Humidity") == true {
-            hourlySegmentControl.selectedSegmentIndex = 2
-        } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Index") == true {
-            hourlySegmentControl.selectedSegmentIndex = 3
-        } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Wind") == true {
-            hourlySegmentControl.selectedSegmentIndex = 4
-        } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Cloud") == true {
-            hourlySegmentControl.selectedSegmentIndex = 5
-        }
         setHourlyConditionOutlets(day: 14, segmentControl: hourlySegmentControl, pageControl: hourlyPageControl)
         
         // Check if summaries are equal for the hour

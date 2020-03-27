@@ -14,7 +14,7 @@ import Intents
 import StoreKit
 import ForecastIO
 
-class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLocationManagerDelegate {
+class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLocationManagerDelegate {
     
     @IBOutlet var homeView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -1580,13 +1580,6 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
                 } else {
                     completeDayZeroUISetup(condition0: dayZeroCondition8, condition1: dayZeroCondition9, condition2: dayZeroCondition10, condition3: dayZeroCondition11, condition4: dayZeroCondition12, condition5: dayZeroCondition13, condition6: dayZeroCondition14, condition7: dayZeroCondition15, int0: dayZeroCloudCover8, int1: dayZeroCloudCover9, int2: dayZeroCloudCover10, int3: dayZeroCloudCover11, int4: dayZeroCloudCover12, int5: dayZeroCloudCover13, int6: dayZeroCloudCover14, int7: dayZeroCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
                 }
-            } else {
-                // Default to precipitation
-                if pageControl.currentPage == 0 {
-                    completeDayZeroUISetup(condition0: dayZeroCondition0, condition1: dayZeroCondition1, condition2: dayZeroCondition2, condition3: dayZeroCondition3, condition4: dayZeroCondition4, condition5: dayZeroCondition5, condition6: dayZeroCondition6, condition7: dayZeroCondition7, int0: dayZeroPrecip0, int1: dayZeroPrecip1, int2: dayZeroPrecip2, int3: dayZeroPrecip3, int4: dayZeroPrecip4, int5: dayZeroPrecip5, int6: dayZeroPrecip6, int7: dayZeroPrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayZeroUISetup(condition0: dayZeroCondition8, condition1: dayZeroCondition9, condition2: dayZeroCondition10, condition3: dayZeroCondition11, condition4: dayZeroCondition12, condition5: dayZeroCondition13, condition6: dayZeroCondition14, condition7: dayZeroCondition15, int0: dayZeroPrecip8, int1: dayZeroPrecip9, int2: dayZeroPrecip10, int3: dayZeroPrecip11, int4: dayZeroPrecip12, int5: dayZeroPrecip13, int6: dayZeroPrecip14, int7: dayZeroPrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
             }
         } else if day == 1 {
             if segmentControl.selectedSegmentIndex == 0 {
@@ -1624,13 +1617,6 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
                     completeDayOneUISetup(condition0: dayOneCondition0, condition1: dayOneCondition1, condition2: dayOneCondition2, condition3: dayOneCondition3, condition4: dayOneCondition4, condition5: dayOneCondition5, condition6: dayOneCondition6, condition7: dayOneCondition7, int0: dayOneCloudCover0, int1: dayOneCloudCover1, int2: dayOneCloudCover2, int3: dayOneCloudCover3, int4: dayOneCloudCover4, int5: dayOneCloudCover5, int6: dayOneCloudCover6, int7: dayOneCloudCover7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
                 } else {
                     completeDayOneUISetup(condition0: dayOneCondition8, condition1: dayOneCondition9, condition2: dayOneCondition10, condition3: dayOneCondition11, condition4: dayOneCondition12, condition5: dayOneCondition13, condition6: dayOneCondition14, condition7: dayOneCondition15, int0: dayOneCloudCover8, int1: dayOneCloudCover9, int2: dayOneCloudCover10, int3: dayOneCloudCover11, int4: dayOneCloudCover12, int5: dayOneCloudCover13, int6: dayOneCloudCover14, int7: dayOneCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else {
-                // Default to precipitation
-                if pageControl.currentPage == 0 {
-                    completeDayOneUISetup(condition0: dayOneCondition0, condition1: dayOneCondition1, condition2: dayOneCondition2, condition3: dayOneCondition3, condition4: dayOneCondition4, condition5: dayOneCondition5, condition6: dayOneCondition6, condition7: dayOneCondition7, int0: dayOnePrecip0, int1: dayOnePrecip1, int2: dayOnePrecip2, int3: dayOnePrecip3, int4: dayOnePrecip4, int5: dayOnePrecip5, int6: dayOnePrecip6, int7: dayOnePrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayOneUISetup(condition0: dayOneCondition8, condition1: dayOneCondition9, condition2: dayOneCondition10, condition3: dayOneCondition11, condition4: dayOneCondition12, condition5: dayOneCondition13, condition6: dayOneCondition14, condition7: dayOneCondition15, int0: dayOnePrecip8, int1: dayOnePrecip9, int2: dayOnePrecip10, int3: dayOnePrecip11, int4: dayOnePrecip12, int5: dayOnePrecip13, int6: dayOnePrecip14, int7: dayOnePrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
                 }
             }
         } else if day == 2 {
@@ -1670,13 +1656,6 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
                 } else {
                     completeDayTwoUISetup(condition0: dayTwoCondition8, condition1: dayTwoCondition9, condition2: dayTwoCondition10, condition3: dayTwoCondition11, condition4: dayTwoCondition12, condition5: dayTwoCondition13, condition6: dayTwoCondition14, condition7: dayTwoCondition15, int0: dayTwoCloudCover8, int1: dayTwoCloudCover9, int2: dayTwoCloudCover10, int3: dayTwoCloudCover11, int4: dayTwoCloudCover12, int5: dayTwoCloudCover13, int6: dayTwoCloudCover14, int7: dayTwoCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
                 }
-            } else {
-                // Default to precipitation
-                if pageControl.currentPage == 0 {
-                    completeDayTwoUISetup(condition0: dayTwoCondition0, condition1: dayTwoCondition1, condition2: dayTwoCondition2, condition3: dayTwoCondition3, condition4: dayTwoCondition4, condition5: dayTwoCondition5, condition6: dayTwoCondition6, condition7: dayTwoCondition7, int0: dayTwoPrecip0, int1: dayTwoPrecip1, int2: dayTwoPrecip2, int3: dayTwoPrecip3, int4: dayTwoPrecip4, int5: dayTwoPrecip5, int6: dayTwoPrecip6, int7: dayTwoPrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayTwoUISetup(condition0: dayTwoCondition8, condition1: dayTwoCondition9, condition2: dayTwoCondition10, condition3: dayTwoCondition11, condition4: dayTwoCondition12, condition5: dayTwoCondition13, condition6: dayTwoCondition14, condition7: dayTwoCondition15, int0: dayTwoPrecip8, int1: dayTwoPrecip9, int2: dayTwoPrecip10, int3: dayTwoPrecip11, int4: dayTwoPrecip12, int5: dayTwoPrecip13, int6: dayTwoPrecip14, int7: dayTwoPrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
             }
         } else if day == 3 {
             if segmentControl.selectedSegmentIndex == 0 {
@@ -1714,13 +1693,6 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
                     completeDayThreeUISetup(condition0: dayThreeCondition0, condition1: dayThreeCondition1, condition2: dayThreeCondition2, condition3: dayThreeCondition3, condition4: dayThreeCondition4, condition5: dayThreeCondition5, condition6: dayThreeCondition6, condition7: dayThreeCondition7, int0: dayThreeCloudCover0, int1: dayThreeCloudCover1, int2: dayThreeCloudCover2, int3: dayThreeCloudCover3, int4: dayThreeCloudCover4, int5: dayThreeCloudCover5, int6: dayThreeCloudCover6, int7: dayThreeCloudCover7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
                 } else {
                     completeDayThreeUISetup(condition0: dayThreeCondition8, condition1: dayThreeCondition9, condition2: dayThreeCondition10, condition3: dayThreeCondition11, condition4: dayThreeCondition12, condition5: dayThreeCondition13, condition6: dayThreeCondition14, condition7: dayThreeCondition15, int0: dayThreeCloudCover8, int1: dayThreeCloudCover9, int2: dayThreeCloudCover10, int3: dayThreeCloudCover11, int4: dayThreeCloudCover12, int5: dayThreeCloudCover13, int6: dayThreeCloudCover14, int7: dayThreeCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else {
-                // Default to precipitation
-                if pageControl.currentPage == 0 {
-                    completeDayThreeUISetup(condition0: dayThreeCondition0, condition1: dayThreeCondition1, condition2: dayThreeCondition2, condition3: dayThreeCondition3, condition4: dayThreeCondition4, condition5: dayThreeCondition5, condition6: dayThreeCondition6, condition7: dayThreeCondition7, int0: dayThreePrecip0, int1: dayThreePrecip1, int2: dayThreePrecip2, int3: dayThreePrecip3, int4: dayThreePrecip4, int5: dayThreePrecip5, int6: dayThreePrecip6, int7: dayThreePrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayThreeUISetup(condition0: dayThreeCondition8, condition1: dayThreeCondition9, condition2: dayThreeCondition10, condition3: dayThreeCondition11, condition4: dayThreeCondition12, condition5: dayThreeCondition13, condition6: dayThreeCondition14, condition7: dayThreeCondition15, int0: dayThreePrecip8, int1: dayThreePrecip9, int2: dayThreePrecip10, int3: dayThreePrecip11, int4: dayThreePrecip12, int5: dayThreePrecip13, int6: dayThreePrecip14, int7: dayThreePrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
                 }
             }
         } else if day == 4 {
@@ -1760,13 +1732,6 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
                 } else {
                     completeDayFourUISetup(condition0: dayFourCondition8, condition1: dayFourCondition9, condition2: dayFourCondition10, condition3: dayFourCondition11, condition4: dayFourCondition12, condition5: dayFourCondition13, condition6: dayFourCondition14, condition7: dayFourCondition15, int0: dayFourCloudCover8, int1: dayFourCloudCover9, int2: dayFourCloudCover10, int3: dayFourCloudCover11, int4: dayFourCloudCover12, int5: dayFourCloudCover13, int6: dayFourCloudCover14, int7: dayFourCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
                 }
-            } else {
-                // Default to precipitation
-                if pageControl.currentPage == 0 {
-                    completeDayFourUISetup(condition0: dayFourCondition0, condition1: dayFourCondition1, condition2: dayFourCondition2, condition3: dayFourCondition3, condition4: dayFourCondition4, condition5: dayFourCondition5, condition6: dayFourCondition6, condition7: dayFourCondition7, int0: dayFourPrecip0, int1: dayFourPrecip1, int2: dayFourPrecip2, int3: dayFourPrecip3, int4: dayFourPrecip4, int5: dayFourPrecip5, int6: dayFourPrecip6, int7: dayFourPrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayFourUISetup(condition0: dayFourCondition8, condition1: dayFourCondition9, condition2: dayFourCondition10, condition3: dayFourCondition11, condition4: dayFourCondition12, condition5: dayFourCondition13, condition6: dayFourCondition14, condition7: dayFourCondition15, int0: dayFourPrecip8, int1: dayFourPrecip9, int2: dayFourPrecip10, int3: dayFourPrecip11, int4: dayFourPrecip12, int5: dayFourPrecip13, int6: dayFourPrecip14, int7: dayFourPrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
             }
         } else if day == 5 {
             if segmentControl.selectedSegmentIndex == 0 {
@@ -1804,13 +1769,6 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
                     completeDayFiveUISetup(condition0: dayFiveCondition0, condition1: dayFiveCondition1, condition2: dayFiveCondition2, condition3: dayFiveCondition3, condition4: dayFiveCondition4, condition5: dayFiveCondition5, condition6: dayFiveCondition6, condition7: dayFiveCondition7, int0: dayFiveCloudCover0, int1: dayFiveCloudCover1, int2: dayFiveCloudCover2, int3: dayFiveCloudCover3, int4: dayFiveCloudCover4, int5: dayFiveCloudCover5, int6: dayFiveCloudCover6, int7: dayFiveCloudCover7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
                 } else {
                     completeDayFiveUISetup(condition0: dayFiveCondition8, condition1: dayFiveCondition9, condition2: dayFiveCondition10, condition3: dayFiveCondition11, condition4: dayFiveCondition12, condition5: dayFiveCondition13, condition6: dayFiveCondition14, condition7: dayFiveCondition15, int0: dayFiveCloudCover8, int1: dayFiveCloudCover9, int2: dayFiveCloudCover10, int3: dayFiveCloudCover11, int4: dayFiveCloudCover12, int5: dayFiveCloudCover13, int6: dayFiveCloudCover14, int7: dayFiveCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else {
-                // Default to precipitation
-                if pageControl.currentPage == 0 {
-                    completeDayFiveUISetup(condition0: dayFiveCondition0, condition1: dayFiveCondition1, condition2: dayFiveCondition2, condition3: dayFiveCondition3, condition4: dayFiveCondition4, condition5: dayFiveCondition5, condition6: dayFiveCondition6, condition7: dayFiveCondition7, int0: dayFivePrecip0, int1: dayFivePrecip1, int2: dayFivePrecip2, int3: dayFivePrecip3, int4: dayFivePrecip4, int5: dayFivePrecip5, int6: dayFivePrecip6, int7: dayFivePrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayFiveUISetup(condition0: dayFiveCondition8, condition1: dayFiveCondition9, condition2: dayFiveCondition10, condition3: dayFiveCondition11, condition4: dayFiveCondition12, condition5: dayFiveCondition13, condition6: dayFiveCondition14, condition7: dayFiveCondition15, int0: dayFivePrecip8, int1: dayFivePrecip9, int2: dayFivePrecip10, int3: dayFivePrecip11, int4: dayFivePrecip12, int5: dayFivePrecip13, int6: dayFivePrecip14, int7: dayFivePrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
                 }
             }
         } else if day == 6 {
@@ -1850,13 +1808,6 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
                 } else {
                     completeDaySixUISetup(condition0: daySixCondition8, condition1: daySixCondition9, condition2: daySixCondition10, condition3: daySixCondition11, condition4: daySixCondition12, condition5: daySixCondition13, condition6: daySixCondition14, condition7: daySixCondition15,  int0: daySixCloudCover8, int1: daySixCloudCover9, int2: daySixCloudCover10, int3: daySixCloudCover11, int4: daySixCloudCover12, int5: daySixCloudCover13, int6: daySixCloudCover14, int7: daySixCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
                 }
-            } else {
-                // Default to precipitation
-                if pageControl.currentPage == 0 {
-                    completeDaySixUISetup(condition0: daySixCondition0, condition1: daySixCondition1, condition2: daySixCondition2, condition3: daySixCondition3, condition4: daySixCondition4, condition5: daySixCondition5, condition6: daySixCondition6, condition7: daySixCondition7, int0: daySixPrecip0, int1: daySixPrecip1, int2: daySixPrecip2, int3: daySixPrecip3, int4: daySixPrecip4, int5: daySixPrecip5, int6: daySixPrecip6, int7: daySixPrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDaySixUISetup(condition0: daySixCondition8, condition1: daySixCondition9, condition2: daySixCondition10, condition3: daySixCondition11, condition4: daySixCondition12, condition5: daySixCondition13, condition6: daySixCondition14, condition7: daySixCondition15,  int0: daySixPrecip8, int1: daySixPrecip9, int2: daySixPrecip10, int3: daySixPrecip11, int4: daySixPrecip12, int5: daySixPrecip13, int6: daySixPrecip14, int7: daySixPrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
             }
         } else if day == 7 {
             if segmentControl.selectedSegmentIndex == 0 {
@@ -1894,13 +1845,6 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
                     completeDaySevenUISetup(condition0: daySevenCondition0, condition1: daySevenCondition1, condition2: daySevenCondition2, condition3: daySevenCondition3, condition4: daySevenCondition4, condition5: daySevenCondition5, condition6: daySevenCondition6, condition7: daySevenCondition7,  int0: daySevenCloudCover0, int1: daySevenCloudCover1, int2: daySevenCloudCover2, int3: daySevenCloudCover3, int4: daySevenCloudCover4, int5: daySevenCloudCover5, int6: daySevenCloudCover6, int7: daySevenCloudCover7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
                 } else {
                     completeDaySevenUISetup(condition0: daySevenCondition8, condition1: daySevenCondition9, condition2: daySevenCondition10, condition3: daySevenCondition11, condition4: daySevenCondition12, condition5: daySevenCondition13, condition6: daySevenCondition14, condition7: daySevenCondition15,  int0: daySevenCloudCover8, int1: daySevenCloudCover9, int2: daySevenCloudCover10, int3: daySevenCloudCover11, int4: daySevenCloudCover12, int5: daySevenCloudCover13, int6: daySevenCloudCover14, int7: daySevenCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else {
-                // Default to precipitation
-                if pageControl.currentPage == 0 {
-                    completeDaySevenUISetup(condition0: daySevenCondition0, condition1: daySevenCondition1, condition2: daySevenCondition2, condition3: daySevenCondition3, condition4: daySevenCondition4, condition5: daySevenCondition5, condition6: daySevenCondition6, condition7: daySevenCondition7,  int0: daySevenPrecip0, int1: daySevenPrecip1, int2: daySevenPrecip2, int3: daySevenPrecip3, int4: daySevenPrecip4, int5: daySevenPrecip5, int6: daySevenPrecip6, int7: daySevenPrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDaySevenUISetup(condition0: daySevenCondition8, condition1: daySevenCondition9, condition2: daySevenCondition10, condition3: daySevenCondition11, condition4: daySevenCondition12, condition5: daySevenCondition13, condition6: daySevenCondition14, condition7: daySevenCondition15,  int0: daySevenPrecip8, int1: daySevenPrecip9, int2: daySevenPrecip10, int3: daySevenPrecip11, int4: daySevenPrecip12, int5: daySevenPrecip13, int6: daySevenPrecip14, int7: daySevenPrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
                 }
             }
         } else if day == 8 {
@@ -1940,13 +1884,6 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
                 } else {
                     completeDayEightUISetup(condition0: dayEightCondition8, condition1: dayEightCondition9, condition2: dayEightCondition10, condition3: dayEightCondition11, condition4: dayEightCondition12, condition5: dayEightCondition13, condition6: dayEightCondition14, condition7: dayEightCondition15,  int0: dayEightCloudCover8, int1: dayEightCloudCover9, int2: dayEightCloudCover10, int3: dayEightCloudCover11, int4: dayEightCloudCover12, int5: dayEightCloudCover13, int6: dayEightCloudCover14, int7: dayEightCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
                 }
-            } else {
-                // Default to precipitation
-                if pageControl.currentPage == 0 {
-                    completeDayEightUISetup(condition0: dayEightCondition0, condition1: dayEightCondition1, condition2: dayEightCondition2, condition3: dayEightCondition3, condition4: dayEightCondition4, condition5: dayEightCondition5, condition6: dayEightCondition6, condition7: dayEightCondition7, int0: dayEightPrecip0, int1: dayEightPrecip1, int2: dayEightPrecip2, int3: dayEightPrecip3, int4: dayEightPrecip4, int5: dayEightPrecip5, int6: dayEightPrecip6, int7: dayEightPrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayEightUISetup(condition0: dayEightCondition8, condition1: dayEightCondition9, condition2: dayEightCondition10, condition3: dayEightCondition11, condition4: dayEightCondition12, condition5: dayEightCondition13, condition6: dayEightCondition14, condition7: dayEightCondition15, int0: dayEightPrecip8, int1: dayEightPrecip9, int2: dayEightPrecip10, int3: dayEightPrecip11, int4: dayEightPrecip12, int5: dayEightPrecip13, int6: dayEightPrecip14, int7: dayEightPrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
             }
         } else if day == 9 {
             if segmentControl.selectedSegmentIndex == 0 {
@@ -1984,13 +1921,6 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
                     completeDayNineUISetup(condition0: dayNineCondition0, condition1: dayNineCondition1, condition2: dayNineCondition2, condition3: dayNineCondition3, condition4: dayNineCondition4, condition5: dayNineCondition5, condition6: dayNineCondition6, condition7: dayNineCondition7, int0: dayNineCloudCover0, int1: dayNineCloudCover1, int2: dayNineCloudCover2, int3: dayNineCloudCover3, int4: dayNineCloudCover4, int5: dayNineCloudCover5, int6: dayNineCloudCover6, int7: dayNineCloudCover7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
                 } else {
                     completeDayNineUISetup(condition0: dayNineCondition8, condition1: dayNineCondition9, condition2: dayNineCondition10, condition3: dayNineCondition11, condition4: dayNineCondition12, condition5: dayNineCondition13, condition6: dayNineCondition14, condition7: dayNineCondition15, int0: dayNineCloudCover8, int1: dayNineCloudCover9, int2: dayNineCloudCover10, int3: dayNineCloudCover11, int4: dayNineCloudCover12, int5: dayNineCloudCover13, int6: dayNineCloudCover14, int7: dayNineCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else {
-                // Default to precipitation
-                if pageControl.currentPage == 0 {
-                    completeDayNineUISetup(condition0: dayNineCondition0, condition1: dayNineCondition1, condition2: dayNineCondition2, condition3: dayNineCondition3, condition4: dayNineCondition4, condition5: dayNineCondition5, condition6: dayNineCondition6, condition7: dayNineCondition7, int0: dayNinePrecip0, int1: dayNinePrecip1, int2: dayNinePrecip2, int3: dayNinePrecip3, int4: dayNinePrecip4, int5: dayNinePrecip5, int6: dayNinePrecip6, int7: dayNinePrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayNineUISetup(condition0: dayNineCondition8, condition1: dayNineCondition9, condition2: dayNineCondition10, condition3: dayNineCondition11, condition4: dayNineCondition12, condition5: dayNineCondition13, condition6: dayNineCondition14, condition7: dayNineCondition15, int0: dayNinePrecip8, int1: dayNinePrecip9, int2: dayNinePrecip10, int3: dayNinePrecip11, int4: dayNinePrecip12, int5: dayNinePrecip13, int6: dayNinePrecip14, int7: dayNinePrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
                 }
             }
         } else  if day == 10 {
@@ -2030,13 +1960,6 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
                 } else {
                     completeDayTenUISetup(condition0: dayTenCondition8, condition1: dayTenCondition9, condition2: dayTenCondition10, condition3: dayTenCondition11, condition4: dayTenCondition12, condition5: dayTenCondition13, condition6: dayTenCondition14, condition7: dayTenCondition15, int0: dayTenCloudCover8, int1: dayTenCloudCover9, int2: dayTenCloudCover10, int3: dayTenCloudCover11, int4: dayTenCloudCover12, int5: dayTenCloudCover13, int6: dayTenCloudCover14, int7: dayTenCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
                 }
-            } else {
-                // Default to precipitation
-                if pageControl.currentPage == 0 {
-                    completeDayTenUISetup(condition0: dayTenCondition0, condition1: dayTenCondition1, condition2: dayTenCondition2, condition3: dayTenCondition3, condition4: dayTenCondition4, condition5: dayTenCondition5, condition6: dayTenCondition6, condition7: dayTenCondition7, int0: dayTenPrecip0, int1: dayTenPrecip1, int2: dayTenPrecip2, int3: dayTenPrecip3, int4: dayTenPrecip4, int5: dayTenPrecip5, int6: dayTenPrecip6, int7: dayTenPrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayTenUISetup(condition0: dayTenCondition8, condition1: dayTenCondition9, condition2: dayTenCondition10, condition3: dayTenCondition11, condition4: dayTenCondition12, condition5: dayTenCondition13, condition6: dayTenCondition14, condition7: dayTenCondition15, int0: dayTenPrecip8, int1: dayTenPrecip9, int2: dayTenPrecip10, int3: dayTenPrecip11, int4: dayTenPrecip12, int5: dayTenPrecip13, int6: dayTenPrecip14, int7: dayTenPrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
             }
         } else if day == 11 {
             if segmentControl.selectedSegmentIndex == 0 {
@@ -2074,13 +1997,6 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
                     completeDayElevenUISetup(condition0: dayElevenCondition0, condition1: dayElevenCondition1, condition2: dayElevenCondition2, condition3: dayElevenCondition3, condition4: dayElevenCondition4, condition5: dayElevenCondition5, condition6: dayElevenCondition6, condition7: dayElevenCondition7, int0: dayElevenCloudCover0, int1: dayElevenCloudCover1, int2: dayElevenCloudCover2, int3: dayElevenCloudCover3, int4: dayElevenCloudCover4, int5: dayElevenCloudCover5, int6: dayElevenCloudCover6, int7: dayElevenCloudCover7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
                 } else {
                     completeDayElevenUISetup(condition0: dayElevenCondition8, condition1: dayElevenCondition9, condition2: dayElevenCondition10, condition3: dayElevenCondition11, condition4: dayElevenCondition12, condition5: dayElevenCondition13, condition6: dayElevenCondition14, condition7: dayElevenCondition15, int0: dayElevenCloudCover8, int1: dayElevenCloudCover9, int2: dayElevenCloudCover10, int3: dayElevenCloudCover11, int4: dayElevenCloudCover12, int5: dayElevenCloudCover13, int6: dayElevenCloudCover14, int7: dayElevenCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else {
-                // Default to precipitation
-                if pageControl.currentPage == 0 {
-                    completeDayElevenUISetup(condition0: dayElevenCondition0, condition1: dayElevenCondition1, condition2: dayElevenCondition2, condition3: dayElevenCondition3, condition4: dayElevenCondition4, condition5: dayElevenCondition5, condition6: dayElevenCondition6, condition7: dayElevenCondition7, int0: dayElevenPrecip0, int1: dayElevenPrecip1, int2: dayElevenPrecip2, int3: dayElevenPrecip3, int4: dayElevenPrecip4, int5: dayElevenPrecip5, int6: dayElevenPrecip6, int7: dayElevenPrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayElevenUISetup(condition0: dayElevenCondition8, condition1: dayElevenCondition9, condition2: dayElevenCondition10, condition3: dayElevenCondition11, condition4: dayElevenCondition12, condition5: dayElevenCondition13, condition6: dayElevenCondition14, condition7: dayElevenCondition15, int0: dayElevenPrecip8, int1: dayElevenPrecip9, int2: dayElevenPrecip10, int3: dayElevenPrecip11, int4: dayElevenPrecip12, int5: dayElevenPrecip13, int6: dayElevenPrecip14, int7: dayElevenPrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
                 }
             }
         } else if day == 12 {
@@ -2120,13 +2036,6 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
                 } else {
                     completeDayTwelveUISetup(condition0: dayTwelveCondition8, condition1: dayTwelveCondition9, condition2: dayTwelveCondition10, condition3: dayTwelveCondition11, condition4: dayTwelveCondition12, condition5: dayTwelveCondition13, condition6: dayTwelveCondition14, condition7: dayTwelveCondition15, int0: dayTwelveCloudCover8, int1: dayTwelveCloudCover9, int2: dayTwelveCloudCover10, int3: dayTwelveCloudCover11, int4: dayTwelveCloudCover12, int5: dayTwelveCloudCover13, int6: dayTwelveCloudCover14, int7: dayTwelveCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
                 }
-            } else {
-                // Default to precipitation
-                if pageControl.currentPage == 0 {
-                    completeDayTwelveUISetup(condition0: dayTwelveCondition0, condition1: dayTwelveCondition1, condition2: dayTwelveCondition2, condition3: dayTwelveCondition3, condition4: dayTwelveCondition4, condition5: dayTwelveCondition5, condition6: dayTwelveCondition6, condition7: dayTwelveCondition7, int0: dayTwelvePrecip0, int1: dayTwelvePrecip1, int2: dayTwelvePrecip2, int3: dayTwelvePrecip3, int4: dayTwelvePrecip4, int5: dayTwelvePrecip5, int6: dayTwelvePrecip6, int7: dayTwelvePrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayTwelveUISetup(condition0: dayTwelveCondition8, condition1: dayTwelveCondition9, condition2: dayTwelveCondition10, condition3: dayTwelveCondition11, condition4: dayTwelveCondition12, condition5: dayTwelveCondition13, condition6: dayTwelveCondition14, condition7: dayTwelveCondition15, int0: dayTwelvePrecip8, int1: dayTwelvePrecip9, int2: dayTwelvePrecip10, int3: dayTwelvePrecip11, int4: dayTwelvePrecip12, int5: dayTwelvePrecip13, int6: dayTwelvePrecip14, int7: dayTwelvePrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
             }
         } else if day == 13 {
             if segmentControl.selectedSegmentIndex == 0 {
@@ -2165,13 +2074,6 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
                 } else {
                     completeDayThirteenUISetup(condition0: dayThirteenCondition8, condition1: dayThirteenCondition9, condition2: dayThirteenCondition10, condition3: dayThirteenCondition11, condition4: dayThirteenCondition12, condition5: dayThirteenCondition13, condition6: dayThirteenCondition14, condition7: dayThirteenCondition15, int0: dayThirteenCloudCover8, int1: dayThirteenCloudCover9, int2: dayThirteenCloudCover10, int3: dayThirteenCloudCover11, int4: dayThirteenCloudCover12, int5: dayThirteenCloudCover13, int6: dayThirteenCloudCover14, int7: dayThirteenCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
                 }
-            } else {
-                // Default to precipitation
-                if pageControl.currentPage == 0 {
-                    completeDayThirteenUISetup(condition0: dayThirteenCondition0, condition1: dayThirteenCondition1, condition2: dayThirteenCondition2, condition3: dayThirteenCondition3, condition4: dayThirteenCondition4, condition5: dayThirteenCondition5, condition6: dayThirteenCondition6, condition7: dayThirteenCondition7, int0: dayThirteenPrecip0, int1: dayThirteenPrecip1, int2: dayThirteenPrecip2, int3: dayThirteenPrecip3, int4: dayThirteenPrecip4, int5: dayThirteenPrecip5, int6: dayThirteenPrecip6, int7: dayThirteenPrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayThirteenUISetup(condition0: dayThirteenCondition8, condition1: dayThirteenCondition9, condition2: dayThirteenCondition10, condition3: dayThirteenCondition11, condition4: dayThirteenCondition12, condition5: dayThirteenCondition13, condition6: dayThirteenCondition14, condition7: dayThirteenCondition15, int0: dayThirteenPrecip8, int1: dayThirteenPrecip9, int2: dayThirteenPrecip10, int3: dayThirteenPrecip11, int4: dayThirteenPrecip12, int5: dayThirteenPrecip13, int6: dayThirteenPrecip14, int7: dayThirteenPrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
             }
         } else if day == 14 {
                if segmentControl.selectedSegmentIndex == 0 {
@@ -2209,13 +2111,6 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
                     completeHourlyUISetup(condition0: conditionHour0, condition1: conditionHour1, condition2: conditionHour2, condition3: conditionHour3, condition4: conditionHour4, condition5: conditionHour5, condition6: conditionHour6, condition7: conditionHour7, int1: cloudCoverHour0, int2: cloudCoverHour1, int3: cloudCoverHour2, int4: cloudCoverHour3, int5: cloudCoverHour4, int6: cloudCoverHour5, int7: cloudCoverHour6, int8: cloudCoverHour7, time0: hour0, time1: hour1, time2: hour2, time3: hour3, time4: hour4, time5: hour5, time6: hour6, time7: hour7)
                    } else {
                     completeHourlyUISetup(condition0: conditionHour8, condition1: conditionHour9, condition2: conditionHour10, condition3: conditionHour11, condition4: conditionHour12, condition5: conditionHour13, condition6: conditionHour14, condition7: conditionHour15, int1: cloudCoverHour8, int2: cloudCoverHour9, int3: cloudCoverHour10, int4: cloudCoverHour11, int5: cloudCoverHour12, int6: cloudCoverHour13, int7: cloudCoverHour14, int8: cloudCoverHour15, time0: hour8, time1: hour9, time2: hour10, time3: hour11, time4: hour12, time5: hour13, time6: hour14, time7: hour15)
-                   }
-               } else {
-                   // Default to precipitation
-                   if pageControl.currentPage == 0 {
-                    completeHourlyUISetup(condition0: conditionHour0, condition1: conditionHour1, condition2: conditionHour2, condition3: conditionHour3, condition4: conditionHour4, condition5: conditionHour5, condition6: conditionHour6, condition7: conditionHour7, int1: precipHour0, int2: precipHour1, int3: precipHour2, int4: precipHour3, int5: precipHour4, int6: precipHour5, int7: precipHour6, int8: precipHour7, time0: hour0, time1: hour1, time2: hour2, time3: hour3, time4: hour4, time5: hour5, time6: hour6, time7: hour7)
-                   } else {
-                    completeHourlyUISetup(condition0: conditionHour8, condition1: conditionHour9, condition2: conditionHour10, condition3: conditionHour11, condition4: conditionHour12, condition5: conditionHour13, condition6: conditionHour14, condition7: conditionHour15, int1: precipHour8, int2: precipHour9, int3: precipHour10, int4: precipHour11, int5: precipHour12, int6: precipHour13, int7: precipHour14, int8: precipHour15, time0: hour8, time1: hour9, time2: hour10, time3: hour11, time4: hour12, time5: hour13, time6: hour14, time7: hour15)
                    }
                }
            }

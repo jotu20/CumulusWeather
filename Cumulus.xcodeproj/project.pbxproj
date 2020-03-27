@@ -19,7 +19,6 @@
 		CF6E4AA420DACFD8002349A7 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E4AA320DACFD8002349A7 /* ForecastViewController.swift */; };
 		CF6E4AA720DACFD8002349A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA520DACFD8002349A7 /* Main.storyboard */; };
 		CF6E4AA920DACFD9002349A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
-		CF824C3A20E84EEB00E5F0A7 /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF824C3820E84EEB00E5F0A7 /* Locations.xcdatamodeld */; };
 		CF9477492167DF0200DA8B38 /* SiriShortcutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9477482167DF0200DA8B38 /* SiriShortcutsTableViewController.swift */; };
 		CF94774B2167E48E00DA8B38 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF94774A2167E48E00DA8B38 /* Intents.framework */; };
 		CF9477532168080900DA8B38 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9477522168080900DA8B38 /* IntentHandler.swift */; };
@@ -48,9 +47,6 @@
 		CFAF60E4242E48E1004FB831 /* WeatherDataValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D2242E48E1004FB831 /* WeatherDataValues.swift */; };
 		CFAF60E5242E48E1004FB831 /* WeatherDataValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D2242E48E1004FB831 /* WeatherDataValues.swift */; };
 		CFAF60E6242E48E1004FB831 /* WeatherDataValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D2242E48E1004FB831 /* WeatherDataValues.swift */; };
-		CFAF60F2242E4C77004FB831 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF2C9314217CD08C00CC0F6F /* AppIntentVocabulary.plist */; };
-		CFAF60F3242E4C77004FB831 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF2C9314217CD08C00CC0F6F /* AppIntentVocabulary.plist */; };
-		CFAF60F4242E4C78004FB831 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF2C9314217CD08C00CC0F6F /* AppIntentVocabulary.plist */; };
 		CFAF62DE242E5D3D004FB831 /* DarkSkyWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D0242E48E1004FB831 /* DarkSkyWeatherData.swift */; };
 		CFAF62DF242E5D3D004FB831 /* DarkSkyCurrentForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D1242E48E1004FB831 /* DarkSkyCurrentForecastData.swift */; };
 		CFAF62E6242E5D97004FB831 /* DarkSkyWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D0242E48E1004FB831 /* DarkSkyWeatherData.swift */; };
@@ -1209,7 +1205,6 @@
 				CFF0A91A242E92A400FDDAF1 /* MightyUmbrella@2x.png in Resources */,
 				CFF0A872242E92A400FDDAF1 /* CarminePinkiPad@3x.png in Resources */,
 				CFF0A8AE242E92A400FDDAF1 /* TwilightZone@2x.png in Resources */,
-				CFAF60F2242E4C77004FB831 /* AppIntentVocabulary.plist in Resources */,
 				CFF0A882242E92A400FDDAF1 /* DarkCerulean@3x.png in Resources */,
 				CFF0A82A242E92A400FDDAF1 /* Tuscan@2x.png in Resources */,
 				CFF0A876242E92A400FDDAF1 /* CarminePinkiPad@2x.png in Resources */,
@@ -1276,7 +1271,6 @@
 				CFF0A7F0242E92A400FDDAF1 /* CottonCandy@3x.png in Resources */,
 				CFF0A8C8242E92A400FDDAF1 /* TwilightZone@3x.png in Resources */,
 				CFF0A904242E92A400FDDAF1 /* DodgerBluePad@3x.png in Resources */,
-				CFAF60F3242E4C77004FB831 /* AppIntentVocabulary.plist in Resources */,
 				CFF0A8C0242E92A400FDDAF1 /* Sandstorm@2x.png in Resources */,
 				CFF0A844242E92A400FDDAF1 /* CottonCandy@2x.png in Resources */,
 				CFF0A908242E92A400FDDAF1 /* DodgerBlueiPad@2x.png in Resources */,
@@ -1414,7 +1408,6 @@
 				CFF0A825242E92A400FDDAF1 /* PlumpPurpleiPad@3x.png in Resources */,
 				CFF0A865242E92A400FDDAF1 /* 8-Bit@3x.png in Resources */,
 				CFF0A861242E92A400FDDAF1 /* TwilightZoneiPad@2x.png in Resources */,
-				CFAF60F4242E4C78004FB831 /* AppIntentVocabulary.plist in Resources */,
 				CFF0A881242E92A400FDDAF1 /* DarkCeruleaniPad@2x.png in Resources */,
 				CFF0A8CD242E92A400FDDAF1 /* RainDropiPad@2x.png in Resources */,
 				CFF0A8D1242E92A400FDDAF1 /* PrideiPad@2x.png in Resources */,
@@ -1771,7 +1764,6 @@
 				CF4A0E612108B5580061CAAD /* AppIconTableViewController.swift in Sources */,
 				CFA3259E20E44DE500F4AFBD /* LocationsViewController.swift in Sources */,
 				CFAF60E3242E48E1004FB831 /* WeatherDataValues.swift in Sources */,
-				CF824C3A20E84EEB00E5F0A7 /* Locations.xcdatamodeld in Sources */,
 				CFD5E8FC20E669B0002A5F0C /* AcknowledgementsViewController.swift in Sources */,
 				CF6E4AA220DACFD8002349A7 /* AppDelegate.swift in Sources */,
 				CFAF62DF242E5D3D004FB831 /* DarkSkyCurrentForecastData.swift in Sources */,

@@ -1538,6 +1538,8 @@ class WeatherViewController: UIViewController, UITabBarControllerDelegate, CLLoc
                 segmentControl.selectedSegmentIndex = 4
             } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Cloud") == true {
                 segmentControl.selectedSegmentIndex = 5
+            } else {
+                segmentControl.selectedSegmentIndex = 0
             }
         }
         

@@ -546,14 +546,6 @@ class CumulusProTableViewController: UITableViewController {
         let controller = storyboard.instantiateViewController(withIdentifier: "PrivacyPolicy")
         present(controller, animated: true, completion: nil)
     }
-    
-    @IBAction func termsOfUseButtonTapped(_ sender: UIButton) {
-        weatherLoaded = true
-        potentialCustomer = true
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "TermsOfUse")
-        present(controller, animated: true, completion: nil)
-    }
 }
 
 extension CumulusProTableViewController {

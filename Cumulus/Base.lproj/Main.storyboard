@@ -16761,49 +16761,8 @@
                                             <segue destination="OQJ-rN-FJb" kind="show" identifier="privacyPolicy" id="eND-aD-Wtj"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Ayo-JE-ZMe">
-                                        <rect key="frame" x="0.0" y="519.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ayo-JE-ZMe" id="heJ-Ng-slt">
-                                            <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of Use" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m0-Tf-aJj">
-                                                    <rect key="frame" x="16" y="0.5" width="343" height="43.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="0JK-P7-UuR"/>
-                                                        <constraint firstAttribute="height" constant="43.5" id="vVz-1b-7s2"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="3m0-Tf-aJj" firstAttribute="leading" secondItem="heJ-Ng-slt" secondAttribute="leading" constant="16" id="1aw-CX-y7S"/>
-                                                <constraint firstItem="3m0-Tf-aJj" firstAttribute="centerY" secondItem="heJ-Ng-slt" secondAttribute="centerY" id="MAc-zq-YqF"/>
-                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="3m0-Tf-aJj" secondAttribute="trailing" constant="409" id="N7g-E3-mY3"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="N7g-E3-mY3"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=regular">
-                                                <mask key="constraints">
-                                                    <include reference="N7g-E3-mY3"/>
-                                                </mask>
-                                            </variation>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="ihS-cK-hWn" appends="YES" id="Dqq-yS-Xy1"/>
-                                            <segue destination="yOl-zn-jOL" kind="show" identifier="termsOfUse" id="xlR-4P-QbM"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Bo5-om-p5I">
-                                        <rect key="frame" x="0.0" y="563.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="519.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bo5-om-p5I" id="vje-gy-DHo">
                                             <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
@@ -16858,7 +16817,6 @@
                         <outlet property="preferencesLabelWidth" destination="wEr-QR-xLd" id="kvA-zF-iSv"/>
                         <outlet property="privacyPolicyLabelWidth" destination="LHU-zm-sPe" id="juy-MV-rZw"/>
                         <outlet property="reviewCumulusLabelWidth" destination="Uhn-z1-hDX" id="2c4-Ir-J3M"/>
-                        <outlet property="termsOfUseLabelWidth" destination="0JK-P7-UuR" id="A1Y-Yj-BuY"/>
                         <outlet property="weatherUnitsCanadaTableCell" destination="M5x-Ba-eyy" id="nMA-T2-TC6"/>
                         <outlet property="weatherUnitsInternationalTableCell" destination="WSk-n5-uqf" id="k1E-0o-izh"/>
                         <outlet property="weatherUnitsUKTableCell" destination="1IJ-0H-vdi" id="c1i-ol-JmH"/>
@@ -16889,12 +16847,6 @@
                 <tapGestureRecognizer id="nmm-lZ-Cjp">
                     <connections>
                         <action selector="openPrivacyPolicy:" destination="QJa-Ff-GNZ" id="iZK-CB-nOq"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="Ity-39-4P4"/>
-                <tapGestureRecognizer id="ihS-cK-hWn">
-                    <connections>
-                        <action selector="openTermsOfUse:" destination="QJa-Ff-GNZ" id="Ylg-dO-hDj"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Kk4-kB-KLD">
@@ -18295,14 +18247,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Support Development" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CaE-os-b5k">
-                                                    <rect key="frame" x="83" y="14" width="168" height="20.5"/>
+                                                    <rect key="frame" x="91" y="14" width="168" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DYU-VT-uSe">
-                                                    <rect key="frame" x="83" y="37.5" width="284" height="57.5"/>
+                                                    <rect key="frame" x="91" y="37.5" width="265.5" height="57.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <string key="text">I'm just one guy building Cumulus so your support helps continue the development and improvement of Cumulus. All contributions are greatly appreciated!</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -18310,7 +18262,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Heart icon" id="u1o-gf-6oD">
-                                                    <rect key="frame" x="8" y="26" width="60" height="60"/>
+                                                    <rect key="frame" x="16" y="26" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -18325,21 +18277,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Donation to Charity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="26E-mi-yzN">
-                                                    <rect key="frame" x="83" y="29" width="148.5" height="20.5"/>
+                                                    <rect key="frame" x="91" y="29" width="148.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="With every tip given Cumulus donates 20% of it to an environmental charity. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ASX-Kd-X9S">
-                                                    <rect key="frame" x="83" y="52.5" width="284" height="29"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="With every tip given, Cumulus donates 20% of it to an environmental charity. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ASX-Kd-X9S">
+                                                    <rect key="frame" x="91" y="52.5" width="264" height="29"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Donation icon" id="mbz-Ee-lyF">
-                                                    <rect key="frame" x="8" y="26" width="60" height="60"/>
+                                                    <rect key="frame" x="16" y="26" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -18497,12 +18449,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         <rect key="frame" x="0.0" y="8" width="375" height="659"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TY2-8m-Wx5">
-                                                <rect key="frame" x="8" y="5" width="359" height="880"/>
+                                                <rect key="frame" x="8" y="5" width="359" height="1015"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0lf-BN-8AW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="230"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="125"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMo-2L-aGo">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMo-2L-aGo">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="678" id="Ooy-eH-cTY">
@@ -18530,8 +18482,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                     </mask>
                                                                 </variation>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVR-2i-7hx">
-                                                                <rect key="frame" x="0.0" y="20" width="359" height="210"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVR-2i-7hx">
+                                                                <rect key="frame" x="0.0" y="20" width="359" height="105"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="4Wu-xl-B9t">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="135"/>
@@ -18540,9 +18492,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="678" id="MfP-vh-z5L">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="752"/>
                                                                     </constraint>
-                                                                    <constraint firstAttribute="height" constant="210" id="PgG-at-Bah"/>
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="105" id="PgG-at-Bah"/>
                                                                 </constraints>
-                                                                <string key="text">You may opt to grant Cumulus access to your location to receive localized weather forecasts. Cumulus does not require access to your location however some of its features do. For the most accurate weather forecasts location permission is recommended but is not required. You can enable location access by selecting to allow location access "While Using the App" or "Always". You can always change the location access on your devices' settings.</string>
+                                                                <string key="text">Cumulus takes your privacy and personal data seriously. Cumulus will only retrieve the least information that is necessary. Individual users are never tracked and personal data is never given to third parties. </string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -18576,8 +18528,85 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                             </mask>
                                                         </variation>
                                                     </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="huN-XC-nav">
+                                                        <rect key="frame" x="0.0" y="145" width="359" height="230"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqa-qf-LE3">
+                                                                <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="BIC-xF-VCW"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="NMG-ap-47i"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="359" id="UqZ-nf-hfl"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="678" id="rq6-Y4-170">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="752"/>
+                                                                    </constraint>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="default">
+                                                                    <mask key="constraints">
+                                                                        <exclude reference="rq6-Y4-170"/>
+                                                                        <exclude reference="NMG-ap-47i"/>
+                                                                    </mask>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <mask key="constraints">
+                                                                        <include reference="rq6-Y4-170"/>
+                                                                        <exclude reference="BIC-xF-VCW"/>
+                                                                        <exclude reference="UqZ-nf-hfl"/>
+                                                                        <include reference="NMG-ap-47i"/>
+                                                                    </mask>
+                                                                </variation>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HL-Xk-J0p">
+                                                                <rect key="frame" x="0.0" y="20" width="359" height="210"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="bRj-Cm-kn3">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="135"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="678" id="jiZ-OK-W4G">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="752"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="210" id="omL-RT-KA6"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="359" id="t4t-fQ-qq3"/>
+                                                                </constraints>
+                                                                <string key="text">You may opt to grant Cumulus access to your location to receive localized weather forecasts. Cumulus does not require access to your location however some of its features do. For the most accurate weather forecasts location permission is recommended but is not required. You can enable location access by selecting to allow location access "While Using the App" or "Always". You can always change the location access on your devices' settings.</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="default">
+                                                                    <mask key="constraints">
+                                                                        <exclude reference="bRj-Cm-kn3"/>
+                                                                        <exclude reference="jiZ-OK-W4G"/>
+                                                                    </mask>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <mask key="constraints">
+                                                                        <include reference="bRj-Cm-kn3"/>
+                                                                        <exclude reference="t4t-fQ-qq3"/>
+                                                                        <include reference="jiZ-OK-W4G"/>
+                                                                        <exclude reference="omL-RT-KA6"/>
+                                                                    </mask>
+                                                                </variation>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="3HL-Xk-J0p" secondAttribute="trailing" id="zne-Lf-0ig"/>
+                                                        </constraints>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="zne-Lf-0ig"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <mask key="constraints">
+                                                                <exclude reference="zne-Lf-0ig"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LLQ-0W-mhI">
-                                                        <rect key="frame" x="0.0" y="250" width="359" height="310"/>
+                                                        <rect key="frame" x="0.0" y="395" width="359" height="310"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information Collection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYX-wo-RZJ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
@@ -18607,7 +18636,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                     </mask>
                                                                 </variation>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6R-wc-XcV">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6R-wc-XcV">
                                                                 <rect key="frame" x="0.0" y="20" width="359" height="290"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="a5y-Mh-ngw">
@@ -18617,7 +18646,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="678" id="ohP-Ny-WQv">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="752"/>
                                                                     </constraint>
-                                                                    <constraint firstAttribute="height" constant="290" id="sbF-sm-dpJ"/>
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="290" id="sbF-sm-dpJ"/>
                                                                 </constraints>
                                                                 <string key="text">Cumulus does not collect or store any personally identifiable information. Cumulus may ask for permission to access your location but this can be changed at anytime under your devices' settings and is not required. When you allow location access to Cumulus, your location is used along with the Dark Sky servers to retrieve weather forecasts for your location. Your location is also used when the today widget or Siri shortcuts are enabled. Your location is only used each time a request is made. None of the information sent is personally identifiable or stored by any third party. </string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -18654,7 +18683,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                         </variation>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Lp-yD-VMr">
-                                                        <rect key="frame" x="0.0" y="580" width="359" height="190"/>
+                                                        <rect key="frame" x="0.0" y="725" width="359" height="190"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analytics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whk-OC-UTE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
@@ -18691,7 +18720,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="95"/>
                                                                     </constraint>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="359" id="S43-jG-K0C"/>
-                                                                    <constraint firstAttribute="height" constant="170" id="amp-MO-VFS"/>
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="170" id="amp-MO-VFS"/>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="678" id="kcJ-IV-cqd">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="752"/>
                                                                     </constraint>
@@ -18731,7 +18760,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                         </variation>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C2q-Gf-71u">
-                                                        <rect key="frame" x="0.0" y="790" width="359" height="90"/>
+                                                        <rect key="frame" x="0.0" y="935" width="359" height="80"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBj-Pw-y14">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
@@ -18761,15 +18790,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                     </mask>
                                                                 </variation>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To report any issues, ask questions, or give feedback you can reach me at cumulusweatherapp@gmail.com." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgx-bo-M0w">
-                                                                <rect key="frame" x="0.0" y="20" width="359" height="70"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To report any issues, ask questions, or give feedback, please feel free to reach out." lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWa-ns-jQW">
+                                                                <rect key="frame" x="0.0" y="20" width="359" height="60"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="359" id="2M2-A5-RRu"/>
-                                                                    <constraint firstAttribute="height" constant="70" id="Ipk-kc-MHz"/>
-                                                                    <constraint firstAttribute="height" constant="60" id="TxC-OX-14B">
-                                                                        <variation key="heightClass=regular-widthClass=regular" constant="55"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="359" id="KXo-tu-ynk"/>
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Ntn-Ls-gXo"/>
+                                                                    <constraint firstAttribute="height" constant="60" id="hMb-yG-cVK">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="95"/>
                                                                     </constraint>
-                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="678" id="pmt-7z-ccq">
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="678" id="leO-yu-YtX">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="752"/>
                                                                     </constraint>
                                                                 </constraints>
@@ -18778,33 +18807,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                 <nil key="highlightedColor"/>
                                                                 <variation key="default">
                                                                     <mask key="constraints">
-                                                                        <exclude reference="TxC-OX-14B"/>
-                                                                        <exclude reference="pmt-7z-ccq"/>
+                                                                        <exclude reference="hMb-yG-cVK"/>
+                                                                        <exclude reference="leO-yu-YtX"/>
                                                                     </mask>
                                                                 </variation>
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <mask key="constraints">
-                                                                        <exclude reference="2M2-A5-RRu"/>
-                                                                        <exclude reference="Ipk-kc-MHz"/>
-                                                                        <include reference="TxC-OX-14B"/>
-                                                                        <include reference="pmt-7z-ccq"/>
+                                                                        <include reference="hMb-yG-cVK"/>
+                                                                        <exclude reference="KXo-tu-ynk"/>
+                                                                        <exclude reference="Ntn-Ls-gXo"/>
+                                                                        <include reference="leO-yu-YtX"/>
                                                                     </mask>
                                                                 </variation>
                                                             </label>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="qgx-bo-M0w" secondAttribute="trailing" id="mDF-co-GsD"/>
-                                                        </constraints>
-                                                        <variation key="default">
-                                                            <mask key="constraints">
-                                                                <exclude reference="mDF-co-GsD"/>
-                                                            </mask>
-                                                        </variation>
-                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                            <mask key="constraints">
-                                                                <exclude reference="mDF-co-GsD"/>
-                                                            </mask>
-                                                        </variation>
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
@@ -18854,19 +18870,23 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     <connections>
                         <outlet property="privacyPolicyView" destination="GHu-pZ-VYj" id="nM6-g4-VeD"/>
                         <outlet property="stackViewWidth" destination="0eh-wU-XZN" id="r0O-X9-WDS"/>
-                        <outlet property="statementDescription1" destination="MVR-2i-7hx" id="HPV-8a-SGb"/>
-                        <outlet property="statementDescription1Height" destination="PgG-at-Bah" id="V4G-pE-BGX"/>
-                        <outlet property="statementDescription1Width" destination="E9v-LR-pcT" id="O77-wd-WoD"/>
-                        <outlet property="statementDescription2" destination="W6R-wc-XcV" id="bOU-Gd-rwF"/>
+                        <outlet property="statementDescription0" destination="MVR-2i-7hx" id="KIh-u6-AbZ"/>
+                        <outlet property="statementDescription0Height" destination="PgG-at-Bah" id="5cQ-oz-Csc"/>
+                        <outlet property="statementDescription0Width" destination="E9v-LR-pcT" id="s3Y-Vr-DcG"/>
+                        <outlet property="statementDescription1" destination="3HL-Xk-J0p" id="ivK-BV-Ue6"/>
+                        <outlet property="statementDescription1Height" destination="omL-RT-KA6" id="LNO-Xy-ryp"/>
+                        <outlet property="statementDescription1Width" destination="t4t-fQ-qq3" id="Kfc-hY-xtb"/>
+                        <outlet property="statementDescription2" destination="W6R-wc-XcV" id="94p-pe-iLg"/>
                         <outlet property="statementDescription2Height" destination="sbF-sm-dpJ" id="aLm-Xs-a9k"/>
                         <outlet property="statementDescription2Width" destination="eh9-l2-zmv" id="AVT-MU-i4a"/>
-                        <outlet property="statementDescription3" destination="rBy-TH-7ik" id="EVw-MC-IYr"/>
+                        <outlet property="statementDescription3" destination="rBy-TH-7ik" id="q4b-Mn-Xtz"/>
                         <outlet property="statementDescription3Height" destination="amp-MO-VFS" id="O0e-8a-9Eh"/>
                         <outlet property="statementDescription3Width" destination="S43-jG-K0C" id="l0E-AQ-0Qb"/>
-                        <outlet property="statementDescription4" destination="qgx-bo-M0w" id="tem-lB-Kew"/>
-                        <outlet property="statementDescription4Height" destination="Ipk-kc-MHz" id="iG7-IZ-36t"/>
-                        <outlet property="statementDescription4Width" destination="2M2-A5-RRu" id="4EO-1f-ywi"/>
-                        <outlet property="statementTitle1Width" destination="gBL-x8-YNK" id="Dq3-vy-dUb"/>
+                        <outlet property="statementDescription4" destination="IWa-ns-jQW" id="qNT-eR-VaN"/>
+                        <outlet property="statementDescription4Height" destination="Ntn-Ls-gXo" id="rCO-3j-Zpz"/>
+                        <outlet property="statementDescription4Width" destination="KXo-tu-ynk" id="03T-io-8NG"/>
+                        <outlet property="statementTitle0Width" destination="gBL-x8-YNK" id="OTJ-uw-lzp"/>
+                        <outlet property="statementTitle1Width" destination="UqZ-nf-hfl" id="Xue-oq-36T"/>
                         <outlet property="statementTitle2Width" destination="bZo-oP-df7" id="ypK-k4-idy"/>
                         <outlet property="statementTitle3Width" destination="ajm-jX-Nvc" id="Rfq-eH-jgE"/>
                         <outlet property="statementTitle4Width" destination="b5a-xy-BWf" id="xUH-GD-oUD"/>
@@ -18875,257 +18895,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdT-eK-Z6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4012" y="3439"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="4nl-NK-2Q2">
-            <objects>
-                <navigationController storyboardIdentifier="TermsOfUse" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Tdn-Oc-2Bg" sceneMemberID="viewController">
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="tJE-sm-Od6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="customControlColor"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="yOl-zn-jOL" kind="relationship" relationship="rootViewController" id="U9Z-1J-lrd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b23-Y6-7Cx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4950" y="2642"/>
-        </scene>
-        <!--Terms Of Use View Controller-->
-        <scene sceneID="dDt-Fu-0Yp">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="yOl-zn-jOL" customClass="TermsOfUseViewController" customModule="Cumulus" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LRl-0F-4ve">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cr6-GT-ZUU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTY-Dh-nBn">
-                                        <rect key="frame" x="0.0" y="8" width="375" height="659"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GIn-nf-lI1">
-                                                <rect key="frame" x="8" y="5" width="359" height="365"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gjO-Ld-21X">
-                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="255"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6b-3L-DmU">
-                                                                <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="678" id="SIj-2m-LAT">
-                                                                        <variation key="heightClass=regular-widthClass=regular" constant="752"/>
-                                                                    </constraint>
-                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="359" id="Tk9-pk-bJG"/>
-                                                                    <constraint firstAttribute="height" constant="20" id="u0E-I7-gXh"/>
-                                                                    <constraint firstAttribute="height" constant="30" id="x6t-sv-aLx"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <variation key="default">
-                                                                    <mask key="constraints">
-                                                                        <exclude reference="SIj-2m-LAT"/>
-                                                                        <exclude reference="x6t-sv-aLx"/>
-                                                                    </mask>
-                                                                </variation>
-                                                                <variation key="heightClass=regular-widthClass=regular">
-                                                                    <mask key="constraints">
-                                                                        <include reference="SIj-2m-LAT"/>
-                                                                        <exclude reference="Tk9-pk-bJG"/>
-                                                                        <exclude reference="u0E-I7-gXh"/>
-                                                                        <include reference="x6t-sv-aLx"/>
-                                                                    </mask>
-                                                                </variation>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afa-cp-z11">
-                                                                <rect key="frame" x="0.0" y="20" width="359" height="235"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="678" id="s7C-Fw-ZYu">
-                                                                        <variation key="heightClass=regular-widthClass=regular" constant="752"/>
-                                                                    </constraint>
-                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="359" id="uPa-mR-xK3"/>
-                                                                    <constraint firstAttribute="height" constant="235" id="wIa-Rs-nft"/>
-                                                                    <constraint firstAttribute="height" constant="60" id="yFk-fV-3ta">
-                                                                        <variation key="heightClass=regular-widthClass=regular" constant="135"/>
-                                                                    </constraint>
-                                                                </constraints>
-                                                                <string key="text">Cumulus takes your privacy and personal data seriously. Cumulus will only retrieve the least information that is necessary. Individual users are never tracked and personal data is never given to third parties. You may opt to grant Cumulus access to your location for better predictions about the weather around you. However, at any time you can change this access as stated in the Privacy Policy. For more information on how Cumulus uses your location visit Privacy Policy under settings.</string>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <variation key="default">
-                                                                    <mask key="constraints">
-                                                                        <exclude reference="s7C-Fw-ZYu"/>
-                                                                        <exclude reference="yFk-fV-3ta"/>
-                                                                    </mask>
-                                                                </variation>
-                                                                <variation key="heightClass=regular-widthClass=regular">
-                                                                    <mask key="constraints">
-                                                                        <include reference="s7C-Fw-ZYu"/>
-                                                                        <exclude reference="uPa-mR-xK3"/>
-                                                                        <exclude reference="wIa-Rs-nft"/>
-                                                                        <include reference="yFk-fV-3ta"/>
-                                                                    </mask>
-                                                                </variation>
-                                                            </label>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="afa-cp-z11" secondAttribute="trailing" id="fFB-Bb-Um1"/>
-                                                        </constraints>
-                                                        <variation key="default">
-                                                            <mask key="constraints">
-                                                                <exclude reference="fFB-Bb-Um1"/>
-                                                            </mask>
-                                                        </variation>
-                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                            <mask key="constraints">
-                                                                <exclude reference="fFB-Bb-Um1"/>
-                                                            </mask>
-                                                        </variation>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3CF-O9-gXC">
-                                                        <rect key="frame" x="0.0" y="275" width="359" height="90"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INn-lG-Fs0">
-                                                                <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="359" id="5nq-QI-doO"/>
-                                                                    <constraint firstAttribute="height" constant="20" id="ANr-27-5Dv"/>
-                                                                    <constraint firstAttribute="height" constant="30" id="iyd-rW-1Iq"/>
-                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="678" id="j7L-fv-U9M">
-                                                                        <variation key="heightClass=regular-widthClass=regular" constant="752"/>
-                                                                    </constraint>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <variation key="default">
-                                                                    <mask key="constraints">
-                                                                        <exclude reference="iyd-rW-1Iq"/>
-                                                                        <exclude reference="j7L-fv-U9M"/>
-                                                                    </mask>
-                                                                </variation>
-                                                                <variation key="heightClass=regular-widthClass=regular">
-                                                                    <mask key="constraints">
-                                                                        <exclude reference="5nq-QI-doO"/>
-                                                                        <exclude reference="ANr-27-5Dv"/>
-                                                                        <include reference="iyd-rW-1Iq"/>
-                                                                        <include reference="j7L-fv-U9M"/>
-                                                                    </mask>
-                                                                </variation>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To report any issues, ask questions, or give feedback you can reach me at cumulusweatherapp@gmail.com." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0s8-4X-shl">
-                                                                <rect key="frame" x="0.0" y="20" width="359" height="70"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="678" id="E1P-dZ-h1q">
-                                                                        <variation key="heightClass=regular-widthClass=regular" constant="752"/>
-                                                                    </constraint>
-                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="359" id="gXI-0z-r7u"/>
-                                                                    <constraint firstAttribute="height" constant="60" id="hI6-wx-xpO">
-                                                                        <variation key="heightClass=regular-widthClass=regular" constant="55"/>
-                                                                    </constraint>
-                                                                    <constraint firstAttribute="height" constant="70" id="qsw-BP-byC"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <variation key="default">
-                                                                    <mask key="constraints">
-                                                                        <exclude reference="E1P-dZ-h1q"/>
-                                                                        <exclude reference="hI6-wx-xpO"/>
-                                                                    </mask>
-                                                                </variation>
-                                                                <variation key="heightClass=regular-widthClass=regular">
-                                                                    <mask key="constraints">
-                                                                        <include reference="E1P-dZ-h1q"/>
-                                                                        <exclude reference="gXI-0z-r7u"/>
-                                                                        <include reference="hI6-wx-xpO"/>
-                                                                        <exclude reference="qsw-BP-byC"/>
-                                                                    </mask>
-                                                                </variation>
-                                                            </label>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="0s8-4X-shl" secondAttribute="trailing" id="EP9-AT-pbX"/>
-                                                        </constraints>
-                                                        <variation key="default">
-                                                            <mask key="constraints">
-                                                                <exclude reference="EP9-AT-pbX"/>
-                                                            </mask>
-                                                        </variation>
-                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                            <mask key="constraints">
-                                                                <exclude reference="EP9-AT-pbX"/>
-                                                            </mask>
-                                                        </variation>
-                                                    </stackView>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="359" id="NJM-dQ-1Qb"/>
-                                                    <constraint firstAttribute="width" constant="359" id="duV-yn-6Y3">
-                                                        <variation key="heightClass=regular-widthClass=regular" constant="752"/>
-                                                    </constraint>
-                                                </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="NJM-dQ-1Qb"/>
-                                                    </mask>
-                                                </variation>
-                                            </stackView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="GIn-nf-lI1" firstAttribute="top" secondItem="QTY-Dh-nBn" secondAttribute="top" constant="5" id="L1B-0l-ugd"/>
-                                            <constraint firstAttribute="trailing" secondItem="GIn-nf-lI1" secondAttribute="trailing" constant="8" id="ZxR-Gp-zSR"/>
-                                            <constraint firstItem="GIn-nf-lI1" firstAttribute="leading" secondItem="QTY-Dh-nBn" secondAttribute="leading" constant="8" id="mpb-fH-mwl"/>
-                                            <constraint firstAttribute="bottom" secondItem="GIn-nf-lI1" secondAttribute="bottom" constant="5" id="yGH-iL-l7W"/>
-                                        </constraints>
-                                    </scrollView>
-                                </subviews>
-                                <color key="backgroundColor" name="customControlColor"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="QTY-Dh-nBn" secondAttribute="bottom" id="Hgg-Zo-wDP"/>
-                                    <constraint firstItem="QTY-Dh-nBn" firstAttribute="leading" secondItem="Cr6-GT-ZUU" secondAttribute="leading" id="MRc-8e-9Et"/>
-                                    <constraint firstAttribute="trailing" secondItem="QTY-Dh-nBn" secondAttribute="trailing" id="eMI-Rx-ayV"/>
-                                    <constraint firstItem="QTY-Dh-nBn" firstAttribute="top" secondItem="Cr6-GT-ZUU" secondAttribute="topMargin" id="jFR-uu-ab1"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" name="customControlColor"/>
-                        <constraints>
-                            <constraint firstItem="Cr6-GT-ZUU" firstAttribute="bottom" secondItem="LRl-0F-4ve" secondAttribute="bottom" id="0TD-Y6-qcY"/>
-                            <constraint firstItem="Cr6-GT-ZUU" firstAttribute="trailing" secondItem="LRl-0F-4ve" secondAttribute="trailing" id="VlX-T5-QkD"/>
-                            <constraint firstItem="Cr6-GT-ZUU" firstAttribute="leading" secondItem="LRl-0F-4ve" secondAttribute="leading" id="i1z-Yj-N5s"/>
-                            <constraint firstItem="Cr6-GT-ZUU" firstAttribute="top" secondItem="LRl-0F-4ve" secondAttribute="top" id="lg3-Ks-DQx"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="ve0-qX-kLQ"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="WSi-W3-wI3"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="stackViewWidth" destination="duV-yn-6Y3" id="tSj-No-LFn"/>
-                        <outlet property="statementDescription1" destination="afa-cp-z11" id="RsO-MG-Tnd"/>
-                        <outlet property="statementDescription1Height" destination="wIa-Rs-nft" id="Bkr-Pi-TxB"/>
-                        <outlet property="statementDescription1Width" destination="uPa-mR-xK3" id="BjE-ol-yPb"/>
-                        <outlet property="statementDescription4" destination="0s8-4X-shl" id="PUC-TL-erg"/>
-                        <outlet property="statementDescription4Height" destination="qsw-BP-byC" id="EhT-Bh-QWt"/>
-                        <outlet property="statementDescription4Width" destination="gXI-0z-r7u" id="fxg-S2-HHT"/>
-                        <outlet property="statementTitle1Width" destination="Tk9-pk-bJG" id="zjr-ZR-zHz"/>
-                        <outlet property="statementTitle4Width" destination="5nq-QI-doO" id="1Va-9N-Yn1"/>
-                        <outlet property="termsOfUseView" destination="Cr6-GT-ZUU" id="yhb-v7-4Z4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Onn-Rb-vKF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4950" y="3438"/>
         </scene>
         <!--App Icon Table View Controller-->
         <scene sceneID="8hj-uh-gzs">
@@ -20891,7 +20660,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <inferredMetricsTieBreakers>
         <segue reference="cje-Dn-Okh"/>
         <segue reference="Jw2-4q-mDz"/>
-        <segue reference="xlR-4P-QbM"/>
         <segue reference="eND-aD-Wtj"/>
         <segue reference="u9y-Cd-8dt"/>
         <segue reference="RbQ-av-C2d"/>

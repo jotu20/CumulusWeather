@@ -24,7 +24,6 @@ var unitsChanged: Bool = false
 var setupCounter: Int = 0
 var userViewedCounter: Int = 0
 var userInvocationPhrase: String = ""
-var openPolicyTermsFromCumulusPro: Bool = false
 var twentyFourHourClockEnabled: Bool = false
 
 // App icon & Color Themes

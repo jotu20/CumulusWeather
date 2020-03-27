@@ -273,10 +273,12 @@ class PreferencesTableViewController: UITableViewController,  UITextFieldDelegat
             defaultHourlyConditionTextField.text = defaultHourlyConditionTypes[row]
             defaultHourlyCondition = "\(defaultHourlyConditionTypes[row])"
             defaults.set("\(defaultHourlyConditionTypes[row])", forKey: "defaultHourlyCondition")
+            weatherLoaded = false
         } else if currentTextField == defaultDailyConditionTextField {
             defaultDailyConditionTextField.text = defaultDailyConditionTypes[row]
             defaultDailyCondition = "\(defaultDailyConditionTypes[row])"
             defaults.set("\(defaultDailyConditionTypes[row])", forKey: "defaultDailyCondition")
+            weatherLoaded = false
         } else if currentTextField == defaultWidgetSlot1TextField {
             defaultWidgetSlot1TextField.text = defaultWidgetConditionSlot1[row]
             defaultWidgetSlot1 = "\(defaultWidgetConditionSlot1[row])"

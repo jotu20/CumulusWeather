@@ -21,7 +21,6 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     @IBOutlet weak var cumulusProLabelWidth: NSLayoutConstraint!
     @IBOutlet weak var reviewCumulusLabelWidth: NSLayoutConstraint!
     @IBOutlet weak var privacyPolicyLabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var termsOfUseLabelWidth: NSLayoutConstraint!
     @IBOutlet weak var acknowledgementsLabelWidth: NSLayoutConstraint!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,7 +40,6 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
             cumulusProLabelWidth.constant = 300
             reviewCumulusLabelWidth.constant = 300
             privacyPolicyLabelWidth.constant = 300
-            termsOfUseLabelWidth.constant = 300
             acknowledgementsLabelWidth.constant = 300
         } else if screenHeight == 736 || screenHeight == 896  {
             // iPhone Plus
@@ -49,7 +47,6 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
             cumulusProLabelWidth.constant = 375
             reviewCumulusLabelWidth.constant = 375
             privacyPolicyLabelWidth.constant = 375
-            termsOfUseLabelWidth.constant = 375
             acknowledgementsLabelWidth.constant = 375
         }
 
@@ -120,11 +117,6 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     @IBAction func openPrivacyPolicy(_ sender: UITapGestureRecognizer) {
         weatherLoaded = true
         performSegue(withIdentifier: "privacyPolicy", sender: nil)
-    }
-
-    @IBAction func openTermsOfUse(_ sender: UITapGestureRecognizer) {
-        weatherLoaded = true
-        performSegue(withIdentifier: "termsOfUse", sender: nil)
     }
 
     @IBAction func openAcknowledgements(_ sender: UITapGestureRecognizer) {

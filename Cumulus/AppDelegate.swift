@@ -29,10 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if (defaults.string(forKey: "defaultWidgetSlot1") == nil) {
             defaults.set("Current condition", forKey: "defaultWidgetSlot1")
+            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Current condition", forKey: "setDefaultWidgetSlot1")
         }
         
         if (defaults.string(forKey: "defaultWidgetSlot2") == nil) {
-            defaults.set("Current condition", forKey: "defaultWidgetSlot2")
+            defaults.set("Precip (%)", forKey: "defaultWidgetSlot2")
+            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Precip (%)", forKey: "setDefaultWidgetSlot2")
         }
         
         if (defaults.string(forKey: "dataSource") == nil) || (defaults.string(forKey: "dataSource") == "AerisWeather") || (defaults.bool(forKey: "cumulusPro") == false) {

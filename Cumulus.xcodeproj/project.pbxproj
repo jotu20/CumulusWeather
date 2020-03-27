@@ -789,6 +789,7 @@
 				CFAF60F1242E4BEE004FB831 /* Forecast */,
 				CFD10765241FDC8F007E1087 /* Locations */,
 				CF3AAF39211B52EF0084EFF6 /* Settings */,
+				CFD3DF7C242E617B005DA2D2 /* Data Sources */,
 				CFAF60CD242E48E1004FB831 /* Models */,
 				CFAF60E8242E498D004FB831 /* Values */,
 				CFAF60F5242E4CA5004FB831 /* Resources */,
@@ -841,8 +842,6 @@
 		CFAF60F1242E4BEE004FB831 /* Forecast */ = {
 			isa = PBXGroup;
 			children = (
-				CFAF60D0242E48E1004FB831 /* DarkSkyWeatherData.swift */,
-				CFAF60D1242E48E1004FB831 /* DarkSkyCurrentForecastData.swift */,
 				CF6E4AA320DACFD8002349A7 /* ForecastViewController.swift */,
 			);
 			path = Forecast;
@@ -967,6 +966,15 @@
 				CFB1E84420E5972200972F19 /* LocationCell.swift */,
 			);
 			path = Locations;
+			sourceTree = "<group>";
+		};
+		CFD3DF7C242E617B005DA2D2 /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CFAF60D0242E48E1004FB831 /* DarkSkyWeatherData.swift */,
+				CFAF60D1242E48E1004FB831 /* DarkSkyCurrentForecastData.swift */,
+			);
+			path = "Data Sources";
 			sourceTree = "<group>";
 		};
 		CFDEEC0B20E26ED900BA5EA5 /* Cumulus Today */ = {

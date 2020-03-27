@@ -1524,25 +1524,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
     
     // Set hourly condition values for each page or segment control tap
-    func setHourlyConditionOutlets(day: Int, checkDefault: Bool, segmentControl: UISegmentedControl, pageControl: UIPageControl!) {
-        if checkDefault == true {
-            if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Precip") == true {
-                segmentControl.selectedSegmentIndex = 0
-            } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Temp") == true {
-                segmentControl.selectedSegmentIndex = 1
-            } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Humidity") == true {
-                segmentControl.selectedSegmentIndex = 2
-            } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Index") == true {
-                segmentControl.selectedSegmentIndex = 3
-            } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Wind") == true {
-                segmentControl.selectedSegmentIndex = 4
-            } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Cloud") == true {
-                segmentControl.selectedSegmentIndex = 5
-            } else {
-                segmentControl.selectedSegmentIndex = 0
-            }
-        }
-        
+    func setHourlyConditionOutlets(day: Int, segmentControl: UISegmentedControl, pageControl: UIPageControl!) {
         if day == 0 {
             if segmentControl.selectedSegmentIndex == 0 {
                 if pageControl.currentPage == 0 {
@@ -2335,11 +2317,11 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     // MARK: - Actions for changing hourly forecast
     @IBAction func hourlySegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 14, checkDefault: false, segmentControl: hourlySegmentControl, pageControl: hourlyPageControl)
+        setHourlyConditionOutlets(day: 14, segmentControl: hourlySegmentControl, pageControl: hourlyPageControl)
     }
     
     @IBAction func hourlyPageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 14, checkDefault: false, segmentControl: hourlySegmentControl, pageControl: hourlyPageControl)
+        setHourlyConditionOutlets(day: 14, segmentControl: hourlySegmentControl, pageControl: hourlyPageControl)
     }
     @IBAction func hourlyNextPageTapped(_ sender: UITapGestureRecognizer) {
         if hourlyPageControl.currentPage == 0 {
@@ -2347,14 +2329,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if hourlyPageControl.currentPage == 1 {
             hourlyPageControl.currentPage = 0
         }
-        setHourlyConditionOutlets(day: 14, checkDefault: false, segmentControl: hourlySegmentControl, pageControl: hourlyPageControl)
+        setHourlyConditionOutlets(day: 14, segmentControl: hourlySegmentControl, pageControl: hourlyPageControl)
     }
     
     @IBAction func dayZeroSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 0, checkDefault: false, segmentControl: dayZeroSegmentControl, pageControl: dayZeroPageControl)
+        setHourlyConditionOutlets(day: 0, segmentControl: dayZeroSegmentControl, pageControl: dayZeroPageControl)
     }
     @IBAction func dayZeroPageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 0, checkDefault: false, segmentControl: dayZeroSegmentControl, pageControl: dayZeroPageControl)
+        setHourlyConditionOutlets(day: 0, segmentControl: dayZeroSegmentControl, pageControl: dayZeroPageControl)
     }
     @IBAction func dayZeroNextPageTapped(_ sender: UITapGestureRecognizer) {
         if dayZeroPageControl.currentPage == 0 {
@@ -2362,14 +2344,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if dayZeroPageControl.currentPage == 1 {
             dayZeroPageControl.currentPage = 0
         }
-        setHourlyConditionOutlets(day: 0, checkDefault: false, segmentControl: dayZeroSegmentControl, pageControl: dayZeroPageControl)
+        setHourlyConditionOutlets(day: 0, segmentControl: dayZeroSegmentControl, pageControl: dayZeroPageControl)
     }
     
     @IBAction func dayOneSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 1, checkDefault: false, segmentControl: dayOneSegmentControl, pageControl: dayOnePageControl)
+        setHourlyConditionOutlets(day: 1, segmentControl: dayOneSegmentControl, pageControl: dayOnePageControl)
     }
     @IBAction func dayOnePageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 1, checkDefault: false, segmentControl: dayOneSegmentControl, pageControl: dayOnePageControl)
+        setHourlyConditionOutlets(day: 1, segmentControl: dayOneSegmentControl, pageControl: dayOnePageControl)
     }
     @IBAction func dayOneNextPageTapped(_ sender: UITapGestureRecognizer) {
         if dayOnePageControl.currentPage == 0 {
@@ -2377,14 +2359,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if dayOnePageControl.currentPage == 1 {
             dayOnePageControl.currentPage = 0
         }
-        setHourlyConditionOutlets(day: 1, checkDefault: false, segmentControl: dayOneSegmentControl, pageControl: dayOnePageControl)
+        setHourlyConditionOutlets(day: 1, segmentControl: dayOneSegmentControl, pageControl: dayOnePageControl)
     }
     
     @IBAction func dayTwoSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 2, checkDefault: false, segmentControl: dayTwoSegmentControl, pageControl: dayTwoPageControl)
+        setHourlyConditionOutlets(day: 2, segmentControl: dayTwoSegmentControl, pageControl: dayTwoPageControl)
     }
     @IBAction func dayTwoPageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 2, checkDefault: false, segmentControl: dayTwoSegmentControl, pageControl: dayTwoPageControl)
+        setHourlyConditionOutlets(day: 2, segmentControl: dayTwoSegmentControl, pageControl: dayTwoPageControl)
     }
     @IBAction func dayTwoNextPageTapped(_ sender: UITapGestureRecognizer) {
         if dayTwoPageControl.currentPage == 0 {
@@ -2392,14 +2374,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if dayTwoPageControl.currentPage == 1 {
             dayTwoPageControl.currentPage = 0
         }
-        setHourlyConditionOutlets(day: 2, checkDefault: false, segmentControl: dayTwoSegmentControl, pageControl: dayTwoPageControl)
+        setHourlyConditionOutlets(day: 2, segmentControl: dayTwoSegmentControl, pageControl: dayTwoPageControl)
     }
     
     @IBAction func dayThreeSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 3, checkDefault: false, segmentControl: dayThreeSegmentControl, pageControl: dayThreePageControl)
+        setHourlyConditionOutlets(day: 3, segmentControl: dayThreeSegmentControl, pageControl: dayThreePageControl)
     }
     @IBAction func dayThreePageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 3, checkDefault: false, segmentControl: dayThreeSegmentControl, pageControl: dayThreePageControl)
+        setHourlyConditionOutlets(day: 3, segmentControl: dayThreeSegmentControl, pageControl: dayThreePageControl)
     }
     @IBAction func dayThreeNextPageTapped(_ sender: UITapGestureRecognizer) {
         if dayThreePageControl.currentPage == 0 {
@@ -2407,14 +2389,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if dayThreePageControl.currentPage == 1 {
             dayThreePageControl.currentPage = 0
         }
-        setHourlyConditionOutlets(day: 3, checkDefault: false, segmentControl: dayThreeSegmentControl, pageControl: dayThreePageControl)
+        setHourlyConditionOutlets(day: 3, segmentControl: dayThreeSegmentControl, pageControl: dayThreePageControl)
     }
     
     @IBAction func dayFourSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 4, checkDefault: false, segmentControl: dayFourSegmentControl, pageControl: dayFourPageControl)
+        setHourlyConditionOutlets(day: 4, segmentControl: dayFourSegmentControl, pageControl: dayFourPageControl)
     }
     @IBAction func dayFourPageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 4, checkDefault: false, segmentControl: dayFourSegmentControl, pageControl: dayFourPageControl)
+        setHourlyConditionOutlets(day: 4, segmentControl: dayFourSegmentControl, pageControl: dayFourPageControl)
     }
     @IBAction func dayFourNextPageTapped(_ sender: UITapGestureRecognizer) {
         if dayFourPageControl.currentPage == 0 {
@@ -2422,14 +2404,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if dayFourPageControl.currentPage == 1 {
             dayFourPageControl.currentPage = 0
         }
-        setHourlyConditionOutlets(day: 4, checkDefault: false, segmentControl: dayFourSegmentControl, pageControl: dayFourPageControl)
+        setHourlyConditionOutlets(day: 4, segmentControl: dayFourSegmentControl, pageControl: dayFourPageControl)
     }
     
     @IBAction func dayFiveSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 5, checkDefault: false, segmentControl: dayFiveSegmentControl, pageControl: dayFivePageControl)
+        setHourlyConditionOutlets(day: 5, segmentControl: dayFiveSegmentControl, pageControl: dayFivePageControl)
     }
     @IBAction func dayFivePageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 5, checkDefault: false, segmentControl: dayFiveSegmentControl, pageControl: dayFivePageControl)
+        setHourlyConditionOutlets(day: 5, segmentControl: dayFiveSegmentControl, pageControl: dayFivePageControl)
     }
     @IBAction func dayFiveNextPageTapped(_ sender: UITapGestureRecognizer) {
         if dayFivePageControl.currentPage == 0 {
@@ -2437,14 +2419,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if dayFivePageControl.currentPage == 1 {
             dayFivePageControl.currentPage = 0
         }
-        setHourlyConditionOutlets(day: 5, checkDefault: false, segmentControl: dayFiveSegmentControl, pageControl: dayFivePageControl)
+        setHourlyConditionOutlets(day: 5, segmentControl: dayFiveSegmentControl, pageControl: dayFivePageControl)
     }
     
     @IBAction func daySixSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 6, checkDefault: false, segmentControl: daySixSegmentControl, pageControl: daySixPageControl)
+        setHourlyConditionOutlets(day: 6, segmentControl: daySixSegmentControl, pageControl: daySixPageControl)
     }
     @IBAction func daySixPageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 6, checkDefault: false, segmentControl: daySixSegmentControl, pageControl: daySixPageControl)
+        setHourlyConditionOutlets(day: 6, segmentControl: daySixSegmentControl, pageControl: daySixPageControl)
     }
     @IBAction func daySixNextPageTapped(_ sender: UITapGestureRecognizer) {
         if daySixPageControl.currentPage == 0 {
@@ -2452,14 +2434,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if daySixPageControl.currentPage == 1 {
             daySixPageControl.currentPage = 0
         }
-        setHourlyConditionOutlets(day: 6, checkDefault: false, segmentControl: daySixSegmentControl, pageControl: daySixPageControl)
+        setHourlyConditionOutlets(day: 6, segmentControl: daySixSegmentControl, pageControl: daySixPageControl)
     }
     
     @IBAction func daySevenSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 7, checkDefault: false, segmentControl: daySevenSegmentControl, pageControl: daySevenPageControl)
+        setHourlyConditionOutlets(day: 7, segmentControl: daySevenSegmentControl, pageControl: daySevenPageControl)
     }
     @IBAction func daySevenPageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 7, checkDefault: false, segmentControl: daySevenSegmentControl, pageControl: daySevenPageControl)
+        setHourlyConditionOutlets(day: 7, segmentControl: daySevenSegmentControl, pageControl: daySevenPageControl)
     }
     @IBAction func daySevenNextPageTapped(_ sender: UITapGestureRecognizer) {
         if daySevenPageControl.currentPage == 0 {
@@ -2467,14 +2449,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if daySevenPageControl.currentPage == 1 {
             daySevenPageControl.currentPage = 0
         }
-        setHourlyConditionOutlets(day: 7, checkDefault: false, segmentControl: daySevenSegmentControl, pageControl: daySevenPageControl)
+        setHourlyConditionOutlets(day: 7, segmentControl: daySevenSegmentControl, pageControl: daySevenPageControl)
     }
     
     @IBAction func dayEightSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 8, checkDefault: false, segmentControl: dayEightSegmentControl, pageControl: dayEightPageControl)
+        setHourlyConditionOutlets(day: 8, segmentControl: dayEightSegmentControl, pageControl: dayEightPageControl)
     }
     @IBAction func dayEightPageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 8, checkDefault: false, segmentControl: dayEightSegmentControl, pageControl: dayEightPageControl)
+        setHourlyConditionOutlets(day: 8, segmentControl: dayEightSegmentControl, pageControl: dayEightPageControl)
     }
     @IBAction func dayEightNextPageTapped(_ sender: UITapGestureRecognizer) {
         if dayEightPageControl.currentPage == 0 {
@@ -2482,14 +2464,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if dayEightPageControl.currentPage == 1 {
             dayEightPageControl.currentPage = 0
         }
-        setHourlyConditionOutlets(day: 8, checkDefault: false, segmentControl: dayEightSegmentControl, pageControl: dayEightPageControl)
+        setHourlyConditionOutlets(day: 8, segmentControl: dayEightSegmentControl, pageControl: dayEightPageControl)
     }
     
     @IBAction func dayNineSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 9, checkDefault: false, segmentControl: dayNineSegmentControl, pageControl: dayNinePageControl)
+        setHourlyConditionOutlets(day: 9, segmentControl: dayNineSegmentControl, pageControl: dayNinePageControl)
     }
     @IBAction func dayNinePageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 9, checkDefault: false, segmentControl: dayNineSegmentControl, pageControl: dayNinePageControl)
+        setHourlyConditionOutlets(day: 9, segmentControl: dayNineSegmentControl, pageControl: dayNinePageControl)
     }
     @IBAction func dayNineNextPageTapped(_ sender: UITapGestureRecognizer) {
         if dayNinePageControl.currentPage == 0 {
@@ -2497,14 +2479,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if dayNinePageControl.currentPage == 1 {
             dayNinePageControl.currentPage = 0
         }
-        setHourlyConditionOutlets(day: 9, checkDefault: false, segmentControl: dayNineSegmentControl, pageControl: dayNinePageControl)
+        setHourlyConditionOutlets(day: 9, segmentControl: dayNineSegmentControl, pageControl: dayNinePageControl)
     }
     
     @IBAction func dayTenSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 10, checkDefault: false, segmentControl: dayTenSegmentControl, pageControl: dayTenPageControl)
+        setHourlyConditionOutlets(day: 10, segmentControl: dayTenSegmentControl, pageControl: dayTenPageControl)
     }
     @IBAction func dayTenPageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 10, checkDefault: false, segmentControl: dayTenSegmentControl, pageControl: dayTenPageControl)
+        setHourlyConditionOutlets(day: 10, segmentControl: dayTenSegmentControl, pageControl: dayTenPageControl)
     }
     @IBAction func dayTenNextPageTapped(_ sender: UITapGestureRecognizer) {
         if dayTenPageControl.currentPage == 0 {
@@ -2512,14 +2494,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if dayTenPageControl.currentPage == 1 {
             dayTenPageControl.currentPage = 0
         }
-        setHourlyConditionOutlets(day: 10, checkDefault: false, segmentControl: dayTenSegmentControl, pageControl: dayTenPageControl)
+        setHourlyConditionOutlets(day: 10, segmentControl: dayTenSegmentControl, pageControl: dayTenPageControl)
     }
     
     @IBAction func dayElevenSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 11, checkDefault: false, segmentControl: dayElevenSegmentControl, pageControl: dayElevenPageControl)
+        setHourlyConditionOutlets(day: 11, segmentControl: dayElevenSegmentControl, pageControl: dayElevenPageControl)
     }
     @IBAction func dayElevenPageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 11, checkDefault: false, segmentControl: dayElevenSegmentControl, pageControl: dayElevenPageControl)
+        setHourlyConditionOutlets(day: 11, segmentControl: dayElevenSegmentControl, pageControl: dayElevenPageControl)
     }
     @IBAction func dayElevenNextPageTapped(_ sender: UITapGestureRecognizer) {
         if dayElevenPageControl.currentPage == 0 {
@@ -2527,14 +2509,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if dayElevenPageControl.currentPage == 1 {
             dayElevenPageControl.currentPage = 0
         }
-        setHourlyConditionOutlets(day: 11, checkDefault: false, segmentControl: dayElevenSegmentControl, pageControl: dayElevenPageControl)
+        setHourlyConditionOutlets(day: 11, segmentControl: dayElevenSegmentControl, pageControl: dayElevenPageControl)
     }
     
     @IBAction func dayTwelveSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 12, checkDefault: false, segmentControl: dayTwelveSegmentControl, pageControl: dayTwelvePageControl)
+        setHourlyConditionOutlets(day: 12, segmentControl: dayTwelveSegmentControl, pageControl: dayTwelvePageControl)
     }
     @IBAction func dayTwelvePageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 12, checkDefault: false, segmentControl: dayTwelveSegmentControl, pageControl: dayTwelvePageControl)
+        setHourlyConditionOutlets(day: 12, segmentControl: dayTwelveSegmentControl, pageControl: dayTwelvePageControl)
     }
     @IBAction func dayTwelveNextPageTapped(_ sender: UITapGestureRecognizer) {
         if dayTwelvePageControl.currentPage == 0 {
@@ -2542,14 +2524,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if dayTwelvePageControl.currentPage == 1 {
             dayTwelvePageControl.currentPage = 0
         }
-        setHourlyConditionOutlets(day: 12, checkDefault: false, segmentControl: dayTwelveSegmentControl, pageControl: dayTwelvePageControl)
+        setHourlyConditionOutlets(day: 12, segmentControl: dayTwelveSegmentControl, pageControl: dayTwelvePageControl)
     }
     
     @IBAction func dayThirteenSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 13, checkDefault: false, segmentControl: dayThirteenSegmentControl, pageControl: dayThirteenPageControl)
+        setHourlyConditionOutlets(day: 13, segmentControl: dayThirteenSegmentControl, pageControl: dayThirteenPageControl)
     }
     @IBAction func dayThirteenPageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 13, checkDefault: false, segmentControl: dayThirteenSegmentControl, pageControl: dayThirteenPageControl)
+        setHourlyConditionOutlets(day: 13, segmentControl: dayThirteenSegmentControl, pageControl: dayThirteenPageControl)
     }
     @IBAction func dayThirteenNextPageTapped(_ sender: UITapGestureRecognizer) {
         if dayThirteenPageControl.currentPage == 0 {
@@ -2557,7 +2539,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if dayThirteenPageControl.currentPage == 1 {
             dayThirteenPageControl.currentPage = 0
         }
-        setHourlyConditionOutlets(day: 13, checkDefault: false, segmentControl: dayThirteenSegmentControl, pageControl: dayThirteenPageControl)
+        setHourlyConditionOutlets(day: 13, segmentControl: dayThirteenSegmentControl, pageControl: dayThirteenPageControl)
     }
     
     // MARK: - Action to show extended daily forecasts
@@ -2565,7 +2547,20 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         if stackview.isHidden == true {
             UIView.animate(withDuration: 0.3) {
                 stackview.isHidden = false
-                self.setHourlyConditionOutlets(day: day, checkDefault: true, segmentControl: segmentControl, pageControl: pageControl)
+                if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Precip") == true {
+                    segmentControl.selectedSegmentIndex = 0
+                } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Temp") == true {
+                    segmentControl.selectedSegmentIndex = 1
+                } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Humidity") == true {
+                    segmentControl.selectedSegmentIndex = 2
+                } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Index") == true {
+                    segmentControl.selectedSegmentIndex = 3
+                } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Wind") == true {
+                    segmentControl.selectedSegmentIndex = 4
+                } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Cloud") == true {
+                    segmentControl.selectedSegmentIndex = 5
+                }
+                self.setHourlyConditionOutlets(day: day,segmentControl: segmentControl, pageControl: pageControl)
             }
         } else {
             stackview.isHidden = true
@@ -2826,7 +2821,20 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         setDailyConditionImages()
         
         // Check for default hourly condition value
-        setHourlyConditionOutlets(day: 14, checkDefault: true, segmentControl: hourlySegmentControl, pageControl: hourlyPageControl)
+        if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Precip") == true {
+            hourlySegmentControl.selectedSegmentIndex = 0
+        } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Temp") == true {
+            hourlySegmentControl.selectedSegmentIndex = 1
+        } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Humidity") == true {
+            hourlySegmentControl.selectedSegmentIndex = 2
+        } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Index") == true {
+            hourlySegmentControl.selectedSegmentIndex = 3
+        } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Wind") == true {
+            hourlySegmentControl.selectedSegmentIndex = 4
+        } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Cloud") == true {
+            hourlySegmentControl.selectedSegmentIndex = 5
+        }
+        setHourlyConditionOutlets(day: 14, segmentControl: hourlySegmentControl, pageControl: hourlyPageControl)
         
         // Check if summaries are equal for the hour
         if currentSummary == hourSummary {
@@ -2856,13 +2864,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-}
-
-extension UINavigationController {
-    
-    open override var preferredStatusBarStyle: UIStatusBarStyle {
-        return topViewController?.preferredStatusBarStyle ?? .default
     }
 }
 

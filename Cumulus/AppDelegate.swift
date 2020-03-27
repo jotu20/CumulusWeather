@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Precip (%)", forKey: "setDefaultWidgetSlot2")
         }
         
-        if (defaults.string(forKey: "dataSource") == nil) || (defaults.string(forKey: "dataSource") == "AerisWeather") || (defaults.bool(forKey: "cumulusPro") == false) {
+        if (defaults.string(forKey: "dataSource") == nil) || (defaults.string(forKey: "dataSource") == "AerisWeather") {
             defaults.set("Dark Sky", forKey: "dataSource")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Dark Sky", forKey: "setDataSource")
         }

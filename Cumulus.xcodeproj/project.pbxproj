@@ -10,7 +10,6 @@
 		9056045125194693D67F2138 /* Pods_Cumulus_GetForecastIntent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBD09E3F55C5281F5CFFE81 /* Pods_Cumulus_GetForecastIntent.framework */; };
 		B17D27B1A4B113CA8A45F6CB /* Pods_Cumulus_Cumulus_Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316CEA7F865309259C761241 /* Pods_Cumulus_Cumulus_Today.framework */; };
 		BA1D0C7D1548DA6207CA4C09 /* Pods_Cumulus_GetForecastIntentUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D355B5BDDC601C4E2BC1A2A /* Pods_Cumulus_GetForecastIntentUI.framework */; };
-		CF18AC9924314974000225F8 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF2C9314217CD08C00CC0F6F /* AppIntentVocabulary.plist */; };
 		CF3679B721190E6B00343FC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
 		CF39201B2365217300FAFA53 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF39201A2365217300FAFA53 /* MapKit.framework */; };
 		CF4A0E5F2108B1B30061CAAD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4A0E5E2108B1B30061CAAD /* Default-568h@2x.png */; };
@@ -1236,7 +1235,6 @@
 				CFF0A8DE242E92A400FDDAF1 /* Pride@3x.png in Resources */,
 				CFF0A926242E92A400FDDAF1 /* Malachite@2x.png in Resources */,
 				CFF0A912242E92A400FDDAF1 /* Malachite@3x.png in Resources */,
-				CF18AC9924314974000225F8 /* AppIntentVocabulary.plist in Resources */,
 				CFF0A86E242E92A400FDDAF1 /* AsteroidiPad@2x.png in Resources */,
 				CFF0A84E242E92A400FDDAF1 /* CottonCandyiPad@2x.png in Resources */,
 				CFF0A8FA242E92A400FDDAF1 /* CloudyDay@3x.png in Resources */,

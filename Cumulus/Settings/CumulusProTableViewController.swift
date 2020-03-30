@@ -11,11 +11,9 @@ import SwiftyStoreKit
 
 class CumulusProTableViewController: UITableViewController {
     
-    @IBOutlet weak var mistingTipButton: UIButton!
-    @IBOutlet weak var sprinklingTipButton: UIButton!
-    @IBOutlet weak var showerTipButton: UIButton!
-    @IBOutlet weak var downpourTipButton: UIButton!
-    @IBOutlet weak var torrentialTipButton: UIButton!
+    @IBOutlet weak var kindTipButton: UIButton!
+    @IBOutlet weak var generousTipButton: UIButton!
+    @IBOutlet weak var amazingTipButton: UIButton!
     
     @IBOutlet weak var cumulusProTextViewWidth: NSLayoutConstraint!
     @IBOutlet weak var cumulusProTextViewHeight: NSLayoutConstraint!
@@ -33,106 +31,66 @@ class CumulusProTableViewController: UITableViewController {
             cumulusProTextViewHeight.constant = 143
         }
 
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.CumulusProMistingTip"]) { result in
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.ProKindTip"]) { result in
             if let product = result.retrievedProducts.first {
                 let priceString = product.localizedPrice!
                 print("Product: \(product.localizedDescription), price: \(priceString)")
-                self.mistingTipButton.setTitle("Misting tip of \(priceString)", for: .normal)
-                self.mistingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
+                self.kindTipButton.setTitle("Kind tip of \(priceString)", for: .normal)
+                self.kindTipButton.titleLabel?.textAlignment = NSTextAlignment.center
             }
             else if let invalidProductId = result.invalidProductIDs.first {
                 print("Invalid product identifier: \(invalidProductId)")
-                self.mistingTipButton.setTitle("Misting tip", for: .normal)
-                self.mistingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
+                self.kindTipButton.setTitle("Kind tip", for: .normal)
+                self.kindTipButton.titleLabel?.textAlignment = NSTextAlignment.center
             }
             else {
                 print("Error: \(String(describing: result.error))")
-                self.mistingTipButton.setTitle("Misting tip", for: .normal)
-                self.mistingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
+                self.kindTipButton.setTitle("Kind tip", for: .normal)
+                self.kindTipButton.titleLabel?.textAlignment = NSTextAlignment.center
             }
         }
         
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.CumulusProSprinklingTip"]) { result in
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.ProGenerousTip"]) { result in
             if let product = result.retrievedProducts.first {
                 let priceString = product.localizedPrice!
                 print("Product: \(product.localizedDescription), price: \(priceString)")
-                self.sprinklingTipButton.setTitle("Sprinkling tip of \(priceString)", for: .normal)
-                self.sprinklingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
+                self.generousTipButton.setTitle("Generous tip of \(priceString)", for: .normal)
+                self.generousTipButton.titleLabel?.textAlignment = NSTextAlignment.center
             }
             else if let invalidProductId = result.invalidProductIDs.first {
                 print("Invalid product identifier: \(invalidProductId)")
-                self.sprinklingTipButton.setTitle("Sprinkling tip", for: .normal)
-                self.sprinklingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
+                self.generousTipButton.setTitle("Generous tip", for: .normal)
+                self.generousTipButton.titleLabel?.textAlignment = NSTextAlignment.center
             }
             else {
                 print("Error: \(String(describing: result.error))")
-                self.sprinklingTipButton.setTitle("Sprinkling tip", for: .normal)
-                self.sprinklingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
+                self.generousTipButton.setTitle("Generous tip", for: .normal)
+                self.generousTipButton.titleLabel?.textAlignment = NSTextAlignment.center
             }
         }
         
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.CumulusProShowerTip"]) { result in
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.ProAmazingTip"]) { result in
             if let product = result.retrievedProducts.first {
                 let priceString = product.localizedPrice!
                 print("Product: \(product.localizedDescription), price: \(priceString)")
-                self.showerTipButton.setTitle("Shower tip of \(priceString)", for: .normal)
-                self.showerTipButton.titleLabel?.textAlignment = NSTextAlignment.center
+                self.amazingTipButton.setTitle("Amazing tip of \(priceString)", for: .normal)
+                self.amazingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
             }
             else if let invalidProductId = result.invalidProductIDs.first {
                 print("Invalid product identifier: \(invalidProductId)")
-                self.showerTipButton.setTitle("Shower tip", for: .normal)
-                self.showerTipButton.titleLabel?.textAlignment = NSTextAlignment.center
+                self.amazingTipButton.setTitle("Amazing tip", for: .normal)
+                self.amazingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
             }
             else {
                 print("Error: \(String(describing: result.error))")
-                self.showerTipButton.setTitle("Shower tip", for: .normal)
-                self.showerTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-            }
-        }
-        
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.CumulusProDownpourTip"]) { result in
-            if let product = result.retrievedProducts.first {
-                let priceString = product.localizedPrice!
-                print("Product: \(product.localizedDescription), price: \(priceString)")
-                self.downpourTipButton.setTitle("Downpour tip of \(priceString)", for: .normal)
-                self.downpourTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-            }
-            else if let invalidProductId = result.invalidProductIDs.first {
-                print("Invalid product identifier: \(invalidProductId)")
-                self.downpourTipButton.setTitle("Downpour tip", for: .normal)
-                self.downpourTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-            }
-            else {
-                print("Error: \(String(describing: result.error))")
-                self.downpourTipButton.setTitle("Downpour tip", for: .normal)
-                self.downpourTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-            }
-        }
-        
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.CumulusProTorrentialTip"]) { result in
-            if let product = result.retrievedProducts.first {
-                let priceString = product.localizedPrice!
-                print("Product: \(product.localizedDescription), price: \(priceString)")
-                self.torrentialTipButton.setTitle("Torrential tip of \(priceString)", for: .normal)
-                self.torrentialTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-            }
-            else if let invalidProductId = result.invalidProductIDs.first {
-                print("Invalid product identifier: \(invalidProductId)")
-                self.torrentialTipButton.setTitle("Torrential tip", for: .normal)
-                self.torrentialTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-            }
-            else {
-                print("Error: \(String(describing: result.error))")
-                self.torrentialTipButton.setTitle("Torrential tip", for: .normal)
-                self.torrentialTipButton.titleLabel?.textAlignment = NSTextAlignment.center
+                self.amazingTipButton.setTitle("Amazing tip", for: .normal)
+                self.amazingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
             }
         }
 
-        mistingTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
-        sprinklingTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
-        showerTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
-        downpourTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
-        torrentialTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
+        kindTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
+        generousTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
+        amazingTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
         
         let restoreBarButton = UIButton.init(type: .custom)
         restoreBarButton.setTitle("Restore", for: .normal)
@@ -150,48 +108,9 @@ class CumulusProTableViewController: UITableViewController {
             self.navigationItem.leftBarButtonItem = barButton
         }
     }
-    
-    @IBAction func cumulusProTier2ButtonTapped(_ sender: UIButton) {
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.CumulusProMistingTip"]) { result in
-            if let product = result.retrievedProducts.first {
-                let priceString = product.localizedPrice!
-                print("Product: \(product.localizedDescription), price: \(priceString)")
-            }
-            else if let invalidProductId = result.invalidProductIDs.first {
-                print("Invalid product identifier: \(invalidProductId)")
-            }
-            else {
-                print("Error: \(String(describing: result.error))")
-            }
-        }
-        
-        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.CumulusProMistingTip", quantity: 1, atomically: true) { result in
-            switch result {
-            case .success(let purchase):
-                print("Purchase Success: \(purchase.productId)")
-                defaults.set(true, forKey: "cumulusPro")
-            case .error(let error):
-                switch error.code {
-                case .unknown: print("Unknown error. Please contact support")
-                case .clientInvalid: print("Not allowed to make the payment")
-                case .paymentCancelled: break
-                case .paymentInvalid: print("The purchase identifier was invalid")
-                case .paymentNotAllowed: print("The device is not allowed to make the payment")
-                case .storeProductNotAvailable: print("The product is not available in the current storefront")
-                case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
-                case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
-                case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
-                default: print((error as NSError).localizedDescription)
-                }
-            }
-            if let alert = self.alertForPurchaseResult(result) {
-                self.showAlert(alert)
-            }
-        }
-    }
 
-    @IBAction func mistingTipButtonTapped(_ sender: UIButton) {
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.CumulusProMistingTip"]) { result in
+    @IBAction func kindTipButtonTapped(_ sender: UIButton) {
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.ProKindTip"]) { result in
             if let product = result.retrievedProducts.first {
                 let priceString = product.localizedPrice!
                 print("Product: \(product.localizedDescription), price: \(priceString)")
@@ -204,7 +123,7 @@ class CumulusProTableViewController: UITableViewController {
             }
         }
         
-        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.CumulusProMistingTip", quantity: 1, atomically: true) { result in
+        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.ProKindTip", quantity: 1, atomically: true) { result in
             switch result {
             case .success(let purchase):
                 print("Purchase Success: \(purchase.productId)")
@@ -229,8 +148,8 @@ class CumulusProTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func sprinklingTipButtonTapped(_ sender: UIButton) {
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.CumulusProSprinklingTip"]) { result in
+    @IBAction func generousTipButtonTapped(_ sender: UIButton) {
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.ProGenerousTip"]) { result in
             if let product = result.retrievedProducts.first {
                 let priceString = product.localizedPrice!
                 print("Product: \(product.localizedDescription), price: \(priceString)")
@@ -243,7 +162,7 @@ class CumulusProTableViewController: UITableViewController {
             }
         }
         
-        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.CumulusProSprinklingTip", quantity: 1, atomically: true) { result in
+        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.ProGenerousTip", quantity: 1, atomically: true) { result in
             switch result {
             case .success(let purchase):
                 print("Purchase Success: \(purchase.productId)")
@@ -268,8 +187,8 @@ class CumulusProTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func showerTipButtonTapped(_ sender: UIButton) {
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.CumulusProShowerTip"]) { result in
+    @IBAction func amazingTipButtonTapped(_ sender: UIButton) {
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.ProAmazingTip"]) { result in
             if let product = result.retrievedProducts.first {
                 let priceString = product.localizedPrice!
                 print("Product: \(product.localizedDescription), price: \(priceString)")
@@ -282,85 +201,7 @@ class CumulusProTableViewController: UITableViewController {
             }
         }
         
-        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.CumulusProShowerTip", quantity: 1, atomically: true) { result in
-            switch result {
-            case .success(let purchase):
-                print("Purchase Success: \(purchase.productId)")
-                defaults.set(true, forKey: "cumulusPro")
-            case .error(let error):
-                switch error.code {
-                case .unknown: print("Unknown error. Please contact support")
-                case .clientInvalid: print("Not allowed to make the payment")
-                case .paymentCancelled: break
-                case .paymentInvalid: print("The purchase identifier was invalid")
-                case .paymentNotAllowed: print("The device is not allowed to make the payment")
-                case .storeProductNotAvailable: print("The product is not available in the current storefront")
-                case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
-                case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
-                case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
-                default: print((error as NSError).localizedDescription)
-                }
-            }
-            if let alert = self.alertForPurchaseResult(result) {
-                self.showAlert(alert)
-            }
-        }
-    }
-    
-    @IBAction func downpourTipButtonTapped(_ sender: UIButton) {
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.CumulusProDownpourTip"]) { result in
-            if let product = result.retrievedProducts.first {
-                let priceString = product.localizedPrice!
-                print("Product: \(product.localizedDescription), price: \(priceString)")
-            }
-            else if let invalidProductId = result.invalidProductIDs.first {
-                print("Invalid product identifier: \(invalidProductId)")
-            }
-            else {
-                print("Error: \(String(describing: result.error))")
-            }
-        }
-        
-        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.CumulusProDownpourTip", quantity: 1, atomically: true) { result in
-            switch result {
-            case .success(let purchase):
-                print("Purchase Success: \(purchase.productId)")
-                defaults.set(true, forKey: "cumulusPro")
-            case .error(let error):
-                switch error.code {
-                case .unknown: print("Unknown error. Please contact support")
-                case .clientInvalid: print("Not allowed to make the payment")
-                case .paymentCancelled: break
-                case .paymentInvalid: print("The purchase identifier was invalid")
-                case .paymentNotAllowed: print("The device is not allowed to make the payment")
-                case .storeProductNotAvailable: print("The product is not available in the current storefront")
-                case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
-                case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
-                case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
-                default: print((error as NSError).localizedDescription)
-                }
-            }
-            if let alert = self.alertForPurchaseResult(result) {
-                self.showAlert(alert)
-            }
-        }
-    }
-    
-    @IBAction func torrentialTipButtonTapped(_ sender: UIButton) {
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.CumulusProTorrentialTip"]) { result in
-            if let product = result.retrievedProducts.first {
-                let priceString = product.localizedPrice!
-                print("Product: \(product.localizedDescription), price: \(priceString)")
-            }
-            else if let invalidProductId = result.invalidProductIDs.first {
-                print("Invalid product identifier: \(invalidProductId)")
-            }
-            else {
-                print("Error: \(String(describing: result.error))")
-            }
-        }
-        
-        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.CumulusProTorrentialTip", quantity: 1, atomically: true) { result in
+        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.ProAmazingTip", quantity: 1, atomically: true) { result in
             switch result {
             case .success(let purchase):
                 print("Purchase Success: \(purchase.productId)")
@@ -422,11 +263,11 @@ class CumulusProTableViewController: UITableViewController {
             }
         }
         
-        let cumulusProMistingTipValidator = AppleReceiptValidator(service: .production, sharedSecret: "\(sharedSecret)")
-        SwiftyStoreKit.verifyReceipt(using: cumulusProMistingTipValidator) { result in
+        let cumulusProKindTipValidator = AppleReceiptValidator(service: .production, sharedSecret: "\(sharedSecret)")
+        SwiftyStoreKit.verifyReceipt(using: cumulusProKindTipValidator) { result in
             switch result {
             case .success(let receipt):
-                let productId = "com.josephszafarowicz.Cumulus.CumulusProMistingTip"
+                let productId = "com.josephszafarowicz.Cumulus.ProKindTip"
                 // Verify the purchase of Consumable or NonConsumable
                 let purchaseResult = SwiftyStoreKit.verifyPurchase(
                     productId: productId,
@@ -444,11 +285,11 @@ class CumulusProTableViewController: UITableViewController {
             }
         }
         
-        let cumulusProSprinklingTipValidator = AppleReceiptValidator(service: .production, sharedSecret: "\(sharedSecret)")
-        SwiftyStoreKit.verifyReceipt(using: cumulusProSprinklingTipValidator) { result in
+        let cumulusProGenerousTipValidator = AppleReceiptValidator(service: .production, sharedSecret: "\(sharedSecret)")
+        SwiftyStoreKit.verifyReceipt(using: cumulusProGenerousTipValidator) { result in
             switch result {
             case .success(let receipt):
-                let productId = "com.josephszafarowicz.Cumulus.CumulusProSprinklingTip"
+                let productId = "com.josephszafarowicz.Cumulus.ProGenerousTip"
                 // Verify the purchase of Consumable or NonConsumable
                 let purchaseResult = SwiftyStoreKit.verifyPurchase(
                     productId: productId,
@@ -466,55 +307,11 @@ class CumulusProTableViewController: UITableViewController {
             }
         }
         
-        let cumulusProShowerTipValidator = AppleReceiptValidator(service: .production, sharedSecret: "\(sharedSecret)")
-        SwiftyStoreKit.verifyReceipt(using: cumulusProShowerTipValidator) { result in
+        let cumulusProAmazingTipValidator = AppleReceiptValidator(service: .production, sharedSecret: "\(sharedSecret)")
+        SwiftyStoreKit.verifyReceipt(using: cumulusProAmazingTipValidator) { result in
             switch result {
             case .success(let receipt):
-                let productId = "com.josephszafarowicz.Cumulus.CumulusProShowerTip"
-                // Verify the purchase of Consumable or NonConsumable
-                let purchaseResult = SwiftyStoreKit.verifyPurchase(
-                    productId: productId,
-                    inReceipt: receipt)
-                
-                switch purchaseResult {
-                case .purchased(let receiptItem):
-                    print("\(productId) is purchased: \(receiptItem)")
-                    defaults.set(true, forKey: "cumulusPro")
-                case .notPurchased:
-                    print("The user has never purchased \(productId)")
-                }
-            case .error(let error):
-                print("Receipt verification failed: \(error)")
-            }
-        }
-        
-        let cumulusProDownpourTipValidator = AppleReceiptValidator(service: .production, sharedSecret: "\(sharedSecret)")
-        SwiftyStoreKit.verifyReceipt(using: cumulusProDownpourTipValidator) { result in
-            switch result {
-            case .success(let receipt):
-                let productId = "com.josephszafarowicz.Cumulus.CumulusProDownpourTip"
-                // Verify the purchase of Consumable or NonConsumable
-                let purchaseResult = SwiftyStoreKit.verifyPurchase(
-                    productId: productId,
-                    inReceipt: receipt)
-                
-                switch purchaseResult {
-                case .purchased(let receiptItem):
-                    print("\(productId) is purchased: \(receiptItem)")
-                    defaults.set(true, forKey: "cumulusPro")
-                case .notPurchased:
-                    print("The user has never purchased \(productId)")
-                }
-            case .error(let error):
-                print("Receipt verification failed: \(error)")
-            }
-        }
-        
-        let cumulusProTorrentialTipValidator = AppleReceiptValidator(service: .production, sharedSecret: "\(sharedSecret)")
-        SwiftyStoreKit.verifyReceipt(using: cumulusProTorrentialTipValidator) { result in
-            switch result {
-            case .success(let receipt):
-                let productId = "com.josephszafarowicz.Cumulus.CumulusProTorrentialTip"
+                let productId = "com.josephszafarowicz.Cumulus.ProAmazingTip"
                 // Verify the purchase of Consumable or NonConsumable
                 let purchaseResult = SwiftyStoreKit.verifyPurchase(
                     productId: productId,
@@ -537,14 +334,6 @@ class CumulusProTableViewController: UITableViewController {
         weatherLoaded = true
         potentialCustomer = true
         dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func privacyPolicyButtonTapped(_ sender: UIButton) {
-        weatherLoaded = true
-        potentialCustomer = true
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "PrivacyPolicy")
-        present(controller, animated: true, completion: nil)
     }
 }
 

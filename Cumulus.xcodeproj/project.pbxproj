@@ -10,11 +10,13 @@
 		9056045125194693D67F2138 /* Pods_Cumulus_GetForecastIntent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBD09E3F55C5281F5CFFE81 /* Pods_Cumulus_GetForecastIntent.framework */; };
 		B17D27B1A4B113CA8A45F6CB /* Pods_Cumulus_Cumulus_Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316CEA7F865309259C761241 /* Pods_Cumulus_Cumulus_Today.framework */; };
 		BA1D0C7D1548DA6207CA4C09 /* Pods_Cumulus_GetForecastIntentUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D355B5BDDC601C4E2BC1A2A /* Pods_Cumulus_GetForecastIntentUI.framework */; };
+		CF18AC9924314974000225F8 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF2C9314217CD08C00CC0F6F /* AppIntentVocabulary.plist */; };
 		CF3679B721190E6B00343FC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
 		CF39201B2365217300FAFA53 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF39201A2365217300FAFA53 /* MapKit.framework */; };
 		CF4A0E5F2108B1B30061CAAD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4A0E5E2108B1B30061CAAD /* Default-568h@2x.png */; };
 		CF4A0E612108B5580061CAAD /* AppIconTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A0E602108B5580061CAAD /* AppIconTableViewController.swift */; };
 		CF52ECD9210FA29D00A605A4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF52ECD8210FA29D00A605A4 /* StoreKit.framework */; };
+		CF60787624323C5700F5C445 /* TipJarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF60787524323C5700F5C445 /* TipJarViewController.swift */; };
 		CF6E4AA220DACFD8002349A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E4AA120DACFD8002349A7 /* AppDelegate.swift */; };
 		CF6E4AA420DACFD8002349A7 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E4AA320DACFD8002349A7 /* ForecastViewController.swift */; };
 		CF6E4AA720DACFD8002349A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA520DACFD8002349A7 /* Main.storyboard */; };
@@ -451,7 +453,6 @@
 		CFF0A95C242E92A500FDDAF1 /* Asteroid@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF0A7DD242E92A400FDDAF1 /* Asteroid@3x.png */; };
 		CFF0A95D242E92A500FDDAF1 /* Asteroid@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF0A7DD242E92A400FDDAF1 /* Asteroid@3x.png */; };
 		CFF0A964242E9A2500FDDAF1 /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF824C3820E84EEB00E5F0A7 /* Locations.xcdatamodeld */; };
-		CFF0A965242E9A3100FDDAF1 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF2C9314217CD08C00CC0F6F /* AppIntentVocabulary.plist */; };
 		CFFB787720DF0B44008216F8 /* License in Resources */ = {isa = PBXBuildFile; fileRef = CFFB787620DF0B44008216F8 /* License */; };
 		F08E391057762B192C3C4BB4 /* Pods_Cumulus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94F82ED50896B3BFD0DD8D9 /* Pods_Cumulus.framework */; };
 /* End PBXBuildFile section */
@@ -524,6 +525,7 @@
 		CF4A0E5E2108B1B30061CAAD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CF4A0E602108B5580061CAAD /* AppIconTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconTableViewController.swift; sourceTree = "<group>"; };
 		CF52ECD8210FA29D00A605A4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		CF60787524323C5700F5C445 /* TipJarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipJarViewController.swift; sourceTree = "<group>"; };
 		CF6E4A9E20DACFD8002349A7 /* Cumulus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cumulus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6E4AA120DACFD8002349A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF6E4AA320DACFD8002349A7 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
@@ -741,6 +743,7 @@
 			children = (
 				CFD1CD2220EE9544004ED831 /* SettingsTableViewController.swift */,
 				CFC186142131B8A800F56AD0 /* CumulusProTableViewController.swift */,
+				CF60787524323C5700F5C445 /* TipJarViewController.swift */,
 				CFAB4445211F3A2000A7E3CB /* PreferencesTableViewController.swift */,
 				CF4A0E602108B5580061CAAD /* AppIconTableViewController.swift */,
 				CFD790D92151C4CD007E489D /* ColorThemeTableViewController.swift */,
@@ -1233,7 +1236,7 @@
 				CFF0A8DE242E92A400FDDAF1 /* Pride@3x.png in Resources */,
 				CFF0A926242E92A400FDDAF1 /* Malachite@2x.png in Resources */,
 				CFF0A912242E92A400FDDAF1 /* Malachite@3x.png in Resources */,
-				CFF0A965242E9A3100FDDAF1 /* AppIntentVocabulary.plist in Resources */,
+				CF18AC9924314974000225F8 /* AppIntentVocabulary.plist in Resources */,
 				CFF0A86E242E92A400FDDAF1 /* AsteroidiPad@2x.png in Resources */,
 				CFF0A84E242E92A400FDDAF1 /* CottonCandyiPad@2x.png in Resources */,
 				CFF0A8FA242E92A400FDDAF1 /* CloudyDay@3x.png in Resources */,
@@ -1755,6 +1758,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFD790DA2151C4CD007E489D /* ColorThemeTableViewController.swift in Sources */,
+				CF60787624323C5700F5C445 /* TipJarViewController.swift in Sources */,
 				CF6E4AA420DACFD8002349A7 /* ForecastViewController.swift in Sources */,
 				CFF0A964242E9A2500FDDAF1 /* Locations.xcdatamodeld in Sources */,
 				CF9477492167DF0200DA8B38 /* SiriShortcutsTableViewController.swift in Sources */,
@@ -2007,7 +2011,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Base.lproj/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.24;
+				CURRENT_PROJECT_VERSION = 1.6.31;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2015,7 +2019,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.7;
+				MARKETING_VERSION = 1.6.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -2032,7 +2036,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Base.lproj/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.24;
+				CURRENT_PROJECT_VERSION = 1.6.31;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2040,7 +2044,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.7;
+				MARKETING_VERSION = 1.6.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -2055,7 +2059,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.24;
+				CURRENT_PROJECT_VERSION = 1.6.31;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntentUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2064,7 +2068,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.7;
+				MARKETING_VERSION = 1.6.8;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus.GetForecastIntentUI;
@@ -2082,7 +2086,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.24;
+				CURRENT_PROJECT_VERSION = 1.6.31;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntentUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2091,7 +2095,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.7;
+				MARKETING_VERSION = 1.6.8;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus.GetForecastIntentUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2108,7 +2112,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.24;
+				CURRENT_PROJECT_VERSION = 1.6.31;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2117,7 +2121,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.7;
+				MARKETING_VERSION = 1.6.8;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus.GetForecastIntent;
@@ -2135,7 +2139,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.24;
+				CURRENT_PROJECT_VERSION = 1.6.31;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2144,7 +2148,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.7;
+				MARKETING_VERSION = 1.6.8;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus.GetForecastIntent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2161,7 +2165,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Today/Cumulus.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.24;
+				CURRENT_PROJECT_VERSION = 1.6.31;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus Today/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2170,7 +2174,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.7;
+				MARKETING_VERSION = 1.6.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.josephszafarowicz.Cumulus.Cumulus-Today";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2186,7 +2190,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Today/Cumulus.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.24;
+				CURRENT_PROJECT_VERSION = 1.6.31;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus Today/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2195,7 +2199,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.7;
+				MARKETING_VERSION = 1.6.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.josephszafarowicz.Cumulus.Cumulus-Today";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

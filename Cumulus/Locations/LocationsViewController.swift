@@ -174,11 +174,12 @@ extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {
         selectedLocation = places.value(forKeyPath: "location") as! String
         defaults.set("\(selectedLocation)", forKey: "savedSelectedLocation")
         alertTitle.removeAll()
-        
+
         self.dismiss(animated: true, completion: {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "Home")
             self.present(controller, animated: true, completion: nil)
+            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         })
     }
     

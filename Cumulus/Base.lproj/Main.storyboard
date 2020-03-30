@@ -16686,8 +16686,38 @@
                                             <outletCollection property="gestureRecognizers" destination="0WX-uq-Jq2" appends="YES" id="mR0-Kr-7VG"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="R4W-re-sGN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="2IM-s8-n9i">
                                         <rect key="frame" x="0.0" y="375.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2IM-s8-n9i" id="89O-3b-DmP">
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Jar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4S-Vn-ClZ">
+                                                    <rect key="frame" x="16" y="0.5" width="343" height="43.5"/>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43.5" id="N8c-Xu-VfT"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="zDa-c4-EsB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="R4S-Vn-ClZ" firstAttribute="centerY" secondItem="89O-3b-DmP" secondAttribute="centerY" id="Dna-cj-BZR"/>
+                                                <constraint firstItem="R4S-Vn-ClZ" firstAttribute="leading" secondItem="89O-3b-DmP" secondAttribute="leading" constant="16" id="kvh-mZ-F4G"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="CZg-b6-Bec" appends="YES" id="oEQ-je-i5L"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="R4W-re-sGN">
+                                        <rect key="frame" x="0.0" y="419.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R4W-re-sGN" id="Onh-At-Wza">
                                             <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
@@ -16721,7 +16751,7 @@
                             <tableViewSection headerTitle="LEGAL" id="Qtz-EW-c7E">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="6f7-ES-jmf">
-                                        <rect key="frame" x="0.0" y="475.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="519.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6f7-ES-jmf" id="v5F-dN-FSO">
                                             <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
@@ -16762,7 +16792,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Bo5-om-p5I">
-                                        <rect key="frame" x="0.0" y="519.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="563.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bo5-om-p5I" id="vje-gy-DHo">
                                             <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
@@ -16814,6 +16844,7 @@
                     <connections>
                         <outlet property="acknowledgementsLabelWidth" destination="Mtn-3E-djz" id="3hc-74-oRP"/>
                         <outlet property="cumulusProLabelWidth" destination="OjS-z8-qTd" id="K3O-Oh-TRD"/>
+                        <outlet property="cumulusTipJarLabelWidth" destination="zDa-c4-EsB" id="Tbi-sU-1lM"/>
                         <outlet property="preferencesLabelWidth" destination="wEr-QR-xLd" id="kvA-zF-iSv"/>
                         <outlet property="privacyPolicyLabelWidth" destination="LHU-zm-sPe" id="juy-MV-rZw"/>
                         <outlet property="reviewCumulusLabelWidth" destination="Uhn-z1-hDX" id="2c4-Ir-J3M"/>
@@ -16868,6 +16899,12 @@
                 <tapGestureRecognizer id="4gW-BF-H19">
                     <connections>
                         <action selector="reviewCumulusButtonTapped:" destination="QJa-Ff-GNZ" id="9Kf-xA-swk"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="CZg-b6-Bec">
+                    <connections>
+                        <action selector="cumulusTipJarButtonTapped:" destination="QJa-Ff-GNZ" id="XFb-Gf-1zL"/>
+                        <segue destination="CRD-oq-iOM" kind="show" identifier="cumulusTipJar" id="k6g-vJ-K2w"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -17861,10 +17898,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <!--Forecast-->
         <scene sceneID="GBj-RE-Slr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="EMa-zd-tfV" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Forecast" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="EMa-zd-tfV" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Forecast" image="Forecast button" id="Q7w-0j-XHC"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Cs9-16-PpU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="W0O-OD-LS8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -17888,11 +17926,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="customControlColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="0ln-9K-IM0">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="485"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="365"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="t6l-QM-DFU">
-                                    <rect key="frame" x="16" y="20" width="343" height="445"/>
+                                    <rect key="frame" x="16" y="20" width="343" height="325"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfW-py-EZd">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="135"/>
@@ -17924,7 +17962,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             </variation>
                                         </textView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G89-nO-AUL">
-                                            <rect key="frame" x="34" y="155" width="275" height="290"/>
+                                            <rect key="frame" x="34" y="155" width="275" height="170"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="YxD-3Y-tic">
                                                     <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
@@ -17937,7 +17975,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                         </constraint>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <state key="normal" title="Misting" backgroundImage="Button Dodger Blue">
+                                                    <state key="normal" title="Kind" backgroundImage="Button Dodger Blue">
                                                         <color key="titleColor" name="customControlColor"/>
                                                     </state>
                                                     <variation key="heightClass=regular-widthClass=regular">
@@ -17947,7 +17985,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                         </mask>
                                                     </variation>
                                                     <connections>
-                                                        <action selector="mistingTipButtonTapped:" destination="0ch-b6-AQN" eventType="touchUpInside" id="vOY-3j-BW2"/>
+                                                        <action selector="kindTipButtonTapped:" destination="0ch-b6-AQN" eventType="touchUpInside" id="dXP-NQ-6f8"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ql8-Bv-yS7">
@@ -17961,7 +17999,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                         </constraint>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <state key="normal" title="Sprinkling" backgroundImage="Button Dodger Blue">
+                                                    <state key="normal" title="Generous" backgroundImage="Button Dodger Blue">
                                                         <color key="titleColor" name="customControlColor"/>
                                                     </state>
                                                     <variation key="heightClass=regular-widthClass=regular">
@@ -17971,7 +18009,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                         </mask>
                                                     </variation>
                                                     <connections>
-                                                        <action selector="sprinklingTipButtonTapped:" destination="0ch-b6-AQN" eventType="touchUpInside" id="73z-71-33i"/>
+                                                        <action selector="generousTipButtonTapped:" destination="0ch-b6-AQN" eventType="touchUpInside" id="wSf-8Y-rgw"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="bNj-N0-b9B">
@@ -17985,7 +18023,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                         </constraint>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <state key="normal" title="Shower" backgroundImage="Button Dodger Blue">
+                                                    <state key="normal" title="Amazing" backgroundImage="Button Dodger Blue">
                                                         <color key="titleColor" name="customControlColor"/>
                                                     </state>
                                                     <variation key="heightClass=regular-widthClass=regular">
@@ -17995,55 +18033,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                         </mask>
                                                     </variation>
                                                     <connections>
-                                                        <action selector="showerTipButtonTapped:" destination="0ch-b6-AQN" eventType="touchUpInside" id="tec-MM-BqD"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Ymu-6s-wWi">
-                                                    <rect key="frame" x="0.0" y="180" width="275" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="Dsw-g6-PJz">
-                                                            <variation key="heightClass=regular-widthClass=regular" constant="150"/>
-                                                        </constraint>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="swE-DY-ygL">
-                                                            <variation key="heightClass=regular-widthClass=regular" constant="150"/>
-                                                        </constraint>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <state key="normal" title="Downpour" backgroundImage="Button Dodger Blue">
-                                                        <color key="titleColor" name="customControlColor"/>
-                                                    </state>
-                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                        <mask key="constraints">
-                                                            <exclude reference="Dsw-g6-PJz"/>
-                                                            <exclude reference="swE-DY-ygL"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <connections>
-                                                        <action selector="downpourTipButtonTapped:" destination="0ch-b6-AQN" eventType="touchUpInside" id="PkT-9C-bjg"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="wgO-ou-CTI">
-                                                    <rect key="frame" x="0.0" y="240" width="275" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="nhh-mh-r00">
-                                                            <variation key="heightClass=regular-widthClass=regular" constant="150"/>
-                                                        </constraint>
-                                                        <constraint firstAttribute="height" constant="50" id="zmf-V5-M4h">
-                                                            <variation key="heightClass=regular-widthClass=regular" constant="150"/>
-                                                        </constraint>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <state key="normal" title="Torrential" backgroundImage="Button Dodger Blue">
-                                                        <color key="titleColor" name="customControlColor"/>
-                                                    </state>
-                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                        <mask key="constraints">
-                                                            <exclude reference="nhh-mh-r00"/>
-                                                            <exclude reference="zmf-V5-M4h"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <connections>
-                                                        <action selector="torrentialTipButtonTapped:" destination="0ch-b6-AQN" eventType="touchUpInside" id="uDI-jE-lXB"/>
+                                                        <action selector="amazingTipButtonTapped:" destination="0ch-b6-AQN" eventType="touchUpInside" id="D7K-9x-OU1"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -18074,22 +18064,51 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <sections>
                             <tableViewSection id="pq9-ED-wxo">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="LYZ-du-04S" detailTextLabel="mAW-lf-AeP" imageView="Oyd-cF-aQU" rowHeight="112" style="IBUITableViewCellStyleSubtitle" id="e5Y-ye-jFf">
-                                        <rect key="frame" x="0.0" y="513" width="375" height="112"/>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="26E-mi-yzN" detailTextLabel="ASX-Kd-X9S" imageView="mbz-Ee-lyF" rowHeight="112" style="IBUITableViewCellStyleSubtitle" id="Hjg-Y0-kKA">
+                                        <rect key="frame" x="0.0" y="393" width="375" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e5Y-ye-jFf" id="Gw7-zU-WSE">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hjg-Y0-kKA" id="1Bp-ea-Je5">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Dynamic App Icons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LYZ-du-04S">
-                                                    <rect key="frame" x="91" y="36" width="147.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Widget Customization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="26E-mi-yzN">
+                                                    <rect key="frame" x="91" y="29" width="169.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Select your favorite icon from 15+ choices." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mAW-lf-AeP">
-                                                    <rect key="frame" x="91" y="59.5" width="242" height="14.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Customize the today widget slots to show your most important weather conditions. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ASX-Kd-X9S">
+                                                    <rect key="frame" x="91" y="52.5" width="268" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Widget icon" id="mbz-Ee-lyF">
+                                                    <rect key="frame" x="16" y="26" width="60" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="LYZ-du-04S" detailTextLabel="mAW-lf-AeP" imageView="Oyd-cF-aQU" rowHeight="112" style="IBUITableViewCellStyleSubtitle" id="e5Y-ye-jFf">
+                                        <rect key="frame" x="0.0" y="505" width="375" height="112"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e5Y-ye-jFf" id="Gw7-zU-WSE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Custom App Icons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LYZ-du-04S">
+                                                    <rect key="frame" x="91" y="29" width="140.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Stand out from the crowd with a custom app icon from a selection of 15+ choices." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mAW-lf-AeP">
+                                                    <rect key="frame" x="91" y="52.5" width="254.5" height="29"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -18103,8 +18122,66 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="hsn-nh-Ijo" detailTextLabel="Q1V-el-qUm" imageView="bQK-JE-i9r" rowHeight="112" style="IBUITableViewCellStyleSubtitle" id="d6Z-In-auD">
+                                        <rect key="frame" x="0.0" y="617" width="375" height="112"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d6Z-In-auD" id="6Ia-oe-aVo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Default Hourly Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hsn-nh-Ijo">
+                                                    <rect key="frame" x="91" y="22" width="188" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Change the default hourly condition to view whats most important to you first when viewing hourly forecasts." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q1V-el-qUm">
+                                                    <rect key="frame" x="91" y="45.5" width="268" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Hourly condition icon" id="bQK-JE-i9r">
+                                                    <rect key="frame" x="16" y="26" width="60" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="7kU-38-w9n" detailTextLabel="YzE-UC-iJC" imageView="9Lq-5x-Q4a" rowHeight="112" style="IBUITableViewCellStyleSubtitle" id="QfD-9R-EnB">
+                                        <rect key="frame" x="0.0" y="729" width="375" height="112"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QfD-9R-EnB" id="qVl-P4-2QA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Daily Cards Customization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7kU-38-w9n">
+                                                    <rect key="frame" x="91" y="29" width="201.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Change the default daily condition that appears on the daily forecast cards." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YzE-UC-iJC">
+                                                    <rect key="frame" x="91" y="52.5" width="223.5" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Daily condition icon" id="9Lq-5x-Q4a">
+                                                    <rect key="frame" x="16" y="26" width="60" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="4dw-Dy-9zx" detailTextLabel="D8o-wo-gjT" imageView="Ghy-cP-8JV" rowHeight="112" style="IBUITableViewCellStyleSubtitle" id="ys3-Ht-aGc">
-                                        <rect key="frame" x="0.0" y="625" width="375" height="112"/>
+                                        <rect key="frame" x="0.0" y="841" width="375" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ys3-Ht-aGc" id="stt-eW-7RG">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
@@ -18117,8 +18194,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Set the appearance of Cumulus with over 10+ themes to choose from." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D8o-wo-gjT">
-                                                    <rect key="frame" x="91" y="52.5" width="261" height="29"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Set the color of Cumulus with over 10+ themes to choose from." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D8o-wo-gjT">
+                                                    <rect key="frame" x="91" y="52.5" width="268" height="29"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -18133,57 +18210,28 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="CaE-os-b5k" detailTextLabel="DYU-VT-uSe" imageView="u1o-gf-6oD" rowHeight="112" style="IBUITableViewCellStyleSubtitle" id="GdY-ho-Mu6">
-                                        <rect key="frame" x="0.0" y="737" width="375" height="112"/>
+                                        <rect key="frame" x="0.0" y="953" width="375" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GdY-ho-Mu6" id="UxV-Mh-c3J">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Support Development" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CaE-os-b5k">
-                                                    <rect key="frame" x="91" y="14" width="168" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Support Indie Development" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CaE-os-b5k">
+                                                    <rect key="frame" x="83" y="14" width="209.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DYU-VT-uSe">
-                                                    <rect key="frame" x="91" y="37.5" width="265.5" height="57.5"/>
+                                                    <rect key="frame" x="83" y="37.5" width="265.5" height="57.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <string key="text">I'm just one guy building Cumulus so your support helps continue the development and improvement of Cumulus. All contributions are greatly appreciated!</string>
+                                                    <string key="text">I'm just one guy building Cumulus, so your support helps continue the development and improvement of Cumulus. All contributions are greatly appreciated!</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Heart icon" id="u1o-gf-6oD">
-                                                    <rect key="frame" x="16" y="26" width="60" height="60"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="26E-mi-yzN" detailTextLabel="ASX-Kd-X9S" imageView="mbz-Ee-lyF" rowHeight="112" style="IBUITableViewCellStyleSubtitle" id="Hjg-Y0-kKA">
-                                        <rect key="frame" x="0.0" y="849" width="375" height="112"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hjg-Y0-kKA" id="1Bp-ea-Je5">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Donation to Charity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="26E-mi-yzN">
-                                                    <rect key="frame" x="83" y="29" width="148.5" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="With every tip given, Cumulus donates 20% of it to charity. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ASX-Kd-X9S">
-                                                    <rect key="frame" x="83" y="52.5" width="275" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Donation icon" id="mbz-Ee-lyF">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Support icon" id="u1o-gf-6oD">
                                                     <rect key="frame" x="8" y="26" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -18201,18 +18249,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     </tableView>
                     <navigationItem key="navigationItem" id="PHf-Es-bcr"/>
                     <connections>
+                        <outlet property="amazingTipButton" destination="bNj-N0-b9B" id="td0-ZI-n4N"/>
                         <outlet property="cumulusProTextViewHeight" destination="Gde-r1-ggO" id="ejw-OM-oBC"/>
                         <outlet property="cumulusProTextViewWidth" destination="MDK-j3-nYz" id="Wy4-y5-kn0"/>
-                        <outlet property="downpourTipButton" destination="Ymu-6s-wWi" id="qzC-cq-2nF"/>
-                        <outlet property="mistingTipButton" destination="YxD-3Y-tic" id="UWa-ne-Fr9"/>
-                        <outlet property="showerTipButton" destination="bNj-N0-b9B" id="Ujm-Pn-x1L"/>
-                        <outlet property="sprinklingTipButton" destination="ql8-Bv-yS7" id="2p8-be-yoP"/>
-                        <outlet property="torrentialTipButton" destination="wgO-ou-CTI" id="b9x-ai-hN8"/>
+                        <outlet property="generousTipButton" destination="ql8-Bv-yS7" id="oiZ-Zd-biA"/>
+                        <outlet property="kindTipButton" destination="YxD-3Y-tic" id="Iuc-Hq-JUx"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XlY-Lz-0QS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3076" y="1844"/>
+            <point key="canvasLocation" x="3076" y="1843.6281859070466"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zcI-Cf-wlm">
@@ -20336,13 +20382,236 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             </objects>
             <point key="canvasLocation" x="2063" y="1844"/>
         </scene>
+        <!--Tip Jar View Controller-->
+        <scene sceneID="SbU-XO-8Uw">
+            <objects>
+                <viewController id="CRD-oq-iOM" customClass="TipJarViewController" customModule="Cumulus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0WT-7x-i93">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="W2D-JA-C6P">
+                                <rect key="frame" x="16" y="64" width="343" height="405"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwZ-Qh-01s">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="736" id="EyA-52-qta"/>
+                                            <constraint firstAttribute="height" constant="423" id="KNb-Gl-29v">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="343" id="qhn-Pu-iMb"/>
+                                            <constraint firstAttribute="height" constant="95" id="zKA-qU-NC0"/>
+                                        </constraints>
+                                        <string key="text">If you've been enjoying Cumulus and want to show additional support, consider choosing one of the tips below. Every little bit helps fund its development. Thanks! </string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="EyA-52-qta"/>
+                                                <exclude reference="KNb-Gl-29v"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="zKA-qU-NC0"/>
+                                                <exclude reference="qhn-Pu-iMb"/>
+                                                <include reference="EyA-52-qta"/>
+                                                <include reference="KNb-Gl-29v"/>
+                                            </mask>
+                                        </variation>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u4e-sR-hcw">
+                                        <rect key="frame" x="34" y="115" width="275" height="290"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nBA-Uu-t3c">
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="S9G-tm-1z5">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="50" id="gjd-bZ-fB5">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Misting" backgroundImage="Button Dodger Blue">
+                                                    <color key="titleColor" name="customControlColor"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <exclude reference="gjd-bZ-fB5"/>
+                                                        <exclude reference="S9G-tm-1z5"/>
+                                                    </mask>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="mistingTipButtonTapped:" destination="CRD-oq-iOM" eventType="touchUpInside" id="N5c-80-O6w"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3eq-YF-mGv">
+                                                <rect key="frame" x="0.0" y="60" width="275" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="7KY-fi-uV2">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="50" id="scP-gf-HEE">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Sprinkling" backgroundImage="Button Dodger Blue">
+                                                    <color key="titleColor" name="customControlColor"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <exclude reference="7KY-fi-uV2"/>
+                                                        <exclude reference="scP-gf-HEE"/>
+                                                    </mask>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="sprinklingTipButtonTapped:" destination="CRD-oq-iOM" eventType="touchUpInside" id="jwI-Qw-h2p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="B0T-6z-96l">
+                                                <rect key="frame" x="0.0" y="120" width="275" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="dck-jh-qgd">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="ycc-SK-uQS">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Shower" backgroundImage="Button Dodger Blue">
+                                                    <color key="titleColor" name="customControlColor"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <exclude reference="dck-jh-qgd"/>
+                                                        <exclude reference="ycc-SK-uQS"/>
+                                                    </mask>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="showerTipButtonTapped:" destination="CRD-oq-iOM" eventType="touchUpInside" id="5Qz-Gc-8ra"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="gyV-iQ-rf8">
+                                                <rect key="frame" x="0.0" y="180" width="275" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="3KQ-a5-NNp">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="nh3-Zx-ok6">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Downpour" backgroundImage="Button Dodger Blue">
+                                                    <color key="titleColor" name="customControlColor"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <exclude reference="3KQ-a5-NNp"/>
+                                                        <exclude reference="nh3-Zx-ok6"/>
+                                                    </mask>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="downpourTipButtonTapped:" destination="CRD-oq-iOM" eventType="touchUpInside" id="aET-IX-R2b"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7MC-pQ-8Sm">
+                                                <rect key="frame" x="0.0" y="240" width="275" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="ZcF-ix-NU9">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="50" id="uLx-Ez-Nqt">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Torrential" backgroundImage="Button Dodger Blue">
+                                                    <color key="titleColor" name="customControlColor"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <exclude reference="ZcF-ix-NU9"/>
+                                                        <exclude reference="uLx-Ez-Nqt"/>
+                                                    </mask>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="torrentialTipButtonTapped:" destination="CRD-oq-iOM" eventType="touchUpInside" id="fT6-6W-Isx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <variation key="heightClass=regular-widthClass=regular" spacing="20"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="515" id="arw-T5-Hkb"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="arw-T5-Hkb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="arw-T5-Hkb"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="customControlColor"/>
+                        <constraints>
+                            <constraint firstItem="W2D-JA-C6P" firstAttribute="centerX" secondItem="0WT-7x-i93" secondAttribute="centerX" id="YtO-YK-KiO"/>
+                            <constraint firstItem="W2D-JA-C6P" firstAttribute="top" secondItem="VFd-jO-OUI" secondAttribute="top" constant="20" id="ama-dW-U0O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VFd-jO-OUI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="i8D-fW-U59"/>
+                    <connections>
+                        <outlet property="cumulusTipJarTextViewHeight" destination="zKA-qU-NC0" id="CME-Fa-IuO"/>
+                        <outlet property="cumulusTipJarTextViewWidth" destination="qhn-Pu-iMb" id="aDi-yK-in2"/>
+                        <outlet property="downpourTipButton" destination="gyV-iQ-rf8" id="dDM-G2-Vna"/>
+                        <outlet property="mistingTipButton" destination="nBA-Uu-t3c" id="T2l-ix-s0J"/>
+                        <outlet property="showerTipButton" destination="B0T-6z-96l" id="wUI-ha-0ky"/>
+                        <outlet property="sprinklingTipButton" destination="3eq-YF-mGv" id="Zah-iY-qrs"/>
+                        <outlet property="torrentialTipButton" destination="7MC-pQ-8Sm" id="zkw-Gg-a9H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CHB-z1-s6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5044" y="1844"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IUx-me-loc">
+            <objects>
+                <navigationController storyboardIdentifier="Tip Jar" automaticallyAdjustsScrollViewInsets="NO" id="LLH-Eh-rY3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fIs-kw-deB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CRD-oq-iOM" kind="relationship" relationship="rootViewController" id="6lX-NE-iCr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EoM-ZD-PpD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4012" y="1844"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="6lX-NE-iCr"/>
         <segue reference="cje-Dn-Okh"/>
         <segue reference="Jw2-4q-mDz"/>
         <segue reference="eND-aD-Wtj"/>
         <segue reference="u9y-Cd-8dt"/>
-        <segue reference="KWq-d0-aBj"/>
+        <segue reference="RbQ-av-C2d"/>
         <segue reference="Qwj-yP-XWX"/>
         <segue reference="1AL-vL-FWU"/>
     </inferredMetricsTieBreakers>
@@ -20360,15 +20629,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <image name="Cloudy Day icon" width="50" height="50"/>
         <image name="Cotton Candy Theme" width="50" height="50"/>
         <image name="Cotton Candy icon" width="50" height="50"/>
+        <image name="Daily condition icon" width="60" height="60"/>
         <image name="Dark Cerulean  icon" width="50" height="50"/>
         <image name="Dark Cerulean Theme" width="50" height="50"/>
         <image name="Dodger Blue Theme" width="50" height="50"/>
         <image name="Dodger Blue icon" width="50" height="50"/>
-        <image name="Donation icon" width="60" height="60"/>
         <image name="Forecast bar Dodger Blue" width="350" height="10"/>
         <image name="Forecast button" width="45" height="45"/>
         <image name="Golden icon" width="50" height="50"/>
-        <image name="Heart icon" width="60" height="60"/>
+        <image name="Hourly condition icon" width="60" height="60"/>
         <image name="Humidity low" width="100" height="100"/>
         <image name="Iguana Green Theme" width="50" height="50"/>
         <image name="Iguana Green icon" width="50" height="50"/>
@@ -20394,6 +20663,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <image name="Sandstorm icon" width="50" height="50"/>
         <image name="Settings button" width="45" height="45"/>
         <image name="Sunrise" width="100" height="100"/>
+        <image name="Support icon" width="60" height="60"/>
         <image name="Temperature low" width="100" height="100"/>
         <image name="Themes icon" width="60" height="60"/>
         <image name="Thunderstorm icon" width="50" height="50"/>
@@ -20405,6 +20675,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <image name="Visibility" width="100" height="100"/>
         <image name="Waning Crescent" width="100" height="100"/>
         <image name="Weather alert" width="219" height="34"/>
+        <image name="Widget icon" width="60" height="60"/>
         <image name="Wind SW" width="100" height="100"/>
         <image name="poweredby-oneline-darkbackground" width="3350" height="759"/>
         <namedColor name="customControlColor">

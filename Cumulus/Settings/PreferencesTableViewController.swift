@@ -56,6 +56,10 @@ class PreferencesTableViewController: UITableViewController,  UITextFieldDelegat
         tableView.tableFooterView = UIView(frame: .zero)
         
         if defaults.bool(forKey: "cumulusPro") == false {
+            defaultHourlyConditionTextField.isEnabled = false
+            defaultDailyConditionTextField.isEnabled = false
+            defaultWidgetSlot1TextField.isEnabled = false
+            defaultWidgetSlot2TextField.isEnabled = false
             dataSourceTextField.isEnabled = false
         }
         

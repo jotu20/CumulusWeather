@@ -38,13 +38,13 @@ class SiriShortcutsTableViewController: UITableViewController {
         if screenHeight == 568 {
             // iPhone SE
             addShortcutButton.topAnchor.constraint(equalTo: margins.topAnchor, constant: 0).isActive = true
-            addShortcutButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 150).isActive = true
+            addShortcutButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 50).isActive = true
         } else if screenHeight > 900 {
             addShortcutButton.topAnchor.constraint(equalTo: margins.topAnchor, constant: 0).isActive = true
-            addShortcutButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 550).isActive = true
+            addShortcutButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 450).isActive = true
         } else {
             addShortcutButton.topAnchor.constraint(equalTo: margins.topAnchor, constant: 0).isActive = true
-            addShortcutButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 200).isActive = true
+            addShortcutButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 100).isActive = true
         }
         donateInteraction()
     }

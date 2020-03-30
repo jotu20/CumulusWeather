@@ -19,25 +19,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         checkSavedColor()
         
-        if (defaults.string(forKey: "defaultHourlyCondition") == nil) {
+        if (defaults.string(forKey: "defaultHourlyCondition") == nil) || (defaults.bool(forKey: "cumulusPro") == false) {
             defaults.set("Precip (%)", forKey: "defaultHourlyCondition")
         }
         
-        if (defaults.string(forKey: "defaultDailyCondition") == nil) {
+        if (defaults.string(forKey: "defaultDailyCondition") == nil) || (defaults.bool(forKey: "cumulusPro") == false) {
             defaults.set("Precip (%)", forKey: "defaultDailyCondition")
         }
         
-        if (defaults.string(forKey: "defaultWidgetSlot1") == nil) {
+        if (defaults.string(forKey: "defaultWidgetSlot1") == nil) || (defaults.bool(forKey: "cumulusPro") == false) {
             defaults.set("Current condition", forKey: "defaultWidgetSlot1")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Current condition", forKey: "setDefaultWidgetSlot1")
         }
         
-        if (defaults.string(forKey: "defaultWidgetSlot2") == nil) {
+        if (defaults.string(forKey: "defaultWidgetSlot2") == nil) || (defaults.bool(forKey: "cumulusPro") == false) {
             defaults.set("Precip (%)", forKey: "defaultWidgetSlot2")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Precip (%)", forKey: "setDefaultWidgetSlot2")
         }
         
-        if (defaults.string(forKey: "dataSource") == nil) || (defaults.string(forKey: "dataSource") == "AerisWeather") {
+        if (defaults.string(forKey: "dataSource") == nil) || (defaults.bool(forKey: "cumulusPro") == false) || (defaults.string(forKey: "dataSource") == "AerisWeather") {
             defaults.set("Dark Sky", forKey: "dataSource")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Dark Sky", forKey: "setDataSource")
         }

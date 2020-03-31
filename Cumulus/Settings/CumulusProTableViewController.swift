@@ -18,6 +18,47 @@ class CumulusProTableViewController: UITableViewController {
     @IBOutlet weak var cumulusProTextViewWidth: NSLayoutConstraint!
     @IBOutlet weak var cumulusProTextViewHeight: NSLayoutConstraint!
     
+    override func viewDidLoad() {
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.ProKindTip"]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
+            }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
+            }
+            else {
+                print("Error: \(String(describing: result.error))")
+            }
+        }
+        
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.ProGenerousTip"]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
+            }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
+            }
+            else {
+                print("Error: \(String(describing: result.error))")
+            }
+        }
+        
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.ProAmazingTip"]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
+            }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
+            }
+            else {
+                print("Error: \(String(describing: result.error))")
+            }
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
         weatherLoaded = true
@@ -30,63 +71,16 @@ class CumulusProTableViewController: UITableViewController {
             cumulusProTextViewWidth.constant = 300
             cumulusProTextViewHeight.constant = 143
         }
+        
+        self.kindTipButton.setTitle("Kind tip of $1.99", for: .normal)
+        self.kindTipButton.titleLabel?.textAlignment = NSTextAlignment.center
+        
+        self.generousTipButton.setTitle("Generous tip of $3.99", for: .normal)
+        self.generousTipButton.titleLabel?.textAlignment = NSTextAlignment.center
+        
 
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.ProKindTip"]) { result in
-            if let product = result.retrievedProducts.first {
-                let priceString = product.localizedPrice!
-                print("Product: \(product.localizedDescription), price: \(priceString)")
-                self.kindTipButton.setTitle("Kind tip of \(priceString)", for: .normal)
-                self.kindTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-            }
-            else if let invalidProductId = result.invalidProductIDs.first {
-                print("Invalid product identifier: \(invalidProductId)")
-                self.kindTipButton.setTitle("Kind tip", for: .normal)
-                self.kindTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-            }
-            else {
-                print("Error: \(String(describing: result.error))")
-                self.kindTipButton.setTitle("Kind tip", for: .normal)
-                self.kindTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-            }
-        }
-        
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.ProGenerousTip"]) { result in
-            if let product = result.retrievedProducts.first {
-                let priceString = product.localizedPrice!
-                print("Product: \(product.localizedDescription), price: \(priceString)")
-                self.generousTipButton.setTitle("Generous tip of \(priceString)", for: .normal)
-                self.generousTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-            }
-            else if let invalidProductId = result.invalidProductIDs.first {
-                print("Invalid product identifier: \(invalidProductId)")
-                self.generousTipButton.setTitle("Generous tip", for: .normal)
-                self.generousTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-            }
-            else {
-                print("Error: \(String(describing: result.error))")
-                self.generousTipButton.setTitle("Generous tip", for: .normal)
-                self.generousTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-            }
-        }
-        
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.ProAmazingTip"]) { result in
-            if let product = result.retrievedProducts.first {
-                let priceString = product.localizedPrice!
-                print("Product: \(product.localizedDescription), price: \(priceString)")
-                self.amazingTipButton.setTitle("Amazing tip of \(priceString)", for: .normal)
-                self.amazingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-            }
-            else if let invalidProductId = result.invalidProductIDs.first {
-                print("Invalid product identifier: \(invalidProductId)")
-                self.amazingTipButton.setTitle("Amazing tip", for: .normal)
-                self.amazingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-            }
-            else {
-                print("Error: \(String(describing: result.error))")
-                self.amazingTipButton.setTitle("Amazing tip", for: .normal)
-                self.amazingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-            }
-        }
+        self.amazingTipButton.setTitle("Amazing tip of $5.99", for: .normal)
+        self.amazingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
 
         kindTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
         generousTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)

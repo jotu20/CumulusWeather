@@ -6,7 +6,7 @@ target 'Cumulus' do
 
 	pod 'ForecastIO', '8.0.0'
  	pod 'GooglePlaces', '3.5.0'
- 	pod 'SwiftyStoreKit'
+ 	pod 'SwiftyStoreKit', '0.15.0'
 
 	target 'Cumulus Today' do 
 

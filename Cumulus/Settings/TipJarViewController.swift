@@ -11,320 +11,307 @@ import SwiftyStoreKit
 
 class TipJarViewController: UIViewController {
 
-        @IBOutlet weak var mistingTipButton: UIButton!
-        @IBOutlet weak var sprinklingTipButton: UIButton!
-        @IBOutlet weak var showerTipButton: UIButton!
-        @IBOutlet weak var downpourTipButton: UIButton!
-        @IBOutlet weak var torrentialTipButton: UIButton!
-        
-        @IBOutlet weak var cumulusTipJarTextViewWidth: NSLayoutConstraint!
-        @IBOutlet weak var cumulusTipJarTextViewHeight: NSLayoutConstraint!
-        
-        override func viewWillAppear(_ animated: Bool) {
-            self.navigationController?.isNavigationBarHidden = false
-            weatherLoaded = true
-            
-            title = "Tip Jar"
-            
-            let screenSize = UIScreen.main.bounds
-            let screenHeight = screenSize.height
-            if screenHeight == 568 {
-                cumulusTipJarTextViewWidth.constant = 300
-                cumulusTipJarTextViewHeight.constant = 143
+    @IBOutlet weak var mistingTipButton: UIButton!
+    @IBOutlet weak var sprinklingTipButton: UIButton!
+    @IBOutlet weak var showerTipButton: UIButton!
+    @IBOutlet weak var downpourTipButton: UIButton!
+    @IBOutlet weak var torrentialTipButton: UIButton!
+    
+    @IBOutlet weak var cumulusTipJarTextViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var cumulusTipJarTextViewHeight: NSLayoutConstraint!
+    
+    override func viewDidLoad() {
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarMisting"]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
             }
-
-            SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarMisting"]) { result in
-                if let product = result.retrievedProducts.first {
-                    let priceString = product.localizedPrice!
-                    print("Product: \(product.localizedDescription), price: \(priceString)")
-                    self.mistingTipButton.setTitle("Misting tip of \(priceString)", for: .normal)
-                    self.mistingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-                }
-                else if let invalidProductId = result.invalidProductIDs.first {
-                    print("Invalid product identifier: \(invalidProductId)")
-                    self.mistingTipButton.setTitle("Misting tip", for: .normal)
-                    self.mistingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-                }
-                else {
-                    print("Error: \(String(describing: result.error))")
-                    self.mistingTipButton.setTitle("Misting tip", for: .normal)
-                    self.mistingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-                }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
             }
-            
-            SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarSprinkling"]) { result in
-                if let product = result.retrievedProducts.first {
-                    let priceString = product.localizedPrice!
-                    print("Product: \(product.localizedDescription), price: \(priceString)")
-                    self.sprinklingTipButton.setTitle("Sprinkling tip of \(priceString)", for: .normal)
-                    self.sprinklingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-                }
-                else if let invalidProductId = result.invalidProductIDs.first {
-                    print("Invalid product identifier: \(invalidProductId)")
-                    self.sprinklingTipButton.setTitle("Sprinkling tip", for: .normal)
-                    self.sprinklingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-                }
-                else {
-                    print("Error: \(String(describing: result.error))")
-                    self.sprinklingTipButton.setTitle("Sprinkling tip", for: .normal)
-                    self.sprinklingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-                }
-            }
-            
-            SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarShower"]) { result in
-                if let product = result.retrievedProducts.first {
-                    let priceString = product.localizedPrice!
-                    print("Product: \(product.localizedDescription), price: \(priceString)")
-                    self.showerTipButton.setTitle("Shower tip of \(priceString)", for: .normal)
-                    self.showerTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-                }
-                else if let invalidProductId = result.invalidProductIDs.first {
-                    print("Invalid product identifier: \(invalidProductId)")
-                    self.showerTipButton.setTitle("Shower tip", for: .normal)
-                    self.showerTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-                }
-                else {
-                    print("Error: \(String(describing: result.error))")
-                    self.showerTipButton.setTitle("Shower tip", for: .normal)
-                    self.showerTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-                }
-            }
-            
-            SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarDownpour"]) { result in
-                if let product = result.retrievedProducts.first {
-                    let priceString = product.localizedPrice!
-                    print("Product: \(product.localizedDescription), price: \(priceString)")
-                    self.downpourTipButton.setTitle("Downpour tip of \(priceString)", for: .normal)
-                    self.downpourTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-                }
-                else if let invalidProductId = result.invalidProductIDs.first {
-                    print("Invalid product identifier: \(invalidProductId)")
-                    self.downpourTipButton.setTitle("Downpour tip", for: .normal)
-                    self.downpourTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-                }
-                else {
-                    print("Error: \(String(describing: result.error))")
-                    self.downpourTipButton.setTitle("Downpour tip", for: .normal)
-                    self.downpourTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-                }
-            }
-            
-            SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarTorrential"]) { result in
-                if let product = result.retrievedProducts.first {
-                    let priceString = product.localizedPrice!
-                    print("Product: \(product.localizedDescription), price: \(priceString)")
-                    self.torrentialTipButton.setTitle("Torrential tip of \(priceString)", for: .normal)
-                    self.torrentialTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-                }
-                else if let invalidProductId = result.invalidProductIDs.first {
-                    print("Invalid product identifier: \(invalidProductId)")
-                    self.torrentialTipButton.setTitle("Torrential tip", for: .normal)
-                    self.torrentialTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-                }
-                else {
-                    print("Error: \(String(describing: result.error))")
-                    self.torrentialTipButton.setTitle("Torrential tip", for: .normal)
-                    self.torrentialTipButton.titleLabel?.textAlignment = NSTextAlignment.center
-                }
-            }
-
-            mistingTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
-            sprinklingTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
-            showerTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
-            downpourTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
-            torrentialTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
-        }
-
-        @IBAction func mistingTipButtonTapped(_ sender: UIButton) {
-            SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarMisting"]) { result in
-                if let product = result.retrievedProducts.first {
-                    let priceString = product.localizedPrice!
-                    print("Product: \(product.localizedDescription), price: \(priceString)")
-                }
-                else if let invalidProductId = result.invalidProductIDs.first {
-                    print("Invalid product identifier: \(invalidProductId)")
-                }
-                else {
-                    print("Error: \(String(describing: result.error))")
-                }
-            }
-            
-            SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarMisting", quantity: 1, atomically: false) { result in
-                switch result {
-                case .success(let purchase):
-                    print("Purchase Success: \(purchase.productId)")
-                case .error(let error):
-                    switch error.code {
-                    case .unknown: print("Unknown error. Please contact support")
-                    case .clientInvalid: print("Not allowed to make the payment")
-                    case .paymentCancelled: break
-                    case .paymentInvalid: print("The purchase identifier was invalid")
-                    case .paymentNotAllowed: print("The device is not allowed to make the payment")
-                    case .storeProductNotAvailable: print("The product is not available in the current storefront")
-                    case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
-                    case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
-                    case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
-                    default: print((error as NSError).localizedDescription)
-                    }
-                }
-                if let alert = self.alertForPurchaseResult(result) {
-                    self.showAlert(alert)
-                }
+            else {
+                print("Error: \(String(describing: result.error))")
             }
         }
         
-        @IBAction func sprinklingTipButtonTapped(_ sender: UIButton) {
-            SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarSprinkling"]) { result in
-                if let product = result.retrievedProducts.first {
-                    let priceString = product.localizedPrice!
-                    print("Product: \(product.localizedDescription), price: \(priceString)")
-                }
-                else if let invalidProductId = result.invalidProductIDs.first {
-                    print("Invalid product identifier: \(invalidProductId)")
-                }
-                else {
-                    print("Error: \(String(describing: result.error))")
-                }
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarSprinkling"]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
             }
-            
-            SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarSprinkling", quantity: 1, atomically: false) { result in
-                switch result {
-                case .success(let purchase):
-                    print("Purchase Success: \(purchase.productId)")
-                case .error(let error):
-                    switch error.code {
-                    case .unknown: print("Unknown error. Please contact support")
-                    case .clientInvalid: print("Not allowed to make the payment")
-                    case .paymentCancelled: break
-                    case .paymentInvalid: print("The purchase identifier was invalid")
-                    case .paymentNotAllowed: print("The device is not allowed to make the payment")
-                    case .storeProductNotAvailable: print("The product is not available in the current storefront")
-                    case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
-                    case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
-                    case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
-                    default: print((error as NSError).localizedDescription)
-                    }
-                }
-                if let alert = self.alertForPurchaseResult(result) {
-                    self.showAlert(alert)
-                }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
+            }
+            else {
+                print("Error: \(String(describing: result.error))")
             }
         }
         
-        @IBAction func showerTipButtonTapped(_ sender: UIButton) {
-            SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarShower"]) { result in
-                if let product = result.retrievedProducts.first {
-                    let priceString = product.localizedPrice!
-                    print("Product: \(product.localizedDescription), price: \(priceString)")
-                }
-                else if let invalidProductId = result.invalidProductIDs.first {
-                    print("Invalid product identifier: \(invalidProductId)")
-                }
-                else {
-                    print("Error: \(String(describing: result.error))")
-                }
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarShower"]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
             }
-            
-            SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarShower", quantity: 1, atomically: false) { result in
-                switch result {
-                case .success(let purchase):
-                    print("Purchase Success: \(purchase.productId)")
-                case .error(let error):
-                    switch error.code {
-                    case .unknown: print("Unknown error. Please contact support")
-                    case .clientInvalid: print("Not allowed to make the payment")
-                    case .paymentCancelled: break
-                    case .paymentInvalid: print("The purchase identifier was invalid")
-                    case .paymentNotAllowed: print("The device is not allowed to make the payment")
-                    case .storeProductNotAvailable: print("The product is not available in the current storefront")
-                    case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
-                    case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
-                    case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
-                    default: print((error as NSError).localizedDescription)
-                    }
-                }
-                if let alert = self.alertForPurchaseResult(result) {
-                    self.showAlert(alert)
-                }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
+            }
+            else {
+                print("Error: \(String(describing: result.error))")
             }
         }
         
-        @IBAction func downpourTipButtonTapped(_ sender: UIButton) {
-            SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarDownpour"]) { result in
-                if let product = result.retrievedProducts.first {
-                    let priceString = product.localizedPrice!
-                    print("Product: \(product.localizedDescription), price: \(priceString)")
-                }
-                else if let invalidProductId = result.invalidProductIDs.first {
-                    print("Invalid product identifier: \(invalidProductId)")
-                }
-                else {
-                    print("Error: \(String(describing: result.error))")
-                }
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarDownpour"]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
             }
-            
-            SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarDownpour", quantity: 1, atomically: false) { result in
-                switch result {
-                case .success(let purchase):
-                    print("Purchase Success: \(purchase.productId)")
-                case .error(let error):
-                    switch error.code {
-                    case .unknown: print("Unknown error. Please contact support")
-                    case .clientInvalid: print("Not allowed to make the payment")
-                    case .paymentCancelled: break
-                    case .paymentInvalid: print("The purchase identifier was invalid")
-                    case .paymentNotAllowed: print("The device is not allowed to make the payment")
-                    case .storeProductNotAvailable: print("The product is not available in the current storefront")
-                    case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
-                    case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
-                    case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
-                    default: print((error as NSError).localizedDescription)
-                    }
-                }
-                if let alert = self.alertForPurchaseResult(result) {
-                    self.showAlert(alert)
-                }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
+            }
+            else {
+                print("Error: \(String(describing: result.error))")
             }
         }
         
-        @IBAction func torrentialTipButtonTapped(_ sender: UIButton) {
-            SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarTorrential"]) { result in
-                if let product = result.retrievedProducts.first {
-                    let priceString = product.localizedPrice!
-                    print("Product: \(product.localizedDescription), price: \(priceString)")
-                }
-                else if let invalidProductId = result.invalidProductIDs.first {
-                    print("Invalid product identifier: \(invalidProductId)")
-                }
-                else {
-                    print("Error: \(String(describing: result.error))")
-                }
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarTorrential"]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
             }
-            
-            SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarTorrential", quantity: 1, atomically: false) { result in
-                switch result {
-                case .success(let purchase):
-                    print("Purchase Success: \(purchase.productId)")
-                case .error(let error):
-                    switch error.code {
-                    case .unknown: print("Unknown error. Please contact support")
-                    case .clientInvalid: print("Not allowed to make the payment")
-                    case .paymentCancelled: break
-                    case .paymentInvalid: print("The purchase identifier was invalid")
-                    case .paymentNotAllowed: print("The device is not allowed to make the payment")
-                    case .storeProductNotAvailable: print("The product is not available in the current storefront")
-                    case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
-                    case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
-                    case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
-                    default: print((error as NSError).localizedDescription)
-                    }
-                }
-                if let alert = self.alertForPurchaseResult(result) {
-                    self.showAlert(alert)
-                }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
+            }
+            else {
+                print("Error: \(String(describing: result.error))")
             }
         }
     }
+        
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+        weatherLoaded = true
+        
+        title = "Tip Jar"
+        
+        let screenSize = UIScreen.main.bounds
+        let screenHeight = screenSize.height
+        if screenHeight == 568 {
+            cumulusTipJarTextViewWidth.constant = 300
+            cumulusTipJarTextViewHeight.constant = 143
+        }
+        
+        self.mistingTipButton.setTitle("Misting tip of $0.99", for: .normal)
+        self.mistingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
+        
+        self.sprinklingTipButton.setTitle("Sprinkling tip of $2.99", for: .normal)
+        self.sprinklingTipButton.titleLabel?.textAlignment = NSTextAlignment.center
+        
+        self.showerTipButton.setTitle("Shower tip of $4.99", for: .normal)
+        self.showerTipButton.titleLabel?.textAlignment = NSTextAlignment.center
+
+        self.downpourTipButton.setTitle("Downpour tip of $9.99", for: .normal)
+        self.downpourTipButton.titleLabel?.textAlignment = NSTextAlignment.center
+        
+        self.torrentialTipButton.setTitle("Torrential tip of $19.99", for: .normal)
+        self.torrentialTipButton.titleLabel?.textAlignment = NSTextAlignment.center
+
+        mistingTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
+        sprinklingTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
+        showerTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
+        downpourTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
+        torrentialTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
+    }
+
+    @IBAction func mistingTipButtonTapped(_ sender: UIButton) {
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarMisting"]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
+            }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
+            }
+            else {
+                print("Error: \(String(describing: result.error))")
+            }
+        }
+        
+        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarMisting", quantity: 1, atomically: false) { result in
+            switch result {
+            case .success(let purchase):
+                print("Purchase Success: \(purchase.productId)")
+            case .error(let error):
+                switch error.code {
+                case .unknown: print("Unknown error. Please contact support")
+                case .clientInvalid: print("Not allowed to make the payment")
+                case .paymentCancelled: break
+                case .paymentInvalid: print("The purchase identifier was invalid")
+                case .paymentNotAllowed: print("The device is not allowed to make the payment")
+                case .storeProductNotAvailable: print("The product is not available in the current storefront")
+                case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
+                case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
+                case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
+                default: print((error as NSError).localizedDescription)
+                }
+            }
+            if let alert = self.alertForPurchaseResult(result) {
+                self.showAlert(alert)
+            }
+        }
+    }
+    
+    @IBAction func sprinklingTipButtonTapped(_ sender: UIButton) {
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarSprinkling"]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
+            }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
+            }
+            else {
+                print("Error: \(String(describing: result.error))")
+            }
+        }
+        
+        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarSprinkling", quantity: 1, atomically: false) { result in
+            switch result {
+            case .success(let purchase):
+                print("Purchase Success: \(purchase.productId)")
+            case .error(let error):
+                switch error.code {
+                case .unknown: print("Unknown error. Please contact support")
+                case .clientInvalid: print("Not allowed to make the payment")
+                case .paymentCancelled: break
+                case .paymentInvalid: print("The purchase identifier was invalid")
+                case .paymentNotAllowed: print("The device is not allowed to make the payment")
+                case .storeProductNotAvailable: print("The product is not available in the current storefront")
+                case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
+                case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
+                case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
+                default: print((error as NSError).localizedDescription)
+                }
+            }
+            if let alert = self.alertForPurchaseResult(result) {
+                self.showAlert(alert)
+            }
+        }
+    }
+    
+    @IBAction func showerTipButtonTapped(_ sender: UIButton) {
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarShower"]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
+            }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
+            }
+            else {
+                print("Error: \(String(describing: result.error))")
+            }
+        }
+        
+        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarShower", quantity: 1, atomically: false) { result in
+            switch result {
+            case .success(let purchase):
+                print("Purchase Success: \(purchase.productId)")
+            case .error(let error):
+                switch error.code {
+                case .unknown: print("Unknown error. Please contact support")
+                case .clientInvalid: print("Not allowed to make the payment")
+                case .paymentCancelled: break
+                case .paymentInvalid: print("The purchase identifier was invalid")
+                case .paymentNotAllowed: print("The device is not allowed to make the payment")
+                case .storeProductNotAvailable: print("The product is not available in the current storefront")
+                case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
+                case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
+                case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
+                default: print((error as NSError).localizedDescription)
+                }
+            }
+            if let alert = self.alertForPurchaseResult(result) {
+                self.showAlert(alert)
+            }
+        }
+    }
+    
+    @IBAction func downpourTipButtonTapped(_ sender: UIButton) {
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarDownpour"]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
+            }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
+            }
+            else {
+                print("Error: \(String(describing: result.error))")
+            }
+        }
+        
+        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarDownpour", quantity: 1, atomically: false) { result in
+            switch result {
+            case .success(let purchase):
+                print("Purchase Success: \(purchase.productId)")
+            case .error(let error):
+                switch error.code {
+                case .unknown: print("Unknown error. Please contact support")
+                case .clientInvalid: print("Not allowed to make the payment")
+                case .paymentCancelled: break
+                case .paymentInvalid: print("The purchase identifier was invalid")
+                case .paymentNotAllowed: print("The device is not allowed to make the payment")
+                case .storeProductNotAvailable: print("The product is not available in the current storefront")
+                case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
+                case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
+                case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
+                default: print((error as NSError).localizedDescription)
+                }
+            }
+            if let alert = self.alertForPurchaseResult(result) {
+                self.showAlert(alert)
+            }
+        }
+    }
+    
+    @IBAction func torrentialTipButtonTapped(_ sender: UIButton) {
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.TipJarTorrential"]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
+            }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
+            }
+            else {
+                print("Error: \(String(describing: result.error))")
+            }
+        }
+        
+        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarTorrential", quantity: 1, atomically: false) { result in
+            switch result {
+            case .success(let purchase):
+                print("Purchase Success: \(purchase.productId)")
+            case .error(let error):
+                switch error.code {
+                case .unknown: print("Unknown error. Please contact support")
+                case .clientInvalid: print("Not allowed to make the payment")
+                case .paymentCancelled: break
+                case .paymentInvalid: print("The purchase identifier was invalid")
+                case .paymentNotAllowed: print("The device is not allowed to make the payment")
+                case .storeProductNotAvailable: print("The product is not available in the current storefront")
+                case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
+                case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
+                case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
+                default: print((error as NSError).localizedDescription)
+                }
+            }
+            if let alert = self.alertForPurchaseResult(result) {
+                self.showAlert(alert)
+            }
+        }
+    }
+}
 
     extension TipJarViewController {
         func alertWithTitle(_ title: String, message: String) -> UIAlertController {

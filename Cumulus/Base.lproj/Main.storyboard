@@ -20415,10 +20415,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <mask key="constraints">
-                                                <exclude reference="zKA-qU-NC0"/>
-                                                <exclude reference="qhn-Pu-iMb"/>
                                                 <include reference="EyA-52-qta"/>
                                                 <include reference="KNb-Gl-29v"/>
+                                                <exclude reference="qhn-Pu-iMb"/>
+                                                <exclude reference="zKA-qU-NC0"/>
                                             </mask>
                                         </variation>
                                     </textView>
@@ -20441,8 +20441,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                 </state>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <mask key="constraints">
-                                                        <exclude reference="gjd-bZ-fB5"/>
                                                         <exclude reference="S9G-tm-1z5"/>
+                                                        <exclude reference="gjd-bZ-fB5"/>
                                                     </mask>
                                                 </variation>
                                                 <connections>

@@ -136,7 +136,7 @@ class TipJarViewController: UIViewController {
             }
         }
         
-        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarMisting", quantity: 1, atomically: false) { result in
+        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarMisting", quantity: 1, atomically: true) { result in
             switch result {
             case .success(let purchase):
                 print("Purchase Success: \(purchase.productId)")
@@ -174,7 +174,7 @@ class TipJarViewController: UIViewController {
             }
         }
         
-        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarSprinkling", quantity: 1, atomically: false) { result in
+        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarSprinkling", quantity: 1, atomically: true) { result in
             switch result {
             case .success(let purchase):
                 print("Purchase Success: \(purchase.productId)")
@@ -212,7 +212,7 @@ class TipJarViewController: UIViewController {
             }
         }
         
-        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarShower", quantity: 1, atomically: false) { result in
+        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarShower", quantity: 1, atomically: true) { result in
             switch result {
             case .success(let purchase):
                 print("Purchase Success: \(purchase.productId)")
@@ -250,7 +250,7 @@ class TipJarViewController: UIViewController {
             }
         }
         
-        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarDownpour", quantity: 1, atomically: false) { result in
+        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarDownpour", quantity: 1, atomically: true) { result in
             switch result {
             case .success(let purchase):
                 print("Purchase Success: \(purchase.productId)")
@@ -288,7 +288,7 @@ class TipJarViewController: UIViewController {
             }
         }
         
-        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarTorrential", quantity: 1, atomically: false) { result in
+        SwiftyStoreKit.purchaseProduct("com.josephszafarowicz.Cumulus.TipJarTorrential", quantity: 1, atomically: true) { result in
             switch result {
             case .success(let purchase):
                 print("Purchase Success: \(purchase.productId)")

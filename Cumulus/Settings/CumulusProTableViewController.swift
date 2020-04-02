@@ -18,47 +18,6 @@ class CumulusProTableViewController: UITableViewController {
     @IBOutlet weak var cumulusProTextViewWidth: NSLayoutConstraint!
     @IBOutlet weak var cumulusProTextViewHeight: NSLayoutConstraint!
     
-    override func viewDidLoad() {
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.ProKindTip"]) { result in
-            if let product = result.retrievedProducts.first {
-                let priceString = product.localizedPrice!
-                print("Product: \(product.localizedDescription), price: \(priceString)")
-            }
-            else if let invalidProductId = result.invalidProductIDs.first {
-                print("Invalid product identifier: \(invalidProductId)")
-            }
-            else {
-                print("Error: \(String(describing: result.error))")
-            }
-        }
-        
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.ProGenerousTip"]) { result in
-            if let product = result.retrievedProducts.first {
-                let priceString = product.localizedPrice!
-                print("Product: \(product.localizedDescription), price: \(priceString)")
-            }
-            else if let invalidProductId = result.invalidProductIDs.first {
-                print("Invalid product identifier: \(invalidProductId)")
-            }
-            else {
-                print("Error: \(String(describing: result.error))")
-            }
-        }
-        
-        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.Cumulus.ProAmazingTip"]) { result in
-            if let product = result.retrievedProducts.first {
-                let priceString = product.localizedPrice!
-                print("Product: \(product.localizedDescription), price: \(priceString)")
-            }
-            else if let invalidProductId = result.invalidProductIDs.first {
-                print("Invalid product identifier: \(invalidProductId)")
-            }
-            else {
-                print("Error: \(String(describing: result.error))")
-            }
-        }
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
         weatherLoaded = true

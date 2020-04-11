@@ -86,11 +86,9 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
         selectedLocation = userCurrentLocation
         alertTitle.removeAll()
         
-        self.dismiss(animated: true, completion: {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Home")
-            self.present(controller, animated: true, completion: nil)
-        })
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Home")
+        self.present(controller, animated: true, completion: nil)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -175,12 +173,9 @@ extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {
         defaults.set("\(selectedLocation)", forKey: "savedSelectedLocation")
         alertTitle.removeAll()
 
-        self.dismiss(animated: true, completion: {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Home")
-            self.present(controller, animated: true, completion: nil)
-            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
-        })
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Home")
+        self.present(controller, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

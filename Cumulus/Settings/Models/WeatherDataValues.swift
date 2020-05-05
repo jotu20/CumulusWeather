@@ -68,6 +68,7 @@ var nearestStormDirectionString: String = ""
 var windDirectionDegree: Double = 0
 var windDirectionString: String = ""
 var precipAccumulation: Double = 0
+var airQualityIndex: Int = 0
 
 // MARK: - Weather condition daily values
 var weatherCondition0: String = ""

@@ -92,7 +92,8 @@ public func fetchDarkSkyCurrentForecastData() {
                 uvindexHour0 = uvIndex
                 windSpeedHour0 = wind
                 cloudCoverHour0 = cloudCover
-            }            case .failure(let error):
+            }
+        case .failure(let error):
             print(error)
         }
     }

@@ -105,9 +105,9 @@ class PrivacyPolicyViewController: UIViewController {
     
     // Set the labels for all corresponding statements
     func setLabels() {
-        let font = UIFont.systemFont(ofSize: 17)
+        let font = UIFont(name: "Oswald-Light", size: 17)
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: font,
+            .font: font!,
             .foregroundColor: UIColor.label,
         ]
         

@@ -15,6 +15,14 @@
 		CF39201B2365217300FAFA53 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF39201A2365217300FAFA53 /* MapKit.framework */; };
 		CF4A0E5F2108B1B30061CAAD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4A0E5E2108B1B30061CAAD /* Default-568h@2x.png */; };
 		CF4A0E612108B5580061CAAD /* AppIconTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A0E602108B5580061CAAD /* AppIconTableViewController.swift */; };
+		CF50B879246C6A5200A0EA66 /* Oswald-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF50B874246C6A5200A0EA66 /* Oswald-Light.ttf */; };
+		CF50B87A246C6A5200A0EA66 /* Oswald-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF50B874246C6A5200A0EA66 /* Oswald-Light.ttf */; };
+		CF50B87B246C6A5200A0EA66 /* Oswald-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF50B874246C6A5200A0EA66 /* Oswald-Light.ttf */; };
+		CF50B87C246C6A5200A0EA66 /* Oswald-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF50B874246C6A5200A0EA66 /* Oswald-Light.ttf */; };
+		CF50B87E246C6B8B00A0EA66 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF50B87D246C6B8B00A0EA66 /* Oswald-Regular.ttf */; };
+		CF50B87F246C6B8B00A0EA66 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF50B87D246C6B8B00A0EA66 /* Oswald-Regular.ttf */; };
+		CF50B880246C6B8B00A0EA66 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF50B87D246C6B8B00A0EA66 /* Oswald-Regular.ttf */; };
+		CF50B881246C6B8B00A0EA66 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF50B87D246C6B8B00A0EA66 /* Oswald-Regular.ttf */; };
 		CF52ECD9210FA29D00A605A4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF52ECD8210FA29D00A605A4 /* StoreKit.framework */; };
 		CF55D7F32461CC67001E1683 /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55D7F22461CC67001E1683 /* CurrentWeatherData.swift */; };
 		CF55D7F42461DFFC001E1683 /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55D7F22461CC67001E1683 /* CurrentWeatherData.swift */; };
@@ -529,6 +537,8 @@
 		CF39201A2365217300FAFA53 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CF4A0E5E2108B1B30061CAAD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CF4A0E602108B5580061CAAD /* AppIconTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconTableViewController.swift; sourceTree = "<group>"; };
+		CF50B874246C6A5200A0EA66 /* Oswald-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Oswald-Light.ttf"; path = "../../../../../../../Downloads/Oswald/static/Oswald-Light.ttf"; sourceTree = "<group>"; };
+		CF50B87D246C6B8B00A0EA66 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Oswald-Regular.ttf"; path = "../../../../../../../Downloads/Oswald/static/Oswald-Regular.ttf"; sourceTree = "<group>"; };
 		CF52ECD8210FA29D00A605A4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CF55D7F22461CC67001E1683 /* CurrentWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherData.swift; sourceTree = "<group>"; };
 		CF5EB7B92435778F006FF5A5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -753,6 +763,15 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		CF50B872246C69EA00A0EA66 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CF50B87D246C6B8B00A0EA66 /* Oswald-Regular.ttf */,
+				CF50B874246C6A5200A0EA66 /* Oswald-Light.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		CF6E4A9520DACFD8002349A7 = {
 			isa = PBXGroup;
 			children = (
@@ -882,6 +901,7 @@
 		CFAF60F5242E4CA5004FB831 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CF50B872246C69EA00A0EA66 /* Fonts */,
 				CF6E4AA820DACFD9002349A7 /* Assets.xcassets */,
 				CFF0A77D242E928800FDDAF1 /* Icons */,
 			);
@@ -1199,6 +1219,7 @@
 				CFF0A7EE242E92A400FDDAF1 /* CottonCandy@3x.png in Resources */,
 				CFF0A85A242E92A400FDDAF1 /* Sandstorm@3x.png in Resources */,
 				CFF0A88E242E92A400FDDAF1 /* CloudyDayiPad@3x.png in Resources */,
+				CF50B879246C6A5200A0EA66 /* Oswald-Light.ttf in Resources */,
 				CFF0A8A2242E92A400FDDAF1 /* ThunderstormiPad@3x.png in Resources */,
 				CFF0A80A242E92A400FDDAF1 /* RadariPad@3x.png in Resources */,
 				CFF0A8EA242E92A400FDDAF1 /* Location@3x.png in Resources */,
@@ -1227,6 +1248,7 @@
 				CFF0A8F6242E92A400FDDAF1 /* CottonCandyPad@3x.png in Resources */,
 				CFF0A8A6242E92A400FDDAF1 /* TuscaniPad@3x.png in Resources */,
 				CFF0A7EA242E92A400FDDAF1 /* LocationiPad@2x.png in Resources */,
+				CF50B87E246C6B8B00A0EA66 /* Oswald-Regular.ttf in Resources */,
 				CF6E4AA920DACFD9002349A7 /* Assets.xcassets in Resources */,
 				CFF0A8C6242E92A400FDDAF1 /* TwilightZone@3x.png in Resources */,
 				CFF0A866242E92A400FDDAF1 /* AsteroidiPad@3x.png in Resources */,
@@ -1351,6 +1373,7 @@
 				CFF0A900242E92A400FDDAF1 /* DodgerBlue@2x.png in Resources */,
 				CFF0A870242E92A400FDDAF1 /* AsteroidiPad@2x.png in Resources */,
 				CFF0A880242E92A400FDDAF1 /* DarkCeruleaniPad@2x.png in Resources */,
+				CF50B880246C6B8B00A0EA66 /* Oswald-Regular.ttf in Resources */,
 				CFF0A85C242E92A400FDDAF1 /* Sandstorm@3x.png in Resources */,
 				CFF0A910242E92A400FDDAF1 /* IguanaGreeniPad@2x.png in Resources */,
 				CFF0A808242E92A400FDDAF1 /* GoldeniPad@3x.png in Resources */,
@@ -1369,6 +1392,7 @@
 				CFF0A88C242E92A400FDDAF1 /* Radar@3x.png in Resources */,
 				CFF0A850242E92A400FDDAF1 /* CottonCandyiPad@2x.png in Resources */,
 				CFF0A890242E92A400FDDAF1 /* CloudyDayiPad@3x.png in Resources */,
+				CF50B87B246C6A5200A0EA66 /* Oswald-Light.ttf in Resources */,
 				CFF0A828242E92A400FDDAF1 /* Thunderstorm@3x.png in Resources */,
 				CFF0A818242E92A400FDDAF1 /* MightyUmbrellaiPad@2x.png in Resources */,
 				CFF0A91C242E92A400FDDAF1 /* MightyUmbrella@2x.png in Resources */,
@@ -1411,6 +1435,7 @@
 				CFF0A95D242E92A500FDDAF1 /* Asteroid@3x.png in Resources */,
 				CFF0A805242E92A400FDDAF1 /* Golden@3x.png in Resources */,
 				CFF0A90D242E92A400FDDAF1 /* Golden@2x.png in Resources */,
+				CF50B87C246C6A5200A0EA66 /* Oswald-Light.ttf in Resources */,
 				CFF0A955242E92A500FDDAF1 /* MandariniPad@3x.png in Resources */,
 				CFF0A80D242E92A400FDDAF1 /* RadariPad@3x.png in Resources */,
 				CFF0A939242E92A500FDDAF1 /* MightyUmbrella@3x.png in Resources */,
@@ -1418,6 +1443,7 @@
 				CFF0A801242E92A400FDDAF1 /* 8-Bit@2x.png in Resources */,
 				CFF0A859242E92A400FDDAF1 /* 8-BitiPad@2x.png in Resources */,
 				CFF0A92D242E92A500FDDAF1 /* IguanaGreen@2x.png in Resources */,
+				CF50B881246C6B8B00A0EA66 /* Oswald-Regular.ttf in Resources */,
 				CF94777A21683E8200DA8B38 /* Assets.xcassets in Resources */,
 				CFF0A811242E92A400FDDAF1 /* TwilightMoon@2x.png in Resources */,
 				CFF0A949242E92A500FDDAF1 /* LightsOut@2x.png in Resources */,
@@ -1516,6 +1542,7 @@
 				CFF0A8DF242E92A400FDDAF1 /* Pride@3x.png in Resources */,
 				CFF0A927242E92A500FDDAF1 /* Malachite@2x.png in Resources */,
 				CFF0A84B242E92A400FDDAF1 /* PlumpPurple@3x.png in Resources */,
+				CF50B87A246C6A5200A0EA66 /* Oswald-Light.ttf in Resources */,
 				CFF0A85B242E92A400FDDAF1 /* Sandstorm@3x.png in Resources */,
 				CFF0A8AB242E92A400FDDAF1 /* TwilightMooniPad@2x.png in Resources */,
 				CFF0A80B242E92A400FDDAF1 /* RadariPad@3x.png in Resources */,
@@ -1523,6 +1550,7 @@
 				CFF0A91B242E92A400FDDAF1 /* MightyUmbrella@2x.png in Resources */,
 				CFF0A903242E92A400FDDAF1 /* DodgerBluePad@3x.png in Resources */,
 				CFF0A853242E92A400FDDAF1 /* GoldeniPad@2x.png in Resources */,
+				CF50B87F246C6B8B00A0EA66 /* Oswald-Regular.ttf in Resources */,
 				CFF0A923242E92A400FDDAF1 /* MalachiteiPad@2x.png in Resources */,
 				CFF0A89B242E92A400FDDAF1 /* PrideiPad@3x.png in Resources */,
 				CFF0A893242E92A400FDDAF1 /* Mandarin@3x.png in Resources */,
@@ -2047,7 +2075,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Base.lproj/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.39;
+				CURRENT_PROJECT_VERSION = 1.7.0;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2055,7 +2083,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.9;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -2072,7 +2100,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Base.lproj/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.39;
+				CURRENT_PROJECT_VERSION = 1.7.0;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2080,7 +2108,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.9;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -2095,7 +2123,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.39;
+				CURRENT_PROJECT_VERSION = 1.7.0;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntentUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2104,7 +2132,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.9;
+				MARKETING_VERSION = 1.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus.GetForecastIntentUI;
@@ -2122,7 +2150,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.39;
+				CURRENT_PROJECT_VERSION = 1.7.0;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntentUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2131,7 +2159,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.9;
+				MARKETING_VERSION = 1.7;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus.GetForecastIntentUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2148,7 +2176,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.39;
+				CURRENT_PROJECT_VERSION = 1.7.0;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2157,7 +2185,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.9;
+				MARKETING_VERSION = 1.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus.GetForecastIntent;
@@ -2175,7 +2203,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.39;
+				CURRENT_PROJECT_VERSION = 1.7.0;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2184,7 +2212,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.9;
+				MARKETING_VERSION = 1.7;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus.GetForecastIntent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2201,7 +2229,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Today/Cumulus.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.39;
+				CURRENT_PROJECT_VERSION = 1.7.0;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus Today/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2210,7 +2238,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.9;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.josephszafarowicz.Cumulus.Cumulus-Today";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2226,7 +2254,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Today/Cumulus.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.39;
+				CURRENT_PROJECT_VERSION = 1.7.0;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus Today/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2235,7 +2263,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.9;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.josephszafarowicz.Cumulus.Cumulus-Today";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

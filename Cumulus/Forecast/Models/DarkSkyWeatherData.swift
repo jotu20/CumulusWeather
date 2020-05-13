@@ -82,6 +82,10 @@ public func fetchDarkSkyWeatherData() {
                 fetchDarkSkyCurrentForecastData()
             }
             
+//            fetchClimaCellCurrentForecastData(latitude: latitudeValue, longitude: longitudeValue)
+//            print(latitudeValue)
+//            print(longitudeValue)
+            
             if let daily = currentForecast.daily {
                 let dayZeroArray = daily.data[0]
                 let fetchDayZeroArray = dayZeroArray

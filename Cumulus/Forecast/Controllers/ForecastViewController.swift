@@ -1347,6 +1347,27 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         dayElevenTopStackView.spacing = spacing
         dayTwelveTopStackView.spacing = spacing
         dayThirteenTopStackView.spacing = spacing
+        
+        setSegmentControlFont(outlet: hourlySegmentControl)
+        setSegmentControlFont(outlet: dayZeroSegmentControl)
+        setSegmentControlFont(outlet: dayOneSegmentControl)
+        setSegmentControlFont(outlet: dayTwoSegmentControl)
+        setSegmentControlFont(outlet: dayThreeSegmentControl)
+        setSegmentControlFont(outlet: dayFourSegmentControl)
+        setSegmentControlFont(outlet: dayFiveSegmentControl)
+        setSegmentControlFont(outlet: daySixSegmentControl)
+        setSegmentControlFont(outlet: daySevenSegmentControl)
+        setSegmentControlFont(outlet: dayEightSegmentControl)
+        setSegmentControlFont(outlet: dayNineSegmentControl)
+        setSegmentControlFont(outlet: dayTenSegmentControl)
+        setSegmentControlFont(outlet: dayElevenSegmentControl)
+        setSegmentControlFont(outlet: dayTwelveSegmentControl)
+        setSegmentControlFont(outlet: dayThirteenSegmentControl)
+    }
+    
+    func setSegmentControlFont(outlet: UISegmentedControl!) {
+        let attr = NSDictionary(object: UIFont(name: "OpenSans", size: 12.0)!, forKey: NSAttributedString.Key.font as NSCopying)
+        outlet.setTitleTextAttributes(attr as? [NSAttributedString.Key : Any] as [NSAttributedString.Key : Any]?, for: .normal)
     }
     
     func setupConstraints() {

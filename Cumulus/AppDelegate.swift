@@ -137,29 +137,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let randomTheme = Int(arc4random_uniform(UInt32(13)))
             
             if randomTheme == 0 || randomTheme == 1 {
-                defaults.set("Tuscan", forKey: "userSavedColorString")
-            } else if randomTheme == 2 {
-                defaults.set("Mandarin", forKey: "userSavedColorString")
-            } else if randomTheme == 3 {
-                defaults.set("Malachite", forKey: "userSavedColorString")
-            } else if randomTheme == 4 {
-                defaults.set("Maximum Red", forKey: "userSavedColorString")
-            } else if randomTheme == 5 {
-                defaults.set("Dodger Blue", forKey: "userSavedColorString")
-            } else if randomTheme == 6 {
-                defaults.set("Cotton Candy", forKey: "userSavedColorString")
-            } else if randomTheme == 7 {
-                defaults.set("Plump Purple", forKey: "userSavedColorString")
-            } else if randomTheme == 8 {
-                defaults.set("Sandstorm", forKey: "userSavedColorString")
-            } else if randomTheme == 9 {
                 defaults.set("Asteroid", forKey: "userSavedColorString")
-            } else if randomTheme == 10 {
+            } else if randomTheme == 2 {
                 defaults.set("Carmine Pink", forKey: "userSavedColorString")
-            } else if randomTheme == 11 {
-                defaults.set("Iguana Green", forKey: "userSavedColorString")
-            } else if randomTheme == 12 {
-                defaults.set("Dark Cerulean", forKey: "userSavedColorString")
+            } else if randomTheme == 3 {
+                defaults.set("Dodger Blue", forKey: "userSavedColorString")
+            } else if randomTheme == 4 {
+                defaults.set("Malachite", forKey: "userSavedColorString")
+            } else if randomTheme == 5 {
+                defaults.set("Mandarin", forKey: "userSavedColorString")
+            } else if randomTheme == 7 {
+                defaults.set("Maximum Red", forKey: "userSavedColorString")
+            } else if randomTheme == 8 {
+                defaults.set("Plump Purple", forKey: "userSavedColorString")
+            } else if randomTheme == 9 {
+                defaults.set("Random", forKey: "userSavedColorString")
+            } else if randomTheme == 10 {
+                defaults.set("Sandstorm", forKey: "userSavedColorString")
             } else {
                 defaults.set("Dodger Blue", forKey: "userSavedColorString")
             }

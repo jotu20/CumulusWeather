@@ -22,7 +22,28 @@ class CumulusProTableViewController: UITableViewController {
         self.navigationController?.isNavigationBarHidden = false
         weatherLoaded = true
         
-        title = "Cumulus Pro"
+        self.navigationItem.title = "Cumulus Pro"
+        self.navigationController?.navigationBar.topItem?.title = ""
+        
+        if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
+            self.navigationController?.navigationBar.tintColor = mandarin
+        } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
+            self.navigationController?.navigationBar.tintColor = malachite
+        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
+            self.navigationController?.navigationBar.tintColor = maximumRed
+        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
+            self.navigationController?.navigationBar.tintColor = dodgerBlue
+        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
+            self.navigationController?.navigationBar.tintColor = plumpPurple
+        } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
+            self.navigationController?.navigationBar.tintColor = sandstorm
+        } else if defaults.string(forKey: "userSavedColorString") == "Asteroid" {
+            self.navigationController?.navigationBar.tintColor = asteroid
+        } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
+            self.navigationController?.navigationBar.tintColor = carminePink
+        } else {
+            self.navigationController?.navigationBar.tintColor = dodgerBlue
+        }
         
         let screenSize = UIScreen.main.bounds
         let screenHeight = screenSize.height
@@ -45,20 +66,14 @@ class CumulusProTableViewController: UITableViewController {
         generousTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
         amazingTipButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
         
-        let restoreBarButton = UIButton.init(type: .custom)
-        restoreBarButton.setTitle("Restore", for: .normal)
-        restoreBarButton.setTitleColor(UIColor.link, for: .normal)
-        restoreBarButton.addTarget(self, action: #selector(CumulusProTableViewController.restoreCumulusProTapped), for: UIControl.Event.touchUpInside)
-        let barButton2 = UIBarButtonItem(customView: restoreBarButton)
-        self.navigationItem.rightBarButtonItem = barButton2
+        let restoreBarButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(CumulusProTableViewController.restoreCumulusProTapped))
+        setupBarButtonColor(button: restoreBarButton)
+        navigationItem.rightBarButtonItem = restoreBarButton
         
         if potentialCustomer == true {
-            let cancelBarButton = UIButton.init(type: .custom)
-            cancelBarButton.setTitle("Cancel", for: .normal)
-            cancelBarButton.setTitleColor(UIColor.link, for: .normal)
-            cancelBarButton.addTarget(self, action: #selector(CumulusProTableViewController.cancelCumulusProTapped), for: UIControl.Event.touchUpInside)
-            let barButton = UIBarButtonItem(customView: cancelBarButton)
-            self.navigationItem.leftBarButtonItem = barButton
+            let cancelBarButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(CumulusProTableViewController.cancelCumulusProTapped))
+            setupBarButtonColor(button: cancelBarButton)
+            navigationItem.rightBarButtonItem = cancelBarButton
         }
     }
 

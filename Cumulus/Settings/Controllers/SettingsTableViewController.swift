@@ -30,7 +30,8 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         distanceChange = false
         potentialCustomer = false
         
-        title = "Settings"
+        self.navigationController?.navigationBar.topItem?.title = "Settings"
+        
         tableView.tableFooterView = UIView(frame: .zero)
         
         let screenSize = UIScreen.main.bounds

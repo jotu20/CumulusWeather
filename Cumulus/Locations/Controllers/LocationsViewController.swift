@@ -24,8 +24,9 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
         self.tabBarController?.delegate = self
         self.navigationController?.isNavigationBarHidden = false
         weatherLoaded = true
+
+        self.navigationController?.navigationBar.topItem?.title = "Locations"
         
-        title = "Locations"
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "LocationCell")
         
@@ -41,22 +42,15 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
         
-        // Search Button
-        let searchBarButton = UIButton.init(type: .custom)
-        searchBarButton.setTitle("Search", for: .normal)
-        searchBarButton.setTitleColor(UIColor.link, for: .normal)
-        searchBarButton.addTarget(self, action: #selector(LocationsViewController.findLocationTapped), for: UIControl.Event.touchUpInside)
-        let barButton = UIBarButtonItem(customView: searchBarButton)
-        self.navigationItem.rightBarButtonItem = barButton
+        let searchBarButton = UIBarButtonItem(image: UIImage(named: "Search button.pdf"), style: .plain, target: self, action: #selector(LocationsViewController.findLocationTapped))
+        setupBarButtonColor(button: searchBarButton)
+        navigationItem.rightBarButtonItem = searchBarButton
         
         if (defaults.bool(forKey: "userDeniedLocation") == false) {
             // Find Current Location Button
-            let findBarButton = UIButton.init(type: .custom)
-            findBarButton.setTitle("Current", for: .normal)
-            findBarButton.setTitleColor(UIColor.link, for: .normal)
-            findBarButton.addTarget(self, action: #selector(LocationsViewController.findCurrentLocation), for: UIControl.Event.touchUpInside)
-            let barButton2 = UIBarButtonItem(customView: findBarButton)
-            self.navigationItem.leftBarButtonItem = barButton2
+            let findLocationBarButton = UIBarButtonItem(image: UIImage(named: "Current locations button.pdf"), style: .plain, target: self, action: #selector(LocationsViewController.findCurrentLocation))
+            setupBarButtonColor(button: findLocationBarButton)
+            navigationItem.leftBarButtonItem = findLocationBarButton
         }
     }
     

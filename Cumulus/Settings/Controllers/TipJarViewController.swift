@@ -24,7 +24,28 @@ class TipJarViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
         weatherLoaded = true
         
-        title = "Tip Jar"
+        self.navigationItem.title = "Tip Jar"
+        self.navigationController?.navigationBar.topItem?.title = ""
+        
+        if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
+            self.navigationController?.navigationBar.tintColor = mandarin
+        } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
+            self.navigationController?.navigationBar.tintColor = malachite
+        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
+            self.navigationController?.navigationBar.tintColor = maximumRed
+        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
+            self.navigationController?.navigationBar.tintColor = dodgerBlue
+        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
+            self.navigationController?.navigationBar.tintColor = plumpPurple
+        } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
+            self.navigationController?.navigationBar.tintColor = sandstorm
+        } else if defaults.string(forKey: "userSavedColorString") == "Asteroid" {
+            self.navigationController?.navigationBar.tintColor = asteroid
+        } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
+            self.navigationController?.navigationBar.tintColor = carminePink
+        } else {
+            self.navigationController?.navigationBar.tintColor = dodgerBlue
+        }
         
         let screenSize = UIScreen.main.bounds
         let screenHeight = screenSize.height

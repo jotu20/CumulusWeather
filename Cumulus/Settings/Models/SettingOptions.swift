@@ -117,9 +117,7 @@ func checkSavedColor() {
 }
 
 func setButtonColor() {
-    if defaults.string(forKey: "userSavedColorString") == "Tuscan" {
-        buttonColor = "Tuscan"
-    } else if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
+    if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
         buttonColor = "Mandarin"
     } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
         buttonColor = "Malachite"
@@ -127,8 +125,6 @@ func setButtonColor() {
         buttonColor = "Maximum Red"
     } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
         buttonColor = "Dodger Blue"
-    } else if defaults.string(forKey: "userSavedColorString") == "Cotton Candy" {
-        buttonColor = "Cotton Candy"
     } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
         buttonColor = "Plump Purple"
     } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
@@ -137,10 +133,6 @@ func setButtonColor() {
         buttonColor = "Asteroid"
     } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
         buttonColor = "Carmine Pink"
-    } else if defaults.string(forKey: "userSavedColorString") == "Iguana Green" {
-        buttonColor = "Iguana Green"
-    } else if defaults.string(forKey: "userSavedColorString") == "Dark Cerulean" {
-        buttonColor = "Dark Cerulean"
     } else {
         buttonColor = "Dodger Blue"
     }
@@ -148,9 +140,7 @@ func setButtonColor() {
 
 // Set table cell appearance
 func setTableViewCellColor(tableCell: UITableViewCell) {
-    if defaults.string(forKey: "userSavedColorString") == "Tuscan" {
-        tableCell.tintColor = tuscan
-    } else if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
+    if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
         tableCell.tintColor = mandarin
     } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
         tableCell.tintColor = malachite
@@ -158,8 +148,6 @@ func setTableViewCellColor(tableCell: UITableViewCell) {
         tableCell.tintColor = maximumRed
     } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
         tableCell.tintColor = dodgerBlue
-    } else if defaults.string(forKey: "userSavedColorString") == "Cotton Candy" {
-        tableCell.tintColor = cottonCandy
     } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
         tableCell.tintColor = plumpPurple
     } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
@@ -168,10 +156,6 @@ func setTableViewCellColor(tableCell: UITableViewCell) {
         tableCell.tintColor = asteroid
     } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
         tableCell.tintColor = carminePink
-    } else if defaults.string(forKey: "userSavedColorString") == "Iguana Green" {
-        tableCell.tintColor = iguanaGreen
-    } else if defaults.string(forKey: "userSavedColorString") == "Dark Cerulean" {
-        tableCell.tintColor = darkCerulean
     } else {
         tableCell.tintColor = dodgerBlue
     }
@@ -179,9 +163,7 @@ func setTableViewCellColor(tableCell: UITableViewCell) {
 
 // Set tab bar appearance
 func setTabBarColor(tabBar: UITabBarController) {
-    if defaults.string(forKey: "userSavedColorString") == "Tuscan" {
-        tabBar.tabBar.tintColor = tuscan
-    } else if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
+    if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
         tabBar.tabBar.tintColor = mandarin
     } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
         tabBar.tabBar.tintColor = malachite
@@ -189,8 +171,6 @@ func setTabBarColor(tabBar: UITabBarController) {
         tabBar.tabBar.tintColor = maximumRed
     } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
         tabBar.tabBar.tintColor = dodgerBlue
-    } else if defaults.string(forKey: "userSavedColorString") == "Cotton Candy" {
-        tabBar.tabBar.tintColor = cottonCandy
     } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
         tabBar.tabBar.tintColor = plumpPurple
     } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
@@ -199,10 +179,6 @@ func setTabBarColor(tabBar: UITabBarController) {
         tabBar.tabBar.tintColor = asteroid
     } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
         tabBar.tabBar.tintColor = carminePink
-    } else if defaults.string(forKey: "userSavedColorString") == "Iguana Green" {
-        tabBar.tabBar.tintColor = iguanaGreen
-    } else if defaults.string(forKey: "userSavedColorString") == "Dark Cerulean" {
-        tabBar.tabBar.tintColor = darkCerulean
     } else {
         tabBar.tabBar.tintColor = dodgerBlue
     }
@@ -210,9 +186,7 @@ func setTabBarColor(tabBar: UITabBarController) {
 
 // Check for user saved color and sets button title color
 func setupLabelColor(label: UILabel!) {
-    if defaults.string(forKey: "userSavedColorString") == "Tuscan" {
-         label.textColor = tuscan
-    } else if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
+    if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
          label.textColor = mandarin
     } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
          label.textColor = malachite
@@ -220,8 +194,6 @@ func setupLabelColor(label: UILabel!) {
          label.textColor = maximumRed
     } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
          label.textColor = dodgerBlue
-    } else if defaults.string(forKey: "userSavedColorString") == "Cotton Candy" {
-         label.textColor = cottonCandy
     } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
          label.textColor = plumpPurple
     } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
@@ -230,10 +202,6 @@ func setupLabelColor(label: UILabel!) {
          label.textColor = asteroid
     } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
          label.textColor = carminePink
-    } else if defaults.string(forKey: "userSavedColorString") == "Iguana Green" {
-         label.textColor = iguanaGreen
-    } else if defaults.string(forKey: "userSavedColorString") == "Dark Cerulean" {
-         label.textColor = darkCerulean
     } else {
          label.textColor = dodgerBlue
     }
@@ -241,9 +209,7 @@ func setupLabelColor(label: UILabel!) {
 
 // Check for user saved color and sets button title color
 func setupButtonColor(button: UIButton!) {
-    if defaults.string(forKey: "userSavedColorString") == "Tuscan" {
-         button.setTitleColor(tuscan, for: .normal)
-    } else if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
+    if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
          button.setTitleColor(mandarin, for: .normal)
     } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
          button.setTitleColor(malachite, for: .normal)
@@ -251,8 +217,6 @@ func setupButtonColor(button: UIButton!) {
          button.setTitleColor(maximumRed, for: .normal)
     } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
          button.setTitleColor(dodgerBlue, for: .normal)
-    } else if defaults.string(forKey: "userSavedColorString") == "Cotton Candy" {
-         button.setTitleColor(cottonCandy, for: .normal)
     } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
          button.setTitleColor(plumpPurple, for: .normal)
     } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
@@ -261,20 +225,37 @@ func setupButtonColor(button: UIButton!) {
          button.setTitleColor(asteroid, for: .normal)
     } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
          button.setTitleColor(carminePink, for: .normal)
-    } else if defaults.string(forKey: "userSavedColorString") == "Iguana Green" {
-         button.setTitleColor(iguanaGreen, for: .normal)
-    } else if defaults.string(forKey: "userSavedColorString") == "Dark Cerulean" {
-         button.setTitleColor(darkCerulean, for: .normal)
     } else {
          button.setTitleColor(dodgerBlue, for: .normal)
     }
 }
 
+// Check for user saved color and sets button title color
+func setupBarButtonColor(button: UIBarButtonItem!) {
+    if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
+        button.tintColor = mandarin
+    } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
+        button.tintColor = malachite
+    } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
+        button.tintColor = maximumRed
+    } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
+        button.tintColor = dodgerBlue
+    } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
+        button.tintColor = plumpPurple
+    } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
+        button.tintColor = sandstorm
+    } else if defaults.string(forKey: "userSavedColorString") == "Asteroid" {
+        button.tintColor = asteroid
+    } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
+        button.tintColor = carminePink
+    } else {
+        button.tintColor = dodgerBlue
+    }
+}
+
 // Check for user saved color and sets switch title color
 func setupSwitchColor(switchOne: UISwitch!) {
-    if defaults.string(forKey: "userSavedColorString") == "Tuscan" {
-         switchOne.onTintColor = tuscan
-    } else if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
+    if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
          switchOne.onTintColor = mandarin
     } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
          switchOne.onTintColor = malachite
@@ -282,8 +263,6 @@ func setupSwitchColor(switchOne: UISwitch!) {
          switchOne.onTintColor = maximumRed
     } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
          switchOne.onTintColor = dodgerBlue
-    } else if defaults.string(forKey: "userSavedColorString") == "Cotton Candy" {
-         switchOne.onTintColor = cottonCandy
     } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
          switchOne.onTintColor = plumpPurple
     } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
@@ -292,10 +271,6 @@ func setupSwitchColor(switchOne: UISwitch!) {
          switchOne.onTintColor = asteroid
     } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
          switchOne.onTintColor = carminePink
-    } else if defaults.string(forKey: "userSavedColorString") == "Iguana Green" {
-         switchOne.onTintColor = iguanaGreen
-    } else if defaults.string(forKey: "userSavedColorString") == "Dark Cerulean" {
-         switchOne.onTintColor = darkCerulean
     } else {
          switchOne.onTintColor = dodgerBlue
     }
@@ -303,9 +278,7 @@ func setupSwitchColor(switchOne: UISwitch!) {
 
 // Check for user saved color and sets text field text color
 func setupTextFieldColor(textField: UITextField!) {
-    if defaults.string(forKey: "userSavedColorString") == "Tuscan" {
-         textField.textColor = tuscan
-    } else if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
+    if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
          textField.textColor = mandarin
     } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
          textField.textColor = malachite
@@ -313,8 +286,6 @@ func setupTextFieldColor(textField: UITextField!) {
          textField.textColor = maximumRed
     } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
          textField.textColor = dodgerBlue
-    } else if defaults.string(forKey: "userSavedColorString") == "Cotton Candy" {
-         textField.textColor = cottonCandy
     } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
          textField.textColor = plumpPurple
     } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
@@ -323,10 +294,6 @@ func setupTextFieldColor(textField: UITextField!) {
          textField.textColor = asteroid
     } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
          textField.textColor = carminePink
-    } else if defaults.string(forKey: "userSavedColorString") == "Iguana Green" {
-         textField.textColor = iguanaGreen
-    } else if defaults.string(forKey: "userSavedColorString") == "Dark Cerulean" {
-         textField.textColor = darkCerulean
     } else {
          textField.textColor = dodgerBlue
     }

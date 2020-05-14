@@ -54,24 +54,6 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-CottonCandy</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>CottonCandy</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-DarkCerulean</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>DarkCerulean</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
 			<key>AppIcon-DodgerBlue</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -81,38 +63,11 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-Golden</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Golden</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-IguanaGreen</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>IguanaGreen</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
 			<key>AppIcon-LightsOut</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>LightsOut</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-Location</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Location</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -171,15 +126,6 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-Radar</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Radar</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
 			<key>AppIcon-RainDrop</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -203,15 +149,6 @@
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>Thunderstorm</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-Tuscan</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Tuscan</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -285,24 +222,6 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-CottonCandy</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>CottonCandyiPad</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-DarkCerulean</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>DarkCeruleaniPad</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
 			<key>AppIcon-DodgerBlue</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -312,38 +231,11 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-Golden</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>GoldeniPad</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-IguanaGreen</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>IguanaGreeniPad</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
 			<key>AppIcon-LightsOut</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>LightsOutiPad</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-Location</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>LocationiPad</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -402,15 +294,6 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-Radar</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>RadariPad</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
 			<key>AppIcon-RainDrop</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -434,15 +317,6 @@
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>ThunderstormiPad</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-Tuscan</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>TuscaniPad</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>

@@ -120,7 +120,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image"))
         currentLocationLabel.text = "\(userCurrentLocation)"
         currentTemperatureLabel.text = "\(currentTemperature)°"
-        highAndLowTemperatureLabel.text = "\(highTemperature)°↑ \(lowTemperature)°↓"
+        highAndLowTemperatureLabel.text = "\(highTemperature)°/\(lowTemperature)°"
         setWidgetSlot(setting: universalDefaultWidgetSlot1, label: conditionSlot1Label)
         setWidgetSlot(setting: universalDefaultWidgetSlot2, label: conditionSlot2Label)
         
@@ -155,25 +155,25 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         // Day One
         dayOneDate.text = "\(dayZeroDayString)"
         dayOneCondition.image = UIImage(named: weatherCondition(condition: weatherCondition0, type: "daily"))
-        dayOneHighLow.text = "\(dayZeroHigh)°↑ \(dayZeroLow)°↓"
+        dayOneHighLow.text = "\(dayZeroHigh)°/\(dayZeroLow)°"
         dayOnePrecipLabel.text = "\(dayZeroPrecip)%"
         
         // Day Two
         dayTwoDate.text = "\(dayOneDayString)"
         dayTwoCondition.image = UIImage(named: weatherCondition(condition: weatherCondition1, type: "daily"))
-        dayTwoHighLow.text = "\(dayOneHigh)°↑ \(dayOneLow)°↓"
+        dayTwoHighLow.text = "\(dayOneHigh)°/\(dayOneLow)°"
         dayTwoPrecipLabel.text = "\(dayOnePrecip)%"
         
         // Day Three
         dayThreeDate.text = "\(dayTwoDayString)"
         dayThreeCondition.image = UIImage(named: weatherCondition(condition: weatherCondition2, type: "daily"))
-        dayThreeHighLow.text = "\(dayTwoHigh)°↑ \(dayTwoLow)°↓"
+        dayThreeHighLow.text = "\(dayTwoHigh)°/\(dayTwoLow)°"
         dayThreePrecipLabel.text = "\(dayTwoPrecip)%"
         
         // Day Four
         dayFourDate.text = "\(dayThreeDayString)"
         dayFourCondition.image = UIImage(named: weatherCondition(condition: weatherCondition3, type: "daily"))
-        dayFourHighLow.text = "\(dayThreeHigh)°↑ \(dayThreeLow)°↓"
+        dayFourHighLow.text = "\(dayThreeHigh)°/\(dayThreeLow)°"
         dayFourPrecipLabel.text = "\(dayThreePrecip)%"
     }
     

@@ -52,7 +52,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         self.currentConditionLabel.text = "\(currentCondition)"
         
         // Set temperature image and label
-        self.temperatureLabel.text = "Temperature \(dayZeroHigh)°↑ \(dayZeroLow)°↓"
+        self.temperatureLabel.text = "Temperature \(dayZeroHigh)°/\(dayZeroLow)°"
         if universalUnits == "USA" {
             if currentTemperature >= 80 {
                 self.temperatureImage.image = UIImage(named: "Temperature high.pdf")
@@ -120,25 +120,25 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         // Day Zero
         self.dayZeroConditionImage.image = UIImage(named: weatherCondition(condition: weatherCondition0, type: "daily"))
         self.dayZeroDateLabel.text = "\(dayZeroDayString)"
-        self.dayZeroHighLowTempLabel.text = "\(dayZeroHigh)°↑ \(dayZeroLow)°↓"
+        self.dayZeroHighLowTempLabel.text = "\(dayZeroHigh)°/\(dayZeroLow)°"
         self.dayZeroPrecipLabel.text = "\(dayZeroPrecip)%"
         
         // Day One
         self.dayOneConditionImage.image = UIImage(named: weatherCondition(condition: weatherCondition1, type: "daily"))
         self.dayOneDateLabel.text = "\(dayOneDayString)"
-        self.dayOneHighLowTempLabel.text = "\(dayOneHigh)°↑ \(dayOneLow)°↓"
+        self.dayOneHighLowTempLabel.text = "\(dayOneHigh)°/\(dayOneLow)°"
         self.dayOnePrecipLabel.text = "\(dayOnePrecip)%"
         
         // Day Two
         self.dayTwoConditionImage.image = UIImage(named: weatherCondition(condition: weatherCondition2, type: "daily"))
         self.dayTwoDateLabel.text = "\(dayTwoDayString)"
-        self.dayTwoHighLowTempLabel.text = "\(dayTwoHigh)°↑ \(dayTwoLow)°↓"
+        self.dayTwoHighLowTempLabel.text = "\(dayTwoHigh)°/\(dayTwoLow)°"
         self.dayTwoPrecipLabel.text = "\(dayTwoPrecip)%"
         
         // Day Three
         self.dayThreeConditionImage.image = UIImage(named: weatherCondition(condition: weatherCondition3, type: "daily"))
         self.dayThreeDateLabel.text = "\(dayThreeDayString)"
-        self.dayThreeHighLowTempLabel.text = "\(dayThreeHigh)°↑ \(dayThreeLow)°↓"
+        self.dayThreeHighLowTempLabel.text = "\(dayThreeHigh)°/\(dayThreeLow)°"
         self.dayThreePrecipLabel.text = "\(dayThreePrecip)%"
     }
     

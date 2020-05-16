@@ -107,27 +107,24 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @IBOutlet var dayThirteenTapGesture: UITapGestureRecognizer!
     
     // MARK: - Current conditions outlets
-    @IBOutlet weak var currentCondition1Image: UIImageView!
-    @IBOutlet weak var currentCondition2Image: UIImageView!
-    @IBOutlet weak var currentCondition3Image: UIImageView!
-    @IBOutlet weak var currentCondition4Image: UIImageView!
-    @IBOutlet weak var currentCondition5Image: UIImageView!
-    @IBOutlet weak var currentCondition6ImageButton: UIButton!
-    @IBOutlet weak var currentCondition7Image: UIImageView!
-    @IBOutlet weak var currentCondition8Image: UIImageView!
-    @IBOutlet weak var currentCondition9Image: UIImageView!
-    @IBOutlet weak var currentCondition10Image: UIImageView!
+    @IBOutlet weak var currentConditionPrecipButton: UIButton!
+    @IBOutlet weak var currentConditionAccumulationButton: UIButton!
+    @IBOutlet weak var currentConditionHumidityButton: UIButton!
+    @IBOutlet weak var currentConditionDewPointButton: UIButton!
+    @IBOutlet weak var currentConditionUVIndexButton: UIButton!
+    @IBOutlet weak var currentConditionTemperatureButton: UIButton!
+    @IBOutlet weak var currentConditionWindButton: UIButton!
+    @IBOutlet weak var currentConditionVisibilityButton: UIButton!
+    @IBOutlet weak var currentConditionCloudCoverButton: UIButton!
+    @IBOutlet weak var currentConditionSunriseButton: UIButton!
+    @IBOutlet weak var currentConditionMoonPhaseButton: UIButton!
     
-    @IBOutlet weak var currentCondition1Label: UILabel!
-    @IBOutlet weak var currentCondition2Label: UILabel!
-    @IBOutlet weak var currentCondition3Label: UILabel!
-    @IBOutlet weak var currentCondition4Label: UILabel!
-    @IBOutlet weak var currentCondition5Label: UILabel!
-    @IBOutlet weak var currentCondition6Label: UILabel!
-    @IBOutlet weak var currentCondition7Label: UILabel!
-    @IBOutlet weak var currentCondition8Label: UILabel!
-    @IBOutlet weak var currentCondition9Label: UILabel!
-    @IBOutlet weak var currentCondition10Label: UILabel!
+    @IBOutlet weak var currentConditionTemperatureLabel: UILabel!
+    @IBOutlet weak var currentConditionWindLabel: UILabel!
+    @IBOutlet weak var currentConditionVisibilityLabel: UILabel!
+    @IBOutlet weak var currentConditionCloudCoverLabel: UILabel!
+    @IBOutlet weak var currentConditionSunriseLabel: UILabel!
+    @IBOutlet weak var currentConditionMoonPhaseLabel: UILabel!
     
     // MARK: - Hourly Forecast outlets
     @IBOutlet weak var hourlySegmentControl: UISegmentedControl!
@@ -1086,16 +1083,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @IBOutlet weak var nextHoursLabelWidth: NSLayoutConstraint!
     
     @IBOutlet weak var currentConditionStackViewWidth: NSLayoutConstraint!
-    @IBOutlet weak var currentCondition1LabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var currentCondition2LabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var currentCondition3LabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var currentCondition4LabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var currentCondition5LabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var currentCondition6LabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var currentCondition7LabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var currentCondition8LabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var currentCondition9LabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var currentCondition10LabelWidth: NSLayoutConstraint!
     
     override func viewDidLoad() {
         self.tabBarController?.delegate = self
@@ -1381,17 +1368,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             detailsLabelWidth.constant = 300
             nextHoursLabelWidth.constant = 300
             nextDaysLabelWidth.constant = 300
-            
-            currentCondition1LabelWidth.constant = 110
-            currentCondition2LabelWidth.constant = 110
-            currentCondition3LabelWidth.constant = 110
-            currentCondition4LabelWidth.constant = 110
-            currentCondition5LabelWidth.constant = 110
-            currentCondition6LabelWidth.constant = 110
-            currentCondition7LabelWidth.constant = 110
-            currentCondition8LabelWidth.constant = 110
-            currentCondition9LabelWidth.constant = 110
-            currentCondition10LabelWidth.constant = 110
             
             dayZeroHighLowWidth.constant = 101
             dayZeroPrecipitationWidth.constant = 100
@@ -2139,7 +2115,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         conditionValueText.text = "\(conditionValue)"
         image.image = UIImage(named: "Rectangle \(buttonColor).pdf")
         timeText.text = "\(timeValue)"
-        height.constant = CGFloat(hourlyValue(value: conditionValue))
+        height.constant = CGFloat(hourlyValue(value: conditionValue) + 10)
     }
     
     func completeHourlyUISetup(condition0: String, condition1: String, condition2: String, condition3: String, condition4: String, condition5: String, condition6: String, condition7: String, int1: Int, int2: Int, int3: Int, int4: Int, int5: Int, int6: Int, int7: Int, int8: Int, time0: String, time1: String, time2: String, time3: String, time4: String, time5: String, time6: String, time7: String) {
@@ -2311,12 +2287,12 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     func setDayLabelText(dayLabel: UILabel!, highLowLabel: UILabel!, precipLabel: UILabel!, summaryTextView: UITextView!, stackView: UIStackView!, dayString: String, dateString: String, summary: String, sunrise: String, sunset: String, dayHigh: Int, dayLow: Int, dayPrecip: Int, precipAccum: Double, conditionValue: Any) {
         dayLabel.text = "\(dayString)\n\(dateString)"
         if stackView.isHidden == true {
-            highLowLabel.text = "\(dayHigh)°↑ \(dayLow)°↓"
+            highLowLabel.text = "\(dayHigh)°/\(dayLow)°"
             precipLabel.text = "\(defaultDailyConditionValueType) \(conditionValue)\(defaultDailyConditionValueUnit)"
             summaryTextView.text = "\(summary)"
         } else {
             highLowLabel.text = ""
-            precipLabel.text = "\(dayHigh)°↑ \(dayLow)°↓"
+            precipLabel.text = "\(dayHigh)°/\(dayLow)°"
             if precipAccum > 0 && precipAccum < 1 {
                 summaryTextView.text = "\(summary) Chance of precipitation \(dayPrecip)%. Snow accumulation < 1 \(unitsPrecipitation). Sunrise \(sunrise), Sunset \(sunset)."
             } else if precipAccum > 1 {
@@ -2646,206 +2622,184 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         setupDayStackView(stackview: dayThirteenStackView, day: 13, segmentControl: dayThirteenSegmentControl, pageControl: dayThirteenPageControl)
     }
     
-    // MARK: - Check pressure levels and set label
-    func checkHighPressure(current: Int, type: String) {
-        if current > pressureHour1 || current > pressureHour2 || current > current || current > pressureHour4 {
-            currentCondition2Label.text = "Pressure: \n\(current) \(unitsPressure), falling"
-        } else if current < pressureHour1 || current < pressureHour2 || current < pressureHour3 || current < pressureHour4 {
-            currentCondition2Label.text = "Pressure: \n\(current) \(unitsPressure), rising"
-        } else {
-            currentCondition2Label.text = "Pressure: \n\(current) \(unitsPressure)"
-        }
-    }
-    
     // MARK: - Set current condition labels
     func setCurrentConditionLabels() {
         // Set temperature image and label
-        currentCondition1Label.text = "Temperature: \n\(highTemperature)°↑ \(lowTemperature)°↓"
+        currentConditionTemperatureLabel.text = "Temperature \n\(highTemperature)°/\(lowTemperature)°"
         if defaults.bool(forKey: "weatherUnitsUSA") == true {
             if currentTemperature >= 80 {
-                currentCondition1Image.image = UIImage(named: "Temperature high.pdf")
+                currentConditionTemperatureButton.setBackgroundImage(UIImage(named: "Temperature high.pdf"), for: .normal)
             } else if currentTemperature < 80 && currentTemperature >= 50 {
-                currentCondition1Image.image = UIImage(named: "Temperature moderate.pdf")
+                currentConditionTemperatureButton.setBackgroundImage(UIImage(named: "Temperature moderate.pdf"), for: .normal)
             } else if currentTemperature < 50 {
-                currentCondition1Image.image = UIImage(named: "Temperature low.pdf")
+                currentConditionTemperatureButton.setBackgroundImage(UIImage(named: "Temperature low.pdf"), for: .normal)
             }
         } else {
             if currentTemperature >= 26 {
-                currentCondition1Image.image = UIImage(named: "Temperature high.pdf")
+                currentConditionTemperatureButton.setBackgroundImage(UIImage(named: "Temperature high.pdf"), for: .normal)
             } else if currentTemperature < 26 && currentTemperature >= 10 {
-                currentCondition1Image.image = UIImage(named: "Temperature moderate.pdf")
+                currentConditionTemperatureButton.setBackgroundImage(UIImage(named: "Temperature moderate.pdf"), for: .normal)
             } else if currentTemperature < 10 {
-                currentCondition1Image.image = UIImage(named: "Temperature low.pdf")
+                currentConditionTemperatureButton.setBackgroundImage(UIImage(named: "Temperature low.pdf"), for: .normal)
             }
-        }
-        
-        // Set pressure image and label
-        if unitsPressure == "mB" {
-            if pressure >= 1013 {
-                currentCondition2Image.image = UIImage(named: "High Pressure.pdf")
-                checkHighPressure(current: pressure, type: "high")
-            } else {
-                currentCondition2Image.image = UIImage(named: "Low Pressure.pdf")
-                checkHighPressure(current: pressure, type: "low")
-            }
-        } else if unitsPressure == "hPa" {
-            if pressure >= 101300 {
-                currentCondition2Image.image = UIImage(named: "High Pressure.pdf")
-                checkHighPressure(current: pressure, type: "high")
-            } else {
-                currentCondition2Image.image = UIImage(named: "Low Pressure.pdf")
-                checkHighPressure(current: pressure, type: "low")
-            }
-        }
-        
-        // Set precip accumuluation phrase
-        if precipAccumulation > 0 && precipAccumulation < 1 {
-            currentCondition3Label.text = "Precipitation: \(precipitation)% \nSnow: < 1 \(unitsPrecipitation)"
-        } else if precipAccumulation > 1 {
-            currentCondition3Label.text = "Precipitation: \(precipitation)% \nSnow: \(Int(precipAccumulation)) \(unitsPrecipitation)"
-        } else {
-            currentCondition3Label.text = "Precipitation: \(precipitation)%"
         }
         
         // Check for current precipitation
         if minuteSummary.isEmpty == false && minuteSummary != "none" {
             // Check if there is current precipitation
             if precipitation >= 80 && precipitationType != "none" && endingMinuteSummary != "none" {
-                currentCondition3Label.text = "Precipitation: \(precipitation)% \n\(precipitationType.capitalizingFirstLetter()) stops in \(endingMinuteSummary)."
+                currentConditonLabel.text = "\(precipitationType.capitalizingFirstLetter()) stops in \(endingMinuteSummary)."
             }
         }
         
-        // Set precipitation image
+        // Set precipitation
+        currentConditionPrecipButton.setTitle("\(precipitation)", for: .normal)
         if precipitation == 0 {
-            currentCondition3Image.image = UIImage(named: "Precipitation none.pdf")
-        } else if precipitation <= 20 {
-            currentCondition3Image.image = UIImage(named: "Precipitation low.pdf")
-        } else if precipitation > 20 && precipitation < 80 {
-            currentCondition3Image.image = UIImage(named: "Precipitation moderate.pdf")
-        } else if precipitation >= 80 {
-            currentCondition3Image.image = UIImage(named: "Precipitation heavy.pdf")
+            currentConditionPrecipButton.setBackgroundImage(UIImage(named: "0 Oval.pdf"), for: .normal)
+        } else if precipitation <= 25 {
+            currentConditionPrecipButton.setBackgroundImage(UIImage(named: "25 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipitation > 25 && precipitation < 50 {
+            currentConditionPrecipButton.setBackgroundImage(UIImage(named: "50 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipitation >= 75 && precipitation < 100 {
+            currentConditionPrecipButton.setBackgroundImage(UIImage(named: "75 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipitation == 100 {
+            currentConditionPrecipButton.setBackgroundImage(UIImage(named: "100 Oval \(buttonColor).pdf"), for: .normal)
         }
         
-        // Set humidity image and label
-        currentCondition4Label.text = "Humidity: \(humidity)% \nDew point: \(dewPoint)°"
-        if humidity <= 20 {
-            currentCondition4Image.image = UIImage(named: "Humidity low.pdf")
-        } else if humidity > 20 && humidity < 80 {
-            currentCondition4Image.image = UIImage(named: "Humidity moderate.pdf")
-        } else if humidity >= 80 {
-            currentCondition4Image.image = UIImage(named: "Humidity heavy.pdf")
+        // Set precipitation accumulation
+        currentConditionAccumulationButton.setTitle("\(precipAccumulation)", for: .normal)
+        if precipAccumulation == 0 {
+            currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "0 Oval.pdf"), for: .normal)
+        } else if precipAccumulation <= 0.25 {
+            currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "25 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipAccumulation > 0.25 && precipAccumulation < 0.50 {
+            currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "50 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipAccumulation >= 0.75 && precipAccumulation < 1 {
+            currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "75 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipAccumulation == 1 {
+            currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "100 Oval \(buttonColor).pdf"), for: .normal)
+        }
+        
+        // Set humidity
+        currentConditionHumidityButton.setTitle("\(humidity)", for: .normal)
+        if humidity == 0 {
+            currentConditionHumidityButton.setBackgroundImage(UIImage(named: "0 Oval.pdf"), for: .normal)
+        } else if humidity <= 25 {
+            currentConditionHumidityButton.setBackgroundImage(UIImage(named: "25 Oval \(buttonColor).pdf"), for: .normal)
+        } else if humidity > 25 && humidity < 50 {
+            currentConditionHumidityButton.setBackgroundImage(UIImage(named: "50 Oval \(buttonColor).pdf"), for: .normal)
+        } else if humidity >= 75 && humidity < 100 {
+            currentConditionHumidityButton.setBackgroundImage(UIImage(named: "75 Oval \(buttonColor).pdf"), for: .normal)
+        } else if humidity == 100 {
+            currentConditionHumidityButton.setBackgroundImage(UIImage(named: "100 Oval \(buttonColor).pdf"), for: .normal)
+        }
+        
+        // Set dew point
+        currentConditionDewPointButton.setTitle("\(dewPoint)", for: .normal)
+        if dewPoint == 0 {
+            currentConditionDewPointButton.setBackgroundImage(UIImage(named: "0 Oval.pdf"), for: .normal)
+        } else if dewPoint <= 25 {
+            currentConditionDewPointButton.setBackgroundImage(UIImage(named: "25 Oval \(buttonColor).pdf"), for: .normal)
+        } else if dewPoint > 25 && dewPoint < 50 {
+            currentConditionDewPointButton.setBackgroundImage(UIImage(named: "50 Oval \(buttonColor).pdf"), for: .normal)
+        } else if dewPoint >= 75 && dewPoint < 100 {
+            currentConditionDewPointButton.setBackgroundImage(UIImage(named: "75 Oval \(buttonColor).pdf"), for: .normal)
+        } else if dewPoint == 100 {
+            currentConditionDewPointButton.setBackgroundImage(UIImage(named: "100 Oval \(buttonColor).pdf"), for: .normal)
         }
         
         // Set wind image and label
-        currentCondition5Label.text = "Wind: \(wind)(\(windGust)) \(unitsWindSpeed) \(windDirectionString)"
+        currentConditionWindLabel.text = "Wind \n\(wind)(\(windGust)) \(unitsWindSpeed) \(windDirectionString)"
         if windDirectionString.contains("N") {
-            currentCondition5Image.image = UIImage(named: "Wind N.pdf")
+            currentConditionWindButton.setBackgroundImage(UIImage(named: "Wind N.pdf"), for: .normal)
         }
         if windDirectionString.contains("NE") {
-            currentCondition5Image.image = UIImage(named: "Wind NE.pdf")
+            currentConditionWindButton.setBackgroundImage(UIImage(named: "Wind NE.pdf"), for: .normal)
         }
         if windDirectionString.contains("E") {
-            currentCondition5Image.image = UIImage(named: "Wind E.pdf")
+            currentConditionWindButton.setBackgroundImage(UIImage(named: "Wind E.pdf"), for: .normal)
         }
         if windDirectionString.contains("SE") {
-            currentCondition5Image.image = UIImage(named: "Wind NE.pdf")
+            currentConditionWindButton.setBackgroundImage(UIImage(named: "Wind NE.pdf"), for: .normal)
         }
         if windDirectionString.contains("S") {
-            currentCondition5Image.image = UIImage(named: "Wind S.pdf")
+            currentConditionWindButton.setBackgroundImage(UIImage(named: "Wind S.pdf"), for: .normal)
         }
         if windDirectionString.contains("SW") {
-            currentCondition5Image.image = UIImage(named: "Wind SW.pdf")
+            currentConditionWindButton.setBackgroundImage(UIImage(named: "Wind SW.pdf"), for: .normal)
         }
         if windDirectionString.contains("W") {
-            currentCondition5Image.image = UIImage(named: "Wind W.pdf")
+            currentConditionWindButton.setBackgroundImage(UIImage(named: "Wind W.pdf"), for: .normal)
         }
         if windDirectionString.contains("NW") {
-            currentCondition5Image.image = UIImage(named: "Wind NW.pdf")
+            currentConditionWindButton.setBackgroundImage(UIImage(named: "Wind NW.pdf"), for: .normal)
         } else {
-            currentCondition5Image.image = UIImage(named: "Wind SW.pdf")
+            currentConditionWindButton.setBackgroundImage(UIImage(named: "Wind SW.pdf"), for: .normal)
         }
         
-        // Set uv index image and text title and color
-        if uvIndex == 0 || uvIndex == 1 && uvIndex <= 2 {
-            currentCondition6Label.text = "UV index is low"
-            currentCondition6ImageButton.setTitle("\(uvIndex)", for: .normal)
-            currentCondition6ImageButton.setTitleColor(UIColor.label, for: .normal)
-            currentCondition6ImageButton.setBackgroundImage(UIImage(named: "UV Index low.pdf"), for: .normal)
+        // Set uv index
+        currentConditionUVIndexButton.setTitle("\(uvIndex)", for: .normal)
+        if uvIndex <= 2 {
+            currentConditionUVIndexButton.setBackgroundImage(UIImage(named: "UV Index low.pdf"), for: .normal)
         } else if uvIndex >= 3 && uvIndex <= 5 {
-            currentCondition6Label.text = "UV index is moderate"
-            currentCondition6ImageButton.setTitle("\(uvIndex)", for: .normal)
-            currentCondition6ImageButton.setTitleColor(UIColor.label, for: .normal)
-            currentCondition6ImageButton.setBackgroundImage(UIImage(named: "UV Index moderate.pdf"), for: .normal)
+            currentConditionUVIndexButton.setBackgroundImage(UIImage(named: "UV Index moderate.pdf"), for: .normal)
         } else if uvIndex >= 6 && uvIndex <= 7 {
-            currentCondition6Label.text = "UV index is high"
-            currentCondition6ImageButton.setTitle("\(uvIndex)", for: .normal)
-            currentCondition6ImageButton.setTitleColor(UIColor.label, for: .normal)
-            currentCondition6ImageButton.setBackgroundImage(UIImage(named: "UV Index high.pdf"), for: .normal)
+            currentConditionUVIndexButton.setBackgroundImage(UIImage(named: "UV Index high.pdf"), for: .normal)
         } else if uvIndex >= 8 && uvIndex <= 10 {
-            currentCondition6Label.text = "UV index is very high"
-            currentCondition6ImageButton.setTitle("\(uvIndex)", for: .normal)
-            currentCondition6ImageButton.setTitleColor(UIColor.label, for: .normal)
-            currentCondition6ImageButton.setBackgroundImage(UIImage(named: "UV Index very high.pdf"), for: .normal)
+            currentConditionUVIndexButton.setBackgroundImage(UIImage(named: "UV Index very high.pdf"), for: .normal)
         } else if uvIndex >= 11 {
-            currentCondition6Label.text = "UV index is extreme"
-            currentCondition6ImageButton.setTitle("\(uvIndex)", for: .normal)
-            currentCondition6ImageButton.setTitleColor(UIColor.label, for: .normal)
-            currentCondition6ImageButton.setBackgroundImage(UIImage(named: "UV Index extreme.pdf"), for: .normal)
+            currentConditionUVIndexButton.setBackgroundImage(UIImage(named: "UV Index extreme.pdf"), for: .normal)
         } else {
-            currentCondition6Label.text = "UV index is low"
-            currentCondition6ImageButton.setTitle("\(uvIndex)", for: .normal)
-            currentCondition6ImageButton.setTitleColor(UIColor.label, for: .normal)
-            currentCondition6ImageButton.setBackgroundImage(UIImage(named: "UV Index low.pdf"), for: .normal)
+            currentConditionUVIndexButton.setBackgroundImage(UIImage(named: "UV Index low.pdf"), for: .normal)
         }
         
         // If visibility is within 1 drop last character
         if visibility == 1 {
             unitsDistance = String(unitsDistance.dropLast())
-            currentCondition7Label.text = "Visibility: \(visibility) \(unitsDistance)"
+            currentConditionVisibilityLabel.text = "Visibility \n\(visibility) \(unitsDistance)"
         } else {
-            currentCondition7Label.text = "Visibility: \(visibility) \(unitsDistance)"
+            currentConditionVisibilityLabel.text = "Visibility \n\(visibility) \(unitsDistance)"
         }
-        currentCondition7Image.image = UIImage(named: "Visibility.pdf")
-        
+        currentConditionVisibilityButton.setBackgroundImage(UIImage(named: "Visibility.pdf"), for: .normal)
+
         // Set cloud cover image and label
-        currentCondition8Image.image = UIImage(named: "Cloud cover.pdf")
-        
+        currentConditionCloudCoverButton.setBackgroundImage(UIImage(named: "Cloud cover.pdf"), for: .normal)
         if cloudCover > cloudCoverHour1 || cloudCover > cloudCoverHour2 || cloudCover > cloudCoverHour3 || cloudCover > cloudCoverHour4 {
-            currentCondition8Label.text = "Cloud cover: \n\(cloudCover)%, decreasing"
+            currentConditionCloudCoverLabel.text = "Cloud cover \n\(cloudCover)%, decreasing"
         } else if cloudCover < cloudCoverHour1 || cloudCover < cloudCoverHour2 || cloudCover < cloudCoverHour3 || cloudCover < cloudCoverHour4 {
-            currentCondition8Label.text = "Cloud cover: \n\(cloudCover)%, increasing"
+            currentConditionCloudCoverLabel.text = "Cloud cover \n\(cloudCover)%, increasing"
         } else {
-            currentCondition8Label.text = "Cloud cover: \n\(cloudCover)%"
+            currentConditionCloudCoverLabel.text = "Cloud cover \n\(cloudCover)%"
         }
-        
+
         // Set sunrise/sunset image and label
         let currentTime = Date()
         if currentTime > sunriseDate && currentTime < sunsetDate {
-            currentCondition9Label.text = "Sunset: \(sunset)"
-            currentCondition9Image.image = UIImage(named: "Sunset.pdf")
+            currentConditionSunriseLabel.text = "Sunset \n\(sunset)"
+            currentConditionSunriseButton.setBackgroundImage(UIImage(named: "Sunset.pdf"), for: .normal)
         } else if currentTime > sunsetDate {
-            currentCondition9Label.text = "Sunrise: \(sunrise)"
-            currentCondition9Image.image = UIImage(named: "Sunrise.pdf")
+            currentConditionSunriseLabel.text = "Sunrise \n\(sunrise)"
+            currentConditionSunriseButton.setBackgroundImage(UIImage(named: "Sunrise.pdf"), for: .normal)
         }
-        
+
         // Set moonphase image and label
-        currentCondition10Label.text = "Moon phase: \n\(dayZeroMoonPhaseString.lowercased())"
+        currentConditionMoonPhaseLabel.text = "Moon phase \n\(dayZeroMoonPhaseString.lowercased())"
         if dayZeroMoonPhaseString == "New moon" {
-            currentCondition10Image.image = UIImage(named: "New Moon.pdf")
+            currentConditionMoonPhaseButton.setBackgroundImage(UIImage(named: "New Moon.pdf"), for: .normal)
         } else if dayZeroMoonPhaseString == "Waxing crescent" {
-            currentCondition10Image.image = UIImage(named: "Waxing Crescent.pdf")
+            currentConditionMoonPhaseButton.setBackgroundImage(UIImage(named: "Waxing Crescent.pdf"), for: .normal)
         } else if dayZeroMoonPhaseString == "First quarter" {
-            currentCondition10Image.image = UIImage(named: "First Quarter.pdf")
+        currentConditionMoonPhaseButton.setBackgroundImage(UIImage(named: "First Quarter.pdf"), for: .normal)
         } else if dayZeroMoonPhaseString == "Waxing gibbous" {
-            currentCondition10Image.image = UIImage(named: "Waxing Gibbous.pdf")
+            currentConditionMoonPhaseButton.setBackgroundImage(UIImage(named: "Waxing Gibbous.pdf"), for: .normal)
         } else if dayZeroMoonPhaseString == "Full moon" {
-            currentCondition10Image.image = UIImage(named: "Full Moon.pdf")
+            currentConditionMoonPhaseButton.setBackgroundImage(UIImage(named: "Full Moon.pdf"), for: .normal)
         } else if dayZeroMoonPhaseString == "Waning gibbous" {
-            currentCondition10Image.image = UIImage(named: "Waning Gibbous.pdf")
+            currentConditionMoonPhaseButton.setBackgroundImage(UIImage(named: "Waning Gibbous.pdf"), for: .normal)
         } else if dayZeroMoonPhaseString == "Last quarter" {
-            currentCondition10Image.image = UIImage(named: "Last Quarter.pdf")
+            currentConditionMoonPhaseButton.setBackgroundImage(UIImage(named: "Last Quarter.pdf"), for: .normal)
         } else if dayZeroMoonPhaseString == "Waning crescent" {
-            currentCondition10Image.image = UIImage(named: "Waning Crescent.pdf")
+            currentConditionMoonPhaseButton.setBackgroundImage(UIImage(named: "Waning Crescent.pdf"), for: .normal)
         }
     }
     

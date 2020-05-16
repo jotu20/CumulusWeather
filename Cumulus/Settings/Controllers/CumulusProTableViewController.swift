@@ -73,7 +73,7 @@ class CumulusProTableViewController: UITableViewController {
         if potentialCustomer == true {
             let cancelBarButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(CumulusProTableViewController.cancelCumulusProTapped))
             setupBarButtonColor(button: cancelBarButton)
-            navigationItem.rightBarButtonItem = cancelBarButton
+            navigationItem.leftBarButtonItem = cancelBarButton
         }
     }
 

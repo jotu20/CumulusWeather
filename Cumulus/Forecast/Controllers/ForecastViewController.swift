@@ -2664,6 +2664,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         // Set precipitation accumulation
         currentConditionAccumulationButton.setTitle("\(precipAccumulation)", for: .normal)
         if precipAccumulation == 0 {
+            currentConditionAccumulationButton.setTitle("0", for: .normal)
             currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "0 Oval.pdf"), for: .normal)
         } else if precipAccumulation > 0 && precipAccumulation <= 10 {
             currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "0to10 Oval \(buttonColor).pdf"), for: .normal)

@@ -391,6 +391,11 @@
 	<array>
 		<string>ForecastIntent</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Oswald-Light.ttf</string>
+		<string>Oswald-Regular.ttf</string>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array/>
 	<key>UILaunchStoryboardName</key>
@@ -413,11 +418,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Oswald-Light.ttf</string>
-		<string>Oswald-Regular.ttf</string>
 	</array>
 </dict>
 </plist>

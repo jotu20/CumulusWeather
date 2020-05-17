@@ -649,7 +649,7 @@
                                                                     <constraint firstAttribute="height" constant="60" id="rBx-AW-7EB"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
-                                                                <state key="normal" backgroundImage="Sunrise">
+                                                                <state key="normal" backgroundImage="Sunrise&amp;Sunset">
                                                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </state>
                                                                 <variation key="default">
@@ -16546,7 +16546,7 @@
                                                                 <constraint firstAttribute="height" constant="20.5" id="7yP-dg-FAd"/>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="C3H-SE-lg3"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -16590,7 +16590,7 @@
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="blf-Wk-R0b"/>
                                                                 <constraint firstAttribute="height" constant="20.5" id="grp-Ye-NBu"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -16634,7 +16634,7 @@
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="lBl-4Q-NI3"/>
                                                                 <constraint firstAttribute="height" constant="20.5" id="rfh-hF-SUV"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -16678,7 +16678,7 @@
                                                                 <constraint firstAttribute="height" constant="20.5" id="fnk-U8-Bis"/>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="jlb-r1-oZV"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -18334,14 +18334,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Support Indie Development" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CaE-os-b5k">
-                                                    <rect key="frame" x="91" y="15" width="208.5" height="20"/>
+                                                    <rect key="frame" x="83" y="22" width="208.5" height="20"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DYU-VT-uSe">
-                                                    <rect key="frame" x="91" y="38" width="252" height="56"/>
+                                                    <rect key="frame" x="83" y="45" width="284" height="42"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <string key="text">I'm just one guy building Cumulus, so your support helps continue the development and improvement of Cumulus. All contributions are greatly appreciated!</string>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
@@ -18349,7 +18349,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Support icon" id="u1o-gf-6oD">
-                                                    <rect key="frame" x="16" y="26" width="60" height="60"/>
+                                                    <rect key="frame" x="8" y="26" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -19333,7 +19333,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         <rect key="frame" x="0.0" y="928" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aCe-0T-yMU" id="cUt-yd-KFB">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sandstorm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5q-nF-TSN">
@@ -20067,7 +20067,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="W2D-JA-C6P">
-                                <rect key="frame" x="16" y="64" width="343" height="405"/>
+                                <rect key="frame" x="16" y="20" width="343" height="405"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwZ-Qh-01s">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="95"/>
@@ -20285,14 +20285,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6lX-NE-iCr"/>
+        <segue reference="k6g-vJ-K2w"/>
         <segue reference="cje-Dn-Okh"/>
         <segue reference="Jw2-4q-mDz"/>
-        <segue reference="R1m-qz-aKg"/>
+        <segue reference="eND-aD-Wtj"/>
         <segue reference="L6Z-zI-pLx"/>
-        <segue reference="KWq-d0-aBj"/>
-        <segue reference="umu-E4-8cs"/>
-        <segue reference="JCx-OY-Uid"/>
+        <segue reference="RbQ-av-C2d"/>
+        <segue reference="Qwj-yP-XWX"/>
+        <segue reference="1AL-vL-FWU"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="0 Oval" width="50" height="50"/>
@@ -20333,7 +20333,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <image name="Sandstorm Theme" width="50" height="50"/>
         <image name="Sandstorm icon" width="50" height="50"/>
         <image name="Settings button" width="45" height="45"/>
-        <image name="Sunrise" width="100" height="100"/>
+        <image name="Sunrise&amp;Sunset" width="100" height="100"/>
         <image name="Support icon" width="60" height="60"/>
         <image name="Temperature moderate" width="100" height="100"/>
         <image name="Themes icon" width="60" height="60"/>

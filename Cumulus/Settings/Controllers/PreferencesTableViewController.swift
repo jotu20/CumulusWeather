@@ -82,8 +82,8 @@ class PreferencesTableViewController: UITableViewController,  UITextFieldDelegat
             defaultDailyConditionTextField.isEnabled = false
             defaultWidgetSlot1TextField.isEnabled = false
             defaultWidgetSlot2TextField.isEnabled = false
-            dataSourceTextField.isEnabled = false
         }
+        dataSourceTextField.isEnabled = false
         
         if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Precip") == true) {
             defaultHourlyConditionTextField.text = "\(defaults.string(forKey: "defaultHourlyCondition")!)"
@@ -228,15 +228,15 @@ class PreferencesTableViewController: UITableViewController,  UITextFieldDelegat
     }
 
     @IBAction func siriShortcutsTapped(_ sender: UITapGestureRecognizer) {
-        // If User denied location ask for location permission
+      // If User denied location ask for location permission
         if (defaults.bool(forKey: "userDeniedLocation") == true) {
             let alertController = UIAlertController (title: "Location access must be enabled", message: "Cumulus requires your location to enable Siri shortcuts.", preferredStyle: .alert)
-            
+
             let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
                 guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
                     return
                 }
-                
+
                 if UIApplication.shared.canOpenURL(settingsUrl) {
                     UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
                         print("Settings opened: \(success)") // Prints true

@@ -11,7 +11,6 @@
 		4DD860F5C3F50E91D2DC71EE /* Pods_Cumulus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD61C9C9FE6F173AD5398E9 /* Pods_Cumulus.framework */; };
 		804E3F591D930C3E239FC498 /* Pods_Cumulus_GetForecastIntent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDCE1342C1A3B21E76ECE06 /* Pods_Cumulus_GetForecastIntent.framework */; };
 		A88DB0DA97832C0F918AE15E /* Pods_Cumulus_Cumulus_Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC8F9289C452600AB148024 /* Pods_Cumulus_Cumulus_Today.framework */; };
-		CF3679B721190E6B00343FC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
 		CF39201B2365217300FAFA53 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF39201A2365217300FAFA53 /* MapKit.framework */; };
 		CF4A0E5F2108B1B30061CAAD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4A0E5E2108B1B30061CAAD /* Default-568h@2x.png */; };
 		CF4A0E612108B5580061CAAD /* AppIconTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A0E602108B5580061CAAD /* AppIconTableViewController.swift */; };
@@ -33,7 +32,6 @@
 		CF6E4AA220DACFD8002349A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E4AA120DACFD8002349A7 /* AppDelegate.swift */; };
 		CF6E4AA420DACFD8002349A7 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E4AA320DACFD8002349A7 /* ForecastViewController.swift */; };
 		CF6E4AA720DACFD8002349A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA520DACFD8002349A7 /* Main.storyboard */; };
-		CF6E4AA920DACFD9002349A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
 		CF9477492167DF0200DA8B38 /* SiriShortcutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9477482167DF0200DA8B38 /* SiriShortcutsTableViewController.swift */; };
 		CF94774B2167E48E00DA8B38 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF94774A2167E48E00DA8B38 /* Intents.framework */; };
 		CF9477532168080900DA8B38 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9477522168080900DA8B38 /* IntentHandler.swift */; };
@@ -47,7 +45,6 @@
 		CF947772216809C300DA8B38 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CF94776F2168085000DA8B38 /* Intents.intentdefinition */; };
 		CF94777421680BBB00DA8B38 /* ForecastIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94777321680BBB00DA8B38 /* ForecastIntentHandler.swift */; };
 		CF9477752168109100DA8B38 /* ForecastIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94777321680BBB00DA8B38 /* ForecastIntentHandler.swift */; };
-		CF94777A21683E8200DA8B38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
 		CFA3259E20E44DE500F4AFBD /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3259D20E44DE500F4AFBD /* LocationsViewController.swift */; };
 		CFAB4446211F3A2000A7E3CB /* PreferencesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB4445211F3A2000A7E3CB /* PreferencesTableViewController.swift */; };
 		CFAF60D3242E48E1004FB831 /* InputFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CE242E48E1004FB831 /* InputFunctions.swift */; };
@@ -149,6 +146,10 @@
 		CFDEEC1020E26ED900BA5EA5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFDEEC0E20E26ED900BA5EA5 /* MainInterface.storyboard */; };
 		CFDEEC1420E26ED900BA5EA5 /* Cumulus Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CFDEEC0820E26ED900BA5EA5 /* Cumulus Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CFE600CF20E3EFFD0057D914 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDEEC0C20E26ED900BA5EA5 /* TodayViewController.swift */; };
+		CFEE78B024705168001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
+		CFEE78B124705169001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
+		CFEE78B22470516A001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
+		CFEE78B32470516A001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
 		CFF0A964242E9A2500FDDAF1 /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF824C3820E84EEB00E5F0A7 /* Locations.xcdatamodeld */; };
 		CFFB787720DF0B44008216F8 /* License in Resources */ = {isa = PBXBuildFile; fileRef = CFFB787620DF0B44008216F8 /* License */; };
 /* End PBXBuildFile section */
@@ -874,7 +875,6 @@
 				CF50B87E246C6B8B00A0EA66 /* Oswald-Regular.ttf in Resources */,
 				CFB86586246CF0BC002E8EFD /* Mandarin@3x.png in Resources */,
 				CFB8657D246CF0BC002E8EFD /* TwilightZone@2x.png in Resources */,
-				CF6E4AA920DACFD9002349A7 /* Assets.xcassets in Resources */,
 				CFB86585246CF0BC002E8EFD /* TwilightZoneiPad@2x.png in Resources */,
 				CFB8658B246CF0BC002E8EFD /* Thunderstorm@2x.png in Resources */,
 				CFB86556246CF0BC002E8EFD /* LightsOut@3x.png in Resources */,
@@ -887,6 +887,7 @@
 				CFB8655F246CF0BC002E8EFD /* ThunderstormiPad@3x.png in Resources */,
 				CFB86578246CF0BC002E8EFD /* PlumpPurpleiPad@3x.png in Resources */,
 				CFB8657A246CF0BC002E8EFD /* MalachiteiPad@2x.png in Resources */,
+				CFEE78B024705168001DE90B /* Assets.xcassets in Resources */,
 				CFB86589246CF0BC002E8EFD /* PlumpPurpleiPad@2x.png in Resources */,
 				CFB86563246CF0BC002E8EFD /* LightsOut@2x.png in Resources */,
 				CFB8655C246CF0BC002E8EFD /* DodgerBlue@2x.png in Resources */,
@@ -920,6 +921,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF50B880246C6B8B00A0EA66 /* Oswald-Regular.ttf in Resources */,
+				CFEE78B22470516A001DE90B /* Assets.xcassets in Resources */,
 				CF50B87B246C6A5200A0EA66 /* Oswald-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -930,7 +932,7 @@
 			files = (
 				CF50B87C246C6A5200A0EA66 /* Oswald-Light.ttf in Resources */,
 				CF50B881246C6B8B00A0EA66 /* Oswald-Regular.ttf in Resources */,
-				CF94777A21683E8200DA8B38 /* Assets.xcassets in Resources */,
+				CFEE78B32470516A001DE90B /* Assets.xcassets in Resources */,
 				CF9477612168080A00DA8B38 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -941,7 +943,7 @@
 			files = (
 				CF50B87A246C6A5200A0EA66 /* Oswald-Light.ttf in Resources */,
 				CF50B87F246C6B8B00A0EA66 /* Oswald-Regular.ttf in Resources */,
-				CF3679B721190E6B00343FC4 /* Assets.xcassets in Resources */,
+				CFEE78B124705169001DE90B /* Assets.xcassets in Resources */,
 				CFDEEC1020E26ED900BA5EA5 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

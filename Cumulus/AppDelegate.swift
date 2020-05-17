@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
-        
+
         if (defaults.string(forKey: "defaultHourlyCondition") == nil) || (defaults.bool(forKey: "cumulusPro") == false) {
             defaults.set("Precip (%)", forKey: "defaultHourlyCondition")
         }
@@ -65,6 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if defaults.bool(forKey: "weatherUnitsUSA") == false && defaults.bool(forKey: "weatherUnitsUK") == false && defaults.bool(forKey: "weatherUnitsCanada") == false && defaults.bool(forKey: "weatherUnitsInternational") == false {
             defaults.set(true, forKey: "weatherUnitsUSA")
+            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("USA", forKey: "setUnits")
         }
         
         if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Precip") == true) {

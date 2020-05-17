@@ -1082,11 +1082,11 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @IBOutlet weak var detailsLabelWidth: NSLayoutConstraint!
     @IBOutlet weak var nextHoursLabelWidth: NSLayoutConstraint!
     
+    @IBOutlet weak var currentConditionTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var currentConditionStackViewWidth: NSLayoutConstraint!
     
     override func viewDidLoad() {
         self.tabBarController?.delegate = self
-        locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         
         if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Precip") == true {
@@ -1104,6 +1104,10 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         }
         
         if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            if userSelectedSavedLocation == false {
+                locationManager.distanceFilter = 100
+            }
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
@@ -1305,13 +1309,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     // MARK: Intial load of weather data
     func setupInitialData() {
-        if (defaults.string(forKey: "dataSource")?.contains("Dark Sky") == true) {
-            fetchDarkSkyWeatherData()
-        } else {
-            fetchDarkSkyWeatherData()
-            defaults.set("Dark Sky", forKey: "dataSource")
-            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Dark Sky", forKey: "setDataSource")
-        }
+        fetchDarkSkyWeatherData()
         self.setWeatherDataLabels()
     }
     
@@ -1334,27 +1332,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         dayElevenTopStackView.spacing = spacing
         dayTwelveTopStackView.spacing = spacing
         dayThirteenTopStackView.spacing = spacing
-        
-        setSegmentControlFont(outlet: hourlySegmentControl)
-        setSegmentControlFont(outlet: dayZeroSegmentControl)
-        setSegmentControlFont(outlet: dayOneSegmentControl)
-        setSegmentControlFont(outlet: dayTwoSegmentControl)
-        setSegmentControlFont(outlet: dayThreeSegmentControl)
-        setSegmentControlFont(outlet: dayFourSegmentControl)
-        setSegmentControlFont(outlet: dayFiveSegmentControl)
-        setSegmentControlFont(outlet: daySixSegmentControl)
-        setSegmentControlFont(outlet: daySevenSegmentControl)
-        setSegmentControlFont(outlet: dayEightSegmentControl)
-        setSegmentControlFont(outlet: dayNineSegmentControl)
-        setSegmentControlFont(outlet: dayTenSegmentControl)
-        setSegmentControlFont(outlet: dayElevenSegmentControl)
-        setSegmentControlFont(outlet: dayTwelveSegmentControl)
-        setSegmentControlFont(outlet: dayThirteenSegmentControl)
-    }
-    
-    func setSegmentControlFont(outlet: UISegmentedControl!) {
-        let attr = NSDictionary(object: UIFont(name: "OpenSans", size: 12.0)!, forKey: NSAttributedString.Key.font as NSCopying)
-        outlet.setTitleTextAttributes(attr as? [NSAttributedString.Key : Any] as [NSAttributedString.Key : Any]?, for: .normal)
     }
     
     func setupConstraints() {
@@ -2113,9 +2090,15 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     func hourSetup(conditionImage: UIImageView!, conditionImageType: String, conditionValueText: UILabel!, conditionValue: Int, image: UIImageView!, timeText: UILabel!, timeValue: String, height: NSLayoutConstraint!) {
         conditionImage.image = UIImage(named: weatherCondition(condition: conditionImageType, type: "image"))
         conditionValueText.text = "\(conditionValue)"
-        image.image = UIImage(named: "Rectangle \(buttonColor).pdf")
         timeText.text = "\(timeValue)"
-        height.constant = CGFloat(hourlyValue(value: conditionValue) + 10)
+        
+        if conditionValue <= 50 {
+            image.image = UIImage(named: "Rectangle 50 \(buttonColor).pdf")
+            height.constant = CGFloat(hourlyValue(value: conditionValue) + 50)
+        } else {
+            image.image = UIImage(named: "Rectangle 100 \(buttonColor).pdf")
+            height.constant = CGFloat(hourlyValue(value: conditionValue))
+        }
     }
     
     func completeHourlyUISetup(condition0: String, condition1: String, condition2: String, condition3: String, condition4: String, condition5: String, condition6: String, condition7: String, int1: Int, int2: Int, int3: Int, int4: Int, int5: Int, int6: Int, int7: Int, int8: Int, time0: String, time1: String, time2: String, time3: String, time4: String, time5: String, time6: String, time7: String) {
@@ -2656,12 +2639,24 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         currentConditionPrecipButton.setTitle("\(precipitation)", for: .normal)
         if precipitation == 0 {
             currentConditionPrecipButton.setBackgroundImage(UIImage(named: "0 Oval.pdf"), for: .normal)
-        } else if precipitation <= 25 {
+        } else if precipitation > 0 && precipitation <= 10 {
+            currentConditionPrecipButton.setBackgroundImage(UIImage(named: "0to10 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipitation > 10 && precipitation < 25 {
+            currentConditionPrecipButton.setBackgroundImage(UIImage(named: "10to25 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipitation == 25 {
             currentConditionPrecipButton.setBackgroundImage(UIImage(named: "25 Oval \(buttonColor).pdf"), for: .normal)
         } else if precipitation > 25 && precipitation < 50 {
+            currentConditionPrecipButton.setBackgroundImage(UIImage(named: "25to40 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipitation == 50 {
             currentConditionPrecipButton.setBackgroundImage(UIImage(named: "50 Oval \(buttonColor).pdf"), for: .normal)
-        } else if precipitation >= 75 && precipitation < 100 {
+        } else if precipitation > 50 && precipitation < 75 {
+            currentConditionPrecipButton.setBackgroundImage(UIImage(named: "50to75 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipitation == 75 {
             currentConditionPrecipButton.setBackgroundImage(UIImage(named: "75 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipitation > 75 && precipitation < 90 {
+            currentConditionPrecipButton.setBackgroundImage(UIImage(named: "75to90 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipitation >= 90 && precipitation < 100 {
+            currentConditionPrecipButton.setBackgroundImage(UIImage(named: "90to100 Oval \(buttonColor).pdf"), for: .normal)
         } else if precipitation == 100 {
             currentConditionPrecipButton.setBackgroundImage(UIImage(named: "100 Oval \(buttonColor).pdf"), for: .normal)
         }
@@ -2670,13 +2665,25 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         currentConditionAccumulationButton.setTitle("\(precipAccumulation)", for: .normal)
         if precipAccumulation == 0 {
             currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "0 Oval.pdf"), for: .normal)
-        } else if precipAccumulation <= 0.25 {
+        } else if precipAccumulation > 0 && precipAccumulation <= 10 {
+            currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "0to10 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipAccumulation > 10 && precipAccumulation < 25 {
+            currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "10to25 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipAccumulation == 25 {
             currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "25 Oval \(buttonColor).pdf"), for: .normal)
-        } else if precipAccumulation > 0.25 && precipAccumulation < 0.50 {
+        } else if precipAccumulation > 25 && precipAccumulation < 50 {
+            currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "25to40 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipAccumulation == 50 {
             currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "50 Oval \(buttonColor).pdf"), for: .normal)
-        } else if precipAccumulation >= 0.75 && precipAccumulation < 1 {
+        } else if precipAccumulation > 50 && precipAccumulation < 75 {
+            currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "50to75 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipAccumulation == 75 {
             currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "75 Oval \(buttonColor).pdf"), for: .normal)
-        } else if precipAccumulation == 1 {
+        } else if precipAccumulation > 75 && precipAccumulation < 90 {
+            currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "75to90 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipAccumulation >= 90 && precipAccumulation < 100 {
+            currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "90to100 Oval \(buttonColor).pdf"), for: .normal)
+        } else if precipAccumulation == 100 {
             currentConditionAccumulationButton.setBackgroundImage(UIImage(named: "100 Oval \(buttonColor).pdf"), for: .normal)
         }
         
@@ -2684,28 +2691,26 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         currentConditionHumidityButton.setTitle("\(humidity)", for: .normal)
         if humidity == 0 {
             currentConditionHumidityButton.setBackgroundImage(UIImage(named: "0 Oval.pdf"), for: .normal)
-        } else if humidity <= 25 {
+        } else if humidity > 0 && humidity <= 10 {
+            currentConditionHumidityButton.setBackgroundImage(UIImage(named: "0to10 Oval \(buttonColor).pdf"), for: .normal)
+        } else if humidity > 10 && humidity < 25 {
+            currentConditionHumidityButton.setBackgroundImage(UIImage(named: "10to25 Oval \(buttonColor).pdf"), for: .normal)
+        } else if humidity == 25 {
             currentConditionHumidityButton.setBackgroundImage(UIImage(named: "25 Oval \(buttonColor).pdf"), for: .normal)
         } else if humidity > 25 && humidity < 50 {
+            currentConditionHumidityButton.setBackgroundImage(UIImage(named: "25to40 Oval \(buttonColor).pdf"), for: .normal)
+        } else if humidity == 50 {
             currentConditionHumidityButton.setBackgroundImage(UIImage(named: "50 Oval \(buttonColor).pdf"), for: .normal)
-        } else if humidity >= 75 && humidity < 100 {
+        } else if humidity > 50 && humidity < 75 {
+            currentConditionHumidityButton.setBackgroundImage(UIImage(named: "50to75 Oval \(buttonColor).pdf"), for: .normal)
+        } else if humidity == 75 {
             currentConditionHumidityButton.setBackgroundImage(UIImage(named: "75 Oval \(buttonColor).pdf"), for: .normal)
+        } else if humidity > 75 && humidity < 90 {
+            currentConditionHumidityButton.setBackgroundImage(UIImage(named: "75to90 Oval \(buttonColor).pdf"), for: .normal)
+        } else if humidity >= 90 && humidity < 100 {
+            currentConditionHumidityButton.setBackgroundImage(UIImage(named: "90to100 Oval \(buttonColor).pdf"), for: .normal)
         } else if humidity == 100 {
             currentConditionHumidityButton.setBackgroundImage(UIImage(named: "100 Oval \(buttonColor).pdf"), for: .normal)
-        }
-        
-        // Set dew point
-        currentConditionDewPointButton.setTitle("\(dewPoint)", for: .normal)
-        if dewPoint == 0 {
-            currentConditionDewPointButton.setBackgroundImage(UIImage(named: "0 Oval.pdf"), for: .normal)
-        } else if dewPoint <= 25 {
-            currentConditionDewPointButton.setBackgroundImage(UIImage(named: "25 Oval \(buttonColor).pdf"), for: .normal)
-        } else if dewPoint > 25 && dewPoint < 50 {
-            currentConditionDewPointButton.setBackgroundImage(UIImage(named: "50 Oval \(buttonColor).pdf"), for: .normal)
-        } else if dewPoint >= 75 && dewPoint < 100 {
-            currentConditionDewPointButton.setBackgroundImage(UIImage(named: "75 Oval \(buttonColor).pdf"), for: .normal)
-        } else if dewPoint == 100 {
-            currentConditionDewPointButton.setBackgroundImage(UIImage(named: "100 Oval \(buttonColor).pdf"), for: .normal)
         }
         
         // Set wind image and label
@@ -2765,22 +2770,16 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         // Set cloud cover image and label
         currentConditionCloudCoverButton.setBackgroundImage(UIImage(named: "Cloud cover.pdf"), for: .normal)
         if cloudCover > cloudCoverHour1 || cloudCover > cloudCoverHour2 || cloudCover > cloudCoverHour3 || cloudCover > cloudCoverHour4 {
-            currentConditionCloudCoverLabel.text = "Cloud cover \n\(cloudCover)%, decreasing"
+            currentConditionCloudCoverLabel.text = "Cloud cover \(cloudCover)% decreasing"
         } else if cloudCover < cloudCoverHour1 || cloudCover < cloudCoverHour2 || cloudCover < cloudCoverHour3 || cloudCover < cloudCoverHour4 {
-            currentConditionCloudCoverLabel.text = "Cloud cover \n\(cloudCover)%, increasing"
+            currentConditionCloudCoverLabel.text = "Cloud cover \(cloudCover)% increasing"
         } else {
             currentConditionCloudCoverLabel.text = "Cloud cover \n\(cloudCover)%"
         }
 
         // Set sunrise/sunset image and label
-        let currentTime = Date()
-        if currentTime > sunriseDate && currentTime < sunsetDate {
-            currentConditionSunriseLabel.text = "Sunset \n\(sunset)"
-            currentConditionSunriseButton.setBackgroundImage(UIImage(named: "Sunset.pdf"), for: .normal)
-        } else if currentTime > sunsetDate {
-            currentConditionSunriseLabel.text = "Sunrise \n\(sunrise)"
-            currentConditionSunriseButton.setBackgroundImage(UIImage(named: "Sunrise.pdf"), for: .normal)
-        }
+        currentConditionSunriseLabel.text = "Sunrise \(sunrise) \nSunset \(sunset)"
+        currentConditionSunriseButton.setBackgroundImage(UIImage(named: "Sunrise&Sunset.pdf"), for: .normal)
 
         // Set moonphase image and label
         currentConditionMoonPhaseLabel.text = "Moon phase \n\(dayZeroMoonPhaseString.lowercased())"
@@ -2825,6 +2824,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         // If alert is active show button
         if alertTitle.isEmpty == false {
             weatherAlertsButton.isHidden = false
+            currentConditionTopConstraint.constant = 20
             // Check number of active alerts
             if alertCount > 1 {
                 weatherAlertsButton.setTitle("\(alertTitle) | +\(alertCount)", for: .normal)
@@ -2834,6 +2834,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             weatherAlertsButton.setTitleColor(alertColor, for: .normal)
         } else {
             weatherAlertsButton.isHidden = true
+            currentConditionTopConstraint.constant = -20
         }
     }
     

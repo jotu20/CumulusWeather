@@ -47,8 +47,7 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
         navigationItem.rightBarButtonItem = searchBarButton
         
         if (defaults.bool(forKey: "userDeniedLocation") == false) {
-            // Find Current Location Button
-            let findLocationBarButton = UIBarButtonItem(image: UIImage(named: "Current locations button.pdf"), style: .plain, target: self, action: #selector(LocationsViewController.findCurrentLocation))
+            let findLocationBarButton = UIBarButtonItem(image: UIImage(named: "Current location button.pdf"), style: .plain, target: self, action: #selector(LocationsViewController.findCurrentLocation))
             setupBarButtonColor(button: findLocationBarButton)
             navigationItem.leftBarButtonItem = findLocationBarButton
         }

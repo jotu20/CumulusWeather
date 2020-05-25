@@ -74,22 +74,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @IBOutlet weak var dayNineTopStackView: UIStackView!
     @IBOutlet weak var dayNineStackView: UIStackView!
     
-    // Day Ten
-    @IBOutlet weak var dayTenTopStackView: UIStackView!
-    @IBOutlet weak var dayTenStackView: UIStackView!
-    
-    // Day Eleven
-    @IBOutlet weak var dayElevenTopStackView: UIStackView!
-    @IBOutlet weak var dayElevenStackView: UIStackView!
-    
-    // Day Twelve
-    @IBOutlet weak var dayTwelveTopStackView: UIStackView!
-    @IBOutlet weak var dayTwelveStackView: UIStackView!
-    
-    // Day Thirteen
-    @IBOutlet weak var dayThirteenTopStackView: UIStackView!
-    @IBOutlet weak var dayThirteenStackView: UIStackView!
-    
     // MARK: - Tap gestures
     @IBOutlet var dayZeroTapGesture: UITapGestureRecognizer!
     @IBOutlet var dayOneTapGesture: UITapGestureRecognizer!
@@ -101,16 +85,11 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @IBOutlet var daySevenTapGesture: UITapGestureRecognizer!
     @IBOutlet var dayEightTapGesture: UITapGestureRecognizer!
     @IBOutlet var dayNineTapGesture: UITapGestureRecognizer!
-    @IBOutlet var dayTenTapGesture: UITapGestureRecognizer!
-    @IBOutlet var dayElevenTapGesture: UITapGestureRecognizer!
-    @IBOutlet var dayTwelveTapGesture: UITapGestureRecognizer!
-    @IBOutlet var dayThirteenTapGesture: UITapGestureRecognizer!
     
     // MARK: - Current conditions outlets
     @IBOutlet weak var currentConditionPrecipButton: UIButton!
     @IBOutlet weak var currentConditionAccumulationButton: UIButton!
     @IBOutlet weak var currentConditionHumidityButton: UIButton!
-    @IBOutlet weak var currentConditionDewPointButton: UIButton!
     @IBOutlet weak var currentConditionUVIndexButton: UIButton!
     @IBOutlet weak var currentConditionTemperatureButton: UIButton!
     @IBOutlet weak var currentConditionWindButton: UIButton!
@@ -768,242 +747,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @IBOutlet weak var dayNineHour7ValueHeight: NSLayoutConstraint!
     @IBOutlet weak var dayNineHour7Time: UILabel!
     
-    // MARK: - Day Ten outlets
-    @IBOutlet weak var dayTenDay: UILabel!
-    @IBOutlet weak var dayTenHighLow: UILabel!
-    @IBOutlet weak var dayTenPrecipitation: UILabel!
-    @IBOutlet weak var dayTenSummary: UITextView!
-    @IBOutlet weak var dayTenCondition: UIImageView!
-    @IBOutlet weak var dayTenForecastBar: UIImageView!
-    
-    @IBOutlet weak var dayTenSegmentControl: UISegmentedControl!
-    @IBOutlet weak var dayTenPageControl: UIPageControl!
-    
-    @IBOutlet weak var dayTenHour0Condition: UIImageView!
-    @IBOutlet weak var dayTenHour0ValueText: UILabel!
-    @IBOutlet weak var dayTenHour0Image: UIImageView!
-    @IBOutlet weak var dayTenHour0ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayTenHour0Time: UILabel!
-    
-    @IBOutlet weak var dayTenHour1Condition: UIImageView!
-    @IBOutlet weak var dayTenHour1ValueText: UILabel!
-    @IBOutlet weak var dayTenHour1Image: UIImageView!
-    @IBOutlet weak var dayTenHour1ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayTenHour1Time: UILabel!
-    
-    @IBOutlet weak var dayTenHour2Condition: UIImageView!
-    @IBOutlet weak var dayTenHour2ValueText: UILabel!
-    @IBOutlet weak var dayTenHour2Image: UIImageView!
-    @IBOutlet weak var dayTenHour2ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayTenHour2Time: UILabel!
-    
-    @IBOutlet weak var dayTenHour3Condition: UIImageView!
-    @IBOutlet weak var dayTenHour3ValueText: UILabel!
-    @IBOutlet weak var dayTenHour3Image: UIImageView!
-    @IBOutlet weak var dayTenHour3ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayTenHour3Time: UILabel!
-    
-    @IBOutlet weak var dayTenHour4Condition: UIImageView!
-    @IBOutlet weak var dayTenHour4ValueText: UILabel!
-    @IBOutlet weak var dayTenHour4Image: UIImageView!
-    @IBOutlet weak var dayTenHour4ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayTenHour4Time: UILabel!
-    
-    @IBOutlet weak var dayTenHour5Condition: UIImageView!
-    @IBOutlet weak var dayTenHour5ValueText: UILabel!
-    @IBOutlet weak var dayTenHour5Image: UIImageView!
-    @IBOutlet weak var dayTenHour5ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayTenHour5Time: UILabel!
-    
-    @IBOutlet weak var dayTenHour6Condition: UIImageView!
-    @IBOutlet weak var dayTenHour6ValueText: UILabel!
-    @IBOutlet weak var dayTenHour6Image: UIImageView!
-    @IBOutlet weak var dayTenHour6ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayTenHour6Time: UILabel!
-    
-    @IBOutlet weak var dayTenHour7Condition: UIImageView!
-    @IBOutlet weak var dayTenHour7ValueText: UILabel!
-    @IBOutlet weak var dayTenHour7Image: UIImageView!
-    @IBOutlet weak var dayTenHour7ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayTenHour7Time: UILabel!
-    
-    // MARK: - Day Eleven outlets
-    @IBOutlet weak var dayElevenDay: UILabel!
-    @IBOutlet weak var dayElevenHighLow: UILabel!
-    @IBOutlet weak var dayElevenPrecipitation: UILabel!
-    @IBOutlet weak var dayElevenSummary: UITextView!
-    @IBOutlet weak var dayElevenCondition: UIImageView!
-    @IBOutlet weak var dayElevenForecastBar: UIImageView!
-    
-    @IBOutlet weak var dayElevenSegmentControl: UISegmentedControl!
-    @IBOutlet weak var dayElevenPageControl: UIPageControl!
-    
-    @IBOutlet weak var dayElevenHour0Condition: UIImageView!
-    @IBOutlet weak var dayElevenHour0ValueText: UILabel!
-    @IBOutlet weak var dayElevenHour0Image: UIImageView!
-    @IBOutlet weak var dayElevenHour0ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayElevenHour0Time: UILabel!
-    
-    @IBOutlet weak var dayElevenHour1Condition: UIImageView!
-    @IBOutlet weak var dayElevenHour1ValueText: UILabel!
-    @IBOutlet weak var dayElevenHour1Image: UIImageView!
-    @IBOutlet weak var dayElevenHour1ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayElevenHour1Time: UILabel!
-    
-    @IBOutlet weak var dayElevenHour2Condition: UIImageView!
-    @IBOutlet weak var dayElevenHour2ValueText: UILabel!
-    @IBOutlet weak var dayElevenHour2Image: UIImageView!
-    @IBOutlet weak var dayElevenHour2ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayElevenHour2Time: UILabel!
-    
-    @IBOutlet weak var dayElevenHour3Condition: UIImageView!
-    @IBOutlet weak var dayElevenHour3ValueText: UILabel!
-    @IBOutlet weak var dayElevenHour3Image: UIImageView!
-    @IBOutlet weak var dayElevenHour3ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayElevenHour3Time: UILabel!
-    
-    @IBOutlet weak var dayElevenHour4Condition: UIImageView!
-    @IBOutlet weak var dayElevenHour4ValueText: UILabel!
-    @IBOutlet weak var dayElevenHour4Image: UIImageView!
-    @IBOutlet weak var dayElevenHour4ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayElevenHour4Time: UILabel!
-    
-    @IBOutlet weak var dayElevenHour5Condition: UIImageView!
-    @IBOutlet weak var dayElevenHour5ValueText: UILabel!
-    @IBOutlet weak var dayElevenHour5Image: UIImageView!
-    @IBOutlet weak var dayElevenHour5ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayElevenHour5Time: UILabel!
-    
-    @IBOutlet weak var dayElevenHour6Condition: UIImageView!
-    @IBOutlet weak var dayElevenHour6ValueText: UILabel!
-    @IBOutlet weak var dayElevenHour6Image: UIImageView!
-    @IBOutlet weak var dayElevenHour6ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayElevenHour6Time: UILabel!
-    
-    @IBOutlet weak var dayElevenHour7Condition: UIImageView!
-    @IBOutlet weak var dayElevenHour7ValueText: UILabel!
-    @IBOutlet weak var dayElevenHour7Image: UIImageView!
-    @IBOutlet weak var dayElevenHour7ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayElevenHour7Time: UILabel!
-    
-    // MARK: - Day Twelve outlets
-    @IBOutlet weak var dayTwelveDay: UILabel!
-    @IBOutlet weak var dayTwelveHighLow: UILabel!
-    @IBOutlet weak var dayTwelvePrecipitation: UILabel!
-    @IBOutlet weak var dayTwelveSummary: UITextView!
-    @IBOutlet weak var dayTwelveCondition: UIImageView!
-    @IBOutlet weak var dayTwelveForecastBar: UIImageView!
-    
-    @IBOutlet weak var dayTwelveSegmentControl: UISegmentedControl!
-    @IBOutlet weak var dayTwelvePageControl: UIPageControl!
-    
-    @IBOutlet weak var dayTwelveHour0Condition: UIImageView!
-    @IBOutlet weak var dayTwelveHour0ValueText: UILabel!
-    @IBOutlet weak var dayTwelveHour0Image: UIImageView!
-    @IBOutlet weak var dayTwelveHour0ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayTwelveHour0Time: UILabel!
-    
-    @IBOutlet weak var dayTwelveHour1Condition: UIImageView!
-    @IBOutlet weak var dayTwelveHour1ValueText: UILabel!
-    @IBOutlet weak var dayTwelveHour1Image: UIImageView!
-    @IBOutlet weak var dayTwelveHour1ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayTwelveHour1Time: UILabel!
-    
-    @IBOutlet weak var dayTwelveHour2Condition: UIImageView!
-    @IBOutlet weak var dayTwelveHour2ValueText: UILabel!
-    @IBOutlet weak var dayTwelveHour2Image: UIImageView!
-    @IBOutlet weak var dayTwelveHour2ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayTwelveHour2Time: UILabel!
-    
-    @IBOutlet weak var dayTwelveHour3Condition: UIImageView!
-    @IBOutlet weak var dayTwelveHour3ValueText: UILabel!
-    @IBOutlet weak var dayTwelveHour3Image: UIImageView!
-    @IBOutlet weak var dayTwelveHour3ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayTwelveHour3Time: UILabel!
-    
-    @IBOutlet weak var dayTwelveHour4Condition: UIImageView!
-    @IBOutlet weak var dayTwelveHour4ValueText: UILabel!
-    @IBOutlet weak var dayTwelveHour4Image: UIImageView!
-    @IBOutlet weak var dayTwelveHour4ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayTwelveHour4Time: UILabel!
-    
-    @IBOutlet weak var dayTwelveHour5Condition: UIImageView!
-    @IBOutlet weak var dayTwelveHour5ValueText: UILabel!
-    @IBOutlet weak var dayTwelveHour5Image: UIImageView!
-    @IBOutlet weak var dayTwelveHour5ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayTwelveHour5Time: UILabel!
-    
-    @IBOutlet weak var dayTwelveHour6Condition: UIImageView!
-    @IBOutlet weak var dayTwelveHour6ValueText: UILabel!
-    @IBOutlet weak var dayTwelveHour6Image: UIImageView!
-    @IBOutlet weak var dayTwelveHour6ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayTwelveHour6Time: UILabel!
-    
-    @IBOutlet weak var dayTwelveHour7Condition: UIImageView!
-    @IBOutlet weak var dayTwelveHour7ValueText: UILabel!
-    @IBOutlet weak var dayTwelveHour7Image: UIImageView!
-    @IBOutlet weak var dayTwelveHour7ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayTwelveHour7Time: UILabel!
-    
-    // MARK: - Day Thirteen outlets
-    @IBOutlet weak var dayThirteenDay: UILabel!
-    @IBOutlet weak var dayThirteenHighLow: UILabel!
-    @IBOutlet weak var dayThirteenPrecipitation: UILabel!
-    @IBOutlet weak var dayThirteenSummary: UITextView!
-    @IBOutlet weak var dayThirteenCondition: UIImageView!
-    @IBOutlet weak var dayThirteenForecastBar: UIImageView!
-    
-    @IBOutlet weak var dayThirteenSegmentControl: UISegmentedControl!
-    @IBOutlet weak var dayThirteenPageControl: UIPageControl!
-    
-    @IBOutlet weak var dayThirteenHour0Condition: UIImageView!
-    @IBOutlet weak var dayThirteenHour0ValueText: UILabel!
-    @IBOutlet weak var dayThirteenHour0Image: UIImageView!
-    @IBOutlet weak var dayThirteenHour0ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayThirteenHour0Time: UILabel!
-    
-    @IBOutlet weak var dayThirteenHour1Condition: UIImageView!
-    @IBOutlet weak var dayThirteenHour1ValueText: UILabel!
-    @IBOutlet weak var dayThirteenHour1Image: UIImageView!
-    @IBOutlet weak var dayThirteenHour1ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayThirteenHour1Time: UILabel!
-    
-    @IBOutlet weak var dayThirteenHour2Condition: UIImageView!
-    @IBOutlet weak var dayThirteenHour2ValueText: UILabel!
-    @IBOutlet weak var dayThirteenHour2Image: UIImageView!
-    @IBOutlet weak var dayThirteenHour2ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayThirteenHour2Time: UILabel!
-    
-    @IBOutlet weak var dayThirteenHour3Condition: UIImageView!
-    @IBOutlet weak var dayThirteenHour3ValueText: UILabel!
-    @IBOutlet weak var dayThirteenHour3Image: UIImageView!
-    @IBOutlet weak var dayThirteenHour3ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayThirteenHour3Time: UILabel!
-    
-    @IBOutlet weak var dayThirteenHour4Condition: UIImageView!
-    @IBOutlet weak var dayThirteenHour4ValueText: UILabel!
-    @IBOutlet weak var dayThirteenHour4Image: UIImageView!
-    @IBOutlet weak var dayThirteenHour4ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayThirteenHour4Time: UILabel!
-    
-    @IBOutlet weak var dayThirteenHour5Condition: UIImageView!
-    @IBOutlet weak var dayThirteenHour5ValueText: UILabel!
-    @IBOutlet weak var dayThirteenHour5Image: UIImageView!
-    @IBOutlet weak var dayThirteenHour5ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayThirteenHour5Time: UILabel!
-    
-    @IBOutlet weak var dayThirteenHour6Condition: UIImageView!
-    @IBOutlet weak var dayThirteenHour6ValueText: UILabel!
-    @IBOutlet weak var dayThirteenHour6Image: UIImageView!
-    @IBOutlet weak var dayThirteenHour6ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayThirteenHour6Time: UILabel!
-    
-    @IBOutlet weak var dayThirteenHour7Condition: UIImageView!
-    @IBOutlet weak var dayThirteenHour7ValueText: UILabel!
-    @IBOutlet weak var dayThirteenHour7Image: UIImageView!
-    @IBOutlet weak var dayThirteenHour7ValueHeight: NSLayoutConstraint!
-    @IBOutlet weak var dayThirteenHour7Time: UILabel!
-    
     // MARK: - General constraints
     @IBOutlet weak var daysStackViewWidth: NSLayoutConstraint!
     @IBOutlet weak var nextDaysLabelWidth: NSLayoutConstraint!
@@ -1058,26 +801,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @IBOutlet weak var dayNinePrecipitationWidth: NSLayoutConstraint!
     @IBOutlet weak var dayNineSummaryWidth: NSLayoutConstraint!
     @IBOutlet weak var dayNineBarWidth: NSLayoutConstraint!
-    
-    @IBOutlet weak var dayTenHighLowWidth: NSLayoutConstraint!
-    @IBOutlet weak var dayTenPrecipitationWidth: NSLayoutConstraint!
-    @IBOutlet weak var dayTenSummaryWidth: NSLayoutConstraint!
-    @IBOutlet weak var dayTenBarWidth: NSLayoutConstraint!
-    
-    @IBOutlet weak var dayElevenHighLowWidth: NSLayoutConstraint!
-    @IBOutlet weak var dayElevenPrecipitationWidth: NSLayoutConstraint!
-    @IBOutlet weak var dayElevenSummaryWidth: NSLayoutConstraint!
-    @IBOutlet weak var dayElevenBarWidth: NSLayoutConstraint!
-    
-    @IBOutlet weak var dayTwelveHighLowWidth: NSLayoutConstraint!
-    @IBOutlet weak var dayTwelvePrecipitationWidth: NSLayoutConstraint!
-    @IBOutlet weak var dayTwelveSummaryWidth: NSLayoutConstraint!
-    @IBOutlet weak var dayTwelveBarWidth: NSLayoutConstraint!
-    
-    @IBOutlet weak var dayThirteenHighLowWidth: NSLayoutConstraint!
-    @IBOutlet weak var dayThirteenPrecipitationWidth: NSLayoutConstraint!
-    @IBOutlet weak var dayThirteenSummaryWidth: NSLayoutConstraint!
-    @IBOutlet weak var dayThirteenBarWidth: NSLayoutConstraint!
     
     @IBOutlet weak var detailsLabelWidth: NSLayoutConstraint!
     @IBOutlet weak var nextHoursLabelWidth: NSLayoutConstraint!
@@ -1188,16 +911,13 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                     }
                 }
                 
-                if placemark.country! == "United States" {
-                    city = placemark.locality!
-                    state = placemark.administrativeArea!
-                    self.navigationController?.navigationBar.topItem?.title = "\(city), \(state)"
-                    userCurrentLocation = "\(city), \(state)"
+                // Set state for locations in the US
+                if String(placemark.country!) == "United States" {
+                    self.navigationController?.navigationBar.topItem?.title = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                    userCurrentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
                 } else {
-                    city = placemark.administrativeArea!
-                    state = placemark.country!
-                    self.navigationController?.navigationBar.topItem?.title = "\(city), \(state)"
-                    userCurrentLocation = "\(city), \(state)"
+                    self.navigationController?.navigationBar.topItem?.title = "\(placemark.locality!), \(placemark.country!)"
+                    userCurrentLocation = "\(placemark.locality!), \(placemark.country!)"
                 }
                 self.setupInitialData()
             }
@@ -1328,10 +1048,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         daySevenTopStackView.spacing = spacing
         dayEightTopStackView.spacing = spacing
         dayNineTopStackView.spacing = spacing
-        dayTenTopStackView.spacing = spacing
-        dayElevenTopStackView.spacing = spacing
-        dayTwelveTopStackView.spacing = spacing
-        dayThirteenTopStackView.spacing = spacing
     }
     
     func setupConstraints() {
@@ -1395,26 +1111,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             dayNinePrecipitationWidth.constant = 100
             dayNineSummaryWidth.constant = 300
             dayNineBarWidth.constant = 300
-            
-            dayTenHighLowWidth.constant = 101
-            dayTenPrecipitationWidth.constant = 100
-            dayTenSummaryWidth.constant = 300
-            dayTenBarWidth.constant = 300
-            
-            dayElevenHighLowWidth.constant = 101
-            dayElevenPrecipitationWidth.constant = 100
-            dayElevenSummaryWidth.constant = 300
-            dayElevenBarWidth.constant = 300
-            
-            dayTwelveHighLowWidth.constant = 101
-            dayTwelvePrecipitationWidth.constant = 100
-            dayTwelveSummaryWidth.constant = 300
-            dayTwelveBarWidth.constant = 300
-            
-            dayThirteenHighLowWidth.constant = 101
-            dayThirteenPrecipitationWidth.constant = 100
-            dayThirteenSummaryWidth.constant = 300
-            dayThirteenBarWidth.constant = 300
         }
         
         dayZeroStackView.isHidden = true
@@ -1427,10 +1123,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         daySevenStackView.isHidden = true
         dayEightStackView.isHidden = true
         dayNineStackView.isHidden = true
-        dayTenStackView.isHidden = true
-        dayElevenStackView.isHidden = true
-        dayTwelveStackView.isHidden = true
-        dayThirteenStackView.isHidden = true
     }
     
     // MARK: - Set colors for all objects
@@ -1450,10 +1142,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             daySevenPageControl.currentPageIndicatorTintColor = .label
             dayEightPageControl.currentPageIndicatorTintColor = .label
             dayNinePageControl.currentPageIndicatorTintColor = .label
-            dayTenPageControl.currentPageIndicatorTintColor = .label
-            dayElevenPageControl.currentPageIndicatorTintColor = .label
-            dayTwelvePageControl.currentPageIndicatorTintColor = .label
-            dayThirteenPageControl.currentPageIndicatorTintColor = .label
             
             hourlyPageControl.pageIndicatorTintColor = .secondaryLabel
             dayZeroPageControl.pageIndicatorTintColor = .secondaryLabel
@@ -1466,10 +1154,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             daySevenPageControl.pageIndicatorTintColor = .secondaryLabel
             dayEightPageControl.pageIndicatorTintColor = .secondaryLabel
             dayNinePageControl.pageIndicatorTintColor = .secondaryLabel
-            dayTenPageControl.pageIndicatorTintColor = .secondaryLabel
-            dayElevenPageControl.pageIndicatorTintColor = .secondaryLabel
-            dayTwelvePageControl.pageIndicatorTintColor = .secondaryLabel
-            dayThirteenPageControl.pageIndicatorTintColor = .secondaryLabel
         }
     }
     
@@ -1486,10 +1170,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         daySevenForecastBar.image = UIImage(named: "Forecast bar \(buttonColor).pdf")
         dayEightForecastBar.image = UIImage(named: "Forecast bar \(buttonColor).pdf")
         dayNineForecastBar.image = UIImage(named: "Forecast bar \(buttonColor).pdf")
-        dayTenForecastBar.image = UIImage(named: "Forecast bar \(buttonColor).pdf")
-        dayElevenForecastBar.image = UIImage(named: "Forecast bar \(buttonColor).pdf")
-        dayTwelveForecastBar.image = UIImage(named: "Forecast bar \(buttonColor).pdf")
-        dayThirteenForecastBar.image = UIImage(named: "Forecast bar \(buttonColor).pdf")
     }
     
     // MARK: - Set daily condition images
@@ -1505,10 +1185,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         daySevenCondition.image = UIImage(named: weatherCondition(condition: weatherCondition7, type: "daily"))
         dayEightCondition.image = UIImage(named: weatherCondition(condition: weatherCondition8, type: "daily"))
         dayNineCondition.image = UIImage(named: weatherCondition(condition: weatherCondition9, type: "daily"))
-        dayTenCondition.image = UIImage(named: weatherCondition(condition: weatherCondition10, type: "daily"))
-        dayElevenCondition.image = UIImage(named: weatherCondition(condition: weatherCondition11, type: "daily"))
-        dayTwelveCondition.image = UIImage(named: weatherCondition(condition: weatherCondition12, type: "daily"))
-        dayThirteenCondition.image = UIImage(named: weatherCondition(condition: weatherCondition13, type: "daily"))
     }
     
     // Set hourly condition values for each page or segment control tap
@@ -1893,158 +1569,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                     completeDayNineUISetup(condition0: dayNineCondition8, condition1: dayNineCondition9, condition2: dayNineCondition10, condition3: dayNineCondition11, condition4: dayNineCondition12, condition5: dayNineCondition13, condition6: dayNineCondition14, condition7: dayNineCondition15, int0: dayNineCloudCover8, int1: dayNineCloudCover9, int2: dayNineCloudCover10, int3: dayNineCloudCover11, int4: dayNineCloudCover12, int5: dayNineCloudCover13, int6: dayNineCloudCover14, int7: dayNineCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
                 }
             }
-        } else  if day == 10 {
-            if segmentControl.selectedSegmentIndex == 0 {
-                if pageControl.currentPage == 0 {
-                    completeDayTenUISetup(condition0: dayTenCondition0, condition1: dayTenCondition1, condition2: dayTenCondition2, condition3: dayTenCondition3, condition4: dayTenCondition4, condition5: dayTenCondition5, condition6: dayTenCondition6, condition7: dayTenCondition7, int0: dayTenPrecip0, int1: dayTenPrecip1, int2: dayTenPrecip2, int3: dayTenPrecip3, int4: dayTenPrecip4, int5: dayTenPrecip5, int6: dayTenPrecip6, int7: dayTenPrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayTenUISetup(condition0: dayTenCondition8, condition1: dayTenCondition9, condition2: dayTenCondition10, condition3: dayTenCondition11, condition4: dayTenCondition12, condition5: dayTenCondition13, condition6: dayTenCondition14, condition7: dayTenCondition15, int0: dayTenPrecip8, int1: dayTenPrecip9, int2: dayTenPrecip10, int3: dayTenPrecip11, int4: dayTenPrecip12, int5: dayTenPrecip13, int6: dayTenPrecip14, int7: dayTenPrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 1 {
-                if pageControl.currentPage == 0 {
-                    completeDayTenUISetup(condition0: dayTenCondition0, condition1: dayTenCondition1, condition2: dayTenCondition2, condition3: dayTenCondition3, condition4: dayTenCondition4, condition5: dayTenCondition5, condition6: dayTenCondition6, condition7: dayTenCondition7, int0: dayTenTemp0, int1: dayTenTemp1, int2: dayTenTemp2, int3: dayTenTemp3, int4: dayTenTemp4, int5: dayTenTemp5, int6: dayTenTemp6, int7: dayTenTemp7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayTenUISetup(condition0: dayTenCondition8, condition1: dayTenCondition9, condition2: dayTenCondition10, condition3: dayTenCondition11, condition4: dayTenCondition12, condition5: dayTenCondition13, condition6: dayTenCondition14, condition7: dayTenCondition15, int0: dayTenTemp8, int1: dayTenTemp9, int2: dayTenTemp10, int3: dayTenTemp11, int4: dayTenTemp12, int5: dayTenTemp13, int6: dayTenTemp14, int7: dayTenTemp15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 2  {
-                if pageControl.currentPage == 0 {
-                    completeDayTenUISetup(condition0: dayTenCondition0, condition1: dayTenCondition1, condition2: dayTenCondition2, condition3: dayTenCondition3, condition4: dayTenCondition4, condition5: dayTenCondition5, condition6: dayTenCondition6, condition7: dayTenCondition7, int0: dayTenHumidity0, int1: dayTenHumidity1, int2: dayTenHumidity2, int3: dayTenHumidity3, int4: dayTenHumidity4, int5: dayTenHumidity5, int6: dayTenHumidity6, int7: dayTenHumidity7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayTenUISetup(condition0: dayTenCondition8, condition1: dayTenCondition9, condition2: dayTenCondition10, condition3: dayTenCondition11, condition4: dayTenCondition12, condition5: dayTenCondition13, condition6: dayTenCondition14, condition7: dayTenCondition15, int0: dayTenHumidity8, int1: dayTenHumidity9, int2: dayTenHumidity10, int3: dayTenHumidity11, int4: dayTenHumidity12, int5: dayTenHumidity13, int6: dayTenHumidity14, int7: dayTenHumidity15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 3 {
-                if pageControl.currentPage == 0 {
-                    completeDayTenUISetup(condition0: dayTenCondition0, condition1: dayTenCondition1, condition2: dayTenCondition2, condition3: dayTenCondition3, condition4: dayTenCondition4, condition5: dayTenCondition5, condition6: dayTenCondition6, condition7: dayTenCondition7, int0: dayTenIndex0, int1: dayTenIndex1, int2: dayTenIndex2, int3: dayTenIndex3, int4: dayTenIndex4, int5: dayTenIndex5, int6: dayTenIndex6, int7: dayTenIndex7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayTenUISetup(condition0: dayTenCondition8, condition1: dayTenCondition9, condition2: dayTenCondition10, condition3: dayTenCondition11, condition4: dayTenCondition12, condition5: dayTenCondition13, condition6: dayTenCondition14, condition7: dayTenCondition15, int0: dayTenIndex8, int1: dayTenIndex9, int2: dayTenIndex10, int3: dayTenIndex11, int4: dayTenIndex12, int5: dayTenIndex13, int6: dayTenIndex14, int7: dayTenIndex15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 4 {
-                if pageControl.currentPage == 0 {
-                    completeDayTenUISetup(condition0: dayTenCondition0, condition1: dayTenCondition1, condition2: dayTenCondition2, condition3: dayTenCondition3, condition4: dayTenCondition4, condition5: dayTenCondition5, condition6: dayTenCondition6, condition7: dayTenCondition7, int0: dayTenWindSpeed0, int1: dayTenWindSpeed1, int2: dayTenWindSpeed2, int3: dayTenWindSpeed3, int4: dayTenWindSpeed4, int5: dayTenWindSpeed5, int6: dayTenWindSpeed6, int7: dayTenWindSpeed7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayTenUISetup(condition0: dayTenCondition8, condition1: dayTenCondition9, condition2: dayTenCondition10, condition3: dayTenCondition11, condition4: dayTenCondition12, condition5: dayTenCondition13, condition6: dayTenCondition14, condition7: dayTenCondition15, int0: dayTenWindSpeed8, int1: dayTenWindSpeed9, int2: dayTenWindSpeed10, int3: dayTenWindSpeed11, int4: dayTenWindSpeed12, int5: dayTenWindSpeed13, int6: dayTenWindSpeed14, int7: dayTenWindSpeed15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 5 {
-                if pageControl.currentPage == 0 {
-                    completeDayTenUISetup(condition0: dayTenCondition0, condition1: dayTenCondition1, condition2: dayTenCondition2, condition3: dayTenCondition3, condition4: dayTenCondition4, condition5: dayTenCondition5, condition6: dayTenCondition6, condition7: dayTenCondition7, int0: dayTenCloudCover0, int1: dayTenCloudCover1, int2: dayTenCloudCover2, int3: dayTenCloudCover3, int4: dayTenCloudCover4, int5: dayTenCloudCover5, int6: dayTenCloudCover6, int7: dayTenCloudCover7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayTenUISetup(condition0: dayTenCondition8, condition1: dayTenCondition9, condition2: dayTenCondition10, condition3: dayTenCondition11, condition4: dayTenCondition12, condition5: dayTenCondition13, condition6: dayTenCondition14, condition7: dayTenCondition15, int0: dayTenCloudCover8, int1: dayTenCloudCover9, int2: dayTenCloudCover10, int3: dayTenCloudCover11, int4: dayTenCloudCover12, int5: dayTenCloudCover13, int6: dayTenCloudCover14, int7: dayTenCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            }
-        } else if day == 11 {
-            if segmentControl.selectedSegmentIndex == 0 {
-                if pageControl.currentPage == 0 {
-                    completeDayElevenUISetup(condition0: dayElevenCondition0, condition1: dayElevenCondition1, condition2: dayElevenCondition2, condition3: dayElevenCondition3, condition4: dayElevenCondition4, condition5: dayElevenCondition5, condition6: dayElevenCondition6, condition7: dayElevenCondition7, int0: dayElevenPrecip0, int1: dayElevenPrecip1, int2: dayElevenPrecip2, int3: dayElevenPrecip3, int4: dayElevenPrecip4, int5: dayElevenPrecip5, int6: dayElevenPrecip6, int7: dayElevenPrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayElevenUISetup(condition0: dayElevenCondition8, condition1: dayElevenCondition9, condition2: dayElevenCondition10, condition3: dayElevenCondition11, condition4: dayElevenCondition12, condition5: dayElevenCondition13, condition6: dayElevenCondition14, condition7: dayElevenCondition15, int0: dayElevenPrecip8, int1: dayElevenPrecip9, int2: dayElevenPrecip10, int3: dayElevenPrecip11, int4: dayElevenPrecip12, int5: dayElevenPrecip13, int6: dayElevenPrecip14, int7: dayElevenPrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 1 {
-                if pageControl.currentPage == 0 {
-                    completeDayElevenUISetup(condition0: dayElevenCondition0, condition1: dayElevenCondition1, condition2: dayElevenCondition2, condition3: dayElevenCondition3, condition4: dayElevenCondition4, condition5: dayElevenCondition5, condition6: dayElevenCondition6, condition7: dayElevenCondition7, int0: dayElevenTemp0, int1: dayElevenTemp1, int2: dayElevenTemp2, int3: dayElevenTemp3, int4: dayElevenTemp4, int5: dayElevenTemp5, int6: dayElevenTemp6, int7: dayElevenTemp7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayElevenUISetup(condition0: dayElevenCondition8, condition1: dayElevenCondition9, condition2: dayElevenCondition10, condition3: dayElevenCondition11, condition4: dayElevenCondition12, condition5: dayElevenCondition13, condition6: dayElevenCondition14, condition7: dayElevenCondition15, int0: dayElevenTemp8, int1: dayElevenTemp9, int2: dayElevenTemp10, int3: dayElevenTemp11, int4: dayElevenTemp12, int5: dayElevenTemp13, int6: dayElevenTemp14, int7: dayElevenTemp15, time0: hour8, time1: hour9, time2: hour10, time3: hour11, time4: hour12, time5: hour13, time6: hour14, time7: hour15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 2 {
-                if pageControl.currentPage == 0 {
-                    completeDayElevenUISetup(condition0: dayElevenCondition0, condition1: dayElevenCondition1, condition2: dayElevenCondition2, condition3: dayElevenCondition3, condition4: dayElevenCondition4, condition5: dayElevenCondition5, condition6: dayElevenCondition6, condition7: dayElevenCondition7, int0: dayElevenHumidity0, int1: dayElevenHumidity1, int2: dayElevenHumidity2, int3: dayElevenHumidity3, int4: dayElevenHumidity4, int5: dayElevenHumidity5, int6: dayElevenHumidity6, int7: dayElevenHumidity7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayElevenUISetup(condition0: dayElevenCondition8, condition1: dayElevenCondition9, condition2: dayElevenCondition10, condition3: dayElevenCondition11, condition4: dayElevenCondition12, condition5: dayElevenCondition13, condition6: dayElevenCondition14, condition7: dayElevenCondition15, int0: dayElevenHumidity8, int1: dayElevenHumidity9, int2: dayElevenHumidity10, int3: dayElevenHumidity11, int4: dayElevenHumidity12, int5: dayElevenHumidity13, int6: dayElevenHumidity14, int7: dayElevenHumidity15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 3 {
-                if pageControl.currentPage == 0 {
-                    completeDayElevenUISetup(condition0: dayElevenCondition0, condition1: dayElevenCondition1, condition2: dayElevenCondition2, condition3: dayElevenCondition3, condition4: dayElevenCondition4, condition5: dayElevenCondition5, condition6: dayElevenCondition6, condition7: dayElevenCondition7, int0: dayElevenIndex0, int1: dayElevenIndex1, int2: dayElevenIndex2, int3: dayElevenIndex3, int4: dayElevenIndex4, int5: dayElevenIndex5, int6: dayElevenIndex6, int7: dayElevenIndex7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayElevenUISetup(condition0: dayElevenCondition8, condition1: dayElevenCondition9, condition2: dayElevenCondition10, condition3: dayElevenCondition11, condition4: dayElevenCondition12, condition5: dayElevenCondition13, condition6: dayElevenCondition14, condition7: dayElevenCondition15, int0: dayElevenIndex8, int1: dayElevenIndex9, int2: dayElevenIndex10, int3: dayElevenIndex11, int4: dayElevenIndex12, int5: dayElevenIndex13, int6: dayElevenIndex14, int7: dayElevenIndex15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 4 {
-                if pageControl.currentPage == 0 {
-                    completeDayElevenUISetup(condition0: dayElevenCondition0, condition1: dayElevenCondition1, condition2: dayElevenCondition2, condition3: dayElevenCondition3, condition4: dayElevenCondition4, condition5: dayElevenCondition5, condition6: dayElevenCondition6, condition7: dayElevenCondition7, int0: dayElevenWindSpeed0, int1: dayElevenWindSpeed1, int2: dayElevenWindSpeed2, int3: dayElevenWindSpeed3, int4: dayElevenWindSpeed4, int5: dayElevenWindSpeed5, int6: dayElevenWindSpeed6, int7: dayElevenWindSpeed7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayElevenUISetup(condition0: dayElevenCondition8, condition1: dayElevenCondition9, condition2: dayElevenCondition10, condition3: dayElevenCondition11, condition4: dayElevenCondition12, condition5: dayElevenCondition13, condition6: dayElevenCondition14, condition7: dayElevenCondition15, int0: dayElevenWindSpeed8, int1: dayElevenWindSpeed9, int2: dayElevenWindSpeed10, int3: dayElevenWindSpeed11, int4: dayElevenWindSpeed12, int5: dayElevenWindSpeed13, int6: dayElevenWindSpeed14, int7: dayElevenWindSpeed15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 5 {
-                if pageControl.currentPage == 0 {
-                    completeDayElevenUISetup(condition0: dayElevenCondition0, condition1: dayElevenCondition1, condition2: dayElevenCondition2, condition3: dayElevenCondition3, condition4: dayElevenCondition4, condition5: dayElevenCondition5, condition6: dayElevenCondition6, condition7: dayElevenCondition7, int0: dayElevenCloudCover0, int1: dayElevenCloudCover1, int2: dayElevenCloudCover2, int3: dayElevenCloudCover3, int4: dayElevenCloudCover4, int5: dayElevenCloudCover5, int6: dayElevenCloudCover6, int7: dayElevenCloudCover7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayElevenUISetup(condition0: dayElevenCondition8, condition1: dayElevenCondition9, condition2: dayElevenCondition10, condition3: dayElevenCondition11, condition4: dayElevenCondition12, condition5: dayElevenCondition13, condition6: dayElevenCondition14, condition7: dayElevenCondition15, int0: dayElevenCloudCover8, int1: dayElevenCloudCover9, int2: dayElevenCloudCover10, int3: dayElevenCloudCover11, int4: dayElevenCloudCover12, int5: dayElevenCloudCover13, int6: dayElevenCloudCover14, int7: dayElevenCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            }
-        } else if day == 12 {
-            if segmentControl.selectedSegmentIndex == 0 {
-                if pageControl.currentPage == 0 {
-                    completeDayTwelveUISetup(condition0: dayTwelveCondition0, condition1: dayTwelveCondition1, condition2: dayTwelveCondition2, condition3: dayTwelveCondition3, condition4: dayTwelveCondition4, condition5: dayTwelveCondition5, condition6: dayTwelveCondition6, condition7: dayTwelveCondition7, int0: dayTwelvePrecip0, int1: dayTwelvePrecip1, int2: dayTwelvePrecip2, int3: dayTwelvePrecip3, int4: dayTwelvePrecip4, int5: dayTwelvePrecip5, int6: dayTwelvePrecip6, int7: dayTwelvePrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayTwelveUISetup(condition0: dayTwelveCondition8, condition1: dayTwelveCondition9, condition2: dayTwelveCondition10, condition3: dayTwelveCondition11, condition4: dayTwelveCondition12, condition5: dayTwelveCondition13, condition6: dayTwelveCondition14, condition7: dayTwelveCondition15, int0: dayTwelvePrecip8, int1: dayTwelvePrecip9, int2: dayTwelvePrecip10, int3: dayTwelvePrecip11, int4: dayTwelvePrecip12, int5: dayTwelvePrecip13, int6: dayTwelvePrecip14, int7: dayTwelvePrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 1 {
-                if pageControl.currentPage == 0 {
-                    completeDayTwelveUISetup(condition0: dayTwelveCondition0, condition1: dayTwelveCondition1, condition2: dayTwelveCondition2, condition3: dayTwelveCondition3, condition4: dayTwelveCondition4, condition5: dayTwelveCondition5, condition6: dayTwelveCondition6, condition7: dayTwelveCondition7, int0: dayTwelveTemp0, int1: dayTwelveTemp1, int2: dayTwelveTemp2, int3: dayTwelveTemp3, int4: dayTwelveTemp4, int5: dayTwelveTemp5, int6: dayTwelveTemp6, int7: dayTwelveTemp7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayTwelveUISetup(condition0: dayTwelveCondition8, condition1: dayTwelveCondition9, condition2: dayTwelveCondition10, condition3: dayTwelveCondition11, condition4: dayTwelveCondition12, condition5: dayTwelveCondition13, condition6: dayTwelveCondition14, condition7: dayTwelveCondition15, int0: dayTwelveTemp8, int1: dayTwelveTemp9, int2: dayTwelveTemp10, int3: dayTwelveTemp11, int4: dayTwelveTemp12, int5: dayTwelveTemp13, int6: dayTwelveTemp14, int7: dayTwelveTemp15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 2  {
-                if pageControl.currentPage == 0 {
-                    completeDayTwelveUISetup(condition0: dayTwelveCondition0, condition1: dayTwelveCondition1, condition2: dayTwelveCondition2, condition3: dayTwelveCondition3, condition4: dayTwelveCondition4, condition5: dayTwelveCondition5, condition6: dayTwelveCondition6, condition7: dayTwelveCondition7, int0: dayTwelveHumidity0, int1: dayTwelveHumidity1, int2: dayTwelveHumidity2, int3: dayTwelveHumidity3, int4: dayTwelveHumidity4, int5: dayTwelveHumidity5, int6: dayTwelveHumidity6, int7: dayTwelveHumidity7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayTwelveUISetup(condition0: dayTwelveCondition8, condition1: dayTwelveCondition9, condition2: dayTwelveCondition10, condition3: dayTwelveCondition11, condition4: dayTwelveCondition12, condition5: dayTwelveCondition13, condition6: dayTwelveCondition14, condition7: dayTwelveCondition15, int0: dayTwelveHumidity8, int1: dayTwelveHumidity9, int2: dayTwelveHumidity10, int3: dayTwelveHumidity11, int4: dayTwelveHumidity12, int5: dayTwelveHumidity13, int6: dayTwelveHumidity14, int7: dayTwelveHumidity15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 3 {
-                if pageControl.currentPage == 0 {
-                    completeDayTwelveUISetup(condition0: dayTwelveCondition0, condition1: dayTwelveCondition1, condition2: dayTwelveCondition2, condition3: dayTwelveCondition3, condition4: dayTwelveCondition4, condition5: dayTwelveCondition5, condition6: dayTwelveCondition6, condition7: dayTwelveCondition7, int0: dayTwelveIndex0, int1: dayTwelveIndex1, int2: dayTwelveIndex2, int3: dayTwelveIndex3, int4: dayTwelveIndex4, int5: dayTwelveIndex5, int6: dayTwelveIndex6, int7: dayTwelveIndex7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayTwelveUISetup(condition0: dayTwelveCondition8, condition1: dayTwelveCondition9, condition2: dayTwelveCondition10, condition3: dayTwelveCondition11, condition4: dayTwelveCondition12, condition5: dayTwelveCondition13, condition6: dayTwelveCondition14, condition7: dayTwelveCondition15, int0: dayTwelveIndex8, int1: dayTwelveIndex9, int2: dayTwelveIndex10, int3: dayTwelveIndex11, int4: dayTwelveIndex12, int5: dayTwelveIndex13, int6: dayTwelveIndex14, int7: dayTwelveIndex15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 4 {
-                if pageControl.currentPage == 0 {
-                    completeDayTwelveUISetup(condition0: dayTwelveCondition0, condition1: dayTwelveCondition1, condition2: dayTwelveCondition2, condition3: dayTwelveCondition3, condition4: dayTwelveCondition4, condition5: dayTwelveCondition5, condition6: dayTwelveCondition6, condition7: dayTwelveCondition7, int0: dayTwelveWindSpeed0, int1: dayTwelveWindSpeed1, int2: dayTwelveWindSpeed2, int3: dayTwelveWindSpeed3, int4: dayTwelveWindSpeed4, int5: dayTwelveWindSpeed5, int6: dayTwelveWindSpeed6, int7: dayTwelveWindSpeed7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayTwelveUISetup(condition0: dayTwelveCondition8, condition1: dayTwelveCondition9, condition2: dayTwelveCondition10, condition3: dayTwelveCondition11, condition4: dayTwelveCondition12, condition5: dayTwelveCondition13, condition6: dayTwelveCondition14, condition7: dayTwelveCondition15, int0: dayTwelveWindSpeed8, int1: dayTwelveWindSpeed9, int2: dayTwelveWindSpeed10, int3: dayTwelveWindSpeed11, int4: dayTwelveWindSpeed12, int5: dayTwelveWindSpeed13, int6: dayTwelveWindSpeed14, int7: dayTwelveWindSpeed15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 5 {
-                if pageControl.currentPage == 0 {
-                    completeDayTwelveUISetup(condition0: dayTwelveCondition0, condition1: dayTwelveCondition1, condition2: dayTwelveCondition2, condition3: dayTwelveCondition3, condition4: dayTwelveCondition4, condition5: dayTwelveCondition5, condition6: dayTwelveCondition6, condition7: dayTwelveCondition7, int0: dayTwelveCloudCover0, int1: dayTwelveCloudCover1, int2: dayTwelveCloudCover2, int3: dayTwelveCloudCover3, int4: dayTwelveCloudCover4, int5: dayTwelveCloudCover5, int6: dayTwelveCloudCover6, int7: dayTwelveCloudCover7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayTwelveUISetup(condition0: dayTwelveCondition8, condition1: dayTwelveCondition9, condition2: dayTwelveCondition10, condition3: dayTwelveCondition11, condition4: dayTwelveCondition12, condition5: dayTwelveCondition13, condition6: dayTwelveCondition14, condition7: dayTwelveCondition15, int0: dayTwelveCloudCover8, int1: dayTwelveCloudCover9, int2: dayTwelveCloudCover10, int3: dayTwelveCloudCover11, int4: dayTwelveCloudCover12, int5: dayTwelveCloudCover13, int6: dayTwelveCloudCover14, int7: dayTwelveCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            }
-        } else if day == 13 {
-            if segmentControl.selectedSegmentIndex == 0 {
-                if pageControl.currentPage == 0 {
-                    completeDayThirteenUISetup(condition0: dayThirteenCondition0, condition1: dayThirteenCondition1, condition2: dayThirteenCondition2, condition3: dayThirteenCondition3, condition4: dayThirteenCondition4, condition5: dayThirteenCondition5, condition6: dayThirteenCondition6, condition7: dayThirteenCondition7, int0: dayThirteenPrecip0, int1: dayThirteenPrecip1, int2: dayThirteenPrecip2, int3: dayThirteenPrecip3, int4: dayThirteenPrecip4, int5: dayThirteenPrecip5, int6: dayThirteenPrecip6, int7: dayThirteenPrecip7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayThirteenUISetup(condition0: dayThirteenCondition8, condition1: dayThirteenCondition9, condition2: dayThirteenCondition10, condition3: dayThirteenCondition11, condition4: dayThirteenCondition12, condition5: dayThirteenCondition13, condition6: dayThirteenCondition14, condition7: dayThirteenCondition15, int0: dayThirteenPrecip8, int1: dayThirteenPrecip9, int2: dayThirteenPrecip10, int3: dayThirteenPrecip11, int4: dayThirteenPrecip12, int5: dayThirteenPrecip13, int6: dayThirteenPrecip14, int7: dayThirteenPrecip15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 1 {
-                if pageControl.currentPage == 0 {
-                    completeDayThirteenUISetup(condition0: dayThirteenCondition0, condition1: dayThirteenCondition1, condition2: dayThirteenCondition2, condition3: dayThirteenCondition3, condition4: dayThirteenCondition4, condition5: dayThirteenCondition5, condition6: dayThirteenCondition6, condition7: dayThirteenCondition7, int0: dayThirteenTemp0, int1: dayThirteenTemp1, int2: dayThirteenTemp2, int3: dayThirteenTemp3, int4: dayThirteenTemp4, int5: dayThirteenTemp5, int6: dayThirteenTemp6, int7: dayThirteenTemp7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayThirteenUISetup(condition0: dayThirteenCondition8, condition1: dayThirteenCondition9, condition2: dayThirteenCondition10, condition3: dayThirteenCondition11, condition4: dayThirteenCondition12, condition5: dayThirteenCondition13, condition6: dayThirteenCondition14, condition7: dayThirteenCondition15, int0: dayThirteenTemp8, int1: dayThirteenTemp9, int2: dayThirteenTemp10, int3: dayThirteenTemp11, int4: dayThirteenTemp12, int5: dayThirteenTemp13, int6: dayThirteenTemp14, int7: dayThirteenTemp15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 2 {
-                if pageControl.currentPage == 0 {
-                    completeDayThirteenUISetup(condition0: dayThirteenCondition0, condition1: dayThirteenCondition1, condition2: dayThirteenCondition2, condition3: dayThirteenCondition3, condition4: dayThirteenCondition4, condition5: dayThirteenCondition5, condition6: dayThirteenCondition6, condition7: dayThirteenCondition7, int0: dayThirteenHumidity0, int1: dayThirteenHumidity1, int2: dayThirteenHumidity2, int3: dayThirteenHumidity3, int4: dayThirteenHumidity4, int5: dayThirteenHumidity5, int6: dayThirteenHumidity6, int7: dayThirteenHumidity7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayThirteenUISetup(condition0: dayThirteenCondition8, condition1: dayThirteenCondition9, condition2: dayThirteenCondition10, condition3: dayThirteenCondition11, condition4: dayThirteenCondition12, condition5: dayThirteenCondition13, condition6: dayThirteenCondition14, condition7: dayThirteenCondition15, int0: dayThirteenHumidity8, int1: dayThirteenHumidity9, int2: dayThirteenHumidity10, int3: dayThirteenHumidity11, int4: dayThirteenHumidity12, int5: dayThirteenHumidity13, int6: dayThirteenHumidity14, int7: dayThirteenHumidity15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 3 {
-                if pageControl.currentPage == 0 {
-                    completeDayThirteenUISetup(condition0: dayThirteenCondition0, condition1: dayThirteenCondition1, condition2: dayThirteenCondition2, condition3: dayThirteenCondition3, condition4: dayThirteenCondition4, condition5: dayThirteenCondition5, condition6: dayThirteenCondition6, condition7: dayThirteenCondition7, int0: dayThirteenIndex0, int1: dayThirteenIndex1, int2: dayThirteenIndex2, int3: dayThirteenIndex3, int4: dayThirteenIndex4, int5: dayThirteenIndex5, int6: dayThirteenIndex6, int7: dayThirteenIndex7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayThirteenUISetup(condition0: dayThirteenCondition8, condition1: dayThirteenCondition9, condition2: dayThirteenCondition10, condition3: dayThirteenCondition11, condition4: dayThirteenCondition12, condition5: dayThirteenCondition13, condition6: dayThirteenCondition14, condition7: dayThirteenCondition15, int0: dayThirteenIndex8, int1: dayThirteenIndex9, int2: dayThirteenIndex10, int3: dayThirteenIndex11, int4: dayThirteenIndex12, int5: dayThirteenIndex13, int6: dayThirteenIndex14, int7: dayThirteenIndex15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 4 {
-                if pageControl.currentPage == 0 {
-                    completeDayThirteenUISetup(condition0: dayThirteenCondition0, condition1: dayThirteenCondition1, condition2: dayThirteenCondition2, condition3: dayThirteenCondition3, condition4: dayThirteenCondition4, condition5: dayThirteenCondition5, condition6: dayThirteenCondition6, condition7: dayThirteenCondition7, int0: dayThirteenWindSpeed0, int1: dayThirteenWindSpeed1, int2: dayThirteenWindSpeed2, int3: dayThirteenWindSpeed3, int4: dayThirteenWindSpeed4, int5: dayThirteenWindSpeed5, int6: dayThirteenWindSpeed6, int7: dayThirteenWindSpeed7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayThirteenUISetup(condition0: dayThirteenCondition8, condition1: dayThirteenCondition9, condition2: dayThirteenCondition10, condition3: dayThirteenCondition11, condition4: dayThirteenCondition12, condition5: dayThirteenCondition13, condition6: dayThirteenCondition14, condition7: dayThirteenCondition15, int0: dayThirteenWindSpeed8, int1: dayThirteenWindSpeed9, int2: dayThirteenWindSpeed10, int3: dayThirteenWindSpeed11, int4: dayThirteenWindSpeed12, int5: dayThirteenWindSpeed13, int6: dayThirteenWindSpeed14, int7: dayThirteenWindSpeed15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            } else if segmentControl.selectedSegmentIndex == 5 {
-                if pageControl.currentPage == 0 {
-                    completeDayThirteenUISetup(condition0: dayThirteenCondition0, condition1: dayThirteenCondition1, condition2: dayThirteenCondition2, condition3: dayThirteenCondition3, condition4: dayThirteenCondition4, condition5: dayThirteenCondition5, condition6: dayThirteenCondition6, condition7: dayThirteenCondition7, int0: dayThirteenCloudCover0, int1: dayThirteenCloudCover1, int2: dayThirteenCloudCover2, int3: dayThirteenCloudCover3, int4: dayThirteenCloudCover4, int5: dayThirteenCloudCover5, int6: dayThirteenCloudCover6, int7: dayThirteenCloudCover7, time0: dayTime0, time1: dayTime1, time2: dayTime2, time3: dayTime3, time4: dayTime4, time5: dayTime5, time6: dayTime6, time7: dayTime7)
-                } else {
-                    completeDayThirteenUISetup(condition0: dayThirteenCondition8, condition1: dayThirteenCondition9, condition2: dayThirteenCondition10, condition3: dayThirteenCondition11, condition4: dayThirteenCondition12, condition5: dayThirteenCondition13, condition6: dayThirteenCondition14, condition7: dayThirteenCondition15, int0: dayThirteenCloudCover8, int1: dayThirteenCloudCover9, int2: dayThirteenCloudCover10, int3: dayThirteenCloudCover11, int4: dayThirteenCloudCover12, int5: dayThirteenCloudCover13, int6: dayThirteenCloudCover14, int7: dayThirteenCloudCover15, time0: dayTime8, time1: dayTime9, time2: dayTime10, time3: dayTime11, time4: dayTime12, time5: dayTime13, time6: dayTime14, time7: dayTime15)
-                }
-            }
         } else if day == 14 {
                if segmentControl.selectedSegmentIndex == 0 {
                    if pageControl.currentPage == 0 {
@@ -2222,50 +1746,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         hourSetup(conditionImage: dayNineHour7Condition, conditionImageType: condition7, conditionValueText: dayNineHour7ValueText, conditionValue: int7, image: dayNineHour7Image, timeText: dayNineHour7Time, timeValue: time7, height: dayNineHour7ValueHeight)
     }
 
-    func completeDayTenUISetup(condition0: String, condition1: String, condition2: String, condition3: String, condition4: String, condition5: String, condition6: String, condition7: String, int0: Int, int1: Int, int2: Int, int3: Int, int4: Int, int5: Int, int6: Int, int7: Int, time0: String, time1: String, time2: String, time3: String, time4: String, time5: String, time6: String, time7: String) {
-        hourSetup(conditionImage: dayTenHour0Condition, conditionImageType: condition0, conditionValueText: dayTenHour0ValueText, conditionValue: int0, image: dayTenHour0Image, timeText: dayTenHour0Time, timeValue: time0, height: dayTenHour0ValueHeight)
-        hourSetup(conditionImage: dayTenHour1Condition, conditionImageType: condition1, conditionValueText: dayTenHour1ValueText, conditionValue: int1, image: dayTenHour1Image, timeText: dayTenHour1Time, timeValue: time1, height: dayTenHour1ValueHeight)
-        hourSetup(conditionImage: dayTenHour2Condition, conditionImageType: condition2, conditionValueText: dayTenHour2ValueText, conditionValue: int2, image: dayTenHour2Image, timeText: dayTenHour2Time, timeValue: time2, height: dayTenHour2ValueHeight)
-        hourSetup(conditionImage: dayTenHour3Condition, conditionImageType: condition3, conditionValueText: dayTenHour3ValueText, conditionValue: int3, image: dayTenHour3Image, timeText: dayTenHour3Time, timeValue: time3, height: dayTenHour3ValueHeight)
-        hourSetup(conditionImage: dayTenHour4Condition, conditionImageType: condition4, conditionValueText: dayTenHour4ValueText, conditionValue: int4, image: dayTenHour4Image, timeText: dayTenHour4Time, timeValue: time4, height: dayTenHour4ValueHeight)
-        hourSetup(conditionImage: dayTenHour5Condition, conditionImageType: condition5, conditionValueText: dayTenHour5ValueText, conditionValue: int5, image: dayTenHour5Image, timeText: dayTenHour5Time, timeValue: time5, height: dayTenHour5ValueHeight)
-        hourSetup(conditionImage: dayTenHour6Condition, conditionImageType: condition6, conditionValueText: dayTenHour6ValueText, conditionValue: int6, image: dayTenHour6Image, timeText: dayTenHour6Time, timeValue: time6, height: dayTenHour6ValueHeight)
-        hourSetup(conditionImage: dayTenHour7Condition, conditionImageType: condition7, conditionValueText: dayTenHour7ValueText, conditionValue: int7, image: dayTenHour7Image, timeText: dayTenHour7Time, timeValue: time7, height: dayTenHour7ValueHeight)
-    }
-
-    func completeDayElevenUISetup(condition0: String, condition1: String, condition2: String, condition3: String, condition4: String, condition5: String, condition6: String, condition7: String, int0: Int, int1: Int, int2: Int, int3: Int, int4: Int, int5: Int, int6: Int, int7: Int, time0: String, time1: String, time2: String, time3: String, time4: String, time5: String, time6: String, time7: String) {
-        hourSetup(conditionImage: dayElevenHour0Condition, conditionImageType: condition0, conditionValueText: dayElevenHour0ValueText, conditionValue: int0, image: dayElevenHour0Image, timeText: dayElevenHour0Time, timeValue: time0, height: dayElevenHour0ValueHeight)
-        hourSetup(conditionImage: dayElevenHour1Condition, conditionImageType: condition1, conditionValueText: dayElevenHour1ValueText, conditionValue: int1, image: dayElevenHour1Image, timeText: dayElevenHour1Time, timeValue: time1, height: dayElevenHour1ValueHeight)
-        hourSetup(conditionImage: dayElevenHour2Condition, conditionImageType: condition2, conditionValueText: dayElevenHour2ValueText, conditionValue: int2, image: dayElevenHour2Image, timeText: dayElevenHour2Time, timeValue: time2, height: dayElevenHour2ValueHeight)
-        hourSetup(conditionImage: dayElevenHour3Condition, conditionImageType: condition3, conditionValueText: dayElevenHour3ValueText, conditionValue: int3, image: dayElevenHour3Image, timeText: dayElevenHour3Time, timeValue: time3, height: dayElevenHour3ValueHeight)
-        hourSetup(conditionImage: dayElevenHour4Condition, conditionImageType: condition4, conditionValueText: dayElevenHour4ValueText, conditionValue: int4, image: dayElevenHour4Image, timeText: dayElevenHour4Time, timeValue: time4, height: dayElevenHour4ValueHeight)
-        hourSetup(conditionImage: dayElevenHour5Condition, conditionImageType: condition5, conditionValueText: dayElevenHour5ValueText, conditionValue: int5, image: dayElevenHour5Image, timeText: dayElevenHour5Time, timeValue: time5, height: dayElevenHour5ValueHeight)
-        hourSetup(conditionImage: dayElevenHour6Condition, conditionImageType: condition6, conditionValueText: dayElevenHour6ValueText, conditionValue: int6, image: dayElevenHour6Image, timeText: dayElevenHour6Time, timeValue: time6, height: dayElevenHour6ValueHeight)
-        hourSetup(conditionImage: dayElevenHour7Condition, conditionImageType: condition7, conditionValueText: dayElevenHour7ValueText, conditionValue: int7, image: dayElevenHour7Image, timeText: dayElevenHour7Time, timeValue: time7, height: dayElevenHour7ValueHeight)
-    }
-
-    func completeDayTwelveUISetup(condition0: String, condition1: String, condition2: String, condition3: String, condition4: String, condition5: String, condition6: String, condition7: String, int0: Int, int1: Int, int2: Int, int3: Int, int4: Int, int5: Int, int6: Int, int7: Int, time0: String, time1: String, time2: String, time3: String, time4: String, time5: String, time6: String, time7: String) {
-        hourSetup(conditionImage: dayTwelveHour0Condition, conditionImageType: condition0, conditionValueText: dayTwelveHour0ValueText, conditionValue: int0, image: dayTwelveHour0Image, timeText: dayTwelveHour0Time, timeValue: time0, height: dayTwelveHour0ValueHeight)
-        hourSetup(conditionImage: dayTwelveHour1Condition, conditionImageType: condition1, conditionValueText: dayTwelveHour1ValueText, conditionValue: int1, image: dayTwelveHour1Image, timeText: dayTwelveHour1Time, timeValue: time1, height: dayTwelveHour1ValueHeight)
-        hourSetup(conditionImage: dayTwelveHour2Condition, conditionImageType: condition2, conditionValueText: dayTwelveHour2ValueText, conditionValue: int2, image: dayTwelveHour2Image, timeText: dayTwelveHour2Time, timeValue: time2, height: dayTwelveHour2ValueHeight)
-        hourSetup(conditionImage: dayTwelveHour3Condition, conditionImageType: condition3, conditionValueText: dayTwelveHour3ValueText, conditionValue: int3, image: dayTwelveHour3Image, timeText: dayTwelveHour3Time, timeValue: time3, height: dayTwelveHour3ValueHeight)
-        hourSetup(conditionImage: dayTwelveHour4Condition, conditionImageType: condition4, conditionValueText: dayTwelveHour4ValueText, conditionValue: int4, image: dayTwelveHour4Image, timeText: dayTwelveHour4Time, timeValue: time4, height: dayTwelveHour4ValueHeight)
-        hourSetup(conditionImage: dayTwelveHour5Condition, conditionImageType: condition5, conditionValueText: dayTwelveHour5ValueText, conditionValue: int5, image: dayTwelveHour5Image, timeText: dayTwelveHour5Time, timeValue: time5, height: dayTwelveHour5ValueHeight)
-        hourSetup(conditionImage: dayTwelveHour6Condition, conditionImageType: condition6, conditionValueText: dayTwelveHour6ValueText, conditionValue: int6, image: dayTwelveHour6Image, timeText: dayTwelveHour6Time, timeValue: time6, height: dayTwelveHour6ValueHeight)
-        hourSetup(conditionImage: dayTwelveHour7Condition, conditionImageType: condition7, conditionValueText: dayTwelveHour7ValueText, conditionValue: int7, image: dayTwelveHour7Image, timeText: dayTwelveHour7Time, timeValue: time7, height: dayTwelveHour7ValueHeight)
-    }
-    
-    func completeDayThirteenUISetup(condition0: String, condition1: String, condition2: String, condition3: String, condition4: String, condition5: String, condition6: String, condition7: String, int0: Int, int1: Int, int2: Int, int3: Int, int4: Int, int5: Int, int6: Int, int7: Int, time0: String, time1: String, time2: String, time3: String, time4: String, time5: String, time6: String, time7: String) {
-        hourSetup(conditionImage: dayThirteenHour0Condition, conditionImageType: condition0, conditionValueText: dayThirteenHour0ValueText, conditionValue: int0, image: dayThirteenHour0Image, timeText: dayThirteenHour0Time, timeValue: time0, height: dayThirteenHour0ValueHeight)
-        hourSetup(conditionImage: dayThirteenHour1Condition, conditionImageType: condition1, conditionValueText: dayThirteenHour1ValueText, conditionValue: int1, image: dayThirteenHour1Image, timeText: dayThirteenHour1Time, timeValue: time1, height: dayThirteenHour1ValueHeight)
-        hourSetup(conditionImage: dayThirteenHour2Condition, conditionImageType: condition2, conditionValueText: dayThirteenHour2ValueText, conditionValue: int2, image: dayThirteenHour2Image, timeText: dayThirteenHour2Time, timeValue: time2, height: dayThirteenHour2ValueHeight)
-        hourSetup(conditionImage: dayThirteenHour3Condition, conditionImageType: condition3, conditionValueText: dayThirteenHour3ValueText, conditionValue: int3, image: dayThirteenHour3Image, timeText: dayThirteenHour3Time, timeValue: time3, height: dayThirteenHour3ValueHeight)
-        hourSetup(conditionImage: dayThirteenHour4Condition, conditionImageType: condition4, conditionValueText: dayThirteenHour4ValueText, conditionValue: int4, image: dayThirteenHour4Image, timeText: dayThirteenHour4Time, timeValue: time4, height: dayThirteenHour4ValueHeight)
-        hourSetup(conditionImage: dayThirteenHour5Condition, conditionImageType: condition5, conditionValueText: dayThirteenHour5ValueText, conditionValue: int5, image: dayThirteenHour5Image, timeText: dayThirteenHour5Time, timeValue: time5, height: dayThirteenHour5ValueHeight)
-        hourSetup(conditionImage: dayThirteenHour6Condition, conditionImageType: condition6, conditionValueText: dayThirteenHour6ValueText, conditionValue: int6, image: dayThirteenHour6Image, timeText: dayThirteenHour6Time, timeValue: time6, height: dayThirteenHour6ValueHeight)
-        hourSetup(conditionImage: dayThirteenHour7Condition, conditionImageType: condition7, conditionValueText: dayThirteenHour7ValueText, conditionValue: int7, image: dayThirteenHour7Image, timeText: dayThirteenHour7Time, timeValue: time7, height: dayThirteenHour7ValueHeight)
-    }
-
     // MARK: - Set day labels 0-7
     func setDayLabelText(dayLabel: UILabel!, highLowLabel: UILabel!, precipLabel: UILabel!, summaryTextView: UITextView!, stackView: UIStackView!, dayString: String, dateString: String, summary: String, sunrise: String, sunset: String, dayHigh: Int, dayLow: Int, dayPrecip: Int, precipAccum: Double, conditionValue: Any) {
         dayLabel.text = "\(dayString)\n\(dateString)"
@@ -2297,10 +1777,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         setDayLabelText(dayLabel: daySevenDay, highLowLabel: daySevenHighLow, precipLabel: daySevenPrecipitation, summaryTextView: daySevenSummary, stackView: daySevenStackView, dayString: daySevenDayString, dateString: daySevenDateString, summary: daySevenSummaryString, sunrise: daySevenSunrise, sunset: daySevenSunset, dayHigh: daySevenHigh, dayLow: daySevenLow, dayPrecip: daySevenPrecip, precipAccum: daySevenPrecipAccum, conditionValue: daySevenConditionValue)
         setDayLabelText(dayLabel: dayEightDay, highLowLabel: dayEightHighLow, precipLabel: dayEightPrecipitation, summaryTextView: dayEightSummary, stackView: dayEightStackView, dayString: dayEightDayString, dateString: dayEightDateString, summary: dayEightSummaryString, sunrise: dayEightSunrise, sunset: dayEightSunset, dayHigh: dayEightHigh, dayLow: dayEightLow, dayPrecip: dayEightPrecip, precipAccum: dayEightPrecipAccum, conditionValue: dayEightConditionValue)
         setDayLabelText(dayLabel: dayNineDay, highLowLabel: dayNineHighLow, precipLabel: dayNinePrecipitation, summaryTextView: dayNineSummary, stackView: dayNineStackView, dayString: dayNineDayString, dateString: dayNineDateString, summary: dayNineSummaryString, sunrise: dayNineSunrise, sunset: dayNineSunset, dayHigh: dayNineHigh, dayLow: dayNineLow, dayPrecip: dayNinePrecip, precipAccum: dayNinePrecipAccum, conditionValue: dayNineConditionValue)
-        setDayLabelText(dayLabel: dayTenDay, highLowLabel: dayTenHighLow, precipLabel: dayTenPrecipitation, summaryTextView: dayTenSummary, stackView: dayTenStackView, dayString: dayTenDayString, dateString: dayTenDateString, summary: dayTenSummaryString, sunrise: dayTenSunrise, sunset: dayTenSunset, dayHigh: dayTenHigh, dayLow: dayTenLow, dayPrecip: dayTenPrecip, precipAccum: dayTenPrecipAccum, conditionValue: dayTenConditionValue)
-        setDayLabelText(dayLabel: dayElevenDay, highLowLabel: dayElevenHighLow, precipLabel: dayElevenPrecipitation, summaryTextView: dayElevenSummary, stackView: dayElevenStackView, dayString: dayElevenDayString, dateString: dayElevenDateString, summary: dayElevenSummaryString, sunrise: dayElevenSunrise, sunset: dayElevenSunset, dayHigh: dayElevenHigh, dayLow: dayElevenLow, dayPrecip: dayElevenPrecip, precipAccum: dayElevenPrecipAccum, conditionValue: dayElevenConditionValue)
-        setDayLabelText(dayLabel: dayTwelveDay, highLowLabel: dayTwelveHighLow, precipLabel: dayTwelvePrecipitation, summaryTextView: dayTwelveSummary, stackView: dayTwelveStackView, dayString: dayTwelveDayString, dateString: dayTwelveDateString, summary: dayTwelveSummaryString, sunrise: dayTwelveSunrise, sunset: dayTwelveSunset, dayHigh: dayTwelveHigh, dayLow: dayTwelveLow, dayPrecip: dayTwelvePrecip, precipAccum: dayTwelvePrecipAccum, conditionValue: dayTwelveConditionValue)
-        setDayLabelText(dayLabel: dayThirteenDay, highLowLabel: dayThirteenHighLow, precipLabel: dayThirteenPrecipitation, summaryTextView: dayThirteenSummary, stackView: dayThirteenStackView, dayString: dayThirteenDayString, dateString: dayThirteenDateString, summary: dayThirteenSummaryString, sunrise: dayThirteenSunrise, sunset: dayThirteenSunset, dayHigh: dayThirteenHigh, dayLow: dayThirteenLow, dayPrecip: dayThirteenPrecip, precipAccum: dayThirteenPrecipAccum, conditionValue: dayThirteenConditionValue)
     }
     
     // MARK: - Action to open weather alerts
@@ -2476,66 +1952,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         setHourlyConditionOutlets(day: 9, segmentControl: dayNineSegmentControl, pageControl: dayNinePageControl)
     }
     
-    @IBAction func dayTenSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 10, segmentControl: dayTenSegmentControl, pageControl: dayTenPageControl)
-    }
-    @IBAction func dayTenPageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 10, segmentControl: dayTenSegmentControl, pageControl: dayTenPageControl)
-    }
-    @IBAction func dayTenNextPageTapped(_ sender: UITapGestureRecognizer) {
-        if dayTenPageControl.currentPage == 0 {
-            dayTenPageControl.currentPage = 1
-        } else if dayTenPageControl.currentPage == 1 {
-            dayTenPageControl.currentPage = 0
-        }
-        setHourlyConditionOutlets(day: 10, segmentControl: dayTenSegmentControl, pageControl: dayTenPageControl)
-    }
-    
-    @IBAction func dayElevenSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 11, segmentControl: dayElevenSegmentControl, pageControl: dayElevenPageControl)
-    }
-    @IBAction func dayElevenPageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 11, segmentControl: dayElevenSegmentControl, pageControl: dayElevenPageControl)
-    }
-    @IBAction func dayElevenNextPageTapped(_ sender: UITapGestureRecognizer) {
-        if dayElevenPageControl.currentPage == 0 {
-            dayElevenPageControl.currentPage = 1
-        } else if dayElevenPageControl.currentPage == 1 {
-            dayElevenPageControl.currentPage = 0
-        }
-        setHourlyConditionOutlets(day: 11, segmentControl: dayElevenSegmentControl, pageControl: dayElevenPageControl)
-    }
-    
-    @IBAction func dayTwelveSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 12, segmentControl: dayTwelveSegmentControl, pageControl: dayTwelvePageControl)
-    }
-    @IBAction func dayTwelvePageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 12, segmentControl: dayTwelveSegmentControl, pageControl: dayTwelvePageControl)
-    }
-    @IBAction func dayTwelveNextPageTapped(_ sender: UITapGestureRecognizer) {
-        if dayTwelvePageControl.currentPage == 0 {
-            dayTwelvePageControl.currentPage = 1
-        } else if dayTwelvePageControl.currentPage == 1 {
-            dayTwelvePageControl.currentPage = 0
-        }
-        setHourlyConditionOutlets(day: 12, segmentControl: dayTwelveSegmentControl, pageControl: dayTwelvePageControl)
-    }
-    
-    @IBAction func dayThirteenSegmentControlTapped(_ sender: UISegmentedControl) {
-        setHourlyConditionOutlets(day: 13, segmentControl: dayThirteenSegmentControl, pageControl: dayThirteenPageControl)
-    }
-    @IBAction func dayThirteenPageControlTapped(_ sender: UIPageControl) {
-        setHourlyConditionOutlets(day: 13, segmentControl: dayThirteenSegmentControl, pageControl: dayThirteenPageControl)
-    }
-    @IBAction func dayThirteenNextPageTapped(_ sender: UITapGestureRecognizer) {
-        if dayThirteenPageControl.currentPage == 0 {
-            dayThirteenPageControl.currentPage = 1
-        } else if dayThirteenPageControl.currentPage == 1 {
-            dayThirteenPageControl.currentPage = 0
-        }
-        setHourlyConditionOutlets(day: 13, segmentControl: dayThirteenSegmentControl, pageControl: dayThirteenPageControl)
-    }
-    
     // MARK: - Action to show extended daily forecasts
     func setupDayStackView(stackview: UIStackView, day: Int, segmentControl: UISegmentedControl!, pageControl: UIPageControl!) {
         if stackview.isHidden == true {
@@ -2591,18 +2007,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
     @IBAction func dayNineGestureTapped(_ sender: UITapGestureRecognizer) {
         setupDayStackView(stackview: dayNineStackView, day: 9, segmentControl: dayNineSegmentControl, pageControl: dayNinePageControl)
-    }
-    @IBAction func dayTenGestureTapped(_ sender: UITapGestureRecognizer) {
-        setupDayStackView(stackview: dayTenStackView, day: 10, segmentControl: dayTenSegmentControl, pageControl: dayTenPageControl)
-    }
-    @IBAction func dayElevenGestureTapped(_ sender: UITapGestureRecognizer) {
-        setupDayStackView(stackview: dayElevenStackView, day: 11, segmentControl: dayElevenSegmentControl, pageControl: dayElevenPageControl)
-    }
-    @IBAction func dayTwelveGestureTapped(_ sender: UITapGestureRecognizer) {
-        setupDayStackView(stackview: dayTwelveStackView, day: 12, segmentControl: dayTwelveSegmentControl, pageControl: dayTwelvePageControl)
-    }
-    @IBAction func dayThirteenGestureTapped(_ sender: UITapGestureRecognizer) {
-        setupDayStackView(stackview: dayThirteenStackView, day: 13, segmentControl: dayThirteenSegmentControl, pageControl: dayThirteenPageControl)
     }
     
     // MARK: - Set current condition labels

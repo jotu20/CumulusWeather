@@ -113,16 +113,16 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
 }
 
 extension LocationsViewController: GMSAutocompleteViewControllerDelegate {
-    
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         geocode(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
-            // Set location label
-            if placemark.country! == "United States" {
+            
+            // Set state for locations in the US
+            if String(placemark.country!) == "United States" {
                 self.saveLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
             } else {
-                self.saveLocation = "\(placemark.administrativeArea!), \(placemark.country!)"
+                self.saveLocation = "\(placemark.locality!), \(placemark.country!)"
             }
             
             let locationToSave = self.saveLocation

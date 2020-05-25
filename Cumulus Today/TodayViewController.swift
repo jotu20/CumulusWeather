@@ -224,17 +224,14 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             
             latitudeValue = (self.locationManager.location?.coordinate.latitude)!
             longitudeValue = (self.locationManager.location?.coordinate.longitude)!
-                
-            if placemark.country! == "United States" {
-                city = placemark.locality!
-                state = placemark.administrativeArea!
-                self.navigationController?.navigationBar.topItem?.title = "\(city), \(state)"
-                userCurrentLocation = "\(city), \(state)"
+            
+            // Set state for locations in the US
+            if String(placemark.country!) == "United States" {
+                self.navigationController?.navigationBar.topItem?.title = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                userCurrentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
             } else {
-                city = placemark.administrativeArea!
-                state = placemark.country!
-                self.navigationController?.navigationBar.topItem?.title = "\(city), \(state)"
-                userCurrentLocation = "\(city), \(state)"
+                self.navigationController?.navigationBar.topItem?.title = "\(placemark.locality!), \(placemark.country!)"
+                userCurrentLocation = "\(placemark.locality!), \(placemark.country!)"
             }
         }
         fetchDarkSkyWeatherData()

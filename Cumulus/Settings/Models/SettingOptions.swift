@@ -41,18 +41,14 @@ var modeBackgroundColor = UIColor(rgb: 0x000000)
 var modeTextColor = UIColor(rgb: 0x000000)
 
 // Theme Colors
-let tuscan = UIColor(rgb: 0xF2D0A4)
-let mandarin = UIColor(rgb: 0xF58549)
-let malachite = UIColor(rgb: 0x0CCA4A)
+let mandarin = UIColor(rgb: 0xFFA500)
+let malachite = UIColor(rgb: 0x32E981)
 let maximumRed = UIColor(rgb: 0xD81F15)
-let dodgerBlue = UIColor(rgb: 0x1789FC)
-let cottonCandy = UIColor(rgb: 0xFFB8D1)
-let plumpPurple = UIColor(rgb: 0x5F4BB6)
-let sandstorm = UIColor(rgb: 0xEEC643)
-let asteroid = UIColor(rgb: 0x718093)
-let carminePink = UIColor(rgb: 0xE85D75)
-let iguanaGreen = UIColor(rgb: 0x6CAE75)
-let darkCerulean = UIColor(rgb: 0x1F487E)
+let dodgerBlue = UIColor(rgb: 0x4361EE)
+let plumpPurple = UIColor(rgb: 0x9572FF)
+let sandstorm = UIColor(rgb: 0xFFDA3D)
+let asteroid = UIColor(rgb: 0xE5E5E5)
+let carminePink = UIColor(rgb: 0xE60073)
 
 var defaultHourlyCondition: String = ""
 var defaultDailyCondition: String = ""

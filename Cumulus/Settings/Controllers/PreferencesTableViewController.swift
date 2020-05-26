@@ -182,9 +182,7 @@ class PreferencesTableViewController: UITableViewController,  UITextFieldDelegat
     }
     
     func setupObjectColors() {
-        if defaults.string(forKey: "userSavedColorString") == "Tuscan" {
-            twentyfourHourClockSwitch.onTintColor = tuscan
-        } else if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
+        if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
             twentyfourHourClockSwitch.onTintColor = mandarin
         } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
             twentyfourHourClockSwitch.onTintColor = malachite
@@ -192,8 +190,6 @@ class PreferencesTableViewController: UITableViewController,  UITextFieldDelegat
             twentyfourHourClockSwitch.onTintColor = maximumRed
         } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
             twentyfourHourClockSwitch.onTintColor = dodgerBlue
-        } else if defaults.string(forKey: "userSavedColorString") == "Cotton Candy" {
-            twentyfourHourClockSwitch.onTintColor = cottonCandy
         } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
             twentyfourHourClockSwitch.onTintColor = plumpPurple
         } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {

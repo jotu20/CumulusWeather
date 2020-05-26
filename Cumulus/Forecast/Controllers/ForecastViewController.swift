@@ -938,10 +938,10 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     func setupDeniedLocation() {
         placesClient = GMSPlacesClient.shared()
         
-        if (defaults.bool(forKey: "userDeniedLocation") == true) {
-            let address = "\(defaults.string(forKey: "savedSelectedLocation") ?? "New York, NY")"
+        if (defaults.bool(forKey: "userDeniedLocation") == true) && (defaults.string(forKey: "savedSelectedLocation")?.isEmpty == false) {
+            let address = defaults.string(forKey: "savedSelectedLocation")
             let geoCoder = CLGeocoder()
-            geoCoder.geocodeAddressString(address) { (placemarks, error) in
+            geoCoder.geocodeAddressString(address!) { (placemarks, error) in
                 guard
                     let placemarks = placemarks,
                     let location = placemarks.first?.location
@@ -962,6 +962,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                 self.setupInitialData()
             }
             setWeatherDataLabels()
+        } else {
+            showLocationDisabledPopUp()
         }
     }
     

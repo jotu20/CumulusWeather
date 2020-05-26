@@ -245,6 +245,21 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Failed to find user's location: \(error.localizedDescription)")
         universalSettings()
+        geocode(latitude: universalLatitude, longitude: universalLongitude) { placemark, error in
+            guard let placemark = placemark, error == nil else { return }
+            
+            latitudeValue = universalLatitude
+            longitudeValue = universalLongitude
+            
+            // Set state for locations in the US
+            if String(placemark.country!) == "United States" {
+                self.navigationController?.navigationBar.topItem?.title = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                userCurrentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
+            } else {
+                self.navigationController?.navigationBar.topItem?.title = "\(placemark.locality!), \(placemark.country!)"
+                userCurrentLocation = "\(placemark.locality!), \(placemark.country!)"
+            }
+        }
         fetchDarkSkyWeatherData()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

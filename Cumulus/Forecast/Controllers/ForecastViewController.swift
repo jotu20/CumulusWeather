@@ -834,9 +834,12 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
-        setupInitialLoad()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+        DispatchQueue.main.async() {
+            self.setupInitialLoad()
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
             if currentSummary.isEmpty == false {
                 self.locationManager.stopUpdatingLocation()
             }
@@ -985,10 +988,10 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         loadView.alpha = 1.0
         loadView.addSubview(activityIndicator)
         self.navigationController?.view.addSubview(loadView)
-        self.setupInitialLoad()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             loadView.removeFromSuperview()
+            self.setupInitialLoad()
             self.setWeatherDataLabels()
         }
     }
@@ -998,15 +1001,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Locations")
         present(controller, animated: true, completion: nil)
-    }
-    
-    // MARK: - Action to scroll to top
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        let tabBarIndex = tabBarController.selectedIndex
-
-        if tabBarIndex == 0 {
-            scrollView.scrollToTop()
-        }
     }
     
     // MARK: - Refresh data and labels
@@ -1020,17 +1014,15 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     // MARK: - Initial load of all values for images and labels
     func setupInitialLoad() {
-        DispatchQueue.main.async {
-            self.setWeatherDataLabels()
-            self.setupObjectColors()
-            self.setupConstraints()
-        }
+        setWeatherDataLabels()
+        setupObjectColors()
+        setupConstraints()
     }
     
     // MARK: Intial load of weather data
     func setupInitialData() {
         fetchDarkSkyWeatherData()
-        self.setWeatherDataLabels()
+        setWeatherDataLabels()
     }
     
     // MARK: - Setup constraints & stack views
@@ -2247,11 +2239,4 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-}
-
-extension UIScrollView {
-    func scrollToTop() {
-        let desiredOffset = CGPoint(x: 0, y: -contentInset.top)
-        setContentOffset(desiredOffset, animated: true)
-   }
 }

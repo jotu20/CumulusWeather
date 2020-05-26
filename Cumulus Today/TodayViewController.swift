@@ -210,7 +210,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             timeStackView.isHidden = true
         } else {
             //expanded
-            self.preferredContentSize = CGSize(width: 0, height: 285)
+            self.preferredContentSize = CGSize(width: 0, height: 300)
             timeStackView.isHidden = false
         }
     }
@@ -218,7 +218,6 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     // MARK: - Get location and weather data
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         universalSettings()
-        
         geocode(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
             

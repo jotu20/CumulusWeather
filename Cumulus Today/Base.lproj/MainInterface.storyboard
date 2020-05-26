@@ -20,7 +20,7 @@
             <objects>
                 <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="Cumulus_Today" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="285"/>
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="J2W-rh-epn">
@@ -499,7 +499,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="350" height="285"/>
+                    <size key="freeformSize" width="350" height="300"/>
                     <connections>
                         <outlet property="conditionSlot1Label" destination="T6l-Ki-jk5" id="DDV-kc-OwU"/>
                         <outlet property="conditionSlot2Label" destination="pde-rA-64l" id="Dn5-ks-kLl"/>

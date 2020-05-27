@@ -811,6 +811,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     override func viewDidLoad() {
         self.tabBarController?.delegate = self
         locationManager.requestWhenInUseAuthorization()
+        setupGrantedLocation()
         
         if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Precip") == true {
             hourlySegmentControl.selectedSegmentIndex = 0
@@ -825,26 +826,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Cloud") == true {
             hourlySegmentControl.selectedSegmentIndex = 5
         }
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            if userSelectedSavedLocation == false {
-                locationManager.distanceFilter = 100
-            }
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-        }
-        
-        DispatchQueue.main.async() {
-            self.setupInitialLoad()
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-            if currentSummary.isEmpty == false {
-                self.locationManager.stopUpdatingLocation()
-            }
-        }
-        
+            
         // If user has viewed 10 times request review
         defaults.set((defaults.integer(forKey: "userViewedCounter") + 1), forKey: "userViewedCounter")
         if defaults.integer(forKey: "userViewedCounter") == 10 {
@@ -927,11 +909,52 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         }
     }
     
+    // MARK: - Respond to authorization status
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {   switch status {
+            case .notDetermined:
+            break
+        
+            case .restricted, .denied:
+                defaults.set(true, forKey: "userDeniedLocation")
+                setupDeniedLocation()
+            break
+
+            case .authorizedWhenInUse, .authorizedAlways:
+                defaults.set(false, forKey: "userDeniedLocation")
+                setupGrantedLocation()
+            break
+
+            @unknown default:
+            print("Fatal error")
+        }
+    }
+
     // MARK: - Show error when location cannot be found
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Failed to find user's location: \(error.localizedDescription)")
-        defaults.set(true, forKey: "userDeniedLocation")
         setupDeniedLocation()
+    }
+
+    // MARK: - Fetch user location if granted location access
+    func setupGrantedLocation() {
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            if userSelectedSavedLocation == false {
+                locationManager.distanceFilter = 100
+            }
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+        
+        DispatchQueue.main.async() {
+            self.setupInitialLoad()
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            if currentSummary.isEmpty == false {
+                self.locationManager.stopUpdatingLocation()
+            }
+        }
     }
     
     // MARK: - Fetch user location if denied location access
@@ -969,7 +992,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     // MARK: - Setup loading screen view
     func loadingScreen() {
-        var loadFrame : CGRect = CGRect(x: 0, y: 0, width: 815, height: 815)
         let screenSize = UIScreen.main.bounds
         let screenHeight = screenSize.height
         if screenHeight >= 812 {
@@ -978,21 +1000,19 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             loadFrame = CGRect(x: 0, y: 0, width: 815, height: 815)
         }
         
-        let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
         activityIndicator.center = self.view.center
         activityIndicator.hidesWhenStopped = true
         activityIndicator.style = .medium
         activityIndicator.startAnimating()
         
         let backgroundColor = UIColor(named: "customControlColor")
-        let loadView : UIView = UIView(frame: loadFrame)
-        loadView.backgroundColor = backgroundColor
-        loadView.alpha = 1.0
-        loadView.addSubview(activityIndicator)
-        self.navigationController?.view.addSubview(loadView)
+        loadingView.backgroundColor = backgroundColor
+        loadingView.alpha = 1.0
+        loadingView.addSubview(activityIndicator)
+        self.navigationController?.view.addSubview(loadingView)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            loadView.removeFromSuperview()
+            loadingView.removeFromSuperview()
             self.setupInitialLoad()
             self.setWeatherDataLabels()
         }

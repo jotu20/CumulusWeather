@@ -379,10 +379,6 @@
 	<string>public.app-category.weather</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>This allows Cumulus to show you the latest weather for your area.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>This allows Cumulus to show you the latest weather for your area.</string>
 	<key>NSLocationUsageDescription</key>
 	<string>This allows Cumulus to show you the latest weather for your area.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         checkSavedColor()
         
-        // Google Places initialize
+        // Initialize Google Places
         GMSPlacesClient.provideAPIKey("AIzaSyD7itQU5T62p9XCRa9qXSXvqjTCB4f9nGI")
         
         // Complete transactions
@@ -28,18 +28,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 switch purchase.transaction.transactionState {
                 case .purchased, .restored:
                     if purchase.needsFinishTransaction {
-                        // Deliver content from server, then:
+                        // Deliver content from server
                         SwiftyStoreKit.finishTransaction(purchase.transaction)
                     }
-                // Unlock content
                 case .failed, .purchasing, .deferred:
-                    break // do nothing
+                    break
                 @unknown default:
                     print("Uknown error")
                 }
             }
         }
 
+        // Setup all the default values
         if (defaults.string(forKey: "defaultHourlyCondition") == nil) || (defaults.bool(forKey: "cumulusPro") == false) {
             defaults.set("Precip (%)", forKey: "defaultHourlyCondition")
         }

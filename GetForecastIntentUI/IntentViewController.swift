@@ -158,7 +158,8 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         
         client.getForecast(location: userLocation) { result in
             switch result {
-            case .success(let currentForecast, _):
+            case .success(let tuple):
+                let (currentForecast, _) = tuple
                 universalSettings()
                 
                 if universalUnits == "USA" {

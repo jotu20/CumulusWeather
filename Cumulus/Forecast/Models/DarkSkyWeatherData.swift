@@ -71,7 +71,8 @@ public func fetchDarkSkyWeatherData() {
     // Current Forecast
     client.getForecast(location: userLocation) { result in
         switch result {
-        case .success(let currentForecast, _):
+        case .success(let tuple):
+            let (currentForecast, _) = tuple
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(currentForecast.timezone)")!
             
             if universalDataSource == "Dark Sky" {
@@ -488,7 +489,8 @@ public func fetchDarkSkyWeatherData() {
     // MARK: - Time Machine Day Zero
     client.getForecast(location: userLocation, time: dayZeroDate) { result in
         switch result {
-        case .success(let forecast, _):
+        case .success(let tuple):
+            let (forecast, _) = tuple
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let hourly = forecast.hourly {
@@ -644,7 +646,8 @@ public func fetchDarkSkyWeatherData() {
     // MARK: - Time Machine Day One
     client.getForecast(location: userLocation, time: dayOneDate) { result in
         switch result {
-        case .success(let forecast, _):
+        case .success(let tuple):
+            let (forecast, _) = tuple
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
@@ -801,7 +804,8 @@ public func fetchDarkSkyWeatherData() {
     // MARK: - Time Machine Day Two
     client.getForecast(location: userLocation, time: dayTwoDate) { result in
         switch result {
-        case .success(let forecast, _):
+        case .success(let tuple):
+            let (forecast, _) = tuple
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
@@ -958,7 +962,8 @@ public func fetchDarkSkyWeatherData() {
     // MARK: - Time Machine Day Three
     client.getForecast(location: userLocation, time: dayThreeDate) { result in
         switch result {
-        case .success(let forecast, _):
+        case .success(let tuple):
+            let (forecast, _) = tuple
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
@@ -1115,7 +1120,8 @@ public func fetchDarkSkyWeatherData() {
     // MARK: - Time Machine Day Four
     client.getForecast(location: userLocation, time: dayFourDate) { result in
         switch result {
-        case .success(let forecast, _):
+        case .success(let tuple):
+            let (forecast, _) = tuple
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
@@ -1272,7 +1278,8 @@ public func fetchDarkSkyWeatherData() {
     // MARK: - Time Machine Day Five
     client.getForecast(location: userLocation, time: dayFiveDate) { result in
         switch result {
-        case .success(let forecast, _):
+        case .success(let tuple):
+            let (forecast, _) = tuple
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
@@ -1429,7 +1436,8 @@ public func fetchDarkSkyWeatherData() {
     // MARK: - Time Machine Day Six
     client.getForecast(location: userLocation, time: daySixDate) { result in
         switch result {
-        case .success(let forecast, _):
+        case .success(let tuple):
+            let (forecast, _) = tuple
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
@@ -1586,7 +1594,8 @@ public func fetchDarkSkyWeatherData() {
     // MARK: - Time Machine Day Seven
     client.getForecast(location: userLocation, time: daySevenDate) { result in
         switch result {
-        case .success(let forecast, _):
+        case .success(let tuple):
+            let (forecast, _) = tuple
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
@@ -1743,7 +1752,8 @@ public func fetchDarkSkyWeatherData() {
     // MARK: - Time Machine Day Eight
     client.getForecast(location: userLocation, time: dayEightDate) { result in
         switch result {
-        case .success(let forecast, _):
+        case .success(let tuple):
+            let (forecast, _) = tuple
         TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
 
         if let daily = forecast.daily {
@@ -1900,7 +1910,8 @@ public func fetchDarkSkyWeatherData() {
     // MARK: - Time Machine Day Nine
     client.getForecast(location: userLocation, time: dayNineDate) { result in
     switch result {
-    case .success(let forecast, _):
+    case .success(let tuple):
+        let (forecast, _) = tuple
         TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
 
         if let daily = forecast.daily {

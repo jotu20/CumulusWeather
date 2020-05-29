@@ -26,7 +26,8 @@ class ForecastIntentHandler: NSObject, ForecastIntentHandling, CLLocationManager
         
         client.getForecast(location: userLocation) { result in
             switch result {
-            case .success(let currentForecast, _):
+            case .success(let tuple):
+                let (currentForecast, _) = tuple
                 TimeZone.ReferenceType.default = TimeZone(identifier: "\(currentForecast.timezone)")!
 
                 if let current = currentForecast.currently {

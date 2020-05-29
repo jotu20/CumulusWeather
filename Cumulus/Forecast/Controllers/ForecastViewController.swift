@@ -34,43 +34,33 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @IBOutlet weak var weatherAlertsButton: UIButton!
     
     // MARK: - Daily 12 hour outlets
-    // Day Zero
     @IBOutlet weak var dayZeroTopStackView: UIStackView!
     @IBOutlet weak var dayZeroStackView: UIStackView!
     
-    // Day One
     @IBOutlet weak var dayOneTopStackView: UIStackView!
     @IBOutlet weak var dayOneStackView: UIStackView!
     
-    // Day Two
     @IBOutlet weak var dayTwoTopStackView: UIStackView!
     @IBOutlet weak var dayTwoStackView: UIStackView!
-    
-    // Day Three
+
     @IBOutlet weak var dayThreeTopStackView: UIStackView!
     @IBOutlet weak var dayThreeStackView: UIStackView!
-    
-    // Day Four
+
     @IBOutlet weak var dayFourTopStackView: UIStackView!
     @IBOutlet weak var dayFourStackView: UIStackView!
-    
-    // Day Five
+
     @IBOutlet weak var dayFiveTopStackView: UIStackView!
     @IBOutlet weak var dayFiveStackView: UIStackView!
-    
-    // Day Six
+
     @IBOutlet weak var daySixTopStackView: UIStackView!
     @IBOutlet weak var daySixStackView: UIStackView!
     
-    // Day Seven
     @IBOutlet weak var daySevenTopStackView: UIStackView!
     @IBOutlet weak var daySevenStackView: UIStackView!
     
-    // Day Eight
     @IBOutlet weak var dayEightTopStackView: UIStackView!
     @IBOutlet weak var dayEightStackView: UIStackView!
     
-    // Day Nine
     @IBOutlet weak var dayNineTopStackView: UIStackView!
     @IBOutlet weak var dayNineStackView: UIStackView!
     
@@ -1018,6 +1008,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         }
     }
 
+    // MARK: - Show popup for disabled location
     func showLocationDisabledPopUp() {
         defaults.set(true, forKey: "userDeniedLocation")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -1034,20 +1025,20 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         }
     }
     
-    // MARK: - Initial load of all values for images and labels
+    // MARK: - Load all UI values for images and labels
     func setupInitialLoad() {
         setWeatherDataLabels()
         setupObjectColors()
         setupConstraints()
     }
     
-    // MARK: Intial load of weather data
+    // MARK: Load weather data
     func setupInitialData() {
         fetchDarkSkyWeatherData()
         setWeatherDataLabels()
     }
     
-    // MARK: - Setup constraints & stack views
+    // MARK: - Setup constraints for stack views
     func setSpacing(width: CGFloat, spacing: CGFloat) {
         daysStackViewWidth.constant = width
         weatherAlertWidth.constant = width
@@ -1187,7 +1178,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
     
     // MARK: - Set daily condition images
-    // Days 0-7
     func setDailyConditionImages() {
         dayZeroCondition.image = UIImage(named: weatherCondition(condition: weatherCondition0, type: "daily"))
         dayOneCondition.image = UIImage(named: weatherCondition(condition: weatherCondition1, type: "daily"))
@@ -1201,7 +1191,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         dayNineCondition.image = UIImage(named: weatherCondition(condition: weatherCondition9, type: "daily"))
     }
     
-    // Set hourly condition values for each page or segment control tap
+    // MARK: - Set hourly condition values for each page or segment control tap
     func setHourlyConditionOutlets(day: Int, segmentControl: UISegmentedControl, pageControl: UIPageControl!) {
         if day == 0 {
             if segmentControl.selectedSegmentIndex == 0 {
@@ -1760,7 +1750,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         hourSetup(conditionImage: dayNineHour7Condition, conditionImageType: condition7, conditionValueText: dayNineHour7ValueText, conditionValue: int7, image: dayNineHour7Image, timeText: dayNineHour7Time, timeValue: time7, height: dayNineHour7ValueHeight)
     }
 
-    // MARK: - Set day labels 0-7
+    // MARK: - Set labels for each day
     func setDayLabelText(dayLabel: UILabel!, highLowLabel: UILabel!, precipLabel: UILabel!, summaryTextView: UITextView!, stackView: UIStackView!, dayString: String, dateString: String, summary: String, sunrise: String, sunset: String, dayHigh: Int, dayLow: Int, dayPrecip: Int, precipAccum: Double, conditionValue: Any) {
         dayLabel.text = "\(dayString)\n\(dateString)"
         if stackView.isHidden == true {

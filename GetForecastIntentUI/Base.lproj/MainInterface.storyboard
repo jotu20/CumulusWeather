@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -20,11 +20,11 @@
             <objects>
                 <viewController id="ObA-dk-sSI" customClass="IntentViewController" customModule="GetForecastIntentUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="520"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="425"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bdz-gS-VF8">
-                                <rect key="frame" x="16" y="290" width="288" height="215"/>
+                                <rect key="frame" x="16" y="200" width="288" height="215"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="QMR-vv-KGw">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
@@ -45,7 +45,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="pWV-Ze-9rb"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º↑ 0º↓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bx-1V-vw4">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º/0º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bx-1V-vw4">
                                                 <rect key="frame" x="112" y="0.0" width="120" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="6vb-ch-eiS"/>
@@ -84,7 +84,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="qN1-xJ-4i2"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º↑ 0º↓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUd-Hi-ZF2">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º/0º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUd-Hi-ZF2">
                                                 <rect key="frame" x="112" y="0.0" width="120" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="7sG-bE-lCu"/>
@@ -123,7 +123,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="xvh-1N-rPb"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º↑ 0º↓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVY-yF-TV6">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º/0º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVY-yF-TV6">
                                                 <rect key="frame" x="112" y="0.0" width="120" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Hfc-Wg-Aa4"/>
@@ -162,7 +162,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="Ihy-mp-8cU"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º↑ 0º↓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7R-Wj-QTC">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º/0º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7R-Wj-QTC">
                                                 <rect key="frame" x="112" y="0.0" width="120" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="F3n-z1-dRX"/>
@@ -185,75 +185,81 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DxU-UU-hLl">
-                                <rect key="frame" x="16" y="120" width="288" height="160"/>
+                                <rect key="frame" x="7.5" y="120" width="305" height="70"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="HMh-3G-yZe">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HMh-3G-yZe">
+                                        <rect key="frame" x="0.0" y="0.0" width="305" height="20"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Temperature moderate" translatesAutoresizingMaskIntoConstraints="NO" id="eOj-Vh-TOM">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precipitation 000%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKQ-rK-qT2">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="Nod-7L-fYC"/>
-                                                    <constraint firstAttribute="height" constant="50" id="h1S-Eh-gDm"/>
+                                                    <constraint firstAttribute="height" constant="20" id="dYg-PA-SuB"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="pqK-PT-1kB"/>
                                                 </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature 0º↑ 0º↓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKQ-rK-qT2">
-                                                <rect key="frame" x="61" y="0.0" width="227" height="50"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precipitation Accum 000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qb-hA-Y8C">
+                                                <rect key="frame" x="155" y="0.0" width="150" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="dYg-PA-SuB"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="227" id="pqK-PT-1kB"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="qMJ-nL-T4A"/>
+                                                    <constraint firstAttribute="height" constant="20" id="xhA-jg-zCR"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="uCx-4d-fuj">
-                                        <rect key="frame" x="0.0" y="55" width="288" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="W0T-9i-dES">
+                                        <rect key="frame" x="0.0" y="25" width="305" height="20"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Precipitation none" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-Hv-4V6">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3Z-Sc-94a">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="3ty-JJ-e5p"/>
-                                                    <constraint firstAttribute="height" constant="50" id="A63-50-kgW"/>
+                                                    <constraint firstAttribute="height" constant="20" id="IKf-UI-wAg"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="P9C-wk-Div"/>
                                                 </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precipitation 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEc-h7-4Me">
-                                                <rect key="frame" x="61" y="0.0" width="227" height="50"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UV Index" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jO6-S2-Paj">
+                                                <rect key="frame" x="155" y="0.0" width="150" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="Hsd-Wh-FVO"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="227" id="wuz-QJ-ngY"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="H0M-OK-eFH"/>
+                                                    <constraint firstAttribute="height" constant="20" id="wfb-f3-OMu"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="z01-RD-ysG">
-                                        <rect key="frame" x="0.0" y="110" width="288" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Z3A-hB-oqR">
+                                        <rect key="frame" x="0.0" y="50" width="305" height="20"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wind SW" translatesAutoresizingMaskIntoConstraints="NO" id="EdK-Bz-IUU">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBB-oY-sr9">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="GA2-GG-pp1"/>
-                                                    <constraint firstAttribute="width" constant="50" id="r91-gP-9F6"/>
+                                                    <constraint firstAttribute="height" constant="20" id="8EK-4J-Poe"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="jTn-hN-opy"/>
                                                 </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind 0(0)mph NE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G57-2P-yOH">
-                                                <rect key="frame" x="61" y="0.0" width="227" height="50"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cloud Cover" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ce-Jw-AAR">
+                                                <rect key="frame" x="155" y="0.0" width="150" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="227" id="p2P-DN-dbL"/>
-                                                    <constraint firstAttribute="height" constant="50" id="z4A-Zr-SED"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="UEz-4m-Ecp"/>
+                                                    <constraint firstAttribute="height" constant="20" id="bgZ-AF-TbX"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jbe-iu-g2C">
-                                <rect key="frame" x="31" y="10" width="258" height="100"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jbe-iu-g2C">
+                                <rect key="frame" x="30" y="10" width="260" height="100"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="wPR-14-VJD">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -263,10 +269,10 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rfM-W9-Gtc">
-                                        <rect key="frame" x="108" y="5" width="150" height="90"/>
+                                        <rect key="frame" x="110" y="10" width="150" height="80"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D4P-8O-ObC">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="90"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFl-HW-VEO">
                                                         <rect key="frame" x="0.0" y="0.0" width="150" height="40"/>
@@ -277,22 +283,22 @@
                                                         <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="40"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feels like 0º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tor-g6-fhJ">
-                                                        <rect key="frame" x="0.0" y="40" width="150" height="25"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º/0º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tor-g6-fhJ">
+                                                        <rect key="frame" x="0.0" y="40" width="150" height="20"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="25" id="QRz-Wc-U4d"/>
+                                                            <constraint firstAttribute="height" constant="20" id="QRz-Wc-U4d"/>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="kCv-4Z-pUo"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partly cloudy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqa-t4-EG2">
-                                                        <rect key="frame" x="0.0" y="65" width="150" height="25"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqa-t4-EG2">
+                                                        <rect key="frame" x="0.0" y="60" width="150" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="ClA-ms-xPs"/>
-                                                            <constraint firstAttribute="height" constant="25" id="w5z-h6-kQG"/>
+                                                            <constraint firstAttribute="height" constant="20" id="w5z-h6-kQG"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -313,11 +319,11 @@
                         <viewLayoutGuide key="safeArea" id="4PN-XC-lEE"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="520"/>
+                    <size key="freeformSize" width="320" height="425"/>
                     <connections>
-                        <outlet property="apparentTemperatureLabel" destination="tor-g6-fhJ" id="RvK-GN-pvK"/>
+                        <outlet property="cloudCoverLabel" destination="2Ce-Jw-AAR" id="ePb-r1-Gdc"/>
                         <outlet property="currentConditionIcon" destination="wPR-14-VJD" id="Hlc-ow-9CU"/>
-                        <outlet property="currentConditionLabel" destination="Wqa-t4-EG2" id="awt-bt-chH"/>
+                        <outlet property="currentConditionLabel" destination="Wqa-t4-EG2" id="TCM-6N-JWU"/>
                         <outlet property="currentTemperatureLabel" destination="IFl-HW-VEO" id="Gte-cv-7gL"/>
                         <outlet property="dayOneConditionImage" destination="88R-t1-eCu" id="ixt-7u-1QB"/>
                         <outlet property="dayOneDateLabel" destination="Bx7-9M-Tg9" id="GLF-i9-hOr"/>
@@ -335,12 +341,12 @@
                         <outlet property="dayZeroDateLabel" destination="Ufn-O1-IGf" id="MF5-vo-jrO"/>
                         <outlet property="dayZeroHighLowTempLabel" destination="5bx-1V-vw4" id="Xb7-Yg-Afr"/>
                         <outlet property="dayZeroPrecipLabel" destination="CJ0-ue-jPL" id="2B1-fC-jUg"/>
-                        <outlet property="precipitationImage" destination="0qK-Hv-4V6" id="vbq-x2-9UQ"/>
-                        <outlet property="precipitationLabel" destination="SEc-h7-4Me" id="Plc-bV-ewy"/>
-                        <outlet property="temperatureImage" destination="eOj-Vh-TOM" id="IRc-RT-Ts7"/>
-                        <outlet property="temperatureLabel" destination="PKQ-rK-qT2" id="8Lp-cL-Xb1"/>
-                        <outlet property="windImage" destination="EdK-Bz-IUU" id="Bhu-Z6-cyh"/>
-                        <outlet property="windLabel" destination="G57-2P-yOH" id="q0F-G4-kHp"/>
+                        <outlet property="highAndLowTemperatureLabel" destination="tor-g6-fhJ" id="EcV-1c-rDV"/>
+                        <outlet property="humidityLabel" destination="d3Z-Sc-94a" id="nnR-db-QwR"/>
+                        <outlet property="precipitationAccumulationLabel" destination="3Qb-hA-Y8C" id="LPw-sd-oRa"/>
+                        <outlet property="precipitationLabel" destination="PKQ-rK-qT2" id="9aB-Yf-3pU"/>
+                        <outlet property="uvIndexLabel" destination="jO6-S2-Paj" id="g75-nm-rRR"/>
+                        <outlet property="windLabel" destination="VBB-oY-sr9" id="DXy-38-ysa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -350,8 +356,5 @@
     </scenes>
     <resources>
         <image name="Cloudy" width="100" height="100"/>
-        <image name="Precipitation none" width="100" height="100"/>
-        <image name="Temperature moderate" width="100" height="100"/>
-        <image name="Wind SW" width="100" height="100"/>
     </resources>
 </document>

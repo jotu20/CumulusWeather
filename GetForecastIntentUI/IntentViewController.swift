@@ -14,15 +14,14 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
     
     @IBOutlet weak var currentConditionIcon: UIImageView!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
-    @IBOutlet weak var apparentTemperatureLabel: UILabel!
+    @IBOutlet weak var highAndLowTemperatureLabel: UILabel!
     @IBOutlet weak var currentConditionLabel: UILabel!
-    @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var precipitationLabel: UILabel!
+    @IBOutlet weak var precipitationAccumulationLabel: UILabel!
+    @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var uvIndexLabel: UILabel!
     @IBOutlet weak var windLabel: UILabel!
-    
-    @IBOutlet weak var temperatureImage: UIImageView!
-    @IBOutlet weak var precipitationImage: UIImageView!
-    @IBOutlet weak var windImage: UIImageView!
+    @IBOutlet weak var cloudCoverLabel: UILabel!
     
     @IBOutlet weak var dayZeroConditionImage: UIImageView!
     @IBOutlet weak var dayOneConditionImage: UIImageView!
@@ -45,77 +44,24 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
     @IBOutlet weak var dayThreePrecipLabel: UILabel!
     
     func setWeatherDataLabels() {
-        // Day Zero
-        self.currentConditionIcon.image = UIImage(named: weatherCondition(condition: weatherCondition0, type: "daily"))
+        // Current condition labels
+        self.currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image"))
         self.currentTemperatureLabel.text = "\(currentTemperature)°"
-        self.apparentTemperatureLabel.text = "Feels like \(apparentTemperature)°"
-        self.currentConditionLabel.text = "\(currentCondition)"
+        self.highAndLowTemperatureLabel.text = "\(dayZeroHigh)°/\(dayZeroLow)°"
+        self.currentConditionLabel.text = "\(weatherCondition(condition: currentCondition, type: "text"))"
         
-        // Set temperature image and label
-        self.temperatureLabel.text = "Temperature \(dayZeroHigh)°/\(dayZeroLow)°"
-        if universalUnits == "USA" {
-            if currentTemperature >= 80 {
-                self.temperatureImage.image = UIImage(named: "Temperature high.pdf")
-            } else if currentTemperature < 80 && currentTemperature >= 50 {
-                self.temperatureImage.image = UIImage(named: "Temperature moderate.pdf")
-            } else if currentTemperature < 50 {
-                self.temperatureImage.image = UIImage(named: "Temperature low.pdf")
-            }
-        } else {
-            if currentTemperature >= 26 {
-                self.temperatureImage.image = UIImage(named: "Temperature high.pdf")
-            } else if currentTemperature < 26 && currentTemperature >= 10 {
-                self.temperatureImage.image = UIImage(named: "Temperature moderate.pdf")
-            } else if currentTemperature < 10 {
-                self.temperatureImage.image = UIImage(named: "Temperature low.pdf")
-            }
-        }
-        
-        // Set precipitation image and label
         self.precipitationLabel.text = "Precipitation \(precipitation)%"
-        if precipitation == 0 {
-            self.precipitationImage.image = UIImage(named: "Precipitation none.pdf")
-        } else if precipitation <= 20 {
-            self.precipitationImage.image = UIImage(named: "Precipitation low.pdf")
-        } else if precipitation > 20 && precipitation < 80 {
-            self.precipitationImage.image = UIImage(named: "Precipitation moderate.pdf")
-        } else if precipitation >= 80 {
-            self.precipitationImage.image = UIImage(named: "Precipitation heavy.pdf")
-        }
+        self.precipitationAccumulationLabel.text = "Precip Accum \(precipAccumulation) \(unitsPrecipitation)"
         
-        // Set wind image and label
+        self.humidityLabel.text = "Humidity \(humidity)%"
+        self.uvIndexLabel.text = "UV Index \(uvIndex)"
+        
         if windGust == wind {
             self.windLabel.text = "Wind \(wind) \(unitsWindSpeed) \(windDirectionString)"
         } else {
             self.windLabel.text = "Wind \(wind)(\(windGust)) \(unitsWindSpeed) \(windDirectionString)"
         }
-        
-        if windDirectionString.contains("N") {
-            self.windImage.image = UIImage(named: "Wind N.pdf")
-        }
-        if windDirectionString.contains("NE") {
-            self.windImage.image = UIImage(named: "Wind NE.pdf")
-        }
-        if windDirectionString.contains("E") {
-            self.windImage.image = UIImage(named: "Wind E.pdf")
-        }
-        if windDirectionString.contains("SE") {
-            self.windImage.image = UIImage(named: "Wind SE.pdf")
-        }
-        if windDirectionString.contains("S") {
-            self.windImage.image = UIImage(named: "Wind S.pdf")
-        }
-        if windDirectionString.contains("SW") {
-            self.windImage.image = UIImage(named: "Wind SW.pdf")
-        }
-        if windDirectionString.contains("W") {
-            self.windImage.image = UIImage(named: "Wind W.pdf")
-        }
-        if windDirectionString.contains("NW") {
-            self.windImage.image = UIImage(named: "Wind NW.pdf")
-        } else {
-            self.windImage.image = UIImage(named: "Wind SW.pdf")
-        }
+        self.cloudCoverLabel.text = "Cloud cover \(cloudCover)%"
         
         // Day Zero
         self.dayZeroConditionImage.image = UIImage(named: weatherCondition(condition: weatherCondition0, type: "daily"))
@@ -208,15 +154,20 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                 // Manage weather data
                 // Get current weather data
                 if let current = currentForecast.currently {
-                    // Hour Zero
+                    currentCondition = "\(current.icon!.rawValue)"
                     currentTemperature = Int(current.temperature!)
-                    apparentTemperature = Int(current.apparentTemperature!)
-                    currentSummary = "\(current.summary!)"
-                    precipHour0 = precipitation
+                    precipitation = dailyPrecipProb(day: current)
+                    humidity = dailyHumidityProb(day: current)
+                    cloudCover = dailyCloudCoverProb(day: current)
+                    uvIndex = Int(current.uvIndex!)
                     wind = Int(current.windSpeed!)
                     windGust = Int(current.windGust!)
                     windDirectionDegree = current.windBearing!
                     windDirectionString = windDirection(degree: windDirectionDegree)
+                    
+                    if current.precipitationAccumulation != nil {
+                        precipAccumulation = Double(current.precipitationAccumulation!)
+                    }
                 }
                 
                 // Get weather data for the day
@@ -306,6 +257,6 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
     
     var desiredSize: CGSize {
         let width = self.extensionContext?.hostedViewMaximumAllowedSize.width ?? 320
-        return CGSize(width: width, height: 520)
+        return CGSize(width: width, height: 425)
     }
 }

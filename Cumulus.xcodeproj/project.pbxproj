@@ -29,9 +29,6 @@
 		CF5EB7BA2435778F006FF5A5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5EB7B92435778F006FF5A5 /* Launch Screen.storyboard */; };
 		CF602EA9247ED3D200E05491 /* LoadingScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF602EA6247ED28E00E05491 /* LoadingScreenModel.swift */; };
 		CF60787624323C5700F5C445 /* TipJarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF60787524323C5700F5C445 /* TipJarViewController.swift */; };
-		CF62D02B2487FC7E00A70FFD /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF2C9314217CD08C00CC0F6F /* AppIntentVocabulary.plist */; };
-		CF62D02C2487FC8800A70FFD /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF2C9314217CD08C00CC0F6F /* AppIntentVocabulary.plist */; };
-		CF62D02D2487FCB400A70FFD /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF2C9314217CD08C00CC0F6F /* AppIntentVocabulary.plist */; };
 		CF6E4AA220DACFD8002349A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E4AA120DACFD8002349A7 /* AppDelegate.swift */; };
 		CF6E4AA420DACFD8002349A7 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E4AA320DACFD8002349A7 /* ForecastViewController.swift */; };
 		CF6E4AA720DACFD8002349A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA520DACFD8002349A7 /* Main.storyboard */; };
@@ -854,7 +851,6 @@
 				CFB86564246CF0BC002E8EFD /* PlumpPurple@2x.png in Resources */,
 				CFB8656D246CF0BC002E8EFD /* CarminePinkiPad@3x.png in Resources */,
 				CFB8657F246CF0BC002E8EFD /* Asteroid@3x.png in Resources */,
-				CF62D02B2487FC7E00A70FFD /* AppIntentVocabulary.plist in Resources */,
 				CFB8656B246CF0BC002E8EFD /* TwilightZone@3x.png in Resources */,
 				CFB8656C246CF0BC002E8EFD /* PrideiPad@3x.png in Resources */,
 				CFB86588246CF0BC002E8EFD /* RaindropiPad@3x.png in Resources */,
@@ -929,7 +925,6 @@
 			files = (
 				CF50B880246C6B8B00A0EA66 /* Oswald-Regular.ttf in Resources */,
 				CFEE78B22470516A001DE90B /* Assets.xcassets in Resources */,
-				CF62D02C2487FC8800A70FFD /* AppIntentVocabulary.plist in Resources */,
 				CF50B87B246C6A5200A0EA66 /* Oswald-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -939,7 +934,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF50B87C246C6A5200A0EA66 /* Oswald-Light.ttf in Resources */,
-				CF62D02D2487FCB400A70FFD /* AppIntentVocabulary.plist in Resources */,
 				CF50B881246C6B8B00A0EA66 /* Oswald-Regular.ttf in Resources */,
 				CFEE78B32470516A001DE90B /* Assets.xcassets in Resources */,
 				CF9477612168080A00DA8B38 /* MainInterface.storyboard in Resources */,
@@ -1399,7 +1393,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Base.lproj/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.7.12;
+				CURRENT_PROJECT_VERSION = 1.7.13;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1424,7 +1418,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Base.lproj/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.7.12;
+				CURRENT_PROJECT_VERSION = 1.7.13;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1447,7 +1441,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.7.12;
+				CURRENT_PROJECT_VERSION = 1.7.13;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntentUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1474,7 +1468,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.7.12;
+				CURRENT_PROJECT_VERSION = 1.7.13;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntentUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1500,7 +1494,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.7.12;
+				CURRENT_PROJECT_VERSION = 1.7.13;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1527,7 +1521,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.7.12;
+				CURRENT_PROJECT_VERSION = 1.7.13;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1553,7 +1547,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Today/Cumulus.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.7.12;
+				CURRENT_PROJECT_VERSION = 1.7.13;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus Today/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1578,7 +1572,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Today/Cumulus.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.7.12;
+				CURRENT_PROJECT_VERSION = 1.7.13;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus Today/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

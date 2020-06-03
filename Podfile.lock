@@ -6,9 +6,9 @@ PODS:
   - SwiftyStoreKit (0.15.0)
 
 DEPENDENCIES:
-  - ForecastIO (= 8.0.0)
-  - GooglePlaces (= 3.9.0)
-  - SwiftyStoreKit (= 0.15.0)
+  - ForecastIO
+  - GooglePlaces
+  - SwiftyStoreKit
 
 SPEC REPOS:
   trunk:
@@ -23,6 +23,6 @@ SPEC CHECKSUMS:
   GooglePlaces: 1634d019549b969d40fe0ccb0b9513055adebe01
   SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
 
-PODFILE CHECKSUM: 475d0bd784f738d63abe2b2b6a18ecdf59c813a8
+PODFILE CHECKSUM: 1d1e1ecaaf17373d61941ce30de1b04cc2875f70
 
 COCOAPODS: 1.9.1

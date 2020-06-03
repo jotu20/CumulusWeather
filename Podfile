@@ -4,23 +4,23 @@
 target 'Cumulus' do
   use_frameworks!
 
-	pod 'ForecastIO', '8.0.0'
- 	pod 'GooglePlaces', '3.9.0'
- 	pod 'SwiftyStoreKit', '0.15.0'
+	pod 'ForecastIO'
+ 	pod 'GooglePlaces'
+ 	pod 'SwiftyStoreKit'
 
 	target 'Cumulus Today' do 
 
-	pod 'ForecastIO', '8.0.0'
+	pod 'ForecastIO'
 	end 
 
 	target 'GetForecastIntent' do 
 
-	pod 'ForecastIO', '8.0.0'
+	pod 'ForecastIO'
  	end
 
 	target 'GetForecastIntentUI' do 
 
-	pod 'ForecastIO', '8.0.0'
+	pod 'ForecastIO'
  	end
 
 end 

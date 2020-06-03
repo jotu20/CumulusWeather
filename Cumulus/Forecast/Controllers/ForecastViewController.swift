@@ -801,7 +801,21 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     override func viewDidLoad() {
         self.tabBarController?.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        setupGrantedLocation()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            switch CLLocationManager.authorizationStatus() {
+                case .notDetermined, .restricted, .denied:
+                    print("No access")
+                setupDeniedLocation()
+                case .authorizedAlways, .authorizedWhenInUse:
+                    print("Access")
+                setupGrantedLocation()
+                @unknown default:
+                break
+            }
+            } else {
+                print("Location services are not enabled")
+        }
         
         if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Precip") == true {
             hourlySegmentControl.selectedSegmentIndex = 0
@@ -848,6 +862,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     // MARK: - Get location and weather data
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         defaults.set(false, forKey: "userDeniedLocation")
+        
         if userSelectedSavedLocation == true {
             let address = "\(selectedLocation)"
             let geoCoder = CLGeocoder()
@@ -922,7 +937,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     // MARK: - Show error when location cannot be found
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Failed to find user's location: \(error.localizedDescription)")
-        setupDeniedLocation()
     }
 
     // MARK: - Fetch user location if granted location access

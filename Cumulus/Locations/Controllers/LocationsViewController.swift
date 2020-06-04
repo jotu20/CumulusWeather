@@ -53,10 +53,6 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
         }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
-    }
-    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         let tabBarIndex = tabBarController.selectedIndex
 
@@ -88,9 +84,16 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
         self.present(controller, animated: true, completion: nil)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     // Save entered location
     func save(location: String) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
         let managedContext = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Places", in: managedContext)!
         let places = NSManagedObject(entity: entity, insertInto: managedContext)
@@ -110,13 +113,13 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
 }
 
 extension LocationsViewController: GMSAutocompleteViewControllerDelegate {
+    
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         geocode(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
-            
             // Set state for locations in the US
-            if String(placemark.country!) == "United States" {
+            if placemark.country! == "United States" {
                 self.saveLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
             } else {
                 self.saveLocation = "\(placemark.locality!), \(placemark.country!)"
@@ -131,6 +134,7 @@ extension LocationsViewController: GMSAutocompleteViewControllerDelegate {
     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        // TODO: handle the error.
         print("Error: ", error.localizedDescription)
     }
     
@@ -142,6 +146,7 @@ extension LocationsViewController: GMSAutocompleteViewControllerDelegate {
 }
 
 extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return whereabouts.count
     }
@@ -167,8 +172,11 @@ extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        let noteEntity = "Places"
+        
+        let noteEntity = "Places" //Entity Name
+        
         let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
         let places = whereabouts[indexPath.row]
         
         if editingStyle == .delete {
@@ -182,7 +190,7 @@ extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {
             
         }
         
-        // Fetch new data and reload table with that data
+        //Code to Fetch New Data From The DB and Reload Table.
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: noteEntity)
         
         do {

@@ -225,7 +225,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             longitudeValue = (self.locationManager.location?.coordinate.longitude)!
             
             // Set state for locations in the US
-            if String(placemark.country!) == "United States" {
+            if placemark.country! == "United States" {
                 self.navigationController?.navigationBar.topItem?.title = "\(placemark.locality!), \(placemark.administrativeArea!)"
                 userCurrentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
             } else {
@@ -252,7 +252,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             longitudeValue = universalLongitude
             
             // Set state for locations in the US
-            if String(placemark.country!) == "United States" {
+            if placemark.country! == "United States" {
                 self.navigationController?.navigationBar.topItem?.title = "\(placemark.locality!), \(placemark.administrativeArea!)"
                 userCurrentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
             } else {

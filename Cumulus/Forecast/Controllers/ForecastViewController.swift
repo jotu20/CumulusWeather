@@ -874,7 +874,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                 longitudeValue = (manager.location?.coordinate.longitude)!
 
                 // Set state for locations in the US
-                if String(placemark.country!) == "United States" {
+                if placemark.country! == "United States" {
                     self.navigationController?.navigationBar.topItem?.title = "\(placemark.locality!), \(placemark.administrativeArea!)"
                     userCurrentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
                 } else {

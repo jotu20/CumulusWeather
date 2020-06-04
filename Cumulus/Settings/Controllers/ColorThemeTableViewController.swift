@@ -25,7 +25,6 @@ class ColorThemeTableViewController: UITableViewController {
         weatherLoaded = true
 
         self.navigationItem.title = "Color Theme"
-        self.navigationController?.navigationBar.topItem?.title = ""
         
         if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
             self.navigationController?.navigationBar.tintColor = mandarin

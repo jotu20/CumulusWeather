@@ -43,7 +43,6 @@ class PrivacyPolicyViewController: UIViewController {
         weatherLoaded = true
         
         self.navigationItem.title = "Privacy Policy"
-        self.navigationController?.navigationBar.topItem?.title = ""
         
         if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
             self.navigationController?.navigationBar.tintColor = mandarin

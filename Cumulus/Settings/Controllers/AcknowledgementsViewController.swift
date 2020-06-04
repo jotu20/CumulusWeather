@@ -41,7 +41,6 @@ class AcknowledgementsViewController: UIViewController, UITextViewDelegate {
         weatherLoaded = true
         
         self.navigationItem.title = "Acknowledgements"
-        self.navigationController?.navigationBar.topItem?.title = ""
         
         if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
             self.navigationController?.navigationBar.tintColor = mandarin

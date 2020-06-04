@@ -800,23 +800,9 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     override func viewDidLoad() {
         self.tabBarController?.delegate = self
+        locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            switch CLLocationManager.authorizationStatus() {
-                case .notDetermined, .restricted, .denied:
-                    print("No access")
-                setupDeniedLocation()
-                case .authorizedAlways, .authorizedWhenInUse:
-                    print("Access")
-                setupGrantedLocation()
-                @unknown default:
-                break
-            }
-            } else {
-                print("Location services are not enabled")
-        }
-        
+
         if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Precip") == true {
             hourlySegmentControl.selectedSegmentIndex = 0
         } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Temp") == true {
@@ -830,7 +816,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Cloud") == true {
             hourlySegmentControl.selectedSegmentIndex = 5
         }
-            
+
         // If user has viewed 10 times request review
         defaults.set((defaults.integer(forKey: "userViewedCounter") + 1), forKey: "userViewedCounter")
         if defaults.integer(forKey: "userViewedCounter") == 10 {
@@ -843,14 +829,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         if weatherLoaded == false || distanceChange == true || dataSourceChanged == true || userChangedColorTheme == true {
             loadingScreen()
         }
-        
+
         // Check for units or clock change
         if unitsChanged == true || clockChanged == true {
             loadingScreen()
             unitsChanged = false
             clockChanged = false
         }
-        
+
         // Setup for pull to refresh
         scrollView.alwaysBounceVertical = true
         scrollView.bounces  = true
@@ -861,8 +847,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     // MARK: - Get location and weather data
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        defaults.set(false, forKey: "userDeniedLocation")
-        
         if userSelectedSavedLocation == true {
             let address = "\(selectedLocation)"
             let geoCoder = CLGeocoder()
@@ -885,22 +869,10 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else {
             geocode(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!) { placemark, error in
                 guard let placemark = placemark, error == nil else { return }
-                
+
                 latitudeValue = (manager.location?.coordinate.latitude)!
                 longitudeValue = (manager.location?.coordinate.longitude)!
-                
-                if defaults.bool(forKey: "weatherUnitsUSA") == false && defaults.bool(forKey: "weatherUnitsUK") == false && defaults.bool(forKey: "weatherUnitsCanada") == false && defaults.bool(forKey: "weatherUnitsInternational") == false {
-                    if placemark.country! == "United States" {
-                        defaults.set(true, forKey: "weatherUnitsUSA")
-                    } else if placemark.country! == "Canada" {
-                        defaults.set(true, forKey: "weatherUnitsCanada")
-                    } else if placemark.country! == "United Kingdom" {
-                        defaults.set(true, forKey: "weatherUnitsUK")
-                    } else {
-                        defaults.set(true, forKey: "weatherUnitsInternational")
-                    }
-                }
-                
+
                 // Set state for locations in the US
                 if String(placemark.country!) == "United States" {
                     self.navigationController?.navigationBar.topItem?.title = "\(placemark.locality!), \(placemark.administrativeArea!)"
@@ -915,45 +887,44 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
     
     // MARK: - Respond to authorization status
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {   switch status {
-            case .notDetermined:
-            break
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .notDetermined {
+            print("Authorization: No Access")
+        }
         
-            case .restricted, .denied:
-                defaults.set(true, forKey: "userDeniedLocation")
-                setupDeniedLocation()
-            break
-
-            case .authorizedWhenInUse, .authorizedAlways:
-                defaults.set(false, forKey: "userDeniedLocation")
-                setupGrantedLocation()
-            break
-
-            @unknown default:
-            print("Fatal error")
+        if status == .restricted || status == .denied {
+            print("Authorization: Restricted Access")
+            setupDeniedLocation()
+        }
+        
+        if status == .authorizedWhenInUse {
+            print("Authorization: Access")
+            setupGrantedLocation()
         }
     }
-
+    
     // MARK: - Show error when location cannot be found
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Failed to find user's location: \(error.localizedDescription)")
+        setupDeniedLocation()
     }
 
     // MARK: - Fetch user location if granted location access
     func setupGrantedLocation() {
+        defaults.set(false, forKey: "userDeniedLocation")
+        
         if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
             if userSelectedSavedLocation == false {
                 locationManager.distanceFilter = 100
             }
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
-        
+
         DispatchQueue.main.async() {
             self.setupInitialLoad()
         }
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
             if currentSummary.isEmpty == false {
                 self.locationManager.stopUpdatingLocation()
@@ -964,11 +935,12 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     // MARK: - Fetch user location if denied location access
     func setupDeniedLocation() {
         placesClient = GMSPlacesClient.shared()
+        defaults.set(true, forKey: "userDeniedLocation")
         
-        if (defaults.bool(forKey: "userDeniedLocation") == true) && (defaults.string(forKey: "savedSelectedLocation")?.isEmpty == false) {
-            let address = defaults.string(forKey: "savedSelectedLocation")
+        if userSelectedSavedLocation == true && (defaults.bool(forKey: "userDeniedLocation") == true) {
+            let address = "\(defaults.string(forKey: "savedSelectedLocation") ?? "New York, NY")"
             let geoCoder = CLGeocoder()
-            geoCoder.geocodeAddressString(address!) { (placemarks, error) in
+            geoCoder.geocodeAddressString(address) { (placemarks, error) in
                 guard
                     let placemarks = placemarks,
                     let location = placemarks.first?.location
@@ -984,7 +956,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                 defaults.set(selectedLongitudeValue, forKey: "savedSelectedLongitudeValue")
                 UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(selectedLatitudeValue, forKey: "setWidgetLatitude")
                 UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(selectedLongitudeValue, forKey: "setWidgetLongitude")
-                
                 self.navigationController?.navigationBar.topItem?.title = "\(defaults.string(forKey: "savedSelectedLocation") ?? "New York, NY")"
                 self.setupInitialData()
             }
@@ -1003,28 +974,46 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else {
             loadFrame = CGRect(x: 0, y: 0, width: 815, height: 815)
         }
-        
+
         activityIndicator.center = self.view.center
         activityIndicator.hidesWhenStopped = true
         activityIndicator.style = .medium
         activityIndicator.startAnimating()
-        
+
         let backgroundColor = UIColor(named: "customControlColor")
         loadingView.backgroundColor = backgroundColor
         loadingView.alpha = 1.0
         loadingView.addSubview(activityIndicator)
         self.navigationController?.view.addSubview(loadingView)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            loadingView.removeFromSuperview()
-            self.setupInitialLoad()
-            self.setWeatherDataLabels()
+        if CLLocationManager.locationServicesEnabled() {
+            switch CLLocationManager.authorizationStatus() {
+                case .notDetermined:
+                    print("No access")
+                case .restricted, .denied:
+                    print("Restricted access")
+                    setupDeniedLocation()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        loadingView.removeFromSuperview()
+                        self.setupInitialLoad()
+                        self.setWeatherDataLabels()
+                    }
+                case .authorizedAlways, .authorizedWhenInUse:
+                    print("Access")
+                    setupGrantedLocation()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        loadingView.removeFromSuperview()
+                        self.setupInitialLoad()
+                        self.setWeatherDataLabels()
+                    }
+                @unknown default:
+                break
+            }
         }
     }
 
     // MARK: - Show popup for disabled location
     func showLocationDisabledPopUp() {
-        defaults.set(true, forKey: "userDeniedLocation")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Locations")
         present(controller, animated: true, completion: nil)
@@ -1634,13 +1623,22 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         conditionValueText.text = "\(conditionValue)"
         timeText.text = "\(timeValue)"
         
-        if conditionValue <= 50 {
+        if conditionValue == 0 {
+            image.isHidden = true
+        } else if conditionValue > 0 && conditionValue <= 25 {
+            image.isHidden = false
+            image.image = UIImage(named: "Rectangle 25 \(buttonColor).pdf")
+        } else if conditionValue > 25 && conditionValue <= 50 {
+            image.isHidden = false
             image.image = UIImage(named: "Rectangle 50 \(buttonColor).pdf")
-            height.constant = CGFloat(hourlyValue(value: conditionValue) + 50)
+        } else if conditionValue > 50 && conditionValue <= 75 {
+            image.isHidden = false
+            image.image = UIImage(named: "Rectangle 75 \(buttonColor).pdf")
         } else {
+            image.isHidden = false
             image.image = UIImage(named: "Rectangle 100 \(buttonColor).pdf")
-            height.constant = CGFloat(hourlyValue(value: conditionValue))
         }
+        height.constant = CGFloat(hourlyValue(value: conditionValue))
     }
     
     func completeHourlyUISetup(condition0: String, condition1: String, condition2: String, condition3: String, condition4: String, condition5: String, condition6: String, condition7: String, int1: Int, int2: Int, int3: Int, int4: Int, int5: Int, int6: Int, int7: Int, int8: Int, time0: String, time1: String, time2: String, time3: String, time4: String, time5: String, time6: String, time7: String) {

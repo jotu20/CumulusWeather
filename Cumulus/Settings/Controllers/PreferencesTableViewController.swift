@@ -53,7 +53,6 @@ class PreferencesTableViewController: UITableViewController,  UITextFieldDelegat
         self.hideKeyboard()
 
         self.navigationItem.title = "Preferences"
-        self.navigationController?.navigationBar.topItem?.title = ""
         
         if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
             self.navigationController?.navigationBar.tintColor = mandarin

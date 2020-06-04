@@ -21,7 +21,6 @@ class SiriShortcutsTableViewController: UITableViewController {
         weatherLoaded = true
         
         self.navigationItem.title = "Siri Shortcuts"
-        self.navigationController?.navigationBar.topItem?.title = ""
         
         if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
             self.navigationController?.navigationBar.tintColor = mandarin

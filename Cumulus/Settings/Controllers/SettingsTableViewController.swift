@@ -73,10 +73,6 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         if tabBarIndex == 0 && userChangedColorTheme == true {
             setButtonColor()
         }
-        
-        if tabBarIndex == 3 {
-            self.tableView.setContentOffset(CGPoint.zero, animated: true)
-        }
     }
     
     @IBAction func weatherUnitsUSATapped(_ sender: UITapGestureRecognizer) {

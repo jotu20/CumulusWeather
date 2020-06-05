@@ -53,12 +53,8 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
         }
     }
     
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        let tabBarIndex = tabBarController.selectedIndex
-
-        if tabBarIndex == 2 {
-            self.tableView.setContentOffset(CGPoint.zero, animated: true)
-        }
+    override func viewDidDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func findLocationTapped(_ sender: UIBarButtonItem) {
@@ -84,20 +80,14 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
         self.present(controller, animated: true, completion: nil)
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
-    }
-    
     // Save entered location
     func save(location: String) {
-        
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Places", in: managedContext)!
         let places = NSManagedObject(entity: entity, insertInto: managedContext)
         places.setValue(location, forKeyPath: "location")
+       
         do {
             try managedContext.save()
             whereabouts.append(places)
@@ -113,7 +103,6 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
 }
 
 extension LocationsViewController: GMSAutocompleteViewControllerDelegate {
-    
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         geocode(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude) { placemark, error in
@@ -146,7 +135,6 @@ extension LocationsViewController: GMSAutocompleteViewControllerDelegate {
 }
 
 extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return whereabouts.count
     }
@@ -172,27 +160,21 @@ extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        let noteEntity = "Places" //Entity Name
-        
+        let noteEntity = "Places"
         let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
         let places = whereabouts[indexPath.row]
         
         if editingStyle == .delete {
             managedContext.delete(places)
-            
             do {
                 try managedContext.save()
             } catch let error as NSError {
                 print("Error While Deleting Note: \(error.userInfo)")
             }
-            
         }
         
         //Code to Fetch New Data From The DB and Reload Table.
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: noteEntity)
-        
         do {
             whereabouts = try managedContext.fetch(fetchRequest) as! [Places]
         } catch let error as NSError {

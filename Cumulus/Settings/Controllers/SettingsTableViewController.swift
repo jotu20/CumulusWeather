@@ -25,14 +25,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.delegate = self
-        self.tabBarController!.tabBar.layer.borderWidth = 0.50
-        self.tabBarController!.tabBar.layer.borderColor = UIColor.clear.cgColor
-        self.tabBarController?.tabBar.clipsToBounds = true
-        
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.isNavigationBarHidden = false
-        
         weatherLoaded = true
         distanceChange = false
         potentialCustomer = false

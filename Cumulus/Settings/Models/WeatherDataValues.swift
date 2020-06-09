@@ -19,16 +19,10 @@ var defaultString = "Oops! No summary found."
 // MARK: - Location values
 var selectedLocation: String = ""
 var userDeniedLocation: Bool = false
-
 var latitudeValue: Double = 0
 var longitudeValue: Double = 0
-var selectedLatitudeValue: Double = 0
-var selectedLongitudeValue: Double = 0
-var savedSelectedLatitudeValue: Double = 0
-var savedSelectedLongitudeValue: Double = 0
-
 var userSelectedSavedLocation: Bool = false
-var userCurrentLocation: String = ""
+var currentLocation: String = ""
 
 // MARK: - Alert value
 var alertCount: Int = 0
@@ -54,7 +48,6 @@ var currentTemperature: Int = 0
 var currentCondition: String = ""
 var apparentTemperature: Int = 0
 var currentSummary: String = ""
-var fullSummary: String = ""
 var hourSummary: String = ""
 var nextHourCondition: String = ""
 var minuteSummary: String = ""
@@ -77,10 +70,6 @@ var weatherCondition6: String = ""
 var weatherCondition7: String = ""
 var weatherCondition8: String = ""
 var weatherCondition9: String = ""
-var weatherCondition10: String = ""
-var weatherCondition11: String = ""
-var weatherCondition12: String = ""
-var weatherCondition13: String = ""
 
 // MARK: - Minutely precip probability values
 // 1-20

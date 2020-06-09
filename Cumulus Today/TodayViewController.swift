@@ -118,7 +118,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     func setWidgetLabels() {
         universalSettings()
         currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image"))
-        currentLocationLabel.text = "\(userCurrentLocation)"
+        currentLocationLabel.text = "\(currentLocation)"
         currentTemperatureLabel.text = "\(currentTemperature)°"
         highAndLowTemperatureLabel.text = "\(highTemperature)°/\(lowTemperature)°"
         setWidgetSlot(setting: universalDefaultWidgetSlot1, label: conditionSlot1Label)
@@ -227,10 +227,10 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             // Set state for locations in the US
             if placemark.country! == "United States" {
                 self.navigationController?.navigationBar.topItem?.title = "\(placemark.locality!), \(placemark.administrativeArea!)"
-                userCurrentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
             } else {
                 self.navigationController?.navigationBar.topItem?.title = "\(placemark.locality!), \(placemark.country!)"
-                userCurrentLocation = "\(placemark.locality!), \(placemark.country!)"
+                currentLocation = "\(placemark.locality!), \(placemark.country!)"
             }
         }
         fetchDarkSkyWeatherData()
@@ -254,10 +254,10 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             // Set state for locations in the US
             if placemark.country! == "United States" {
                 self.navigationController?.navigationBar.topItem?.title = "\(placemark.locality!), \(placemark.administrativeArea!)"
-                userCurrentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
             } else {
                 self.navigationController?.navigationBar.topItem?.title = "\(placemark.locality!), \(placemark.country!)"
-                userCurrentLocation = "\(placemark.locality!), \(placemark.country!)"
+                currentLocation = "\(placemark.locality!), \(placemark.country!)"
             }
         }
         fetchDarkSkyWeatherData()

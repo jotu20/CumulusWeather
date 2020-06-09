@@ -9,11 +9,14 @@
 import Foundation
 import UIKit
 import CoreLocation
+import GooglePlaces
 
 let defaults = UserDefaults.standard
 
 var cumulusPro: Bool = false
 var potentialCustomer: Bool = false
+
+var placesClient: GMSPlacesClient!
 
 // Shared Secret for IAPs, API, and Ad keys
 var sharedSecret: String = "28d11783d1a94fb1895f62c10c4db49b"

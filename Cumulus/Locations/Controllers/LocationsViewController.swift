@@ -18,10 +18,14 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
     var whereabouts: [NSManagedObject] = []
     var saveLocation = ""
     
-    var placesClient: GMSPlacesClient!
-    
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.delegate = self
+        self.tabBarController!.tabBar.layer.borderWidth = 0.50
+        self.tabBarController!.tabBar.layer.borderColor = UIColor.clear.cgColor
+        self.tabBarController?.tabBar.clipsToBounds = true
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.isNavigationBarHidden = false
         weatherLoaded = true
 
@@ -72,7 +76,7 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
     @IBAction func findCurrentLocation(_ sender: UIBarButtonItem) {
         weatherLoaded = false
         userSelectedSavedLocation = false
-        selectedLocation = userCurrentLocation
+        selectedLocation = currentLocation
         alertTitle.removeAll()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -151,7 +155,7 @@ extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {
         weatherLoaded = false
         let places = whereabouts[indexPath.row]
         selectedLocation = places.value(forKeyPath: "location") as! String
-        defaults.set("\(selectedLocation)", forKey: "savedSelectedLocation")
+        defaults.set(places.value(forKeyPath: "location") as! String, forKey: "selectedLocation")
         alertTitle.removeAll()
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

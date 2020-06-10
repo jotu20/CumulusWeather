@@ -23,6 +23,9 @@ var latitudeValue: Double = 0
 var longitudeValue: Double = 0
 var userSelectedSavedLocation: Bool = false
 var currentLocation: String = ""
+var city: String = ""
+var state: String = ""
+var country: String = ""
 
 // MARK: - Alert value
 var alertCount: Int = 0

@@ -873,11 +873,15 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
 
                 // Set state for locations in the US
                 if placemark.country! == "United States" {
-                    self.navigationController?.navigationBar.topItem?.title = "\(placemark.locality!), \(placemark.administrativeArea!)"
-                    currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                    city = placemark.locality!
+                    state = placemark.administrativeArea!
+                    self.navigationController?.navigationBar.topItem?.title = "\(city), \(state)"
+                    currentLocation = "\(city), \(state)"
                 } else {
-                    self.navigationController?.navigationBar.topItem?.title = "\(placemark.locality!), \(placemark.country!)"
-                    currentLocation = "\(placemark.locality!), \(placemark.country!)"
+                    city = placemark.locality!
+                    state = placemark.country!
+                    self.navigationController?.navigationBar.topItem?.title = "\(city), \(state)"
+                    currentLocation = "\(city), \(state)"
                 }
                 self.setupInitialData()
             }

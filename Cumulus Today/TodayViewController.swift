@@ -226,15 +226,11 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             
             // Set state for locations in the US
             if placemark.country! == "United States" {
-                city = placemark.locality!
-                state = placemark.administrativeArea!
-                self.navigationController?.navigationBar.topItem?.title = "\(city), \(state)"
-                currentLocation = "\(city), \(state)"
+                currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                self.navigationController?.navigationBar.topItem?.title = "\(currentLocation)"
             } else {
-                city = placemark.locality!
-                state = placemark.country!
-                self.navigationController?.navigationBar.topItem?.title = "\(city), \(state)"
-                currentLocation = "\(city), \(state)"
+                currentLocation = "\(placemark.locality!), \(placemark.country!)"
+                self.navigationController?.navigationBar.topItem?.title = "\(currentLocation)"
             }
         }
         fetchDarkSkyWeatherData()
@@ -257,15 +253,11 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             
             // Set state for locations in the US
             if placemark.country! == "United States" {
-                city = placemark.locality!
-                state = placemark.administrativeArea!
-                self.navigationController?.navigationBar.topItem?.title = "\(city), \(state)"
-                currentLocation = "\(city), \(state)"
+                currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                self.navigationController?.navigationBar.topItem?.title = "\(currentLocation)"
             } else {
-                city = placemark.locality!
-                state = placemark.country!
-                self.navigationController?.navigationBar.topItem?.title = "\(city), \(state)"
-                currentLocation = "\(city), \(state)"
+                currentLocation = "\(placemark.locality!), \(placemark.country!)"
+                self.navigationController?.navigationBar.topItem?.title = "\(currentLocation)"
             }
         }
         fetchDarkSkyWeatherData()

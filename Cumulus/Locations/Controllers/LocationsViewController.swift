@@ -40,7 +40,7 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
         
-        let searchBarButton = UIBarButtonItem(image: UIImage(named: "Search button.pdf"), style: .plain, target: self, action: #selector(LocationsViewController.findLocationTapped))
+        let searchBarButton = UIBarButtonItem(image: UIImage(named: "Search button.pdf"), style: .plain, target: self, action: #selector(autocompleteClicked))
         setupBarButtonColor(button: searchBarButton)
         navigationItem.rightBarButtonItem = searchBarButton
         
@@ -55,15 +55,22 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
         self.navigationController?.isNavigationBarHidden = true
     }
     
-    @IBAction func findLocationTapped(_ sender: UIBarButtonItem) {
+    // Present the Autocomplete view controller when the button is pressed.
+    @objc func autocompleteClicked(_ sender: UIButton) {
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = self
         
         autocompleteController.tableCellBackgroundColor = UIColor(named: "customControlColor")!
         autocompleteController.primaryTextColor = UIColor.label
-        autocompleteController.secondaryTextColor = UIColor.label
-        autocompleteController.primaryTextHighlightColor = UIColor.label
+        autocompleteController.secondaryTextColor = UIColor.secondaryLabel
+        autocompleteController.primaryTextHighlightColor = UIColor.tertiaryLabel
 
+        // Specify a filter.
+        let filter = GMSAutocompleteFilter()
+        filter.type = .city
+        autocompleteController.autocompleteFilter = filter
+
+        // Display the autocomplete view controller.
         present(autocompleteController, animated: true, completion: nil)
     }
     
@@ -101,35 +108,34 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
 }
 
 extension LocationsViewController: GMSAutocompleteViewControllerDelegate {
-    // Handle the user's selection.
-    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        geocode(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude) { placemark, error in
-            guard let placemark = placemark, error == nil else { return }
-            // Set state for locations in the US
-            if placemark.country! == "United States" {
-                self.saveLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
-            } else {
-                self.saveLocation = "\(placemark.locality!), \(placemark.country!)"
-            }
-            
-            let locationToSave = self.saveLocation
-            self.save(location: locationToSave)
-            self.tableView.reloadData()
-            self.navigationController?.isNavigationBarHidden = false
-            self.dismiss(animated: true, completion: nil)
+  // Handle the user's selection.
+  func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+    geocode(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude) { placemark, error in
+        guard let placemark = placemark, error == nil else { return }
+
+        // Set state for locations in the US
+        if placemark.country! == "United States" {
+            self.saveLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
+        } else {
+            self.saveLocation = "\(placemark.locality!), \(placemark.country!)"
         }
-    }
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        // TODO: handle the error.
-        print("Error: ", error.localizedDescription)
-    }
-    
-    // User canceled the operation.
-    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        let locationToSave = self.saveLocation
+        self.save(location: locationToSave)
+        self.tableView.reloadData()
         self.navigationController?.isNavigationBarHidden = false
-        dismiss(animated: true, completion: nil)
     }
+    dismiss(animated: true, completion: nil)
+  }
+
+  func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+    // TODO: handle the error.
+    print("Error: ", error.localizedDescription)
+  }
+
+  // User canceled the operation.
+  func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+    dismiss(animated: true, completion: nil)
+  }
 }
 
 extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {

@@ -40,12 +40,12 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
         
-        let searchBarButton = UIBarButtonItem(image: UIImage(named: "Search button.pdf"), style: .plain, target: self, action: #selector(autocompleteClicked))
+        let searchBarButton = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(autocompleteClicked))
         setupBarButtonColor(button: searchBarButton)
         navigationItem.rightBarButtonItem = searchBarButton
         
         if (defaults.bool(forKey: "userDeniedLocation") == false) {
-            let findLocationBarButton = UIBarButtonItem(image: UIImage(named: "Current location button.pdf"), style: .plain, target: self, action: #selector(LocationsViewController.findCurrentLocation))
+            let findLocationBarButton = UIBarButtonItem(image: UIImage(systemName: "location.fill"), style: .plain, target: self, action: #selector(LocationsViewController.findCurrentLocation))
             setupBarButtonColor(button: findLocationBarButton)
             navigationItem.leftBarButtonItem = findLocationBarButton
         }

@@ -797,7 +797,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @IBOutlet weak var currentConditionTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var currentConditionStackViewWidth: NSLayoutConstraint!
     
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.delegate = self
         locationManager.requestWhenInUseAuthorization()
         setupGrantedLocationServices()
@@ -821,9 +821,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         if defaults.integer(forKey: "userViewedCounter") == 10 {
             SKStoreReviewController.requestReview()
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        
         // Check for loaded weather, distance change, or color theme change
         if weatherLoaded == false || distanceChange == true || dataSourceChanged == true || userChangedColorTheme == true {
             loadingScreen()

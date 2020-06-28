@@ -185,13 +185,6 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     override func viewDidLoad() {
         super.viewDidLoad()
         self.extensionContext?.widgetLargestAvailableDisplayMode = NCWidgetDisplayMode.expanded
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.distanceFilter = 100
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -200,6 +193,13 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.distanceFilter = 100
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+        
         setWidgetLabels()
         completionHandler(updateResult)
     }
@@ -233,12 +233,10 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
                 self.navigationController?.navigationBar.topItem?.title = "\(currentLocation)"
             }
         }
-        fetchDarkSkyWeatherData()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.setWidgetLabels()
-            self.updateResult = .newData
-        }
+        fetchDarkSkyWeatherData()
+        setWidgetLabels()
+        self.updateResult = .newData
     }
     
     // MARK: - Show error when location cannot be found
@@ -260,11 +258,9 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
                 self.navigationController?.navigationBar.topItem?.title = "\(currentLocation)"
             }
         }
-        fetchDarkSkyWeatherData()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.setWidgetLabels()
-            self.updateResult = .newData
-        }
+        fetchDarkSkyWeatherData()
+        setWidgetLabels()
+        self.updateResult = .newData
     }
 }

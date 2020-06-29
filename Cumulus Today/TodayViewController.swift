@@ -235,8 +235,10 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         }
         
         fetchDarkSkyWeatherData()
-        setWidgetLabels()
-        self.updateResult = .newData
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.updateResult = .newData
+        }
     }
     
     // MARK: - Show error when location cannot be found
@@ -260,7 +262,9 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         }
         
         fetchDarkSkyWeatherData()
-        setWidgetLabels()
-        self.updateResult = .newData
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.updateResult = .newData
+        }
     }
 }

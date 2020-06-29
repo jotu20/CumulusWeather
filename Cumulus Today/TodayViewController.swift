@@ -220,10 +220,10 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         universalSettings()
         geocode(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
-            
-            latitudeValue = (self.locationManager.location?.coordinate.latitude)!
-            longitudeValue = (self.locationManager.location?.coordinate.longitude)!
-            
+
+            latitudeValue = (manager.location?.coordinate.latitude)!
+            longitudeValue = (manager.location?.coordinate.longitude)!
+
             // Set state for locations in the US
             if placemark.country! == "United States" {
                 currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
@@ -232,12 +232,12 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
                 currentLocation = "\(placemark.locality!), \(placemark.country!)"
                 self.navigationController?.navigationBar.topItem?.title = "\(currentLocation)"
             }
-        }
-        
-        fetchDarkSkyWeatherData()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.updateResult = .newData
+            fetchDarkSkyWeatherData()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.setWidgetLabels()
+                self.updateResult = .newData
+            }
         }
     }
     
@@ -259,12 +259,12 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
                 currentLocation = "\(placemark.locality!), \(placemark.country!)"
                 self.navigationController?.navigationBar.topItem?.title = "\(currentLocation)"
             }
-        }
-        
-        fetchDarkSkyWeatherData()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.updateResult = .newData
+            fetchDarkSkyWeatherData()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.setWidgetLabels()
+                self.updateResult = .newData
+            }
         }
     }
 }

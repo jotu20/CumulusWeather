@@ -22,9 +22,8 @@ class ColorThemeTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
-        weatherLoaded = true
-
         self.navigationItem.title = "Color Theme"
+        weatherLoaded = true
         
         if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
             self.navigationController?.navigationBar.tintColor = mandarin
@@ -46,10 +45,10 @@ class ColorThemeTableViewController: UITableViewController {
             self.navigationController?.navigationBar.tintColor = dodgerBlue
         }
         
-        tableView.tableFooterView = UIView(frame: .zero)
-        setColorTheme()
+        self.tableView.tableFooterView = UIView(frame: .zero)
+        self.setColorTheme()
         
-        if (defaults.bool(forKey: "cumulusPro") == false) {
+        if (defaults.bool(forKey: "cumulusPlus") == false) {
             potentialCustomer = true
         }
     }
@@ -77,91 +76,91 @@ class ColorThemeTableViewController: UITableViewController {
     }
     
     @IBAction func mandarinTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             setSelectedCheckMark(layerString: "Mandarin", setColor: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func malachiteTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             setSelectedCheckMark(layerString: "Malachite", setColor: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func maximumRedTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             setSelectedCheckMark(layerString: "Maximum Red", setColor: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func plumpPurpleTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             setSelectedCheckMark(layerString: "Plump Purple", setColor: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func sandstormTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             setSelectedCheckMark(layerString: "Sandstorm", setColor: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func asteroidTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             setSelectedCheckMark(layerString: "Asteroid", setColor: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func carminePinkTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             setSelectedCheckMark(layerString: "Carmine Pink", setColor: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func dodgerBlueTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             setSelectedCheckMark(layerString: "Dodger Blue", setColor: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func randomTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             setSelectedCheckMark(layerString: "Random", setColor: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }

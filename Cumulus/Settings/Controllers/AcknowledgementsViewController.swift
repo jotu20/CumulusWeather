@@ -38,9 +38,8 @@ class AcknowledgementsViewController: UIViewController, UITextViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
-        weatherLoaded = true
-        
         self.navigationItem.title = "Acknowledgements"
+        weatherLoaded = true
         
         if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
             self.navigationController?.navigationBar.tintColor = mandarin
@@ -62,9 +61,9 @@ class AcknowledgementsViewController: UIViewController, UITextViewDelegate {
             self.navigationController?.navigationBar.tintColor = dodgerBlue
         }
         
-        acknowledgement0TextView.text = "Copyright (c) 2016 Satyam Ghodasara <sghodas@gmail.com>. \n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: \n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. \n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+        self.acknowledgement0TextView.text = "Copyright (c) 2016 Satyam Ghodasara <sghodas@gmail.com>. \n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: \n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. \n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
         
-        acknowledgement1TextView.text = "Copyright (c) 2015-2016 Andrea Bizzotto bizz84@gmail.com. \n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: \n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software, \n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+        self.acknowledgement1TextView.text = "Copyright (c) 2015-2016 Andrea Bizzotto bizz84@gmail.com. \n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: \n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software, \n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
         
         var setWidth: CGFloat = 0
         let screenSize = UIScreen.main.bounds
@@ -72,12 +71,12 @@ class AcknowledgementsViewController: UIViewController, UITextViewDelegate {
         if screenHeight == 568 {
             // iPhone SE
             setWidth = 300
-            statement0Height.constant = 50
-            statement1Height.constant = 50
-            acknowledgement0LabelHeight.constant = 20
-            acknowledgement0TextViewHeight.constant = 645
-            acknowledgement1LabelHeight.constant = 20
-            acknowledgement1TextViewHeight.constant = 645
+            self.statement0Height.constant = 50
+            self.statement1Height.constant = 50
+            self.acknowledgement0LabelHeight.constant = 20
+            self.acknowledgement0TextViewHeight.constant = 645
+            self.acknowledgement1LabelHeight.constant = 20
+            self.acknowledgement1TextViewHeight.constant = 645
             
         } else if screenHeight == 667 {
             // iPhone 8
@@ -105,18 +104,18 @@ class AcknowledgementsViewController: UIViewController, UITextViewDelegate {
             setWidth = 1008
         }
         
-        statement0Width.constant = setWidth
-        statement1Width.constant = setWidth
-        acknowledgement0LabelWidth.constant = setWidth
-        acknowledgement0TextViewWidth.constant = setWidth
-        acknowledgement1LabelWidth.constant = setWidth
-        acknowledgement1TextViewWidth.constant = setWidth
+        self.statement0Width.constant = setWidth
+        self.statement1Width.constant = setWidth
+        self.acknowledgement0LabelWidth.constant = setWidth
+        self.acknowledgement0TextViewWidth.constant = setWidth
+        self.acknowledgement1LabelWidth.constant = setWidth
+        self.acknowledgement1TextViewWidth.constant = setWidth
         
         // Check for dark mode
-        if traitCollection.userInterfaceStyle == .light {
-            poweredByButton.setBackgroundImage(UIImage(named: "poweredby-oneline.pdf"), for: .normal)
+        if self.traitCollection.userInterfaceStyle == .light {
+            self.poweredByButton.setBackgroundImage(UIImage(named: "poweredby-oneline.pdf"), for: .normal)
         } else {
-            poweredByButton.setBackgroundImage(UIImage(named: "poweredby-oneline-darkbackground.pdf"), for: .normal)
+            self.poweredByButton.setBackgroundImage(UIImage(named: "poweredby-oneline-darkbackground.pdf"), for: .normal)
         }
         
         if potentialCustomer == true {
@@ -127,6 +126,7 @@ class AcknowledgementsViewController: UIViewController, UITextViewDelegate {
             let barButton = UIBarButtonItem(customView: doneBarButton)
             self.navigationItem.rightBarButtonItem = barButton
         }
+
     }
 
     @IBAction func poweredByDarkSkyTapped(_ sender: UIButton) {

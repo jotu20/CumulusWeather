@@ -30,9 +30,8 @@ class AppIconTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
-        weatherLoaded = true
-
         self.navigationItem.title = "App Icon"
+        weatherLoaded = true
         
         if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
             self.navigationController?.navigationBar.tintColor = mandarin
@@ -54,245 +53,235 @@ class AppIconTableViewController: UITableViewController {
             self.navigationController?.navigationBar.tintColor = dodgerBlue
         }
         
-        tableView.tableFooterView = UIView(frame: .zero)
+        self.tableView.tableFooterView = UIView(frame: .zero)
         
         if defaults.string(forKey: "userSavedAppIconString") == "8-Bit" {
-            setSelectedCheckMark(layerString: "8-Bit", setIcon: false)
+            self.setSelectedCheckMark(layerString: "8-Bit", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Asteroid" {
-            setSelectedCheckMark(layerString: "Asteroid", setIcon: false)
+            self.setSelectedCheckMark(layerString: "Asteroid", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Carmine Pink" {
-            setSelectedCheckMark(layerString: "Carmine Pink", setIcon: false)
+            self.setSelectedCheckMark(layerString: "Carmine Pink", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Cloudy Day" {
-            setSelectedCheckMark(layerString: "Cloudy Day", setIcon: false)
+            self.setSelectedCheckMark(layerString: "Cloudy Day", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Dodger Blue" {
-            setSelectedCheckMark(layerString: "Dodger Blue", setIcon: false)
+            self.setSelectedCheckMark(layerString: "Dodger Blue", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Lights Out" {
-            setSelectedCheckMark(layerString: "Lights Out", setIcon: false)
+            self.setSelectedCheckMark(layerString: "Lights Out", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Malachite" {
-            setSelectedCheckMark(layerString: "Malachite", setIcon: false)
+            self.setSelectedCheckMark(layerString: "Malachite", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Mandarin" {
-            setSelectedCheckMark(layerString: "Mandarin", setIcon: false)
+            self.setSelectedCheckMark(layerString: "Mandarin", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Maximum Red" {
-            setSelectedCheckMark(layerString: "Maximum Red", setIcon: false)
+            self.setSelectedCheckMark(layerString: "Maximum Red", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Mighty Umbrella" {
-            setSelectedCheckMark(layerString: "Mighty Umbrella", setIcon: false)
+            self.setSelectedCheckMark(layerString: "Mighty Umbrella", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Plump Purple" {
-            setSelectedCheckMark(layerString: "Plump Purple", setIcon: false)
+            self.setSelectedCheckMark(layerString: "Plump Purple", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Pride" {
-            setSelectedCheckMark(layerString: "Pride", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Rain drop" {
-            setSelectedCheckMark(layerString: "Rain drop", setIcon: false)
+            self.setSelectedCheckMark(layerString: "Pride", setIcon: false)
+        } else if defaults.string(forKey: "userSavedAppIconString") == "Rain Drop" {
+            self.setSelectedCheckMark(layerString: "Rain Drop", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Sandstorm" {
-            setSelectedCheckMark(layerString: "Sandstorm", setIcon: false)
+            self.setSelectedCheckMark(layerString: "Sandstorm", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Thunderstorm" {
-            setSelectedCheckMark(layerString: "Thunderstorm", setIcon: false)
+            self.setSelectedCheckMark(layerString: "Thunderstorm", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Twilight Moon" {
-            setSelectedCheckMark(layerString: "Twilight Moon", setIcon: false)
+            self.setSelectedCheckMark(layerString: "Twilight Moon", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Twilight Zone" {
-            setSelectedCheckMark(layerString: "Twilight Zone", setIcon: false)
+            self.setSelectedCheckMark(layerString: "Twilight Zone", setIcon: false)
         } else {
-            setSelectedCheckMark(layerString: "Dodger Blue", setIcon: false)
+            self.setSelectedCheckMark(layerString: "Dodger Blue", setIcon: false)
         }
         
-        if (defaults.bool(forKey: "cumulusPro") == false) {
+        if (defaults.bool(forKey: "cumulusPlus") == false) {
             potentialCustomer = true
         }
+
     }
     
     @IBAction func mandarinTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Mandarin", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Mandarin", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func malachiteTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Malachite", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Malachite", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func maximumRedTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Maximum Red", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Maximum Red", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func dodgerBlueTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Dodger Blue", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Dodger Blue", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
-            present(controller, animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func cottonCandyTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
-            defaults.set("Cotton Candy", forKey: "userSavedAppIconString")
-            setSelectedCheckMark(layerString: "Cotton Candy", setIcon: true)
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func plumpPurpleTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Plump Purple", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Plump Purple", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func sandstormTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Sandstorm", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Sandstorm", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func asteroidTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Asteroid", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Asteroid", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func carminePinkTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Carmine Pink", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Carmine Pink", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func lightsOutTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Lights Out", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Lights Out", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func twilightZoneTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Twilight Zone", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Twilight Zone", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func prideTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Pride", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Pride", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func twilightMoonTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Twilight Moon", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Twilight Moon", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func mightyUmbrellaTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Mighty Umbrella", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Mighty Umbrella", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func eightBitTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("8-Bit", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "8-Bit", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func thunderstormTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Thunderstorm", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Thunderstorm", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func cloudyDayTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Cloudy Day", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Cloudy Day", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }
     
     @IBAction func rainDropTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPro") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Rain Drop", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Rain Drop", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Pro")
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
     }

@@ -38,27 +38,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
+        
+        // Verify subscriptions
+        let cumulusPlusValidator = AppleReceiptValidator(service: .production, sharedSecret: "\(sharedSecret)")
+        SwiftyStoreKit.verifyReceipt(using: cumulusPlusValidator) { result in
+            switch result {
+            case .success(let receipt):
+                let productIds = Set([ "com.josephszafarowicz.CumulusPlus.Monthly", "com.josephszafarowicz.CumulusPlus.Yearly",])
+                let purchaseResult = SwiftyStoreKit.verifySubscriptions(productIds: productIds, inReceipt: receipt)
+                switch purchaseResult {
+                case .purchased(let expiryDate, let items):
+                    print("\(productIds) are valid until \(expiryDate)\n\(items)\n")
+                    defaults.set(true, forKey: "cumulusPlus")
+                case .expired(let expiryDate, let items):
+                    print("\(productIds) are expired since \(expiryDate)\n\(items)\n")
+                    checkForCumulusPro()
+                case .notPurchased:
+                    print("The user has never purchased \(productIds)")
+                    checkForCumulusPro()
+                }
+            case .error(let error):
+                print("Receipt verification failed: \(error)")
+            }
+        }
 
         // Setup all the default values
-        if (defaults.string(forKey: "defaultHourlyCondition") == nil) || (defaults.bool(forKey: "cumulusPro") == false) {
+        if (defaults.string(forKey: "defaultHourlyCondition") == nil) || (defaults.bool(forKey: "cumulusPlus") == false) {
             defaults.set("Precip (%)", forKey: "defaultHourlyCondition")
         }
         
-        if (defaults.string(forKey: "defaultDailyCondition") == nil) || (defaults.bool(forKey: "cumulusPro") == false) {
+        if (defaults.string(forKey: "defaultDailyCondition") == nil) || (defaults.bool(forKey: "cumulusPlus") == false) {
             defaults.set("Precip (%)", forKey: "defaultDailyCondition")
         }
         
-        if (defaults.string(forKey: "defaultWidgetSlot1") == nil) || (defaults.bool(forKey: "cumulusPro") == false) {
+        if (defaults.string(forKey: "defaultWidgetSlot1") == nil) || (defaults.bool(forKey: "cumulusPlus") == false) {
             defaults.set("Current condition", forKey: "defaultWidgetSlot1")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Current condition", forKey: "setDefaultWidgetSlot1")
         }
         
-        if (defaults.string(forKey: "defaultWidgetSlot2") == nil) || (defaults.bool(forKey: "cumulusPro") == false) {
+        if (defaults.string(forKey: "defaultWidgetSlot2") == nil) || (defaults.bool(forKey: "cumulusPlus") == false) {
             defaults.set("Precip (%)", forKey: "defaultWidgetSlot2")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Precip (%)", forKey: "setDefaultWidgetSlot2")
         }
         
-        if (defaults.string(forKey: "dataSource") == nil) || (defaults.bool(forKey: "cumulusPro") == false) || (defaults.string(forKey: "dataSource") == "AerisWeather") {
+        if (defaults.string(forKey: "dataSource") == nil) || (defaults.bool(forKey: "cumulusPlus") == false) || (defaults.string(forKey: "dataSource") == "AerisWeather") {
             defaults.set("Dark Sky", forKey: "dataSource")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Dark Sky", forKey: "setDataSource")
         }
@@ -134,7 +157,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             defaults.set("Current condition", forKey: "defaultWidgetSlot2")
         }
         
-        if (defaults.bool(forKey: "cumulusPro") == false) || (defaults.bool(forKey: "randomColorEnabled") == true) {
+        if (defaults.bool(forKey: "cumulusPlus") == false) || (defaults.bool(forKey: "randomColorEnabled") == true) {
             let randomTheme = Int(arc4random_uniform(UInt32(13)))
             
             if randomTheme == 0 || randomTheme == 1 {

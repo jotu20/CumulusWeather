@@ -18,9 +18,8 @@ class SiriShortcutsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
-        weatherLoaded = true
-        
         self.navigationItem.title = "Siri Shortcuts"
+        weatherLoaded = true
         
         if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
             self.navigationController?.navigationBar.tintColor = mandarin
@@ -42,7 +41,7 @@ class SiriShortcutsTableViewController: UITableViewController {
             self.navigationController?.navigationBar.tintColor = dodgerBlue
         }
         
-        tableView.tableFooterView = UIView(frame: .zero)
+        self.tableView.tableFooterView = UIView(frame: .zero)
 
         // Intent Siri Button
         let intent = ForecastIntent()
@@ -50,9 +49,9 @@ class SiriShortcutsTableViewController: UITableViewController {
         addShortcutButton.shortcut = INShortcut(intent: intent)
         addShortcutButton.delegate = self
         
-        let margins = tableViewCell.layoutMarginsGuide
+        let margins = self.tableViewCell.layoutMarginsGuide
         addShortcutButton.translatesAutoresizingMaskIntoConstraints = false
-        tableViewCell.addSubview(addShortcutButton)
+        self.tableViewCell.addSubview(addShortcutButton)
 
         let screenSize = UIScreen.main.bounds
         let screenHeight = screenSize.height
@@ -67,7 +66,7 @@ class SiriShortcutsTableViewController: UITableViewController {
             addShortcutButton.topAnchor.constraint(equalTo: margins.topAnchor, constant: 0).isActive = true
             addShortcutButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 175).isActive = true
         }
-        donateInteraction()
+        self.donateInteraction()
     }
     
     func donateInteraction() {

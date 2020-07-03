@@ -799,21 +799,21 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        setupGrantedLocationServices()
-
+        self.locationManager.requestWhenInUseAuthorization()
+        self.setupGrantedLocationServices()
+        
         if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Precip") == true {
-            hourlySegmentControl.selectedSegmentIndex = 0
+            self.hourlySegmentControl.selectedSegmentIndex = 0
         } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Temp") == true {
-            hourlySegmentControl.selectedSegmentIndex = 1
+            self.hourlySegmentControl.selectedSegmentIndex = 1
         } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Humidity") == true {
-            hourlySegmentControl.selectedSegmentIndex = 2
+            self.hourlySegmentControl.selectedSegmentIndex = 2
         } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Index") == true {
-            hourlySegmentControl.selectedSegmentIndex = 3
+            self.hourlySegmentControl.selectedSegmentIndex = 3
         } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Wind") == true {
-            hourlySegmentControl.selectedSegmentIndex = 4
+            self.hourlySegmentControl.selectedSegmentIndex = 4
         } else if (defaults.string(forKey: "defaultHourlyCondition"))?.contains("Cloud") == true {
-            hourlySegmentControl.selectedSegmentIndex = 5
+            self.hourlySegmentControl.selectedSegmentIndex = 5
         }
 
         // If user has viewed 10 times request review
@@ -824,22 +824,22 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         
         // Check for loaded weather, distance change, or color theme change
         if weatherLoaded == false || distanceChange == true || dataSourceChanged == true || userChangedColorTheme == true {
-            loadingScreen()
+            self.loadingScreen()
         }
 
         // Check for units or clock change
         if unitsChanged == true || clockChanged == true {
-            loadingScreen()
+            self.loadingScreen()
             unitsChanged = false
             clockChanged = false
         }
 
         // Setup for pull to refresh
-        scrollView.alwaysBounceVertical = true
-        scrollView.bounces  = true
-        refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
-        self.scrollView.addSubview(refreshControl)
+        self.scrollView.alwaysBounceVertical = true
+        self.scrollView.bounces  = true
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.addTarget(self, action: #selector(self.didPullToRefresh), for: .valueChanged)
+        self.scrollView.addSubview(self.refreshControl)
     }
     
     // MARK: - Get location and weather data
@@ -971,7 +971,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         activityIndicator.style = .medium
         activityIndicator.startAnimating()
 
-        let backgroundColor = UIColor(named: "customControlColor")
+        let backgroundColor = UIColor.systemBackground
         loadingView.backgroundColor = backgroundColor
         loadingView.alpha = 1.0
         loadingView.addSubview(activityIndicator)

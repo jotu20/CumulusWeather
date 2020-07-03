@@ -21,12 +21,12 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.delegate = self
         self.navigationController?.isNavigationBarHidden = false
-        weatherLoaded = true
-
         self.navigationController?.navigationBar.topItem?.title = "Locations"
         
-        tableView.tableFooterView = UIView(frame: .zero)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "LocationCell")
+        weatherLoaded = true
+        
+        self.tableView.tableFooterView = UIView(frame: .zero)
+        self.self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "LocationCell")
         
         // Save Locations
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -35,19 +35,19 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Places")
         do {
-            whereabouts = try managedContext.fetch(fetchRequest)
+            self.whereabouts = try managedContext.fetch(fetchRequest)
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
         
-        let searchBarButton = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(autocompleteClicked))
+        let searchBarButton = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(self.autocompleteClicked))
         setupBarButtonColor(button: searchBarButton)
-        navigationItem.rightBarButtonItem = searchBarButton
+        self.navigationItem.rightBarButtonItem = searchBarButton
         
         if (defaults.bool(forKey: "userDeniedLocation") == false) {
             let findLocationBarButton = UIBarButtonItem(image: UIImage(systemName: "location.fill"), style: .plain, target: self, action: #selector(LocationsViewController.findCurrentLocation))
             setupBarButtonColor(button: findLocationBarButton)
-            navigationItem.leftBarButtonItem = findLocationBarButton
+            self.navigationItem.leftBarButtonItem = findLocationBarButton
         }
     }
     
@@ -60,7 +60,7 @@ class LocationsViewController: UIViewController, UITabBarControllerDelegate {
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = self
         
-        autocompleteController.tableCellBackgroundColor = UIColor(named: "customControlColor")!
+        autocompleteController.tableCellBackgroundColor = UIColor.systemBackground
         autocompleteController.primaryTextColor = UIColor.label
         autocompleteController.secondaryTextColor = UIColor.secondaryLabel
         autocompleteController.primaryTextHighlightColor = UIColor.tertiaryLabel

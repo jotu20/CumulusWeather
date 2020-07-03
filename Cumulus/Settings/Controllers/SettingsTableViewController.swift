@@ -17,8 +17,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     @IBOutlet weak var weatherUnitsInternationalTableCell: UITableViewCell!
     
     @IBOutlet weak var preferencesLabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var cumulusProLabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var cumulusTipJarLabelWidth: NSLayoutConstraint!
+    @IBOutlet weak var cumulusPlusLabelWidth: NSLayoutConstraint!
     @IBOutlet weak var reviewCumulusLabelWidth: NSLayoutConstraint!
     @IBOutlet weak var privacyPolicyLabelWidth: NSLayoutConstraint!
     @IBOutlet weak var acknowledgementsLabelWidth: NSLayoutConstraint!
@@ -26,44 +25,41 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.delegate = self
         self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBar.topItem?.title = "Settings"
+        self.tableView.tableFooterView = UIView(frame: .zero)
+        
         weatherLoaded = true
         distanceChange = false
         potentialCustomer = false
         
-        self.navigationController?.navigationBar.topItem?.title = "Settings"
-        
-        tableView.tableFooterView = UIView(frame: .zero)
-        
         let screenSize = UIScreen.main.bounds
         let screenHeight = screenSize.height
         if screenHeight == 568 {
-            preferencesLabelWidth.constant = 300
-            cumulusProLabelWidth.constant = 300
-            cumulusTipJarLabelWidth.constant = 300
-            reviewCumulusLabelWidth.constant = 300
-            privacyPolicyLabelWidth.constant = 300
-            acknowledgementsLabelWidth.constant = 300
+            self.preferencesLabelWidth.constant = 300
+            self.cumulusPlusLabelWidth.constant = 300
+            self.reviewCumulusLabelWidth.constant = 300
+            self.privacyPolicyLabelWidth.constant = 300
+            self.acknowledgementsLabelWidth.constant = 300
         } else if screenHeight == 736 || screenHeight == 896  {
             // iPhone Plus
-            preferencesLabelWidth.constant = 375
-            cumulusProLabelWidth.constant = 375
-            cumulusTipJarLabelWidth.constant = 375
-            reviewCumulusLabelWidth.constant = 375
-            privacyPolicyLabelWidth.constant = 375
-            acknowledgementsLabelWidth.constant = 375
+            self.preferencesLabelWidth.constant = 375
+            self.cumulusPlusLabelWidth.constant = 375
+            self.reviewCumulusLabelWidth.constant = 375
+            self.privacyPolicyLabelWidth.constant = 375
+            self.acknowledgementsLabelWidth.constant = 375
         }
 
         if defaults.bool(forKey: "weatherUnitsUSA") == true {
-            setSelectedCheckMark(unitsString: "USA")
+            self.setSelectedCheckMark(unitsString: "USA")
         }
         if defaults.bool(forKey: "weatherUnitsUK") == true {
-            setSelectedCheckMark(unitsString: "UK")
+            self.setSelectedCheckMark(unitsString: "UK")
         }
         if defaults.bool(forKey: "weatherUnitsCanada") == true {
-            setSelectedCheckMark(unitsString: "Canada")
+            self.setSelectedCheckMark(unitsString: "Canada")
         }
         if defaults.bool(forKey: "weatherUnitsInternational") == true {
-            setSelectedCheckMark(unitsString: "International")
+            self.setSelectedCheckMark(unitsString: "International")
         }
     }
     
@@ -101,14 +97,9 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         performSegue(withIdentifier: "preferences", sender: nil)
     }
 
-    @IBAction func cumulusProButtonTapped(_ sender: UITapGestureRecognizer) {
+    @IBAction func cumulusPlusButtonTapped(_ sender: UITapGestureRecognizer) {
         weatherLoaded = true
-        performSegue(withIdentifier: "cumulusPro", sender: nil)
-    }
-    
-    @IBAction func cumulusTipJarButtonTapped(_ sender: UITapGestureRecognizer) {
-        weatherLoaded = true
-        performSegue(withIdentifier: "cumulusTipJar", sender: nil)
+        performSegue(withIdentifier: "cumulusPlus", sender: nil)
     }
     
     @IBAction func reviewCumulusButtonTapped(_ sender: UITapGestureRecognizer) {

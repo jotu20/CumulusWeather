@@ -13863,7 +13863,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <variation key="heightClass=regular-widthClass=regular" constant="60"/>
                                                 </constraint>
                                             </constraints>
-                                            <string key="text">Unleash the full power of Cumulus with advanced features only accessible in Cumulus+. Your contributions allow Cumulus to exist, so thank you for using and supporting Cumulus!</string>
+                                            <string key="text">Unleash the full power of Cumulus with advanced features only accessible with Cumulus+. Your contributions allow Cumulus to exist, so thank you for using and supporting Cumulus!</string>
                                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -14424,7 +14424,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="160"/>
                                                                     </constraint>
                                                                 </constraints>
-                                                                <mutableString key="text">Cumulus does not collect or store any personally identifiable information. Cumulus may ask for permission to access your location but this can be changed at anytime under your devices' settings and is not required. When you allow location access to Cumulus, your location is used along with the Dark Sky servers to retrieve weather forecasts for your location. Your location is also used when the today widget or Siri shortcuts are enabled. Your location is only used each time a request is made. None of the information sent is personally identifiable or stored by any third party.</mutableString>
+                                                                <string key="text">Cumulus does not collect or store any personally identifiable information. Cumulus may ask for permission to access your location but this can be changed at anytime under your devices' settings and is not required. When you allow location access to Cumulus, your location is used along with the Dark Sky servers to retrieve weather forecasts for your location. Your location is also used when the today widget or Siri shortcuts are enabled. Your location is only used each time a request is made. None of the information sent is personally identifiable or stored by any third party.</string>
                                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -14497,15 +14497,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                 <nil key="highlightedColor"/>
                                                                 <variation key="default">
                                                                     <mask key="constraints">
-                                                                        <exclude reference="XBH-wF-vkJ"/>
                                                                         <exclude reference="GUf-kk-USF"/>
+                                                                        <exclude reference="XBH-wF-vkJ"/>
                                                                     </mask>
                                                                 </variation>
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <mask key="constraints">
-                                                                        <include reference="XBH-wF-vkJ"/>
                                                                         <exclude reference="9zn-AZ-57D"/>
                                                                         <include reference="GUf-kk-USF"/>
+                                                                        <include reference="XBH-wF-vkJ"/>
                                                                         <exclude reference="rwN-W1-9jU"/>
                                                                     </mask>
                                                                 </variation>

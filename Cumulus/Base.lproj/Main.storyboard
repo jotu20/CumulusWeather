@@ -11535,6 +11535,7 @@
                                 </variation>
                             </scrollView>
                         </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="1NI-hp-shZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2Ef-P4-QoE"/>
                             <constraint firstAttribute="trailing" secondItem="1NI-hp-shZ" secondAttribute="trailing" id="6fO-9G-RJ5"/>
@@ -13103,6 +13104,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                 </variation>
                             </view>
                         </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Ts2-nb-Cfe" firstAttribute="trailing" secondItem="i9B-uz-duz" secondAttribute="trailing" id="Qwu-Uw-u5b"/>
                             <constraint firstItem="Ts2-nb-Cfe" firstAttribute="top" secondItem="i9B-uz-duz" secondAttribute="top" id="mth-5Q-Qir"/>
@@ -13968,14 +13970,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Widget Customization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="26E-mi-yzN">
-                                                    <rect key="frame" x="91" y="23" width="135" height="25.5"/>
+                                                    <rect key="frame" x="91" y="29" width="168" height="20"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Customize the today widget slots to show your most important weather conditions. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ASX-Kd-X9S">
-                                                    <rect key="frame" x="91" y="51.5" width="256.5" height="36"/>
+                                                    <rect key="frame" x="91" y="52" width="255.5" height="28"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -13997,14 +13999,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Custom App Icons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LYZ-du-04S">
-                                                    <rect key="frame" x="91" y="32" width="110.5" height="25.5"/>
+                                                    <rect key="frame" x="91" y="36" width="142" height="20"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Stand out from the crowd with custom app icons." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mAW-lf-AeP">
-                                                    <rect key="frame" x="91" y="60.5" width="199" height="18"/>
+                                                    <rect key="frame" x="91" y="59" width="265.5" height="14"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -14026,14 +14028,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Default Hourly Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hsn-nh-Ijo">
-                                                    <rect key="frame" x="91" y="23" width="152" height="25.5"/>
+                                                    <rect key="frame" x="91" y="22" width="186.5" height="20"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Set the default hourly condition to view whats most important to you first when viewing hourly forecasts." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q1V-el-qUm">
-                                                    <rect key="frame" x="91" y="51.5" width="264" height="36"/>
+                                                    <rect key="frame" x="91" y="45" width="258" height="42"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -14055,14 +14057,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Daily Cards Customization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7kU-38-w9n">
-                                                    <rect key="frame" x="91" y="23" width="161.5" height="25.5"/>
+                                                    <rect key="frame" x="91" y="29" width="201.5" height="20"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Set the default daily condition that appears on the daily forecast cards." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YzE-UC-iJC">
-                                                    <rect key="frame" x="91" y="51.5" width="226.5" height="36"/>
+                                                    <rect key="frame" x="91" y="52" width="268" height="28"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -14084,14 +14086,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Theme Control" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4dw-Dy-9zx">
-                                                    <rect key="frame" x="91" y="23" width="90" height="25.5"/>
+                                                    <rect key="frame" x="91" y="29" width="112.5" height="20"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Change the color theme of Cumulus with many different color themes to choose from. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D8o-wo-gjT">
-                                                    <rect key="frame" x="91" y="51.5" width="252" height="36"/>
+                                                    <rect key="frame" x="91" y="52" width="255.5" height="28"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -14113,14 +14115,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Support Indie Development" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CaE-os-b5k">
-                                                    <rect key="frame" x="91" y="14" width="167" height="25.5"/>
+                                                    <rect key="frame" x="91" y="15" width="208.5" height="20"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DYU-VT-uSe">
-                                                    <rect key="frame" x="91" y="42.5" width="262.5" height="53.5"/>
+                                                    <rect key="frame" x="91" y="38" width="268" height="56"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <string key="text">Cumulus is a one man operation, so your support helps continue the development and improvement of Cumulus. All contributions are greatly appreciated!</string>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
@@ -14593,6 +14595,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                 </constraints>
                             </view>
                         </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="GHu-pZ-VYj" firstAttribute="top" secondItem="Oaf-ka-8eo" secondAttribute="top" id="46Q-vC-cXI"/>
                             <constraint firstItem="GHu-pZ-VYj" firstAttribute="leading" secondItem="Oaf-ka-8eo" secondAttribute="leading" id="6gv-Bb-Ye1"/>

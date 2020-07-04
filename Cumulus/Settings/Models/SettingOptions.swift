@@ -50,8 +50,6 @@ var buttonColor: String = ""
 
 // Weather Alert color
 let alertColor = UIColor(rgb: 0xEA2027)
-var modeBackgroundColor = UIColor(rgb: 0x000000)
-var modeTextColor = UIColor(rgb: 0x000000)
 
 // Theme Colors
 let mandarin = UIColor(rgb: 0xFFA500)

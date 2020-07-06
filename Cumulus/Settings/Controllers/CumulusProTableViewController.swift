@@ -48,7 +48,35 @@ class CumulusPlusTableViewController: UITableViewController {
             self.cumulusPlusTextViewWidth.constant = 300
             self.cumulusPlusTextViewHeight.constant = 143
         }
+        
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.CumulusPlus.Monthly"]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
+                self.cumulusPlusMonthlyButton.setTitle("Cumulus+ Monthly (\(priceString))", for: .normal)
+            }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
+            }
+            else {
+                print("Error: \(String(describing: result.error))")
+            }
+        }
 
+        SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.CumulusPlus.Yearly"]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
+                self.cumulusPlusYearlyButton.setTitle("Cumulus+ Yearly (\(priceString))", for: .normal)
+            }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
+            }
+            else {
+                print("Error: \(String(describing: result.error))")
+            }
+        }
+        
         self.cumulusPlusMonthlyButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
         self.cumulusPlusYearlyButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
         

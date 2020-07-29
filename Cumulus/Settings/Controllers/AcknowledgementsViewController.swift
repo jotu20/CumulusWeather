@@ -41,26 +41,6 @@ class AcknowledgementsViewController: UIViewController, UITextViewDelegate {
         self.navigationItem.title = "Acknowledgements"
         weatherLoaded = true
         
-        if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
-            self.navigationController?.navigationBar.tintColor = mandarin
-        } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
-            self.navigationController?.navigationBar.tintColor = malachite
-        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
-            self.navigationController?.navigationBar.tintColor = maximumRed
-        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
-            self.navigationController?.navigationBar.tintColor = dodgerBlue
-        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
-            self.navigationController?.navigationBar.tintColor = plumpPurple
-        } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
-            self.navigationController?.navigationBar.tintColor = sandstorm
-        } else if defaults.string(forKey: "userSavedColorString") == "Asteroid" {
-            self.navigationController?.navigationBar.tintColor = asteroid
-        } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-            self.navigationController?.navigationBar.tintColor = carminePink
-        } else {
-            self.navigationController?.navigationBar.tintColor = dodgerBlue
-        }
-        
         self.acknowledgement0TextView.text = "Copyright (c) 2016 Satyam Ghodasara <sghodas@gmail.com>. \n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: \n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. \n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
         
         self.acknowledgement1TextView.text = "Copyright (c) 2015-2016 Andrea Bizzotto bizz84@gmail.com. \n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: \n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software, \n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."

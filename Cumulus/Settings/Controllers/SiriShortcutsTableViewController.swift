@@ -21,22 +21,18 @@ class SiriShortcutsTableViewController: UITableViewController {
         self.navigationItem.title = "Siri Shortcuts"
         weatherLoaded = true
         
-        if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
-            self.navigationController?.navigationBar.tintColor = mandarin
-        } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
-            self.navigationController?.navigationBar.tintColor = malachite
+        if defaults.string(forKey: "userSavedColorString") == "Mango" {
+            self.navigationController?.navigationBar.tintColor = mango
         } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
             self.navigationController?.navigationBar.tintColor = maximumRed
         } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
             self.navigationController?.navigationBar.tintColor = dodgerBlue
         } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
             self.navigationController?.navigationBar.tintColor = plumpPurple
-        } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
-            self.navigationController?.navigationBar.tintColor = sandstorm
-        } else if defaults.string(forKey: "userSavedColorString") == "Asteroid" {
-            self.navigationController?.navigationBar.tintColor = asteroid
         } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
             self.navigationController?.navigationBar.tintColor = carminePink
+        } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
+            self.navigationController?.navigationBar.tintColor = springGreen
         } else {
             self.navigationController?.navigationBar.tintColor = dodgerBlue
         }

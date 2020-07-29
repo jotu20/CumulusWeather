@@ -161,15 +161,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let randomTheme = Int(arc4random_uniform(UInt32(13)))
             
             if randomTheme == 0 || randomTheme == 1 {
-                defaults.set("Asteroid", forKey: "userSavedColorString")
-            } else if randomTheme == 2 {
                 defaults.set("Carmine Pink", forKey: "userSavedColorString")
             } else if randomTheme == 3 {
                 defaults.set("Dodger Blue", forKey: "userSavedColorString")
             } else if randomTheme == 4 {
-                defaults.set("Malachite", forKey: "userSavedColorString")
-            } else if randomTheme == 5 {
-                defaults.set("Mandarin", forKey: "userSavedColorString")
+                defaults.set("Mango", forKey: "userSavedColorString")
             } else if randomTheme == 7 {
                 defaults.set("Maximum Red", forKey: "userSavedColorString")
             } else if randomTheme == 8 {
@@ -177,7 +173,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             } else if randomTheme == 9 {
                 defaults.set("Random", forKey: "userSavedColorString")
             } else if randomTheme == 10 {
-                defaults.set("Sandstorm", forKey: "userSavedColorString")
+                defaults.set("Spring Green", forKey: "userSavedColorString")
             } else {
                 defaults.set("Dodger Blue", forKey: "userSavedColorString")
             }

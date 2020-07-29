@@ -49,32 +49,11 @@ class PreferencesTableViewController: UITableViewController,  UITextFieldDelegat
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.title = "Preferences"
+        self.tableView.tableFooterView = UIView(frame: .zero)
         weatherLoaded = true
         
         self.setupObjectColors()
         self.hideKeyboard()
-        
-        if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
-            self.navigationController?.navigationBar.tintColor = mandarin
-        } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
-            self.navigationController?.navigationBar.tintColor = malachite
-        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
-            self.navigationController?.navigationBar.tintColor = maximumRed
-        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
-            self.navigationController?.navigationBar.tintColor = dodgerBlue
-        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
-            self.navigationController?.navigationBar.tintColor = plumpPurple
-        } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
-            self.navigationController?.navigationBar.tintColor = sandstorm
-        } else if defaults.string(forKey: "userSavedColorString") == "Asteroid" {
-            self.navigationController?.navigationBar.tintColor = asteroid
-        } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-            self.navigationController?.navigationBar.tintColor = carminePink
-        } else {
-            self.navigationController?.navigationBar.tintColor = dodgerBlue
-        }
-        
-        self.tableView.tableFooterView = UIView(frame: .zero)
         
         if defaults.bool(forKey: "cumulusPlus") == false {
             self.defaultHourlyConditionTextField.isEnabled = false
@@ -181,20 +160,18 @@ class PreferencesTableViewController: UITableViewController,  UITextFieldDelegat
     }
     
     func setupObjectColors() {
-        if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
-            twentyfourHourClockSwitch.onTintColor = mandarin
-        } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
-            twentyfourHourClockSwitch.onTintColor = malachite
+        if defaults.string(forKey: "userSavedColorString") == "Mango" {
+            twentyfourHourClockSwitch.onTintColor = mango
         } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
             twentyfourHourClockSwitch.onTintColor = maximumRed
         } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
             twentyfourHourClockSwitch.onTintColor = dodgerBlue
         } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
             twentyfourHourClockSwitch.onTintColor = plumpPurple
-        } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
-            twentyfourHourClockSwitch.onTintColor = sandstorm
-        } else if defaults.string(forKey: "userSavedColorString") == "Asteroid" {
-            twentyfourHourClockSwitch.onTintColor = asteroid
+        } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
+            twentyfourHourClockSwitch.onTintColor = carminePink
+        } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
+            twentyfourHourClockSwitch.onTintColor = springGreen
         } else {
             twentyfourHourClockSwitch.onTintColor = dodgerBlue
         }

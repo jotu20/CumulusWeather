@@ -57,26 +57,7 @@ class PrivacyAndTermsViewController: UIViewController {
         self.statement3TextView.text = "Some features of Cumulus are only accessible through a subscription basis and billed according to the subscription. You will be billed in advance on a recurring and periodic cycle. Billing cycles are set either on a monthly or yearly basis, depending upon the type of subscription plan you select when purchasing a subscription. \n\nYour subscription will be charged to your iTunes account at confirmation of purchase. Your subscription will automatically renew at the end of your subscription period unless canceled at least 24 hours prior to the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of current period. \n\nYou can manage your subscription or turn off auto-renewal at any time from your iTunes account settings. Cancellation of the active subscription period is not allowed."
         
         self.statement4TextView.text = "Cumulus does not use any third party services for analytics. However, it does utilize Apple's App Analytics platform to collect statistics on app crashes and usage. This information helps to diagnose and resolve any issues when encountered. This data is collected anonymously and cannot be used to personally identify users."
-        
-        if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
-            self.navigationController?.navigationBar.tintColor = mandarin
-        } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
-            self.navigationController?.navigationBar.tintColor = malachite
-        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
-            self.navigationController?.navigationBar.tintColor = maximumRed
-        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
-            self.navigationController?.navigationBar.tintColor = dodgerBlue
-        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
-            self.navigationController?.navigationBar.tintColor = plumpPurple
-        } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
-            self.navigationController?.navigationBar.tintColor = sandstorm
-        } else if defaults.string(forKey: "userSavedColorString") == "Asteroid" {
-            self.navigationController?.navigationBar.tintColor = asteroid
-        } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-            self.navigationController?.navigationBar.tintColor = carminePink
-        } else {
-            self.navigationController?.navigationBar.tintColor = dodgerBlue
-        }
+
         self.setLabels()
         
         var setWidth: CGFloat = 0

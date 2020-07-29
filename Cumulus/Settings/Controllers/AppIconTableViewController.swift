@@ -10,83 +10,48 @@ import UIKit
 
 class AppIconTableViewController: UITableViewController {
 
-    @IBOutlet weak var mandarinTableCell: UITableViewCell!
-    @IBOutlet weak var malachiteTableCell: UITableViewCell!
+    @IBOutlet weak var mangoTableCell: UITableViewCell!
     @IBOutlet weak var maximumRedTableCell: UITableViewCell!
     @IBOutlet weak var dodgerBlueTableCell: UITableViewCell!
     @IBOutlet weak var plumpPurpleTableCell: UITableViewCell!
-    @IBOutlet weak var sandstormTableCell: UITableViewCell!
-    @IBOutlet weak var asteroidTableCell: UITableViewCell!
     @IBOutlet weak var carminePinkTableCell: UITableViewCell!
     @IBOutlet weak var lightsOutTableCell: UITableViewCell!
     @IBOutlet weak var twilightZoneTableCell: UITableViewCell!
-    @IBOutlet weak var prideTableCell: UITableViewCell!
-    @IBOutlet weak var twilightMoonTableCell: UITableViewCell!
     @IBOutlet weak var mightyUmbrellaTableCell: UITableViewCell!
     @IBOutlet weak var eightBitTableCell: UITableViewCell!
     @IBOutlet weak var thunderstormTableCell: UITableViewCell!
-    @IBOutlet weak var cloudyDayTableCell: UITableViewCell!
     @IBOutlet weak var rainDropTableCell: UITableViewCell!
+    @IBOutlet weak var springGreenTableCell: UITableViewCell!
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.title = "App Icon"
         weatherLoaded = true
         
-        if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
-            self.navigationController?.navigationBar.tintColor = mandarin
-        } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
-            self.navigationController?.navigationBar.tintColor = malachite
-        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
-            self.navigationController?.navigationBar.tintColor = maximumRed
-        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
-            self.navigationController?.navigationBar.tintColor = dodgerBlue
-        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
-            self.navigationController?.navigationBar.tintColor = plumpPurple
-        } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
-            self.navigationController?.navigationBar.tintColor = sandstorm
-        } else if defaults.string(forKey: "userSavedColorString") == "Asteroid" {
-            self.navigationController?.navigationBar.tintColor = asteroid
-        } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-            self.navigationController?.navigationBar.tintColor = carminePink
-        } else {
-            self.navigationController?.navigationBar.tintColor = dodgerBlue
-        }
-        
         self.tableView.tableFooterView = UIView(frame: .zero)
         
         if defaults.string(forKey: "userSavedAppIconString") == "8-Bit" {
             self.setSelectedCheckMark(layerString: "8-Bit", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Asteroid" {
-            self.setSelectedCheckMark(layerString: "Asteroid", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Carmine Pink" {
             self.setSelectedCheckMark(layerString: "Carmine Pink", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Cloudy Day" {
-            self.setSelectedCheckMark(layerString: "Cloudy Day", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Dodger Blue" {
             self.setSelectedCheckMark(layerString: "Dodger Blue", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Lights Out" {
             self.setSelectedCheckMark(layerString: "Lights Out", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Malachite" {
-            self.setSelectedCheckMark(layerString: "Malachite", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Mandarin" {
-            self.setSelectedCheckMark(layerString: "Mandarin", setIcon: false)
+        } else if defaults.string(forKey: "userSavedAppIconString") == "Mango" {
+            self.setSelectedCheckMark(layerString: "Mango", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Maximum Red" {
             self.setSelectedCheckMark(layerString: "Maximum Red", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Mighty Umbrella" {
             self.setSelectedCheckMark(layerString: "Mighty Umbrella", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Plump Purple" {
             self.setSelectedCheckMark(layerString: "Plump Purple", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Pride" {
-            self.setSelectedCheckMark(layerString: "Pride", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Rain Drop" {
             self.setSelectedCheckMark(layerString: "Rain Drop", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Sandstorm" {
-            self.setSelectedCheckMark(layerString: "Sandstorm", setIcon: false)
+        } else if defaults.string(forKey: "userSavedAppIconString") == "Spring Green" {
+            self.setSelectedCheckMark(layerString: "Spring Green", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Thunderstorm" {
             self.setSelectedCheckMark(layerString: "Thunderstorm", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Twilight Moon" {
-            self.setSelectedCheckMark(layerString: "Twilight Moon", setIcon: false)
         } else if defaults.string(forKey: "userSavedAppIconString") == "Twilight Zone" {
             self.setSelectedCheckMark(layerString: "Twilight Zone", setIcon: false)
         } else {
@@ -99,21 +64,10 @@ class AppIconTableViewController: UITableViewController {
 
     }
     
-    @IBAction func mandarinTapped(_ sender: UITapGestureRecognizer) {
+    @IBAction func mangoTapped(_ sender: UITapGestureRecognizer) {
         if (defaults.bool(forKey: "cumulusPlus") == true) {
-            defaults.set("Mandarin", forKey: "userSavedAppIconString")
-            setSelectedCheckMark(layerString: "Mandarin", setIcon: true)
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
-            present(controller, animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func malachiteTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPlus") == true) {
-            defaults.set("Malachite", forKey: "userSavedAppIconString")
-            setSelectedCheckMark(layerString: "Malachite", setIcon: true)
+            defaults.set("Mango", forKey: "userSavedAppIconString")
+            setSelectedCheckMark(layerString: "Mango", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
@@ -154,28 +108,6 @@ class AppIconTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func sandstormTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPlus") == true) {
-            defaults.set("Sandstorm", forKey: "userSavedAppIconString")
-            setSelectedCheckMark(layerString: "Sandstorm", setIcon: true)
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
-            present(controller, animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func asteroidTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPlus") == true) {
-            defaults.set("Asteroid", forKey: "userSavedAppIconString")
-            setSelectedCheckMark(layerString: "Asteroid", setIcon: true)
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
-            present(controller, animated: true, completion: nil)
-        }
-    }
-    
     @IBAction func carminePinkTapped(_ sender: UITapGestureRecognizer) {
         if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Carmine Pink", forKey: "userSavedAppIconString")
@@ -202,28 +134,6 @@ class AppIconTableViewController: UITableViewController {
         if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Twilight Zone", forKey: "userSavedAppIconString")
             setSelectedCheckMark(layerString: "Twilight Zone", setIcon: true)
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
-            present(controller, animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func prideTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPlus") == true) {
-            defaults.set("Pride", forKey: "userSavedAppIconString")
-            setSelectedCheckMark(layerString: "Pride", setIcon: true)
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
-            present(controller, animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func twilightMoonTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPlus") == true) {
-            defaults.set("Twilight Moon", forKey: "userSavedAppIconString")
-            setSelectedCheckMark(layerString: "Twilight Moon", setIcon: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
@@ -264,17 +174,6 @@ class AppIconTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func cloudyDayTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPlus") == true) {
-            defaults.set("Cloudy Day", forKey: "userSavedAppIconString")
-            setSelectedCheckMark(layerString: "Cloudy Day", setIcon: true)
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
-            present(controller, animated: true, completion: nil)
-        }
-    }
-    
     @IBAction func rainDropTapped(_ sender: UITapGestureRecognizer) {
         if (defaults.bool(forKey: "cumulusPlus") == true) {
             defaults.set("Rain Drop", forKey: "userSavedAppIconString")
@@ -286,64 +185,38 @@ class AppIconTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func springGreenTapped(_ sender: UITapGestureRecognizer) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
+            defaults.set("Spring Green", forKey: "userSavedAppIconString")
+            setSelectedCheckMark(layerString: "Spring Green", setIcon: true)
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
+            present(controller, animated: true, completion: nil)
+        }
+    }
+    
     func setSelectedCheckMark(layerString: String, setIcon: Bool) {
         weatherLoaded = true
         
-        if layerString == "Mandarin" {
-            setTableViewCellColor(tableCell: mandarinTableCell)
+        if layerString == "Mango" {
+            setTableViewCellColor(tableCell: mangoTableCell)
             
-            mandarinTableCell.accessoryType = .checkmark
-            malachiteTableCell.accessoryType = .none
+            mangoTableCell.accessoryType = .checkmark
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .none
             lightsOutTableCell.accessoryType = .none
             twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .none
             mightyUmbrellaTableCell.accessoryType = .none
             eightBitTableCell.accessoryType = .none
             thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
+            springGreenTableCell.accessoryType = .none
             
             if setIcon == true {
-                UIApplication.shared.setAlternateIconName("AppIcon-Mandarin") { error in
-                    if let error = error {
-                        print(error.localizedDescription)
-                    } else {
-                        print("Success! Icon has been changed")
-                    }
-                }
-            }
-        }
-        
-        if layerString == "Malachite" {
-            setTableViewCellColor(tableCell: malachiteTableCell)
-            
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .checkmark
-            maximumRedTableCell.accessoryType = .none
-            dodgerBlueTableCell.accessoryType = .none
-            plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .none
-            carminePinkTableCell.accessoryType = .none
-            lightsOutTableCell.accessoryType = .none
-            twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .none
-            mightyUmbrellaTableCell.accessoryType = .none
-            eightBitTableCell.accessoryType = .none
-            thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .none
-            rainDropTableCell.accessoryType = .none
-            
-            if setIcon == true {
-                UIApplication.shared.setAlternateIconName("AppIcon-Malachite") { error in
+                UIApplication.shared.setAlternateIconName("AppIcon-Mango") { error in
                     if let error = error {
                         print(error.localizedDescription)
                     } else {
@@ -356,23 +229,18 @@ class AppIconTableViewController: UITableViewController {
         if layerString == "Maximum Red" {
             setTableViewCellColor(tableCell: maximumRedTableCell)
 
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .none
+            mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .checkmark
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .none
             lightsOutTableCell.accessoryType = .none
             twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .none
             mightyUmbrellaTableCell.accessoryType = .none
             eightBitTableCell.accessoryType = .none
             thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
+            springGreenTableCell.accessoryType = .none
             
             if setIcon == true {
                 UIApplication.shared.setAlternateIconName("AppIcon-MaximumRed") { error in
@@ -388,23 +256,18 @@ class AppIconTableViewController: UITableViewController {
         if layerString == "Dodger Blue" {
             setTableViewCellColor(tableCell: dodgerBlueTableCell)
             
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .none
+            mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .checkmark
             plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .none
             lightsOutTableCell.accessoryType = .none
             twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .none
             mightyUmbrellaTableCell.accessoryType = .none
             eightBitTableCell.accessoryType = .none
             thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
+            springGreenTableCell.accessoryType = .none
             
             if setIcon == true {
                 UIApplication.shared.setAlternateIconName("AppIcon-DodgerBlue") { error in
@@ -420,23 +283,18 @@ class AppIconTableViewController: UITableViewController {
         if layerString == "Plump Purple" {
             setTableViewCellColor(tableCell: plumpPurpleTableCell)
             
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .none
+            mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .checkmark
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .none
             lightsOutTableCell.accessoryType = .none
             twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .none
             mightyUmbrellaTableCell.accessoryType = .none
             eightBitTableCell.accessoryType = .none
             thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
+            springGreenTableCell.accessoryType = .none
             
             if setIcon == true {
                 UIApplication.shared.setAlternateIconName("AppIcon-PlumpPurple") { error in
@@ -449,90 +307,21 @@ class AppIconTableViewController: UITableViewController {
             }
         }
         
-        if layerString == "Sandstorm" {
-            setTableViewCellColor(tableCell: sandstormTableCell)
-            
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .none
-            maximumRedTableCell.accessoryType = .none
-            dodgerBlueTableCell.accessoryType = .none
-            plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .checkmark
-            asteroidTableCell.accessoryType = .none
-            carminePinkTableCell.accessoryType = .none
-            lightsOutTableCell.accessoryType = .none
-            twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .none
-            mightyUmbrellaTableCell.accessoryType = .none
-            eightBitTableCell.accessoryType = .none
-            thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .none
-            rainDropTableCell.accessoryType = .none
-            
-            if setIcon == true {
-                UIApplication.shared.setAlternateIconName("AppIcon-Sandstorm") { error in
-                    if let error = error {
-                        print(error.localizedDescription)
-                    } else {
-                        print("Success! Icon has been changed")
-                    }
-                }
-            }
-        }
-        
-        if layerString == "Asteroid" {
-            setTableViewCellColor(tableCell: asteroidTableCell)
-            
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .none
-            maximumRedTableCell.accessoryType = .none
-            dodgerBlueTableCell.accessoryType = .none
-            plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .checkmark
-            carminePinkTableCell.accessoryType = .none
-            lightsOutTableCell.accessoryType = .none
-            twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .none
-            mightyUmbrellaTableCell.accessoryType = .none
-            eightBitTableCell.accessoryType = .none
-            thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .none
-            rainDropTableCell.accessoryType = .none
-            
-            if setIcon == true {
-                UIApplication.shared.setAlternateIconName("AppIcon-Asteroid") { error in
-                    if let error = error {
-                        print(error.localizedDescription)
-                    } else {
-                        print("Success! Icon has been changed")
-                    }
-                }
-            }
-        }
-        
         if layerString == "Carmine Pink" {
             setTableViewCellColor(tableCell: carminePinkTableCell)
             
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .none
+            mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .checkmark
             lightsOutTableCell.accessoryType = .none
             twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .none
             mightyUmbrellaTableCell.accessoryType = .none
             eightBitTableCell.accessoryType = .none
             thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
+            springGreenTableCell.accessoryType = .none
             
             if setIcon == true {
                 UIApplication.shared.setAlternateIconName("AppIcon-CarminePink") { error in
@@ -548,23 +337,18 @@ class AppIconTableViewController: UITableViewController {
         if layerString == "Lights Out" {
             setTableViewCellColor(tableCell: lightsOutTableCell)
 
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .none
+            mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .none
             lightsOutTableCell.accessoryType = .checkmark
             twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .none
             mightyUmbrellaTableCell.accessoryType = .none
             eightBitTableCell.accessoryType = .none
             thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
+            springGreenTableCell.accessoryType = .none
             
             if setIcon == true {
                 UIApplication.shared.setAlternateIconName("AppIcon-LightsOut") { error in
@@ -580,23 +364,18 @@ class AppIconTableViewController: UITableViewController {
         if layerString == "Twilight Zone" {
             setTableViewCellColor(tableCell: twilightZoneTableCell)
             
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .none
+            mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .none
             lightsOutTableCell.accessoryType = .none
             twilightZoneTableCell.accessoryType = .checkmark
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .none
             mightyUmbrellaTableCell.accessoryType = .none
             eightBitTableCell.accessoryType = .none
             thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
+            springGreenTableCell.accessoryType = .none
             
             if setIcon == true {
                 UIApplication.shared.setAlternateIconName("AppIcon-TwilightZone") { error in
@@ -609,90 +388,21 @@ class AppIconTableViewController: UITableViewController {
             }
         }
         
-        if layerString == "Pride" {
-            setTableViewCellColor(tableCell: prideTableCell)
-            
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .none
-            maximumRedTableCell.accessoryType = .none
-            dodgerBlueTableCell.accessoryType = .none
-            plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .none
-            carminePinkTableCell.accessoryType = .none
-            lightsOutTableCell.accessoryType = .none
-            twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .checkmark
-            twilightMoonTableCell.accessoryType = .none
-            mightyUmbrellaTableCell.accessoryType = .none
-            eightBitTableCell.accessoryType = .none
-            thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .none
-            rainDropTableCell.accessoryType = .none
-            
-            if setIcon == true {
-                UIApplication.shared.setAlternateIconName("AppIcon-Pride") { error in
-                    if let error = error {
-                        print(error.localizedDescription)
-                    } else {
-                        print("Success! Icon has been changed")
-                    }
-                }
-            }
-        }
-        
-        if layerString == "Twilight Moon" {
-            setTableViewCellColor(tableCell: twilightMoonTableCell)
-            
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .none
-            maximumRedTableCell.accessoryType = .none
-            dodgerBlueTableCell.accessoryType = .none
-            plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .none
-            carminePinkTableCell.accessoryType = .none
-            lightsOutTableCell.accessoryType = .none
-            twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .checkmark
-            mightyUmbrellaTableCell.accessoryType = .none
-            eightBitTableCell.accessoryType = .none
-            thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .none
-            rainDropTableCell.accessoryType = .none
-            
-            if setIcon == true {
-                UIApplication.shared.setAlternateIconName("AppIcon-TwilightMoon") { error in
-                    if let error = error {
-                        print(error.localizedDescription)
-                    } else {
-                        print("Success! Icon has been changed")
-                    }
-                }
-            }
-        }
-        
         if layerString == "Mighty Umbrella" {
             setTableViewCellColor(tableCell: mightyUmbrellaTableCell)
             
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .none
+            mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .none
             lightsOutTableCell.accessoryType = .none
             twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .none
             mightyUmbrellaTableCell.accessoryType = .checkmark
             eightBitTableCell.accessoryType = .none
             thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
+            springGreenTableCell.accessoryType = .none
             
             if setIcon == true {
                 UIApplication.shared.setAlternateIconName("AppIcon-MightyUmbrella") { error in
@@ -708,23 +418,18 @@ class AppIconTableViewController: UITableViewController {
         if layerString == "8-Bit" {
             setTableViewCellColor(tableCell: eightBitTableCell)
             
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .none
+            mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .none
             lightsOutTableCell.accessoryType = .none
             twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .none
             mightyUmbrellaTableCell.accessoryType = .none
             eightBitTableCell.accessoryType = .checkmark
             thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
+            springGreenTableCell.accessoryType = .none
             
             if setIcon == true {
                 UIApplication.shared.setAlternateIconName("AppIcon-8-Bit") { error in
@@ -740,23 +445,18 @@ class AppIconTableViewController: UITableViewController {
         if layerString == "Thunderstorm" {
             setTableViewCellColor(tableCell: thunderstormTableCell)
             
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .none
+            mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .none
             lightsOutTableCell.accessoryType = .none
             twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .none
             mightyUmbrellaTableCell.accessoryType = .none
             eightBitTableCell.accessoryType = .none
             thunderstormTableCell.accessoryType = .checkmark
-            cloudyDayTableCell.accessoryType = .none
             rainDropTableCell.accessoryType = .none
+            springGreenTableCell.accessoryType = .none
             
             if setIcon == true {
                 UIApplication.shared.setAlternateIconName("AppIcon-Thunderstorm") { error in
@@ -769,29 +469,24 @@ class AppIconTableViewController: UITableViewController {
             }
         }
         
-        if layerString == "Cloudy Day" {
-            setTableViewCellColor(tableCell: cloudyDayTableCell)
+        if layerString == "Rain Drop" {
+            setTableViewCellColor(tableCell: rainDropTableCell)
             
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .none
+            mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .none
             lightsOutTableCell.accessoryType = .none
             twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .none
             mightyUmbrellaTableCell.accessoryType = .none
             eightBitTableCell.accessoryType = .none
             thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .checkmark
-            rainDropTableCell.accessoryType = .none
+            rainDropTableCell.accessoryType = .checkmark
+            springGreenTableCell.accessoryType = .none
             
             if setIcon == true {
-                UIApplication.shared.setAlternateIconName("AppIcon-CloudyDay") { error in
+                UIApplication.shared.setAlternateIconName("AppIcon-RainDrop") { error in
                     if let error = error {
                         print(error.localizedDescription)
                     } else {
@@ -801,29 +496,24 @@ class AppIconTableViewController: UITableViewController {
             }
         }
         
-        if layerString == "Rain Drop" {
-            setTableViewCellColor(tableCell: rainDropTableCell)
+        if layerString == "Spring Green" {
+            setTableViewCellColor(tableCell: springGreenTableCell)
             
-            mandarinTableCell.accessoryType = .none
-            malachiteTableCell.accessoryType = .none
+            mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
-            sandstormTableCell.accessoryType = .none
-            asteroidTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .none
             lightsOutTableCell.accessoryType = .none
             twilightZoneTableCell.accessoryType = .none
-            prideTableCell.accessoryType = .none
-            twilightMoonTableCell.accessoryType = .none
             mightyUmbrellaTableCell.accessoryType = .none
             eightBitTableCell.accessoryType = .none
             thunderstormTableCell.accessoryType = .none
-            cloudyDayTableCell.accessoryType = .none
-            rainDropTableCell.accessoryType = .checkmark
+            rainDropTableCell.accessoryType = .none
+            springGreenTableCell.accessoryType = .checkmark
             
             if setIcon == true {
-                UIApplication.shared.setAlternateIconName("AppIcon-RainDrop") { error in
+                UIApplication.shared.setAlternateIconName("AppIcon-SpringGreen") { error in
                     if let error = error {
                         print(error.localizedDescription)
                     } else {

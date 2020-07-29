@@ -22,32 +22,35 @@ class CumulusPlusTableViewController: UITableViewController {
         self.navigationController?.isNavigationBarHidden = false
         weatherLoaded = true
         
-        if defaults.string(forKey: "userSavedColorString") == "Mandarin" {
-            self.navigationController?.navigationBar.tintColor = mandarin
-        } else if defaults.string(forKey: "userSavedColorString") == "Malachite" {
-            self.navigationController?.navigationBar.tintColor = malachite
-        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
-            self.navigationController?.navigationBar.tintColor = maximumRed
-        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
-            self.navigationController?.navigationBar.tintColor = dodgerBlue
-        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
-            self.navigationController?.navigationBar.tintColor = plumpPurple
-        } else if defaults.string(forKey: "userSavedColorString") == "Sandstorm" {
-            self.navigationController?.navigationBar.tintColor = sandstorm
-        } else if defaults.string(forKey: "userSavedColorString") == "Asteroid" {
-            self.navigationController?.navigationBar.tintColor = asteroid
-        } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-            self.navigationController?.navigationBar.tintColor = carminePink
-        } else {
-            self.navigationController?.navigationBar.tintColor = dodgerBlue
-        }
-        
         let screenSize = UIScreen.main.bounds
         let screenHeight = screenSize.height
         if screenHeight == 568 {
             self.cumulusPlusTextViewWidth.constant = 300
             self.cumulusPlusTextViewHeight.constant = 143
         }
+        
+        if defaults.string(forKey: "userSavedColorString") == "Mango" {
+            cumulusPlusMonthlyButton.backgroundColor = mango
+            cumulusPlusYearlyButton.backgroundColor = mango
+        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
+            cumulusPlusMonthlyButton.backgroundColor = maximumRed
+            cumulusPlusYearlyButton.backgroundColor = maximumRed
+        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
+            cumulusPlusMonthlyButton.backgroundColor = dodgerBlue
+            cumulusPlusYearlyButton.backgroundColor = dodgerBlue
+        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
+            cumulusPlusMonthlyButton.backgroundColor = plumpPurple
+            cumulusPlusYearlyButton.backgroundColor = plumpPurple
+        } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
+            cumulusPlusMonthlyButton.backgroundColor = springGreen
+            cumulusPlusYearlyButton.backgroundColor = springGreen
+        } else {
+            cumulusPlusMonthlyButton.backgroundColor = dodgerBlue
+            cumulusPlusYearlyButton.backgroundColor = dodgerBlue
+        }
+        
+        cumulusPlusMonthlyButton.layer.cornerRadius = 10
+        cumulusPlusYearlyButton.layer.cornerRadius = 10
         
         SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.CumulusPlus.Monthly"]) { result in
             if let product = result.retrievedProducts.first {
@@ -76,9 +79,6 @@ class CumulusPlusTableViewController: UITableViewController {
                 print("Error: \(String(describing: result.error))")
             }
         }
-        
-        self.cumulusPlusMonthlyButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
-        self.cumulusPlusYearlyButton.setBackgroundImage(UIImage(named: "Button \(buttonColor).pdf"), for: .normal)
         
         let restoreBarButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(CumulusPlusTableViewController.restoreCumulusPlusTapped))
         setupBarButtonColor(button: restoreBarButton)

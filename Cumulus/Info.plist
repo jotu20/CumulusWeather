@@ -27,29 +27,11 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-Asteroid</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Asteroid</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
 			<key>AppIcon-CarminePink</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>CarminePink</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-CloudyDay</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>CloudyDay</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -72,20 +54,11 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-Malachite</key>
+			<key>AppIcon-Mango</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>Malachite</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-Mandarin</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Mandarin</string>
+					<string>Mango</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -117,15 +90,6 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-Pride</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Pride</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
 			<key>AppIcon-RainDrop</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -135,11 +99,11 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-Sandstorm</key>
+			<key>AppIcon-SpringGreen</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>Sandstorm</string>
+					<string>SpringGreen</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -149,24 +113,6 @@
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>Thunderstorm</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-TwilightMoon</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>TwilightMoon</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-TwilightZone</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>TwilightZone</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -195,29 +141,11 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-Asteroid</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>AsteroidiPad</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
 			<key>AppIcon-CarminePink</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>CarminePinkiPad</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-CloudyDay</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>CloudyDayiPad</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -240,20 +168,11 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-Malachite</key>
+			<key>AppIcon-Mango</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>MalachiteiPad</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-Mandarin</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>MandariniPad</string>
+					<string>MangoiPad</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -285,15 +204,6 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-Pride</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>PrideiPad</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
 			<key>AppIcon-RainDrop</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -303,11 +213,11 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-Sandstorm</key>
+			<key>AppIcon-SpringGreen</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>SandstormiPad</string>
+					<string>SpringGreeniPad</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -317,24 +227,6 @@
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>ThunderstormiPad</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-TwilightMoon</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>TwilightMooniPad</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-TwilightZone</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>TwilightZoneiPad</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>

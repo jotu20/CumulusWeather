@@ -160,21 +160,29 @@ class PreferencesTableViewController: UITableViewController,  UITextFieldDelegat
     }
     
     func setupObjectColors() {
+        var color: UIColor?
         if defaults.string(forKey: "userSavedColorString") == "Mango" {
-            twentyfourHourClockSwitch.onTintColor = mango
+            color = mango
         } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
-            twentyfourHourClockSwitch.onTintColor = maximumRed
+            color = maximumRed
         } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
-            twentyfourHourClockSwitch.onTintColor = dodgerBlue
+            color = dodgerBlue
         } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
-            twentyfourHourClockSwitch.onTintColor = plumpPurple
+            color = plumpPurple
         } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-            twentyfourHourClockSwitch.onTintColor = carminePink
+            color = carminePink
         } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
-            twentyfourHourClockSwitch.onTintColor = springGreen
+            color = springGreen
         } else {
-            twentyfourHourClockSwitch.onTintColor = dodgerBlue
+            color = dodgerBlue
         }
+        
+        twentyfourHourClockSwitch.onTintColor = color
+        defaultHourlyConditionTextField.textColor = color
+        defaultDailyConditionTextField.textColor = color
+        defaultWidgetSlot1TextField.textColor = color
+        defaultWidgetSlot2TextField.textColor = color
+        dataSourceTextField.textColor = color
     }
     
     @IBAction func twentyFourHourClockSwitchTapped(_ sender: UISwitch) {

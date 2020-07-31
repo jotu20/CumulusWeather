@@ -43,26 +43,36 @@ class DarkModeTableViewController: UITableViewController {
     @IBAction func automaticTapped(_ sender: UITapGestureRecognizer) {
         setSelectedCheckMark(type: "Auto")
     }
+    
     @IBAction func systemTapped(_ sender: UITapGestureRecognizer) {
         setSelectedCheckMark(type: "System")
-        overrideUserInterfaceStyle = .unspecified
     }
+    
     @IBAction func onTapped(_ sender: UITapGestureRecognizer) {
         setSelectedCheckMark(type: "On")
-        overrideUserInterfaceStyle = .dark
     }
+    
     @IBAction func offTapped(_ sender: UITapGestureRecognizer) {
         setSelectedCheckMark(type: "Off")
-        overrideUserInterfaceStyle = .light
     }
     
     @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
+        setSelectedCheckMark(type: defaults.string(forKey: "darkMode")!)
         dismiss(animated: true, completion: nil)
     }
     
     func setSelectedCheckMark(type: String) {
         if type == "Auto" {
             setTableViewCellColor(tableCell: automaticTableViewCell)
+            if currentCondition.contains("night") {
+                overrideUserInterfaceStyle = .dark
+                self.navigationController?.navigationBar.barTintColor = .systemGray6
+                self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            } else {
+                overrideUserInterfaceStyle = .light
+                self.navigationController?.navigationBar.barTintColor = UIColor.white
+                self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+            }
             
             defaults.set("Auto", forKey: "darkMode")
             if defaults.string(forKey: "darkMode") == "Auto" {
@@ -75,6 +85,7 @@ class DarkModeTableViewController: UITableViewController {
 
         if type == "System" {
             setTableViewCellColor(tableCell: systemTableViewCell)
+            overrideUserInterfaceStyle = .unspecified
 
             defaults.set("System", forKey: "darkMode")
             if defaults.string(forKey: "darkMode") == "System" {
@@ -87,6 +98,9 @@ class DarkModeTableViewController: UITableViewController {
 
         if type == "On" {
             setTableViewCellColor(tableCell: onTableViewCell)
+            overrideUserInterfaceStyle = .dark
+            self.navigationController?.navigationBar.barTintColor = .systemGray6
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
 
             defaults.set("On", forKey: "darkMode")
             if defaults.string(forKey: "darkMode") == "On" {
@@ -99,6 +113,9 @@ class DarkModeTableViewController: UITableViewController {
 
         if type == "Off" {
             setTableViewCellColor(tableCell: offTableViewCell)
+            overrideUserInterfaceStyle = .light
+            self.navigationController?.navigationBar.barTintColor = UIColor.white
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
 
             defaults.set("Off", forKey: "darkMode")
             if defaults.string(forKey: "darkMode") == "Off" {

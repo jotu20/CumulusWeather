@@ -59,25 +59,21 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     @IBOutlet weak var dayOneDate: UILabel!
     @IBOutlet weak var dayOneCondition: UIImageView!
     @IBOutlet weak var dayOneHighLow: UILabel!
-    @IBOutlet weak var dayOnePrecipLabel: UILabel!
     
     // Day Two
     @IBOutlet weak var dayTwoDate: UILabel!
     @IBOutlet weak var dayTwoCondition: UIImageView!
     @IBOutlet weak var dayTwoHighLow: UILabel!
-    @IBOutlet weak var dayTwoPrecipLabel: UILabel!
     
     // Day Three
     @IBOutlet weak var dayThreeDate: UILabel!
     @IBOutlet weak var dayThreeCondition: UIImageView!
     @IBOutlet weak var dayThreeHighLow: UILabel!
-    @IBOutlet weak var dayThreePrecipLabel: UILabel!
     
     // Day Four
     @IBOutlet weak var dayFourDate: UILabel!
     @IBOutlet weak var dayFourCondition: UIImageView!
     @IBOutlet weak var dayFourHighLow: UILabel!
-    @IBOutlet weak var dayFourPrecipLabel: UILabel!
     
     // MARK: - Set labels
     func setWidgetSlot(setting: String, label: UILabel!) {
@@ -153,28 +149,24 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         hour5Value.text = "\(tempHour15)°"
         
         // Day One
-        dayOneDate.text = "\(dayZeroDayString)"
+        dayOneDate.text = "\(dayZeroDayString.capitalizingFirstLetter())"
         dayOneCondition.image = UIImage(named: weatherCondition(condition: weatherCondition0, type: "daily"))
         dayOneHighLow.text = "\(dayZeroHigh)°/\(dayZeroLow)°"
-        dayOnePrecipLabel.text = "\(dayZeroPrecip)%"
         
         // Day Two
-        dayTwoDate.text = "\(dayOneDayString)"
+        dayTwoDate.text = "\(dayOneDayString.capitalizingFirstLetter())"
         dayTwoCondition.image = UIImage(named: weatherCondition(condition: weatherCondition1, type: "daily"))
         dayTwoHighLow.text = "\(dayOneHigh)°/\(dayOneLow)°"
-        dayTwoPrecipLabel.text = "\(dayOnePrecip)%"
         
         // Day Three
-        dayThreeDate.text = "\(dayTwoDayString)"
+        dayThreeDate.text = "\(dayTwoDayString.capitalizingFirstLetter())"
         dayThreeCondition.image = UIImage(named: weatherCondition(condition: weatherCondition2, type: "daily"))
         dayThreeHighLow.text = "\(dayTwoHigh)°/\(dayTwoLow)°"
-        dayThreePrecipLabel.text = "\(dayTwoPrecip)%"
         
         // Day Four
-        dayFourDate.text = "\(dayThreeDayString)"
+        dayFourDate.text = "\(dayThreeDayString.capitalizingFirstLetter())"
         dayFourCondition.image = UIImage(named: weatherCondition(condition: weatherCondition3, type: "daily"))
         dayFourHighLow.text = "\(dayThreeHigh)°/\(dayThreeLow)°"
-        dayFourPrecipLabel.text = "\(dayThreePrecip)%"
     }
     
     @IBAction func openApplicationTapped(_ sender: UITapGestureRecognizer) {
@@ -210,7 +202,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             timeStackView.isHidden = true
         } else {
             //expanded
-            self.preferredContentSize = CGSize(width: 0, height: 300)
+            self.preferredContentSize = CGSize(width: 0, height: 280)
             timeStackView.isHidden = false
         }
     }

@@ -21,32 +21,13 @@ class CumulusPlusTableViewController: UITableViewController {
         self.navigationItem.title = "Cumulus+"
         self.navigationController?.isNavigationBarHidden = false
         weatherLoaded = true
+        setupObjectColors()
         
         let screenSize = UIScreen.main.bounds
         let screenHeight = screenSize.height
         if screenHeight == 568 {
             self.cumulusPlusTextViewWidth.constant = 300
             self.cumulusPlusTextViewHeight.constant = 143
-        }
-        
-        if defaults.string(forKey: "userSavedColorString") == "Mango" {
-            cumulusPlusMonthlyButton.backgroundColor = mango
-            cumulusPlusYearlyButton.backgroundColor = mango
-        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
-            cumulusPlusMonthlyButton.backgroundColor = maximumRed
-            cumulusPlusYearlyButton.backgroundColor = maximumRed
-        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
-            cumulusPlusMonthlyButton.backgroundColor = dodgerBlue
-            cumulusPlusYearlyButton.backgroundColor = dodgerBlue
-        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
-            cumulusPlusMonthlyButton.backgroundColor = plumpPurple
-            cumulusPlusYearlyButton.backgroundColor = plumpPurple
-        } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
-            cumulusPlusMonthlyButton.backgroundColor = springGreen
-            cumulusPlusYearlyButton.backgroundColor = springGreen
-        } else {
-            cumulusPlusMonthlyButton.backgroundColor = dodgerBlue
-            cumulusPlusYearlyButton.backgroundColor = dodgerBlue
         }
         
         cumulusPlusMonthlyButton.layer.cornerRadius = 10
@@ -89,6 +70,28 @@ class CumulusPlusTableViewController: UITableViewController {
             setupBarButtonColor(button: cancelBarButton)
             self.navigationItem.leftBarButtonItem = cancelBarButton
         }
+    }
+    
+    func setupObjectColors() {
+        var color: UIColor?
+        if defaults.string(forKey: "userSavedColorString") == "Mango" {
+            color = mango
+        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
+            color = maximumRed
+        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
+            color = dodgerBlue
+        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
+            color = plumpPurple
+        } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
+            color = carminePink
+        } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
+            color = springGreen
+        } else {
+            color = dodgerBlue
+        }
+        
+        cumulusPlusMonthlyButton.backgroundColor = color
+        cumulusPlusYearlyButton.backgroundColor = color
     }
 
     @IBAction func cumulusPlusMonthlyButtonTapped(_ sender: UIButton) {

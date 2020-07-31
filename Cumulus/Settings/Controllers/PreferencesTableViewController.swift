@@ -177,6 +177,7 @@ class PreferencesTableViewController: UITableViewController,  UITextFieldDelegat
             color = dodgerBlue
         }
         
+        self.navigationController?.navigationBar.tintColor = color
         twentyfourHourClockSwitch.onTintColor = color
         defaultHourlyConditionTextField.textColor = color
         defaultDailyConditionTextField.textColor = color

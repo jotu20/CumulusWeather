@@ -429,7 +429,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     // MARK: - Set daily outlets
     func setDayLabelAndIcons(dayLabel: UILabel!, dayConditionIcon: UIImageView!, dayConditionLabel: UILabel!, dayLowLabel: UILabel!, dayHighLabel: UILabel!, dayString: String, dateString: String, dayConditionIconString: String, dayConditionType: String, dayConditionValue: Int, dayLow: Int, dayHigh: Int) {
         
-        dayLabel.text = "\(dayString)\n\(dateString)"
+        dayLabel.text = "\(dayString.capitalizingFirstLetter())\n\(dateString)"
         dayConditionIcon.image = UIImage(named: weatherCondition(condition: dayConditionIconString, type: "daily"))
         dayConditionLabel.text = "\(dayConditionType) \(dayConditionValue)%"
         dayLowLabel.text = "\(dayLow)°"
@@ -511,7 +511,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         var day9Value: Int = 0
         
         if type?.contains("Precip") == true {
-            typeString = "Precip."
+            typeString = "Precipitation"
             
             day0Value = dayZeroPrecip
             day1Value = dayOnePrecip
@@ -575,7 +575,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         }
         
         conditionSlotLabel0.text = "Feels like \(apparentTemperature)°"
-        conditionSlotLabel1.text = "Precip. \(precipitation)%"
+        conditionSlotLabel1.text = "Precipitation \(precipitation)%"
 //        accumulationLabel.text = "Accum. \(precipAccumulation)\(unitsPrecipitation)"
 //        humidityLabel.text = "Humd. \(humidity)%"
 //        sunriseLabel.text = "Sunrise \(sunrise)"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -20,7 +20,7 @@
             <objects>
                 <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="Cumulus_Today" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="280"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="J2W-rh-epn">
@@ -210,47 +210,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="bCX-aX-9lo"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="yHV-EH-rAK"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Fyf-H8-Azg">
-                                <rect key="frame" x="5" y="262" width="340" height="23"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfE-he-CVH">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="23"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="PuM-BX-Z3o"/>
-                                            <constraint firstAttribute="height" constant="23" id="VNt-RH-DC2"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8s-Qn-7WU">
-                                        <rect key="frame" x="90" y="0.0" width="70" height="23"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="WRV-1i-gtW"/>
-                                            <constraint firstAttribute="height" constant="23" id="op9-kf-OOX"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcX-6Y-RRx">
-                                        <rect key="frame" x="180" y="0.0" width="70" height="23"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="23" id="sKf-38-RGs"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="zwq-kp-iZM"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LS3-7L-ekn">
-                                        <rect key="frame" x="270" y="0.0" width="70" height="23"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="23" id="54D-64-0cW"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="kcJ-hR-WzN"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                         <nil key="highlightedColor"/>
@@ -469,14 +428,11 @@
                         <constraints>
                             <constraint firstItem="RjC-fy-j4T" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="3.5" id="0xM-d8-0Of"/>
                             <constraint firstItem="MSQ-ui-A0X" firstAttribute="top" secondItem="2kh-eI-hCX" secondAttribute="bottom" constant="2" id="55z-4q-S5y"/>
-                            <constraint firstItem="Fyf-H8-Azg" firstAttribute="top" secondItem="QDL-BI-8gP" secondAttribute="bottom" constant="2" id="5ne-fC-oZ4"/>
                             <constraint firstItem="2kh-eI-hCX" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="5" id="8s0-dL-mpJ"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="QDL-BI-8gP" secondAttribute="trailing" constant="5" id="9HF-FB-1cd"/>
                             <constraint firstItem="2kh-eI-hCX" firstAttribute="top" secondItem="oX3-Bu-9tc" secondAttribute="bottom" constant="10" id="DSk-Wv-iii"/>
-                            <constraint firstItem="Fyf-H8-Azg" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="5" id="DV9-We-WlQ"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="J2W-rh-epn" secondAttribute="trailing" constant="2" id="MCh-dp-Thy"/>
                             <constraint firstItem="OEg-Kx-cWa" firstAttribute="trailing" secondItem="ssy-KU-ocm" secondAttribute="trailing" id="Mrj-Vn-Wsr"/>
-                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="Fyf-H8-Azg" secondAttribute="trailing" constant="5" id="OVp-g9-5Jo"/>
                             <constraint firstItem="oX3-Bu-9tc" firstAttribute="top" secondItem="OEg-Kx-cWa" secondAttribute="bottom" constant="2" id="QkQ-qk-02o"/>
                             <constraint firstItem="OEg-Kx-cWa" firstAttribute="top" secondItem="RjC-fy-j4T" secondAttribute="bottom" constant="2" id="Rlk-tU-tbg"/>
                             <constraint firstItem="J2W-rh-epn" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="15" id="V5F-3Q-km0"/>
@@ -499,7 +455,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="350" height="300"/>
+                    <size key="freeformSize" width="350" height="280"/>
                     <connections>
                         <outlet property="conditionSlot1Label" destination="T6l-Ki-jk5" id="DDV-kc-OwU"/>
                         <outlet property="conditionSlot2Label" destination="pde-rA-64l" id="Dn5-ks-kLl"/>
@@ -509,19 +465,15 @@
                         <outlet property="dayFourCondition" destination="bot-dR-4xV" id="RtH-og-Kes"/>
                         <outlet property="dayFourDate" destination="Yx4-t3-NKW" id="SVI-bC-xxd"/>
                         <outlet property="dayFourHighLow" destination="JJU-8s-vQc" id="2Du-PG-KO2"/>
-                        <outlet property="dayFourPrecipLabel" destination="LS3-7L-ekn" id="4Mv-eg-HDG"/>
                         <outlet property="dayOneCondition" destination="i8Z-kn-eFw" id="McZ-xS-ITe"/>
                         <outlet property="dayOneDate" destination="ePP-Xi-pIc" id="gKA-a2-w5w"/>
                         <outlet property="dayOneHighLow" destination="aLp-zA-BN7" id="zRS-xN-Rgb"/>
-                        <outlet property="dayOnePrecipLabel" destination="jfE-he-CVH" id="iMi-8N-Y8c"/>
                         <outlet property="dayThreeCondition" destination="gYD-Wm-B5t" id="lus-jF-atr"/>
                         <outlet property="dayThreeDate" destination="nNY-XQ-BTc" id="c1h-GY-fK7"/>
                         <outlet property="dayThreeHighLow" destination="lfD-kf-02c" id="aiI-I6-yVo"/>
-                        <outlet property="dayThreePrecipLabel" destination="RcX-6Y-RRx" id="4YL-sM-EEU"/>
                         <outlet property="dayTwoCondition" destination="eR5-NZ-QFV" id="2Ke-Oi-xRn"/>
                         <outlet property="dayTwoDate" destination="YNc-6g-VQE" id="9Cd-n0-4fL"/>
                         <outlet property="dayTwoHighLow" destination="Vzs-Ot-BMZ" id="0aj-wO-Chu"/>
-                        <outlet property="dayTwoPrecipLabel" destination="i8s-Qn-7WU" id="bIi-ZL-9Nj"/>
                         <outlet property="highAndLowTemperatureLabel" destination="h1d-Ya-HbT" id="O3l-ec-RdZ"/>
                         <outlet property="hour0Image" destination="8C5-fu-GDF" id="dHb-ba-XFg"/>
                         <outlet property="hour0Time" destination="JBv-Dq-ulT" id="R6U-jW-9sN"/>

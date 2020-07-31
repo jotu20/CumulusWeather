@@ -625,7 +625,7 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VOg-Xt-6s0">
-                                                <rect key="frame" x="8" y="125.5" width="359" height="1420.5"/>
+                                                <rect key="frame" x="8" y="125.5" width="359" height="1271.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The following open source components were used in the making of Cumulus:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWR-w4-q9j">
                                                         <rect key="frame" x="0.0" y="0.0" width="359" height="50.5"/>
@@ -658,9 +658,9 @@
                                                         </variation>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rtU-6u-H22">
-                                                        <rect key="frame" x="0.0" y="70.5" width="359" height="665"/>
+                                                        <rect key="frame" x="0.0" y="70.5" width="359" height="590.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forecast IO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hF2-WS-xnP">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forecast IO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hF2-WS-xnP">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="359" id="EB3-Vx-5cB"/>
@@ -687,12 +687,12 @@
                                                                 </variation>
                                                             </label>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wry-IM-fhk">
-                                                                <rect key="frame" x="0.0" y="20" width="359" height="645"/>
+                                                                <rect key="frame" x="0.0" y="20" width="359" height="570.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="359" id="al2-mW-YXC">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="752"/>
                                                                     </constraint>
-                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="645" id="iza-nF-R6V">
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="545" id="iza-nF-R6V">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="305"/>
                                                                     </constraint>
                                                                 </constraints>
@@ -706,9 +706,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ceb-Bu-Xkz">
-                                                        <rect key="frame" x="0.0" y="755.5" width="359" height="665"/>
+                                                        <rect key="frame" x="0.0" y="681" width="359" height="590.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SwiftyStoreKit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvV-IG-twQ">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SwiftyStoreKit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvV-IG-twQ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="3aK-bi-sck"/>
@@ -735,9 +735,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                 </variation>
                                                             </label>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0M-AJ-nYj">
-                                                                <rect key="frame" x="0.0" y="20" width="359" height="645"/>
+                                                                <rect key="frame" x="0.0" y="20" width="359" height="570.5"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="645" id="2Zk-Ke-PQP">
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="545" id="2Zk-Ke-PQP">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="305"/>
                                                                     </constraint>
                                                                     <constraint firstAttribute="width" constant="359" id="HWF-Zw-rPa">
@@ -928,7 +928,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <scene sceneID="JL8-bA-TNE">
             <objects>
                 <tableViewController modalPresentationStyle="fullScreen" clearsSelectionOnViewWillAppear="NO" id="QiY-m3-k5E" customClass="PreferencesTableViewController" customModule="Cumulus" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="static" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0IO-by-swS">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" dataMode="static" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0IO-by-swS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -1574,8 +1574,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <scene sceneID="GcP-vx-IuH">
             <objects>
                 <tableViewController modalPresentationStyle="fullScreen" id="0ch-b6-AQN" customClass="CumulusPlusTableViewController" customModule="Cumulus" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h9A-Vh-50L">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h9A-Vh-50L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="0ln-9K-IM0">
@@ -1914,7 +1914,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <scene sceneID="Y2n-wC-74d">
             <objects>
                 <tableViewController modalPresentationStyle="fullScreen" clearsSelectionOnViewWillAppear="NO" id="hGK-qV-2oh" customClass="SiriShortcutsTableViewController" customModule="Cumulus" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="static" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" allowsSelection="NO" rowHeight="120" sectionHeaderHeight="18" sectionFooterHeight="18" id="1fS-FX-9aM">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" dataMode="static" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" allowsSelection="NO" rowHeight="120" sectionHeaderHeight="18" sectionFooterHeight="18" id="1fS-FX-9aM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -2025,7 +2025,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0lf-BN-8AW">
                                                         <rect key="frame" x="0.0" y="0.0" width="359" height="140"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMo-2L-aGo">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMo-2L-aGo">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="678" id="Ooy-eH-cTY">
@@ -2071,7 +2071,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="huN-XC-nav">
                                                         <rect key="frame" x="0.0" y="160" width="359" height="238"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqa-qf-LE3">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqa-qf-LE3">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="20" id="BIC-xF-VCW"/>
@@ -2119,7 +2119,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LLQ-0W-mhI">
                                                         <rect key="frame" x="0.0" y="418" width="359" height="310"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information Collection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYX-wo-RZJ">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information Collection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYX-wo-RZJ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="20" id="CCZ-Ku-DCE"/>
@@ -2167,7 +2167,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Lp-yD-VMr">
                                                         <rect key="frame" x="0.0" y="748" width="359" height="238"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscriptions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whk-OC-UTE">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscriptions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whk-OC-UTE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="678" id="1se-8o-Slg">
@@ -2215,7 +2215,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SGA-vn-PTH">
                                                         <rect key="frame" x="0.0" y="1006" width="359" height="200"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analytics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6y-rb-moa">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analytics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6y-rb-moa">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="359" id="9zn-AZ-57D"/>
@@ -2263,7 +2263,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C2q-Gf-71u">
                                                         <rect key="frame" x="0.0" y="1226" width="359" height="86.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBj-Pw-y14">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBj-Pw-y14">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="20" id="2Gy-W1-tzh"/>
@@ -2864,7 +2864,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <outlet property="dodgerBlueTableCell" destination="m5O-7L-l7c" id="eLz-x4-KTV"/>
                         <outlet property="eightBitTableCell" destination="kVc-xA-eLm" id="rCJ-2w-dD3"/>
                         <outlet property="lightsOutTableCell" destination="aT9-xf-6R6" id="V9d-pc-1Eb"/>
-                        <outlet property="mandarinTableCell" destination="2cy-hp-Ho5" id="i02-PT-VM4"/>
+                        <outlet property="mangoTableCell" destination="2cy-hp-Ho5" id="TIf-AM-jRZ"/>
                         <outlet property="maximumRedTableCell" destination="eQD-3U-hJv" id="OFO-wG-GZa"/>
                         <outlet property="mightyUmbrellaTableCell" destination="7Wf-BS-94o" id="rSu-z8-4FP"/>
                         <outlet property="plumpPurpleTableCell" destination="Gbb-3X-DRd" id="Eyc-kg-xdf"/>
@@ -2877,7 +2877,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pb-Dq-RAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="e1y-t4-VfO">
                     <connections>
-                        <action selector="mandarinTapped:" destination="rOe-pR-J44" id="Q7f-mC-h7e"/>
+                        <action selector="mangoTapped:" destination="rOe-pR-J44" id="ut1-YF-5f2"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="uTp-y2-vwo">
@@ -3035,7 +3035,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mandarin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7Q-jZ-RFw">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mango" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7Q-jZ-RFw">
                                                     <rect key="frame" x="82" y="13.5" width="180" height="43.5"/>
                                                     <gestureRecognizers/>
                                                     <constraints>
@@ -4523,9 +4523,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <segue reference="Jw2-4q-mDz"/>
         <segue reference="eND-aD-Wtj"/>
         <segue reference="u9y-Cd-8dt"/>
-        <segue reference="KWq-d0-aBj"/>
+        <segue reference="RbQ-av-C2d"/>
         <segue reference="Qwj-yP-XWX"/>
-        <segue reference="JCx-OY-Uid"/>
+        <segue reference="1AL-vL-FWU"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="8-Bit icon" width="50" height="50"/>

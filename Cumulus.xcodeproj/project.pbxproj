@@ -263,7 +263,6 @@
 		CFDEEC1420E26ED900BA5EA5 /* Cumulus Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CFDEEC0820E26ED900BA5EA5 /* Cumulus Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CFE600CF20E3EFFD0057D914 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDEEC0C20E26ED900BA5EA5 /* TodayViewController.swift */; };
 		CFEA0F7C24D437B100E62E5F /* WeatherUnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA0F7B24D437B100E62E5F /* WeatherUnitsViewController.swift */; };
-		CFEA0F7E24D43AA000E62E5F /* DarkModeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA0F7D24D43AA000E62E5F /* DarkModeTableViewController.swift */; };
 		CFEE78B024705168001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
 		CFEE78B124705169001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
 		CFEE78B22470516A001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
@@ -428,7 +427,6 @@
 		CFDEEC1120E26ED900BA5EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFDEEC1A20E26F3400BA5EA5 /* Cumulus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cumulus.entitlements; sourceTree = "<group>"; };
 		CFEA0F7B24D437B100E62E5F /* WeatherUnitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUnitsViewController.swift; sourceTree = "<group>"; };
-		CFEA0F7D24D43AA000E62E5F /* DarkModeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeTableViewController.swift; sourceTree = "<group>"; };
 		CFF0A95E242E92DB00FDDAF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Base; path = Base.lproj/Cumulus.entitlements; sourceTree = "<group>"; };
 		CFFB787620DF0B44008216F8 /* License */ = {isa = PBXFileReference; lastKnownFileType = text; path = License; sourceTree = "<group>"; };
 		E2A3A90AF22391FE320C990F /* Pods_Cumulus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -622,7 +620,6 @@
 				CFC186142131B8A800F56AD0 /* CumulusProTableViewController.swift */,
 				CFAB4445211F3A2000A7E3CB /* ForecastDataTableViewController.swift */,
 				CFEA0F7B24D437B100E62E5F /* WeatherUnitsViewController.swift */,
-				CFEA0F7D24D43AA000E62E5F /* DarkModeTableViewController.swift */,
 				CF4A0E602108B5580061CAAD /* AppIconTableViewController.swift */,
 				CFD790D92151C4CD007E489D /* ColorThemeTableViewController.swift */,
 				CF9477482167DF0200DA8B38 /* SiriShortcutsTableViewController.swift */,
@@ -1322,7 +1319,6 @@
 				CF9477492167DF0200DA8B38 /* SiriShortcutsTableViewController.swift in Sources */,
 				CFAB4446211F3A2000A7E3CB /* ForecastDataTableViewController.swift in Sources */,
 				CFD1CD2320EE9544004ED831 /* SettingsTableViewController.swift in Sources */,
-				CFEA0F7E24D43AA000E62E5F /* DarkModeTableViewController.swift in Sources */,
 				CFAF60D7242E48E1004FB831 /* SettingOptions.swift in Sources */,
 				CFC186152131B8A800F56AD0 /* CumulusProTableViewController.swift in Sources */,
 				CFAF60D3242E48E1004FB831 /* InputFunctions.swift in Sources */,

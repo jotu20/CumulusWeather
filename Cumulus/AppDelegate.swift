@@ -91,22 +91,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("USA", forKey: "setUnits")
         }
         
-        if defaults.string(forKey: "darkMode") == nil {
-            defaults.set("System", forKey: "darkMode")
-        }
-        
-        if defaults.string(forKey: "darkMode") == "Auto" {
-            if currentCondition.contains("night") {
-               window?.overrideUserInterfaceStyle = .dark
-            } else {
-                window?.overrideUserInterfaceStyle = .light
-            }
-        } else if defaults.string(forKey: "darkMode") == "On" {
-            window?.overrideUserInterfaceStyle = .dark
-        } else if defaults.string(forKey: "darkMode") == "Off" {
-            window?.overrideUserInterfaceStyle = .light
-        }
-        
         if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Precip") == true) {
             defaults.set("Precip (%)", forKey: "defaultHourlyCondition")
         } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Temp") == true) {

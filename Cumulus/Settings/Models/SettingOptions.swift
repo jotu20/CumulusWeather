@@ -42,7 +42,6 @@ var twentyFourHourClockEnabled: Bool = false
 // App icon & Color Themes
 var userSavedAppIconString: String = ""
 var autoThemeEnabled: Bool = false
-var darkMode: String = ""
 
 // Colors
 var userChangedColorTheme: Bool = false

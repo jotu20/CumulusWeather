@@ -76,7 +76,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         weatherUnitsTableViewCell.detailTextLabel?.textColor = color
         weatherUnitsLabel.textColor = color
         
-        twentyFourHourClockSwitch.tintColor = color
+        twentyFourHourClockSwitch.onTintColor = color
         
         forecastDataTableViewCell.detailTextLabel?.textColor = color
         forecastDataLabel.textColor = color

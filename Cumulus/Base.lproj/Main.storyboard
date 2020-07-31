@@ -173,7 +173,6 @@
                                                     </constraints>
                                                     <connections>
                                                         <action selector="twentyFourHourClockSwitchTapped:" destination="QJa-Ff-GNZ" eventType="valueChanged" id="7gz-g5-uU0"/>
-                                                        <action selector="twentyFourHourClockSwitchTapped:" destination="QiY-m3-k5E" eventType="valueChanged" id="DbK-xS-W1Z"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>

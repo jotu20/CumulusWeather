@@ -15,8 +15,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     @IBOutlet weak var weatherUnitsTableViewCell: UITableViewCell!
     @IBOutlet weak var weatherUnitsLabel: UILabel!
     
-    @IBOutlet weak var darkModeTableViewCell: UITableViewCell!
-    @IBOutlet weak var darkModeLabel: UILabel!
+    @IBOutlet weak var twentyFourHourClockSwitch: UISwitch!
     
     @IBOutlet weak var cumulusPlusTableViewCell: UITableViewCell!
     @IBOutlet weak var cumulusPlusLabel: UILabel!
@@ -37,7 +36,6 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         self.tableView.tableFooterView = UIView(frame: .zero)
         
         weatherUnitsLabel.text = defaults.string(forKey: "weatherUnits")
-        darkModeLabel.text = defaults.string(forKey: "darkMode")
         
         forecastDataLabel.text = defaults.string(forKey: "dataSource")
         appIconLabel.text = defaults.string(forKey: "userSavedAppIconString")
@@ -78,8 +76,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         weatherUnitsTableViewCell.detailTextLabel?.textColor = color
         weatherUnitsLabel.textColor = color
         
-        darkModeTableViewCell.detailTextLabel?.textColor = color
-        darkModeLabel.textColor = color
+        twentyFourHourClockSwitch.tintColor = color
         
         forecastDataTableViewCell.detailTextLabel?.textColor = color
         forecastDataLabel.textColor = color
@@ -95,8 +92,16 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         performSegue(withIdentifier: "weatherUnitsPush", sender: nil)
     }
     
-    @IBAction func darkModeTapped(_ sender: UITapGestureRecognizer) {
-        performSegue(withIdentifier: "darkModePush", sender: nil)
+    @IBAction func twentyFourHourClockSwitchTapped(_ sender: UISwitch) {
+        weatherLoaded = false
+        clockChanged = true
+        if defaults.bool(forKey: "twentyFourHourClockEnabled") == false {
+            twentyFourHourClockSwitch.isOn = true
+            defaults.set(true, forKey: "twentyFourHourClockEnabled")
+        } else {
+            twentyFourHourClockSwitch.isOn = false
+            defaults.set(false, forKey: "twentyFourHourClockEnabled")
+        }
     }
     
     @IBAction func cumulusPlusTapped(_ sender: UITapGestureRecognizer) {

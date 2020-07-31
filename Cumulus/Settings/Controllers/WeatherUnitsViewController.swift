@@ -14,9 +14,7 @@ class WeatherUnitsTableViewController: UITableViewController, UITabBarController
     @IBOutlet weak var USATableViewCell: UITableViewCell!
     @IBOutlet weak var canadaTableViewCell: UITableViewCell!
     @IBOutlet weak var interantionalTableViewCell: UITableViewCell!
-    
-    @IBOutlet weak var twentyFourHourClockSwitch: UISwitch!
-    
+
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.delegate = self
         self.navigationController?.isNavigationBarHidden = false
@@ -25,7 +23,6 @@ class WeatherUnitsTableViewController: UITableViewController, UITabBarController
         
         weatherLoaded = true
         distanceChange = false
-        setupObjectColors()
 
         if defaults.string(forKey: "weatherUnits") == "USA" {
             self.setSelectedCheckMark(unitsString: "USA")
@@ -66,41 +63,8 @@ class WeatherUnitsTableViewController: UITableViewController, UITabBarController
         unitsChanged = true
     }
     
-    @IBAction func twentyFourHourClockSwitchTapped(_ sender: UISwitch) {
-        weatherLoaded = false
-        clockChanged = true
-        if defaults.bool(forKey: "twentyFourHourClockEnabled") == false {
-            twentyFourHourClockSwitch.isOn = true
-            defaults.set(true, forKey: "twentyFourHourClockEnabled")
-        } else {
-            twentyFourHourClockSwitch.isOn = false
-            defaults.set(false, forKey: "twentyFourHourClockEnabled")
-        }
-    }
-    
     @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
-    }
-    
-    func setupObjectColors() {
-        var color: UIColor?
-        if defaults.string(forKey: "userSavedColorString") == "Mango" {
-            color = mango
-        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
-            color = maximumRed
-        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
-            color = dodgerBlue
-        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
-            color = plumpPurple
-        } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-            color = carminePink
-        } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
-            color = springGreen
-        } else {
-            color = dodgerBlue
-        }
-        
-        twentyFourHourClockSwitch.onTintColor = color
     }
     
     func setSelectedCheckMark(unitsString: String) {

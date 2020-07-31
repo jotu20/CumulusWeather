@@ -36,12 +36,12 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         self.navigationController?.navigationBar.topItem?.title = "Settings"
         self.tableView.tableFooterView = UIView(frame: .zero)
         
-        weatherUnitsTableViewCell.detailTextLabel?.text = defaults.string(forKey: "weatherUnits")
-        darkModeTableViewCell.detailTextLabel?.text = defaults.string(forKey: "darkMode")
+        weatherUnitsLabel.text = defaults.string(forKey: "weatherUnits")
+        darkModeLabel.text = defaults.string(forKey: "darkMode")
         
-        forecastDataTableViewCell.detailTextLabel?.text = defaults.string(forKey: "dataSource")
-        appIconTableViewCell.detailTextLabel?.text = defaults.string(forKey: "userSavedAppIconString")
-        themeColorTableViewCell.detailTextLabel?.text = defaults.string(forKey: "userSavedColorString")
+        forecastDataLabel.text = defaults.string(forKey: "dataSource")
+        appIconLabel.text = defaults.string(forKey: "userSavedAppIconString")
+        themeColorLabel.text = defaults.string(forKey: "userSavedColorString")
         
         weatherLoaded = true
         distanceChange = false

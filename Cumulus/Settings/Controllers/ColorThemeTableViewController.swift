@@ -219,19 +219,17 @@ class ColorThemeTableViewController: UITableViewController {
             let autoTheme = Int(arc4random_uniform(UInt32(13)))
             
             if autoTheme == 0 || autoTheme == 1 {
+                defaults.set("Dodger Blue", forKey: "userSavedColorString")
+            } else if autoTheme == 2 {
                 defaults.set("Carmine Pink", forKey: "userSavedColorString")
             } else if autoTheme == 3 {
-                defaults.set("Dodger Blue", forKey: "userSavedColorString")
-            } else if autoTheme == 5 {
                 defaults.set("Mango", forKey: "userSavedColorString")
-            } else if autoTheme == 7 {
+            } else if autoTheme == 4 {
                 defaults.set("Maximum Red", forKey: "userSavedColorString")
-            } else if autoTheme == 8 {
+            } else if autoTheme == 5 {
                 defaults.set("Plump Purple", forKey: "userSavedColorString")
-            } else if autoTheme == 8 {
+            } else if autoTheme == 6 {
                 defaults.set("Spring Green", forKey: "userSavedColorString")
-            } else if autoTheme == 9 {
-                defaults.set("Auto", forKey: "userSavedColorString")
             } else {
                 defaults.set("Dodger Blue", forKey: "userSavedColorString")
             }
@@ -245,6 +243,5 @@ class ColorThemeTableViewController: UITableViewController {
             springGreenTableCell.accessoryType = .none
             autoThemeTableCell.accessoryType = .checkmark
         }
-        setTabBarColor(tabBar: tabBarController!)
     }
 }

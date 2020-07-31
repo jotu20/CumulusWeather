@@ -92,7 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         if defaults.string(forKey: "darkMode") == nil {
-            defaults.set("Auto", forKey: "darkMode")
+            defaults.set("System", forKey: "darkMode")
         }
         
         if defaults.string(forKey: "darkMode") == "Auto" {
@@ -105,8 +105,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.overrideUserInterfaceStyle = .dark
         } else if defaults.string(forKey: "darkMode") == "Off" {
             window?.overrideUserInterfaceStyle = .light
-        } else {
-            window?.overrideUserInterfaceStyle = .unspecified
         }
         
         if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Precip") == true) {

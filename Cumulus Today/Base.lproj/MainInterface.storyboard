@@ -267,61 +267,61 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="RjC-fy-j4T">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="RjC-fy-j4T">
                                 <rect key="frame" x="3.5" y="90" width="343" height="23"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00am" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBv-Dq-ulT">
-                                        <rect key="frame" x="0.0" y="0.0" width="33" height="23"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="33.5" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="33" id="Bgd-GO-scH"/>
                                             <constraint firstAttribute="height" constant="23" id="zp3-an-E8a"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00am" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEl-ch-oIr">
-                                        <rect key="frame" x="62" y="0.0" width="33" height="23"/>
+                                        <rect key="frame" x="62" y="0.0" width="33.5" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="850-qZ-CDJ"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="33" id="93D-sL-gcd"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00am" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0V-66-baL">
-                                        <rect key="frame" x="124" y="0.0" width="33" height="23"/>
+                                        <rect key="frame" x="124" y="0.0" width="33.5" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="MET-Vo-o8o"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="33" id="caO-QM-onr"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00am" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2f-bR-RZ0">
-                                        <rect key="frame" x="186" y="0.0" width="33" height="23"/>
+                                        <rect key="frame" x="185.5" y="0.0" width="33.5" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="Sb6-3W-bP1"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="33" id="ZZX-o9-DzO"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00am" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU8-Kc-Wmt">
-                                        <rect key="frame" x="248" y="0.0" width="33" height="23"/>
+                                        <rect key="frame" x="247.5" y="0.0" width="33.5" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="33" id="KcI-wj-msw"/>
                                             <constraint firstAttribute="height" constant="23" id="TbU-Av-Hkp"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00am" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cC-vy-Ydz">
-                                        <rect key="frame" x="310" y="0.0" width="33" height="23"/>
+                                        <rect key="frame" x="309.5" y="0.0" width="33.5" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="FWg-wO-taJ"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="33" id="xtP-m3-JXL"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>

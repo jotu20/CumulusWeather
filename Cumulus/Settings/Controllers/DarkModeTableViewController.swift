@@ -45,12 +45,15 @@ class DarkModeTableViewController: UITableViewController {
     }
     @IBAction func systemTapped(_ sender: UITapGestureRecognizer) {
         setSelectedCheckMark(type: "System")
+        overrideUserInterfaceStyle = .unspecified
     }
     @IBAction func onTapped(_ sender: UITapGestureRecognizer) {
         setSelectedCheckMark(type: "On")
+        overrideUserInterfaceStyle = .dark
     }
     @IBAction func offTapped(_ sender: UITapGestureRecognizer) {
         setSelectedCheckMark(type: "Off")
+        overrideUserInterfaceStyle = .light
     }
     
     @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {

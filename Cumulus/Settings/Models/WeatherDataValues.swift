@@ -36,11 +36,7 @@ var unitsTemperature: String = ""
 var unitsWindSpeed: String = ""
 var unitsDistance: String = ""
 var unitsPressure: String = ""
-
-var weatherUnitsUSA: Bool = false
-var weatherUnitsUK: Bool = false
-var weatherUnitsCanada: Bool = false
-var weatherUnitsInternational: Bool = false
+var weatherUnits: String = ""
 
 // All weather values
 // MARK: - Current weather values

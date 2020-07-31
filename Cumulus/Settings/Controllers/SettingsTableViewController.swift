@@ -8,19 +8,27 @@
 
 import UIKit
 import SafariServices
+import SwiftyStoreKit
 
 class SettingsTableViewController: UITableViewController, UITabBarControllerDelegate {
-
-    @IBOutlet weak var weatherUnitsUSATableCell: UITableViewCell!
-    @IBOutlet weak var weatherUnitsUKTableCell: UITableViewCell!
-    @IBOutlet weak var weatherUnitsCanadaTableCell: UITableViewCell!
-    @IBOutlet weak var weatherUnitsInternationalTableCell: UITableViewCell!
     
-    @IBOutlet weak var preferencesLabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var cumulusPlusLabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var reviewCumulusLabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var privacyPolicyLabelWidth: NSLayoutConstraint!
-    @IBOutlet weak var acknowledgementsLabelWidth: NSLayoutConstraint!
+    @IBOutlet weak var weatherUnitsTableViewCell: UITableViewCell!
+    @IBOutlet weak var weatherUnitsLabel: UILabel!
+    
+    @IBOutlet weak var darkModeTableViewCell: UITableViewCell!
+    @IBOutlet weak var darkModeLabel: UILabel!
+    
+    @IBOutlet weak var cumulusPlusTableViewCell: UITableViewCell!
+    @IBOutlet weak var cumulusPlusLabel: UILabel!
+    
+    @IBOutlet weak var forecastDataTableViewCell: UITableViewCell!
+    @IBOutlet weak var forecastDataLabel: UILabel!
+    
+    @IBOutlet weak var appIconTableViewCell: UITableViewCell!
+    @IBOutlet weak var appIconLabel: UILabel!
+    
+    @IBOutlet weak var themeColorTableViewCell: UITableViewCell!
+    @IBOutlet weak var themeColorLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.delegate = self
@@ -28,168 +36,125 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         self.navigationController?.navigationBar.topItem?.title = "Settings"
         self.tableView.tableFooterView = UIView(frame: .zero)
         
+        weatherUnitsTableViewCell.detailTextLabel?.text = defaults.string(forKey: "weatherUnits")
+        darkModeTableViewCell.detailTextLabel?.text = defaults.string(forKey: "darkMode")
+        
+        forecastDataTableViewCell.detailTextLabel?.text = defaults.string(forKey: "dataSource")
+        appIconTableViewCell.detailTextLabel?.text = defaults.string(forKey: "userSavedAppIconString")
+        themeColorTableViewCell.detailTextLabel?.text = defaults.string(forKey: "userSavedColorString")
+        
         weatherLoaded = true
         distanceChange = false
         potentialCustomer = false
+        setupObjectColors()
         
-        let screenSize = UIScreen.main.bounds
-        let screenHeight = screenSize.height
-        if screenHeight == 568 {
-            self.preferencesLabelWidth.constant = 300
-            self.cumulusPlusLabelWidth.constant = 300
-            self.reviewCumulusLabelWidth.constant = 300
-            self.privacyPolicyLabelWidth.constant = 300
-            self.acknowledgementsLabelWidth.constant = 300
-        } else if screenHeight == 736 || screenHeight == 896  {
-            // iPhone Plus
-            self.preferencesLabelWidth.constant = 375
-            self.cumulusPlusLabelWidth.constant = 375
-            self.reviewCumulusLabelWidth.constant = 375
-            self.privacyPolicyLabelWidth.constant = 375
-            self.acknowledgementsLabelWidth.constant = 375
-        }
-
-        if defaults.bool(forKey: "weatherUnitsUSA") == true {
-            self.setSelectedCheckMark(unitsString: "USA")
-        }
-        if defaults.bool(forKey: "weatherUnitsUK") == true {
-            self.setSelectedCheckMark(unitsString: "UK")
-        }
-        if defaults.bool(forKey: "weatherUnitsCanada") == true {
-            self.setSelectedCheckMark(unitsString: "Canada")
-        }
-        if defaults.bool(forKey: "weatherUnitsInternational") == true {
-            self.setSelectedCheckMark(unitsString: "International")
+        if defaults.bool(forKey: "cumulusPlus") == false {
+            forecastDataTableViewCell.isUserInteractionEnabled = false
+            appIconTableViewCell.isUserInteractionEnabled = false
+            themeColorTableViewCell.isUserInteractionEnabled = false
+        } else {
+            cumulusPlusLabel.text = "Restore Cumulus+"
         }
     }
     
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        let tabBarIndex = tabBarController.selectedIndex
+    func setupObjectColors() {
+        var color: UIColor?
+        if defaults.string(forKey: "userSavedColorString") == "Mango" {
+            color = mango
+        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
+            color = maximumRed
+        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
+            color = dodgerBlue
+        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
+            color = plumpPurple
+        } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
+            color = carminePink
+        } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
+            color = springGreen
+        } else {
+            color = dodgerBlue
+        }
         
-        if tabBarIndex == 0 && userChangedColorTheme == true {
-            setButtonColor()
+        weatherUnitsTableViewCell.detailTextLabel?.textColor = color
+        weatherUnitsLabel.textColor = color
+        
+        darkModeTableViewCell.detailTextLabel?.textColor = color
+        darkModeLabel.textColor = color
+        
+        forecastDataTableViewCell.detailTextLabel?.textColor = color
+        forecastDataLabel.textColor = color
+        
+        appIconTableViewCell.detailTextLabel?.textColor = color
+        appIconLabel.textColor = color
+        
+        themeColorTableViewCell.detailTextLabel?.textColor = color
+        themeColorLabel.textColor = color
+    }
+    
+    @IBAction func weatherUnitsTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "weatherUnitsPush", sender: nil)
+    }
+    
+    @IBAction func darkModeTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "darkModePush", sender: nil)
+    }
+    
+    @IBAction func cumulusPlusTapped(_ sender: UITapGestureRecognizer) {
+        if defaults.bool(forKey: "cumulusPlus") == false {
+            performSegue(withIdentifier: "cumulusPlusPush", sender: nil)
+        } else {
+            // Verify subscriptions
+            let cumulusPlusValidator = AppleReceiptValidator(service: .production, sharedSecret: "\(sharedSecret)")
+            SwiftyStoreKit.verifyReceipt(using: cumulusPlusValidator) { result in
+                switch result {
+                case .success(let receipt):
+                    let productIds = Set([ "com.josephszafarowicz.CumulusPlus.Monthly", "com.josephszafarowicz.CumulusPlus.Yearly",])
+                    let purchaseResult = SwiftyStoreKit.verifySubscriptions(productIds: productIds, inReceipt: receipt)
+                    switch purchaseResult {
+                    case .purchased(let expiryDate, let items):
+                        print("\(productIds) are valid until \(expiryDate)\n\(items)\n")
+                        defaults.set(true, forKey: "cumulusPlus")
+                    case .expired(let expiryDate, let items):
+                        print("\(productIds) are expired since \(expiryDate)\n\(items)\n")
+                        checkForCumulusPro()
+                    case .notPurchased:
+                        print("The user has never purchased \(productIds)")
+                        checkForCumulusPro()
+                    }
+                case .error(let error):
+                    print("Receipt verification failed: \(error)")
+                }
+            }
         }
     }
     
-    @IBAction func weatherUnitsUSATapped(_ sender: UITapGestureRecognizer) {
-        setSelectedCheckMark(unitsString: "USA")
-        weatherLoaded = false
-        unitsChanged = true
-    }
-    @IBAction func weatherUnitsUKTapped(_ sender: UITapGestureRecognizer) {
-        setSelectedCheckMark(unitsString: "UK")
-        weatherLoaded = false
-        unitsChanged = true
-    }
-    @IBAction func weatherUnitsCanadaTapped(_ sender: UITapGestureRecognizer) {
-        setSelectedCheckMark(unitsString: "Canada")
-        weatherLoaded = false
-        unitsChanged = true
-    }
-    @IBAction func weatherUnitsInternationalTapped(_ sender: UITapGestureRecognizer) {
-        setSelectedCheckMark(unitsString: "International")
-        weatherLoaded = false
-        unitsChanged = true
-    }
-
-    @IBAction func openPreferencesTapped(_ sender: UITapGestureRecognizer) {
-        weatherLoaded = true
-        performSegue(withIdentifier: "preferences", sender: nil)
-    }
-
-    @IBAction func cumulusPlusButtonTapped(_ sender: UITapGestureRecognizer) {
-        weatherLoaded = true
-        performSegue(withIdentifier: "cumulusPlus", sender: nil)
+    @IBAction func forecastDataTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "forecastDataPush", sender: nil)
     }
     
-    @IBAction func reviewCumulusButtonTapped(_ sender: UITapGestureRecognizer) {
-        weatherLoaded = true
+    @IBAction func appIconTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "appIconPush", sender: nil)
+    }
+    
+    @IBAction func themeColorTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "themeColorPush", sender: nil)
+    }
+    
+    @IBAction func siriShortcutsTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "siriShortcutsPush", sender: nil)
+    }
+    
+    @IBAction func privacyTermsTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "privacyTermsPush", sender: nil)
+    }
+    
+    @IBAction func acknowledgementsTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "acknowledgementsPush", sender: nil)
+    }
+    
+    @IBAction func reviewCumulusTapped(_ sender: UITapGestureRecognizer) {
         if let url = URL(string: "https://itunes.apple.com/app/id1441446893?action=write-review") {
             UIApplication.shared.open(url)
-        }
-    }
-
-    @IBAction func openPrivacyPolicy(_ sender: UITapGestureRecognizer) {
-        weatherLoaded = true
-        performSegue(withIdentifier: "privacyPolicy", sender: nil)
-    }
-
-    @IBAction func openAcknowledgements(_ sender: UITapGestureRecognizer) {
-        weatherLoaded = true
-        performSegue(withIdentifier: "acknowledgements", sender: nil)
-    }
-
-    func setSelectedCheckMark(unitsString: String) {
-        if unitsString == "USA" {
-            setTableViewCellColor(tableCell: weatherUnitsUSATableCell)
-            
-            defaults.set(true, forKey: "weatherUnitsUSA")
-            defaults.set(false, forKey: "weatherUnitsUK")
-            defaults.set(false, forKey: "weatherUnitsCanada")
-            defaults.set(false, forKey: "weatherUnitsInternational")
-            
-            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("USA", forKey: "setUnits")
-            
-            if defaults.bool(forKey: "weatherUnitsUSA") == true {
-                weatherUnitsUSATableCell.accessoryType = .checkmark
-                weatherUnitsUKTableCell.accessoryType = .none
-                weatherUnitsCanadaTableCell.accessoryType = .none
-                weatherUnitsInternationalTableCell.accessoryType = .none
-            }
-        }
-        
-        if unitsString == "UK" {
-            setTableViewCellColor(tableCell: weatherUnitsUKTableCell)
-            
-            defaults.set(false, forKey: "weatherUnitsUSA")
-            defaults.set(true, forKey: "weatherUnitsUK")
-            defaults.set(false, forKey: "weatherUnitsCanada")
-            defaults.set(false, forKey: "weatherUnitsInternational")
-            
-            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("UK", forKey: "setUnits")
-            
-            if defaults.bool(forKey: "weatherUnitsUK") == true {
-                weatherUnitsUSATableCell.accessoryType = .none
-                weatherUnitsUKTableCell.accessoryType = .checkmark
-                weatherUnitsCanadaTableCell.accessoryType = .none
-                weatherUnitsInternationalTableCell.accessoryType = .none
-            }
-        }
-        
-        if unitsString == "Canada" {
-            setTableViewCellColor(tableCell: weatherUnitsCanadaTableCell)
-            
-            defaults.set(false, forKey: "weatherUnitsUSA")
-            defaults.set(false, forKey: "weatherUnitsUK")
-            defaults.set(true, forKey: "weatherUnitsCanada")
-            defaults.set(false, forKey: "weatherUnitsInternational")
-            
-            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Canada", forKey: "setUnits")
-            
-            if defaults.bool(forKey: "weatherUnitsCanada") == true {
-                weatherUnitsUSATableCell.accessoryType = .none
-                weatherUnitsUKTableCell.accessoryType = .none
-                weatherUnitsCanadaTableCell.accessoryType = .checkmark
-                weatherUnitsInternationalTableCell.accessoryType = .none
-            }
-        }
-        
-        if unitsString == "International" {
-            setTableViewCellColor(tableCell: weatherUnitsInternationalTableCell)
-            
-            defaults.set(false, forKey: "weatherUnitsUSA")
-            defaults.set(false, forKey: "weatherUnitsUK")
-            defaults.set(false, forKey: "weatherUnitsCanada")
-            defaults.set(true, forKey: "weatherUnitsInternational")
-            
-            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("International", forKey: "setUnits")
-            
-            if defaults.bool(forKey: "weatherUnitsInternational") == true {
-                weatherUnitsUSATableCell.accessoryType = .none
-                weatherUnitsUKTableCell.accessoryType = .none
-                weatherUnitsCanadaTableCell.accessoryType = .none
-                weatherUnitsInternationalTableCell.accessoryType = .checkmark
-            }
         }
     }
 }

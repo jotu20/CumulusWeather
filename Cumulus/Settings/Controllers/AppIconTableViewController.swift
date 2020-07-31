@@ -62,6 +62,9 @@ class AppIconTableViewController: UITableViewController {
             potentialCustomer = true
         }
 
+        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AppIconTableViewController.doneBarButtonTapped))
+        setupBarButtonColor(button: doneBarButton)
+        self.navigationItem.rightBarButtonItem = doneBarButton
     }
     
     @IBAction func mangoTapped(_ sender: UITapGestureRecognizer) {
@@ -194,6 +197,10 @@ class AppIconTableViewController: UITableViewController {
             let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
     func setSelectedCheckMark(layerString: String, setIcon: Bool) {
@@ -486,7 +493,7 @@ class AppIconTableViewController: UITableViewController {
             springGreenTableCell.accessoryType = .none
             
             if setIcon == true {
-                UIApplication.shared.setAlternateIconName("AppIcon-RainDrop") { error in
+                UIApplication.shared.setAlternateIconName("AppIcon-Raindrop") { error in
                     if let error = error {
                         print(error.localizedDescription)
                     } else {

@@ -38,6 +38,10 @@ class SiriShortcutsTableViewController: UITableViewController {
         }
         
         self.tableView.tableFooterView = UIView(frame: .zero)
+        
+        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ColorThemeTableViewController.doneBarButtonTapped))
+        setupBarButtonColor(button: doneBarButton)
+        self.navigationItem.rightBarButtonItem = doneBarButton
 
         // Intent Siri Button
         let intent = ForecastIntent()
@@ -79,6 +83,10 @@ class SiriShortcutsTableViewController: UITableViewController {
                 os_log("Successfully donated interaction")
             }
         }
+    }
+    
+    @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
 }
 

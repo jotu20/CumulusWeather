@@ -45,7 +45,7 @@ class PrivacyAndTermsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
-        self.navigationItem.title = "Privacy/Terms"
+        self.navigationItem.title = "Privacy & Terms"
         weatherLoaded = true
         
         self.statement0TextView.text = "Cumulus takes your privacy and personal data seriously. Cumulus will only retrieve the least information that is necessary. Individual users are never tracked and personal data is never given to third parties."
@@ -108,21 +108,16 @@ class PrivacyAndTermsViewController: UIViewController {
         self.statementTitle4Width.constant = setWidth
         self.statementDescription4Width.constant = setWidth
         
-        if potentialCustomer == true {
-            let doneBarButton = UIButton.init(type: .custom)
-            doneBarButton.setTitle("Done", for: .normal)
-            doneBarButton.setTitleColor(UIColor.link, for: .normal)
-            doneBarButton.addTarget(self, action: #selector(PrivacyAndTermsViewController.returnTapped), for: UIControl.Event.touchUpInside)
-            let barButton = UIBarButtonItem(customView: doneBarButton)
-            self.navigationItem.rightBarButtonItem = barButton
-        }
+        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ColorThemeTableViewController.doneBarButtonTapped))
+        setupBarButtonColor(button: doneBarButton)
+        self.navigationItem.rightBarButtonItem = doneBarButton
     }
     
     // Set the labels for all corresponding statements
     func setLabels() {
-        let font = UIFont(name: "Oswald-Light", size: 17)
+        let font = UIFont.systemFont(ofSize: 17)
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: font!,
+            .font: font,
             .foregroundColor: UIColor.label,
         ]
         
@@ -131,11 +126,11 @@ class PrivacyAndTermsViewController: UIViewController {
 
         if linkWasSet {
             statement5TextView.attributedText = attributedString
+            statement5TextView.textAlignment = .center
         }
     }
     
-    @IBAction func returnTapped(_ sender: UIBarButtonItem) {
-        weatherLoaded = true
+    @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
 }

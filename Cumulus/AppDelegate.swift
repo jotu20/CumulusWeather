@@ -81,14 +81,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Precip (%)", forKey: "setDefaultWidgetSlot2")
         }
         
-        if (defaults.string(forKey: "dataSource") == nil) || (defaults.bool(forKey: "cumulusPlus") == false) || (defaults.string(forKey: "dataSource") == "AerisWeather") {
+        if (defaults.string(forKey: "dataSource") == nil) || (defaults.bool(forKey: "cumulusPlus") == false) {
             defaults.set("Dark Sky", forKey: "dataSource")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Dark Sky", forKey: "setDataSource")
         }
         
-        if defaults.bool(forKey: "weatherUnitsUSA") == false && defaults.bool(forKey: "weatherUnitsUK") == false && defaults.bool(forKey: "weatherUnitsCanada") == false && defaults.bool(forKey: "weatherUnitsInternational") == false {
-            defaults.set(true, forKey: "weatherUnitsUSA")
+        if defaults.string(forKey: "weatherUnits") == nil {
+            defaults.set("USA", forKey: "weatherUnits")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("USA", forKey: "setUnits")
+        }
+        
+        if defaults.string(forKey: "darkMode") == nil {
+            defaults.set("Auto", forKey: "darkMode")
+        }
+        
+        if defaults.string(forKey: "darkMode") == "Auto" {
+            if currentCondition.contains("night") {
+               window?.overrideUserInterfaceStyle = .dark
+            } else {
+                window?.overrideUserInterfaceStyle = .light
+            }
+        } else if defaults.string(forKey: "darkMode") == "On" {
+            window?.overrideUserInterfaceStyle = .dark
+        } else if defaults.string(forKey: "darkMode") == "Off" {
+            window?.overrideUserInterfaceStyle = .light
+        } else {
+            window?.overrideUserInterfaceStyle = .unspecified
         }
         
         if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Precip") == true) {
@@ -157,28 +175,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             defaults.set("Current condition", forKey: "defaultWidgetSlot2")
         }
         
-        if (defaults.bool(forKey: "cumulusPlus") == false) || (defaults.bool(forKey: "randomColorEnabled") == true) {
-            let randomTheme = Int(arc4random_uniform(UInt32(13)))
+        if (defaults.bool(forKey: "cumulusPlus") == false) || (defaults.bool(forKey: "autoThemeEnabled") == true) {
+            let autoTheme = Int(arc4random_uniform(UInt32(13)))
             
-            if randomTheme == 0 || randomTheme == 1 {
-                defaults.set("Carmine Pink", forKey: "userSavedColorString")
-            } else if randomTheme == 3 {
+            if autoTheme == 0 || autoTheme == 1 {
                 defaults.set("Dodger Blue", forKey: "userSavedColorString")
-            } else if randomTheme == 4 {
+            } else if autoTheme == 2 {
+                defaults.set("Carmine Pink", forKey: "userSavedColorString")
+            } else if autoTheme == 3 {
                 defaults.set("Mango", forKey: "userSavedColorString")
-            } else if randomTheme == 7 {
+            } else if autoTheme == 4 {
                 defaults.set("Maximum Red", forKey: "userSavedColorString")
-            } else if randomTheme == 8 {
+            } else if autoTheme == 5 {
                 defaults.set("Plump Purple", forKey: "userSavedColorString")
-            } else if randomTheme == 9 {
-                defaults.set("Random", forKey: "userSavedColorString")
-            } else if randomTheme == 10 {
+            } else if autoTheme == 6 {
                 defaults.set("Spring Green", forKey: "userSavedColorString")
             } else {
                 defaults.set("Dodger Blue", forKey: "userSavedColorString")
             }
         }
-        setButtonColor()
         
         return true
     }

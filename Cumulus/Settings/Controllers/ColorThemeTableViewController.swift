@@ -16,7 +16,7 @@ class ColorThemeTableViewController: UITableViewController {
     @IBOutlet weak var plumpPurpleTableCell: UITableViewCell!
     @IBOutlet weak var carminePinkTableCell: UITableViewCell!
     @IBOutlet weak var springGreenTableCell: UITableViewCell!
-    @IBOutlet weak var randomTableCell: UITableViewCell!
+    @IBOutlet weak var autoThemeTableCell: UITableViewCell!
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
@@ -29,6 +29,10 @@ class ColorThemeTableViewController: UITableViewController {
         if (defaults.bool(forKey: "cumulusPlus") == false) {
             potentialCustomer = true
         }
+        
+        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ColorThemeTableViewController.doneBarButtonTapped))
+        setupBarButtonColor(button: doneBarButton)
+        self.navigationItem.rightBarButtonItem = doneBarButton
     }
 
     func setColorTheme() {
@@ -109,14 +113,18 @@ class ColorThemeTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func randomTapped(_ sender: UITapGestureRecognizer) {
+    @IBAction func autoThemeTapped(_ sender: UITapGestureRecognizer) {
         if (defaults.bool(forKey: "cumulusPlus") == true) {
-            setSelectedCheckMark(layerString: "Random", setColor: true)
+            setSelectedCheckMark(layerString: "Auto", setColor: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
             present(controller, animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
     func setSelectedCheckMark(layerString: String, setColor: Bool) {
@@ -138,7 +146,7 @@ class ColorThemeTableViewController: UITableViewController {
             plumpPurpleTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .none
             springGreenTableCell.accessoryType = .none
-            randomTableCell.accessoryType = .none
+            autoThemeTableCell.accessoryType = .none
         }
 
         if layerString == "Maximum Red" {
@@ -150,7 +158,7 @@ class ColorThemeTableViewController: UITableViewController {
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .none
-            randomTableCell.accessoryType = .none
+            autoThemeTableCell.accessoryType = .none
         }
 
         if layerString == "Dodger Blue" {
@@ -163,7 +171,7 @@ class ColorThemeTableViewController: UITableViewController {
             plumpPurpleTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .none
             springGreenTableCell.accessoryType = .none
-            randomTableCell.accessoryType = .none
+            autoThemeTableCell.accessoryType = .none
         }
 
         if layerString == "Plump Purple" {
@@ -176,7 +184,7 @@ class ColorThemeTableViewController: UITableViewController {
             plumpPurpleTableCell.accessoryType = .checkmark
             carminePinkTableCell.accessoryType = .none
             springGreenTableCell.accessoryType = .none
-            randomTableCell.accessoryType = .none
+            autoThemeTableCell.accessoryType = .none
         }
         
         if layerString == "Carmine Pink" {
@@ -189,7 +197,7 @@ class ColorThemeTableViewController: UITableViewController {
             plumpPurpleTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .checkmark
             springGreenTableCell.accessoryType = .none
-            randomTableCell.accessoryType = .none
+            autoThemeTableCell.accessoryType = .none
         }
         
         if layerString == "Spring Green" {
@@ -202,32 +210,32 @@ class ColorThemeTableViewController: UITableViewController {
             plumpPurpleTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .none
             springGreenTableCell.accessoryType = .checkmark
-            randomTableCell.accessoryType = .none
+            autoThemeTableCell.accessoryType = .none
         }
 
-        if layerString == "Random" {
-            defaults.set(true, forKey: "randomColorEnabled")
+        if layerString == "Auto" {
+            defaults.set(true, forKey: "autoThemeEnabled")
 
-            let randomTheme = Int(arc4random_uniform(UInt32(13)))
+            let autoTheme = Int(arc4random_uniform(UInt32(13)))
             
-            if randomTheme == 0 || randomTheme == 1 {
+            if autoTheme == 0 || autoTheme == 1 {
                 defaults.set("Carmine Pink", forKey: "userSavedColorString")
-            } else if randomTheme == 3 {
+            } else if autoTheme == 3 {
                 defaults.set("Dodger Blue", forKey: "userSavedColorString")
-            } else if randomTheme == 5 {
+            } else if autoTheme == 5 {
                 defaults.set("Mango", forKey: "userSavedColorString")
-            } else if randomTheme == 7 {
+            } else if autoTheme == 7 {
                 defaults.set("Maximum Red", forKey: "userSavedColorString")
-            } else if randomTheme == 8 {
+            } else if autoTheme == 8 {
                 defaults.set("Plump Purple", forKey: "userSavedColorString")
-            } else if randomTheme == 8 {
+            } else if autoTheme == 8 {
                 defaults.set("Spring Green", forKey: "userSavedColorString")
-            } else if randomTheme == 9 {
-                defaults.set("Random", forKey: "userSavedColorString")
+            } else if autoTheme == 9 {
+                defaults.set("Auto", forKey: "userSavedColorString")
             } else {
                 defaults.set("Dodger Blue", forKey: "userSavedColorString")
             }
-            setTableViewCellColor(tableCell: randomTableCell)
+            setTableViewCellColor(tableCell: autoThemeTableCell)
 
             mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
@@ -235,7 +243,7 @@ class ColorThemeTableViewController: UITableViewController {
             plumpPurpleTableCell.accessoryType = .none
             carminePinkTableCell.accessoryType = .none
             springGreenTableCell.accessoryType = .none
-            randomTableCell.accessoryType = .checkmark
+            autoThemeTableCell.accessoryType = .checkmark
         }
         setTabBarColor(tabBar: tabBarController!)
     }

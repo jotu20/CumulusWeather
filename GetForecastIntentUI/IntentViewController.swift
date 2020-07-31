@@ -50,8 +50,8 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         self.highAndLowTemperatureLabel.text = "\(dayZeroHigh)°/\(dayZeroLow)°"
         self.currentConditionLabel.text = "\(weatherCondition(condition: currentCondition, type: "text"))"
         
-        self.precipitationLabel.text = "Precipitation \(precipitation)%"
-        self.precipitationAccumulationLabel.text = "Precip Accum \(precipAccumulation) \(unitsPrecipitation)"
+        self.precipitationLabel.text = "Precip. \(precipitation)%"
+        self.precipitationAccumulationLabel.text = "Accum. \(precipAccumulation) \(unitsPrecipitation)"
         
         self.humidityLabel.text = "Humidity \(humidity)%"
         self.uvIndexLabel.text = "UV Index \(uvIndex)"

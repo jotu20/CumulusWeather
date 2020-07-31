@@ -41,7 +41,8 @@ var twentyFourHourClockEnabled: Bool = false
 
 // App icon & Color Themes
 var userSavedAppIconString: String = ""
-var randomColorEnabled: Bool = false
+var autoThemeEnabled: Bool = false
+var darkMode: String = ""
 
 // Colors
 var userChangedColorTheme: Bool = false
@@ -66,10 +67,10 @@ var defaultWidgetSlot2: String = ""
 var defaultDailyConditionValueType: String = ""
 var defaultDailyConditionValueUnit: String = ""
 
+// Weather Units
 var dataSource: String = ""
 var dataSourceChanged: Bool = false
 
-// Sets values for widget
 var universalDataSource: String = ""
 var setDataSource: String = ""
 
@@ -118,24 +119,6 @@ func checkSavedColor() {
         // Nothing
     } else {
         defaults.set("Dodger Blue", forKey: "userSavedColorString")
-    }
-}
-
-func setButtonColor() {
-    if defaults.string(forKey: "userSavedColorString") == "Mango" {
-        buttonColor = "Mandarin"
-    } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
-        buttonColor = "Maximum Red"
-    } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
-        buttonColor = "Dodger Blue"
-    } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
-        buttonColor = "Plump Purple"
-    } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-        buttonColor = "Carmine Pink"
-    } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
-        buttonColor = "Spring Green"
-    } else {
-        buttonColor = "Dodger Blue"
     }
 }
 

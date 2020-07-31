@@ -98,15 +98,9 @@ class AcknowledgementsViewController: UIViewController, UITextViewDelegate {
             self.poweredByButton.setBackgroundImage(UIImage(named: "poweredby-oneline-darkbackground.pdf"), for: .normal)
         }
         
-        if potentialCustomer == true {
-            let doneBarButton = UIButton.init(type: .custom)
-            doneBarButton.setTitle("Done", for: .normal)
-            doneBarButton.setTitleColor(UIColor.link, for: .normal)
-            doneBarButton.addTarget(self, action: #selector(AcknowledgementsViewController.returnTapped), for: UIControl.Event.touchUpInside)
-            let barButton = UIBarButtonItem(customView: doneBarButton)
-            self.navigationItem.rightBarButtonItem = barButton
-        }
-
+        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ColorThemeTableViewController.doneBarButtonTapped))
+        setupBarButtonColor(button: doneBarButton)
+        self.navigationItem.rightBarButtonItem = doneBarButton
     }
 
     @IBAction func poweredByDarkSkyTapped(_ sender: UIButton) {
@@ -114,8 +108,7 @@ class AcknowledgementsViewController: UIViewController, UITextViewDelegate {
         present(svc, animated: true, completion: nil)
     }
 
-    @IBAction func returnTapped(_ sender: UIBarButtonItem) {
-        weatherLoaded = true
+    @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
 }

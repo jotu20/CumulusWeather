@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -9,9 +9,6 @@
     <customFonts key="customFonts">
         <array key="Oswald-Light.ttf">
             <string>Oswald-Light</string>
-        </array>
-        <array key="Oswald-Regular.ttf">
-            <string>Oswald-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -35,7 +32,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="Slf-Y3-sSU"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="WBZ-iJ-BeE"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="3qt-rf-A9t">
@@ -51,7 +48,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="6vb-ch-eiS"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Mhz-2w-H08"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJ0-ue-jPL">
@@ -60,7 +57,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="AwT-Jw-DbY"/>
                                                     <constraint firstAttribute="height" constant="50" id="qsE-6m-1DI"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -74,7 +71,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="f3e-Nu-gbf"/>
                                                     <constraint firstAttribute="height" constant="50" id="hm8-H3-3RW"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="88R-t1-eCu">
@@ -90,7 +87,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="7sG-bE-lCu"/>
                                                     <constraint firstAttribute="height" constant="50" id="YOZ-Tj-ILa"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVX-4d-6AU">
@@ -99,7 +96,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="UvH-cg-l0J"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="ZYR-Fe-X1S"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -113,7 +110,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Z5c-K2-TnK"/>
                                                     <constraint firstAttribute="height" constant="50" id="nuD-Mz-54c"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="kib-g7-beX">
@@ -129,7 +126,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="Hfc-Wg-Aa4"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="PUK-2Z-UYA"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBt-LW-Obd">
@@ -138,7 +135,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="DfY-UO-7QF"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="j3e-o1-g85"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -152,7 +149,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="8bf-iD-YUX"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="oKm-Vm-fy2"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="eTq-m9-mgz">
@@ -168,7 +165,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="F3n-z1-dRX"/>
                                                     <constraint firstAttribute="height" constant="50" id="uFH-IV-6Yt"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhK-yA-z3F">
@@ -177,7 +174,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="HCf-hI-duT"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="N8V-xb-hru"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -190,22 +187,22 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HMh-3G-yZe">
                                         <rect key="frame" x="0.0" y="0.0" width="305" height="20"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precipitation 000%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKQ-rK-qT2">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precip. 00%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKQ-rK-qT2">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="dYg-PA-SuB"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="pqK-PT-1kB"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precipitation Accum 000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qb-hA-Y8C">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accum 00%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qb-hA-Y8C">
                                                 <rect key="frame" x="155" y="0.0" width="150" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="qMJ-nL-T4A"/>
                                                     <constraint firstAttribute="height" constant="20" id="xhA-jg-zCR"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -219,7 +216,7 @@
                                                     <constraint firstAttribute="height" constant="20" id="IKf-UI-wAg"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="P9C-wk-Div"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UV Index" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jO6-S2-Paj">
@@ -228,7 +225,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="H0M-OK-eFH"/>
                                                     <constraint firstAttribute="height" constant="20" id="wfb-f3-OMu"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -280,7 +277,7 @@
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Fi6-Zj-uAP"/>
                                                             <constraint firstAttribute="height" constant="40" id="XM8-2d-rYZ"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="40"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º/0º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tor-g6-fhJ">
@@ -289,7 +286,7 @@
                                                             <constraint firstAttribute="height" constant="20" id="QRz-Wc-U4d"/>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="kCv-4Z-pUo"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqa-t4-EG2">
@@ -298,7 +295,7 @@
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="ClA-ms-xPs"/>
                                                             <constraint firstAttribute="height" constant="20" id="w5z-h6-kQG"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>

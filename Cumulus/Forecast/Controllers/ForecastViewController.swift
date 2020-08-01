@@ -446,9 +446,21 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     // MARK: - Set daily outlets
     func setDayLabelAndIcons(dayLabel: UILabel!, dayConditionIcon: UIImageView!, dayConditionLabel: UILabel!, dayLowLabel: UILabel!, dayHighLabel: UILabel!, dayString: String, dateString: String, dayConditionIconString: String, dayConditionType: String, dayConditionValue: Int, dayLow: Int, dayHigh: Int) {
         
+        var typeUnits: String = ""
+        
+        if defaults.string(forKey: "defaultHourlyCondition")?.contains("Precip") == true || defaults.string(forKey: "defaultHourlyCondition")?.contains("Humidity") == true || defaults.string(forKey: "defaultHourlyCondition")?.contains("Cloud") == true {
+            typeUnits = "%"
+        } else if defaults.string(forKey: "defaultHourlyCondition")?.contains("Accumulation") == true {
+            typeUnits = "\(unitsPrecipitation)"
+        } else if defaults.string(forKey: "defaultHourlyCondition")?.contains("UV Index") == true {
+            typeUnits = ""
+        } else if defaults.string(forKey: "defaultHourlyCondition")?.contains("Wind") == true {
+            typeUnits = "\(unitsWindSpeed)"
+        }
+        
         dayLabel.text = "\(dayString.capitalizingFirstLetter())\n\(dateString)"
         dayConditionIcon.image = UIImage(named: weatherCondition(condition: dayConditionIconString, type: "daily"))
-        dayConditionLabel.text = "\(dayConditionType) \(dayConditionValue)%"
+        dayConditionLabel.text = "\(dayConditionType) \(dayConditionValue)\(typeUnits)"
         dayLowLabel.text = "\(dayLow)°"
         dayHighLabel.text = "\(dayHigh)°"
     }
@@ -684,7 +696,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: hour14, hourIconString: conditionHour14, hourConditionString: hour2Value)
         setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: hour15, hourIconString: conditionHour15, hourConditionString: hour3Value)
     }
-
     
     func setDailyOutlets() {
         let type = defaults.string(forKey: "defaultHourlyCondition")
@@ -715,18 +726,71 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             day7Value = daySevenPrecip
             day8Value = dayEightPrecip
             day9Value = dayNinePrecip
+        } else if type?.contains("Accumulation") == true {
+            typeString = "Accum."
+            
+            day0Value = Int(dayZeroPrecipAccum)
+            day1Value = Int(dayOnePrecipAccum)
+            day2Value = Int(dayTwoPrecipAccum)
+            day3Value = Int(dayThreePrecipAccum)
+            day4Value = Int(dayFourPrecipAccum)
+            day5Value = Int(dayFivePrecipAccum)
+            day6Value = Int(daySixPrecipAccum)
+            day7Value = Int(daySevenPrecipAccum)
+            day8Value = Int(dayEightPrecipAccum)
+            day9Value = Int(dayNinePrecipAccum)
         } else if type?.contains("Humidity") == true {
             typeString = "Humidity"
             
+            day0Value = dayZeroHumidity
+            day1Value = dayOneHumidity
+            day2Value = dayTwoHumidity
+            day3Value = dayThreeHumidity
+            day4Value = dayFourHumidity
+            day5Value = dayFiveHumidity
+            day6Value = daySixHumidity
+            day7Value = daySevenHumidity
+            day8Value = dayEightHumidity
+            day9Value = dayNineHumidity
         } else if type?.contains("UV Index") == true {
             typeString = "UV index"
                    
+            day0Value = dayZeroUVIndex
+            day1Value = dayOneUVIndex
+            day2Value = dayTwoUVIndex
+            day3Value = dayThreeUVIndex
+            day4Value = dayFourUVIndex
+            day5Value = dayFiveUVIndex
+            day6Value = daySixUVIndex
+            day7Value = daySevenUVIndex
+            day8Value = dayEightUVIndex
+            day9Value = dayNineUVIndex
         } else if type?.contains("Wind") == true {
             typeString = "Wind"
             
+            day0Value = Int(dayZeroWind)
+            day1Value = Int(dayOneWind)
+            day2Value = Int(dayTwoWind)
+            day3Value = Int(dayThreeWind)
+            day4Value = Int(dayFourWind)
+            day5Value = Int(dayFiveWind)
+            day6Value = Int(daySixWind)
+            day7Value = Int(daySevenWind)
+            day8Value = Int(dayEightWind)
+            day9Value = Int(dayNineWind)
         } else if type?.contains("Cloud") == true {
             typeString = "Cloud cover"
             
+            day0Value = dayZeroCloudCover
+            day1Value = dayOneCloudCover
+            day2Value = dayTwoCloudCover
+            day3Value = dayThreeCloudCover
+            day4Value = dayFourCloudCover
+            day5Value = dayFiveCloudCover
+            day6Value = daySixCloudCover
+            day7Value = daySevenCloudCover
+            day8Value = dayEightCloudCover
+            day9Value = dayNineCloudCover
         }
         
         setDayLabelAndIcons(dayLabel: day0Label, dayConditionIcon: day0ConditionIcon, dayConditionLabel: day0ConditionLabel, dayLowLabel: day0LowLabel, dayHighLabel: day0HighLabel, dayString: dayZeroDayString, dateString: dayZeroDateString, dayConditionIconString: weatherCondition0, dayConditionType: typeString, dayConditionValue: day0Value, dayLow: dayZeroLow, dayHigh: dayZeroHigh)

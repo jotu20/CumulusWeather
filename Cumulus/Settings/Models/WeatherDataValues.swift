@@ -459,13 +459,13 @@ var dayZeroDayString: String = ""
 var dayZeroDateString: String = ""
 var dayZeroHigh: Int = 0
 var dayZeroLow: Int = 0
-var dayZeroSummaryString: String = ""
 var dayZeroConditionValue: Any = 0
 var dayZeroPrecip: Int = 0
 var dayZeroPrecipAccum: Double = 0
-var dayZeroSunrise: String = ""
-var dayZeroSunset: String = ""
-var dayZeroMoonPhaseString: String = ""
+var dayZeroHumidity: Int = 0
+var dayZeroUVIndex: Int = 0
+var dayZeroWind: Double = 0
+var dayZeroCloudCover: Int = 0
 var dayZeroConditionString: String = ""
 
 // Day One
@@ -473,12 +473,13 @@ var dayOneDayString: String = ""
 var dayOneDateString: String = ""
 var dayOneHigh: Int = 0
 var dayOneLow: Int = 0
-var dayOneSummaryString: String = ""
 var dayOneConditionValue: Any = 0
 var dayOnePrecip: Int = 0
 var dayOnePrecipAccum: Double = 0
-var dayOneSunrise: String = ""
-var dayOneSunset: String = ""
+var dayOneHumidity: Int = 0
+var dayOneUVIndex: Int = 0
+var dayOneWind: Double = 0
+var dayOneCloudCover: Int = 0
 var dayOneConditionString: String = ""
 
 // Day Two
@@ -486,12 +487,13 @@ var dayTwoDayString: String = ""
 var dayTwoDateString: String = ""
 var dayTwoHigh: Int = 0
 var dayTwoLow: Int = 0
-var dayTwoSummaryString: String = ""
 var dayTwoConditionValue: Any = 0
 var dayTwoPrecip: Int = 0
 var dayTwoPrecipAccum: Double = 0
-var dayTwoSunrise: String = ""
-var dayTwoSunset: String = ""
+var dayTwoHumidity: Int = 0
+var dayTwoUVIndex: Int = 0
+var dayTwoWind: Double = 0
+var dayTwoCloudCover: Int = 0
 var dayTwoConditionString: String = ""
 
 // Day Three
@@ -499,12 +501,13 @@ var dayThreeDayString: String = ""
 var dayThreeDateString: String = ""
 var dayThreeHigh: Int = 0
 var dayThreeLow: Int = 0
-var dayThreeSummaryString: String = ""
 var dayThreeConditionValue: Any = 0
 var dayThreePrecip: Int = 0
 var dayThreePrecipAccum: Double = 0
-var dayThreeSunrise: String = ""
-var dayThreeSunset: String = ""
+var dayThreeHumidity: Int = 0
+var dayThreeUVIndex: Int = 0
+var dayThreeWind: Double = 0
+var dayThreeCloudCover: Int = 0
 var dayThreeConditionString: String = ""
 
 // Day Four
@@ -512,12 +515,13 @@ var dayFourDayString: String = ""
 var dayFourDateString: String = ""
 var dayFourHigh: Int = 0
 var dayFourLow: Int = 0
-var dayFourSummaryString: String = ""
 var dayFourConditionValue: Any = 0
 var dayFourPrecip: Int = 0
 var dayFourPrecipAccum: Double = 0
-var dayFourSunrise: String = ""
-var dayFourSunset: String = ""
+var dayFourHumidity: Int = 0
+var dayFourUVIndex: Int = 0
+var dayFourWind: Double = 0
+var dayFourCloudCover: Int = 0
 var dayFourConditionString: String = ""
 
 // Day Five
@@ -525,12 +529,13 @@ var dayFiveDayString: String = ""
 var dayFiveDateString: String = ""
 var dayFiveHigh: Int = 0
 var dayFiveLow: Int = 0
-var dayFiveSummaryString: String = ""
 var dayFiveConditionValue: Any = 0
 var dayFivePrecip: Int = 0
 var dayFivePrecipAccum: Double = 0
-var dayFiveSunrise: String = ""
-var dayFiveSunset: String = ""
+var dayFiveHumidity: Int = 0
+var dayFiveUVIndex: Int = 0
+var dayFiveWind: Double = 0
+var dayFiveCloudCover: Int = 0
 var dayFiveConditionString: String = ""
 
 // Day Six
@@ -538,12 +543,13 @@ var daySixDayString: String = ""
 var daySixDateString: String = ""
 var daySixHigh: Int = 0
 var daySixLow: Int = 0
-var daySixSummaryString: String = ""
 var daySixConditionValue: Any = 0
 var daySixPrecip: Int = 0
 var daySixPrecipAccum: Double = 0
-var daySixSunrise: String = ""
-var daySixSunset: String = ""
+var daySixHumidity: Int = 0
+var daySixUVIndex: Int = 0
+var daySixWind: Double = 0
+var daySixCloudCover: Int = 0
 var daySixConditionString: String = ""
 
 // Day Seven
@@ -551,12 +557,13 @@ var daySevenDayString: String = ""
 var daySevenDateString: String = ""
 var daySevenHigh: Int = 0
 var daySevenLow: Int = 0
-var daySevenSummaryString: String = ""
 var daySevenConditionValue: Any = 0
 var daySevenPrecip: Int = 0
 var daySevenPrecipAccum: Double = 0
-var daySevenSunrise: String = ""
-var daySevenSunset: String = ""
+var daySevenHumidity: Int = 0
+var daySevenUVIndex: Int = 0
+var daySevenWind: Double = 0
+var daySevenCloudCover: Int = 0
 var daySevenConditionString: String = ""
 
 // Day Eight
@@ -564,12 +571,13 @@ var dayEightDayString: String = ""
 var dayEightDateString: String = ""
 var dayEightHigh: Int = 0
 var dayEightLow: Int = 0
-var dayEightSummaryString: String = ""
 var dayEightConditionValue: Any = 0
 var dayEightPrecip: Int = 0
 var dayEightPrecipAccum: Double = 0
-var dayEightSunrise: String = ""
-var dayEightSunset: String = ""
+var dayEightHumidity: Int = 0
+var dayEightUVIndex: Int = 0
+var dayEightWind: Double = 0
+var dayEightCloudCover: Int = 0
 var dayEightConditionString: String = ""
 
 // Day Nine
@@ -577,196 +585,14 @@ var dayNineDayString: String = ""
 var dayNineDateString: String = ""
 var dayNineHigh: Int = 0
 var dayNineLow: Int = 0
-var dayNineSummaryString: String = ""
 var dayNineConditionValue: Any = 0
 var dayNinePrecip: Int = 0
 var dayNinePrecipAccum: Double = 0
-var dayNineSunrise: String = ""
-var dayNineSunset: String = ""
+var dayNineHumidity: Int = 0
+var dayNineUVIndex: Int = 0
+var dayNineWind: Double = 0
+var dayNineCloudCover: Int = 0
 var dayNineConditionString: String = ""
-
-// MARK: - Seven day forecast hourly values
-// Day Zero
-// Time
-var dayTime0: String = "", dayTime1: String = "", dayTime2: String = "", dayTime3: String = "", dayTime4: String = "", dayTime5: String = "", dayTime6: String = "", dayTime7: String = "", dayTime8: String = "", dayTime9: String = "", dayTime10: String = "", dayTime11: String = "", dayTime12: String = "", dayTime13: String = "", dayTime14: String = "", dayTime15: String = ""
-// Condition
-var dayZeroCondition0: String = "", dayZeroCondition1: String = "", dayZeroCondition2: String = "", dayZeroCondition3: String = "", dayZeroCondition4: String = "", dayZeroCondition5: String = "", dayZeroCondition6: String = "", dayZeroCondition7: String = "", dayZeroCondition8: String = "", dayZeroCondition9: String = "", dayZeroCondition10: String = "", dayZeroCondition11: String = "", dayZeroCondition12: String = "", dayZeroCondition13: String = "", dayZeroCondition14: String = "", dayZeroCondition15: String = ""
-// Precip
-var dayZeroPrecip0: Int = 0, dayZeroPrecip1: Int = 0, dayZeroPrecip2: Int = 0, dayZeroPrecip3: Int = 0, dayZeroPrecip4: Int = 0, dayZeroPrecip5: Int = 0, dayZeroPrecip6: Int = 0, dayZeroPrecip7: Int = 0, dayZeroPrecip8: Int = 0, dayZeroPrecip9: Int = 0, dayZeroPrecip10: Int = 0, dayZeroPrecip11: Int = 0, dayZeroPrecip12: Int = 0, dayZeroPrecip13: Int = 0, dayZeroPrecip14: Int = 0, dayZeroPrecip15: Int = 0
-// Temp
-var dayZeroTemp0: Int = 0, dayZeroTemp1: Int = 0, dayZeroTemp2: Int = 0, dayZeroTemp3: Int = 0, dayZeroTemp4: Int = 0, dayZeroTemp5: Int = 0, dayZeroTemp6: Int = 0, dayZeroTemp7: Int = 0, dayZeroTemp8: Int = 0, dayZeroTemp9: Int = 0, dayZeroTemp10: Int = 0, dayZeroTemp11: Int = 0, dayZeroTemp12: Int = 0, dayZeroTemp13: Int = 0, dayZeroTemp14: Int = 0, dayZeroTemp15: Int = 0
-// Humidity
-var dayZeroHumidity0: Int = 0, dayZeroHumidity1: Int = 0, dayZeroHumidity2: Int = 0, dayZeroHumidity3: Int = 0, dayZeroHumidity4: Int = 0, dayZeroHumidity5: Int = 0, dayZeroHumidity6: Int = 0, dayZeroHumidity7: Int = 0, dayZeroHumidity8: Int = 0, dayZeroHumidity9: Int = 0, dayZeroHumidity10: Int = 0, dayZeroHumidity11: Int = 0, dayZeroHumidity12: Int = 0, dayZeroHumidity13: Int = 0, dayZeroHumidity14: Int = 0, dayZeroHumidity15: Int = 0
-// Icon
-var dayZeroIcon0: String = "", dayZeroIcon1: String = "", dayZeroIcon2: String = "", dayZeroIcon3: String = "", dayZeroIcon4: String = "", dayZeroIcon5: String = "", dayZeroIcon6: String = "", dayZeroIcon7: String = "", dayZeroIcon8: String = "", dayZeroIcon9: String = "", dayZeroIcon10: String = "", dayZeroIcon11: String = "", dayZeroIcon12: String = "", dayZeroIcon13: String = "", dayZeroIcon14: String = "", dayZeroIcon15: String = ""
-// UV Index
-var dayZeroIndex0: Int = 0, dayZeroIndex1: Int = 0, dayZeroIndex2: Int = 0, dayZeroIndex3: Int = 0, dayZeroIndex4: Int = 0, dayZeroIndex5: Int = 0, dayZeroIndex6: Int = 0, dayZeroIndex7: Int = 0, dayZeroIndex8: Int = 0, dayZeroIndex9: Int = 0, dayZeroIndex10: Int = 0, dayZeroIndex11: Int = 0, dayZeroIndex12: Int = 0, dayZeroIndex13: Int = 0, dayZeroIndex14: Int = 0, dayZeroIndex15: Int = 0
-// Wind Speed
-var dayZeroWindSpeed0: Int = 0, dayZeroWindSpeed1: Int = 0, dayZeroWindSpeed2: Int = 0, dayZeroWindSpeed3: Int = 0, dayZeroWindSpeed4: Int = 0, dayZeroWindSpeed5: Int = 0, dayZeroWindSpeed6: Int = 0, dayZeroWindSpeed7: Int = 0, dayZeroWindSpeed8: Int = 0, dayZeroWindSpeed9: Int = 0, dayZeroWindSpeed10: Int = 0, dayZeroWindSpeed11: Int = 0, dayZeroWindSpeed12: Int = 0, dayZeroWindSpeed13: Int = 0, dayZeroWindSpeed14: Int = 0, dayZeroWindSpeed15: Int = 0
-// Cloud Cover
-var dayZeroCloudCover0: Int = 0, dayZeroCloudCover1: Int = 0, dayZeroCloudCover2: Int = 0, dayZeroCloudCover3: Int = 0, dayZeroCloudCover4: Int = 0, dayZeroCloudCover5: Int = 0, dayZeroCloudCover6: Int = 0, dayZeroCloudCover7: Int = 0, dayZeroCloudCover8: Int = 0, dayZeroCloudCover9: Int = 0, dayZeroCloudCover10: Int = 0, dayZeroCloudCover11: Int = 0, dayZeroCloudCover12: Int = 0, dayZeroCloudCover13: Int = 0, dayZeroCloudCover14: Int = 0, dayZeroCloudCover15: Int = 0
-
-// Day One
-// Condition
-var dayOneCondition0: String = "", dayOneCondition1: String = "", dayOneCondition2: String = "", dayOneCondition3: String = "", dayOneCondition4: String = "", dayOneCondition5: String = "", dayOneCondition6: String = "", dayOneCondition7: String = "", dayOneCondition8: String = "", dayOneCondition9: String = "", dayOneCondition10: String = "", dayOneCondition11: String = "", dayOneCondition12: String = "", dayOneCondition13: String = "", dayOneCondition14: String = "", dayOneCondition15: String = ""
-// Precip
-var dayOnePrecip0: Int = 0, dayOnePrecip1: Int = 0, dayOnePrecip2: Int = 0, dayOnePrecip3: Int = 0, dayOnePrecip4: Int = 0, dayOnePrecip5: Int = 0, dayOnePrecip6: Int = 0, dayOnePrecip7: Int = 0, dayOnePrecip8: Int = 0, dayOnePrecip9: Int = 0, dayOnePrecip10: Int = 0, dayOnePrecip11: Int = 0, dayOnePrecip12: Int = 0, dayOnePrecip13: Int = 0, dayOnePrecip14: Int = 0, dayOnePrecip15: Int = 0
-// Temp
-var dayOneTemp0: Int = 0, dayOneTemp1: Int = 0, dayOneTemp2: Int = 0, dayOneTemp3: Int = 0, dayOneTemp4: Int = 0, dayOneTemp5: Int = 0, dayOneTemp6: Int = 0, dayOneTemp7: Int = 0, dayOneTemp8: Int = 0, dayOneTemp9: Int = 0, dayOneTemp10: Int = 0, dayOneTemp11: Int = 0, dayOneTemp12: Int = 0, dayOneTemp13: Int = 0, dayOneTemp14: Int = 0, dayOneTemp15: Int = 0
-// Humidity
-var dayOneHumidity0: Int = 0, dayOneHumidity1: Int = 0, dayOneHumidity2: Int = 0, dayOneHumidity3: Int = 0, dayOneHumidity4: Int = 0, dayOneHumidity5: Int = 0, dayOneHumidity6: Int = 0, dayOneHumidity7: Int = 0, dayOneHumidity8: Int = 0, dayOneHumidity9: Int = 0, dayOneHumidity10: Int = 0, dayOneHumidity11: Int = 0, dayOneHumidity12: Int = 0, dayOneHumidity13: Int = 0, dayOneHumidity14: Int = 0, dayOneHumidity15: Int = 0
-// Icon
-var dayOneIcon0: String = "", dayOneIcon1: String = "", dayOneIcon2: String = "", dayOneIcon3: String = "", dayOneIcon4: String = "", dayOneIcon5: String = "", dayOneIcon6: String = "", dayOneIcon7: String = "", dayOneIcon8: String = "", dayOneIcon9: String = "", dayOneIcon10: String = "", dayOneIcon11: String = "", dayOneIcon12: String = "", dayOneIcon13: String = "", dayOneIcon14: String = "", dayOneIcon15: String = ""
-// UV Index
-var dayOneIndex0: Int = 0, dayOneIndex1: Int = 0, dayOneIndex2: Int = 0, dayOneIndex3: Int = 0, dayOneIndex4: Int = 0, dayOneIndex5: Int = 0, dayOneIndex6: Int = 0, dayOneIndex7: Int = 0, dayOneIndex8: Int = 0, dayOneIndex9: Int = 0, dayOneIndex10: Int = 0, dayOneIndex11: Int = 0, dayOneIndex12: Int = 0, dayOneIndex13: Int = 0, dayOneIndex14: Int = 0, dayOneIndex15: Int = 0
-// Wind Speed
-var dayOneWindSpeed0: Int = 0, dayOneWindSpeed1: Int = 0, dayOneWindSpeed2: Int = 0, dayOneWindSpeed3: Int = 0, dayOneWindSpeed4: Int = 0, dayOneWindSpeed5: Int = 0, dayOneWindSpeed6: Int = 0, dayOneWindSpeed7: Int = 0, dayOneWindSpeed8: Int = 0, dayOneWindSpeed9: Int = 0, dayOneWindSpeed10: Int = 0, dayOneWindSpeed11: Int = 0, dayOneWindSpeed12: Int = 0, dayOneWindSpeed13: Int = 0, dayOneWindSpeed14: Int = 0, dayOneWindSpeed15: Int = 0
-// Cloud Cover
-var dayOneCloudCover0: Int = 0, dayOneCloudCover1: Int = 0, dayOneCloudCover2: Int = 0, dayOneCloudCover3: Int = 0, dayOneCloudCover4: Int = 0, dayOneCloudCover5: Int = 0, dayOneCloudCover6: Int = 0, dayOneCloudCover7: Int = 0, dayOneCloudCover8: Int = 0, dayOneCloudCover9: Int = 0, dayOneCloudCover10: Int = 0, dayOneCloudCover11: Int = 0, dayOneCloudCover12: Int = 0, dayOneCloudCover13: Int = 0, dayOneCloudCover14: Int = 0, dayOneCloudCover15: Int = 0
-
-// Day Two
-// Condition
-var dayTwoCondition0: String = "", dayTwoCondition1: String = "", dayTwoCondition2: String = "", dayTwoCondition3: String = "", dayTwoCondition4: String = "", dayTwoCondition5: String = "", dayTwoCondition6: String = "", dayTwoCondition7: String = "", dayTwoCondition8: String = "", dayTwoCondition9: String = "", dayTwoCondition10: String = "", dayTwoCondition11: String = "", dayTwoCondition12: String = "", dayTwoCondition13: String = "", dayTwoCondition14: String = "", dayTwoCondition15: String = ""
-// Precip
-var dayTwoPrecip0: Int = 0, dayTwoPrecip1: Int = 0, dayTwoPrecip2: Int = 0, dayTwoPrecip3: Int = 0, dayTwoPrecip4: Int = 0, dayTwoPrecip5: Int = 0, dayTwoPrecip6: Int = 0, dayTwoPrecip7: Int = 0, dayTwoPrecip8: Int = 0, dayTwoPrecip9: Int = 0, dayTwoPrecip10: Int = 0, dayTwoPrecip11: Int = 0, dayTwoPrecip12: Int = 0, dayTwoPrecip13: Int = 0, dayTwoPrecip14: Int = 0, dayTwoPrecip15: Int = 0
-// Temp
-var dayTwoTemp0: Int = 0, dayTwoTemp1: Int = 0, dayTwoTemp2: Int = 0, dayTwoTemp3: Int = 0, dayTwoTemp4: Int = 0, dayTwoTemp5: Int = 0, dayTwoTemp6: Int = 0, dayTwoTemp7: Int = 0, dayTwoTemp8: Int = 0, dayTwoTemp9: Int = 0, dayTwoTemp10: Int = 0, dayTwoTemp11: Int = 0, dayTwoTemp12: Int = 0, dayTwoTemp13: Int = 0, dayTwoTemp14: Int = 0, dayTwoTemp15: Int = 0
-// Humidity
-var dayTwoHumidity0: Int = 0, dayTwoHumidity1: Int = 0, dayTwoHumidity2: Int = 0, dayTwoHumidity3: Int = 0, dayTwoHumidity4: Int = 0, dayTwoHumidity5: Int = 0, dayTwoHumidity6: Int = 0, dayTwoHumidity7: Int = 0, dayTwoHumidity8: Int = 0, dayTwoHumidity9: Int = 0, dayTwoHumidity10: Int = 0, dayTwoHumidity11: Int = 0, dayTwoHumidity12: Int = 0, dayTwoHumidity13: Int = 0, dayTwoHumidity14: Int = 0, dayTwoHumidity15: Int = 0
-// Icon
-var dayTwoIcon0: String = "", dayTwoIcon1: String = "", dayTwoIcon2: String = "", dayTwoIcon3: String = "", dayTwoIcon4: String = "", dayTwoIcon5: String = "", dayTwoIcon6: String = "", dayTwoIcon7: String = "", dayTwoIcon8: String = "", dayTwoIcon9: String = "", dayTwoIcon10: String = "", dayTwoIcon11: String = "", dayTwoIcon12: String = "", dayTwoIcon13: String = "", dayTwoIcon14: String = "", dayTwoIcon15: String = ""
-// UV Index
-var dayTwoIndex0: Int = 0, dayTwoIndex1: Int = 0, dayTwoIndex2: Int = 0, dayTwoIndex3: Int = 0, dayTwoIndex4: Int = 0, dayTwoIndex5: Int = 0, dayTwoIndex6: Int = 0, dayTwoIndex7: Int = 0, dayTwoIndex8: Int = 0, dayTwoIndex9: Int = 0, dayTwoIndex10: Int = 0, dayTwoIndex11: Int = 0, dayTwoIndex12: Int = 0, dayTwoIndex13: Int = 0, dayTwoIndex14: Int = 0, dayTwoIndex15: Int = 0
-// Wind Speed
-var dayTwoWindSpeed0: Int = 0, dayTwoWindSpeed1: Int = 0, dayTwoWindSpeed2: Int = 0, dayTwoWindSpeed3: Int = 0, dayTwoWindSpeed4: Int = 0, dayTwoWindSpeed5: Int = 0, dayTwoWindSpeed6: Int = 0, dayTwoWindSpeed7: Int = 0, dayTwoWindSpeed8: Int = 0, dayTwoWindSpeed9: Int = 0, dayTwoWindSpeed10: Int = 0, dayTwoWindSpeed11: Int = 0, dayTwoWindSpeed12: Int = 0, dayTwoWindSpeed13: Int = 0, dayTwoWindSpeed14: Int = 0, dayTwoWindSpeed15: Int = 0
-// Cloud Cover
-var dayTwoCloudCover0: Int = 0, dayTwoCloudCover1: Int = 0, dayTwoCloudCover2: Int = 0, dayTwoCloudCover3: Int = 0, dayTwoCloudCover4: Int = 0, dayTwoCloudCover5: Int = 0, dayTwoCloudCover6: Int = 0, dayTwoCloudCover7: Int = 0, dayTwoCloudCover8: Int = 0, dayTwoCloudCover9: Int = 0, dayTwoCloudCover10: Int = 0, dayTwoCloudCover11: Int = 0, dayTwoCloudCover12: Int = 0, dayTwoCloudCover13: Int = 0, dayTwoCloudCover14: Int = 0, dayTwoCloudCover15: Int = 0
-
-// Day Three
-// Condition
-var dayThreeCondition0: String = "", dayThreeCondition1: String = "", dayThreeCondition2: String = "", dayThreeCondition3: String = "", dayThreeCondition4: String = "", dayThreeCondition5: String = "", dayThreeCondition6: String = "", dayThreeCondition7: String = "", dayThreeCondition8: String = "", dayThreeCondition9: String = "", dayThreeCondition10: String = "", dayThreeCondition11: String = "", dayThreeCondition12: String = "", dayThreeCondition13: String = "", dayThreeCondition14: String = "", dayThreeCondition15: String = ""
-// Precip
-var dayThreePrecip0: Int = 0, dayThreePrecip1: Int = 0, dayThreePrecip2: Int = 0, dayThreePrecip3: Int = 0, dayThreePrecip4: Int = 0, dayThreePrecip5: Int = 0, dayThreePrecip6: Int = 0, dayThreePrecip7: Int = 0, dayThreePrecip8: Int = 0, dayThreePrecip9: Int = 0, dayThreePrecip10: Int = 0, dayThreePrecip11: Int = 0, dayThreePrecip12: Int = 0, dayThreePrecip13: Int = 0, dayThreePrecip14: Int = 0, dayThreePrecip15: Int = 0
-// Temp
-var dayThreeTemp0: Int = 0, dayThreeTemp1: Int = 0, dayThreeTemp2: Int = 0, dayThreeTemp3: Int = 0, dayThreeTemp4: Int = 0, dayThreeTemp5: Int = 0, dayThreeTemp6: Int = 0, dayThreeTemp7: Int = 0, dayThreeTemp8: Int = 0, dayThreeTemp9: Int = 0, dayThreeTemp10: Int = 0, dayThreeTemp11: Int = 0, dayThreeTemp12: Int = 0, dayThreeTemp13: Int = 0, dayThreeTemp14: Int = 0, dayThreeTemp15: Int = 0
-// Humidity
-var dayThreeHumidity0: Int = 0, dayThreeHumidity1: Int = 0, dayThreeHumidity2: Int = 0, dayThreeHumidity3: Int = 0, dayThreeHumidity4: Int = 0, dayThreeHumidity5: Int = 0, dayThreeHumidity6: Int = 0, dayThreeHumidity7: Int = 0, dayThreeHumidity8: Int = 0, dayThreeHumidity9: Int = 0, dayThreeHumidity10: Int = 0, dayThreeHumidity11: Int = 0, dayThreeHumidity12: Int = 0, dayThreeHumidity13: Int = 0, dayThreeHumidity14: Int = 0, dayThreeHumidity15: Int = 0
-// Icon
-var dayThreeIcon0: String = "", dayThreeIcon1: String = "", dayThreeIcon2: String = "", dayThreeIcon3: String = "", dayThreeIcon4: String = "", dayThreeIcon5: String = "", dayThreeIcon6: String = "", dayThreeIcon7: String = "", dayThreeIcon8: String = "", dayThreeIcon9: String = "", dayThreeIcon10: String = "", dayThreeIcon11: String = "", dayThreeIcon12: String = "", dayThreeIcon13: String = "", dayThreeIcon14: String = "", dayThreeIcon15: String = ""
-// UV Index
-var dayThreeIndex0: Int = 0, dayThreeIndex1: Int = 0, dayThreeIndex2: Int = 0, dayThreeIndex3: Int = 0, dayThreeIndex4: Int = 0, dayThreeIndex5: Int = 0, dayThreeIndex6: Int = 0, dayThreeIndex7: Int = 0, dayThreeIndex8: Int = 0, dayThreeIndex9: Int = 0, dayThreeIndex10: Int = 0, dayThreeIndex11: Int = 0, dayThreeIndex12: Int = 0, dayThreeIndex13: Int = 0, dayThreeIndex14: Int = 0, dayThreeIndex15: Int = 0
-// Wind Speed
-var dayThreeWindSpeed0: Int = 0, dayThreeWindSpeed1: Int = 0, dayThreeWindSpeed2: Int = 0, dayThreeWindSpeed3: Int = 0, dayThreeWindSpeed4: Int = 0, dayThreeWindSpeed5: Int = 0, dayThreeWindSpeed6: Int = 0, dayThreeWindSpeed7: Int = 0, dayThreeWindSpeed8: Int = 0, dayThreeWindSpeed9: Int = 0, dayThreeWindSpeed10: Int = 0, dayThreeWindSpeed11: Int = 0, dayThreeWindSpeed12: Int = 0, dayThreeWindSpeed13: Int = 0, dayThreeWindSpeed14: Int = 0, dayThreeWindSpeed15: Int = 0
-// Cloud Cover
-var dayThreeCloudCover0: Int = 0, dayThreeCloudCover1: Int = 0, dayThreeCloudCover2: Int = 0, dayThreeCloudCover3: Int = 0, dayThreeCloudCover4: Int = 0, dayThreeCloudCover5: Int = 0, dayThreeCloudCover6: Int = 0, dayThreeCloudCover7: Int = 0, dayThreeCloudCover8: Int = 0, dayThreeCloudCover9: Int = 0, dayThreeCloudCover10: Int = 0, dayThreeCloudCover11: Int = 0, dayThreeCloudCover12: Int = 0, dayThreeCloudCover13: Int = 0, dayThreeCloudCover14: Int = 0, dayThreeCloudCover15: Int = 0
-
-// Day Four
-// Condition
-var dayFourCondition0: String = "", dayFourCondition1: String = "", dayFourCondition2: String = "", dayFourCondition3: String = "", dayFourCondition4: String = "", dayFourCondition5: String = "", dayFourCondition6: String = "", dayFourCondition7: String = "", dayFourCondition8: String = "", dayFourCondition9: String = "", dayFourCondition10: String = "", dayFourCondition11: String = "", dayFourCondition12: String = "", dayFourCondition13: String = "", dayFourCondition14: String = "", dayFourCondition15: String = ""
-// Precip
-var dayFourPrecip0: Int = 0, dayFourPrecip1: Int = 0, dayFourPrecip2: Int = 0, dayFourPrecip3: Int = 0, dayFourPrecip4: Int = 0, dayFourPrecip5: Int = 0, dayFourPrecip6: Int = 0, dayFourPrecip7: Int = 0, dayFourPrecip8: Int = 0, dayFourPrecip9: Int = 0, dayFourPrecip10: Int = 0, dayFourPrecip11: Int = 0, dayFourPrecip12: Int = 0, dayFourPrecip13: Int = 0, dayFourPrecip14: Int = 0, dayFourPrecip15: Int = 0
-// Temp
-var dayFourTemp0: Int = 0, dayFourTemp1: Int = 0, dayFourTemp2: Int = 0, dayFourTemp3: Int = 0, dayFourTemp4: Int = 0, dayFourTemp5: Int = 0, dayFourTemp6: Int = 0, dayFourTemp7: Int = 0, dayFourTemp8: Int = 0, dayFourTemp9: Int = 0, dayFourTemp10: Int = 0, dayFourTemp11: Int = 0, dayFourTemp12: Int = 0, dayFourTemp13: Int = 0, dayFourTemp14: Int = 0, dayFourTemp15: Int = 0
-// Humidity
-var dayFourHumidity0: Int = 0, dayFourHumidity1: Int = 0, dayFourHumidity2: Int = 0, dayFourHumidity3: Int = 0, dayFourHumidity4: Int = 0, dayFourHumidity5: Int = 0, dayFourHumidity6: Int = 0, dayFourHumidity7: Int = 0, dayFourHumidity8: Int = 0, dayFourHumidity9: Int = 0, dayFourHumidity10: Int = 0, dayFourHumidity11: Int = 0, dayFourHumidity12: Int = 0, dayFourHumidity13: Int = 0, dayFourHumidity14: Int = 0, dayFourHumidity15: Int = 0
-// Icon
-var dayFourIcon0: String = "", dayFourIcon1: String = "", dayFourIcon2: String = "", dayFourIcon3: String = "", dayFourIcon4: String = "", dayFourIcon5: String = "", dayFourIcon6: String = "", dayFourIcon7: String = "", dayFourIcon8: String = "", dayFourIcon9: String = "", dayFourIcon10: String = "", dayFourIcon11: String = "", dayFourIcon12: String = "", dayFourIcon13: String = "", dayFourIcon14: String = "", dayFourIcon15: String = ""
-// UV Index
-var dayFourIndex0: Int = 0, dayFourIndex1: Int = 0, dayFourIndex2: Int = 0, dayFourIndex3: Int = 0, dayFourIndex4: Int = 0, dayFourIndex5: Int = 0, dayFourIndex6: Int = 0, dayFourIndex7: Int = 0, dayFourIndex8: Int = 0, dayFourIndex9: Int = 0, dayFourIndex10: Int = 0, dayFourIndex11: Int = 0, dayFourIndex12: Int = 0, dayFourIndex13: Int = 0, dayFourIndex14: Int = 0, dayFourIndex15: Int = 0
-// Wind Speed
-var dayFourWindSpeed0: Int = 0, dayFourWindSpeed1: Int = 0, dayFourWindSpeed2: Int = 0, dayFourWindSpeed3: Int = 0, dayFourWindSpeed4: Int = 0, dayFourWindSpeed5: Int = 0, dayFourWindSpeed6: Int = 0, dayFourWindSpeed7: Int = 0, dayFourWindSpeed8: Int = 0, dayFourWindSpeed9: Int = 0, dayFourWindSpeed10: Int = 0, dayFourWindSpeed11: Int = 0, dayFourWindSpeed12: Int = 0, dayFourWindSpeed13: Int = 0, dayFourWindSpeed14: Int = 0, dayFourWindSpeed15: Int = 0
-// Cloud Cover
-var dayFourCloudCover0: Int = 0, dayFourCloudCover1: Int = 0, dayFourCloudCover2: Int = 0, dayFourCloudCover3: Int = 0, dayFourCloudCover4: Int = 0, dayFourCloudCover5: Int = 0, dayFourCloudCover6: Int = 0, dayFourCloudCover7: Int = 0, dayFourCloudCover8: Int = 0, dayFourCloudCover9: Int = 0, dayFourCloudCover10: Int = 0, dayFourCloudCover11: Int = 0, dayFourCloudCover12: Int = 0, dayFourCloudCover13: Int = 0, dayFourCloudCover14: Int = 0, dayFourCloudCover15: Int = 0
-
-// Day Five
-// Condition
-var dayFiveCondition0: String = "", dayFiveCondition1: String = "", dayFiveCondition2: String = "", dayFiveCondition3: String = "", dayFiveCondition4: String = "", dayFiveCondition5: String = "", dayFiveCondition6: String = "", dayFiveCondition7: String = "", dayFiveCondition8: String = "", dayFiveCondition9: String = "", dayFiveCondition10: String = "", dayFiveCondition11: String = "", dayFiveCondition12: String = "", dayFiveCondition13: String = "", dayFiveCondition14: String = "", dayFiveCondition15: String = ""
-// Precip
-var dayFivePrecip0: Int = 0, dayFivePrecip1: Int = 0, dayFivePrecip2: Int = 0, dayFivePrecip3: Int = 0, dayFivePrecip4: Int = 0, dayFivePrecip5: Int = 0, dayFivePrecip6: Int = 0, dayFivePrecip7: Int = 0, dayFivePrecip8: Int = 0, dayFivePrecip9: Int = 0, dayFivePrecip10: Int = 0, dayFivePrecip11: Int = 0, dayFivePrecip12: Int = 0, dayFivePrecip13: Int = 0, dayFivePrecip14: Int = 0, dayFivePrecip15: Int = 0
-// Temp
-var dayFiveTemp0: Int = 0, dayFiveTemp1: Int = 0, dayFiveTemp2: Int = 0, dayFiveTemp3: Int = 0, dayFiveTemp4: Int = 0, dayFiveTemp5: Int = 0, dayFiveTemp6: Int = 0, dayFiveTemp7: Int = 0, dayFiveTemp8: Int = 0, dayFiveTemp9: Int = 0, dayFiveTemp10: Int = 0, dayFiveTemp11: Int = 0, dayFiveTemp12: Int = 0, dayFiveTemp13: Int = 0, dayFiveTemp14: Int = 0, dayFiveTemp15: Int = 0
-// Humidity
-var dayFiveHumidity0: Int = 0, dayFiveHumidity1: Int = 0, dayFiveHumidity2: Int = 0, dayFiveHumidity3: Int = 0, dayFiveHumidity4: Int = 0, dayFiveHumidity5: Int = 0, dayFiveHumidity6: Int = 0, dayFiveHumidity7: Int = 0, dayFiveHumidity8: Int = 0, dayFiveHumidity9: Int = 0, dayFiveHumidity10: Int = 0, dayFiveHumidity11: Int = 0, dayFiveHumidity12: Int = 0, dayFiveHumidity13: Int = 0, dayFiveHumidity14: Int = 0, dayFiveHumidity15: Int = 0
-// Icon
-var dayFiveIcon0: String = "", dayFiveIcon1: String = "", dayFiveIcon2: String = "", dayFiveIcon3: String = "", dayFiveIcon4: String = "", dayFiveIcon5: String = "", dayFiveIcon6: String = "", dayFiveIcon7: String = "", dayFiveIcon8: String = "", dayFiveIcon9: String = "", dayFiveIcon10: String = "", dayFiveIcon11: String = "", dayFiveIcon12: String = "", dayFiveIcon13: String = "", dayFiveIcon14: String = "", dayFiveIcon15: String = ""
-// UV Index
-var dayFiveIndex0: Int = 0, dayFiveIndex1: Int = 0, dayFiveIndex2: Int = 0, dayFiveIndex3: Int = 0, dayFiveIndex4: Int = 0, dayFiveIndex5: Int = 0, dayFiveIndex6: Int = 0, dayFiveIndex7: Int = 0, dayFiveIndex8: Int = 0, dayFiveIndex9: Int = 0, dayFiveIndex10: Int = 0, dayFiveIndex11: Int = 0, dayFiveIndex12: Int = 0, dayFiveIndex13: Int = 0, dayFiveIndex14: Int = 0, dayFiveIndex15: Int = 0
-// Wind Speed
-var dayFiveWindSpeed0: Int = 0, dayFiveWindSpeed1: Int = 0, dayFiveWindSpeed2: Int = 0, dayFiveWindSpeed3: Int = 0, dayFiveWindSpeed4: Int = 0, dayFiveWindSpeed5: Int = 0, dayFiveWindSpeed6: Int = 0, dayFiveWindSpeed7: Int = 0, dayFiveWindSpeed8: Int = 0, dayFiveWindSpeed9: Int = 0, dayFiveWindSpeed10: Int = 0, dayFiveWindSpeed11: Int = 0, dayFiveWindSpeed12: Int = 0, dayFiveWindSpeed13: Int = 0, dayFiveWindSpeed14: Int = 0, dayFiveWindSpeed15: Int = 0
-// Cloud Cover
-var dayFiveCloudCover0: Int = 0, dayFiveCloudCover1: Int = 0, dayFiveCloudCover2: Int = 0, dayFiveCloudCover3: Int = 0, dayFiveCloudCover4: Int = 0, dayFiveCloudCover5: Int = 0, dayFiveCloudCover6: Int = 0, dayFiveCloudCover7: Int = 0, dayFiveCloudCover8: Int = 0, dayFiveCloudCover9: Int = 0, dayFiveCloudCover10: Int = 0, dayFiveCloudCover11: Int = 0, dayFiveCloudCover12: Int = 0, dayFiveCloudCover13: Int = 0, dayFiveCloudCover14: Int = 0, dayFiveCloudCover15: Int = 0
-
-// Day Six
-// Condition
-var daySixCondition0: String = "", daySixCondition1: String = "", daySixCondition2: String = "", daySixCondition3: String = "", daySixCondition4: String = "", daySixCondition5: String = "", daySixCondition6: String = "", daySixCondition7: String = "", daySixCondition8: String = "", daySixCondition9: String = "", daySixCondition10: String = "", daySixCondition11: String = "", daySixCondition12: String = "", daySixCondition13: String = "", daySixCondition14: String = "", daySixCondition15: String = ""
-// Precip
-var daySixPrecip0: Int = 0, daySixPrecip1: Int = 0, daySixPrecip2: Int = 0, daySixPrecip3: Int = 0, daySixPrecip4: Int = 0, daySixPrecip5: Int = 0, daySixPrecip6: Int = 0, daySixPrecip7: Int = 0, daySixPrecip8: Int = 0, daySixPrecip9: Int = 0, daySixPrecip10: Int = 0, daySixPrecip11: Int = 0, daySixPrecip12: Int = 0, daySixPrecip13: Int = 0, daySixPrecip14: Int = 0, daySixPrecip15: Int = 0
-// Temp
-var daySixTemp0: Int = 0, daySixTemp1: Int = 0, daySixTemp2: Int = 0, daySixTemp3: Int = 0, daySixTemp4: Int = 0, daySixTemp5: Int = 0, daySixTemp6: Int = 0, daySixTemp7: Int = 0, daySixTemp8: Int = 0, daySixTemp9: Int = 0, daySixTemp10: Int = 0, daySixTemp11: Int = 0, daySixTemp12: Int = 0, daySixTemp13: Int = 0, daySixTemp14: Int = 0, daySixTemp15: Int = 0
-// Humidity
-var daySixHumidity0: Int = 0, daySixHumidity1: Int = 0, daySixHumidity2: Int = 0, daySixHumidity3: Int = 0, daySixHumidity4: Int = 0, daySixHumidity5: Int = 0, daySixHumidity6: Int = 0, daySixHumidity7: Int = 0, daySixHumidity8: Int = 0, daySixHumidity9: Int = 0, daySixHumidity10: Int = 0, daySixHumidity11: Int = 0, daySixHumidity12: Int = 0, daySixHumidity13: Int = 0, daySixHumidity14: Int = 0, daySixHumidity15: Int = 0
-// Icon
-var daySixIcon0: String = "", daySixIcon1: String = "", daySixIcon2: String = "", daySixIcon3: String = "", daySixIcon4: String = "", daySixIcon5: String = "", daySixIcon6: String = "", daySixIcon7: String = "", daySixIcon8: String = "", daySixIcon9: String = "", daySixIcon10: String = "", daySixIcon11: String = "", daySixIcon12: String = "", daySixIcon13: String = "", daySixIcon14: String = "", daySixIcon15: String = ""
-// UV Index
-var daySixIndex0: Int = 0, daySixIndex1: Int = 0, daySixIndex2: Int = 0, daySixIndex3: Int = 0, daySixIndex4: Int = 0, daySixIndex5: Int = 0, daySixIndex6: Int = 0, daySixIndex7: Int = 0, daySixIndex8: Int = 0, daySixIndex9: Int = 0, daySixIndex10: Int = 0, daySixIndex11: Int = 0, daySixIndex12: Int = 0, daySixIndex13: Int = 0, daySixIndex14: Int = 0, daySixIndex15: Int = 0
-// Wind Speed
-var daySixWindSpeed0: Int = 0, daySixWindSpeed1: Int = 0, daySixWindSpeed2: Int = 0, daySixWindSpeed3: Int = 0, daySixWindSpeed4: Int = 0, daySixWindSpeed5: Int = 0, daySixWindSpeed6: Int = 0, daySixWindSpeed7: Int = 0, daySixWindSpeed8: Int = 0, daySixWindSpeed9: Int = 0, daySixWindSpeed10: Int = 0, daySixWindSpeed11: Int = 0, daySixWindSpeed12: Int = 0, daySixWindSpeed13: Int = 0, daySixWindSpeed14: Int = 0, daySixWindSpeed15: Int = 0
-// Cloud Cover
-var daySixCloudCover0: Int = 0, daySixCloudCover1: Int = 0, daySixCloudCover2: Int = 0, daySixCloudCover3: Int = 0, daySixCloudCover4: Int = 0, daySixCloudCover5: Int = 0, daySixCloudCover6: Int = 0, daySixCloudCover7: Int = 0, daySixCloudCover8: Int = 0, daySixCloudCover9: Int = 0, daySixCloudCover10: Int = 0, daySixCloudCover11: Int = 0, daySixCloudCover12: Int = 0, daySixCloudCover13: Int = 0, daySixCloudCover14: Int = 0, daySixCloudCover15: Int = 0
-
-// Day Seven
-// Condition
-var daySevenCondition0: String = "", daySevenCondition1: String = "", daySevenCondition2: String = "", daySevenCondition3: String = "", daySevenCondition4: String = "", daySevenCondition5: String = "", daySevenCondition6: String = "", daySevenCondition7: String = "", daySevenCondition8: String = "", daySevenCondition9: String = "", daySevenCondition10: String = "", daySevenCondition11: String = "", daySevenCondition12: String = "", daySevenCondition13: String = "", daySevenCondition14: String = "", daySevenCondition15: String = ""
-// Precip
-var daySevenPrecip0: Int = 0, daySevenPrecip1: Int = 0, daySevenPrecip2: Int = 0, daySevenPrecip3: Int = 0, daySevenPrecip4: Int = 0, daySevenPrecip5: Int = 0, daySevenPrecip6: Int = 0, daySevenPrecip7: Int = 0, daySevenPrecip8: Int = 0, daySevenPrecip9: Int = 0, daySevenPrecip10: Int = 0, daySevenPrecip11: Int = 0, daySevenPrecip12: Int = 0, daySevenPrecip13: Int = 0, daySevenPrecip14: Int = 0, daySevenPrecip15: Int = 0
-// Temp
-var daySevenTemp0: Int = 0, daySevenTemp1: Int = 0, daySevenTemp2: Int = 0, daySevenTemp3: Int = 0, daySevenTemp4: Int = 0, daySevenTemp5: Int = 0, daySevenTemp6: Int = 0, daySevenTemp7: Int = 0, daySevenTemp8: Int = 0, daySevenTemp9: Int = 0, daySevenTemp10: Int = 0, daySevenTemp11: Int = 0, daySevenTemp12: Int = 0, daySevenTemp13: Int = 0, daySevenTemp14: Int = 0, daySevenTemp15: Int = 0
-// Humidity
-var daySevenHumidity0: Int = 0, daySevenHumidity1: Int = 0, daySevenHumidity2: Int = 0, daySevenHumidity3: Int = 0, daySevenHumidity4: Int = 0, daySevenHumidity5: Int = 0, daySevenHumidity6: Int = 0, daySevenHumidity7: Int = 0, daySevenHumidity8: Int = 0, daySevenHumidity9: Int = 0, daySevenHumidity10: Int = 0, daySevenHumidity11: Int = 0, daySevenHumidity12: Int = 0, daySevenHumidity13: Int = 0, daySevenHumidity14: Int = 0, daySevenHumidity15: Int = 0
-// Icon
-var daySevenIcon0: String = "", daySevenIcon1: String = "", daySevenIcon2: String = "", daySevenIcon3: String = "", daySevenIcon4: String = "", daySevenIcon5: String = "", daySevenIcon6: String = "", daySevenIcon7: String = "", daySevenIcon8: String = "", daySevenIcon9: String = "", daySevenIcon10: String = "", daySevenIcon11: String = "", daySevenIcon12: String = "", daySevenIcon13: String = "", daySevenIcon14: String = "", daySevenIcon15: String = ""
-// UV Index
-var daySevenIndex0: Int = 0, daySevenIndex1: Int = 0, daySevenIndex2: Int = 0, daySevenIndex3: Int = 0, daySevenIndex4: Int = 0, daySevenIndex5: Int = 0, daySevenIndex6: Int = 0, daySevenIndex7: Int = 0, daySevenIndex8: Int = 0, daySevenIndex9: Int = 0, daySevenIndex10: Int = 0, daySevenIndex11: Int = 0, daySevenIndex12: Int = 0, daySevenIndex13: Int = 0, daySevenIndex14: Int = 0, daySevenIndex15: Int = 0
-// Wind Speed
-var daySevenWindSpeed0: Int = 0, daySevenWindSpeed1: Int = 0, daySevenWindSpeed2: Int = 0, daySevenWindSpeed3: Int = 0, daySevenWindSpeed4: Int = 0, daySevenWindSpeed5: Int = 0, daySevenWindSpeed6: Int = 0, daySevenWindSpeed7: Int = 0, daySevenWindSpeed8: Int = 0, daySevenWindSpeed9: Int = 0, daySevenWindSpeed10: Int = 0, daySevenWindSpeed11: Int = 0, daySevenWindSpeed12: Int = 0, daySevenWindSpeed13: Int = 0, daySevenWindSpeed14: Int = 0, daySevenWindSpeed15: Int = 0
-// Cloud Cover
-var daySevenCloudCover0: Int = 0, daySevenCloudCover1: Int = 0, daySevenCloudCover2: Int = 0, daySevenCloudCover3: Int = 0, daySevenCloudCover4: Int = 0, daySevenCloudCover5: Int = 0, daySevenCloudCover6: Int = 0, daySevenCloudCover7: Int = 0, daySevenCloudCover8: Int = 0, daySevenCloudCover9: Int = 0, daySevenCloudCover10: Int = 0, daySevenCloudCover11: Int = 0, daySevenCloudCover12: Int = 0, daySevenCloudCover13: Int = 0, daySevenCloudCover14: Int = 0, daySevenCloudCover15: Int = 0
-
-// Day Eight
-// Condition
-var dayEightCondition0: String = "", dayEightCondition1: String = "", dayEightCondition2: String = "", dayEightCondition3: String = "", dayEightCondition4: String = "", dayEightCondition5: String = "", dayEightCondition6: String = "", dayEightCondition7: String = "", dayEightCondition8: String = "", dayEightCondition9: String = "", dayEightCondition10: String = "", dayEightCondition11: String = "", dayEightCondition12: String = "", dayEightCondition13: String = "", dayEightCondition14: String = "", dayEightCondition15: String = ""
-// Precip
-var dayEightPrecip0: Int = 0, dayEightPrecip1: Int = 0, dayEightPrecip2: Int = 0, dayEightPrecip3: Int = 0, dayEightPrecip4: Int = 0, dayEightPrecip5: Int = 0, dayEightPrecip6: Int = 0, dayEightPrecip7: Int = 0, dayEightPrecip8: Int = 0, dayEightPrecip9: Int = 0, dayEightPrecip10: Int = 0, dayEightPrecip11: Int = 0, dayEightPrecip12: Int = 0, dayEightPrecip13: Int = 0, dayEightPrecip14: Int = 0, dayEightPrecip15: Int = 0
-// Temp
-var dayEightTemp0: Int = 0, dayEightTemp1: Int = 0, dayEightTemp2: Int = 0, dayEightTemp3: Int = 0, dayEightTemp4: Int = 0, dayEightTemp5: Int = 0, dayEightTemp6: Int = 0, dayEightTemp7: Int = 0, dayEightTemp8: Int = 0, dayEightTemp9: Int = 0, dayEightTemp10: Int = 0, dayEightTemp11: Int = 0, dayEightTemp12: Int = 0, dayEightTemp13: Int = 0, dayEightTemp14: Int = 0, dayEightTemp15: Int = 0
-// Humidity
-var dayEightHumidity0: Int = 0, dayEightHumidity1: Int = 0, dayEightHumidity2: Int = 0, dayEightHumidity3: Int = 0, dayEightHumidity4: Int = 0, dayEightHumidity5: Int = 0, dayEightHumidity6: Int = 0, dayEightHumidity7: Int = 0, dayEightHumidity8: Int = 0, dayEightHumidity9: Int = 0, dayEightHumidity10: Int = 0, dayEightHumidity11: Int = 0, dayEightHumidity12: Int = 0, dayEightHumidity13: Int = 0, dayEightHumidity14: Int = 0, dayEightHumidity15: Int = 0
-// Icon
-var dayEightIcon0: String = "", dayEightIcon1: String = "", dayEightIcon2: String = "", dayEightIcon3: String = "", dayEightIcon4: String = "", dayEightIcon5: String = "", dayEightIcon6: String = "", dayEightIcon7: String = "", dayEightIcon8: String = "", dayEightIcon9: String = "", dayEightIcon10: String = "", dayEightIcon11: String = "", dayEightIcon12: String = "", dayEightIcon13: String = "", dayEightIcon14: String = "", dayEightIcon15: String = ""
-// UV Index
-var dayEightIndex0: Int = 0, dayEightIndex1: Int = 0, dayEightIndex2: Int = 0, dayEightIndex3: Int = 0, dayEightIndex4: Int = 0, dayEightIndex5: Int = 0, dayEightIndex6: Int = 0, dayEightIndex7: Int = 0, dayEightIndex8: Int = 0, dayEightIndex9: Int = 0, dayEightIndex10: Int = 0, dayEightIndex11: Int = 0, dayEightIndex12: Int = 0, dayEightIndex13: Int = 0, dayEightIndex14: Int = 0, dayEightIndex15: Int = 0
-// Wind Speed
-var dayEightWindSpeed0: Int = 0, dayEightWindSpeed1: Int = 0, dayEightWindSpeed2: Int = 0, dayEightWindSpeed3: Int = 0, dayEightWindSpeed4: Int = 0, dayEightWindSpeed5: Int = 0, dayEightWindSpeed6: Int = 0, dayEightWindSpeed7: Int = 0, dayEightWindSpeed8: Int = 0, dayEightWindSpeed9: Int = 0, dayEightWindSpeed10: Int = 0, dayEightWindSpeed11: Int = 0, dayEightWindSpeed12: Int = 0, dayEightWindSpeed13: Int = 0, dayEightWindSpeed14: Int = 0, dayEightWindSpeed15: Int = 0
-// Cloud Cover
-var dayEightCloudCover0: Int = 0, dayEightCloudCover1: Int = 0, dayEightCloudCover2: Int = 0, dayEightCloudCover3: Int = 0, dayEightCloudCover4: Int = 0, dayEightCloudCover5: Int = 0, dayEightCloudCover6: Int = 0, dayEightCloudCover7: Int = 0, dayEightCloudCover8: Int = 0, dayEightCloudCover9: Int = 0, dayEightCloudCover10: Int = 0, dayEightCloudCover11: Int = 0, dayEightCloudCover12: Int = 0, dayEightCloudCover13: Int = 0, dayEightCloudCover14: Int = 0, dayEightCloudCover15: Int = 0
-
-// Day Nine
-// Condition
-var dayNineCondition0: String = "", dayNineCondition1: String = "", dayNineCondition2: String = "", dayNineCondition3: String = "", dayNineCondition4: String = "", dayNineCondition5: String = "", dayNineCondition6: String = "", dayNineCondition7: String = "", dayNineCondition8: String = "", dayNineCondition9: String = "", dayNineCondition10: String = "", dayNineCondition11: String = "", dayNineCondition12: String = "", dayNineCondition13: String = "", dayNineCondition14: String = "", dayNineCondition15: String = ""
-// Precip
-var dayNinePrecip0: Int = 0, dayNinePrecip1: Int = 0, dayNinePrecip2: Int = 0, dayNinePrecip3: Int = 0, dayNinePrecip4: Int = 0, dayNinePrecip5: Int = 0, dayNinePrecip6: Int = 0, dayNinePrecip7: Int = 0, dayNinePrecip8: Int = 0, dayNinePrecip9: Int = 0, dayNinePrecip10: Int = 0, dayNinePrecip11: Int = 0, dayNinePrecip12: Int = 0, dayNinePrecip13: Int = 0, dayNinePrecip14: Int = 0, dayNinePrecip15: Int = 0
-// Temp
-var dayNineTemp0: Int = 0, dayNineTemp1: Int = 0, dayNineTemp2: Int = 0, dayNineTemp3: Int = 0, dayNineTemp4: Int = 0, dayNineTemp5: Int = 0, dayNineTemp6: Int = 0, dayNineTemp7: Int = 0, dayNineTemp8: Int = 0, dayNineTemp9: Int = 0, dayNineTemp10: Int = 0, dayNineTemp11: Int = 0, dayNineTemp12: Int = 0, dayNineTemp13: Int = 0, dayNineTemp14: Int = 0, dayNineTemp15: Int = 0
-// Humidity
-var dayNineHumidity0: Int = 0, dayNineHumidity1: Int = 0, dayNineHumidity2: Int = 0, dayNineHumidity3: Int = 0, dayNineHumidity4: Int = 0, dayNineHumidity5: Int = 0, dayNineHumidity6: Int = 0, dayNineHumidity7: Int = 0, dayNineHumidity8: Int = 0, dayNineHumidity9: Int = 0, dayNineHumidity10: Int = 0, dayNineHumidity11: Int = 0, dayNineHumidity12: Int = 0, dayNineHumidity13: Int = 0, dayNineHumidity14: Int = 0, dayNineHumidity15: Int = 0
-// Icon
-var dayNineIcon0: String = "", dayNineIcon1: String = "", dayNineIcon2: String = "", dayNineIcon3: String = "", dayNineIcon4: String = "", dayNineIcon5: String = "", dayNineIcon6: String = "", dayNineIcon7: String = "", dayNineIcon8: String = "", dayNineIcon9: String = "", dayNineIcon10: String = "", dayNineIcon11: String = "", dayNineIcon12: String = "", dayNineIcon13: String = "", dayNineIcon14: String = "", dayNineIcon15: String = ""
-// UV Index
-var dayNineIndex0: Int = 0, dayNineIndex1: Int = 0, dayNineIndex2: Int = 0, dayNineIndex3: Int = 0, dayNineIndex4: Int = 0, dayNineIndex5: Int = 0, dayNineIndex6: Int = 0, dayNineIndex7: Int = 0, dayNineIndex8: Int = 0, dayNineIndex9: Int = 0, dayNineIndex10: Int = 0, dayNineIndex11: Int = 0, dayNineIndex12: Int = 0, dayNineIndex13: Int = 0, dayNineIndex14: Int = 0, dayNineIndex15: Int = 0
-// Wind Speed
-var dayNineWindSpeed0: Int = 0, dayNineWindSpeed1: Int = 0, dayNineWindSpeed2: Int = 0, dayNineWindSpeed3: Int = 0, dayNineWindSpeed4: Int = 0, dayNineWindSpeed5: Int = 0, dayNineWindSpeed6: Int = 0, dayNineWindSpeed7: Int = 0, dayNineWindSpeed8: Int = 0, dayNineWindSpeed9: Int = 0, dayNineWindSpeed10: Int = 0, dayNineWindSpeed11: Int = 0, dayNineWindSpeed12: Int = 0, dayNineWindSpeed13: Int = 0, dayNineWindSpeed14: Int = 0, dayNineWindSpeed15: Int = 0
-// Cloud Cover
-var dayNineCloudCover0: Int = 0, dayNineCloudCover1: Int = 0, dayNineCloudCover2: Int = 0, dayNineCloudCover3: Int = 0, dayNineCloudCover4: Int = 0, dayNineCloudCover5: Int = 0, dayNineCloudCover6: Int = 0, dayNineCloudCover7: Int = 0, dayNineCloudCover8: Int = 0, dayNineCloudCover9: Int = 0, dayNineCloudCover10: Int = 0, dayNineCloudCover11: Int = 0, dayNineCloudCover12: Int = 0, dayNineCloudCover13: Int = 0, dayNineCloudCover14: Int = 0, dayNineCloudCover15: Int = 0
 
 // MARK: - Get day name
 func dayFormat(date: Date) -> String {

@@ -47,7 +47,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         // Current condition labels
         self.currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image"))
         self.currentTemperatureLabel.text = "\(currentTemperature)°"
-        self.highAndLowTemperatureLabel.text = "\(dayZeroHigh)°/\(dayZeroLow)°"
+        self.highAndLowTemperatureLabel.text = "\(day0High)°/\(day0Low)°"
         self.currentConditionLabel.text = "\(weatherCondition(condition: currentCondition, type: "text"))"
         
         self.precipitationLabel.text = "Precip. \(precipitation)%"
@@ -64,28 +64,28 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         self.cloudCoverLabel.text = "Cloud cover \(cloudCover)%"
         
         // Day Zero
-        self.dayZeroConditionImage.image = UIImage(named: weatherCondition(condition: weatherCondition0, type: "daily"))
-        self.dayZeroDateLabel.text = "\(dayZeroDayString)"
-        self.dayZeroHighLowTempLabel.text = "\(dayZeroHigh)°/\(dayZeroLow)°"
-        self.dayZeroPrecipLabel.text = "\(dayZeroPrecip)%"
+        self.dayZeroConditionImage.image = UIImage(named: weatherCondition(condition: day0Condition, type: "daily"))
+        self.dayZeroDateLabel.text = "\(day0DayString)"
+        self.dayZeroHighLowTempLabel.text = "\(day0High)°/\(day0Low)°"
+        self.dayZeroPrecipLabel.text = "\(day0Precip)%"
         
         // Day One
-        self.dayOneConditionImage.image = UIImage(named: weatherCondition(condition: weatherCondition1, type: "daily"))
-        self.dayOneDateLabel.text = "\(dayOneDayString)"
-        self.dayOneHighLowTempLabel.text = "\(dayOneHigh)°/\(dayOneLow)°"
-        self.dayOnePrecipLabel.text = "\(dayOnePrecip)%"
+        self.dayOneConditionImage.image = UIImage(named: weatherCondition(condition: day1Condition, type: "daily"))
+        self.dayOneDateLabel.text = "\(day1DayString)"
+        self.dayOneHighLowTempLabel.text = "\(day1High)°/\(day1Low)°"
+        self.dayOnePrecipLabel.text = "\(day1Precip)%"
         
         // Day Two
-        self.dayTwoConditionImage.image = UIImage(named: weatherCondition(condition: weatherCondition2, type: "daily"))
-        self.dayTwoDateLabel.text = "\(dayTwoDayString)"
-        self.dayTwoHighLowTempLabel.text = "\(dayTwoHigh)°/\(dayTwoLow)°"
-        self.dayTwoPrecipLabel.text = "\(dayTwoPrecip)%"
+        self.dayTwoConditionImage.image = UIImage(named: weatherCondition(condition: day2Condition, type: "daily"))
+        self.dayTwoDateLabel.text = "\(day2DayString)"
+        self.dayTwoHighLowTempLabel.text = "\(day2High)°/\(day2Low)°"
+        self.dayTwoPrecipLabel.text = "\(day2Precip)%"
         
         // Day Three
-        self.dayThreeConditionImage.image = UIImage(named: weatherCondition(condition: weatherCondition3, type: "daily"))
-        self.dayThreeDateLabel.text = "\(dayThreeDayString)"
-        self.dayThreeHighLowTempLabel.text = "\(dayThreeHigh)°/\(dayThreeLow)°"
-        self.dayThreePrecipLabel.text = "\(dayThreePrecip)%"
+        self.dayThreeConditionImage.image = UIImage(named: weatherCondition(condition: day3Condition, type: "daily"))
+        self.dayThreeDateLabel.text = "\(day3DayString)"
+        self.dayThreeHighLowTempLabel.text = "\(day3High)°/\(day3Low)°"
+        self.dayThreePrecipLabel.text = "\(day3Precip)%"
     }
     
     // Prepare your view controller for the interaction to handle.
@@ -175,7 +175,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                     let firstArray = daily.data[0]
                     let fetchArray = firstArray
                     
-                    weatherCondition0 = "\(fetchArray.icon!.rawValue)"
+                    day0Condition = "\(fetchArray.icon!.rawValue)"
                     
                     highTemperature = Int(fetchArray.temperatureHigh!)
                     lowTemperature = Int(fetchArray.temperatureLow!)
@@ -186,62 +186,62 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                     let fetchDayZeroArray = dayZeroArray
                     
                     // Date
-                    dayZeroDayString = dayFormat(date: dayZeroArray.time)
+                    day0DayString = dayFormat(date: dayZeroArray.time)
                     
                     // High and Low
-                    dayZeroHigh = Int(fetchDayZeroArray.temperatureHigh!)
-                    dayZeroLow = Int(fetchDayZeroArray.temperatureLow!)
+                    day0High = Int(fetchDayZeroArray.temperatureHigh!)
+                    day0Low = Int(fetchDayZeroArray.temperatureLow!)
                     
                     // Precipitation
-                    dayZeroPrecip = Int(fetchDayZeroArray.precipitationProbability! * 100)
+                    day0Precip = Int(fetchDayZeroArray.precipitationProbability! * 100)
                     
                     // Day One
                     let dayOneArray = daily.data[1]
                     let fetchDayOneArray = dayOneArray
                     
-                    weatherCondition1 = "\(fetchDayOneArray.icon!.rawValue)"
+                    day1Condition = "\(fetchDayOneArray.icon!.rawValue)"
                     
                     // Date
-                    dayOneDayString = dayFormat(date: dayOneArray.time)
+                    day1DayString = dayFormat(date: dayOneArray.time)
                     
                     // High and Low
-                    dayOneHigh = Int(fetchDayOneArray.temperatureHigh!)
-                    dayOneLow = Int(fetchDayOneArray.temperatureLow!)
+                    day1High = Int(fetchDayOneArray.temperatureHigh!)
+                    day1Low = Int(fetchDayOneArray.temperatureLow!)
                     
                     // Precipitation
-                    dayOnePrecip = Int(fetchDayOneArray.precipitationProbability! * 100)
+                    day1Precip = Int(fetchDayOneArray.precipitationProbability! * 100)
                     
                     // Day Two
                     let dayTwoArray = daily.data[2]
                     let fetchDayTwoArray = dayTwoArray
                     
-                    weatherCondition2 = "\(fetchDayTwoArray.icon!.rawValue)"
+                    day2Condition = "\(fetchDayTwoArray.icon!.rawValue)"
                     
                     // Date
-                    dayTwoDayString = dayFormat(date: dayTwoArray.time)
+                    day2DayString = dayFormat(date: dayTwoArray.time)
                     
                     // High and Low
-                    dayTwoHigh = Int(fetchDayTwoArray.temperatureHigh!)
-                    dayTwoLow = Int(fetchDayTwoArray.temperatureLow!)
+                    day2High = Int(fetchDayTwoArray.temperatureHigh!)
+                    day2Low = Int(fetchDayTwoArray.temperatureLow!)
                     
                     // Precipitation
-                    dayTwoPrecip = Int(fetchDayTwoArray.precipitationProbability! * 100)
+                    day2Precip = Int(fetchDayTwoArray.precipitationProbability! * 100)
                     
                     // Day Three
                     let dayThreeArray = daily.data[3]
                     let fetchDayThreeArray = dayThreeArray
                     
-                    weatherCondition3 = "\(fetchDayThreeArray.icon!.rawValue)"
+                    day3Condition = "\(fetchDayThreeArray.icon!.rawValue)"
                     
                     // Date
-                    dayThreeDayString = dayFormat(date: dayThreeArray.time)
+                    day3DayString = dayFormat(date: dayThreeArray.time)
                     
                     // High and Low
-                    dayThreeHigh = Int(fetchDayThreeArray.temperatureHigh!)
-                    dayThreeLow = Int(fetchDayThreeArray.temperatureLow!)
+                    day3High = Int(fetchDayThreeArray.temperatureHigh!)
+                    day3Low = Int(fetchDayThreeArray.temperatureLow!)
                     
                     // Precipitation
-                    dayThreePrecip = Int(fetchDayThreeArray.precipitationProbability! * 100)
+                    day3Precip = Int(fetchDayThreeArray.precipitationProbability! * 100)
                 }
                 
                 DispatchQueue.main.async() {

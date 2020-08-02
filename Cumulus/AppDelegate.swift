@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         checkSavedColor()
         
+        // Upgrade previous Pro users to Cumulus+
+        if defaults.bool(forKey: "cumulusPro") == true {
+            defaults.set(true, forKey: "cumulusPlus")
+        }
+        
         // Initialize Google Places
         GMSPlacesClient.provideAPIKey("AIzaSyD7itQU5T62p9XCRa9qXSXvqjTCB4f9nGI")
         
@@ -52,10 +57,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     defaults.set(true, forKey: "cumulusPlus")
                 case .expired(let expiryDate, let items):
                     print("\(productIds) are expired since \(expiryDate)\n\(items)\n")
-                    checkForCumulusPro()
+                    defaults.set(false, forKey: "cumulusPlus")
                 case .notPurchased:
                     print("The user has never purchased \(productIds)")
-                    checkForCumulusPro()
+                }
+            case .error(let error):
+                print("Receipt verification failed: \(error)")
+            }
+        }
+        
+        // Verify Lifetime purchase
+        let cumulusPlusLifetimeValidator = AppleReceiptValidator(service: .production, sharedSecret: "\(sharedSecret)")
+        SwiftyStoreKit.verifyReceipt(using: cumulusPlusLifetimeValidator) { result in
+            switch result {
+            case .success(let receipt):
+                let productId = "com.josephszafarowicz.CumulusPlus.Lifetime"
+                // Verify the purchase of Consumable or NonConsumable
+                let purchaseResult = SwiftyStoreKit.verifyPurchase(
+                    productId: productId,
+                    inReceipt: receipt)
+                    
+                switch purchaseResult {
+                case .purchased(let receiptItem):
+                    print("\(productId) is purchased: \(receiptItem)")
+                    defaults.set(true, forKey: "cumulusPlus")
+                case .notPurchased:
+                    print("The user has never purchased \(productId)")
                 }
             case .error(let error):
                 print("Receipt verification failed: \(error)")

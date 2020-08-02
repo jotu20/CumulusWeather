@@ -76,16 +76,10 @@ class CumulusPlusTableViewController: UITableViewController {
                 print("Error: \(String(describing: result.error))")
             }
         }
-        
-        if potentialCustomer == true {
-            let cancelBarButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(CumulusPlusTableViewController.restoreCumulusPlusTapped))
-            setupBarButtonColor(button: cancelBarButton)
-            self.navigationItem.leftBarButtonItem = cancelBarButton
-        } else {
-            let restoreBarButton = UIBarButtonItem(title: "Restore", style: .plain, target: self, action: #selector(CumulusPlusTableViewController.restoreCumulusPlusTapped))
-            setupBarButtonColor(button: restoreBarButton)
-            self.navigationItem.leftBarButtonItem = restoreBarButton
-        }
+
+        let restoreBarButton = UIBarButtonItem(title: "Restore", style: .plain, target: self, action: #selector(CumulusPlusTableViewController.restoreCumulusPlusTapped))
+        setupBarButtonColor(button: restoreBarButton)
+        self.navigationItem.leftBarButtonItem = restoreBarButton
         
         let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(CumulusPlusTableViewController.doneBarButtonTapped))
         setupBarButtonColor(button: doneBarButton)
@@ -140,10 +134,9 @@ class CumulusPlusTableViewController: UITableViewController {
                             defaults.set(true, forKey: "cumulusPlus")
                         case .expired(let expiryDate, _):
                             print("Product is expired since \(expiryDate)")
-                            checkForCumulusPro()
+                            defaults.set(false, forKey: "cumulusPlus")
                         case .notPurchased:
                             print("This product has never been purchased")
-                            checkForCumulusPro()
                         }
                     } else {
                         // receipt verification error
@@ -180,10 +173,9 @@ class CumulusPlusTableViewController: UITableViewController {
                             defaults.set(true, forKey: "cumulusPlus")
                         case .expired(let expiryDate, _):
                             print("Product is expired since \(expiryDate)")
-                            checkForCumulusPro()
+                            defaults.set(false, forKey: "cumulusPlus")
                         case .notPurchased:
                             print("This product has never been purchased")
-                            checkForCumulusPro()
                         }
                     } else {
                         // receipt verification error
@@ -202,7 +194,6 @@ class CumulusPlusTableViewController: UITableViewController {
                 print("Purchase Success: \(purchase.productId)")
                 defaults.set(true, forKey: "cumulusPlus")
             case .error(let error):
-                defaults.set(false, forKey: "cumulusPlus")
                 switch error.code {
                 case .unknown: print("Unknown error. Please contact support")
                 case .clientInvalid: print("Not allowed to make the payment")
@@ -233,21 +224,37 @@ class CumulusPlusTableViewController: UITableViewController {
                     defaults.set(true, forKey: "cumulusPlus")
                 case .expired(let expiryDate, let items):
                     print("\(productIds) are expired since \(expiryDate)\n\(items)\n")
-                    checkForCumulusPro()
+                    defaults.set(false, forKey: "cumulusPlus")
                 case .notPurchased:
                     print("The user has never purchased \(productIds)")
-                    checkForCumulusPro()
                 }
             case .error(let error):
                 print("Receipt verification failed: \(error)")
             }
         }
-    }
-    
-    @IBAction func cancelCumulusPlusTapped(_ sender: UIBarButtonItem) {
-        weatherLoaded = true
-        potentialCustomer = true
-        dismiss(animated: true, completion: nil)
+        
+        // Verify Lifetime purchase
+        let cumulusPlusLifetimeValidator = AppleReceiptValidator(service: .production, sharedSecret: "\(sharedSecret)")
+        SwiftyStoreKit.verifyReceipt(using: cumulusPlusLifetimeValidator) { result in
+            switch result {
+            case .success(let receipt):
+                let productId = "com.josephszafarowicz.CumulusPlus.Lifetime"
+                // Verify the purchase of Consumable or NonConsumable
+                let purchaseResult = SwiftyStoreKit.verifyPurchase(
+                    productId: productId,
+                    inReceipt: receipt)
+                    
+                switch purchaseResult {
+                case .purchased(let receiptItem):
+                    print("\(productId) is purchased: \(receiptItem)")
+                    defaults.set(true, forKey: "cumulusPlus")
+                case .notPurchased:
+                    print("The user has never purchased \(productId)")
+                }
+            case .error(let error):
+                print("Receipt verification failed: \(error)")
+            }
+        }
     }
     
     @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {

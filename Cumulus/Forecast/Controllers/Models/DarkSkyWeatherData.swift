@@ -83,25 +83,30 @@ public func fetchDarkSkyWeatherData() {
 //            print(longitudeValue)
             
             if let daily = currentForecast.daily {
-                let dayZeroArray = daily.data[0]
-                let fetchDayZeroArray = dayZeroArray
+                let day0Array = daily.data[0]
+                let fetchDay0Array = day0Array
                 
-                weatherCondition0 = "\(fetchDayZeroArray.icon!.rawValue)"
-                highTemperature = Int(fetchDayZeroArray.temperatureHigh ?? defaultInteger)
-                lowTemperature = Int(fetchDayZeroArray.temperatureLow ?? defaultInteger)
-                sunrise = sunFormat(date: fetchDayZeroArray.sunriseTime!)
-                sunset = sunFormat(date: fetchDayZeroArray.sunsetTime!)
-                dayZeroDayString = dayFormat(date: fetchDayZeroArray.time)
-                dayZeroDateString = dateFormat(date: fetchDayZeroArray.time)
-                dayZeroHigh = Int(fetchDayZeroArray.temperatureHigh ?? defaultInteger)
-                dayZeroLow = Int(fetchDayZeroArray.temperatureLow ?? defaultInteger)
-                dayZeroConditionValue = getDefaultDailyCondition(condition: fetchDayZeroArray)
-                dayZeroPrecip = dailyPrecipProb(day: fetchDayZeroArray)
-                dayZeroPrecipAccum = dailyPrecipAccum(day: fetchDayZeroArray)
-                dayZeroHumidity = dailyHumidityProb(day: fetchDayZeroArray)
-                dayZeroUVIndex = Int(fetchDayZeroArray.uvIndex!)
-                dayZeroWind = fetchDayZeroArray.windSpeed!
-                dayZeroCloudCover = dailyCloudCoverProb(day: fetchDayZeroArray)
+                highTemperature = Int(fetchDay0Array.temperatureHigh ?? defaultInteger)
+                lowTemperature = Int(fetchDay0Array.temperatureLow ?? defaultInteger)
+                sunrise = sunFormat(date: fetchDay0Array.sunriseTime!)
+                sunset = sunFormat(date: fetchDay0Array.sunsetTime!)
+                
+                day0Condition = "\(fetchDay0Array.icon!.rawValue)"
+                day0DayString = dayFormat(date: fetchDay0Array.time)
+                day0DateString = dateFormat(date: fetchDay0Array.time)
+                day0Summary = fetchDay0Array.summary!
+                day0Sunrise = sunFormat(date: fetchDay0Array.sunriseTime!)
+                day0Sunset = sunFormat(date: fetchDay0Array.sunsetTime!)
+                day0High = Int(fetchDay0Array.temperatureHigh ?? defaultInteger)
+                day0Low = Int(fetchDay0Array.temperatureLow ?? defaultInteger)
+                day0Precip = dailyPrecipProb(day: fetchDay0Array)
+                day0PrecipAccum = dailyPrecipAccum(day: fetchDay0Array)
+                day0Humidity = dailyHumidityProb(day: fetchDay0Array)
+                day0Wind = fetchDay0Array.windSpeed!
+                day0DewPoint = Int(fetchDay0Array.dewPoint!)
+                day0Pressure = fetchDay0Array.pressure!
+                day0Visibility = Int(fetchDay0Array.visibility!)
+                day0UVIndex = Int(fetchDay0Array.uvIndex!)
             }
             
             // Get minutely data through 60 minutes
@@ -490,21 +495,25 @@ public func fetchDarkSkyWeatherData() {
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
-            let dayOneArray = daily.data[0]
-            let fetchDayOneArray = dayOneArray
+            let day1Array = daily.data[0]
+            let fetchDay1Array = day1Array
             
-            weatherCondition1 = "\(fetchDayOneArray.icon!.rawValue)"
-            dayOneDayString = dayFormat(date: fetchDayOneArray.time)
-            dayOneDateString = dateFormat(date: fetchDayOneArray.time)
-            dayOneHigh = Int(fetchDayOneArray.temperatureHigh ?? defaultInteger)
-            dayOneLow = Int(fetchDayOneArray.temperatureLow ?? defaultInteger)
-            dayOneConditionValue = getDefaultDailyCondition(condition: fetchDayOneArray)
-            dayOnePrecip = dailyPrecipProb(day: fetchDayOneArray)
-            dayOnePrecipAccum = dailyPrecipAccum(day: fetchDayOneArray)
-            dayOneHumidity = dailyHumidityProb(day: fetchDayOneArray)
-            dayOneUVIndex = Int(fetchDayOneArray.uvIndex!)
-            dayOneWind = fetchDayOneArray.windSpeed!
-            dayOneCloudCover = dailyCloudCoverProb(day: fetchDayOneArray)
+            day1Condition = "\(fetchDay1Array.icon!.rawValue)"
+            day1DayString = dayFormat(date: fetchDay1Array.time)
+            day1DateString = dateFormat(date: fetchDay1Array.time)
+            day1Summary = fetchDay1Array.summary!
+            day1Sunrise = sunFormat(date: fetchDay1Array.sunriseTime!)
+            day1Sunset = sunFormat(date: fetchDay1Array.sunsetTime!)
+            day1High = Int(fetchDay1Array.temperatureHigh ?? defaultInteger)
+            day1Low = Int(fetchDay1Array.temperatureLow ?? defaultInteger)
+            day1Precip = dailyPrecipProb(day: fetchDay1Array)
+            day1PrecipAccum = dailyPrecipAccum(day: fetchDay1Array)
+            day1Humidity = dailyHumidityProb(day: fetchDay1Array)
+            day1Wind = fetchDay1Array.windSpeed!
+            day1DewPoint = Int(fetchDay1Array.dewPoint!)
+            day1Pressure = fetchDay1Array.pressure!
+            day1Visibility = Int(fetchDay1Array.visibility!)
+            day1UVIndex = Int(fetchDay1Array.uvIndex!)
         }
         case .failure(let error):
             print(error)
@@ -519,21 +528,25 @@ public func fetchDarkSkyWeatherData() {
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
-            let dayTwoArray = daily.data[0]
-            let fetchDayTwoArray = dayTwoArray
+            let day2Array = daily.data[0]
+            let fetchDay2Array = day2Array
             
-            weatherCondition2 = "\(fetchDayTwoArray.icon!.rawValue)"
-            dayTwoDayString = dayFormat(date: fetchDayTwoArray.time)
-            dayTwoDateString = dateFormat(date: fetchDayTwoArray.time)
-            dayTwoHigh = Int(fetchDayTwoArray.temperatureHigh ?? defaultInteger)
-            dayTwoLow = Int(fetchDayTwoArray.temperatureLow ?? defaultInteger)
-            dayTwoConditionValue = getDefaultDailyCondition(condition: fetchDayTwoArray)
-            dayTwoPrecip = dailyPrecipProb(day: fetchDayTwoArray)
-            dayTwoPrecipAccum = dailyPrecipAccum(day: fetchDayTwoArray)
-            dayTwoHumidity = dailyHumidityProb(day: fetchDayTwoArray)
-            dayTwoUVIndex = Int(fetchDayTwoArray.uvIndex!)
-            dayTwoWind = fetchDayTwoArray.windSpeed!
-            dayTwoCloudCover = dailyCloudCoverProb(day: fetchDayTwoArray)
+            day2Condition = "\(fetchDay2Array.icon!.rawValue)"
+            day2DayString = dayFormat(date: fetchDay2Array.time)
+            day2DateString = dateFormat(date: fetchDay2Array.time)
+            day2Summary = fetchDay2Array.summary!
+            day2Sunrise = sunFormat(date: fetchDay2Array.sunriseTime!)
+            day2Sunset = sunFormat(date: fetchDay2Array.sunsetTime!)
+            day2High = Int(fetchDay2Array.temperatureHigh ?? defaultInteger)
+            day2Low = Int(fetchDay2Array.temperatureLow ?? defaultInteger)
+            day2Precip = dailyPrecipProb(day: fetchDay2Array)
+            day2PrecipAccum = dailyPrecipAccum(day: fetchDay2Array)
+            day2Humidity = dailyHumidityProb(day: fetchDay2Array)
+            day2Wind = fetchDay2Array.windSpeed!
+            day2DewPoint = Int(fetchDay2Array.dewPoint!)
+            day2Pressure = fetchDay2Array.pressure!
+            day2Visibility = Int(fetchDay2Array.visibility!)
+            day2UVIndex = Int(fetchDay2Array.uvIndex!)
         }
         case .failure(let error):
             print(error)
@@ -548,21 +561,25 @@ public func fetchDarkSkyWeatherData() {
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
-            let dayThreeArray = daily.data[0]
-            let fetchDayThreeArray = dayThreeArray
+            let day3Array = daily.data[0]
+            let fetchDay3Array = day3Array
             
-            weatherCondition3 = "\(fetchDayThreeArray.icon!.rawValue)"
-            dayThreeDayString = dayFormat(date: fetchDayThreeArray.time)
-            dayThreeDateString = dateFormat(date: fetchDayThreeArray.time)
-            dayThreeHigh = Int(fetchDayThreeArray.temperatureHigh ?? defaultInteger)
-            dayThreeLow = Int(fetchDayThreeArray.temperatureLow ?? defaultInteger)
-            dayThreeConditionValue = getDefaultDailyCondition(condition: fetchDayThreeArray)
-            dayThreePrecip = dailyPrecipProb(day: fetchDayThreeArray)
-            dayThreePrecipAccum = dailyPrecipAccum(day: fetchDayThreeArray)
-            dayThreeHumidity = dailyHumidityProb(day: fetchDayThreeArray)
-            dayThreeUVIndex = Int(fetchDayThreeArray.uvIndex!)
-            dayThreeWind = fetchDayThreeArray.windSpeed!
-            dayThreeCloudCover = dailyCloudCoverProb(day: fetchDayThreeArray)
+            day3Condition = "\(fetchDay3Array.icon!.rawValue)"
+            day3DayString = dayFormat(date: fetchDay3Array.time)
+            day3DateString = dateFormat(date: fetchDay3Array.time)
+            day3Summary = fetchDay3Array.summary!
+            day3Sunrise = sunFormat(date: fetchDay3Array.sunriseTime!)
+            day3Sunset = sunFormat(date: fetchDay3Array.sunsetTime!)
+            day3High = Int(fetchDay3Array.temperatureHigh ?? defaultInteger)
+            day3Low = Int(fetchDay3Array.temperatureLow ?? defaultInteger)
+            day3Precip = dailyPrecipProb(day: fetchDay3Array)
+            day3PrecipAccum = dailyPrecipAccum(day: fetchDay3Array)
+            day3Humidity = dailyHumidityProb(day: fetchDay3Array)
+            day3Wind = fetchDay3Array.windSpeed!
+            day3DewPoint = Int(fetchDay3Array.dewPoint!)
+            day3Pressure = fetchDay3Array.pressure!
+            day3Visibility = Int(fetchDay3Array.visibility!)
+            day3UVIndex = Int(fetchDay3Array.uvIndex!)
         }
         case .failure(let error):
             print(error)
@@ -577,21 +594,25 @@ public func fetchDarkSkyWeatherData() {
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
-            let dayFourArray = daily.data[0]
-            let fetchDayFourArray = dayFourArray
+            let day4Array = daily.data[0]
+            let fetchDay4Array = day4Array
             
-            weatherCondition4 = "\(fetchDayFourArray.icon!.rawValue)"
-            dayFourDayString = dayFormat(date: fetchDayFourArray.time)
-            dayFourDateString = dateFormat(date: fetchDayFourArray.time)
-            dayFourHigh = Int(fetchDayFourArray.temperatureHigh ?? defaultInteger)
-            dayFourLow = Int(fetchDayFourArray.temperatureLow ?? defaultInteger)
-            dayFourConditionValue = getDefaultDailyCondition(condition: fetchDayFourArray)
-            dayFourPrecip = dailyPrecipProb(day: fetchDayFourArray)
-            dayFourPrecipAccum = dailyPrecipAccum(day: fetchDayFourArray)
-            dayFourHumidity = dailyHumidityProb(day: fetchDayFourArray)
-            dayFourUVIndex = Int(fetchDayFourArray.uvIndex!)
-            dayFourWind = fetchDayFourArray.windSpeed!
-            dayFourCloudCover = dailyCloudCoverProb(day: fetchDayFourArray)
+            day4Condition = "\(fetchDay4Array.icon!.rawValue)"
+            day4DayString = dayFormat(date: fetchDay4Array.time)
+            day4DateString = dateFormat(date: fetchDay4Array.time)
+            day4Summary = fetchDay4Array.summary!
+            day4Sunrise = sunFormat(date: fetchDay4Array.sunriseTime!)
+            day4Sunset = sunFormat(date: fetchDay4Array.sunsetTime!)
+            day4High = Int(fetchDay4Array.temperatureHigh ?? defaultInteger)
+            day4Low = Int(fetchDay4Array.temperatureLow ?? defaultInteger)
+            day4Precip = dailyPrecipProb(day: fetchDay4Array)
+            day4PrecipAccum = dailyPrecipAccum(day: fetchDay4Array)
+            day4Humidity = dailyHumidityProb(day: fetchDay4Array)
+            day4Wind = fetchDay4Array.windSpeed!
+            day4DewPoint = Int(fetchDay4Array.dewPoint!)
+            day4Pressure = fetchDay4Array.pressure!
+            day4Visibility = Int(fetchDay4Array.visibility!)
+            day4UVIndex = Int(fetchDay4Array.uvIndex!)
         }
         case .failure(let error):
             print(error)
@@ -606,21 +627,25 @@ public func fetchDarkSkyWeatherData() {
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
-            let dayFiveArray = daily.data[0]
-            let fetchDayFiveArray = dayFiveArray
+            let day5Array = daily.data[0]
+            let fetchDay5Array = day5Array
             
-            weatherCondition5 = "\(fetchDayFiveArray.icon!.rawValue)"
-            dayFiveDayString = dayFormat(date: fetchDayFiveArray.time)
-            dayFiveDateString = dateFormat(date: fetchDayFiveArray.time)
-            dayFiveHigh = Int(fetchDayFiveArray.temperatureHigh ?? defaultInteger)
-            dayFiveLow = Int(fetchDayFiveArray.temperatureLow ?? defaultInteger)
-            dayFiveConditionValue = getDefaultDailyCondition(condition: fetchDayFiveArray)
-            dayFivePrecip = dailyPrecipProb(day: fetchDayFiveArray)
-            dayFivePrecipAccum = dailyPrecipAccum(day: fetchDayFiveArray)
-            dayFiveHumidity = dailyHumidityProb(day: fetchDayFiveArray)
-            dayFiveUVIndex = Int(fetchDayFiveArray.uvIndex!)
-            dayFiveWind = fetchDayFiveArray.windSpeed!
-            dayFiveCloudCover = dailyCloudCoverProb(day: fetchDayFiveArray)
+            day5Condition = "\(fetchDay5Array.icon!.rawValue)"
+            day5DayString = dayFormat(date: fetchDay5Array.time)
+            day5DateString = dateFormat(date: fetchDay5Array.time)
+            day5Summary = fetchDay5Array.summary!
+            day5Sunrise = sunFormat(date: fetchDay5Array.sunriseTime!)
+            day5Sunset = sunFormat(date: fetchDay5Array.sunsetTime!)
+            day5High = Int(fetchDay5Array.temperatureHigh ?? defaultInteger)
+            day5Low = Int(fetchDay5Array.temperatureLow ?? defaultInteger)
+            day5Precip = dailyPrecipProb(day: fetchDay5Array)
+            day5PrecipAccum = dailyPrecipAccum(day: fetchDay5Array)
+            day5Humidity = dailyHumidityProb(day: fetchDay5Array)
+            day5Wind = fetchDay5Array.windSpeed!
+            day5DewPoint = Int(fetchDay5Array.dewPoint!)
+            day5Pressure = fetchDay5Array.pressure!
+            day5Visibility = Int(fetchDay5Array.visibility!)
+            day5UVIndex = Int(fetchDay5Array.uvIndex!)
         }
         case .failure(let error):
             print(error)
@@ -635,21 +660,25 @@ public func fetchDarkSkyWeatherData() {
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
-            let daySixArray = daily.data[0]
-            let fetchDaySixArray = daySixArray
+            let day6Array = daily.data[0]
+            let fetchDay6Array = day6Array
             
-            weatherCondition6 = "\(fetchDaySixArray.icon!.rawValue)"
-            daySixDayString = dayFormat(date: fetchDaySixArray.time)
-            daySixDateString = dateFormat(date: fetchDaySixArray.time)
-            daySixHigh = Int(fetchDaySixArray.temperatureHigh ?? defaultInteger)
-            daySixLow = Int(fetchDaySixArray.temperatureLow ?? defaultInteger)
-            daySixConditionValue = getDefaultDailyCondition(condition: fetchDaySixArray)
-            daySixPrecip = dailyPrecipProb(day: fetchDaySixArray)
-            daySixPrecipAccum = dailyPrecipAccum(day: fetchDaySixArray)
-            daySixHumidity = dailyHumidityProb(day: fetchDaySixArray)
-            daySixUVIndex = Int(fetchDaySixArray.uvIndex!)
-            daySixWind = fetchDaySixArray.windSpeed!
-            daySixCloudCover = dailyCloudCoverProb(day: fetchDaySixArray)
+            day6Condition = "\(fetchDay6Array.icon!.rawValue)"
+            day6DayString = dayFormat(date: fetchDay6Array.time)
+            day6DateString = dateFormat(date: fetchDay6Array.time)
+            day6Summary = fetchDay6Array.summary!
+            day6Sunrise = sunFormat(date: fetchDay6Array.sunriseTime!)
+            day6Sunset = sunFormat(date: fetchDay6Array.sunsetTime!)
+            day6High = Int(fetchDay6Array.temperatureHigh ?? defaultInteger)
+            day6Low = Int(fetchDay6Array.temperatureLow ?? defaultInteger)
+            day6Precip = dailyPrecipProb(day: fetchDay6Array)
+            day6PrecipAccum = dailyPrecipAccum(day: fetchDay6Array)
+            day6Humidity = dailyHumidityProb(day: fetchDay6Array)
+            day6Wind = fetchDay6Array.windSpeed!
+            day6DewPoint = Int(fetchDay6Array.dewPoint!)
+            day6Pressure = fetchDay6Array.pressure!
+            day6Visibility = Int(fetchDay6Array.visibility!)
+            day6UVIndex = Int(fetchDay6Array.uvIndex!)
         }
         case .failure(let error):
             print(error)
@@ -664,21 +693,25 @@ public func fetchDarkSkyWeatherData() {
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
             
         if let daily = forecast.daily {
-            let daySevenArray = daily.data[0]
-            let fetchDaySevenArray = daySevenArray
+            let day7Array = daily.data[0]
+            let fetchDay7Array = day7Array
             
-            weatherCondition7 = "\(fetchDaySevenArray.icon!.rawValue)"
-            daySevenDayString = dayFormat(date: fetchDaySevenArray.time)
-            daySevenDateString = dateFormat(date: fetchDaySevenArray.time)
-            daySevenHigh = Int(fetchDaySevenArray.temperatureHigh ?? defaultInteger)
-            daySevenLow = Int(fetchDaySevenArray.temperatureLow ?? defaultInteger)
-            daySevenConditionValue = getDefaultDailyCondition(condition: fetchDaySevenArray)
-            daySevenPrecip = dailyPrecipProb(day: fetchDaySevenArray)
-            daySevenPrecipAccum = dailyPrecipAccum(day: fetchDaySevenArray)
-            daySevenHumidity = dailyHumidityProb(day: fetchDaySevenArray)
-            daySevenUVIndex = Int(fetchDaySevenArray.uvIndex!)
-            daySevenWind = fetchDaySevenArray.windSpeed!
-            daySevenCloudCover = dailyCloudCoverProb(day: fetchDaySevenArray)
+            day7Condition = "\(fetchDay7Array.icon!.rawValue)"
+            day7DayString = dayFormat(date: fetchDay7Array.time)
+            day7DateString = dateFormat(date: fetchDay7Array.time)
+            day7Summary = fetchDay7Array.summary!
+            day7Sunrise = sunFormat(date: fetchDay7Array.sunriseTime!)
+            day7Sunset = sunFormat(date: fetchDay7Array.sunsetTime!)
+            day7High = Int(fetchDay7Array.temperatureHigh ?? defaultInteger)
+            day7Low = Int(fetchDay7Array.temperatureLow ?? defaultInteger)
+            day7Precip = dailyPrecipProb(day: fetchDay7Array)
+            day7PrecipAccum = dailyPrecipAccum(day: fetchDay7Array)
+            day7Humidity = dailyHumidityProb(day: fetchDay7Array)
+            day7Wind = fetchDay7Array.windSpeed!
+            day7DewPoint = Int(fetchDay7Array.dewPoint!)
+            day7Pressure = fetchDay7Array.pressure!
+            day7Visibility = Int(fetchDay7Array.visibility!)
+            day7UVIndex = Int(fetchDay7Array.uvIndex!)
         }
         case .failure(let error):
             print(error)
@@ -693,21 +726,25 @@ public func fetchDarkSkyWeatherData() {
         TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
 
         if let daily = forecast.daily {
-            let dayEightArray = daily.data[0]
-            let fetchDayEightArray = dayEightArray
-
-            weatherCondition8 = "\(fetchDayEightArray.icon!.rawValue)"
-            dayEightDayString = dayFormat(date: fetchDayEightArray.time)
-            dayEightDateString = dateFormat(date: fetchDayEightArray.time)
-            dayEightHigh = Int(fetchDayEightArray.temperatureHigh ?? defaultInteger)
-            dayEightLow = Int(fetchDayEightArray.temperatureLow ?? defaultInteger)
-            dayEightConditionValue = getDefaultDailyCondition(condition: fetchDayEightArray)
-            dayEightPrecip = dailyPrecipProb(day: fetchDayEightArray)
-            dayEightPrecipAccum = dailyPrecipAccum(day: fetchDayEightArray)
-            dayEightHumidity = dailyHumidityProb(day: fetchDayEightArray)
-            dayEightUVIndex = Int(fetchDayEightArray.uvIndex!)
-            dayEightWind = fetchDayEightArray.windSpeed!
-            dayEightCloudCover = dailyCloudCoverProb(day: fetchDayEightArray)
+            let day8Array = daily.data[0]
+            let fetchDay8Array = day8Array
+            
+            day8Condition = "\(fetchDay8Array.icon!.rawValue)"
+            day8DayString = dayFormat(date: fetchDay8Array.time)
+            day8DateString = dateFormat(date: fetchDay8Array.time)
+            day8Summary = fetchDay8Array.summary!
+            day8Sunrise = sunFormat(date: fetchDay8Array.sunriseTime!)
+            day8Sunset = sunFormat(date: fetchDay8Array.sunsetTime!)
+            day8High = Int(fetchDay8Array.temperatureHigh ?? defaultInteger)
+            day8Low = Int(fetchDay8Array.temperatureLow ?? defaultInteger)
+            day8Precip = dailyPrecipProb(day: fetchDay8Array)
+            day8PrecipAccum = dailyPrecipAccum(day: fetchDay8Array)
+            day8Humidity = dailyHumidityProb(day: fetchDay8Array)
+            day8Wind = fetchDay8Array.windSpeed!
+            day8DewPoint = Int(fetchDay8Array.dewPoint!)
+            day8Pressure = fetchDay8Array.pressure!
+            day8Visibility = Int(fetchDay8Array.visibility!)
+            day8UVIndex = Int(fetchDay8Array.uvIndex!)
         }        case .failure(let error):
             print(error)
         }
@@ -721,21 +758,25 @@ public func fetchDarkSkyWeatherData() {
         TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
 
         if let daily = forecast.daily {
-            let dayNineArray = daily.data[0]
-            let fetchDayNineArray = dayNineArray
-
-            weatherCondition9 = "\(fetchDayNineArray.icon!.rawValue)"
-            dayNineDayString = dayFormat(date: fetchDayNineArray.time)
-            dayNineDateString = dateFormat(date: fetchDayNineArray.time)
-            dayNineHigh = Int(fetchDayNineArray.temperatureHigh ?? defaultInteger)
-            dayNineLow = Int(fetchDayNineArray.temperatureLow ?? defaultInteger)
-            dayNineConditionValue = getDefaultDailyCondition(condition: fetchDayNineArray)
-            dayNinePrecip = dailyPrecipProb(day: fetchDayNineArray)
-            dayNinePrecipAccum = dailyPrecipAccum(day: fetchDayNineArray)
-            dayNineHumidity = dailyHumidityProb(day: fetchDayNineArray)
-            dayNineUVIndex = Int(fetchDayNineArray.uvIndex!)
-            dayNineWind = fetchDayNineArray.windSpeed!
-            dayNineCloudCover = dailyCloudCoverProb(day: fetchDayNineArray)
+            let day9Array = daily.data[0]
+            let fetchDay9Array = day9Array
+            
+            day9Condition = "\(fetchDay9Array.icon!.rawValue)"
+            day9DayString = dayFormat(date: fetchDay9Array.time)
+            day9DateString = dateFormat(date: fetchDay9Array.time)
+            day9Summary = fetchDay9Array.summary!
+            day9Sunrise = sunFormat(date: fetchDay9Array.sunriseTime!)
+            day9Sunset = sunFormat(date: fetchDay9Array.sunsetTime!)
+            day9High = Int(fetchDay9Array.temperatureHigh ?? defaultInteger)
+            day9Low = Int(fetchDay9Array.temperatureLow ?? defaultInteger)
+            day9Precip = dailyPrecipProb(day: fetchDay9Array)
+            day9PrecipAccum = dailyPrecipAccum(day: fetchDay9Array)
+            day9Humidity = dailyHumidityProb(day: fetchDay9Array)
+            day9Wind = fetchDay9Array.windSpeed!
+            day9DewPoint = Int(fetchDay9Array.dewPoint!)
+            day9Pressure = fetchDay9Array.pressure!
+            day9Visibility = Int(fetchDay9Array.visibility!)
+            day9UVIndex = Int(fetchDay9Array.uvIndex!)
         }
         case .failure(let error):
             print(error)

@@ -43,8 +43,8 @@ class ForecastIntentHandler: NSObject, ForecastIntentHandling, CLLocationManager
                     let fetchDayZeroArray = dayZeroArray
                     
                     // High and Low
-                    dayZeroHigh = Int(fetchDayZeroArray.temperatureHigh!)
-                    dayZeroLow = Int(fetchDayZeroArray.temperatureLow!)
+                    day0High = Int(fetchDayZeroArray.temperatureHigh!)
+                    day0Low = Int(fetchDayZeroArray.temperatureLow!)
                     
                     // Check if statements are equal
                     if currentSummary == hourSummary {
@@ -55,7 +55,7 @@ class ForecastIntentHandler: NSObject, ForecastIntentHandling, CLLocationManager
                         }
                     }
                 }
-                completion(ForecastIntentResponse.success(weatherSummary: "It is currently \(currentTemperature)°, \(precipHour0)% chance of precipitation, and \(currentSummary.lowercased()). Today's high is \(dayZeroHigh)° and the low is \(dayZeroLow)°."))
+                completion(ForecastIntentResponse.success(weatherSummary: "It is currently \(currentTemperature)°, \(precipHour0)% chance of precipitation, and \(currentSummary.lowercased()). Today's high is \(day0High)° and the low is \(day0Low)°."))
                 
             case .failure(let error):
                 print(error)

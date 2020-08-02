@@ -12,20 +12,7 @@ import CoreLocation
 import GooglePlaces
 
 let defaults = UserDefaults.standard
-
-var cumulusPro: Bool = false
 var cumulusPlus: Bool = false
-var potentialCustomer: Bool = false
-
-// If user previously purchased Pro allow access to Plus
-func checkForCumulusPro() {
-    if (defaults.bool(forKey: "cumulusPro") == true) {
-        defaults.set(true, forKey: "cumulusPlus")
-    } else {
-        defaults.set(false, forKey: "cumulusPlus")
-    }
-}
-
 var placesClient: GMSPlacesClient!
 
 // Shared Secret for IAPs, API, and Ad keys

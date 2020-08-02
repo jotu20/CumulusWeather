@@ -26,10 +26,6 @@ class ColorThemeTableViewController: UITableViewController {
         weatherLoaded = true
         self.setColorTheme()
         
-        if (defaults.bool(forKey: "cumulusPlus") == false) {
-            potentialCustomer = true
-        }
-        
         let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ColorThemeTableViewController.doneBarButtonTapped))
         setupBarButtonColor(button: doneBarButton)
         self.navigationItem.rightBarButtonItem = doneBarButton

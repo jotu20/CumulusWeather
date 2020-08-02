@@ -13,17 +13,13 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
     var currentTextField = UITextField()
     var pickerView = UIPickerView()
     
-    let defaultHourlyConditionTypes = ["Precip (%)", "Temp (°\(unitsTemperature))", "Humidity (%)", "UV index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
-    let defaultDailyConditionTypes = ["Precip (%)", "Accumulation", "Humidity (%)", "UV index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
-    let defaultWidgetConditionSlot1 = ["Current condition", "Feels like (°\(unitsTemperature))", "Precip (%)", "Humidity (%)", "UV index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
-    let defaultWidgetConditionSlot2 = ["Current condition", "Feels like (°\(unitsTemperature))", "Precip (%)", "Humidity (%)", "UV index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
+    let defaultHourlyConditionTypes = ["Precip (%)", "Accumulation (%)", "Temp (°\(unitsTemperature))", "Humidity (%)", "UV index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
+    let defaultWidgetConditionSlot1 = ["Current condition", "Feels like (°\(unitsTemperature))", "Precip (%)", "Accumulation (%)", "Humidity (%)", "UV index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
+    let defaultWidgetConditionSlot2 = ["Current condition", "Feels like (°\(unitsTemperature))", "Precip (%)", "Accumulation (%)", "Humidity (%)", "UV index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
     let dataSourceTypes = ["Dark Sky"]
     
     @IBOutlet weak var dataSourceTextField: UITextField!
-    
     @IBOutlet weak var hourlyConditionsTextField: UITextField!
-    @IBOutlet weak var dailyConditionsTextField: UITextField!
-    
     @IBOutlet weak var widgetSlot1TextField: UITextField!
     @IBOutlet weak var widgetSlot2TextField: UITextField!
     
@@ -53,20 +49,6 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
             self.hourlyConditionsTextField.text = "\(defaults.string(forKey: "defaultHourlyCondition")!)"
         } else {
             self.hourlyConditionsTextField.text = "\(defaults.string(forKey: "defaultHourlyCondition")!)"
-        }
-        
-        if (defaults.string(forKey: "defaultDailyCondition")?.contains("Precip") == true) {
-            self.dailyConditionsTextField.text = "\(defaults.string(forKey: "defaultDailyCondition")!)"
-        } else if (defaults.string(forKey: "defaultDailyCondition")?.contains("Humidity") == true) {
-            self.dailyConditionsTextField.text = "\(defaults.string(forKey: "defaultDailyCondition")!)"
-        } else if (defaults.string(forKey: "defaultDailyCondition")?.contains("UV index") == true) {
-            self.dailyConditionsTextField.text = "\(defaults.string(forKey: "defaultDailyCondition")!)"
-        } else if (defaults.string(forKey: "defaultDailyCondition")?.contains("Wind") == true) {
-            self.dailyConditionsTextField.text = "\(defaults.string(forKey: "defaultDailyCondition")!)"
-        } else if (defaults.string(forKey: "defaultDailyCondition")?.contains("Cloud cover") == true) {
-            self.dailyConditionsTextField.text = "\(defaults.string(forKey: "defaultDailyCondition")!)"
-        } else {
-            self.dailyConditionsTextField.text = "\(defaults.string(forKey: "defaultDailyCondition")!)"
         }
         
         if (defaults.string(forKey: "defaultWidgetSlot1")?.contains("Current condition") == true) {
@@ -130,7 +112,6 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
         
         dataSourceTextField.textColor = color
         hourlyConditionsTextField.textColor = color
-        dailyConditionsTextField.textColor = color
         widgetSlot1TextField.textColor = color
         widgetSlot2TextField.textColor = color
     }
@@ -148,8 +129,6 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
     func pickerView( _ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if currentTextField == hourlyConditionsTextField {
             return defaultHourlyConditionTypes.count
-        } else if currentTextField == dailyConditionsTextField {
-            return defaultDailyConditionTypes.count
         } else if currentTextField == widgetSlot1TextField {
             return defaultWidgetConditionSlot1.count
         } else if currentTextField == widgetSlot2TextField {
@@ -164,8 +143,6 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
     func pickerView( _ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if currentTextField == hourlyConditionsTextField {
             return defaultHourlyConditionTypes[row]
-        } else if currentTextField == dailyConditionsTextField {
-            return defaultDailyConditionTypes[row]
         } else if currentTextField == widgetSlot1TextField {
             return defaultWidgetConditionSlot1[row]
         } else if currentTextField == widgetSlot2TextField {
@@ -182,11 +159,6 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
             hourlyConditionsTextField.text = defaultHourlyConditionTypes[row]
             defaultHourlyCondition = "\(defaultHourlyConditionTypes[row])"
             defaults.set("\(defaultHourlyConditionTypes[row])", forKey: "defaultHourlyCondition")
-            weatherLoaded = false
-        } else if currentTextField == dailyConditionsTextField {
-            dailyConditionsTextField.text = defaultDailyConditionTypes[row]
-            defaultDailyCondition = "\(defaultDailyConditionTypes[row])"
-            defaults.set("\(defaultDailyConditionTypes[row])", forKey: "defaultDailyCondition")
             weatherLoaded = false
         } else if currentTextField == widgetSlot1TextField {
             widgetSlot1TextField.text = defaultWidgetConditionSlot1[row]
@@ -214,7 +186,7 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
         currentTextField = textField
         let toolBar = UIToolbar().ToolbarPicker(mySelect: #selector(ForecastDataTableViewController.dismissPicker))
         
-        if currentTextField == dataSourceTextField || currentTextField == hourlyConditionsTextField || currentTextField == dailyConditionsTextField || currentTextField == widgetSlot1TextField || currentTextField == widgetSlot2TextField {
+        if currentTextField == dataSourceTextField || currentTextField == hourlyConditionsTextField || currentTextField == widgetSlot1TextField || currentTextField == widgetSlot2TextField {
             currentTextField.inputView = pickerView
             currentTextField.inputAccessoryView = toolBar
         }

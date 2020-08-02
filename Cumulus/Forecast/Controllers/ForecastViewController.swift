@@ -72,72 +72,182 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @IBOutlet weak var day0View: UIView!
     @IBOutlet weak var day0Label: UILabel!
     @IBOutlet weak var day0ConditionIcon: UIImageView!
-    @IBOutlet weak var day0ConditionLabel: UILabel!
+    @IBOutlet weak var day0Height: NSLayoutConstraint!
     @IBOutlet weak var day0HighLabel: UILabel!
     @IBOutlet weak var day0LowLabel: UILabel!
+    @IBOutlet weak var day0SummaryLabel: UILabel!
+    @IBOutlet weak var day0Slot1: UILabel!
+    @IBOutlet weak var day0Slot2: UILabel!
+    @IBOutlet weak var day0Slot3: UILabel!
+    @IBOutlet weak var day0Slot4: UILabel!
+    @IBOutlet weak var day0Slot5: UILabel!
+    @IBOutlet weak var day0Slot6: UILabel!
+    @IBOutlet weak var day0Slot7: UILabel!
+    @IBOutlet weak var day0Slot8: UILabel!
+    @IBOutlet weak var day0Slot9: UILabel!
+    @IBOutlet weak var day0Slot10: UILabel!
     
     @IBOutlet weak var day1View: UIView!
     @IBOutlet weak var day1Label: UILabel!
     @IBOutlet weak var day1ConditionIcon: UIImageView!
-    @IBOutlet weak var day1ConditionLabel: UILabel!
+    @IBOutlet weak var day1Height: NSLayoutConstraint!
     @IBOutlet weak var day1HighLabel: UILabel!
     @IBOutlet weak var day1LowLabel: UILabel!
+    @IBOutlet weak var day1SummaryLabel: UILabel!
+    @IBOutlet weak var day1Slot1: UILabel!
+    @IBOutlet weak var day1Slot2: UILabel!
+    @IBOutlet weak var day1Slot3: UILabel!
+    @IBOutlet weak var day1Slot4: UILabel!
+    @IBOutlet weak var day1Slot5: UILabel!
+    @IBOutlet weak var day1Slot6: UILabel!
+    @IBOutlet weak var day1Slot7: UILabel!
+    @IBOutlet weak var day1Slot8: UILabel!
+    @IBOutlet weak var day1Slot9: UILabel!
+    @IBOutlet weak var day1Slot10: UILabel!
     
     @IBOutlet weak var day2View: UIView!
     @IBOutlet weak var day2Label: UILabel!
     @IBOutlet weak var day2ConditionIcon: UIImageView!
-    @IBOutlet weak var day2ConditionLabel: UILabel!
+    @IBOutlet weak var day2Height: NSLayoutConstraint!
     @IBOutlet weak var day2HighLabel: UILabel!
     @IBOutlet weak var day2LowLabel: UILabel!
+    @IBOutlet weak var day2SummaryLabel: UILabel!
+    @IBOutlet weak var day2Slot1: UILabel!
+    @IBOutlet weak var day2Slot2: UILabel!
+    @IBOutlet weak var day2Slot3: UILabel!
+    @IBOutlet weak var day2Slot4: UILabel!
+    @IBOutlet weak var day2Slot5: UILabel!
+    @IBOutlet weak var day2Slot6: UILabel!
+    @IBOutlet weak var day2Slot7: UILabel!
+    @IBOutlet weak var day2Slot8: UILabel!
+    @IBOutlet weak var day2Slot9: UILabel!
+    @IBOutlet weak var day2Slot10: UILabel!
     
     @IBOutlet weak var day3View: UIView!
     @IBOutlet weak var day3Label: UILabel!
     @IBOutlet weak var day3ConditionIcon: UIImageView!
-    @IBOutlet weak var day3ConditionLabel: UILabel!
+    @IBOutlet weak var day3Height: NSLayoutConstraint!
     @IBOutlet weak var day3HighLabel: UILabel!
     @IBOutlet weak var day3LowLabel: UILabel!
+    @IBOutlet weak var day3SummaryLabel: UILabel!
+    @IBOutlet weak var day3Slot1: UILabel!
+    @IBOutlet weak var day3Slot2: UILabel!
+    @IBOutlet weak var day3Slot3: UILabel!
+    @IBOutlet weak var day3Slot4: UILabel!
+    @IBOutlet weak var day3Slot5: UILabel!
+    @IBOutlet weak var day3Slot6: UILabel!
+    @IBOutlet weak var day3Slot7: UILabel!
+    @IBOutlet weak var day3Slot8: UILabel!
+    @IBOutlet weak var day3Slot9: UILabel!
+    @IBOutlet weak var day3Slot10: UILabel!
     
     @IBOutlet weak var day4View: UIView!
     @IBOutlet weak var day4Label: UILabel!
     @IBOutlet weak var day4ConditionIcon: UIImageView!
-    @IBOutlet weak var day4ConditionLabel: UILabel!
+    @IBOutlet weak var day4Height: NSLayoutConstraint!
     @IBOutlet weak var day4HighLabel: UILabel!
     @IBOutlet weak var day4LowLabel: UILabel!
+    @IBOutlet weak var day4SummaryLabel: UILabel!
+    @IBOutlet weak var day4Slot1: UILabel!
+    @IBOutlet weak var day4Slot2: UILabel!
+    @IBOutlet weak var day4Slot3: UILabel!
+    @IBOutlet weak var day4Slot4: UILabel!
+    @IBOutlet weak var day4Slot5: UILabel!
+    @IBOutlet weak var day4Slot6: UILabel!
+    @IBOutlet weak var day4Slot7: UILabel!
+    @IBOutlet weak var day4Slot8: UILabel!
+    @IBOutlet weak var day4Slot9: UILabel!
+    @IBOutlet weak var day4Slot10: UILabel!
     
     @IBOutlet weak var day5View: UIView!
     @IBOutlet weak var day5Label: UILabel!
     @IBOutlet weak var day5ConditionIcon: UIImageView!
-    @IBOutlet weak var day5ConditionLabel: UILabel!
+    @IBOutlet weak var day5Height: NSLayoutConstraint!
     @IBOutlet weak var day5HighLabel: UILabel!
     @IBOutlet weak var day5LowLabel: UILabel!
+    @IBOutlet weak var day5SummaryLabel: UILabel!
+    @IBOutlet weak var day5Slot1: UILabel!
+    @IBOutlet weak var day5Slot2: UILabel!
+    @IBOutlet weak var day5Slot3: UILabel!
+    @IBOutlet weak var day5Slot4: UILabel!
+    @IBOutlet weak var day5Slot5: UILabel!
+    @IBOutlet weak var day5Slot6: UILabel!
+    @IBOutlet weak var day5Slot7: UILabel!
+    @IBOutlet weak var day5Slot8: UILabel!
+    @IBOutlet weak var day5Slot9: UILabel!
+    @IBOutlet weak var day5Slot10: UILabel!
     
     @IBOutlet weak var day6View: UIView!
     @IBOutlet weak var day6Label: UILabel!
     @IBOutlet weak var day6ConditionIcon: UIImageView!
-    @IBOutlet weak var day6ConditionLabel: UILabel!
+    @IBOutlet weak var day6Height: NSLayoutConstraint!
     @IBOutlet weak var day6HighLabel: UILabel!
     @IBOutlet weak var day6LowLabel: UILabel!
+    @IBOutlet weak var day6SummaryLabel: UILabel!
+    @IBOutlet weak var day6Slot1: UILabel!
+    @IBOutlet weak var day6Slot2: UILabel!
+    @IBOutlet weak var day6Slot3: UILabel!
+    @IBOutlet weak var day6Slot4: UILabel!
+    @IBOutlet weak var day6Slot5: UILabel!
+    @IBOutlet weak var day6Slot6: UILabel!
+    @IBOutlet weak var day6Slot7: UILabel!
+    @IBOutlet weak var day6Slot8: UILabel!
+    @IBOutlet weak var day6Slot9: UILabel!
+    @IBOutlet weak var day6Slot10: UILabel!
     
     @IBOutlet weak var day7View: UIView!
     @IBOutlet weak var day7Label: UILabel!
     @IBOutlet weak var day7ConditionIcon: UIImageView!
-    @IBOutlet weak var day7ConditionLabel: UILabel!
+    @IBOutlet weak var day7Height: NSLayoutConstraint!
     @IBOutlet weak var day7HighLabel: UILabel!
     @IBOutlet weak var day7LowLabel: UILabel!
+    @IBOutlet weak var day7SummaryLabel: UILabel!
+    @IBOutlet weak var day7Slot1: UILabel!
+    @IBOutlet weak var day7Slot2: UILabel!
+    @IBOutlet weak var day7Slot3: UILabel!
+    @IBOutlet weak var day7Slot4: UILabel!
+    @IBOutlet weak var day7Slot5: UILabel!
+    @IBOutlet weak var day7Slot6: UILabel!
+    @IBOutlet weak var day7Slot7: UILabel!
+    @IBOutlet weak var day7Slot8: UILabel!
+    @IBOutlet weak var day7Slot9: UILabel!
+    @IBOutlet weak var day7Slot10: UILabel!
     
     @IBOutlet weak var day8View: UIView!
     @IBOutlet weak var day8Label: UILabel!
     @IBOutlet weak var day8ConditionIcon: UIImageView!
-    @IBOutlet weak var day8ConditionLabel: UILabel!
+    @IBOutlet weak var day8Height: NSLayoutConstraint!
     @IBOutlet weak var day8HighLabel: UILabel!
     @IBOutlet weak var day8LowLabel: UILabel!
+    @IBOutlet weak var day8SummaryLabel: UILabel!
+    @IBOutlet weak var day8Slot1: UILabel!
+    @IBOutlet weak var day8Slot2: UILabel!
+    @IBOutlet weak var day8Slot3: UILabel!
+    @IBOutlet weak var day8Slot4: UILabel!
+    @IBOutlet weak var day8Slot5: UILabel!
+    @IBOutlet weak var day8Slot6: UILabel!
+    @IBOutlet weak var day8Slot7: UILabel!
+    @IBOutlet weak var day8Slot8: UILabel!
+    @IBOutlet weak var day8Slot9: UILabel!
+    @IBOutlet weak var day8Slot10: UILabel!
     
     @IBOutlet weak var day9View: UIView!
     @IBOutlet weak var day9Label: UILabel!
     @IBOutlet weak var day9ConditionIcon: UIImageView!
-    @IBOutlet weak var day9ConditionLabel: UILabel!
+    @IBOutlet weak var day9Height: NSLayoutConstraint!
     @IBOutlet weak var day9HighLabel: UILabel!
     @IBOutlet weak var day9LowLabel: UILabel!
+    @IBOutlet weak var day9SummaryLabel: UILabel!
+    @IBOutlet weak var day9Slot1: UILabel!
+    @IBOutlet weak var day9Slot2: UILabel!
+    @IBOutlet weak var day9Slot3: UILabel!
+    @IBOutlet weak var day9Slot4: UILabel!
+    @IBOutlet weak var day9Slot5: UILabel!
+    @IBOutlet weak var day9Slot6: UILabel!
+    @IBOutlet weak var day9Slot7: UILabel!
+    @IBOutlet weak var day9Slot8: UILabel!
+    @IBOutlet weak var day9Slot9: UILabel!
+    @IBOutlet weak var day9Slot10: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.delegate = self
@@ -444,25 +554,55 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
 
     // MARK: - Set daily outlets
-    func setDayLabelAndIcons(dayLabel: UILabel!, dayConditionIcon: UIImageView!, dayConditionLabel: UILabel!, dayLowLabel: UILabel!, dayHighLabel: UILabel!, dayString: String, dateString: String, dayConditionIconString: String, dayConditionType: String, dayConditionValue: Int, dayLow: Int, dayHigh: Int) {
+    func setDayLabelAndIcons(dayViewHeight: NSLayoutConstraint!, dayLabel: UILabel!, dayConditionIcon: UIImageView!, dayLowLabel: UILabel!, dayHighLabel: UILabel!, dayString: String, dateString: String, dayConditionIconString: String, dayLow: Int, dayHigh: Int) {
         
-        var typeUnits: String = ""
-        
-        if defaults.string(forKey: "defaultHourlyCondition")?.contains("Precip") == true || defaults.string(forKey: "defaultHourlyCondition")?.contains("Humidity") == true || defaults.string(forKey: "defaultHourlyCondition")?.contains("Cloud") == true {
-            typeUnits = "%"
-        } else if defaults.string(forKey: "defaultHourlyCondition")?.contains("Accumulation") == true {
-            typeUnits = "\(unitsPrecipitation)"
-        } else if defaults.string(forKey: "defaultHourlyCondition")?.contains("UV Index") == true {
-            typeUnits = ""
-        } else if defaults.string(forKey: "defaultHourlyCondition")?.contains("Wind") == true {
-            typeUnits = "\(unitsWindSpeed)"
-        }
-        
+        dayViewHeight.constant = 60
         dayLabel.text = "\(dayString.capitalizingFirstLetter())\n\(dateString)"
         dayConditionIcon.image = UIImage(named: weatherCondition(condition: dayConditionIconString, type: "daily"))
-        dayConditionLabel.text = "\(dayConditionType) \(dayConditionValue)\(typeUnits)"
         dayLowLabel.text = "\(dayLow)°"
         dayHighLabel.text = "\(dayHigh)°"
+    }
+    
+    func setExtendedDayLabels(summary: String, precip: Int, humidity: Int, dewPoint: Int, visibility: Int, sunrise: String, accum: Double, wind: Double, pressure: Double, uvIndex: Int, sunset: String, label0: UILabel!, label1: UILabel!, label2: UILabel!, label3: UILabel!, label4: UILabel!, label5: UILabel!, label6: UILabel!, label7: UILabel!, label8: UILabel!, label9: UILabel!, label10: UILabel!) {
+        label0.text = summary
+        label1.text = "Precip. \(precip)%"
+        label2.text = "Humidity \(humidity)%"
+        label3.text = "Dew point \(dewPoint)°"
+        label4.text = "Visibility \(visibility) \(unitsDistance)"
+        label5.text = "Sunrise \(sunrise)"
+        label6.text = "Accum. \(accum)\(unitsPrecipitation)"
+        label7.text = "Wind \(wind)\(unitsWindSpeed)"
+        label8.text = "Pressure \(pressure)\(unitsPressure)"
+        label9.text = "UV index \(uvIndex)"
+        label10.text = "Sunset \(sunset)"
+    }
+    
+    func hideExtendedDayLabels(hidden: Bool, label0: UILabel!, label1: UILabel!, label2: UILabel!, label3: UILabel!, label4: UILabel!, label5: UILabel!, label6: UILabel!, label7: UILabel!, label8: UILabel!, label9: UILabel!, label10: UILabel!) {
+        if hidden == true {
+            label0.isHidden = true
+            label1.isHidden = true
+            label2.isHidden = true
+            label3.isHidden = true
+            label4.isHidden = true
+            label5.isHidden = true
+            label6.isHidden = true
+            label7.isHidden = true
+            label8.isHidden = true
+            label9.isHidden = true
+            label10.isHidden = true
+        } else {
+            label0.isHidden = false
+            label1.isHidden = false
+            label2.isHidden = false
+            label3.isHidden = false
+            label4.isHidden = false
+            label5.isHidden = false
+            label6.isHidden = false
+            label7.isHidden = false
+            label8.isHidden = false
+            label9.isHidden = false
+            label10.isHidden = false
+        }
     }
     
     func setHourlyOutlets0() {
@@ -698,120 +838,47 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
     
     func setDailyOutlets() {
-        let type = defaults.string(forKey: "defaultHourlyCondition")
-        var typeString = ""
         dailyLabel.text = "Daily forecast"
         
-        var day0Value: Int = 0
-        var day1Value: Int = 0
-        var day2Value: Int = 0
-        var day3Value: Int = 0
-        var day4Value: Int = 0
-        var day5Value: Int = 0
-        var day6Value: Int = 0
-        var day7Value: Int = 0
-        var day8Value: Int = 0
-        var day9Value: Int = 0
+        hideExtendedDayLabels(hidden: true, label0: day0SummaryLabel, label1: day0Slot1, label2: day0Slot2, label3: day0Slot3, label4: day0Slot4, label5: day0Slot5, label6: day0Slot6!, label7: day0Slot7, label8: day0Slot8, label9: day0Slot9, label10: day0Slot10)
         
-        if type?.contains("Precip") == true {
-            typeString = "Precip."
-            
-            day0Value = dayZeroPrecip
-            day1Value = dayOnePrecip
-            day2Value = dayTwoPrecip
-            day3Value = dayThreePrecip
-            day4Value = dayFourPrecip
-            day5Value = dayFivePrecip
-            day6Value = daySixPrecip
-            day7Value = daySevenPrecip
-            day8Value = dayEightPrecip
-            day9Value = dayNinePrecip
-        } else if type?.contains("Accumulation") == true {
-            typeString = "Accum."
-            
-            day0Value = Int(dayZeroPrecipAccum)
-            day1Value = Int(dayOnePrecipAccum)
-            day2Value = Int(dayTwoPrecipAccum)
-            day3Value = Int(dayThreePrecipAccum)
-            day4Value = Int(dayFourPrecipAccum)
-            day5Value = Int(dayFivePrecipAccum)
-            day6Value = Int(daySixPrecipAccum)
-            day7Value = Int(daySevenPrecipAccum)
-            day8Value = Int(dayEightPrecipAccum)
-            day9Value = Int(dayNinePrecipAccum)
-        } else if type?.contains("Humidity") == true {
-            typeString = "Humidity"
-            
-            day0Value = dayZeroHumidity
-            day1Value = dayOneHumidity
-            day2Value = dayTwoHumidity
-            day3Value = dayThreeHumidity
-            day4Value = dayFourHumidity
-            day5Value = dayFiveHumidity
-            day6Value = daySixHumidity
-            day7Value = daySevenHumidity
-            day8Value = dayEightHumidity
-            day9Value = dayNineHumidity
-        } else if type?.contains("UV Index") == true {
-            typeString = "UV index"
-                   
-            day0Value = dayZeroUVIndex
-            day1Value = dayOneUVIndex
-            day2Value = dayTwoUVIndex
-            day3Value = dayThreeUVIndex
-            day4Value = dayFourUVIndex
-            day5Value = dayFiveUVIndex
-            day6Value = daySixUVIndex
-            day7Value = daySevenUVIndex
-            day8Value = dayEightUVIndex
-            day9Value = dayNineUVIndex
-        } else if type?.contains("Wind") == true {
-            typeString = "Wind"
-            
-            day0Value = Int(dayZeroWind)
-            day1Value = Int(dayOneWind)
-            day2Value = Int(dayTwoWind)
-            day3Value = Int(dayThreeWind)
-            day4Value = Int(dayFourWind)
-            day5Value = Int(dayFiveWind)
-            day6Value = Int(daySixWind)
-            day7Value = Int(daySevenWind)
-            day8Value = Int(dayEightWind)
-            day9Value = Int(dayNineWind)
-        } else if type?.contains("Cloud") == true {
-            typeString = "Cloud cover"
-            
-            day0Value = dayZeroCloudCover
-            day1Value = dayOneCloudCover
-            day2Value = dayTwoCloudCover
-            day3Value = dayThreeCloudCover
-            day4Value = dayFourCloudCover
-            day5Value = dayFiveCloudCover
-            day6Value = daySixCloudCover
-            day7Value = daySevenCloudCover
-            day8Value = dayEightCloudCover
-            day9Value = dayNineCloudCover
-        }
+        hideExtendedDayLabels(hidden: true, label0: day1SummaryLabel, label1: day1Slot1, label2: day1Slot2, label3: day1Slot3, label4: day1Slot4, label5: day1Slot5, label6: day1Slot6!, label7: day1Slot7, label8: day1Slot8, label9: day1Slot9, label10: day1Slot10)
         
-        setDayLabelAndIcons(dayLabel: day0Label, dayConditionIcon: day0ConditionIcon, dayConditionLabel: day0ConditionLabel, dayLowLabel: day0LowLabel, dayHighLabel: day0HighLabel, dayString: dayZeroDayString, dateString: dayZeroDateString, dayConditionIconString: weatherCondition0, dayConditionType: typeString, dayConditionValue: day0Value, dayLow: dayZeroLow, dayHigh: dayZeroHigh)
+        hideExtendedDayLabels(hidden: true, label0: day2SummaryLabel, label1: day2Slot1, label2: day2Slot2, label3: day2Slot3, label4: day2Slot4, label5: day2Slot5, label6: day2Slot6!, label7: day2Slot7, label8: day2Slot8, label9: day2Slot9, label10: day2Slot10)
         
-        setDayLabelAndIcons(dayLabel: day1Label, dayConditionIcon: day1ConditionIcon, dayConditionLabel: day1ConditionLabel, dayLowLabel: day1LowLabel, dayHighLabel: day1HighLabel, dayString: dayOneDayString, dateString: dayOneDateString, dayConditionIconString: weatherCondition1, dayConditionType: typeString, dayConditionValue: day1Value, dayLow: dayOneLow, dayHigh: dayOneHigh)
+        hideExtendedDayLabels(hidden: true, label0: day3SummaryLabel, label1: day3Slot1, label2: day3Slot2, label3: day3Slot3, label4: day3Slot4, label5: day3Slot5, label6: day3Slot6!, label7: day3Slot7, label8: day3Slot8, label9: day3Slot9, label10: day3Slot10)
         
-        setDayLabelAndIcons(dayLabel: day2Label, dayConditionIcon: day2ConditionIcon, dayConditionLabel: day2ConditionLabel, dayLowLabel: day2LowLabel, dayHighLabel: day2HighLabel, dayString: dayTwoDayString, dateString: dayTwoDateString, dayConditionIconString: weatherCondition2, dayConditionType: typeString, dayConditionValue: day2Value, dayLow: dayTwoLow, dayHigh: dayTwoHigh)
+        hideExtendedDayLabels(hidden: true, label0: day4SummaryLabel, label1: day4Slot1, label2: day4Slot2, label3: day4Slot3, label4: day4Slot4, label5: day4Slot5, label6: day4Slot6!, label7: day4Slot7, label8: day4Slot8, label9: day4Slot9, label10: day4Slot10)
         
-        setDayLabelAndIcons(dayLabel: day3Label, dayConditionIcon: day3ConditionIcon, dayConditionLabel: day3ConditionLabel, dayLowLabel: day3LowLabel, dayHighLabel: day3HighLabel, dayString: dayThreeDayString, dateString: dayThreeDateString, dayConditionIconString: weatherCondition3, dayConditionType: typeString, dayConditionValue: day3Value, dayLow: dayThreeLow, dayHigh: dayThreeHigh)
+        hideExtendedDayLabels(hidden: true, label0: day5SummaryLabel, label1: day5Slot1, label2: day5Slot2, label3: day5Slot3, label4: day5Slot4, label5: day5Slot5, label6: day5Slot6!, label7: day5Slot7, label8: day5Slot8, label9: day5Slot9, label10: day5Slot10)
         
-        setDayLabelAndIcons(dayLabel: day4Label, dayConditionIcon: day4ConditionIcon, dayConditionLabel: day4ConditionLabel, dayLowLabel: day4LowLabel, dayHighLabel: day4HighLabel, dayString: dayFourDayString, dateString: dayFourDateString, dayConditionIconString: weatherCondition4, dayConditionType: typeString, dayConditionValue: day4Value, dayLow: dayFourLow, dayHigh: dayFourHigh)
+        hideExtendedDayLabels(hidden: true, label0: day6SummaryLabel, label1: day6Slot1, label2: day6Slot2, label3: day6Slot3, label4: day6Slot4, label5: day6Slot5, label6: day6Slot6!, label7: day6Slot7, label8: day6Slot8, label9: day6Slot9, label10: day6Slot10)
         
-        setDayLabelAndIcons(dayLabel: day5Label, dayConditionIcon: day5ConditionIcon, dayConditionLabel: day5ConditionLabel, dayLowLabel: day5LowLabel, dayHighLabel: day5HighLabel, dayString: dayFiveDayString, dateString: dayFiveDateString, dayConditionIconString: weatherCondition5, dayConditionType: typeString, dayConditionValue: day5Value, dayLow: dayFiveLow, dayHigh: dayFiveHigh)
+        hideExtendedDayLabels(hidden: true, label0: day7SummaryLabel, label1: day7Slot1, label2: day7Slot2, label3: day7Slot3, label4: day7Slot4, label5: day7Slot5, label6: day7Slot6!, label7: day7Slot7, label8: day7Slot8, label9: day7Slot9, label10: day7Slot10)
         
-        setDayLabelAndIcons(dayLabel: day6Label, dayConditionIcon: day6ConditionIcon, dayConditionLabel: day6ConditionLabel, dayLowLabel: day6LowLabel, dayHighLabel: day6HighLabel, dayString: daySixDayString, dateString: daySixDateString, dayConditionIconString: weatherCondition6, dayConditionType: typeString, dayConditionValue: day6Value, dayLow: daySixLow, dayHigh: daySixHigh)
+        hideExtendedDayLabels(hidden: true, label0: day8SummaryLabel, label1: day8Slot1, label2: day8Slot2, label3: day8Slot3, label4: day8Slot4, label5: day8Slot5, label6: day8Slot6!, label7: day8Slot7, label8: day8Slot8, label9: day8Slot9, label10: day8Slot10)
         
-        setDayLabelAndIcons(dayLabel: day7Label, dayConditionIcon: day7ConditionIcon, dayConditionLabel: day7ConditionLabel, dayLowLabel: day7LowLabel, dayHighLabel: day7HighLabel, dayString: daySevenDayString, dateString: daySevenDateString, dayConditionIconString: weatherCondition7, dayConditionType: typeString, dayConditionValue: day7Value, dayLow: daySevenLow, dayHigh: daySevenHigh)
+        hideExtendedDayLabels(hidden: true, label0: day9SummaryLabel, label1: day9Slot1, label2: day9Slot2, label3: day9Slot3, label4: day9Slot4, label5: day9Slot5, label6: day9Slot6!, label7: day9Slot7, label8: day9Slot8, label9: day9Slot9, label10: day9Slot10)
         
-        setDayLabelAndIcons(dayLabel: day8Label, dayConditionIcon: day8ConditionIcon, dayConditionLabel: day8ConditionLabel, dayLowLabel: day8LowLabel, dayHighLabel: day8HighLabel, dayString: dayEightDayString, dateString: dayEightDateString, dayConditionIconString: weatherCondition8, dayConditionType: typeString, dayConditionValue: day8Value, dayLow: dayEightLow, dayHigh: dayEightHigh)
+        setDayLabelAndIcons(dayViewHeight: day0Height, dayLabel: day0Label, dayConditionIcon: day0ConditionIcon, dayLowLabel: day0LowLabel, dayHighLabel: day0HighLabel, dayString: day0DayString, dateString: day0DateString, dayConditionIconString: day0Condition, dayLow: day0Low, dayHigh: day0High)
         
-        setDayLabelAndIcons(dayLabel: day9Label, dayConditionIcon: day9ConditionIcon, dayConditionLabel: day9ConditionLabel, dayLowLabel: day9LowLabel, dayHighLabel: day9HighLabel, dayString: dayNineDayString, dateString: dayNineDateString, dayConditionIconString: weatherCondition9, dayConditionType: typeString, dayConditionValue: day9Value, dayLow: dayNineLow, dayHigh: dayNineHigh)
+        setDayLabelAndIcons(dayViewHeight: day1Height, dayLabel: day1Label, dayConditionIcon: day1ConditionIcon, dayLowLabel: day1LowLabel, dayHighLabel: day1HighLabel, dayString: day1DayString, dateString: day1DateString, dayConditionIconString: day1Condition, dayLow: day1Low, dayHigh: day1High)
+        
+        setDayLabelAndIcons(dayViewHeight: day2Height, dayLabel: day2Label, dayConditionIcon: day2ConditionIcon, dayLowLabel: day2LowLabel, dayHighLabel: day2HighLabel, dayString: day2DayString, dateString: day2DateString, dayConditionIconString: day2Condition, dayLow: day2Low, dayHigh: day2High)
+        
+        setDayLabelAndIcons(dayViewHeight: day3Height, dayLabel: day3Label, dayConditionIcon: day3ConditionIcon, dayLowLabel: day3LowLabel, dayHighLabel: day3HighLabel, dayString: day3DayString, dateString: day3DateString, dayConditionIconString: day3Condition, dayLow: day3Low, dayHigh: day3High)
+        
+        setDayLabelAndIcons(dayViewHeight: day4Height, dayLabel: day4Label, dayConditionIcon: day4ConditionIcon, dayLowLabel: day4LowLabel, dayHighLabel: day4HighLabel, dayString: day4DayString, dateString: day4DateString, dayConditionIconString: day4Condition, dayLow: day4Low, dayHigh: day4High)
+        
+        setDayLabelAndIcons(dayViewHeight: day5Height, dayLabel: day5Label, dayConditionIcon: day5ConditionIcon, dayLowLabel: day5LowLabel, dayHighLabel: day5HighLabel, dayString: day5DayString, dateString: day5DateString, dayConditionIconString: day5Condition, dayLow: day5Low, dayHigh: day5High)
+        
+        setDayLabelAndIcons(dayViewHeight: day6Height, dayLabel: day6Label, dayConditionIcon: day6ConditionIcon, dayLowLabel: day6LowLabel, dayHighLabel: day6HighLabel, dayString: day6DayString, dateString: day6DateString, dayConditionIconString: day6Condition, dayLow: day6Low, dayHigh: day6High)
+        
+        setDayLabelAndIcons(dayViewHeight: day7Height, dayLabel: day7Label, dayConditionIcon: day7ConditionIcon, dayLowLabel: day7LowLabel, dayHighLabel: day7HighLabel, dayString: day7DayString, dateString: day7DateString, dayConditionIconString: day7Condition, dayLow: day7Low, dayHigh: day7High)
+        
+        setDayLabelAndIcons(dayViewHeight: day8Height, dayLabel: day8Label, dayConditionIcon: day8ConditionIcon, dayLowLabel: day8LowLabel, dayHighLabel: day8HighLabel, dayString: day8DayString, dateString: day8DateString, dayConditionIconString: day8Condition, dayLow: day8Low, dayHigh: day8High)
+        
+        setDayLabelAndIcons(dayViewHeight: day9Height, dayLabel: day9Label, dayConditionIcon: day9ConditionIcon, dayLowLabel: day9LowLabel, dayHighLabel: day9HighLabel, dayString: day9DayString, dateString: day9DateString, dayConditionIconString: day9Condition, dayLow: day9Low, dayHigh: day9High)
     }
     
     // MARK: - Action to open weather alerts
@@ -841,6 +908,147 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             setHourlyOutlets0()
         }
     }
+    
+    @IBAction func day0CardTapped(_ sender: UITapGestureRecognizer) {
+        if day0Height.constant == 60 {
+            day0Height.constant = 220
+            
+            hideExtendedDayLabels(hidden: false, label0: day0SummaryLabel, label1: day0Slot1, label2: day0Slot2, label3: day0Slot3, label4: day0Slot4, label5: day0Slot5, label6: day0Slot6!, label7: day0Slot7, label8: day0Slot8, label9: day0Slot9, label10: day0Slot10)
+            
+            setExtendedDayLabels(summary: day0Summary, precip: day0Precip, humidity: day0Humidity, dewPoint: day0DewPoint, visibility: day0Visibility, sunrise: day0Sunrise, accum: day0PrecipAccum, wind: day0Wind, pressure: day0Pressure, uvIndex: day0UVIndex, sunset: day0Sunset, label0: day0SummaryLabel, label1: day0Slot1, label2: day0Slot2, label3: day0Slot3, label4: day0Slot4, label5: day0Slot5, label6: day0Slot6, label7: day0Slot7, label8: day0Slot8, label9: day0Slot9, label10: day0Slot10)
+        } else {
+            day0Height.constant = 60
+            
+            hideExtendedDayLabels(hidden: true, label0: day0SummaryLabel, label1: day0Slot1, label2: day0Slot2, label3: day0Slot3, label4: day0Slot4, label5: day0Slot5, label6: day0Slot6!, label7: day0Slot7, label8: day0Slot8, label9: day0Slot9, label10: day0Slot10)
+        }
+    }
+    
+    @IBAction func day1CardTapped(_ sender: UITapGestureRecognizer) {
+        if day1Height.constant == 60 {
+            day1Height.constant = 220
+            
+            hideExtendedDayLabels(hidden: false, label0: day1SummaryLabel, label1: day1Slot1, label2: day1Slot2, label3: day1Slot3, label4: day1Slot4, label5: day1Slot5, label6: day1Slot6!, label7: day1Slot7, label8: day1Slot8, label9: day1Slot9, label10: day1Slot10)
+            
+            setExtendedDayLabels(summary: day1Summary, precip: day1Precip, humidity: day1Humidity, dewPoint: day1DewPoint, visibility: day1Visibility, sunrise: day1Sunrise, accum: day1PrecipAccum, wind: day1Wind, pressure: day1Pressure, uvIndex: day1UVIndex, sunset: day1Sunset, label0: day1SummaryLabel, label1: day1Slot1, label2: day1Slot2, label3: day1Slot3, label4: day1Slot4, label5: day1Slot5, label6: day1Slot6, label7: day1Slot7, label8: day1Slot8, label9: day1Slot9, label10: day1Slot10)
+        } else {
+            day1Height.constant = 60
+            
+            hideExtendedDayLabels(hidden: true, label0: day1SummaryLabel, label1: day1Slot1, label2: day1Slot2, label3: day1Slot3, label4: day1Slot4, label5: day1Slot5, label6: day1Slot6!, label7: day1Slot7, label8: day1Slot8, label9: day1Slot9, label10: day1Slot10)
+        }
+    }
+    
+    @IBAction func day2CardTapped(_ sender: UITapGestureRecognizer) {
+        if day2Height.constant == 60 {
+            day2Height.constant = 220
+            
+            hideExtendedDayLabels(hidden: false, label0: day2SummaryLabel, label1: day2Slot1, label2: day2Slot2, label3: day2Slot3, label4: day2Slot4, label5: day2Slot5, label6: day2Slot6!, label7: day2Slot7, label8: day2Slot8, label9: day2Slot9, label10: day2Slot10)
+            
+            setExtendedDayLabels(summary: day2Summary, precip: day2Precip, humidity: day2Humidity, dewPoint: day2DewPoint, visibility: day2Visibility, sunrise: day2Sunrise, accum: day2PrecipAccum, wind: day2Wind, pressure: day2Pressure, uvIndex: day2UVIndex, sunset: day2Sunset, label0: day2SummaryLabel, label1: day2Slot1, label2: day2Slot2, label3: day2Slot3, label4: day2Slot4, label5: day2Slot5, label6: day2Slot6, label7: day2Slot7, label8: day2Slot8, label9: day2Slot9, label10: day2Slot10)
+        } else {
+            day2Height.constant = 60
+            
+            hideExtendedDayLabels(hidden: true, label0: day2SummaryLabel, label1: day2Slot1, label2: day2Slot2, label3: day2Slot3, label4: day2Slot4, label5: day2Slot5, label6: day2Slot6!, label7: day2Slot7, label8: day2Slot8, label9: day2Slot9, label10: day2Slot10)
+        }
+    }
+
+    @IBAction func day3CardTapped(_ sender: UITapGestureRecognizer) {
+        if day3Height.constant == 60 {
+            day3Height.constant = 220
+            
+            hideExtendedDayLabels(hidden: false, label0: day3SummaryLabel, label1: day3Slot1, label2: day3Slot2, label3: day3Slot3, label4: day3Slot4, label5: day3Slot5, label6: day3Slot6!, label7: day3Slot7, label8: day3Slot8, label9: day3Slot9, label10: day3Slot10)
+            
+            setExtendedDayLabels(summary: day3Summary, precip: day3Precip, humidity: day3Humidity, dewPoint: day3DewPoint, visibility: day3Visibility, sunrise: day3Sunrise, accum: day3PrecipAccum, wind: day3Wind, pressure: day3Pressure, uvIndex: day3UVIndex, sunset: day3Sunset, label0: day3SummaryLabel, label1: day3Slot1, label2: day3Slot2, label3: day3Slot3, label4: day3Slot4, label5: day3Slot5, label6: day3Slot6, label7: day3Slot7, label8: day3Slot8, label9: day3Slot9, label10: day3Slot10)
+        } else {
+            day3Height.constant = 60
+            
+            hideExtendedDayLabels(hidden: true, label0: day3SummaryLabel, label1: day3Slot1, label2: day3Slot2, label3: day3Slot3, label4: day3Slot4, label5: day3Slot5, label6: day3Slot6!, label7: day3Slot7, label8: day3Slot8, label9: day3Slot9, label10: day3Slot10)
+        }
+    }
+
+    @IBAction func day4CardTapped(_ sender: UITapGestureRecognizer) {
+        if day4Height.constant == 60 {
+            day4Height.constant = 220
+            
+            hideExtendedDayLabels(hidden: false, label0: day4SummaryLabel, label1: day4Slot1, label2: day4Slot2, label3: day4Slot3, label4: day4Slot4, label5: day4Slot5, label6: day4Slot6!, label7: day4Slot7, label8: day4Slot8, label9: day4Slot9, label10: day4Slot10)
+            
+            setExtendedDayLabels(summary: day4Summary, precip: day4Precip, humidity: day4Humidity, dewPoint: day4DewPoint, visibility: day4Visibility, sunrise: day4Sunrise, accum: day4PrecipAccum, wind: day4Wind, pressure: day4Pressure, uvIndex: day4UVIndex, sunset: day4Sunset, label0: day4SummaryLabel, label1: day4Slot1, label2: day4Slot2, label3: day4Slot3, label4: day4Slot4, label5: day4Slot5, label6: day4Slot6, label7: day4Slot7, label8: day4Slot8, label9: day4Slot9, label10: day4Slot10)
+        } else {
+            day4Height.constant = 60
+            
+            hideExtendedDayLabels(hidden: true, label0: day4SummaryLabel, label1: day4Slot1, label2: day4Slot2, label3: day4Slot3, label4: day4Slot4, label5: day4Slot5, label6: day4Slot6!, label7: day4Slot7, label8: day4Slot8, label9: day4Slot9, label10: day4Slot10)
+        }
+    }
+
+    @IBAction func day5CardTapped(_ sender: UITapGestureRecognizer) {
+        if day5Height.constant == 60 {
+            day5Height.constant = 220
+            
+            hideExtendedDayLabels(hidden: false, label0: day5SummaryLabel, label1: day5Slot1, label2: day5Slot2, label3: day5Slot3, label4: day5Slot4, label5: day5Slot5, label6: day5Slot6!, label7: day5Slot7, label8: day5Slot8, label9: day5Slot9, label10: day5Slot10)
+            
+            setExtendedDayLabels(summary: day5Summary, precip: day5Precip, humidity: day5Humidity, dewPoint: day5DewPoint, visibility: day5Visibility, sunrise: day5Sunrise, accum: day5PrecipAccum, wind: day5Wind, pressure: day5Pressure, uvIndex: day5UVIndex, sunset: day5Sunset, label0: day5SummaryLabel, label1: day5Slot1, label2: day5Slot2, label3: day5Slot3, label4: day5Slot4, label5: day5Slot5, label6: day5Slot6, label7: day5Slot7, label8: day5Slot8, label9: day5Slot9, label10: day5Slot10)
+        } else {
+            day5Height.constant = 60
+            
+            hideExtendedDayLabels(hidden: true, label0: day5SummaryLabel, label1: day5Slot1, label2: day5Slot2, label3: day5Slot3, label4: day5Slot4, label5: day5Slot5, label6: day5Slot6!, label7: day5Slot7, label8: day5Slot8, label9: day5Slot9, label10: day5Slot10)
+        }
+    }
+    
+    @IBAction func day6CardTapped(_ sender: UITapGestureRecognizer) {
+        if day6Height.constant == 60 {
+            day6Height.constant = 220
+            
+            hideExtendedDayLabels(hidden: false, label0: day6SummaryLabel, label1: day6Slot1, label2: day6Slot2, label3: day6Slot3, label4: day6Slot4, label5: day6Slot5, label6: day6Slot6!, label7: day6Slot7, label8: day6Slot8, label9: day6Slot9, label10: day6Slot10)
+            
+            setExtendedDayLabels(summary: day6Summary, precip: day6Precip, humidity: day6Humidity, dewPoint: day6DewPoint, visibility: day6Visibility, sunrise: day6Sunrise, accum: day6PrecipAccum, wind: day6Wind, pressure: day6Pressure, uvIndex: day6UVIndex, sunset: day6Sunset, label0: day6SummaryLabel, label1: day6Slot1, label2: day6Slot2, label3: day6Slot3, label4: day6Slot4, label5: day6Slot5, label6: day6Slot6, label7: day6Slot7, label8: day6Slot8, label9: day6Slot9, label10: day6Slot10)
+        } else {
+            day6Height.constant = 60
+            
+            hideExtendedDayLabels(hidden: true, label0: day6SummaryLabel, label1: day6Slot1, label2: day6Slot2, label3: day6Slot3, label4: day6Slot4, label5: day6Slot5, label6: day6Slot6!, label7: day6Slot7, label8: day6Slot8, label9: day6Slot9, label10: day6Slot10)
+        }
+    }
+    
+    @IBAction func day7CardTapped(_ sender: UITapGestureRecognizer) {
+        if day7Height.constant == 60 {
+            day7Height.constant = 220
+            
+            hideExtendedDayLabels(hidden: false, label0: day7SummaryLabel, label1: day7Slot1, label2: day7Slot2, label3: day7Slot3, label4: day7Slot4, label5: day7Slot5, label6: day7Slot6!, label7: day7Slot7, label8: day7Slot8, label9: day7Slot9, label10: day7Slot10)
+            
+            setExtendedDayLabels(summary: day7Summary, precip: day7Precip, humidity: day7Humidity, dewPoint: day7DewPoint, visibility: day7Visibility, sunrise: day7Sunrise, accum: day7PrecipAccum, wind: day7Wind, pressure: day7Pressure, uvIndex: day7UVIndex, sunset: day7Sunset, label0: day7SummaryLabel, label1: day7Slot1, label2: day7Slot2, label3: day7Slot3, label4: day7Slot4, label5: day7Slot5, label6: day7Slot6, label7: day7Slot7, label8: day7Slot8, label9: day7Slot9, label10: day7Slot10)
+        } else {
+            day7Height.constant = 60
+            
+            hideExtendedDayLabels(hidden: true, label0: day7SummaryLabel, label1: day7Slot1, label2: day7Slot2, label3: day7Slot3, label4: day7Slot4, label5: day7Slot5, label6: day7Slot6!, label7: day7Slot7, label8: day7Slot8, label9: day7Slot9, label10: day7Slot10)
+        }
+    }
+    
+    @IBAction func day8CardTapped(_ sender: UITapGestureRecognizer) {
+        if day8Height.constant == 60 {
+            day8Height.constant = 220
+            
+            hideExtendedDayLabels(hidden: false, label0: day8SummaryLabel, label1: day8Slot1, label2: day8Slot2, label3: day8Slot3, label4: day8Slot4, label5: day8Slot5, label6: day8Slot6!, label7: day8Slot7, label8: day8Slot8, label9: day8Slot9, label10: day8Slot10)
+            
+            setExtendedDayLabels(summary: day8Summary, precip: day8Precip, humidity: day8Humidity, dewPoint: day8DewPoint, visibility: day8Visibility, sunrise: day8Sunrise, accum: day8PrecipAccum, wind: day8Wind, pressure: day8Pressure, uvIndex: day8UVIndex, sunset: day8Sunset, label0: day8SummaryLabel, label1: day8Slot1, label2: day8Slot2, label3: day8Slot3, label4: day8Slot4, label5: day8Slot5, label6: day8Slot6, label7: day8Slot7, label8: day8Slot8, label9: day8Slot9, label10: day8Slot10)
+        } else {
+            day8Height.constant = 60
+            
+            hideExtendedDayLabels(hidden: true, label0: day8SummaryLabel, label1: day8Slot1, label2: day8Slot2, label3: day8Slot3, label4: day8Slot4, label5: day8Slot5, label6: day8Slot6!, label7: day8Slot7, label8: day8Slot8, label9: day8Slot9, label10: day8Slot10)
+        }
+    }
+    
+    @IBAction func day9CardTapped(_ sender: UITapGestureRecognizer) {
+        if day9Height.constant == 60 {
+            day9Height.constant = 220
+            
+            hideExtendedDayLabels(hidden: false, label0: day9SummaryLabel, label1: day9Slot1, label2: day9Slot2, label3: day9Slot3, label4: day9Slot4, label5: day9Slot5, label6: day9Slot6!, label7: day9Slot7, label8: day9Slot8, label9: day9Slot9, label10: day9Slot10)
+            
+            setExtendedDayLabels(summary: day9Summary, precip: day9Precip, humidity: day9Humidity, dewPoint: day9DewPoint, visibility: day9Visibility, sunrise: day9Sunrise, accum: day9PrecipAccum, wind: day9Wind, pressure: day9Pressure, uvIndex: day9UVIndex, sunset: day9Sunset, label0: day9SummaryLabel, label1: day9Slot1, label2: day9Slot2, label3: day9Slot3, label4: day9Slot4, label5: day9Slot5, label6: day9Slot6, label7: day9Slot7, label8: day9Slot8, label9: day9Slot9, label10: day9Slot10)
+        } else {
+            day9Height.constant = 60
+            
+            hideExtendedDayLabels(hidden: true, label0: day9SummaryLabel, label1: day9Slot1, label2: day9Slot2, label3: day9Slot3, label4: day9Slot4, label5: day9Slot5, label6: day9Slot6!, label7: day9Slot7, label8: day9Slot8, label9: day9Slot9, label10: day9Slot10)
+        }
+    }
+
     
     // MARK: - Set current condition labels
     func setCurrentConditionOutlets() {

@@ -55,18 +55,6 @@ var windDirectionString: String = ""
 var precipAccumulation: Double = 0
 var airQualityIndex: Int = 0
 
-// MARK: - Weather condition daily values
-var weatherCondition0: String = ""
-var weatherCondition1: String = ""
-var weatherCondition2: String = ""
-var weatherCondition3: String = ""
-var weatherCondition4: String = ""
-var weatherCondition5: String = ""
-var weatherCondition6: String = ""
-var weatherCondition7: String = ""
-var weatherCondition8: String = ""
-var weatherCondition9: String = ""
-
 // MARK: - Minutely precip probability values
 // 1-20
 var minutelyChance1: Int = 0
@@ -455,144 +443,184 @@ var sunsetDate = Date()
 
 // MARK: - Seven day forecast day values
 // Day Zero
-var dayZeroDayString: String = ""
-var dayZeroDateString: String = ""
-var dayZeroHigh: Int = 0
-var dayZeroLow: Int = 0
-var dayZeroConditionValue: Any = 0
-var dayZeroPrecip: Int = 0
-var dayZeroPrecipAccum: Double = 0
-var dayZeroHumidity: Int = 0
-var dayZeroUVIndex: Int = 0
-var dayZeroWind: Double = 0
-var dayZeroCloudCover: Int = 0
-var dayZeroConditionString: String = ""
+var day0Condition: String = ""
+var day0DayString: String = ""
+var day0DateString: String = ""
+var day0Summary: String = ""
+var day0Sunrise: String = ""
+var day0Sunset: String = ""
+var day0High: Int = 0
+var day0Low: Int = 0
+var day0Precip: Int = 0
+var day0PrecipAccum: Double = 0
+var day0Humidity: Int = 0
+var day0Wind: Double = 0
+var day0DewPoint: Int = 0
+var day0Pressure: Double = 0
+var day0Visibility: Int = 0
+var day0UVIndex: Int = 0
 
 // Day One
-var dayOneDayString: String = ""
-var dayOneDateString: String = ""
-var dayOneHigh: Int = 0
-var dayOneLow: Int = 0
-var dayOneConditionValue: Any = 0
-var dayOnePrecip: Int = 0
-var dayOnePrecipAccum: Double = 0
-var dayOneHumidity: Int = 0
-var dayOneUVIndex: Int = 0
-var dayOneWind: Double = 0
-var dayOneCloudCover: Int = 0
-var dayOneConditionString: String = ""
+var day1Condition: String = ""
+var day1DayString: String = ""
+var day1DateString: String = ""
+var day1Summary: String = ""
+var day1Sunrise: String = ""
+var day1Sunset: String = ""
+var day1High: Int = 0
+var day1Low: Int = 0
+var day1Precip: Int = 0
+var day1PrecipAccum: Double = 0
+var day1Humidity: Int = 0
+var day1Wind: Double = 0
+var day1DewPoint: Int = 0
+var day1Pressure: Double = 0
+var day1Visibility: Int = 0
+var day1UVIndex: Int = 0
 
 // Day Two
-var dayTwoDayString: String = ""
-var dayTwoDateString: String = ""
-var dayTwoHigh: Int = 0
-var dayTwoLow: Int = 0
-var dayTwoConditionValue: Any = 0
-var dayTwoPrecip: Int = 0
-var dayTwoPrecipAccum: Double = 0
-var dayTwoHumidity: Int = 0
-var dayTwoUVIndex: Int = 0
-var dayTwoWind: Double = 0
-var dayTwoCloudCover: Int = 0
-var dayTwoConditionString: String = ""
+var day2Condition: String = ""
+var day2DayString: String = ""
+var day2DateString: String = ""
+var day2Summary: String = ""
+var day2Sunrise: String = ""
+var day2Sunset: String = ""
+var day2High: Int = 0
+var day2Low: Int = 0
+var day2Precip: Int = 0
+var day2PrecipAccum: Double = 0
+var day2Humidity: Int = 0
+var day2Wind: Double = 0
+var day2DewPoint: Int = 0
+var day2Pressure: Double = 0
+var day2Visibility: Int = 0
+var day2UVIndex: Int = 0
 
 // Day Three
-var dayThreeDayString: String = ""
-var dayThreeDateString: String = ""
-var dayThreeHigh: Int = 0
-var dayThreeLow: Int = 0
-var dayThreeConditionValue: Any = 0
-var dayThreePrecip: Int = 0
-var dayThreePrecipAccum: Double = 0
-var dayThreeHumidity: Int = 0
-var dayThreeUVIndex: Int = 0
-var dayThreeWind: Double = 0
-var dayThreeCloudCover: Int = 0
-var dayThreeConditionString: String = ""
+var day3Condition: String = ""
+var day3DayString: String = ""
+var day3DateString: String = ""
+var day3Summary: String = ""
+var day3Sunrise: String = ""
+var day3Sunset: String = ""
+var day3High: Int = 0
+var day3Low: Int = 0
+var day3Precip: Int = 0
+var day3PrecipAccum: Double = 0
+var day3Humidity: Int = 0
+var day3Wind: Double = 0
+var day3DewPoint: Int = 0
+var day3Pressure: Double = 0
+var day3Visibility: Int = 0
+var day3UVIndex: Int = 0
 
 // Day Four
-var dayFourDayString: String = ""
-var dayFourDateString: String = ""
-var dayFourHigh: Int = 0
-var dayFourLow: Int = 0
-var dayFourConditionValue: Any = 0
-var dayFourPrecip: Int = 0
-var dayFourPrecipAccum: Double = 0
-var dayFourHumidity: Int = 0
-var dayFourUVIndex: Int = 0
-var dayFourWind: Double = 0
-var dayFourCloudCover: Int = 0
-var dayFourConditionString: String = ""
+var day4Condition: String = ""
+var day4DayString: String = ""
+var day4DateString: String = ""
+var day4Summary: String = ""
+var day4Sunrise: String = ""
+var day4Sunset: String = ""
+var day4High: Int = 0
+var day4Low: Int = 0
+var day4Precip: Int = 0
+var day4PrecipAccum: Double = 0
+var day4Humidity: Int = 0
+var day4Wind: Double = 0
+var day4DewPoint: Int = 0
+var day4Pressure: Double = 0
+var day4Visibility: Int = 0
+var day4UVIndex: Int = 0
 
 // Day Five
-var dayFiveDayString: String = ""
-var dayFiveDateString: String = ""
-var dayFiveHigh: Int = 0
-var dayFiveLow: Int = 0
-var dayFiveConditionValue: Any = 0
-var dayFivePrecip: Int = 0
-var dayFivePrecipAccum: Double = 0
-var dayFiveHumidity: Int = 0
-var dayFiveUVIndex: Int = 0
-var dayFiveWind: Double = 0
-var dayFiveCloudCover: Int = 0
-var dayFiveConditionString: String = ""
+var day5Condition: String = ""
+var day5DayString: String = ""
+var day5DateString: String = ""
+var day5Summary: String = ""
+var day5Sunrise: String = ""
+var day5Sunset: String = ""
+var day5High: Int = 0
+var day5Low: Int = 0
+var day5Precip: Int = 0
+var day5PrecipAccum: Double = 0
+var day5Humidity: Int = 0
+var day5Wind: Double = 0
+var day5DewPoint: Int = 0
+var day5Pressure: Double = 0
+var day5Visibility: Int = 0
+var day5UVIndex: Int = 0
 
 // Day Six
-var daySixDayString: String = ""
-var daySixDateString: String = ""
-var daySixHigh: Int = 0
-var daySixLow: Int = 0
-var daySixConditionValue: Any = 0
-var daySixPrecip: Int = 0
-var daySixPrecipAccum: Double = 0
-var daySixHumidity: Int = 0
-var daySixUVIndex: Int = 0
-var daySixWind: Double = 0
-var daySixCloudCover: Int = 0
-var daySixConditionString: String = ""
+var day6Condition: String = ""
+var day6DayString: String = ""
+var day6DateString: String = ""
+var day6Summary: String = ""
+var day6Sunrise: String = ""
+var day6Sunset: String = ""
+var day6High: Int = 0
+var day6Low: Int = 0
+var day6Precip: Int = 0
+var day6PrecipAccum: Double = 0
+var day6Humidity: Int = 0
+var day6Wind: Double = 0
+var day6DewPoint: Int = 0
+var day6Pressure: Double = 0
+var day6Visibility: Int = 0
+var day6UVIndex: Int = 0
 
 // Day Seven
-var daySevenDayString: String = ""
-var daySevenDateString: String = ""
-var daySevenHigh: Int = 0
-var daySevenLow: Int = 0
-var daySevenConditionValue: Any = 0
-var daySevenPrecip: Int = 0
-var daySevenPrecipAccum: Double = 0
-var daySevenHumidity: Int = 0
-var daySevenUVIndex: Int = 0
-var daySevenWind: Double = 0
-var daySevenCloudCover: Int = 0
-var daySevenConditionString: String = ""
+var day7Condition: String = ""
+var day7DayString: String = ""
+var day7DateString: String = ""
+var day7Summary: String = ""
+var day7Sunrise: String = ""
+var day7Sunset: String = ""
+var day7High: Int = 0
+var day7Low: Int = 0
+var day7Precip: Int = 0
+var day7PrecipAccum: Double = 0
+var day7Humidity: Int = 0
+var day7Wind: Double = 0
+var day7DewPoint: Int = 0
+var day7Pressure: Double = 0
+var day7Visibility: Int = 0
+var day7UVIndex: Int = 0
 
 // Day Eight
-var dayEightDayString: String = ""
-var dayEightDateString: String = ""
-var dayEightHigh: Int = 0
-var dayEightLow: Int = 0
-var dayEightConditionValue: Any = 0
-var dayEightPrecip: Int = 0
-var dayEightPrecipAccum: Double = 0
-var dayEightHumidity: Int = 0
-var dayEightUVIndex: Int = 0
-var dayEightWind: Double = 0
-var dayEightCloudCover: Int = 0
-var dayEightConditionString: String = ""
+var day8Condition: String = ""
+var day8DayString: String = ""
+var day8DateString: String = ""
+var day8Summary: String = ""
+var day8Sunrise: String = ""
+var day8Sunset: String = ""
+var day8High: Int = 0
+var day8Low: Int = 0
+var day8Precip: Int = 0
+var day8PrecipAccum: Double = 0
+var day8Humidity: Int = 0
+var day8Wind: Double = 0
+var day8DewPoint: Int = 0
+var day8Pressure: Double = 0
+var day8Visibility: Int = 0
+var day8UVIndex: Int = 0
 
 // Day Nine
-var dayNineDayString: String = ""
-var dayNineDateString: String = ""
-var dayNineHigh: Int = 0
-var dayNineLow: Int = 0
-var dayNineConditionValue: Any = 0
-var dayNinePrecip: Int = 0
-var dayNinePrecipAccum: Double = 0
-var dayNineHumidity: Int = 0
-var dayNineUVIndex: Int = 0
-var dayNineWind: Double = 0
-var dayNineCloudCover: Int = 0
-var dayNineConditionString: String = ""
+var day9Condition: String = ""
+var day9DayString: String = ""
+var day9DateString: String = ""
+var day9Summary: String = ""
+var day9Sunrise: String = ""
+var day9Sunset: String = ""
+var day9High: Int = 0
+var day9Low: Int = 0
+var day9Precip: Int = 0
+var day9PrecipAccum: Double = 0
+var day9Humidity: Int = 0
+var day9Wind: Double = 0
+var day9DewPoint: Int = 0
+var day9Pressure: Double = 0
+var day9Visibility: Int = 0
+var day9UVIndex: Int = 0
 
 // MARK: - Get day name
 func dayFormat(date: Date) -> String {
@@ -856,39 +884,6 @@ func cgFloatPrecipProb(day: CGFloat) -> Int {
     }
     
     return dailyValue
-}
-
-// Get default daily condition value
-func getDefaultDailyCondition(condition: DataPoint) -> Int {
-    var value: Int = 0
-    
-    if (defaults.string(forKey: "defaultDailyCondition")?.contains("Precip") == true) {
-        value = dailyPrecipProb(day: condition)
-        defaultDailyConditionValueType = "Precip"
-        defaultDailyConditionValueUnit = "%"
-    } else if (defaults.string(forKey: "defaultDailyCondition")?.contains("Humidity") == true) {
-        value = dailyHumidityProb(day: condition)
-        defaultDailyConditionValueType = "Humid"
-        defaultDailyConditionValueUnit = "%"
-    } else if (defaults.string(forKey: "defaultDailyCondition")?.contains("UV Index") == true) {
-        value = Int(condition.uvIndex!)
-        defaultDailyConditionValueType = "UV"
-        defaultDailyConditionValueUnit = ""
-    } else if (defaults.string(forKey: "defaultDailyCondition")?.contains("Wind") == true) {
-        value = Int(condition.windSpeed!)
-        defaultDailyConditionValueType = "Wind"
-        defaultDailyConditionValueUnit = "\(unitsWindSpeed)"
-    } else if (defaults.string(forKey: "defaultDailyCondition")?.contains("Cloud Cover") == true) {
-        value = dailyCloudCoverProb(day: condition)
-        defaultDailyConditionValueType = "Clouds"
-        defaultDailyConditionValueUnit = "%"
-    } else {
-        value = dailyPrecipProb(day: condition)
-        defaultDailyConditionValueType = "Precip"
-        defaultDailyConditionValueUnit = "%"
-    }
-    
-    return value
 }
 
 // Get daily humidity

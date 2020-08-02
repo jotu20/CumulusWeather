@@ -43,14 +43,9 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         
         weatherLoaded = true
         distanceChange = false
-        potentialCustomer = false
         setupObjectColors()
         
-        if defaults.bool(forKey: "cumulusPlus") == false {
-            forecastDataTableViewCell.isUserInteractionEnabled = false
-            appIconTableViewCell.isUserInteractionEnabled = false
-            themeColorTableViewCell.isUserInteractionEnabled = false
-        } else {
+        if defaults.bool(forKey: "cumulusPlus") == true {
             cumulusPlusLabel.text = "Restore Cumulus+"
         }
     }
@@ -121,10 +116,32 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
                         defaults.set(true, forKey: "cumulusPlus")
                     case .expired(let expiryDate, let items):
                         print("\(productIds) are expired since \(expiryDate)\n\(items)\n")
-                        checkForCumulusPro()
+                        defaults.set(false, forKey: "cumulusPlus")
                     case .notPurchased:
                         print("The user has never purchased \(productIds)")
-                        checkForCumulusPro()
+                    }
+                case .error(let error):
+                    print("Receipt verification failed: \(error)")
+                }
+            }
+            
+            // Verify Lifetime purchase
+            let cumulusPlusLifetimeValidator = AppleReceiptValidator(service: .production, sharedSecret: "\(sharedSecret)")
+            SwiftyStoreKit.verifyReceipt(using: cumulusPlusLifetimeValidator) { result in
+                switch result {
+                case .success(let receipt):
+                    let productId = "com.josephszafarowicz.CumulusPlus.Lifetime"
+                    // Verify the purchase of Consumable or NonConsumable
+                    let purchaseResult = SwiftyStoreKit.verifyPurchase(
+                        productId: productId,
+                        inReceipt: receipt)
+                        
+                    switch purchaseResult {
+                    case .purchased(let receiptItem):
+                        print("\(productId) is purchased: \(receiptItem)")
+                        defaults.set(true, forKey: "cumulusPlus")
+                    case .notPurchased:
+                        print("The user has never purchased \(productId)")
                     }
                 case .error(let error):
                     print("Receipt verification failed: \(error)")
@@ -134,15 +151,27 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     }
     
     @IBAction func forecastDataTapped(_ sender: UITapGestureRecognizer) {
-        performSegue(withIdentifier: "forecastDataPush", sender: nil)
+        if defaults.bool(forKey: "cumulusPlus") == false {
+            performSegue(withIdentifier: "cumulusPlusPush", sender: nil)
+        } else {
+            performSegue(withIdentifier: "forecastDataPush", sender: nil)
+        }
     }
     
     @IBAction func appIconTapped(_ sender: UITapGestureRecognizer) {
-        performSegue(withIdentifier: "appIconPush", sender: nil)
+        if defaults.bool(forKey: "cumulusPlus") == false {
+            performSegue(withIdentifier: "cumulusPlusPush", sender: nil)
+        } else {
+            performSegue(withIdentifier: "appIconPush", sender: nil)
+        }
     }
     
     @IBAction func themeColorTapped(_ sender: UITapGestureRecognizer) {
-        performSegue(withIdentifier: "themeColorPush", sender: nil)
+        if defaults.bool(forKey: "cumulusPlus") == false {
+            performSegue(withIdentifier: "cumulusPlusPush", sender: nil)
+        } else {
+            performSegue(withIdentifier: "themeColorPush", sender: nil)
+        }
     }
     
     @IBAction func siriShortcutsTapped(_ sender: UITapGestureRecognizer) {
@@ -160,6 +189,79 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     @IBAction func reviewCumulusTapped(_ sender: UITapGestureRecognizer) {
         if let url = URL(string: "https://itunes.apple.com/app/id1441446893?action=write-review") {
             UIApplication.shared.open(url)
+        }
+    }
+}
+
+extension SettingsTableViewController {
+    func alertWithTitle(_ title: String, message: String) -> UIAlertController {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        return alert
+    }
+    
+    func showAlert(_ alert: UIAlertController) {
+        guard self.presentedViewController != nil else {
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+    }
+    
+    func alertForPurchaseResult(_ result: PurchaseResult) -> UIAlertController? {
+        switch result {
+        case .success(let purchase):
+            print("Purchase Success: \(purchase.productId)")
+            return nil
+        case .error(let error):
+            print("Purchase Failed: \(error)")
+            switch error.code {
+            case .unknown: return alertWithTitle("Purchase failed", message: error.localizedDescription)
+            case .clientInvalid: // client is not allowed to issue the request, etc.
+                return alertWithTitle("Purchase failed", message: "Not allowed to make the payment")
+            case .paymentCancelled: // user cancelled the request, etc.
+                return nil
+            case .paymentInvalid: // purchase identifier was invalid, etc.
+                return alertWithTitle("Purchase failed", message: "The purchase identifier was invalid")
+            case .paymentNotAllowed: // this device is not allowed to make the payment
+                return alertWithTitle("Purchase failed", message: "The device is not allowed to make the payment")
+            case .storeProductNotAvailable: // Product is not available in the current storefront
+                return alertWithTitle("Purchase failed", message: "The product is not available in the current storefront")
+            case .cloudServicePermissionDenied: // user has not allowed access to cloud service information
+                return alertWithTitle("Purchase failed", message: "Access to cloud service information is not allowed")
+            case .cloudServiceNetworkConnectionFailed: // the device could not connect to the nework
+                return alertWithTitle("Purchase failed", message: "Could not connect to the network")
+            case .cloudServiceRevoked: // user has revoked permission to use this cloud service
+                return alertWithTitle("Purchase failed", message: "Cloud service was revoked")
+            case .privacyAcknowledgementRequired:
+                return alertWithTitle("Purchase failed", message: "Privacy Acknowledgement required")
+            case .unauthorizedRequestData:
+                return alertWithTitle("Purchase failed", message: "Unauthorized data")
+            case .invalidOfferIdentifier:
+                return alertWithTitle("Purchase failed", message: "Invalid product identifier")
+            case .invalidSignature:
+                return alertWithTitle("Purchase failed", message: "Invalid signature")
+            case .missingOfferParams:
+                return alertWithTitle("Purchase failed", message: "Missing parameters")
+            case .invalidOfferPrice:
+                return alertWithTitle("Purchase failed", message: "Invalid offer price")
+            @unknown default:
+                return alertWithTitle("Purchase failed", message: "Uknown error")
+            }
+        }
+    }
+    
+    func alertForRestorePurchases(_ results: RestoreResults) -> UIAlertController {
+        
+        if results.restoreFailedPurchases.count > 0 {
+            print("Restore Failed: \(results.restoreFailedPurchases)")
+            return alertWithTitle("Restore failed", message: "Unknown error. Please contact support")
+        } else if results.restoredPurchases.count > 0 {
+            print("Restore Success: \(results.restoredPurchases)")
+            return alertWithTitle("Purchases Restored", message: "Previous purchases have been restored")
+        } else {
+            print("Nothing to Restore")
+            return alertWithTitle("Nothing to restore", message: "No previous purchases were found")
         }
     }
 }

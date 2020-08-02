@@ -80,7 +80,7 @@ func weatherCondition(condition: String, type: String) -> String {
         if type == "image" {
             conditionString = "Windy.pdf"
         } else if type == "text" {
-            conditionString = "Cloudy & Windy"
+            conditionString = "Cloudy & windy"
         } else if type == "daily" {
             conditionString = "Windy.pdf"
         } else if type == "widget" {
@@ -128,7 +128,7 @@ func weatherCondition(condition: String, type: String) -> String {
         if type == "image" {
             conditionString = "Freezing_rain.pdf"
         } else if type == "text" {
-            conditionString = "Freezing Rain"
+            conditionString = "Freezing rain"
         } else if type == "daily" {
             conditionString = "Freezing_rain.pdf"
         } else if type == "widget" {
@@ -140,7 +140,7 @@ func weatherCondition(condition: String, type: String) -> String {
         if type == "image" {
             conditionString = "Partly_cloudy_night.pdf"
         } else if type == "text" {
-            conditionString = "Partly Cloudy"
+            conditionString = "Partly cloudy"
         } else if type == "daily" {
             conditionString = "Partly_cloudy.pdf"
         } else if type == "widget" {
@@ -152,7 +152,7 @@ func weatherCondition(condition: String, type: String) -> String {
         if type == "image" {
             conditionString = "Rain.pdf"
         } else if type == "text" {
-            conditionString = "Partly Cloudy & Rain"
+            conditionString = "Partly cloudy & rain"
         } else if type == "daily" {
             conditionString = "Rain.pdf"
         } else if type == "widget" {
@@ -164,7 +164,7 @@ func weatherCondition(condition: String, type: String) -> String {
         if type == "image" {
             conditionString = "Snow.pdf"
         } else if type == "text" {
-            conditionString = "Partly Cloudy & Snow"
+            conditionString = "Partly cloudy & snow"
         } else if type == "daily" {
             conditionString = "Snow.pdf"
         } else if type == "widget" {
@@ -176,7 +176,7 @@ func weatherCondition(condition: String, type: String) -> String {
         if type == "image" {
             conditionString = "Partly_cloudy.pdf"
         } else if type == "text" {
-            conditionString = "Partly Cloudy"
+            conditionString = "Partly cloudy"
         } else if type == "daily" {
             conditionString = "Partly_cloudy.pdf"
         } else if type == "widget" {
@@ -224,7 +224,7 @@ func weatherCondition(condition: String, type: String) -> String {
         if type == "image" {
             conditionString = "Windy.pdf"
         } else if type == "text" {
-            conditionString = "Wind"
+            conditionString = "Windy"
         } else if type == "daily" {
             conditionString = "Windy.pdf"
         } else if type == "widget" {

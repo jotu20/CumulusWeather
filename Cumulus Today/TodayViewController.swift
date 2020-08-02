@@ -96,6 +96,8 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             label.text = "Feels like \(apparentTemperature)°"
         } else if setting.contains("Precip") {
             label.text = "Precipitation \(precipitation)%"
+        } else if setting.contains("Precip") {
+            label.text = "Accumulation \(precipAccumulation)%"
         } else if setting.contains("Humidity") {
             label.text = "Humidity \(humidity)"
         } else if setting.contains("UV index") {
@@ -149,24 +151,24 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         hour5Value.text = "\(tempHour15)°"
         
         // Day One
-        dayOneDate.text = "\(dayZeroDayString.capitalizingFirstLetter())"
-        dayOneCondition.image = UIImage(named: weatherCondition(condition: weatherCondition0, type: "daily"))
-        dayOneHighLow.text = "\(dayZeroHigh)°/\(dayZeroLow)°"
+        dayOneDate.text = "\(day0DayString.capitalizingFirstLetter())"
+        dayOneCondition.image = UIImage(named: weatherCondition(condition: day0Condition, type: "daily"))
+        dayOneHighLow.text = "\(day0High)°/\(day0Low)°"
         
         // Day Two
-        dayTwoDate.text = "\(dayOneDayString.capitalizingFirstLetter())"
-        dayTwoCondition.image = UIImage(named: weatherCondition(condition: weatherCondition1, type: "daily"))
-        dayTwoHighLow.text = "\(dayOneHigh)°/\(dayOneLow)°"
+        dayTwoDate.text = "\(day1DayString.capitalizingFirstLetter())"
+        dayTwoCondition.image = UIImage(named: weatherCondition(condition: day1Condition, type: "daily"))
+        dayTwoHighLow.text = "\(day1High)°/\(day1Low)°"
         
         // Day Three
-        dayThreeDate.text = "\(dayTwoDayString.capitalizingFirstLetter())"
-        dayThreeCondition.image = UIImage(named: weatherCondition(condition: weatherCondition2, type: "daily"))
-        dayThreeHighLow.text = "\(dayTwoHigh)°/\(dayTwoLow)°"
+        dayThreeDate.text = "\(day2DayString.capitalizingFirstLetter())"
+        dayThreeCondition.image = UIImage(named: weatherCondition(condition: day2Condition, type: "daily"))
+        dayThreeHighLow.text = "\(day2High)°/\(day2Low)°"
         
         // Day Four
-        dayFourDate.text = "\(dayThreeDayString.capitalizingFirstLetter())"
-        dayFourCondition.image = UIImage(named: weatherCondition(condition: weatherCondition3, type: "daily"))
-        dayFourHighLow.text = "\(dayThreeHigh)°/\(dayThreeLow)°"
+        dayFourDate.text = "\(day3DayString.capitalizingFirstLetter())"
+        dayFourCondition.image = UIImage(named: weatherCondition(condition: day3Condition, type: "daily"))
+        dayFourHighLow.text = "\(day3High)°/\(day3Low)°"
     }
     
     @IBAction func openApplicationTapped(_ sender: UITapGestureRecognizer) {

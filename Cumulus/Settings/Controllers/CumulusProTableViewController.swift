@@ -227,6 +227,10 @@ class CumulusPlusTableViewController: UITableViewController {
                     defaults.set(false, forKey: "cumulusPlus")
                 case .notPurchased:
                     print("The user has never purchased \(productIds)")
+                    
+                    let alert = UIAlertController(title: "", message: "No previous purchases were found.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
             case .error(let error):
                 print("Receipt verification failed: \(error)")
@@ -250,6 +254,10 @@ class CumulusPlusTableViewController: UITableViewController {
                     defaults.set(true, forKey: "cumulusPlus")
                 case .notPurchased:
                     print("The user has never purchased \(productId)")
+                    
+                    let alert = UIAlertController(title: "", message: "No previous purchases were found.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
             case .error(let error):
                 print("Receipt verification failed: \(error)")

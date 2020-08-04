@@ -92,7 +92,8 @@ public func fetchDarkSkyWeatherData() {
                 sunset = sunFormat(date: fetchDay0Array.sunsetTime!)
                 
                 day0Condition = "\(fetchDay0Array.icon!.rawValue)"
-                day0DayString = dayFormat(date: fetchDay0Array.time)
+                day0DayString = dayFormat(date: fetchDay0Array.time, fullLength: false)
+                day0DayStringFull = dayFormat(date: fetchDay0Array.time, fullLength: true)
                 day0DateString = dateFormat(date: fetchDay0Array.time)
                 day0Summary = fetchDay0Array.summary!
                 day0Sunrise = sunFormat(date: fetchDay0Array.sunriseTime!)
@@ -499,7 +500,8 @@ public func fetchDarkSkyWeatherData() {
             let fetchDay1Array = day1Array
             
             day1Condition = "\(fetchDay1Array.icon!.rawValue)"
-            day1DayString = dayFormat(date: fetchDay1Array.time)
+            day1DayString = dayFormat(date: fetchDay1Array.time, fullLength: false)
+            day1DayStringFull = dayFormat(date: fetchDay1Array.time, fullLength: true)
             day1DateString = dateFormat(date: fetchDay1Array.time)
             day1Summary = fetchDay1Array.summary!
             day1Sunrise = sunFormat(date: fetchDay1Array.sunriseTime!)
@@ -532,7 +534,8 @@ public func fetchDarkSkyWeatherData() {
             let fetchDay2Array = day2Array
             
             day2Condition = "\(fetchDay2Array.icon!.rawValue)"
-            day2DayString = dayFormat(date: fetchDay2Array.time)
+            day2DayString = dayFormat(date: fetchDay2Array.time, fullLength: false)
+            day2DayStringFull = dayFormat(date: fetchDay2Array.time, fullLength: true)
             day2DateString = dateFormat(date: fetchDay2Array.time)
             day2Summary = fetchDay2Array.summary!
             day2Sunrise = sunFormat(date: fetchDay2Array.sunriseTime!)
@@ -565,7 +568,8 @@ public func fetchDarkSkyWeatherData() {
             let fetchDay3Array = day3Array
             
             day3Condition = "\(fetchDay3Array.icon!.rawValue)"
-            day3DayString = dayFormat(date: fetchDay3Array.time)
+            day3DayString = dayFormat(date: fetchDay3Array.time, fullLength: false)
+            day3DayStringFull = dayFormat(date: fetchDay3Array.time, fullLength: true)
             day3DateString = dateFormat(date: fetchDay3Array.time)
             day3Summary = fetchDay3Array.summary!
             day3Sunrise = sunFormat(date: fetchDay3Array.sunriseTime!)
@@ -598,7 +602,8 @@ public func fetchDarkSkyWeatherData() {
             let fetchDay4Array = day4Array
             
             day4Condition = "\(fetchDay4Array.icon!.rawValue)"
-            day4DayString = dayFormat(date: fetchDay4Array.time)
+            day4DayString = dayFormat(date: fetchDay4Array.time, fullLength: false)
+            day4DayStringFull = dayFormat(date: fetchDay4Array.time, fullLength: true)
             day4DateString = dateFormat(date: fetchDay4Array.time)
             day4Summary = fetchDay4Array.summary!
             day4Sunrise = sunFormat(date: fetchDay4Array.sunriseTime!)
@@ -631,7 +636,8 @@ public func fetchDarkSkyWeatherData() {
             let fetchDay5Array = day5Array
             
             day5Condition = "\(fetchDay5Array.icon!.rawValue)"
-            day5DayString = dayFormat(date: fetchDay5Array.time)
+            day5DayString = dayFormat(date: fetchDay5Array.time, fullLength: false)
+            day5DayStringFull = dayFormat(date: fetchDay5Array.time, fullLength: true)
             day5DateString = dateFormat(date: fetchDay5Array.time)
             day5Summary = fetchDay5Array.summary!
             day5Sunrise = sunFormat(date: fetchDay5Array.sunriseTime!)
@@ -664,7 +670,8 @@ public func fetchDarkSkyWeatherData() {
             let fetchDay6Array = day6Array
             
             day6Condition = "\(fetchDay6Array.icon!.rawValue)"
-            day6DayString = dayFormat(date: fetchDay6Array.time)
+            day6DayString = dayFormat(date: fetchDay6Array.time, fullLength: false)
+            day6DayStringFull = dayFormat(date: fetchDay6Array.time, fullLength: true)
             day6DateString = dateFormat(date: fetchDay6Array.time)
             day6Summary = fetchDay6Array.summary!
             day6Sunrise = sunFormat(date: fetchDay6Array.sunriseTime!)
@@ -697,7 +704,8 @@ public func fetchDarkSkyWeatherData() {
             let fetchDay7Array = day7Array
             
             day7Condition = "\(fetchDay7Array.icon!.rawValue)"
-            day7DayString = dayFormat(date: fetchDay7Array.time)
+            day7DayString = dayFormat(date: fetchDay7Array.time, fullLength: false)
+            day7DayStringFull = dayFormat(date: fetchDay7Array.time, fullLength: true)
             day7DateString = dateFormat(date: fetchDay7Array.time)
             day7Summary = fetchDay7Array.summary!
             day7Sunrise = sunFormat(date: fetchDay7Array.sunriseTime!)
@@ -730,7 +738,8 @@ public func fetchDarkSkyWeatherData() {
             let fetchDay8Array = day8Array
             
             day8Condition = "\(fetchDay8Array.icon!.rawValue)"
-            day8DayString = dayFormat(date: fetchDay8Array.time)
+            day8DayString = dayFormat(date: fetchDay8Array.time, fullLength: false)
+            day8DayStringFull = dayFormat(date: fetchDay8Array.time, fullLength: true)
             day8DateString = dateFormat(date: fetchDay8Array.time)
             day8Summary = fetchDay8Array.summary!
             day8Sunrise = sunFormat(date: fetchDay8Array.sunriseTime!)
@@ -762,7 +771,8 @@ public func fetchDarkSkyWeatherData() {
             let fetchDay9Array = day9Array
             
             day9Condition = "\(fetchDay9Array.icon!.rawValue)"
-            day9DayString = dayFormat(date: fetchDay9Array.time)
+            day9DayString = dayFormat(date: fetchDay9Array.time, fullLength: false)
+            day9DayStringFull = dayFormat(date: fetchDay9Array.time, fullLength: true)
             day9DateString = dateFormat(date: fetchDay9Array.time)
             day9Summary = fetchDay9Array.summary!
             day9Sunrise = sunFormat(date: fetchDay9Array.sunriseTime!)

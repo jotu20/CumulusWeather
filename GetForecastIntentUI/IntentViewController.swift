@@ -15,6 +15,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
     @IBOutlet weak var currentConditionIcon: UIImageView!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var highAndLowTemperatureLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var currentConditionLabel: UILabel!
     @IBOutlet weak var precipitationLabel: UILabel!
     @IBOutlet weak var precipitationAccumulationLabel: UILabel!
@@ -33,15 +34,15 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
     @IBOutlet weak var dayTwoDateLabel: UILabel!
     @IBOutlet weak var dayThreeDateLabel: UILabel!
     
-    @IBOutlet weak var dayZeroHighLowTempLabel: UILabel!
-    @IBOutlet weak var dayOneHighLowTempLabel: UILabel!
-    @IBOutlet weak var dayTwoHighLowTempLabel: UILabel!
-    @IBOutlet weak var dayThreeHighLowTempLabel: UILabel!
+    @IBOutlet weak var day0HighLabel: UILabel!
+    @IBOutlet weak var day0LowLabel: UILabel!
+    @IBOutlet weak var day1HighLabel: UILabel!
+    @IBOutlet weak var day1LowLabel: UILabel!
+    @IBOutlet weak var day2HighLabel: UILabel!
+    @IBOutlet weak var day2LowLabel: UILabel!
+    @IBOutlet weak var day3HighLabel: UILabel!
+    @IBOutlet weak var day3LowLabel: UILabel!
     
-    @IBOutlet weak var dayZeroPrecipLabel: UILabel!
-    @IBOutlet weak var dayOnePrecipLabel: UILabel!
-    @IBOutlet weak var dayTwoPrecipLabel: UILabel!
-    @IBOutlet weak var dayThreePrecipLabel: UILabel!
     
     func setWeatherDataLabels() {
         // Current condition labels
@@ -52,40 +53,60 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         
         self.precipitationLabel.text = "Precip. \(precipitation)%"
         self.precipitationAccumulationLabel.text = "Accum. \(precipAccumulation) \(unitsPrecipitation)"
-        
         self.humidityLabel.text = "Humidity \(humidity)%"
-        self.uvIndexLabel.text = "UV Index \(uvIndex)"
         
-        if windGust == wind {
-            self.windLabel.text = "Wind \(wind) \(unitsWindSpeed) \(windDirectionString)"
-        } else {
-            self.windLabel.text = "Wind \(wind)(\(windGust)) \(unitsWindSpeed) \(windDirectionString)"
+        // Set uv index
+        if uvIndex < 2 {
+            uvIndexLabel.text = "UV index low (\(uvIndex))"
+        } else if uvIndex >= 3 && uvIndex <= 5 {
+            uvIndexLabel.text = "UV index moderate (\(uvIndex))"
+        } else if uvIndex >= 6 && uvIndex <= 7 {
+            uvIndexLabel.text = "UV index high (\(uvIndex))"
+        } else if uvIndex >= 8 && uvIndex <= 10 {
+            uvIndexLabel.text = "UV index very high (\(uvIndex))"
+        } else if uvIndex >= 11 {
+            uvIndexLabel.text = "UV index extreme (\(uvIndex))"
         }
-        self.cloudCoverLabel.text = "Cloud cover \(cloudCover)%"
+
+        // Set wind
+        if windGust == wind {
+            windLabel.text = "Wind \(wind)\(unitsWindSpeed) \(windDirectionString)"
+        } else {
+            windLabel.text = "Wind \(wind)(\(windGust))\(unitsWindSpeed) \(windDirectionString)"
+        }
+        
+        // Set cloud cover
+        if cloudCover > cloudCoverHour1 || cloudCover > cloudCoverHour2 || cloudCover > cloudCoverHour3 || cloudCover > cloudCoverHour4 {
+            cloudCoverLabel.text = "Clouds \(cloudCover)% & decr."
+        } else if cloudCover < cloudCoverHour1 || cloudCover < cloudCoverHour2 || cloudCover < cloudCoverHour3 || cloudCover < cloudCoverHour4 {
+            cloudCoverLabel.text = "Clouds \(cloudCover)% & incr."
+        } else {
+            cloudCoverLabel.text = "Clouds \(cloudCover)%"
+        }
         
         // Day Zero
         self.dayZeroConditionImage.image = UIImage(named: weatherCondition(condition: day0Condition, type: "daily"))
-        self.dayZeroDateLabel.text = "\(day0DayString)"
-        self.dayZeroHighLowTempLabel.text = "\(day0High)°/\(day0Low)°"
-        self.dayZeroPrecipLabel.text = "\(day0Precip)%"
+        self.dayZeroDateLabel.text = "\(day0DayString.capitalizingFirstLetter())"
+        self.day0HighLabel.text = "\(day0High)°"
+        self.day0LowLabel.text = "\(day0Low)°"
         
         // Day One
         self.dayOneConditionImage.image = UIImage(named: weatherCondition(condition: day1Condition, type: "daily"))
-        self.dayOneDateLabel.text = "\(day1DayString)"
-        self.dayOneHighLowTempLabel.text = "\(day1High)°/\(day1Low)°"
-        self.dayOnePrecipLabel.text = "\(day1Precip)%"
+        self.dayOneDateLabel.text = "\(day1DayString.capitalizingFirstLetter())"
+        self.day1HighLabel.text = "\(day1High)°"
+        self.day1LowLabel.text = "\(day1Low)°"
         
         // Day Two
         self.dayTwoConditionImage.image = UIImage(named: weatherCondition(condition: day2Condition, type: "daily"))
-        self.dayTwoDateLabel.text = "\(day2DayString)"
-        self.dayTwoHighLowTempLabel.text = "\(day2High)°/\(day2Low)°"
-        self.dayTwoPrecipLabel.text = "\(day2Precip)%"
+        self.dayTwoDateLabel.text = "\(day2DayString.capitalizingFirstLetter())"
+        self.day2HighLabel.text = "\(day2High)°"
+        self.day2LowLabel.text = "\(day2Low)°"
         
         // Day Three
         self.dayThreeConditionImage.image = UIImage(named: weatherCondition(condition: day3Condition, type: "daily"))
-        self.dayThreeDateLabel.text = "\(day3DayString)"
-        self.dayThreeHighLowTempLabel.text = "\(day3High)°/\(day3Low)°"
-        self.dayThreePrecipLabel.text = "\(day3Precip)%"
+        self.dayThreeDateLabel.text = "\(day3DayString.capitalizingFirstLetter())"
+        self.day3HighLabel.text = "\(day3High)°"
+        self.day3LowLabel.text = "\(day3Low)°"
     }
     
     // Prepare your view controller for the interaction to handle.
@@ -101,6 +122,19 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         }
         
         let userLocation = CLLocationCoordinate2D(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
+        
+        geocode(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!) { placemark, error in
+            guard let placemark = placemark, error == nil else { return }
+
+            // Set state for locations in the US
+            if placemark.country! == "United States" {
+                currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                self.locationLabel.text = "\(currentLocation)"
+            } else {
+                currentLocation = "\(placemark.locality!), \(placemark.country!)"
+                self.locationLabel.text = "\(currentLocation)"
+            }
+        }
         
         client.getForecast(location: userLocation) { result in
             switch result {
@@ -186,7 +220,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                     let fetchDayZeroArray = dayZeroArray
                     
                     // Date
-                    day0DayString = dayFormat(date: dayZeroArray.time)
+                    day0DayString = dayFormat(date: dayZeroArray.time, fullLength: false)
                     
                     // High and Low
                     day0High = Int(fetchDayZeroArray.temperatureHigh!)
@@ -202,7 +236,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                     day1Condition = "\(fetchDayOneArray.icon!.rawValue)"
                     
                     // Date
-                    day1DayString = dayFormat(date: dayOneArray.time)
+                    day1DayString = dayFormat(date: dayOneArray.time, fullLength: false)
                     
                     // High and Low
                     day1High = Int(fetchDayOneArray.temperatureHigh!)
@@ -218,7 +252,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                     day2Condition = "\(fetchDayTwoArray.icon!.rawValue)"
                     
                     // Date
-                    day2DayString = dayFormat(date: dayTwoArray.time)
+                    day2DayString = dayFormat(date: dayTwoArray.time, fullLength: false)
                     
                     // High and Low
                     day2High = Int(fetchDayTwoArray.temperatureHigh!)
@@ -234,7 +268,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                     day3Condition = "\(fetchDayThreeArray.icon!.rawValue)"
                     
                     // Date
-                    day3DayString = dayFormat(date: dayThreeArray.time)
+                    day3DayString = dayFormat(date: dayThreeArray.time, fullLength: false)
                     
                     // High and Low
                     day3High = Int(fetchDayThreeArray.temperatureHigh!)

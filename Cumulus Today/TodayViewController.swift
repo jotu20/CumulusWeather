@@ -21,10 +21,18 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     @IBOutlet weak var timeStackView: UIStackView!
     @IBOutlet weak var currentConditionIcon: UIImageView!
     @IBOutlet weak var currentLocationLabel: UILabel!
-    @IBOutlet weak var conditionSlot1Label: UILabel!
-    @IBOutlet weak var conditionSlot2Label: UILabel!
+    @IBOutlet weak var currentConditionLabel: UILabel!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var highAndLowTemperatureLabel: UILabel!
+    
+    @IBOutlet weak var precipitationLabel: UILabel!
+    @IBOutlet weak var accumulationLabel: UILabel!
+    @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var uvIndexLabel: UILabel!
+    @IBOutlet weak var windLabel: UILabel!
+    @IBOutlet weak var cloudCoverLabel: UILabel!
+    
+    @IBOutlet weak var currentConditionsTopConstraint: NSLayoutConstraint!
     
     // MARK: - Hourly forecast outlets
     @IBOutlet weak var hour0Time: UILabel!
@@ -58,69 +66,79 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     // Day One
     @IBOutlet weak var dayOneDate: UILabel!
     @IBOutlet weak var dayOneCondition: UIImageView!
-    @IBOutlet weak var dayOneHighLow: UILabel!
+    @IBOutlet weak var day0HighLabel: UILabel!
+    @IBOutlet weak var day0LowLabel: UILabel!
     
     // Day Two
     @IBOutlet weak var dayTwoDate: UILabel!
     @IBOutlet weak var dayTwoCondition: UIImageView!
-    @IBOutlet weak var dayTwoHighLow: UILabel!
+    @IBOutlet weak var day1HighLabel: UILabel!
+    @IBOutlet weak var day1LowLabel: UILabel!
     
     // Day Three
     @IBOutlet weak var dayThreeDate: UILabel!
     @IBOutlet weak var dayThreeCondition: UIImageView!
-    @IBOutlet weak var dayThreeHighLow: UILabel!
+    @IBOutlet weak var day2HighLabel: UILabel!
+    @IBOutlet weak var day2LowLabel: UILabel!
     
     // Day Four
     @IBOutlet weak var dayFourDate: UILabel!
     @IBOutlet weak var dayFourCondition: UIImageView!
-    @IBOutlet weak var dayFourHighLow: UILabel!
-    
-    // MARK: - Set labels
-    func setWidgetSlot(setting: String, label: UILabel!) {
-        if setting.contains("Current condition") {
-            label.text = "\(weatherCondition(condition: currentCondition, type: "text"))"
-            
-            // Check if summaries are equal for the hour
-            if currentSummary == hourSummary {
-                currentSummary = "\(hourSummary.capitalizingFirstLetter()) for the hour."
-            }
-            
-            // Check for current precipitation
-            if minuteSummary.isEmpty == false && minuteSummary != "none" {
-                // Check if there is current precipitation
-                if precipitation >= 80 && precipitationType != "none" && endingMinuteSummary != "none" {
-                    label.text = "\(precipitationType.capitalizingFirstLetter()) stops in \(endingMinuteSummary)."
-                }
-            }
-        } else if setting.contains("Feels like") {
-            label.text = "Feels like \(apparentTemperature)°"
-        } else if setting.contains("Precip") {
-            label.text = "Precipitation \(precipitation)%"
-        } else if setting.contains("Precip") {
-            label.text = "Accumulation \(precipAccumulation)%"
-        } else if setting.contains("Humidity") {
-            label.text = "Humidity \(humidity)"
-        } else if setting.contains("UV index") {
-            label.text = "UV index \(uvIndex)"
-        } else if setting.contains("Wind") {
-            if windGust == wind {
-                label.text = "Wind \(wind) \(unitsWindSpeed) \(windDirectionString)"
-            } else {
-                label.text = "Wind \(wind)(\(windGust)) \(unitsWindSpeed) \(windDirectionString)"
-            }
-        } else if setting.contains("Cloud cover") {
-            label.text = "Cloud cover \(cloudCover)%"
-        }
-    }
+    @IBOutlet weak var day3HighLabel: UILabel!
+    @IBOutlet weak var day3LowLabel: UILabel!
     
     func setWidgetLabels() {
         universalSettings()
-        currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image"))
-        currentLocationLabel.text = "\(currentLocation)"
+        // Check if summaries are equal for the hour
+        if currentSummary == hourSummary {
+            currentSummary = "\(hourSummary.capitalizingFirstLetter()) for the hour."
+        }
+        
         currentTemperatureLabel.text = "\(currentTemperature)°"
         highAndLowTemperatureLabel.text = "\(highTemperature)°/\(lowTemperature)°"
-        setWidgetSlot(setting: universalDefaultWidgetSlot1, label: conditionSlot1Label)
-        setWidgetSlot(setting: universalDefaultWidgetSlot2, label: conditionSlot2Label)
+        currentConditionLabel.text = "\(currentSummary.capitalizingFirstLetter())"
+        currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image"))
+        
+        // Check for current precipitation
+        if minuteSummary.isEmpty == false && minuteSummary != "none" {
+            // Check if there is current precipitation
+            if precipitation >= 80 && precipitationType != "none" && endingMinuteSummary != "none" {
+                currentConditionLabel.text = "\(precipitationType.capitalizingFirstLetter()) stops in \(endingMinuteSummary)."
+            }
+        }
+        
+        precipitationLabel.text = "Precip. \(precipitation)%"
+        accumulationLabel.text = "Accum. \(precipAccumulation)\(unitsPrecipitation)%"
+        humidityLabel.text = "Humidity \(humidity)%"
+        
+        // Set uv index
+        if uvIndex < 2 {
+            uvIndexLabel.text = "UV index low (\(uvIndex))"
+        } else if uvIndex >= 3 && uvIndex <= 5 {
+            uvIndexLabel.text = "UV index moderate (\(uvIndex))"
+        } else if uvIndex >= 6 && uvIndex <= 7 {
+            uvIndexLabel.text = "UV index high (\(uvIndex))"
+        } else if uvIndex >= 8 && uvIndex <= 10 {
+            uvIndexLabel.text = "UV index very high (\(uvIndex))"
+        } else if uvIndex >= 11 {
+            uvIndexLabel.text = "UV index extreme (\(uvIndex))"
+        }
+
+        // Set wind
+        if windGust == wind {
+            windLabel.text = "Wind \(wind)\(unitsWindSpeed) \(windDirectionString)"
+        } else {
+            windLabel.text = "Wind \(wind)(\(windGust))\(unitsWindSpeed) \(windDirectionString)"
+        }
+        
+        // Set cloud cover
+        if cloudCover > cloudCoverHour1 || cloudCover > cloudCoverHour2 || cloudCover > cloudCoverHour3 || cloudCover > cloudCoverHour4 {
+            cloudCoverLabel.text = "Clouds \(cloudCover)% & decr."
+        } else if cloudCover < cloudCoverHour1 || cloudCover < cloudCoverHour2 || cloudCover < cloudCoverHour3 || cloudCover < cloudCoverHour4 {
+            cloudCoverLabel.text = "Clouds \(cloudCover)% & incr."
+        } else {
+            cloudCoverLabel.text = "Clouds \(cloudCover)%"
+        }
         
         // 12 Hour Forecast
         hour0Time.text = "Now"
@@ -153,22 +171,26 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         // Day One
         dayOneDate.text = "\(day0DayString.capitalizingFirstLetter())"
         dayOneCondition.image = UIImage(named: weatherCondition(condition: day0Condition, type: "daily"))
-        dayOneHighLow.text = "\(day0High)°/\(day0Low)°"
+        day0HighLabel.text = "\(day0High)°"
+        day0LowLabel.text = "\(day0Low)°"
         
         // Day Two
         dayTwoDate.text = "\(day1DayString.capitalizingFirstLetter())"
         dayTwoCondition.image = UIImage(named: weatherCondition(condition: day1Condition, type: "daily"))
-        dayTwoHighLow.text = "\(day1High)°/\(day1Low)°"
+        day1HighLabel.text = "\(day1High)°"
+        day1LowLabel.text = "\(day1Low)°"
         
         // Day Three
         dayThreeDate.text = "\(day2DayString.capitalizingFirstLetter())"
         dayThreeCondition.image = UIImage(named: weatherCondition(condition: day2Condition, type: "daily"))
-        dayThreeHighLow.text = "\(day2High)°/\(day2Low)°"
+        day2HighLabel.text = "\(day2High)°"
+        day2LowLabel.text = "\(day2Low)°"
         
         // Day Four
         dayFourDate.text = "\(day3DayString.capitalizingFirstLetter())"
         dayFourCondition.image = UIImage(named: weatherCondition(condition: day3Condition, type: "daily"))
-        dayFourHighLow.text = "\(day3High)°/\(day3Low)°"
+        day3HighLabel.text = "\(day3High)°"
+        day3LowLabel.text = "\(day3Low)°"
     }
     
     @IBAction func openApplicationTapped(_ sender: UITapGestureRecognizer) {
@@ -202,10 +224,12 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         if (activeDisplayMode == NCWidgetDisplayMode.compact) {
             self.preferredContentSize = maxSize
             timeStackView.isHidden = true
+            self.currentConditionsTopConstraint.constant = 50
         } else {
             //expanded
-            self.preferredContentSize = CGSize(width: 0, height: 280)
+            self.preferredContentSize = CGSize(width: 0, height: 360)
             timeStackView.isHidden = false
+            self.currentConditionsTopConstraint.constant = 25
         }
     }
     
@@ -221,10 +245,10 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             // Set state for locations in the US
             if placemark.country! == "United States" {
                 currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
-                self.navigationController?.navigationBar.topItem?.title = "\(currentLocation)"
+                self.currentLocationLabel.text = "\(currentLocation)"
             } else {
                 currentLocation = "\(placemark.locality!), \(placemark.country!)"
-                self.navigationController?.navigationBar.topItem?.title = "\(currentLocation)"
+                self.currentLocationLabel.text = "\(currentLocation)"
             }
             fetchDarkSkyWeatherData()
             

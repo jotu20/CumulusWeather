@@ -445,6 +445,7 @@ var sunsetDate = Date()
 // Day Zero
 var day0Condition: String = ""
 var day0DayString: String = ""
+var day0DayStringFull: String = ""
 var day0DateString: String = ""
 var day0Summary: String = ""
 var day0Sunrise: String = ""
@@ -463,6 +464,7 @@ var day0UVIndex: Int = 0
 // Day One
 var day1Condition: String = ""
 var day1DayString: String = ""
+var day1DayStringFull: String = ""
 var day1DateString: String = ""
 var day1Summary: String = ""
 var day1Sunrise: String = ""
@@ -481,6 +483,7 @@ var day1UVIndex: Int = 0
 // Day Two
 var day2Condition: String = ""
 var day2DayString: String = ""
+var day2DayStringFull: String = ""
 var day2DateString: String = ""
 var day2Summary: String = ""
 var day2Sunrise: String = ""
@@ -499,6 +502,7 @@ var day2UVIndex: Int = 0
 // Day Three
 var day3Condition: String = ""
 var day3DayString: String = ""
+var day3DayStringFull: String = ""
 var day3DateString: String = ""
 var day3Summary: String = ""
 var day3Sunrise: String = ""
@@ -517,6 +521,7 @@ var day3UVIndex: Int = 0
 // Day Four
 var day4Condition: String = ""
 var day4DayString: String = ""
+var day4DayStringFull: String = ""
 var day4DateString: String = ""
 var day4Summary: String = ""
 var day4Sunrise: String = ""
@@ -535,6 +540,7 @@ var day4UVIndex: Int = 0
 // Day Five
 var day5Condition: String = ""
 var day5DayString: String = ""
+var day5DayStringFull: String = ""
 var day5DateString: String = ""
 var day5Summary: String = ""
 var day5Sunrise: String = ""
@@ -553,6 +559,7 @@ var day5UVIndex: Int = 0
 // Day Six
 var day6Condition: String = ""
 var day6DayString: String = ""
+var day6DayStringFull: String = ""
 var day6DateString: String = ""
 var day6Summary: String = ""
 var day6Sunrise: String = ""
@@ -571,6 +578,7 @@ var day6UVIndex: Int = 0
 // Day Seven
 var day7Condition: String = ""
 var day7DayString: String = ""
+var day7DayStringFull: String = ""
 var day7DateString: String = ""
 var day7Summary: String = ""
 var day7Sunrise: String = ""
@@ -589,6 +597,7 @@ var day7UVIndex: Int = 0
 // Day Eight
 var day8Condition: String = ""
 var day8DayString: String = ""
+var day8DayStringFull: String = ""
 var day8DateString: String = ""
 var day8Summary: String = ""
 var day8Sunrise: String = ""
@@ -607,6 +616,7 @@ var day8UVIndex: Int = 0
 // Day Nine
 var day9Condition: String = ""
 var day9DayString: String = ""
+var day9DayStringFull: String = ""
 var day9DateString: String = ""
 var day9Summary: String = ""
 var day9Sunrise: String = ""
@@ -623,11 +633,20 @@ var day9Visibility: Int = 0
 var day9UVIndex: Int = 0
 
 // MARK: - Get day name
-func dayFormat(date: Date) -> String {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "EEE"
+func dayFormat(date: Date, fullLength: Bool) -> String {
+    var dayString: String = ""
     
-    return dateFormatter.string(from: date).uppercased()
+    if fullLength == true {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        dayString = dateFormatter.string(from: date).uppercased()
+    } else {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEE"
+        dayString = dateFormatter.string(from: date).uppercased()
+    }
+    
+    return dayString
 }
 
 // MARK: - Get date of day

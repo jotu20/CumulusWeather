@@ -14,14 +14,10 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
     var pickerView = UIPickerView()
     
     let defaultHourlyConditionTypes = ["Precip (%)", "Accumulation (%)", "Temp (°\(unitsTemperature))", "Humidity (%)", "UV index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
-    let defaultWidgetConditionSlot1 = ["Current condition", "Feels like (°\(unitsTemperature))", "Precip (%)", "Accumulation (%)", "Humidity (%)", "UV index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
-    let defaultWidgetConditionSlot2 = ["Current condition", "Feels like (°\(unitsTemperature))", "Precip (%)", "Accumulation (%)", "Humidity (%)", "UV index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
     let dataSourceTypes = ["Dark Sky"]
     
     @IBOutlet weak var dataSourceTextField: UITextField!
     @IBOutlet weak var hourlyConditionsTextField: UITextField!
-    @IBOutlet weak var widgetSlot1TextField: UITextField!
-    @IBOutlet weak var widgetSlot2TextField: UITextField!
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
@@ -51,42 +47,6 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
             self.hourlyConditionsTextField.text = "\(defaults.string(forKey: "defaultHourlyCondition")!)"
         }
         
-        if (defaults.string(forKey: "defaultWidgetSlot1")?.contains("Current condition") == true) {
-            self.widgetSlot1TextField.text = "\(defaults.string(forKey: "defaultWidgetSlot1")!)"
-        } else if (defaults.string(forKey: "defaultWidgetSlot1")?.contains("Feels like") == true) {
-            self.widgetSlot1TextField.text = "\(defaults.string(forKey: "defaultWidgetSlot1")!)"
-        } else if (defaults.string(forKey: "defaultWidgetSlot1")?.contains("Precip") == true) {
-            self.widgetSlot1TextField.text = "\(defaults.string(forKey: "defaultWidgetSlot1")!)"
-        } else if (defaults.string(forKey: "defaultWidgetSlot1")?.contains("Humidity") == true) {
-            self.widgetSlot1TextField.text = "\(defaults.string(forKey: "defaultWidgetSlot1")!)"
-        } else if (defaults.string(forKey: "defaultWidgetSlot1")?.contains("UV index") == true) {
-            self.widgetSlot1TextField.text = "\(defaults.string(forKey: "defaultWidgetSlot1")!)"
-        } else if (defaults.string(forKey: "defaultWidgetSlot1")?.contains("Wind") == true) {
-            self.widgetSlot1TextField.text = "\(defaults.string(forKey: "defaultWidgetSlot1")!)"
-        } else if (defaults.string(forKey: "defaultWidgetSlot1")?.contains("Cloud cover") == true) {
-            self.widgetSlot1TextField.text = "\(defaults.string(forKey: "defaultWidgetSlot1")!)"
-        } else {
-            self.widgetSlot1TextField.text = "\(defaults.string(forKey: "defaultWidgetSlot1")!)"
-        }
-        
-        if (defaults.string(forKey: "defaultWidgetSlot2")?.contains("Current condition") == true) {
-            self.widgetSlot2TextField.text = "\(defaults.string(forKey: "defaultWidgetSlot2")!)"
-        } else if (defaults.string(forKey: "defaultWidgetSlot2")?.contains("Feels like") == true) {
-            self.widgetSlot2TextField.text = "\(defaults.string(forKey: "defaultWidgetSlot2")!)"
-        } else if (defaults.string(forKey: "defaultWidgetSlot2")?.contains("Precip") == true) {
-            self.widgetSlot2TextField.text = "\(defaults.string(forKey: "defaultWidgetSlot2")!)"
-        } else if (defaults.string(forKey: "defaultWidgetSlot2")?.contains("Humidity") == true) {
-            self.widgetSlot2TextField.text = "\(defaults.string(forKey: "defaultWidgetSlot2")!)"
-        } else if (defaults.string(forKey: "defaultWidgetSlot2")?.contains("UV index") == true) {
-            self.widgetSlot2TextField.text = "\(defaults.string(forKey: "defaultWidgetSlot2")!)"
-        } else if (defaults.string(forKey: "defaultWidgetSlot2")?.contains("Wind") == true) {
-            self.widgetSlot2TextField.text = "\(defaults.string(forKey: "defaultWidgetSlot2")!)"
-        } else if (defaults.string(forKey: "defaultWidgetSlot2")?.contains("Cloud cover") == true) {
-            self.widgetSlot2TextField.text = "\(defaults.string(forKey: "defaultWidgetSlot2")!)"
-        } else {
-            self.widgetSlot2TextField.text = "\(defaults.string(forKey: "defaultWidgetSlot2")!)"
-        }
-        
         let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ForecastDataTableViewController.doneBarButtonTapped))
         setupBarButtonColor(button: doneBarButton)
         self.navigationItem.rightBarButtonItem = doneBarButton
@@ -112,8 +72,6 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
         
         dataSourceTextField.textColor = color
         hourlyConditionsTextField.textColor = color
-        widgetSlot1TextField.textColor = color
-        widgetSlot2TextField.textColor = color
     }
     
     // Limit text field to numbers only
@@ -129,10 +87,6 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
     func pickerView( _ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if currentTextField == hourlyConditionsTextField {
             return defaultHourlyConditionTypes.count
-        } else if currentTextField == widgetSlot1TextField {
-            return defaultWidgetConditionSlot1.count
-        } else if currentTextField == widgetSlot2TextField {
-            return defaultWidgetConditionSlot2.count
         } else if currentTextField == dataSourceTextField {
             return dataSourceTypes.count
         } else {
@@ -143,10 +97,6 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
     func pickerView( _ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if currentTextField == hourlyConditionsTextField {
             return defaultHourlyConditionTypes[row]
-        } else if currentTextField == widgetSlot1TextField {
-            return defaultWidgetConditionSlot1[row]
-        } else if currentTextField == widgetSlot2TextField {
-            return defaultWidgetConditionSlot2[row]
         } else if currentTextField == dataSourceTextField {
             return dataSourceTypes[row]
         } else {
@@ -160,16 +110,6 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
             defaultHourlyCondition = "\(defaultHourlyConditionTypes[row])"
             defaults.set("\(defaultHourlyConditionTypes[row])", forKey: "defaultHourlyCondition")
             weatherLoaded = false
-        } else if currentTextField == widgetSlot1TextField {
-            widgetSlot1TextField.text = defaultWidgetConditionSlot1[row]
-            defaultWidgetSlot1 = "\(defaultWidgetConditionSlot1[row])"
-            defaults.set("\(defaultWidgetConditionSlot1[row])", forKey: "defaultWidgetSlot1")
-            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(defaultWidgetSlot1, forKey: "setDefaultWidgetSlot1")
-        } else if currentTextField == widgetSlot2TextField {
-            widgetSlot2TextField.text = defaultWidgetConditionSlot2[row]
-            defaultWidgetSlot2 = "\(defaultWidgetConditionSlot2[row])"
-            defaults.set("\(defaultWidgetConditionSlot2[row])", forKey: "defaultWidgetSlot2")
-            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(defaultWidgetSlot2, forKey: "setDefaultWidgetSlot2")
         } else if currentTextField == dataSourceTextField {
             dataSourceTextField.text = dataSourceTypes[row]
             dataSource = "\(dataSourceTypes[row])"
@@ -186,7 +126,7 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
         currentTextField = textField
         let toolBar = UIToolbar().ToolbarPicker(mySelect: #selector(ForecastDataTableViewController.dismissPicker))
         
-        if currentTextField == dataSourceTextField || currentTextField == hourlyConditionsTextField || currentTextField == widgetSlot1TextField || currentTextField == widgetSlot2TextField {
+        if currentTextField == dataSourceTextField || currentTextField == hourlyConditionsTextField {
             currentTextField.inputView = pickerView
             currentTextField.inputAccessoryView = toolBar
         }

@@ -1,3 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Cumulus/Pods-Cumulus-frameworks.sh
-${BUILT_PRODUCTS_DIR}/ForecastIO/ForecastIO.framework
+${BUILT_PRODUCTS_DIR}/ForecastIO-framework/ForecastIO.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework

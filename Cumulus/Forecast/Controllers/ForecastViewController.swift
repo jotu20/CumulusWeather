@@ -21,6 +21,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     let locationManager = CLLocationManager()
     var refreshControl: UIRefreshControl!
+    var changedHourlyValues: String = ""
     
     // MARK: - Current conditions outlets
     @IBOutlet weak var currentConditionView: UIView!
@@ -43,6 +44,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     // MARK: - Hourly outlets
     @IBOutlet var hourlyConditionsGesture: UITapGestureRecognizer!
+    @IBOutlet var hourlyConditionsGestureSwipeLeft: UISwipeGestureRecognizer!
+    @IBOutlet var hourlyConditionsGestureSwipeRight: UISwipeGestureRecognizer!
     
     @IBOutlet weak var hourlyLabel: UILabel!
     
@@ -258,6 +261,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             
             if defaults.bool(forKey: "cumulusPlus") == false {
                 self.hourlyConditionsGesture.isEnabled = false
+                self.hourlyConditionsGestureSwipeLeft.isEnabled = false
+                self.hourlyConditionsGestureSwipeRight.isEnabled = false
                 
                 self.day6View.isHidden = true
                 self.day7View.isHidden = true
@@ -516,6 +521,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             color = maximumRed
         } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
             color = dodgerBlue
+        } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+            color = orchid
         } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
             color = plumpPurple
         } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
@@ -549,7 +556,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     func setHourLabelAndIcons(hourTimeLabel: UILabel!, hourConditionIcon: UIImageView!, hourCondtionLabel: UILabel!, hourTimeString: String, hourIconString: String, hourConditionString: String) {
         
         hourTimeLabel.text = "\(hourTimeString)"
-        hourConditionIcon.image = UIImage(named: weatherCondition(condition: hourIconString, type: "image"))
+        hourConditionIcon.image = UIImage(named: weatherCondition(condition: hourIconString, type: "image", circle: defaults.string(forKey: "defaultConditionIcons")!))
         hourCondtionLabel.text = "\(hourConditionString)"
     }
 
@@ -558,7 +565,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         
         dayViewHeight.constant = 60
         dayLabel.text = "\(dayString.capitalizingFirstLetter()) \(dateString)"
-        dayConditionIcon.image = UIImage(named: weatherCondition(condition: dayConditionIconString, type: "daily"))
+        dayConditionIcon.image = UIImage(named: weatherCondition(condition: dayConditionIconString, type: "daily", circle: defaults.string(forKey: "defaultConditionIcons")!))
         dayLowLabel.text = "\(dayLow)°"
         dayHighLabel.text = "\(dayHigh)°"
     }
@@ -605,50 +612,48 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         }
     }
     
-    func setHourlyOutlets0() {
-        let type = defaults.string(forKey: "defaultHourlyCondition")
-        
+    func setHourlyOutlets0(type: String) {
         var hour0Value: String = ""
         var hour1Value: String = ""
         var hour2Value: String = ""
         var hour3Value: String = ""
         
-        if type?.contains("Precip") == true {
+        if type.contains("Precip") == true {
             hourlyLabel.text = "Hourly precipitation"
             
             hour0Value = "\(precipHour0)%"
             hour1Value = "\(precipHour1)%"
             hour2Value = "\(precipHour2)%"
             hour3Value = "\(precipHour3)%"
-        } else if type?.contains("Temp") == true {
+        } else if type.contains("Temp") == true {
             hourlyLabel.text = "Hourly temperature"
             
-            hour0Value = "\(tempHour0)%"
-            hour1Value = "\(tempHour1)%"
-            hour2Value = "\(tempHour2)%"
-            hour3Value = "\(tempHour3)%"
-        } else if type?.contains("Humidity") == true {
+            hour0Value = "\(tempHour0)°"
+            hour1Value = "\(tempHour1)°"
+            hour2Value = "\(tempHour2)°"
+            hour3Value = "\(tempHour3)°"
+        } else if type.contains("Humidity") == true {
             hourlyLabel.text = "Hourly humidity"
             
             hour0Value = "\(humidityHour0)%"
             hour1Value = "\(humidityHour1)%"
             hour2Value = "\(humidityHour2)%"
             hour3Value = "\(humidityHour3)%"
-        } else if type?.contains("UV Index") == true {
+        } else if type.contains("UV Index") == true {
             hourlyLabel.text = "Hourly uv index"
             
-            hour0Value = "\(uvindexHour0)%"
-            hour1Value = "\(uvindexHour1)%"
-            hour2Value = "\(uvindexHour2)%"
-            hour3Value = "\(uvindexHour3)%"
-        } else if type?.contains("Wind") == true {
+            hour0Value = "\(uvindexHour0)"
+            hour1Value = "\(uvindexHour1)"
+            hour2Value = "\(uvindexHour2)"
+            hour3Value = "\(uvindexHour3)"
+        } else if type.contains("Wind") == true {
             hourlyLabel.text = "Hourly wind"
             
             hour0Value = "\(windSpeedHour0)\(unitsWindSpeed)"
             hour1Value = "\(windSpeedHour1)\(unitsWindSpeed)"
             hour2Value = "\(windSpeedHour2)\(unitsWindSpeed)"
             hour3Value = "\(windSpeedHour3)\(unitsWindSpeed)"
-        } else if type?.contains("Cloud") == true {
+        } else if type.contains("Cloud") == true {
             hourlyLabel.text = "Hourly cloud cover"
             
             hour0Value = "\(cloudCoverHour0)%"
@@ -663,50 +668,48 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: hour3, hourIconString: conditionHour3, hourConditionString: hour3Value)
     }
     
-    func setHourlyOutlets1() {
-        let type = defaults.string(forKey: "defaultHourlyCondition")
-        
+    func setHourlyOutlets1(type: String) {
         var hour0Value: String = ""
         var hour1Value: String = ""
         var hour2Value: String = ""
         var hour3Value: String = ""
         
-        if type?.contains("Precip") == true {
+        if type.contains("Precip") == true {
             hourlyLabel.text = "Hourly precipitation"
             
             hour0Value = "\(precipHour4)%"
             hour1Value = "\(precipHour5)%"
             hour2Value = "\(precipHour6)%"
             hour3Value = "\(precipHour7)%"
-        } else if type?.contains("Temp") == true {
+        } else if type.contains("Temp") == true {
             hourlyLabel.text = "Hourly temperature"
             
-            hour0Value = "\(tempHour4)%"
-            hour1Value = "\(tempHour5)%"
-            hour2Value = "\(tempHour6)%"
-            hour3Value = "\(tempHour7)%"
-        } else if type?.contains("Humidity") == true {
+            hour0Value = "\(tempHour4)°"
+            hour1Value = "\(tempHour5)°"
+            hour2Value = "\(tempHour6)°"
+            hour3Value = "\(tempHour7)°"
+        } else if type.contains("Humidity") == true {
             hourlyLabel.text = "Hourly humidity"
             
             hour0Value = "\(humidityHour4)%"
             hour1Value = "\(humidityHour5)%"
             hour2Value = "\(humidityHour6)%"
             hour3Value = "\(humidityHour7)%"
-        } else if type?.contains("UV Index") == true {
+        } else if type.contains("UV Index") == true {
             hourlyLabel.text = "Hourly uv index"
             
-            hour0Value = "\(uvindexHour4)%"
-            hour1Value = "\(uvindexHour5)%"
-            hour2Value = "\(uvindexHour6)%"
-            hour3Value = "\(uvindexHour7)%"
-        } else if type?.contains("Wind") == true {
+            hour0Value = "\(uvindexHour4)"
+            hour1Value = "\(uvindexHour5)"
+            hour2Value = "\(uvindexHour6)"
+            hour3Value = "\(uvindexHour7)"
+        } else if type.contains("Wind") == true {
             hourlyLabel.text = "Hourly wind"
             
             hour0Value = "\(windSpeedHour4)\(unitsWindSpeed)"
             hour1Value = "\(windSpeedHour5)\(unitsWindSpeed)"
             hour2Value = "\(windSpeedHour6)\(unitsWindSpeed)"
             hour3Value = "\(windSpeedHour7)\(unitsWindSpeed)"
-        } else if type?.contains("Cloud") == true {
+        } else if type.contains("Cloud") == true {
             hourlyLabel.text = "Hourly cloud cover"
             
             hour0Value = "\(cloudCoverHour4)%"
@@ -721,50 +724,48 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: hour7, hourIconString: conditionHour7, hourConditionString: hour3Value)
     }
     
-    func setHourlyOutlets2() {
-        let type = defaults.string(forKey: "defaultHourlyCondition")
-        
+    func setHourlyOutlets2(type: String) {
         var hour0Value: String = ""
         var hour1Value: String = ""
         var hour2Value: String = ""
         var hour3Value: String = ""
         
-        if type?.contains("Precip") == true {
+        if type.contains("Precip") == true {
             hourlyLabel.text = "Hourly precipitation"
             
             hour0Value = "\(precipHour8)%"
             hour1Value = "\(precipHour9)%"
             hour2Value = "\(precipHour10)%"
             hour3Value = "\(precipHour11)%"
-        } else if type?.contains("Temp") == true {
+        } else if type.contains("Temp") == true {
             hourlyLabel.text = "Hourly temperature"
             
-            hour0Value = "\(tempHour8)%"
-            hour1Value = "\(tempHour9)%"
-            hour2Value = "\(tempHour10)%"
-            hour3Value = "\(tempHour11)%"
-        } else if type?.contains("Humidity") == true {
+            hour0Value = "\(tempHour8)°"
+            hour1Value = "\(tempHour9)°"
+            hour2Value = "\(tempHour10)°"
+            hour3Value = "\(tempHour11)°"
+        } else if type.contains("Humidity") == true {
             hourlyLabel.text = "Hourly humidity"
             
             hour0Value = "\(humidityHour8)%"
             hour1Value = "\(humidityHour9)%"
             hour2Value = "\(humidityHour10)%"
             hour3Value = "\(humidityHour11)%"
-        } else if type?.contains("UV Index") == true {
+        } else if type.contains("UV Index") == true {
             hourlyLabel.text = "Hourly uv index"
             
-            hour0Value = "\(uvindexHour8)%"
-            hour1Value = "\(uvindexHour9)%"
-            hour2Value = "\(uvindexHour10)%"
-            hour3Value = "\(uvindexHour11)%"
-        } else if type?.contains("Wind") == true {
+            hour0Value = "\(uvindexHour8)"
+            hour1Value = "\(uvindexHour9)"
+            hour2Value = "\(uvindexHour10)"
+            hour3Value = "\(uvindexHour11)"
+        } else if type.contains("Wind") == true {
             hourlyLabel.text = "Hourly wind"
             
             hour0Value = "\(windSpeedHour8)\(unitsWindSpeed)"
             hour1Value = "\(windSpeedHour9)\(unitsWindSpeed)"
             hour2Value = "\(windSpeedHour10)\(unitsWindSpeed)"
             hour3Value = "\(windSpeedHour11)\(unitsWindSpeed)"
-        } else if type?.contains("Cloud") == true {
+        } else if type.contains("Cloud") == true {
             hourlyLabel.text = "Hourly cloud cover"
             
             hour0Value = "\(cloudCoverHour8)%"
@@ -779,50 +780,48 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: hour11, hourIconString: conditionHour11, hourConditionString: hour3Value)
     }
     
-    func setHourlyOutlets3() {
-        let type = defaults.string(forKey: "defaultHourlyCondition")
-        
+    func setHourlyOutlets3(type: String) {
         var hour0Value: String = ""
         var hour1Value: String = ""
         var hour2Value: String = ""
         var hour3Value: String = ""
         
-        if type?.contains("Precip") == true {
+        if type.contains("Precip") == true {
             hourlyLabel.text = "Hourly precipitation"
             
             hour0Value = "\(precipHour12)%"
             hour1Value = "\(precipHour13)%"
             hour2Value = "\(precipHour14)%"
             hour3Value = "\(precipHour15)%"
-        } else if type?.contains("Temp") == true {
+        } else if type.contains("Temp") == true {
             hourlyLabel.text = "Hourly temperature"
             
-            hour0Value = "\(tempHour12)%"
-            hour1Value = "\(tempHour13)%"
-            hour2Value = "\(tempHour14)%"
-            hour3Value = "\(tempHour15)%"
-        } else if type?.contains("Humidity") == true {
+            hour0Value = "\(tempHour12)°"
+            hour1Value = "\(tempHour13)°"
+            hour2Value = "\(tempHour14)°"
+            hour3Value = "\(tempHour15)°"
+        } else if type.contains("Humidity") == true {
             hourlyLabel.text = "Hourly humidity"
             
             hour0Value = "\(humidityHour12)%"
             hour1Value = "\(humidityHour13)%"
             hour2Value = "\(humidityHour14)%"
             hour3Value = "\(humidityHour15)%"
-        } else if type?.contains("UV Index") == true {
+        } else if type.contains("UV Index") == true {
             hourlyLabel.text = "Hourly uv index"
             
-            hour0Value = "\(uvindexHour12)%"
-            hour1Value = "\(uvindexHour13)%"
-            hour2Value = "\(uvindexHour14)%"
-            hour3Value = "\(uvindexHour15)%"
-        } else if type?.contains("Wind") == true {
+            hour0Value = "\(uvindexHour12)"
+            hour1Value = "\(uvindexHour13)"
+            hour2Value = "\(uvindexHour14)"
+            hour3Value = "\(uvindexHour15)"
+        } else if type.contains("Wind") == true {
             hourlyLabel.text = "Hourly wind"
             
             hour0Value = "\(windSpeedHour12)\(unitsWindSpeed)"
             hour1Value = "\(windSpeedHour13)\(unitsWindSpeed)"
             hour2Value = "\(windSpeedHour14)\(unitsWindSpeed)"
             hour3Value = "\(windSpeedHour15)\(unitsWindSpeed)"
-        } else if type?.contains("Cloud") == true {
+        } else if type.contains("Cloud") == true {
             hourlyLabel.text = "Hourly cloud cover"
             
             hour0Value = "\(cloudCoverHour12)%"
@@ -835,6 +834,62 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         setHourLabelAndIcons(hourTimeLabel: hour1TimeLabel, hourConditionIcon: hour1ConditionIcon, hourCondtionLabel: hour1ConditionLabel, hourTimeString: hour13, hourIconString: conditionHour13, hourConditionString: hour1Value)
         setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: hour14, hourIconString: conditionHour14, hourConditionString: hour2Value)
         setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: hour15, hourIconString: conditionHour15, hourConditionString: hour3Value)
+    }
+    
+    func changeHourlyOutlets(type: String) {
+        var hour0Value: String = ""
+        var hour1Value: String = ""
+        var hour2Value: String = ""
+        var hour3Value: String = ""
+       
+        if type.contains("Precip") == true {
+            hourlyLabel.text = "Hourly precipitation"
+            
+            hour0Value = "\(precipHour0)%"
+            hour1Value = "\(precipHour1)%"
+            hour2Value = "\(precipHour2)%"
+            hour3Value = "\(precipHour3)%"
+        } else if type.contains("Temp") == true {
+            hourlyLabel.text = "Hourly temperature"
+            
+            hour0Value = "\(tempHour0)°"
+            hour1Value = "\(tempHour1)°"
+            hour2Value = "\(tempHour2)°"
+            hour3Value = "\(tempHour3)°"
+        } else if type.contains("Humidity") == true {
+            hourlyLabel.text = "Hourly humidity"
+            
+            hour0Value = "\(humidityHour0)%"
+            hour1Value = "\(humidityHour1)%"
+            hour2Value = "\(humidityHour2)%"
+            hour3Value = "\(humidityHour3)%"
+        } else if type.contains("UV Index") == true {
+            hourlyLabel.text = "Hourly uv index"
+            
+            hour0Value = "\(uvindexHour0)"
+            hour1Value = "\(uvindexHour1)"
+            hour2Value = "\(uvindexHour2)"
+            hour3Value = "\(uvindexHour3)"
+        } else if type.contains("Wind") == true {
+            hourlyLabel.text = "Hourly wind"
+            
+            hour0Value = "\(windSpeedHour0)\(unitsWindSpeed)"
+            hour1Value = "\(windSpeedHour1)\(unitsWindSpeed)"
+            hour2Value = "\(windSpeedHour2)\(unitsWindSpeed)"
+            hour3Value = "\(windSpeedHour3)\(unitsWindSpeed)"
+        } else if type.contains("Cloud") == true {
+            hourlyLabel.text = "Hourly cloud cover"
+            
+            hour0Value = "\(cloudCoverHour0)%"
+            hour1Value = "\(cloudCoverHour1)%"
+            hour2Value = "\(cloudCoverHour2)%"
+            hour3Value = "\(cloudCoverHour3)%"
+        }
+        
+        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: hour0, hourIconString: conditionHour0, hourConditionString: hour0Value)
+        setHourLabelAndIcons(hourTimeLabel: hour1TimeLabel, hourConditionIcon: hour1ConditionIcon, hourCondtionLabel: hour1ConditionLabel, hourTimeString: hour1, hourIconString: conditionHour1, hourConditionString: hour1Value)
+        setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: hour2, hourIconString: conditionHour2, hourConditionString: hour2Value)
+        setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: hour3, hourIconString: conditionHour3, hourConditionString: hour3Value)
     }
     
     func setDailyOutlets() {
@@ -881,13 +936,58 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     // When tapped show extended hourly conditions
     @IBAction func hourlyConditionsTapped(_ sender: UITapGestureRecognizer) {
         if hour0TimeLabel.text == hour0 {
-            setHourlyOutlets1()
+            setHourlyOutlets1(type: changedHourlyValues)
         } else if hour0TimeLabel.text == hour4 {
-            setHourlyOutlets2()
+            setHourlyOutlets2(type: changedHourlyValues)
         } else if hour0TimeLabel.text == hour8 {
-            setHourlyOutlets3()
+            setHourlyOutlets3(type: changedHourlyValues)
         } else if hour0TimeLabel.text == hour12 {
-            setHourlyOutlets0()
+            setHourlyOutlets0(type: changedHourlyValues)
+        }
+    }
+    
+    // When tapped change hourly condition currently being shown
+    @IBAction func hourlyConditionsGestureSwipeLeftTapped(_ sender: UISwipeGestureRecognizer) {
+        if hourlyLabel.text?.contains("precipitation") == true {
+            changeHourlyOutlets(type: "Temp")
+            changedHourlyValues = "Temp"
+        } else if hourlyLabel.text?.contains("temperature") == true {
+            changeHourlyOutlets(type: "Humidity")
+            changedHourlyValues = "Humidity"
+        } else if hourlyLabel.text?.contains("humidity") == true {
+            changeHourlyOutlets(type: "UV Index")
+            changedHourlyValues = "UV Index"
+        } else if hourlyLabel.text?.contains("uv index") == true {
+            changeHourlyOutlets(type: "Wind")
+            changedHourlyValues = "Wind"
+        } else if hourlyLabel.text?.contains("wind") == true {
+            changeHourlyOutlets(type: "Cloud")
+            changedHourlyValues = "Cloud"
+        } else if hourlyLabel.text?.contains("cloud cover") == true {
+            changeHourlyOutlets(type: "Precip")
+            changedHourlyValues = "Precip"
+        }
+    }
+    
+    @IBAction func hourlyConditionsGestureSwipeRightTapped(_ sender: UISwipeGestureRecognizer) {
+        if hourlyLabel.text?.contains("precipitation") == true {
+            changeHourlyOutlets(type: "Cloud")
+            changedHourlyValues = "Cloud"
+        } else if hourlyLabel.text?.contains("temperature") == true {
+            changeHourlyOutlets(type: "Precip")
+            changedHourlyValues = "Precip"
+        } else if hourlyLabel.text?.contains("humidity") == true {
+            changeHourlyOutlets(type: "Temp")
+            changedHourlyValues = "Temp"
+        } else if hourlyLabel.text?.contains("uv index") == true {
+            changeHourlyOutlets(type: "Humidity")
+            changedHourlyValues = "Humidity"
+        } else if hourlyLabel.text?.contains("wind") == true {
+            changeHourlyOutlets(type: "UV Index")
+            changedHourlyValues = "UV Index"
+        } else if hourlyLabel.text?.contains("cloud cover") == true {
+            changeHourlyOutlets(type: "Wind")
+            changedHourlyValues = "Wind"
         }
     }
     
@@ -1090,8 +1190,22 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     // MARK: - Set weather data labels
     func setWeatherDataLabels() {
         setCurrentConditionOutlets()
-        setHourlyOutlets0()
+        setHourlyOutlets0(type: defaults.string(forKey: "defaultHourlyCondition")!)
         setDailyOutlets()
+        
+        if defaults.string(forKey: "defaultHourlyCondition")?.contains("Precip") == true {
+            changedHourlyValues = "Precip"
+        } else if defaults.string(forKey: "defaultHourlyCondition")?.contains("Temp") == true {
+            changedHourlyValues = "Temp"
+        } else if defaults.string(forKey: "defaultHourlyCondition")?.contains("Humidity") == true {
+            changedHourlyValues = "Humidity"
+        } else if defaults.string(forKey: "defaultHourlyCondition")?.contains("UV Index") == true {
+            changedHourlyValues = "UV Index"
+        } else if defaults.string(forKey: "defaultHourlyCondition")?.contains("Wind") == true {
+            changedHourlyValues = "Wind"
+        } else if defaults.string(forKey: "defaultHourlyCondition")?.contains("Cloud") == true {
+            changedHourlyValues = "Cloud"
+        }
         
         currentLocationLabel.text = currentLocation
         
@@ -1102,7 +1216,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         
         currentTemperatureLabel.text = "\(currentTemperature)°"
         currentConditonLabel.text = "\(currentSummary.capitalizingFirstLetter())"
-        currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image"))
+        currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image", circle: defaults.string(forKey: "defaultConditionIcons")!))
         
         // If alert is active show button
         if alertTitle.isEmpty == false {

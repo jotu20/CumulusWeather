@@ -28,207 +28,207 @@ func setButtonTextColor(button: UIButton!) {
 
 // MARK: - Set hourly condition values
 func setupHourlyConditionText(label: UILabel!, condition: String, windDirection: String) {
-    label.text = "\(weatherCondition(condition: condition, type: "text"))"
+    label.text = "\(weatherCondition(condition: condition, type: "text", circle: defaults.string(forKey: "defaultConditionIcons")!))"
     
     // If condition is wind setup text with wind direction
     if label.text == "Wind" {
-        label.text = "\(weatherCondition(condition: condition, type: "text")) \(windDirection)"
+        label.text = "\(weatherCondition(condition: condition, type: "text", circle: defaults.string(forKey: "defaultConditionIcons")!)) \(windDirection)"
     }
 }
 
 // MARK: - Get image for forecast condition
-func weatherCondition(condition: String, type: String) -> String {
+func weatherCondition(condition: String, type: String, circle: String) -> String {
     var conditionString: String = ""
     
     if condition == "blizzard" || condition == "blizzard.png" || condition == "blizzardn.png" {
         if type == "image" {
-            conditionString = "Heavy_snow.pdf"
+            conditionString = "Heavy_snow\(circle).pdf"
         } else if type == "text" {
             conditionString = "Blizzard"
         } else if type == "daily" {
-            conditionString = "Heavy_snow.pdf"
+            conditionString = "Heavy_snow\(circle).pdf"
         } else if type == "widget" {
-            conditionString = "Heavy_snow_widget.pdf"
+            conditionString = "Heavy_snow_widget\(circle).pdf"
         }
     }
     
     if condition == "clear-night" || condition == "clearn.png" || condition == "sunnyn.png" || condition == "sunnywn.png" {
         if type == "image" {
-            conditionString = "Clear_night.pdf"
+            conditionString = "Clear_night\(circle).pdf"
         } else if type == "text" {
             conditionString = "Clear"
         } else if type == "daily" {
-            conditionString = "Clear.pdf"
+            conditionString = "Clear\(circle).pdf"
         } else if type == "widget" {
-            conditionString = "Clear_night_widget.pdf"
+            conditionString = "Clear_night_widget\(circle).pdf"
         }
     }
     
     if condition == "clear-day" || condition == "clear.png" || condition == "sunny.png" || condition == "sunnyw.png" {
         if type == "image" {
-            conditionString = "Clear.pdf"
+            conditionString = "Clear\(circle).pdf"
         } else if type == "text" {
             conditionString = "Clear"
         } else if type == "daily" {
-            conditionString = "Clear.pdf"
+            conditionString = "Clear\(circle).pdf"
         } else if type == "widget" {
-            conditionString = "Clear_widget.pdf"
+            conditionString = "Clear_widget\(circle).pdf"
         }
     }
     
     if condition == "cloudy-windy" || condition == "cloudyw.png" || condition == "cloudywn.png" {
         if type == "image" {
-            conditionString = "Windy.pdf"
+            conditionString = "Windy\(circle).pdf"
         } else if type == "text" {
             conditionString = "Cloudy & windy"
         } else if type == "daily" {
-            conditionString = "Windy.pdf"
+            conditionString = "Windy\(circle).pdf"
         } else if type == "widget" {
-            conditionString = "Windy widget.pdf"
+            conditionString = "Windy_widget\(circle).pdf"
         }
     }
     
     if condition == "cloudy" || condition == "cloudy.png" || condition == "cloudyn.png" {
         if type == "image" {
-            conditionString = "Cloudy.pdf"
+            conditionString = "Cloudy\(circle).pdf"
         } else if type == "text" {
             conditionString = "Cloudy"
         } else if type == "daily" {
-            conditionString = "Cloudy.pdf"
+            conditionString = "Cloudy\(circle).pdf"
         } else if type == "widget" {
-            conditionString = "Cloudy_widget.pdf"
+            conditionString = "Cloudy_widget\(circle).pdf"
         }
     }
     
     if condition == "flurries" || condition == "flurries.png" || condition == "flurriesn.png" || condition == "flurriesw.png" || condition == "flurrieswn.png" {
         if type == "image" {
-            conditionString = "Flurries.pdf"
+            conditionString = "Flurries\(circle).pdf"
         } else if type == "text" {
             conditionString = "Flurries"
         } else if type == "daily" {
-            conditionString = "Flurries.pdf"
+            conditionString = "Flurries\(circle).pdf"
         } else if type == "widget" {
-            conditionString = "Flurries_widget.pdf"
+            conditionString = "Flurries_widget\(circle).pdf"
         }
     }
     
     if condition == "fog" || condition == "fog.png" || condition == "fogn.png" {
         if type == "image" {
-            conditionString = "Fog.pdf"
+            conditionString = "Fog\(circle).pdf"
         } else if type == "text" {
             conditionString = "Fog"
         } else if type == "daily" {
-            conditionString = "Fog.pdf"
+            conditionString = "Fog\(circle).pdf"
         } else if type == "widget" {
-            conditionString = "Fog_widget.pdf"
+            conditionString = "Fog_widget\(circle).pdf"
         }
     }
     
     if condition == "freezing-rain" || condition == "freezingrain.png" || condition == "freezingrainn.png" || condition == "sleet.png" || condition == "sleetn.png" {
         if type == "image" {
-            conditionString = "Freezing_rain.pdf"
+            conditionString = "Freezing_rain\(circle).pdf"
         } else if type == "text" {
             conditionString = "Freezing rain"
         } else if type == "daily" {
-            conditionString = "Freezing_rain.pdf"
+            conditionString = "Freezing_rain\(circle).pdf"
         } else if type == "widget" {
-            conditionString = "Freezing_rain widget.pdf"
+            conditionString = "Freezing_rain widget\(circle).pdf"
         }
     }
     
     if condition == "partly-cloudy-night" || condition == "pcloudyn.png" || condition == "pcloudysfn.png" || condition == "pcloudysfwn.png" || condition == "pcloudyswn.png" || condition == "pcloudywn.png" {
         if type == "image" {
-            conditionString = "Partly_cloudy_night.pdf"
+            conditionString = "Partly_cloudy_night\(circle).pdf"
         } else if type == "text" {
             conditionString = "Partly cloudy"
         } else if type == "daily" {
-            conditionString = "Partly_cloudy.pdf"
+            conditionString = "Partly_cloudy\(circle).pdf"
         } else if type == "widget" {
-            conditionString = "Partly_cloudy_night_widget.pdf"
+            conditionString = "Partly_cloudy_night_widget\(circle).pdf"
         }
     }
     
     if condition == "partly-cloudy-rain" || condition == "mcloudyr.png" || condition == "mcloudyrn.png" || condition == "mcloudyrw.png" || condition == "mcloudyrwn.png" || condition == "pcloudyr.png" || condition == "pcloudyrn.png" || condition == "pcloudyrw.png" || condition == "pcloudyrwn.png" {
         if type == "image" {
-            conditionString = "Rain.pdf"
+            conditionString = "Rain\(circle).pdf"
         } else if type == "text" {
             conditionString = "Partly cloudy & rain"
         } else if type == "daily" {
-            conditionString = "Rain.pdf"
+            conditionString = "Rain\(circle).pdf"
         } else if type == "widget" {
-            conditionString = "Rain_widget.pdf"
+            conditionString = "Rain_widget\(circle).pdf"
         }
     }
     
     if condition == "partly-cloudy-snow" || condition == "mcloudys.png" || condition == "mcloudysn.png" || condition == "pcloudys.png" || condition == "pcloudysn.png" {
         if type == "image" {
-            conditionString = "Snow.pdf"
+            conditionString = "Snow\(circle).pdf"
         } else if type == "text" {
             conditionString = "Partly cloudy & snow"
         } else if type == "daily" {
-            conditionString = "Snow.pdf"
+            conditionString = "Snow\(circle).pdf"
         } else if type == "widget" {
-            conditionString = "Snow_widget.pdf"
+            conditionString = "Snow_widget\(circle).pdf"
         }
     }
     
     if condition == "partly-cloudy-day" || condition == "pcloudy.png" || condition == "pcloudysf.png" || condition == "pcloudysfw.png" || condition == "pcloudysw.png" || condition == "pcloudyw.png" {
         if type == "image" {
-            conditionString = "Partly_cloudy.pdf"
+            conditionString = "Partly_cloudy\(circle).pdf"
         } else if type == "text" {
             conditionString = "Partly cloudy"
         } else if type == "daily" {
-            conditionString = "Partly_cloudy.pdf"
+            conditionString = "Partly_cloudy\(circle).pdf"
         } else if type == "widget" {
-            conditionString = "Partly_cloudy_widget.pdf"
+            conditionString = "Partly_cloudy_widget\(circle).pdf"
         }
     }
     
     if condition == "rain" || condition == "drizzle.png" || condition == "drizzlen.png" || condition == "drizzlef.png" || condition == "fdrizzlen.png" || condition == "rain.png" || condition == "rainn.png" || condition == "rainw.png" {
         if type == "image" {
-            conditionString = "Rain.pdf"
+            conditionString = "Rain\(circle).pdf"
         } else if type == "text" {
             conditionString = "Rain"
         } else if type == "daily" {
-            conditionString = "Rain.pdf"
+            conditionString = "Rain\(circle).pdf"
         } else if type == "widget" {
-            conditionString = "Rain_widget.pdf"
+            conditionString = "Rain_widget\(circle).pdf"
         }
     }
     
     if condition == "snow" || condition == "blowingsnow.png" || condition == "blowingsnown.png" || condition == "snow.png" || condition == "snown.png" || condition == "snoww.png" || condition == "snowwn.png" || condition == "snowshowers.png" || condition == "snowshowersn.png" || condition == "snowshowersw.png" || condition == "snowshowerswn.png" {
         if type == "image" {
-            conditionString = "Snow.pdf"
+            conditionString = "Snow\(circle).pdf"
         } else if type == "text" {
             conditionString = "Snow"
         } else if type == "daily" {
-            conditionString = "Snow.pdf"
+            conditionString = "Snow\(circle).pdf"
         } else if type == "widget" {
-            conditionString = "Snow_widget.pdf"
+            conditionString = "Snow_widget\(circle).pdf"
         }
     }
     
     if condition == "thunderstorm" || condition == "tstorm.png" || condition == "tstormn.png" || condition == "tstorms.png" || condition == "tstormsn.png" || condition == "tstormsw.png" || condition == "tstormswn.png" {
         if type == "image" {
-            conditionString = "Thunderstorm.pdf"
+            conditionString = "Thunderstorm\(circle).pdf"
         } else if type == "text" {
             conditionString = "Thunderstorm"
         } else if type == "daily" {
-            conditionString = "Thunderstorm.pdf"
+            conditionString = "Thunderstorm\(circle).pdf"
         } else if type == "widget" {
-            conditionString = "Thunderstorm_widget.pdf"
+            conditionString = "Thunderstorm_widget\(circle).pdf"
         }
     }
     
     if condition == "wind" || condition == "mcloudysfw.png" || condition == "mcloudysfwn.png" || condition == "mcloudysw.png" || condition == "mcloudyswn.png" || condition == "mcloudyw.png" || condition == "mcloudywn.png" || condition == "wind.png" || condition == "windn.png" {
         if type == "image" {
-            conditionString = "Windy.pdf"
+            conditionString = "Windy\(circle).pdf"
         } else if type == "text" {
             conditionString = "Windy"
         } else if type == "daily" {
-            conditionString = "Windy.pdf"
+            conditionString = "Windy\(circle).pdf"
         } else if type == "widget" {
-            conditionString = "Windy_widget.pdf"
+            conditionString = "Windy_widget\(circle).pdf"
         }
     }
     

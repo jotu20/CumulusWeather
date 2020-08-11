@@ -39,7 +39,7 @@ var buttonColor: String = ""
 let alertColor = UIColor(rgb: 0xEA2027)
 
 // Theme Colors
-let carminePink = UIColor(rgb: 0xE60073)
+let orchid = UIColor(rgb: 0xFFA9E7)
 let dodgerBlue = UIColor(rgb: 0x4361EE)
 let mango = UIColor(rgb: 0xFFA500)
 let maximumRed = UIColor(rgb: 0xD81F15)
@@ -47,11 +47,7 @@ let plumpPurple = UIColor(rgb: 0x9572FF)
 let springGreen = UIColor(rgb: 0x137547)
 
 var defaultHourlyCondition: String = ""
-var defaultDailyCondition: String = ""
-var defaultWidgetSlot1: String = ""
-var defaultWidgetSlot2: String = ""
-var defaultDailyConditionValueType: String = ""
-var defaultDailyConditionValueUnit: String = ""
+var defaultConditionIcons: String = ""
 
 // Weather Units
 var dataSource: String = ""
@@ -60,13 +56,11 @@ var dataSourceChanged: Bool = false
 var universalDataSource: String = ""
 var setDataSource: String = ""
 
-var universalDefaultWidgetSlot1: String = ""
-var setDefaultWidgetSlot1: String = ""
-var universalDefaultWidgetSlot2: String = ""
-var setDefaultWidgetSlot2: String = ""
-
 var universalUnits: String = ""
 var setUnits: String = ""
+
+var universalIcons: String = ""
+var setIcons: String = ""
 
 var universalLatitude: Double = 0
 var universalLongitude: Double = 0
@@ -76,14 +70,6 @@ var setWidgetLongitude: Double = 0
 func universalSettings() {
     if let widgetSetDataSource = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.string(forKey: "setDataSource") {
         universalDataSource = widgetSetDataSource
-    }
-    
-    if let widgetSetDefaultWidgetSlot1 = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.string(forKey: "setDefaultWidgetSlot1") {
-        universalDefaultWidgetSlot1 = widgetSetDefaultWidgetSlot1
-    }
-    
-    if let widgetSetDefaultWidgetSlot2 = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.string(forKey: "setDefaultWidgetSlot2") {
-        universalDefaultWidgetSlot2 = widgetSetDefaultWidgetSlot2
     }
     
     if let widgetSet = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.string(forKey: "setUnits") {
@@ -97,11 +83,15 @@ func universalSettings() {
     if let widgetSetLongitude = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.double(forKey: "setWidgetLongitude") {
         universalLongitude = widgetSetLongitude
     }
+    
+    if let widgetSetIcons = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.string(forKey: "setIcons") {
+        universalIcons = widgetSetIcons
+    }
 }
 
 // Check user saved color
 func checkSavedColor() {
-    if defaults.string(forKey: "userSavedColorString") == "Mandarin" || defaults.string(forKey: "userSavedColorString") == "Maximum Red" || defaults.string(forKey: "userSavedColorString") == "Dodger Blue" || defaults.string(forKey: "userSavedColorString") == "Plump Purple" || defaults.string(forKey: "userSavedColorString") == "Carmine Pink" || defaults.string(forKey: "userSavedColorString") == "Spring Green" {
+    if defaults.string(forKey: "userSavedColorString") == "Mandarin" || defaults.string(forKey: "userSavedColorString") == "Maximum Red" || defaults.string(forKey: "userSavedColorString") == "Dodger Blue" || defaults.string(forKey: "userSavedColorString") == "Plump Purple" || defaults.string(forKey: "userSavedColorString") == "Orchid" || defaults.string(forKey: "userSavedColorString") == "Spring Green" {
         // Nothing
     } else {
         defaults.set("Dodger Blue", forKey: "userSavedColorString")
@@ -118,8 +108,8 @@ func setTableViewCellColor(tableCell: UITableViewCell) {
         tableCell.tintColor = dodgerBlue
     } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
         tableCell.tintColor = plumpPurple
-    } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-        tableCell.tintColor = carminePink
+    } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+        tableCell.tintColor = orchid
     } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
         tableCell.tintColor = springGreen
     } else {
@@ -137,8 +127,8 @@ func setTabBarColor(tabBar: UITabBarController) {
         tabBar.tabBar.tintColor = dodgerBlue
     } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
         tabBar.tabBar.tintColor = plumpPurple
-    } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-        tabBar.tabBar.tintColor = carminePink
+    } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+        tabBar.tabBar.tintColor = orchid
     } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
         tabBar.tabBar.tintColor = springGreen
     } else {
@@ -156,8 +146,8 @@ func setupLabelColor(label: UILabel!) {
          label.textColor = dodgerBlue
     } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
          label.textColor = plumpPurple
-    } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-         label.textColor = carminePink
+    } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+         label.textColor = orchid
     } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
         label.textColor = springGreen
     }else {
@@ -175,8 +165,8 @@ func setupButtonColor(button: UIButton!) {
          button.setTitleColor(dodgerBlue, for: .normal)
     } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
          button.setTitleColor(plumpPurple, for: .normal)
-    } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-         button.setTitleColor(carminePink, for: .normal)
+    } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+         button.setTitleColor(orchid, for: .normal)
     } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
          button.setTitleColor(springGreen, for: .normal)
     } else {
@@ -194,8 +184,8 @@ func setupBarButtonColor(button: UIBarButtonItem!) {
         button.tintColor = dodgerBlue
     } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
         button.tintColor = plumpPurple
-    } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-        button.tintColor = carminePink
+    } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+        button.tintColor = orchid
     } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
         button.tintColor = springGreen
     } else {
@@ -213,8 +203,8 @@ func setupSwitchColor(switchOne: UISwitch!) {
          switchOne.onTintColor = dodgerBlue
     } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
          switchOne.onTintColor = plumpPurple
-    } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-         switchOne.onTintColor = carminePink
+    } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+         switchOne.onTintColor = orchid
     } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
          switchOne.onTintColor = springGreen
     } else {
@@ -232,8 +222,8 @@ func setupTextFieldColor(textField: UITextField!) {
          textField.textColor = dodgerBlue
     } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
          textField.textColor = plumpPurple
-    } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-         textField.textColor = carminePink
+    } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+         textField.textColor = orchid
     } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
          textField.textColor = springGreen
     } else {

@@ -13,11 +13,13 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
     var currentTextField = UITextField()
     var pickerView = UIPickerView()
     
-    let defaultHourlyConditionTypes = ["Precip (%)", "Accumulation (%)", "Temp (°\(unitsTemperature))", "Humidity (%)", "UV index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
     let dataSourceTypes = ["Dark Sky"]
+    let defaultHourlyConditionTypes = ["Precip (%)", "Accumulation (%)", "Temp (°\(unitsTemperature))", "Humidity (%)", "UV index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
+    let conditionIconTypes = ["Default", "Circle"]
     
     @IBOutlet weak var dataSourceTextField: UITextField!
     @IBOutlet weak var hourlyConditionsTextField: UITextField!
+    @IBOutlet weak var conditionIconsTextField: UITextField!
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
@@ -30,21 +32,12 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
 
         self.dataSourceTextField.isEnabled = false
         self.dataSourceTextField.text = defaults.string(forKey: "dataSource")
+        self.hourlyConditionsTextField.text = defaults.string(forKey: "defaultHourlyCondition")
         
-        if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Precip") == true) {
-            self.hourlyConditionsTextField.text = "\(defaults.string(forKey: "defaultHourlyCondition")!)"
-        } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Temp") == true) {
-            self.hourlyConditionsTextField.text = "\(defaults.string(forKey: "defaultHourlyCondition")!)"
-        } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Humidity") == true) {
-            self.hourlyConditionsTextField.text = "\(defaults.string(forKey: "defaultHourlyCondition")!)"
-        } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("UV index") == true) {
-            self.hourlyConditionsTextField.text = "\(defaults.string(forKey: "defaultHourlyCondition")!)"
-        } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Wind") == true) {
-            self.hourlyConditionsTextField.text = "\(defaults.string(forKey: "defaultHourlyCondition")!)"
-        } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Cloud cover") == true) {
-            self.hourlyConditionsTextField.text = "\(defaults.string(forKey: "defaultHourlyCondition")!)"
+        if defaults.string(forKey: "defaultConditionIcons")?.isEmpty == true {
+             self.conditionIconsTextField.text = "Default"
         } else {
-            self.hourlyConditionsTextField.text = "\(defaults.string(forKey: "defaultHourlyCondition")!)"
+             self.conditionIconsTextField.text = "Circle"
         }
         
         let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ForecastDataTableViewController.doneBarButtonTapped))
@@ -62,8 +55,8 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
             color = dodgerBlue
         } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
             color = plumpPurple
-        } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-            color = carminePink
+        } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+            color = orchid
         } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
             color = springGreen
         } else {
@@ -72,6 +65,7 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
         
         dataSourceTextField.textColor = color
         hourlyConditionsTextField.textColor = color
+        conditionIconsTextField.textColor = color
     }
     
     // Limit text field to numbers only
@@ -89,6 +83,8 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
             return defaultHourlyConditionTypes.count
         } else if currentTextField == dataSourceTextField {
             return dataSourceTypes.count
+        } else if currentTextField == conditionIconsTextField {
+            return conditionIconTypes.count
         } else {
             return 0
         }
@@ -99,6 +95,8 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
             return defaultHourlyConditionTypes[row]
         } else if currentTextField == dataSourceTextField {
             return dataSourceTypes[row]
+        } else if currentTextField == conditionIconsTextField {
+            return conditionIconTypes[row]
         } else {
             return ""
         }
@@ -106,16 +104,28 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
 
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if currentTextField == hourlyConditionsTextField {
+            weatherLoaded = false
             hourlyConditionsTextField.text = defaultHourlyConditionTypes[row]
             defaultHourlyCondition = "\(defaultHourlyConditionTypes[row])"
             defaults.set("\(defaultHourlyConditionTypes[row])", forKey: "defaultHourlyCondition")
-            weatherLoaded = false
         } else if currentTextField == dataSourceTextField {
+            dataSourceChanged = true
             dataSourceTextField.text = dataSourceTypes[row]
             dataSource = "\(dataSourceTypes[row])"
             defaults.set(dataSource, forKey: "dataSource")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(dataSource, forKey: "setDataSource")
-            dataSourceChanged = true
+        } else if currentTextField == conditionIconsTextField {
+            weatherLoaded = false
+            conditionIconsTextField.text = conditionIconTypes[row]
+            defaultConditionIcons = "\(conditionIconTypes[row])"
+            
+            if defaultConditionIcons == "Circle" {
+                defaults.set("_circle", forKey: "defaultConditionIcons")
+                UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("_circle", forKey: "setIcons")
+            } else {
+                defaults.set("", forKey: "defaultConditionIcons")
+                UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("", forKey: "setIcons")
+            }
         }
     }
     
@@ -126,7 +136,7 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
         currentTextField = textField
         let toolBar = UIToolbar().ToolbarPicker(mySelect: #selector(ForecastDataTableViewController.dismissPicker))
         
-        if currentTextField == dataSourceTextField || currentTextField == hourlyConditionsTextField {
+        if currentTextField == dataSourceTextField || currentTextField == hourlyConditionsTextField || currentTextField == conditionIconsTextField {
             currentTextField.inputView = pickerView
             currentTextField.inputAccessoryView = toolBar
         }

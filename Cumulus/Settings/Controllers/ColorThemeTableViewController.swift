@@ -13,8 +13,8 @@ class ColorThemeTableViewController: UITableViewController {
     @IBOutlet weak var mangoTableCell: UITableViewCell!
     @IBOutlet weak var maximumRedTableCell: UITableViewCell!
     @IBOutlet weak var dodgerBlueTableCell: UITableViewCell!
+    @IBOutlet weak var orchidTableCell: UITableViewCell!
     @IBOutlet weak var plumpPurpleTableCell: UITableViewCell!
-    @IBOutlet weak var carminePinkTableCell: UITableViewCell!
     @IBOutlet weak var springGreenTableCell: UITableViewCell!
     @IBOutlet weak var autoThemeTableCell: UITableViewCell!
     
@@ -40,8 +40,8 @@ class ColorThemeTableViewController: UITableViewController {
             setSelectedCheckMark(layerString: "Dodger Blue", setColor: false)
         } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
             setSelectedCheckMark(layerString: "Plump Purple", setColor: false)
-        } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-            setSelectedCheckMark(layerString: "Carmine Pink", setColor: false)
+        } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+            setSelectedCheckMark(layerString: "Orchid", setColor: false)
         } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
             setSelectedCheckMark(layerString: "Spring Green", setColor: false)
         } else {
@@ -79,9 +79,9 @@ class ColorThemeTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func carminePinkTapped(_ sender: UITapGestureRecognizer) {
+    @IBAction func orchidTapped(_ sender: UITapGestureRecognizer) {
         if (defaults.bool(forKey: "cumulusPlus") == true) {
-            setSelectedCheckMark(layerString: "Carmine Pink", setColor: true)
+            setSelectedCheckMark(layerString: "Orchid", setColor: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
@@ -140,7 +140,7 @@ class ColorThemeTableViewController: UITableViewController {
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
-            carminePinkTableCell.accessoryType = .none
+            orchidTableCell.accessoryType = .none
             springGreenTableCell.accessoryType = .none
             autoThemeTableCell.accessoryType = .none
         }
@@ -153,7 +153,7 @@ class ColorThemeTableViewController: UITableViewController {
             maximumRedTableCell.accessoryType = .checkmark
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
-            carminePinkTableCell.accessoryType = .none
+            orchidTableCell.accessoryType = .none
             autoThemeTableCell.accessoryType = .none
         }
 
@@ -165,7 +165,7 @@ class ColorThemeTableViewController: UITableViewController {
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .checkmark
             plumpPurpleTableCell.accessoryType = .none
-            carminePinkTableCell.accessoryType = .none
+            orchidTableCell.accessoryType = .none
             springGreenTableCell.accessoryType = .none
             autoThemeTableCell.accessoryType = .none
         }
@@ -178,20 +178,20 @@ class ColorThemeTableViewController: UITableViewController {
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .checkmark
-            carminePinkTableCell.accessoryType = .none
+            orchidTableCell.accessoryType = .none
             springGreenTableCell.accessoryType = .none
             autoThemeTableCell.accessoryType = .none
         }
         
-        if layerString == "Carmine Pink" {
-            defaults.set("Carmine Pink", forKey: "userSavedColorString")
-            setTableViewCellColor(tableCell: carminePinkTableCell)
+        if layerString == "Orchid" {
+            defaults.set("Orchid", forKey: "userSavedColorString")
+            setTableViewCellColor(tableCell: orchidTableCell)
 
             mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
-            carminePinkTableCell.accessoryType = .checkmark
+            orchidTableCell.accessoryType = .checkmark
             springGreenTableCell.accessoryType = .none
             autoThemeTableCell.accessoryType = .none
         }
@@ -204,7 +204,7 @@ class ColorThemeTableViewController: UITableViewController {
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
-            carminePinkTableCell.accessoryType = .none
+            orchidTableCell.accessoryType = .none
             springGreenTableCell.accessoryType = .checkmark
             autoThemeTableCell.accessoryType = .none
         }
@@ -217,7 +217,7 @@ class ColorThemeTableViewController: UITableViewController {
             if autoTheme == 0 || autoTheme == 1 {
                 defaults.set("Dodger Blue", forKey: "userSavedColorString")
             } else if autoTheme == 2 {
-                defaults.set("Carmine Pink", forKey: "userSavedColorString")
+                defaults.set("Orchid", forKey: "userSavedColorString")
             } else if autoTheme == 3 {
                 defaults.set("Mango", forKey: "userSavedColorString")
             } else if autoTheme == 4 {
@@ -235,7 +235,7 @@ class ColorThemeTableViewController: UITableViewController {
             maximumRedTableCell.accessoryType = .none
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
-            carminePinkTableCell.accessoryType = .none
+            orchidTableCell.accessoryType = .none
             springGreenTableCell.accessoryType = .none
             autoThemeTableCell.accessoryType = .checkmark
         }

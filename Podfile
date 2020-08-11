@@ -17,10 +17,16 @@ target 'Cumulus' do
 
 	pod 'ForecastIO', '8.0.0'
  	end
-
+	
 	target 'GetForecastIntentUI' do 
 
 	pod 'ForecastIO', '8.0.0'
  	end
 
 end 
+
+target 'Cumulus Watch Extension' do
+	platform :watchos, '6.0'
+
+   	pod 'ForecastIO', '8.0.0'
+end

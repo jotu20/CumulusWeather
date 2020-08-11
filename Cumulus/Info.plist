@@ -27,11 +27,11 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-CarminePink</key>
+			<key>AppIcon-Orchid</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>CarminePink</string>
+					<string>Orchid</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -117,6 +117,33 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+			<key>AppIcon-TwilightZone</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>TwilightZone</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>AppIcon-Moonlight</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Moonlight</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>AppIcon-WindyDay</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>WindyDay</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
 		</dict>
 		<key>CFBundlePrimaryIcon</key>
 		<dict>
@@ -141,11 +168,11 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-CarminePink</key>
+			<key>AppIcon-Orchid</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>CarminePinkiPad</string>
+					<string>OrchidiPad</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -227,6 +254,33 @@
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>ThunderstormiPad</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>AppIcon-TwilightZone</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>TwilightZoneiPad</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>AppIcon-Moonlight</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>MoonlightiPad</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>AppIcon-WindyDay</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>WindyDayiPad</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>

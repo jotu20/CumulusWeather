@@ -50,31 +50,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D4P-8O-ObC">
-                                <rect key="frame" x="205" y="25" width="100" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFl-HW-VEO">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Fi6-Zj-uAP"/>
-                                            <constraint firstAttribute="height" constant="30" id="XM8-2d-rYZ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º/0º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tor-g6-fhJ">
-                                        <rect key="frame" x="0.0" y="30" width="100" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="QRz-Wc-U4d"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="kCv-4Z-pUo"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DxU-UU-hLl">
-                                <rect key="frame" x="7.5" y="95" width="305" height="70"/>
+                                <rect key="frame" x="7.5" y="100" width="305" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HMh-3G-yZe">
                                         <rect key="frame" x="0.0" y="0.0" width="305" height="20"/>
@@ -148,7 +125,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bdz-gS-VF8">
-                                <rect key="frame" x="30" y="185" width="260" height="215"/>
+                                <rect key="frame" x="30" y="195" width="260" height="215"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="QMR-vv-KGw">
                                         <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
@@ -336,18 +313,27 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFl-HW-VEO">
+                                <rect key="frame" x="204" y="35" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Fi6-Zj-uAP"/>
+                                    <constraint firstAttribute="height" constant="30" id="XM8-2d-rYZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="5dK-fn-amy" firstAttribute="top" secondItem="4PN-XC-lEE" secondAttribute="top" constant="35" id="7Hr-5v-Qcb"/>
                             <constraint firstItem="DxU-UU-hLl" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="8Ce-4y-IXB"/>
-                            <constraint firstItem="DxU-UU-hLl" firstAttribute="top" secondItem="D4P-8O-ObC" secondAttribute="bottom" constant="20" id="NVg-en-BNa"/>
+                            <constraint firstItem="IFl-HW-VEO" firstAttribute="top" secondItem="4PN-XC-lEE" secondAttribute="top" constant="35" id="BqU-Zm-gxC"/>
+                            <constraint firstItem="4PN-XC-lEE" firstAttribute="trailing" secondItem="IFl-HW-VEO" secondAttribute="trailing" constant="16" id="GjN-op-uc0"/>
                             <constraint firstItem="wPR-14-VJD" firstAttribute="top" secondItem="4PN-XC-lEE" secondAttribute="top" constant="25" id="O2w-Fy-nhK"/>
                             <constraint firstItem="5dK-fn-amy" firstAttribute="leading" secondItem="wPR-14-VJD" secondAttribute="trailing" constant="5" id="R0z-5x-fSc"/>
                             <constraint firstItem="Bdz-gS-VF8" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="Z4B-1w-74A"/>
-                            <constraint firstItem="4PN-XC-lEE" firstAttribute="trailing" secondItem="D4P-8O-ObC" secondAttribute="trailing" constant="15" id="dpG-Vp-pf9"/>
+                            <constraint firstItem="DxU-UU-hLl" firstAttribute="top" secondItem="wPR-14-VJD" secondAttribute="bottom" constant="25" id="mIf-Sr-1xY"/>
                             <constraint firstItem="wPR-14-VJD" firstAttribute="leading" secondItem="4PN-XC-lEE" secondAttribute="leading" constant="10" id="uJf-p1-0zN"/>
-                            <constraint firstItem="Bdz-gS-VF8" firstAttribute="top" secondItem="DxU-UU-hLl" secondAttribute="bottom" constant="20" id="uzg-7W-G4l"/>
-                            <constraint firstItem="D4P-8O-ObC" firstAttribute="top" secondItem="4PN-XC-lEE" secondAttribute="top" constant="25" id="v7q-5H-bbO"/>
+                            <constraint firstItem="Bdz-gS-VF8" firstAttribute="top" secondItem="DxU-UU-hLl" secondAttribute="bottom" constant="25" id="uzg-7W-G4l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4PN-XC-lEE"/>
                     </view>
@@ -358,23 +344,22 @@
                         <outlet property="currentConditionIcon" destination="wPR-14-VJD" id="Hlc-ow-9CU"/>
                         <outlet property="currentConditionLabel" destination="6gq-G6-ETc" id="fLC-no-i0R"/>
                         <outlet property="currentTemperatureLabel" destination="IFl-HW-VEO" id="Gte-cv-7gL"/>
+                        <outlet property="day0ConditionImage" destination="3qt-rf-A9t" id="tDv-EK-86z"/>
                         <outlet property="day0HighLabel" destination="qMb-C0-FoD" id="KfJ-Ad-PAo"/>
+                        <outlet property="day0Label" destination="Ufn-O1-IGf" id="V6K-d6-YGa"/>
                         <outlet property="day0LowLabel" destination="zB5-qK-HYp" id="1B1-Sn-lLy"/>
+                        <outlet property="day1ConditionImage" destination="88R-t1-eCu" id="hRu-pn-RrB"/>
                         <outlet property="day1HighLabel" destination="kMy-zl-2B8" id="FOl-bf-Ogd"/>
+                        <outlet property="day1Label" destination="Bx7-9M-Tg9" id="4uX-Dc-NIf"/>
                         <outlet property="day1LowLabel" destination="MQT-2w-oZ6" id="HGa-AU-q1b"/>
+                        <outlet property="day2ConditionImage" destination="kib-g7-beX" id="7bK-uS-PPr"/>
                         <outlet property="day2HighLabel" destination="bhV-F5-ml1" id="BhY-Y8-2e8"/>
+                        <outlet property="day2Label" destination="ZXB-i9-Yjm" id="VjW-os-vz6"/>
                         <outlet property="day2LowLabel" destination="8RJ-Xi-yqN" id="oEO-RH-GQd"/>
+                        <outlet property="day3ConditionImage" destination="eTq-m9-mgz" id="s5E-A6-hhB"/>
                         <outlet property="day3HighLabel" destination="vAr-yu-LZa" id="Tjb-4a-zRl"/>
+                        <outlet property="day3Label" destination="s8x-WH-bnf" id="pdJ-db-JZe"/>
                         <outlet property="day3LowLabel" destination="s40-uA-X8I" id="VBz-Zi-HdK"/>
-                        <outlet property="dayOneConditionImage" destination="88R-t1-eCu" id="ixt-7u-1QB"/>
-                        <outlet property="dayOneDateLabel" destination="Bx7-9M-Tg9" id="GLF-i9-hOr"/>
-                        <outlet property="dayThreeConditionImage" destination="eTq-m9-mgz" id="12x-vy-sWZ"/>
-                        <outlet property="dayThreeDateLabel" destination="s8x-WH-bnf" id="Fac-rE-AWt"/>
-                        <outlet property="dayTwoConditionImage" destination="kib-g7-beX" id="DRR-bA-hwh"/>
-                        <outlet property="dayTwoDateLabel" destination="ZXB-i9-Yjm" id="H04-yb-9Pl"/>
-                        <outlet property="dayZeroConditionImage" destination="3qt-rf-A9t" id="w6e-k0-FcF"/>
-                        <outlet property="dayZeroDateLabel" destination="Ufn-O1-IGf" id="MF5-vo-jrO"/>
-                        <outlet property="highAndLowTemperatureLabel" destination="tor-g6-fhJ" id="EcV-1c-rDV"/>
                         <outlet property="humidityLabel" destination="d3Z-Sc-94a" id="nnR-db-QwR"/>
                         <outlet property="locationLabel" destination="Wqa-t4-EG2" id="s6x-Pj-c2u"/>
                         <outlet property="precipitationAccumulationLabel" destination="3Qb-hA-Y8C" id="LPw-sd-oRa"/>

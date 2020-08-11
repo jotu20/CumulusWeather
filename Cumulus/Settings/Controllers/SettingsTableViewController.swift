@@ -60,8 +60,8 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
             color = dodgerBlue
         } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
             color = plumpPurple
-        } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-            color = carminePink
+        } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+            color = orchid
         } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
             color = springGreen
         } else {

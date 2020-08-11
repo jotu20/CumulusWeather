@@ -23,7 +23,6 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     @IBOutlet weak var currentLocationLabel: UILabel!
     @IBOutlet weak var currentConditionLabel: UILabel!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
-    @IBOutlet weak var highAndLowTemperatureLabel: UILabel!
     
     @IBOutlet weak var precipitationLabel: UILabel!
     @IBOutlet weak var accumulationLabel: UILabel!
@@ -64,26 +63,26 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     
     // MARK: - Daily forecast outlets
     // Day One
-    @IBOutlet weak var dayOneDate: UILabel!
-    @IBOutlet weak var dayOneCondition: UIImageView!
+    @IBOutlet weak var day0Label: UILabel!
+    @IBOutlet weak var day0ConditionImage: UIImageView!
     @IBOutlet weak var day0HighLabel: UILabel!
     @IBOutlet weak var day0LowLabel: UILabel!
     
     // Day Two
-    @IBOutlet weak var dayTwoDate: UILabel!
-    @IBOutlet weak var dayTwoCondition: UIImageView!
+    @IBOutlet weak var day1Label: UILabel!
+    @IBOutlet weak var day1ConditionImage: UIImageView!
     @IBOutlet weak var day1HighLabel: UILabel!
     @IBOutlet weak var day1LowLabel: UILabel!
     
     // Day Three
-    @IBOutlet weak var dayThreeDate: UILabel!
-    @IBOutlet weak var dayThreeCondition: UIImageView!
+    @IBOutlet weak var day2Label: UILabel!
+    @IBOutlet weak var day2ConditionImage: UIImageView!
     @IBOutlet weak var day2HighLabel: UILabel!
     @IBOutlet weak var day2LowLabel: UILabel!
     
     // Day Four
-    @IBOutlet weak var dayFourDate: UILabel!
-    @IBOutlet weak var dayFourCondition: UIImageView!
+    @IBOutlet weak var day3Label: UILabel!
+    @IBOutlet weak var day3ConditionImage: UIImageView!
     @IBOutlet weak var day3HighLabel: UILabel!
     @IBOutlet weak var day3LowLabel: UILabel!
     
@@ -95,9 +94,8 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         }
         
         currentTemperatureLabel.text = "\(currentTemperature)°"
-        highAndLowTemperatureLabel.text = "\(highTemperature)°/\(lowTemperature)°"
         currentConditionLabel.text = "\(currentSummary.capitalizingFirstLetter())"
-        currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image"))
+        currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image", circle: universalIcons))
         
         // Check for current precipitation
         if minuteSummary.isEmpty == false && minuteSummary != "none" {
@@ -148,18 +146,18 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         hour4Time.text = "\(hour13)"
         hour5Time.text = "\(hour15)"
         
-        hour0Image.image = UIImage(named: weatherCondition(condition: conditionHour1, type: "widget"))
-        hour1Image.image = UIImage(named: weatherCondition(condition: conditionHour2, type: "widget"))
-        hour2Image.image = UIImage(named: weatherCondition(condition: conditionHour3, type: "widget"))
-        hour3Image.image = UIImage(named: weatherCondition(condition: conditionHour4, type: "widget"))
-        hour4Image.image = UIImage(named: weatherCondition(condition: conditionHour5, type: "widget"))
-        hour5Image.image = UIImage(named: weatherCondition(condition: conditionHour6, type: "widget"))
-        hour6Image.image = UIImage(named: weatherCondition(condition: conditionHour7, type: "widget"))
-        hour7Image.image = UIImage(named: weatherCondition(condition: conditionHour8, type: "widget"))
-        hour8Image.image = UIImage(named: weatherCondition(condition: conditionHour10, type: "widget"))
-        hour9Image.image = UIImage(named: weatherCondition(condition: conditionHour11, type: "widget"))
-        hour10Image.image = UIImage(named: weatherCondition(condition: conditionHour13, type: "widget"))
-        hour11Image.image = UIImage(named: weatherCondition(condition: conditionHour15, type: "widget"))
+        hour0Image.image = UIImage(named: weatherCondition(condition: conditionHour1, type: "widget", circle: universalIcons))
+        hour1Image.image = UIImage(named: weatherCondition(condition: conditionHour2, type: "widget", circle: universalIcons))
+        hour2Image.image = UIImage(named: weatherCondition(condition: conditionHour3, type: "widget", circle: universalIcons))
+        hour3Image.image = UIImage(named: weatherCondition(condition: conditionHour4, type: "widget", circle: universalIcons))
+        hour4Image.image = UIImage(named: weatherCondition(condition: conditionHour5, type: "widget", circle: universalIcons))
+        hour5Image.image = UIImage(named: weatherCondition(condition: conditionHour6, type: "widget", circle: universalIcons))
+        hour6Image.image = UIImage(named: weatherCondition(condition: conditionHour7, type: "widget", circle: universalIcons))
+        hour7Image.image = UIImage(named: weatherCondition(condition: conditionHour8, type: "widget", circle: universalIcons))
+        hour8Image.image = UIImage(named: weatherCondition(condition: conditionHour10, type: "widget", circle: universalIcons))
+        hour9Image.image = UIImage(named: weatherCondition(condition: conditionHour11, type: "widget", circle: universalIcons))
+        hour10Image.image = UIImage(named: weatherCondition(condition: conditionHour13, type: "widget", circle: universalIcons))
+        hour11Image.image = UIImage(named: weatherCondition(condition: conditionHour15, type: "widget", circle: universalIcons))
         
         hour0Value.text = "\(tempHour0)°"
         hour1Value.text = "\(tempHour3)°"
@@ -168,27 +166,27 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         hour4Value.text = "\(tempHour13)°"
         hour5Value.text = "\(tempHour15)°"
         
-        // Day One
-        dayOneDate.text = "\(day0DayString.capitalizingFirstLetter())"
-        dayOneCondition.image = UIImage(named: weatherCondition(condition: day0Condition, type: "daily"))
+        // Day Zero
+        day0Label.text = "\(day0DayString.capitalizingFirstLetter())"
+        day0ConditionImage.image = UIImage(named: weatherCondition(condition: day0Condition, type: "daily", circle: universalIcons))
         day0HighLabel.text = "\(day0High)°"
         day0LowLabel.text = "\(day0Low)°"
         
-        // Day Two
-        dayTwoDate.text = "\(day1DayString.capitalizingFirstLetter())"
-        dayTwoCondition.image = UIImage(named: weatherCondition(condition: day1Condition, type: "daily"))
+        // Day One
+        day1Label.text = "\(day1DayString.capitalizingFirstLetter())"
+        day1ConditionImage.image = UIImage(named: weatherCondition(condition: day1Condition, type: "daily", circle: universalIcons))
         day1HighLabel.text = "\(day1High)°"
         day1LowLabel.text = "\(day1Low)°"
         
-        // Day Three
-        dayThreeDate.text = "\(day2DayString.capitalizingFirstLetter())"
-        dayThreeCondition.image = UIImage(named: weatherCondition(condition: day2Condition, type: "daily"))
+        // Day Two
+        day2Label.text = "\(day2DayString.capitalizingFirstLetter())"
+        day2ConditionImage.image = UIImage(named: weatherCondition(condition: day2Condition, type: "daily", circle: universalIcons))
         day2HighLabel.text = "\(day2High)°"
         day2LowLabel.text = "\(day2Low)°"
         
-        // Day Four
-        dayFourDate.text = "\(day3DayString.capitalizingFirstLetter())"
-        dayFourCondition.image = UIImage(named: weatherCondition(condition: day3Condition, type: "daily"))
+        // Day Three
+        day3Label.text = "\(day3DayString.capitalizingFirstLetter())"
+        day3ConditionImage.image = UIImage(named: weatherCondition(condition: day3Condition, type: "daily", circle: universalIcons))
         day3HighLabel.text = "\(day3High)°"
         day3LowLabel.text = "\(day3Low)°"
     }
@@ -227,7 +225,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             self.currentConditionsTopConstraint.constant = 50
         } else {
             //expanded
-            self.preferredContentSize = CGSize(width: 0, height: 360)
+            self.preferredContentSize = CGSize(width: 0, height: 370)
             timeStackView.isHidden = false
             self.currentConditionsTopConstraint.constant = 25
         }

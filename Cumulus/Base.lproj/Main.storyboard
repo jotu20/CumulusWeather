@@ -806,12 +806,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             </objects>
             <point key="canvasLocation" x="2063" y="2571"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Locations-->
         <scene sceneID="f2N-eA-zVd">
             <objects>
                 <navigationController storyboardIdentifier="Locations" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AfO-6y-JEH" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="" image="globe" catalog="system" id="rZj-Wk-nh5"/>
+                    <tabBarItem key="tabBarItem" title="Locations" image="Locations icon" id="rZj-Wk-nh5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="sXd-Bm-SX6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -833,12 +833,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             </objects>
             <point key="canvasLocation" x="4012" y="132"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Settings-->
         <scene sceneID="HBx-v1-9FA">
             <objects>
                 <navigationController storyboardIdentifier="Settings" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Msi-i6-uYY" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" id="wD4-hD-2IY"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings icon" id="wD4-hD-2IY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="wS2-Bj-gfJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1197,12 +1197,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             </objects>
             <point key="canvasLocation" x="1121" y="132"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Forecast-->
         <scene sceneID="GBj-RE-Slr">
             <objects>
                 <navigationController storyboardIdentifier="Forecast" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="EMa-zd-tfV" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="" image="calendar" catalog="system" id="Q7w-0j-XHC"/>
+                    <tabBarItem key="tabBarItem" title="Forecast" image="Forecast icon" id="Q7w-0j-XHC"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Cs9-16-PpU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="W0O-OD-LS8">
@@ -1426,8 +1426,37 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="W6G-CO-pq5" detailTextLabel="iof-QJ-bjt" imageView="DHy-kq-lNE" rowHeight="110" style="IBUITableViewCellStyleSubtitle" id="s5P-Ox-kdc">
+                                        <rect key="frame" x="0.0" y="714" width="375" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s5P-Ox-kdc" id="9fV-KE-8Ep">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Condition Icon Packs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W6G-CO-pq5">
+                                                    <rect key="frame" x="91" y="28" width="160.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Change the default weather condition icons to the ones you like most." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iof-QJ-bjt">
+                                                    <rect key="frame" x="91" y="51.5" width="264.5" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Conditions icon" id="DHy-kq-lNE">
+                                                    <rect key="frame" x="16" y="25" width="60" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="4dw-Dy-9zx" detailTextLabel="D8o-wo-gjT" imageView="Ghy-cP-8JV" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="ys3-Ht-aGc">
-                                        <rect key="frame" x="0.0" y="714" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="824" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ys3-Ht-aGc" id="stt-eW-7RG">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -1456,21 +1485,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="CaE-os-b5k" detailTextLabel="DYU-VT-uSe" imageView="u1o-gf-6oD" rowHeight="110" style="IBUITableViewCellStyleSubtitle" id="GdY-ho-Mu6">
-                                        <rect key="frame" x="0.0" y="814" width="375" height="110"/>
+                                        <rect key="frame" x="0.0" y="924" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GdY-ho-Mu6" id="UxV-Mh-c3J">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Support Indie Development" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CaE-os-b5k">
-                                                    <rect key="frame" x="91" y="13" width="209.5" height="20.5"/>
+                                                    <rect key="frame" x="83" y="13" width="209.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DYU-VT-uSe">
-                                                    <rect key="frame" x="91" y="36.5" width="267.5" height="57.5"/>
+                                                    <rect key="frame" x="83" y="36.5" width="284" height="57.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <string key="text">Cumulus is a one man operation funded by its loving customers. Your upgrade will help continue the development and improvement of Cumulus-it means the world for your support!</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -1478,7 +1507,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Support icon" id="u1o-gf-6oD">
-                                                    <rect key="frame" x="16" y="25" width="60" height="60"/>
+                                                    <rect key="frame" x="8" y="25" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -2080,47 +2109,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             <outletCollection property="gestureRecognizers" destination="woS-uz-qxh" appends="YES" id="chP-GZ-qja"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="76J-Er-bFm">
-                                        <rect key="frame" x="0.0" y="158" width="375" height="70"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="76J-Er-bFm" id="cur-7B-k0e">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carmine Pink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xor-xK-SXn">
-                                                    <rect key="frame" x="82" y="13.5" width="180" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="rmU-M6-B7i"/>
-                                                        <constraint firstAttribute="height" constant="43.5" id="uJn-B0-HE8"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Carmine Pink icon" translatesAutoresizingMaskIntoConstraints="NO" id="Zq4-NF-jXE">
-                                                    <rect key="frame" x="16" y="10" width="50" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="Ds2-fg-YD3"/>
-                                                        <constraint firstAttribute="width" constant="50" id="SAe-lR-UXN"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Xor-xK-SXn" firstAttribute="leading" secondItem="Zq4-NF-jXE" secondAttribute="trailing" constant="16" id="5fS-OE-uEX"/>
-                                                <constraint firstItem="Xor-xK-SXn" firstAttribute="centerY" secondItem="cur-7B-k0e" secondAttribute="centerY" id="Vuw-Af-cfp"/>
-                                                <constraint firstItem="Zq4-NF-jXE" firstAttribute="leading" secondItem="cur-7B-k0e" secondAttribute="leading" constant="16" id="ZoS-2K-td9"/>
-                                                <constraint firstItem="Zq4-NF-jXE" firstAttribute="centerY" secondItem="cur-7B-k0e" secondAttribute="centerY" id="Zoa-Ue-AwA"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="EtS-uB-zRu" appends="YES" id="KY2-Sk-sAu"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="aT9-xf-6R6">
-                                        <rect key="frame" x="0.0" y="228" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="158" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aT9-xf-6R6" id="tCf-L3-a4G">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
@@ -2159,7 +2149,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="2cy-hp-Ho5">
-                                        <rect key="frame" x="0.0" y="298" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="228" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2cy-hp-Ho5" id="zDP-KQ-ei9">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
@@ -2198,7 +2188,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="eQD-3U-hJv">
-                                        <rect key="frame" x="0.0" y="368" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="298" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eQD-3U-hJv" id="37H-xJ-AQe">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
@@ -2237,7 +2227,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="7Wf-BS-94o">
-                                        <rect key="frame" x="0.0" y="438" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="368" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Wf-BS-94o" id="sdp-Nv-3vX">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
@@ -2273,6 +2263,45 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="T1a-kn-7R1" appends="YES" id="tzm-hb-HZI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="EW9-12-6AP">
+                                        <rect key="frame" x="0.0" y="438" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EW9-12-6AP" id="2zO-Z2-APG">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moonlight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYG-gQ-7Rm">
+                                                    <rect key="frame" x="82" y="13.5" width="180" height="43.5"/>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43.5" id="Vnb-hP-euU"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="h6U-mA-uGZ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Moonlight icon" translatesAutoresizingMaskIntoConstraints="NO" id="dhq-aG-fNx">
+                                                    <rect key="frame" x="16" y="10" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="AyE-pH-n6G"/>
+                                                        <constraint firstAttribute="width" constant="50" id="hXm-iJ-bew"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bYG-gQ-7Rm" firstAttribute="centerY" secondItem="2zO-Z2-APG" secondAttribute="centerY" id="IFt-Mo-EMu"/>
+                                                <constraint firstItem="bYG-gQ-7Rm" firstAttribute="leading" secondItem="dhq-aG-fNx" secondAttribute="trailing" constant="16" id="dR3-Ze-ZFg"/>
+                                                <constraint firstItem="dhq-aG-fNx" firstAttribute="centerY" secondItem="2zO-Z2-APG" secondAttribute="centerY" id="ifQ-nl-jFk"/>
+                                                <constraint firstItem="dhq-aG-fNx" firstAttribute="leading" secondItem="2zO-Z2-APG" secondAttribute="leading" constant="16" id="rN8-uo-lHh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="XVZ-DB-rMr" appends="YES" id="IGC-uk-Gi1"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="Gbb-3X-DRd">
@@ -2314,8 +2343,47 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             <outletCollection property="gestureRecognizers" destination="nZT-67-iCx" appends="YES" id="ulo-Wy-Gb3"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="68r-Bo-Ie8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="76J-Er-bFm">
                                         <rect key="frame" x="0.0" y="578" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="76J-Er-bFm" id="cur-7B-k0e">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orchid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xor-xK-SXn">
+                                                    <rect key="frame" x="82" y="13.5" width="180" height="43.5"/>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="rmU-M6-B7i"/>
+                                                        <constraint firstAttribute="height" constant="43.5" id="uJn-B0-HE8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Orchid icon" translatesAutoresizingMaskIntoConstraints="NO" id="Zq4-NF-jXE">
+                                                    <rect key="frame" x="16" y="10" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Ds2-fg-YD3"/>
+                                                        <constraint firstAttribute="width" constant="50" id="SAe-lR-UXN"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xor-xK-SXn" firstAttribute="leading" secondItem="Zq4-NF-jXE" secondAttribute="trailing" constant="16" id="5fS-OE-uEX"/>
+                                                <constraint firstItem="Xor-xK-SXn" firstAttribute="centerY" secondItem="cur-7B-k0e" secondAttribute="centerY" id="Vuw-Af-cfp"/>
+                                                <constraint firstItem="Zq4-NF-jXE" firstAttribute="leading" secondItem="cur-7B-k0e" secondAttribute="leading" constant="16" id="ZoS-2K-td9"/>
+                                                <constraint firstItem="Zq4-NF-jXE" firstAttribute="centerY" secondItem="cur-7B-k0e" secondAttribute="centerY" id="Zoa-Ue-AwA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="EtS-uB-zRu" appends="YES" id="KY2-Sk-sAu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="68r-Bo-Ie8">
+                                        <rect key="frame" x="0.0" y="648" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="68r-Bo-Ie8" id="hsm-gg-HlA">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
@@ -2332,7 +2400,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rain drop icon" translatesAutoresizingMaskIntoConstraints="NO" id="YQ1-W9-kPo">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rain Drop icon" translatesAutoresizingMaskIntoConstraints="NO" id="YQ1-W9-kPo">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="WBP-PF-cfR"/>
@@ -2350,11 +2418,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <gestureRecognizers/>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="ljs-ch-WA6" appends="YES" id="RYl-Vz-dMU"/>
+                                            <outletCollection property="gestureRecognizers" destination="j5J-Ab-22h" appends="YES" id="Yuy-V6-AjG"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="zg4-dQ-rrx">
-                                        <rect key="frame" x="0.0" y="648" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="718" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zg4-dQ-rrx" id="fCM-MB-pAM">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
@@ -2393,7 +2461,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="bCh-8F-eOe">
-                                        <rect key="frame" x="0.0" y="718" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="788" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bCh-8F-eOe" id="rR9-Gc-4Jg">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
@@ -2432,7 +2500,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="hVW-qs-GEp">
-                                        <rect key="frame" x="0.0" y="788" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="858" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hVW-qs-GEp" id="hD1-ie-hGT">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
@@ -2467,7 +2535,46 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <gestureRecognizers/>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="zjB-PB-96X" appends="YES" id="oEU-gy-RVa"/>
+                                            <outletCollection property="gestureRecognizers" destination="DMy-F3-aqD" appends="YES" id="Xxi-mL-v5w"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="IjM-VS-mpk">
+                                        <rect key="frame" x="0.0" y="928" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IjM-VS-mpk" id="v5C-Hh-7Jk">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Windy Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wf3-OY-NpZ">
+                                                    <rect key="frame" x="82" y="13.5" width="180" height="43.5"/>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43.5" id="FMP-be-dcc"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="O4y-05-3OQ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Windy Day icon" translatesAutoresizingMaskIntoConstraints="NO" id="0DA-KT-o5w">
+                                                    <rect key="frame" x="16" y="10" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="GfA-ph-Z9j"/>
+                                                        <constraint firstAttribute="height" constant="50" id="a2M-ae-frO"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0DA-KT-o5w" firstAttribute="leading" secondItem="v5C-Hh-7Jk" secondAttribute="leading" constant="16" id="gjn-ef-uBo"/>
+                                                <constraint firstItem="Wf3-OY-NpZ" firstAttribute="centerY" secondItem="v5C-Hh-7Jk" secondAttribute="centerY" id="hj6-N4-LHI"/>
+                                                <constraint firstItem="0DA-KT-o5w" firstAttribute="centerY" secondItem="v5C-Hh-7Jk" secondAttribute="centerY" id="tix-0c-GQ4"/>
+                                                <constraint firstItem="Wf3-OY-NpZ" firstAttribute="leading" secondItem="0DA-KT-o5w" secondAttribute="trailing" constant="16" id="vMl-0u-Jg8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="97t-Vc-PZz" appends="YES" id="31B-yY-Ufu"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -2480,18 +2587,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     </tableView>
                     <navigationItem key="navigationItem" id="c1R-Dk-pca"/>
                     <connections>
-                        <outlet property="carminePinkTableCell" destination="76J-Er-bFm" id="JHv-Y8-o6d"/>
                         <outlet property="dodgerBlueTableCell" destination="m5O-7L-l7c" id="eLz-x4-KTV"/>
                         <outlet property="eightBitTableCell" destination="kVc-xA-eLm" id="rCJ-2w-dD3"/>
                         <outlet property="lightsOutTableCell" destination="aT9-xf-6R6" id="V9d-pc-1Eb"/>
                         <outlet property="mangoTableCell" destination="2cy-hp-Ho5" id="ahE-69-La6"/>
                         <outlet property="maximumRedTableCell" destination="eQD-3U-hJv" id="OFO-wG-GZa"/>
                         <outlet property="mightyUmbrellaTableCell" destination="7Wf-BS-94o" id="rSu-z8-4FP"/>
+                        <outlet property="moonlightTableCell" destination="EW9-12-6AP" id="Wgj-0h-b8t"/>
+                        <outlet property="orchidTableCell" destination="76J-Er-bFm" id="crr-Tp-4pX"/>
                         <outlet property="plumpPurpleTableCell" destination="Gbb-3X-DRd" id="Eyc-kg-xdf"/>
-                        <outlet property="rainDropTableCell" destination="68r-Bo-Ie8" id="5pZ-QX-08I"/>
+                        <outlet property="rainDropTableCell" destination="68r-Bo-Ie8" id="ywL-wF-Bdr"/>
                         <outlet property="springGreenTableCell" destination="zg4-dQ-rrx" id="ckb-MZ-mf3"/>
                         <outlet property="thunderstormTableCell" destination="bCh-8F-eOe" id="lgP-xk-Gh6"/>
-                        <outlet property="twilightZoneTableCell" destination="hVW-qs-GEp" id="QwQ-Sv-NMv"/>
+                        <outlet property="twilightZoneTableCell" destination="hVW-qs-GEp" id="I0J-Gt-b7q"/>
+                        <outlet property="windyDayTableCell" destination="IjM-VS-mpk" id="RAW-NF-grE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pb-Dq-RAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2512,7 +2621,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="EtS-uB-zRu">
                     <connections>
-                        <action selector="carminePinkTapped:" destination="rOe-pR-J44" id="eBb-nb-fsT"/>
+                        <action selector="orchidTapped:" destination="rOe-pR-J44" id="2bG-Rx-nkN"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Uqb-yp-wJq">
@@ -2535,11 +2644,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <action selector="thunderstormTapped:" destination="rOe-pR-J44" id="irh-pd-ROg"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="ljs-ch-WA6">
-                    <connections>
-                        <action selector="rainDropTapped:" destination="rOe-pR-J44" id="gsg-Pk-Ueb"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <tapGestureRecognizer id="via-pF-iPU">
                     <connections>
                         <action selector="springGreenTapped:" destination="rOe-pR-J44" id="Z5G-eB-cCA"/>
@@ -2550,9 +2654,24 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <action selector="mangoTapped:" destination="rOe-pR-J44" id="Rv6-Vm-tXh"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="zjB-PB-96X">
+                <tapGestureRecognizer id="j5J-Ab-22h">
                     <connections>
-                        <action selector="twilightZoneTapped:" destination="rOe-pR-J44" id="8rM-ZI-HFg"/>
+                        <action selector="rainDropTapped:" destination="rOe-pR-J44" id="lhx-YK-RgD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="DMy-F3-aqD">
+                    <connections>
+                        <action selector="twilightZoneTapped:" destination="rOe-pR-J44" id="Spt-ub-RxF"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="XVZ-DB-rMr">
+                    <connections>
+                        <action selector="moonlightTapped:" destination="rOe-pR-J44" id="Hsz-8y-lKF"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="97t-Vc-PZz">
+                    <connections>
+                        <action selector="windyDayTapped:" destination="rOe-pR-J44" id="9Cq-MM-zrx"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -2609,47 +2728,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             <outletCollection property="gestureRecognizers" destination="yV1-f5-t2b" appends="YES" id="S1F-cA-rIt"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="L7B-Zs-UaE">
-                                        <rect key="frame" x="0.0" y="88" width="375" height="70"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L7B-Zs-UaE" id="G1r-XR-TXd">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carmine Pink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUp-7v-W5Z">
-                                                    <rect key="frame" x="82" y="13.5" width="180" height="43.5"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="43.5" id="cRl-vg-ofc"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="oPg-qw-sat"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Carmine Pink theme" translatesAutoresizingMaskIntoConstraints="NO" id="vt6-2e-6vH">
-                                                    <rect key="frame" x="16" y="10" width="50" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="OPg-vy-P26"/>
-                                                        <constraint firstAttribute="width" constant="50" id="vuu-ga-qZb"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="gUp-7v-W5Z" firstAttribute="centerY" secondItem="G1r-XR-TXd" secondAttribute="centerY" id="4nO-oX-ge2"/>
-                                                <constraint firstItem="gUp-7v-W5Z" firstAttribute="leading" secondItem="vt6-2e-6vH" secondAttribute="trailing" constant="16" id="8v5-lO-GAG"/>
-                                                <constraint firstItem="vt6-2e-6vH" firstAttribute="leading" secondItem="G1r-XR-TXd" secondAttribute="leading" constant="16" id="qQR-2a-3P4"/>
-                                                <constraint firstItem="vt6-2e-6vH" firstAttribute="centerY" secondItem="G1r-XR-TXd" secondAttribute="centerY" id="ts9-Pb-cHW"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="Oto-h4-D13" appends="YES" id="8g8-uf-LMD"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="i1X-vh-qmI">
-                                        <rect key="frame" x="0.0" y="158" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="88" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i1X-vh-qmI" id="Ibk-hL-xTI">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
@@ -2688,7 +2768,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="XhI-bQ-cYs">
-                                        <rect key="frame" x="0.0" y="228" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="158" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XhI-bQ-cYs" id="ToX-A1-QE7">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
@@ -2724,6 +2804,45 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="mER-q7-vXC" appends="YES" id="GuI-Y7-mn7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="L7B-Zs-UaE">
+                                        <rect key="frame" x="0.0" y="228" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L7B-Zs-UaE" id="G1r-XR-TXd">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orchid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUp-7v-W5Z">
+                                                    <rect key="frame" x="82" y="13.5" width="180" height="43.5"/>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43.5" id="cRl-vg-ofc"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="oPg-qw-sat"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Orchid theme" translatesAutoresizingMaskIntoConstraints="NO" id="vt6-2e-6vH">
+                                                    <rect key="frame" x="16" y="10" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="OPg-vy-P26"/>
+                                                        <constraint firstAttribute="width" constant="50" id="vuu-ga-qZb"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gUp-7v-W5Z" firstAttribute="centerY" secondItem="G1r-XR-TXd" secondAttribute="centerY" id="4nO-oX-ge2"/>
+                                                <constraint firstItem="gUp-7v-W5Z" firstAttribute="leading" secondItem="vt6-2e-6vH" secondAttribute="trailing" constant="16" id="8v5-lO-GAG"/>
+                                                <constraint firstItem="vt6-2e-6vH" firstAttribute="leading" secondItem="G1r-XR-TXd" secondAttribute="leading" constant="16" id="qQR-2a-3P4"/>
+                                                <constraint firstItem="vt6-2e-6vH" firstAttribute="centerY" secondItem="G1r-XR-TXd" secondAttribute="centerY" id="ts9-Pb-cHW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Oto-h4-D13" appends="YES" id="8g8-uf-LMD"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="RH4-Ji-qOw">
@@ -2854,10 +2973,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     <navigationItem key="navigationItem" id="oPQ-re-ytA"/>
                     <connections>
                         <outlet property="autoThemeTableCell" destination="0WN-u6-2o4" id="Vn5-sH-20W"/>
-                        <outlet property="carminePinkTableCell" destination="L7B-Zs-UaE" id="fIE-83-PRY"/>
                         <outlet property="dodgerBlueTableCell" destination="ksD-ht-s0f" id="e6M-EE-ada"/>
                         <outlet property="mangoTableCell" destination="i1X-vh-qmI" id="sgn-Rv-yiY"/>
                         <outlet property="maximumRedTableCell" destination="XhI-bQ-cYs" id="z5h-w0-IJz"/>
+                        <outlet property="orchidTableCell" destination="L7B-Zs-UaE" id="MMg-dU-FO7"/>
                         <outlet property="plumpPurpleTableCell" destination="RH4-Ji-qOw" id="VMC-y4-3Lh"/>
                         <outlet property="springGreenTableCell" destination="Yub-9h-XB4" id="ldo-NT-wTg"/>
                     </connections>
@@ -2890,7 +3009,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Oto-h4-D13">
                     <connections>
-                        <action selector="carminePinkTapped:" destination="t1C-MU-Ksi" id="3k2-fp-2eE"/>
+                        <action selector="orchidTapped:" destination="t1C-MU-Ksi" id="uu9-EV-NhW"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="13D-nZ-ihc">
@@ -3277,6 +3396,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="m2f-fV-mWI" appends="YES" id="azA-1F-v27"/>
+                                            <outletCollection property="gestureRecognizers" destination="9mp-LG-7gD" appends="YES" id="NE0-5J-wQm"/>
+                                            <outletCollection property="gestureRecognizers" destination="rdT-sc-sLv" appends="YES" id="qiL-uA-Juf"/>
                                         </connections>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7v6-1w-cYP">
@@ -5457,6 +5578,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <outlet property="hour3TimeLabel" destination="4Km-Ro-yaX" id="yz9-Do-wl2"/>
                         <outlet property="hour3View" destination="mm9-EY-FoF" id="LaC-Uf-7aC"/>
                         <outlet property="hourlyConditionsGesture" destination="m2f-fV-mWI" id="AVu-qJ-Nfe"/>
+                        <outlet property="hourlyConditionsGestureSwipeLeft" destination="9mp-LG-7gD" id="ytW-mc-doQ"/>
+                        <outlet property="hourlyConditionsGestureSwipeRight" destination="rdT-sc-sLv" id="9kv-Q2-msr"/>
                         <outlet property="hourlyLabel" destination="jUx-c3-dZc" id="Vom-EN-7mB"/>
                         <outlet property="scrollView" destination="n6h-9I-Yek" id="udN-j8-5Hu"/>
                         <outlet property="weatherAlertIcon" destination="Bgs-1P-2Oz" id="BJw-g5-avd"/>
@@ -5475,6 +5598,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <action selector="hourlyConditionsTapped:" destination="tbR-PR-y6h" id="DVl-3o-6vq"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="9mp-LG-7gD">
+                    <connections>
+                        <action selector="hourlyConditionsGestureSwipeLeftTapped:" destination="tbR-PR-y6h" id="2pj-mI-mKP"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="rdT-sc-sLv">
+                    <connections>
+                        <action selector="hourlyConditionsGestureSwipeRightTapped:" destination="tbR-PR-y6h" id="nNE-gC-cwE"/>
+                    </connections>
+                </swipeGestureRecognizer>
                 <tapGestureRecognizer id="C4C-y5-yuG">
                     <connections>
                         <action selector="day0CardTapped:" destination="tbR-PR-y6h" id="wam-pf-8sk"/>
@@ -5558,11 +5691,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Type" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pjr-Jt-08X">
-                                                    <rect key="frame" x="259" y="9.5" width="100" height="25"/>
+                                                    <rect key="frame" x="209" y="9.5" width="150" height="25"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="8bW-VG-Jeq"/>
-                                                        <constraint firstAttribute="width" constant="100" id="b42-HN-MR4"/>
+                                                        <constraint firstAttribute="width" constant="150" id="b42-HN-MR4"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -5603,10 +5736,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Type" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CNg-a1-NfQ">
-                                                    <rect key="frame" x="259" y="9.5" width="100" height="25"/>
+                                                    <rect key="frame" x="209" y="9.5" width="150" height="25"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="quz-VQ-k2a"/>
+                                                        <constraint firstAttribute="width" constant="150" id="quz-VQ-k2a"/>
                                                         <constraint firstAttribute="height" constant="25" id="uba-HL-SGx"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -5628,6 +5761,51 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Default Conditions" id="ruV-bo-W49">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="UAI-iE-seX">
+                                        <rect key="frame" x="0.0" y="255.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UAI-iE-seX" id="vrV-8a-GaE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition Icons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCF-n6-tBE">
+                                                    <rect key="frame" x="16" y="9.5" width="180" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="fdK-kI-f1u"/>
+                                                        <constraint firstAttribute="width" constant="180" id="wPs-71-GWH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Type" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rg9-jh-siT">
+                                                    <rect key="frame" x="209" y="9.5" width="150" height="25"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="ffZ-Us-5vT"/>
+                                                        <constraint firstAttribute="height" constant="25" id="nD2-48-qz9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="U4Q-ja-KMU" id="1T5-J5-Wb7"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Rg9-jh-siT" firstAttribute="trailing" secondItem="vrV-8a-GaE" secondAttribute="trailingMargin" id="0kK-Yy-TS3"/>
+                                                <constraint firstItem="Rg9-jh-siT" firstAttribute="centerY" secondItem="vrV-8a-GaE" secondAttribute="centerY" id="2fL-Ao-e3C"/>
+                                                <constraint firstItem="vCF-n6-tBE" firstAttribute="leading" secondItem="vrV-8a-GaE" secondAttribute="leadingMargin" id="Aks-zy-XZH"/>
+                                                <constraint firstItem="vCF-n6-tBE" firstAttribute="centerY" secondItem="vrV-8a-GaE" secondAttribute="centerY" id="SJW-RP-LFe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <gestureRecognizers/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="U4Q-ja-KMU" id="eM8-BC-jkq"/>
@@ -5636,6 +5814,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     </tableView>
                     <navigationItem key="navigationItem" id="w1x-ZD-KDZ"/>
                     <connections>
+                        <outlet property="conditionIconsTextField" destination="Rg9-jh-siT" id="UHz-XS-NxH"/>
                         <outlet property="dataSourceTextField" destination="Pjr-Jt-08X" id="aRL-UX-YPE"/>
                         <outlet property="hourlyConditionsTextField" destination="CNg-a1-NfQ" id="tDU-rC-reF"/>
                     </connections>
@@ -5672,22 +5851,27 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <image name="8-Bit icon" width="50" height="50"/>
         <image name="App icon" width="60" height="60"/>
         <image name="Auto theme" width="50" height="50"/>
-        <image name="Carmine Pink icon" width="50" height="50"/>
-        <image name="Carmine Pink theme" width="50" height="50"/>
+        <image name="Conditions icon" width="60" height="60"/>
         <image name="Dodger Blue icon" width="50" height="50"/>
         <image name="Dodger Blue theme" width="50" height="50"/>
+        <image name="Forecast icon" width="22" height="24"/>
         <image name="Heavy_rain" width="100" height="100"/>
         <image name="Hourly condition icon" width="60" height="60"/>
         <image name="Lights Out icon" width="50" height="50"/>
+        <image name="Locations icon" width="20" height="23"/>
         <image name="Mango icon" width="50" height="50"/>
         <image name="Mango theme" width="50" height="50"/>
         <image name="Maximum Red icon" width="50" height="50"/>
         <image name="Maximum Red theme" width="50" height="50"/>
         <image name="Mighty Umbrella icon" width="50" height="50"/>
+        <image name="Moonlight icon" width="50" height="50"/>
+        <image name="Orchid icon" width="50" height="50"/>
+        <image name="Orchid theme" width="50" height="50"/>
         <image name="Partly_cloudy" width="100" height="100"/>
         <image name="Plump Purple icon" width="50" height="50"/>
         <image name="Plump Purple theme" width="50" height="50"/>
-        <image name="Rain drop icon" width="50" height="50"/>
+        <image name="Rain Drop icon" width="50" height="50"/>
+        <image name="Settings icon" width="23" height="23"/>
         <image name="Spring Green icon" width="50" height="50"/>
         <image name="Spring Green theme" width="50" height="50"/>
         <image name="Support icon" width="60" height="60"/>
@@ -5695,10 +5879,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <image name="Thunderstorm icon" width="50" height="50"/>
         <image name="Twilight Zone icon" width="50" height="50"/>
         <image name="Widget icon" width="60" height="60"/>
-        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="Windy Day icon" width="50" height="50"/>
         <image name="exclamationmark.triangle" catalog="system" width="128" height="112"/>
-        <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="globe" catalog="system" width="128" height="121"/>
         <image name="location.fill" catalog="system" width="128" height="115"/>
         <image name="poweredby-oneline-darkbackground" width="3350" height="759"/>
         <namedColor name="customControlColor">

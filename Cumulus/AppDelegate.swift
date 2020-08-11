@@ -94,18 +94,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             defaults.set("Precip (%)", forKey: "defaultHourlyCondition")
         }
         
-        if (defaults.string(forKey: "defaultDailyCondition") == nil) || (defaults.bool(forKey: "cumulusPlus") == false) {
-            defaults.set("Precip (%)", forKey: "defaultDailyCondition")
-        }
-        
-        if (defaults.string(forKey: "defaultWidgetSlot1") == nil) || (defaults.bool(forKey: "cumulusPlus") == false) {
-            defaults.set("Current condition", forKey: "defaultWidgetSlot1")
-            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Current condition", forKey: "setDefaultWidgetSlot1")
-        }
-        
-        if (defaults.string(forKey: "defaultWidgetSlot2") == nil) || (defaults.bool(forKey: "cumulusPlus") == false) {
-            defaults.set("Precip (%)", forKey: "defaultWidgetSlot2")
-            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Precip (%)", forKey: "setDefaultWidgetSlot2")
+        if (defaults.string(forKey: "defaultConditionIcons") == nil) || (defaults.bool(forKey: "cumulusPlus") == false) {
+            defaults.set("", forKey: "defaultConditionIcons")
         }
         
         if (defaults.string(forKey: "dataSource") == nil) || (defaults.bool(forKey: "cumulusPlus") == false) {
@@ -118,79 +108,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("USA", forKey: "setUnits")
         }
         
-        if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Precip") == true) {
-            defaults.set("Precip (%)", forKey: "defaultHourlyCondition")
-        } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Temp") == true) {
-            defaults.set("Temp (°\(unitsTemperature))", forKey: "defaultHourlyCondition")
-        } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Humidity") == true) {
-            defaults.set("Humidity (%)", forKey: "defaultHourlyCondition")
-        } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("UV index") == true) {
-            defaults.set("UV index", forKey: "defaultHourlyCondition")
-        } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Wind") == true) {
-            defaults.set("Wind (\(unitsWindSpeed))", forKey: "defaultHourlyCondition")
-        } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Cloud cover") == true) {
-            defaults.set("Cloud cover (%)", forKey: "defaultHourlyCondition")
-        } else {
-            defaults.set("Precip (%)", forKey: "defaultHourlyCondition")
-        }
-        
-        if (defaults.string(forKey: "defaultDailyCondition")?.contains("Precip") == true) {
-            defaults.set("Precip (%)", forKey: "defaultDailyCondition")
-        } else if (defaults.string(forKey: "defaultDailyCondition")?.contains("Humidity") == true) {
-            defaults.set("Humidity (%)", forKey: "defaultDailyCondition")
-        } else if (defaults.string(forKey: "defaultDailyCondition")?.contains("UV index") == true) {
-            defaults.set("UV index", forKey: "defaultDailyCondition")
-        } else if (defaults.string(forKey: "defaultDailyCondition")?.contains("Wind") == true) {
-            defaults.set("Wind (\(unitsWindSpeed))", forKey: "defaultDailyCondition")
-        } else if (defaults.string(forKey: "defaultDailyCondition")?.contains("Cloud cover") == true) {
-            defaults.set("Cloud cover (%)", forKey: "defaultDailyCondition")
-        } else {
-            defaults.set("Precip (%)", forKey: "defaultDailyCondition")
-        }
-        
-        if (defaults.string(forKey: "defaultWidgetSlot1")?.contains("Current condition") == true) {
-            defaults.set("Current condition", forKey: "defaultWidgetSlot1")
-        } else if (defaults.string(forKey: "defaultWidgetSlot1")?.contains("Feels like") == true) {
-            defaults.set("Feels like (°\(unitsTemperature))", forKey: "defaultWidgetSlot1")
-        } else if (defaults.string(forKey: "defaultWidgetSlot1")?.contains("Precip") == true) {
-            defaults.set("Precip (%)", forKey: "defaultWidgetSlot1")
-        } else if (defaults.string(forKey: "defaultWidgetSlot1")?.contains("Humidity") == true) {
-            defaults.set("Humidity (%)", forKey: "defaultWidgetSlot1")
-        } else if (defaults.string(forKey: "defaultWidgetSlot1")?.contains("UV index") == true) {
-            defaults.set("UV index", forKey: "defaultWidgetSlot1")
-        } else if (defaults.string(forKey: "defaultWidgetSlot1")?.contains("Wind") == true) {
-            defaults.set("Wind (\(unitsWindSpeed))", forKey: "defaultWidgetSlot1")
-        } else if (defaults.string(forKey: "defaultWidgetSlot1")?.contains("Cloud cover") == true) {
-            defaults.set("Cloud cover (%)", forKey: "defaultWidgetSlot1")
-        } else {
-            defaults.set("Current condition", forKey: "defaultWidgetSlot1")
-        }
-        
-        if (defaults.string(forKey: "defaultWidgetSlot2")?.contains("Current condition") == true) {
-            defaults.set("Current condition", forKey: "defaultWidgetSlot2")
-        } else if (defaults.string(forKey: "defaultWidgetSlot2")?.contains("Feels like") == true) {
-            defaults.set("Feels like (°\(unitsTemperature))", forKey: "defaultWidgetSlot1")
-        } else if (defaults.string(forKey: "defaultWidgetSlot2")?.contains("Precip") == true) {
-            defaults.set("Precip (%)", forKey: "defaultWidgetSlot2")
-        } else if (defaults.string(forKey: "defaultWidgetSlot2")?.contains("Humidity") == true) {
-            defaults.set("Humidity (%)", forKey: "defaultWidgetSlot2")
-        } else if (defaults.string(forKey: "defaultWidgetSlot2")?.contains("UV index") == true) {
-            defaults.set("UV index", forKey: "defaultWidgetSlot2")
-        } else if (defaults.string(forKey: "defaultWidgetSlot2")?.contains("Wind") == true) {
-            defaults.set("Wind (\(unitsWindSpeed))", forKey: "defaultWidgetSlot2")
-        } else if (defaults.string(forKey: "defaultWidgetSlot2")?.contains("Cloud cover") == true) {
-            defaults.set("Cloud cover (%)", forKey: "defaultWidgetSlot2")
-        } else {
-            defaults.set("Current condition", forKey: "defaultWidgetSlot2")
-        }
-        
         if (defaults.bool(forKey: "cumulusPlus") == false) || (defaults.bool(forKey: "autoThemeEnabled") == true) {
             let autoTheme = Int(arc4random_uniform(UInt32(13)))
             
             if autoTheme == 0 || autoTheme == 1 {
                 defaults.set("Dodger Blue", forKey: "userSavedColorString")
             } else if autoTheme == 2 {
-                defaults.set("Carmine Pink", forKey: "userSavedColorString")
+                defaults.set("Orchid", forKey: "userSavedColorString")
             } else if autoTheme == 3 {
                 defaults.set("Mango", forKey: "userSavedColorString")
             } else if autoTheme == 4 {

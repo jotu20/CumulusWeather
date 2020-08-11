@@ -29,8 +29,8 @@ class SiriShortcutsTableViewController: UITableViewController {
             self.navigationController?.navigationBar.tintColor = dodgerBlue
         } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
             self.navigationController?.navigationBar.tintColor = plumpPurple
-        } else if defaults.string(forKey: "userSavedColorString") == "Carmine Pink" {
-            self.navigationController?.navigationBar.tintColor = carminePink
+        } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+            self.navigationController?.navigationBar.tintColor = orchid
         } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
             self.navigationController?.navigationBar.tintColor = springGreen
         } else {

@@ -14,7 +14,7 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
     var pickerView = UIPickerView()
     
     let dataSourceTypes = ["Dark Sky"]
-    let defaultHourlyConditionTypes = ["Precip (%)", "Accumulation (%)", "Temp (°\(unitsTemperature))", "Humidity (%)", "UV index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
+    let defaultHourlyConditionTypes = ["Precip (%)", "Accumulation (%)", "Temp (°\(unitsTemperature))", "Humidity (%)", "UV Index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
     let conditionIconTypes = ["Default", "Circle"]
     
     @IBOutlet weak var dataSourceTextField: UITextField!

@@ -7,215 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0ACDC4E0477D3B8F3CB2BF7C /* Pods_Cumulus_Cumulus_Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5FC965F8DEB6008B54A930 /* Pods_Cumulus_Cumulus_Today.framework */; };
-		1BB413B2FF129CF6218B07C9 /* Pods_Cumulus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3A90AF22391FE320C990F /* Pods_Cumulus.framework */; };
-		291AB24C2C2003380C3A1F83 /* Pods_Cumulus_GetForecastIntent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1320719B4CD614F66DA786 /* Pods_Cumulus_GetForecastIntent.framework */; };
-		B7AE0E81331BD50CEE086B5F /* Pods_Cumulus_GetForecastIntentUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E339D8E54C1B7793F75051 /* Pods_Cumulus_GetForecastIntentUI.framework */; };
+		0541F531F1EC29B776E93011 /* Pods_Cumulus_GetForecastIntent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1244FBDBACE3E02DC9BF94C1 /* Pods_Cumulus_GetForecastIntent.framework */; };
+		0906EA9E1AECEAFD2839197E /* Pods_Cumulus_Cumulus_Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC2E72BF58325956AA20C1 /* Pods_Cumulus_Cumulus_Today.framework */; };
+		0B7B5387EAFCC3F6025F3166 /* Pods_Cumulus_GetForecastIntentUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7376BBA1043EF8E103A84320 /* Pods_Cumulus_GetForecastIntentUI.framework */; };
+		75CC0744A4378311FBDFB277 /* Pods_Cumulus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63EE8141E9444611CB74A0A /* Pods_Cumulus.framework */; };
 		CF39201B2365217300FAFA53 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF39201A2365217300FAFA53 /* MapKit.framework */; };
 		CF4A0E5F2108B1B30061CAAD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4A0E5E2108B1B30061CAAD /* Default-568h@2x.png */; };
 		CF4A0E612108B5580061CAAD /* AppIconTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A0E602108B5580061CAAD /* AppIconTableViewController.swift */; };
 		CF52ECD9210FA29D00A605A4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF52ECD8210FA29D00A605A4 /* StoreKit.framework */; };
-		CF55D7F32461CC67001E1683 /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55D7F22461CC67001E1683 /* CurrentWeatherData.swift */; };
-		CF55D7F42461DFFC001E1683 /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55D7F22461CC67001E1683 /* CurrentWeatherData.swift */; };
-		CF55D7F52461DFFD001E1683 /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55D7F22461CC67001E1683 /* CurrentWeatherData.swift */; };
-		CF55D7F62461DFFD001E1683 /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF55D7F22461CC67001E1683 /* CurrentWeatherData.swift */; };
 		CF5EB7BA2435778F006FF5A5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5EB7B92435778F006FF5A5 /* Launch Screen.storyboard */; };
 		CF602EA9247ED3D200E05491 /* LoadingScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF602EA6247ED28E00E05491 /* LoadingScreenModel.swift */; };
 		CF6E4AA220DACFD8002349A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E4AA120DACFD8002349A7 /* AppDelegate.swift */; };
 		CF6E4AA420DACFD8002349A7 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E4AA320DACFD8002349A7 /* ForecastViewController.swift */; };
 		CF6E4AA720DACFD8002349A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA520DACFD8002349A7 /* Main.storyboard */; };
-		CF8DCDDC24D1ED63001D6A45 /* PlumpPurple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDAC24D1ED61001D6A45 /* PlumpPurple@2x.png */; };
-		CF8DCDDD24D1ED63001D6A45 /* PlumpPurple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDAC24D1ED61001D6A45 /* PlumpPurple@2x.png */; };
-		CF8DCDDE24D1ED63001D6A45 /* PlumpPurple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDAC24D1ED61001D6A45 /* PlumpPurple@2x.png */; };
-		CF8DCDDF24D1ED63001D6A45 /* PlumpPurple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDAC24D1ED61001D6A45 /* PlumpPurple@2x.png */; };
-		CF8DCDE024D1ED63001D6A45 /* SpringGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDAD24D1ED61001D6A45 /* SpringGreen@2x.png */; };
-		CF8DCDE124D1ED63001D6A45 /* SpringGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDAD24D1ED61001D6A45 /* SpringGreen@2x.png */; };
-		CF8DCDE224D1ED63001D6A45 /* SpringGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDAD24D1ED61001D6A45 /* SpringGreen@2x.png */; };
-		CF8DCDE324D1ED63001D6A45 /* SpringGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDAD24D1ED61001D6A45 /* SpringGreen@2x.png */; };
-		CF8DCDE424D1ED63001D6A45 /* DodgerBlueiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDAE24D1ED61001D6A45 /* DodgerBlueiPad@2x.png */; };
-		CF8DCDE524D1ED63001D6A45 /* DodgerBlueiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDAE24D1ED61001D6A45 /* DodgerBlueiPad@2x.png */; };
-		CF8DCDE624D1ED63001D6A45 /* DodgerBlueiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDAE24D1ED61001D6A45 /* DodgerBlueiPad@2x.png */; };
-		CF8DCDE724D1ED63001D6A45 /* DodgerBlueiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDAE24D1ED61001D6A45 /* DodgerBlueiPad@2x.png */; };
-		CF8DCDE824D1ED63001D6A45 /* SpringGreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDAF24D1ED61001D6A45 /* SpringGreen@3x.png */; };
-		CF8DCDE924D1ED63001D6A45 /* SpringGreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDAF24D1ED61001D6A45 /* SpringGreen@3x.png */; };
-		CF8DCDEA24D1ED63001D6A45 /* SpringGreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDAF24D1ED61001D6A45 /* SpringGreen@3x.png */; };
-		CF8DCDEB24D1ED63001D6A45 /* SpringGreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDAF24D1ED61001D6A45 /* SpringGreen@3x.png */; };
-		CF8DCDEC24D1ED63001D6A45 /* MightyUmbrellaiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB024D1ED61001D6A45 /* MightyUmbrellaiPad@3x.png */; };
-		CF8DCDED24D1ED63001D6A45 /* MightyUmbrellaiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB024D1ED61001D6A45 /* MightyUmbrellaiPad@3x.png */; };
-		CF8DCDEE24D1ED63001D6A45 /* MightyUmbrellaiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB024D1ED61001D6A45 /* MightyUmbrellaiPad@3x.png */; };
-		CF8DCDEF24D1ED63001D6A45 /* MightyUmbrellaiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB024D1ED61001D6A45 /* MightyUmbrellaiPad@3x.png */; };
-		CF8DCDF024D1ED63001D6A45 /* CarminePink@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB124D1ED61001D6A45 /* CarminePink@3x.png */; };
-		CF8DCDF124D1ED63001D6A45 /* CarminePink@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB124D1ED61001D6A45 /* CarminePink@3x.png */; };
-		CF8DCDF224D1ED63001D6A45 /* CarminePink@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB124D1ED61001D6A45 /* CarminePink@3x.png */; };
-		CF8DCDF324D1ED63001D6A45 /* CarminePink@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB124D1ED61001D6A45 /* CarminePink@3x.png */; };
-		CF8DCDF424D1ED63001D6A45 /* DodgerBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB224D1ED61001D6A45 /* DodgerBlue@2x.png */; };
-		CF8DCDF524D1ED63001D6A45 /* DodgerBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB224D1ED61001D6A45 /* DodgerBlue@2x.png */; };
-		CF8DCDF624D1ED63001D6A45 /* DodgerBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB224D1ED61001D6A45 /* DodgerBlue@2x.png */; };
-		CF8DCDF724D1ED63001D6A45 /* DodgerBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB224D1ED61001D6A45 /* DodgerBlue@2x.png */; };
-		CF8DCDF824D1ED63001D6A45 /* Thunderstorm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB324D1ED61001D6A45 /* Thunderstorm@2x.png */; };
-		CF8DCDF924D1ED63001D6A45 /* Thunderstorm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB324D1ED61001D6A45 /* Thunderstorm@2x.png */; };
-		CF8DCDFA24D1ED63001D6A45 /* Thunderstorm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB324D1ED61001D6A45 /* Thunderstorm@2x.png */; };
-		CF8DCDFB24D1ED63001D6A45 /* Thunderstorm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB324D1ED61001D6A45 /* Thunderstorm@2x.png */; };
-		CF8DCDFC24D1ED63001D6A45 /* MaximumRediPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB424D1ED61001D6A45 /* MaximumRediPad@3x.png */; };
-		CF8DCDFD24D1ED63001D6A45 /* MaximumRediPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB424D1ED61001D6A45 /* MaximumRediPad@3x.png */; };
-		CF8DCDFE24D1ED63001D6A45 /* MaximumRediPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB424D1ED61001D6A45 /* MaximumRediPad@3x.png */; };
-		CF8DCDFF24D1ED63001D6A45 /* MaximumRediPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB424D1ED61001D6A45 /* MaximumRediPad@3x.png */; };
-		CF8DCE0024D1ED63001D6A45 /* 8-Bit@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB524D1ED61001D6A45 /* 8-Bit@3x.png */; };
-		CF8DCE0124D1ED63001D6A45 /* 8-Bit@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB524D1ED61001D6A45 /* 8-Bit@3x.png */; };
-		CF8DCE0224D1ED63001D6A45 /* 8-Bit@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB524D1ED61001D6A45 /* 8-Bit@3x.png */; };
-		CF8DCE0324D1ED63001D6A45 /* 8-Bit@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB524D1ED61001D6A45 /* 8-Bit@3x.png */; };
-		CF8DCE0424D1ED63001D6A45 /* MaximumRed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB624D1ED61001D6A45 /* MaximumRed@3x.png */; };
-		CF8DCE0524D1ED63001D6A45 /* MaximumRed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB624D1ED61001D6A45 /* MaximumRed@3x.png */; };
-		CF8DCE0624D1ED63001D6A45 /* MaximumRed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB624D1ED61001D6A45 /* MaximumRed@3x.png */; };
-		CF8DCE0724D1ED63001D6A45 /* MaximumRed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB624D1ED61001D6A45 /* MaximumRed@3x.png */; };
-		CF8DCE0824D1ED63001D6A45 /* MightyUmbrella@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB724D1ED61001D6A45 /* MightyUmbrella@3x.png */; };
-		CF8DCE0924D1ED63001D6A45 /* MightyUmbrella@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB724D1ED61001D6A45 /* MightyUmbrella@3x.png */; };
-		CF8DCE0A24D1ED63001D6A45 /* MightyUmbrella@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB724D1ED61001D6A45 /* MightyUmbrella@3x.png */; };
-		CF8DCE0B24D1ED63001D6A45 /* MightyUmbrella@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB724D1ED61001D6A45 /* MightyUmbrella@3x.png */; };
-		CF8DCE0C24D1ED63001D6A45 /* Thunderstorm@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB824D1ED61001D6A45 /* Thunderstorm@3x.png */; };
-		CF8DCE0D24D1ED63001D6A45 /* Thunderstorm@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB824D1ED61001D6A45 /* Thunderstorm@3x.png */; };
-		CF8DCE0E24D1ED63001D6A45 /* Thunderstorm@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB824D1ED61001D6A45 /* Thunderstorm@3x.png */; };
-		CF8DCE0F24D1ED63001D6A45 /* Thunderstorm@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB824D1ED61001D6A45 /* Thunderstorm@3x.png */; };
-		CF8DCE1024D1ED63001D6A45 /* PlumpPurpleiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB924D1ED61001D6A45 /* PlumpPurpleiPad@3x.png */; };
-		CF8DCE1124D1ED63001D6A45 /* PlumpPurpleiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB924D1ED61001D6A45 /* PlumpPurpleiPad@3x.png */; };
-		CF8DCE1224D1ED63001D6A45 /* PlumpPurpleiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB924D1ED61001D6A45 /* PlumpPurpleiPad@3x.png */; };
-		CF8DCE1324D1ED63001D6A45 /* PlumpPurpleiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDB924D1ED61001D6A45 /* PlumpPurpleiPad@3x.png */; };
-		CF8DCE1424D1ED63001D6A45 /* Raindrop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBA24D1ED61001D6A45 /* Raindrop@2x.png */; };
-		CF8DCE1524D1ED63001D6A45 /* Raindrop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBA24D1ED61001D6A45 /* Raindrop@2x.png */; };
-		CF8DCE1624D1ED63001D6A45 /* Raindrop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBA24D1ED61001D6A45 /* Raindrop@2x.png */; };
-		CF8DCE1724D1ED63001D6A45 /* Raindrop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBA24D1ED61001D6A45 /* Raindrop@2x.png */; };
-		CF8DCE1824D1ED63001D6A45 /* CarminePinkiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBB24D1ED61001D6A45 /* CarminePinkiPad@2x.png */; };
-		CF8DCE1924D1ED63001D6A45 /* CarminePinkiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBB24D1ED61001D6A45 /* CarminePinkiPad@2x.png */; };
-		CF8DCE1A24D1ED63001D6A45 /* CarminePinkiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBB24D1ED61001D6A45 /* CarminePinkiPad@2x.png */; };
-		CF8DCE1B24D1ED63001D6A45 /* CarminePinkiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBB24D1ED61001D6A45 /* CarminePinkiPad@2x.png */; };
-		CF8DCE1C24D1ED63001D6A45 /* ThunderstormiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBC24D1ED61001D6A45 /* ThunderstormiPad@3x.png */; };
-		CF8DCE1D24D1ED63001D6A45 /* ThunderstormiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBC24D1ED61001D6A45 /* ThunderstormiPad@3x.png */; };
-		CF8DCE1E24D1ED63001D6A45 /* ThunderstormiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBC24D1ED61001D6A45 /* ThunderstormiPad@3x.png */; };
-		CF8DCE1F24D1ED63001D6A45 /* ThunderstormiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBC24D1ED61001D6A45 /* ThunderstormiPad@3x.png */; };
-		CF8DCE2024D1ED63001D6A45 /* DodgerBlue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBD24D1ED61001D6A45 /* DodgerBlue@3x.png */; };
-		CF8DCE2124D1ED63001D6A45 /* DodgerBlue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBD24D1ED61001D6A45 /* DodgerBlue@3x.png */; };
-		CF8DCE2224D1ED63001D6A45 /* DodgerBlue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBD24D1ED61001D6A45 /* DodgerBlue@3x.png */; };
-		CF8DCE2324D1ED63001D6A45 /* DodgerBlue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBD24D1ED61001D6A45 /* DodgerBlue@3x.png */; };
-		CF8DCE2424D1ED63001D6A45 /* MaximumRediPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBE24D1ED61001D6A45 /* MaximumRediPad@2x.png */; };
-		CF8DCE2524D1ED63001D6A45 /* MaximumRediPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBE24D1ED61001D6A45 /* MaximumRediPad@2x.png */; };
-		CF8DCE2624D1ED63001D6A45 /* MaximumRediPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBE24D1ED61001D6A45 /* MaximumRediPad@2x.png */; };
-		CF8DCE2724D1ED63001D6A45 /* MaximumRediPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBE24D1ED61001D6A45 /* MaximumRediPad@2x.png */; };
-		CF8DCE2824D1ED63001D6A45 /* LightsOutiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBF24D1ED62001D6A45 /* LightsOutiPad@3x.png */; };
-		CF8DCE2924D1ED63001D6A45 /* LightsOutiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBF24D1ED62001D6A45 /* LightsOutiPad@3x.png */; };
-		CF8DCE2A24D1ED63001D6A45 /* LightsOutiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBF24D1ED62001D6A45 /* LightsOutiPad@3x.png */; };
-		CF8DCE2B24D1ED63001D6A45 /* LightsOutiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDBF24D1ED62001D6A45 /* LightsOutiPad@3x.png */; };
-		CF8DCE2C24D1ED63001D6A45 /* Mango@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC024D1ED62001D6A45 /* Mango@2x.png */; };
-		CF8DCE2D24D1ED63001D6A45 /* Mango@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC024D1ED62001D6A45 /* Mango@2x.png */; };
-		CF8DCE2E24D1ED63001D6A45 /* Mango@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC024D1ED62001D6A45 /* Mango@2x.png */; };
-		CF8DCE2F24D1ED63001D6A45 /* Mango@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC024D1ED62001D6A45 /* Mango@2x.png */; };
-		CF8DCE3024D1ED63001D6A45 /* PlumpPurple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC124D1ED62001D6A45 /* PlumpPurple@3x.png */; };
-		CF8DCE3124D1ED63001D6A45 /* PlumpPurple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC124D1ED62001D6A45 /* PlumpPurple@3x.png */; };
-		CF8DCE3224D1ED63001D6A45 /* PlumpPurple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC124D1ED62001D6A45 /* PlumpPurple@3x.png */; };
-		CF8DCE3324D1ED63001D6A45 /* PlumpPurple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC124D1ED62001D6A45 /* PlumpPurple@3x.png */; };
-		CF8DCE3424D1ED63001D6A45 /* 8-Bit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC224D1ED62001D6A45 /* 8-Bit@2x.png */; };
-		CF8DCE3524D1ED63001D6A45 /* 8-Bit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC224D1ED62001D6A45 /* 8-Bit@2x.png */; };
-		CF8DCE3624D1ED63001D6A45 /* 8-Bit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC224D1ED62001D6A45 /* 8-Bit@2x.png */; };
-		CF8DCE3724D1ED63001D6A45 /* 8-Bit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC224D1ED62001D6A45 /* 8-Bit@2x.png */; };
-		CF8DCE3824D1ED63001D6A45 /* MightyUmbrellaiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC324D1ED62001D6A45 /* MightyUmbrellaiPad@2x.png */; };
-		CF8DCE3924D1ED63001D6A45 /* MightyUmbrellaiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC324D1ED62001D6A45 /* MightyUmbrellaiPad@2x.png */; };
-		CF8DCE3A24D1ED63001D6A45 /* MightyUmbrellaiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC324D1ED62001D6A45 /* MightyUmbrellaiPad@2x.png */; };
-		CF8DCE3B24D1ED63001D6A45 /* MightyUmbrellaiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC324D1ED62001D6A45 /* MightyUmbrellaiPad@2x.png */; };
-		CF8DCE3C24D1ED63001D6A45 /* RaindropiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC424D1ED62001D6A45 /* RaindropiPad@2x.png */; };
-		CF8DCE3D24D1ED63001D6A45 /* RaindropiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC424D1ED62001D6A45 /* RaindropiPad@2x.png */; };
-		CF8DCE3E24D1ED63001D6A45 /* RaindropiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC424D1ED62001D6A45 /* RaindropiPad@2x.png */; };
-		CF8DCE3F24D1ED63001D6A45 /* RaindropiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC424D1ED62001D6A45 /* RaindropiPad@2x.png */; };
-		CF8DCE4024D1ED63001D6A45 /* Mango@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC524D1ED62001D6A45 /* Mango@3x.png */; };
-		CF8DCE4124D1ED63001D6A45 /* Mango@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC524D1ED62001D6A45 /* Mango@3x.png */; };
-		CF8DCE4224D1ED63001D6A45 /* Mango@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC524D1ED62001D6A45 /* Mango@3x.png */; };
-		CF8DCE4324D1ED63001D6A45 /* Mango@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC524D1ED62001D6A45 /* Mango@3x.png */; };
-		CF8DCE4424D1ED63001D6A45 /* PlumpPurpleiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC624D1ED62001D6A45 /* PlumpPurpleiPad@2x.png */; };
-		CF8DCE4524D1ED63001D6A45 /* PlumpPurpleiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC624D1ED62001D6A45 /* PlumpPurpleiPad@2x.png */; };
-		CF8DCE4624D1ED63001D6A45 /* PlumpPurpleiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC624D1ED62001D6A45 /* PlumpPurpleiPad@2x.png */; };
-		CF8DCE4724D1ED63001D6A45 /* PlumpPurpleiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC624D1ED62001D6A45 /* PlumpPurpleiPad@2x.png */; };
-		CF8DCE4824D1ED63001D6A45 /* LightsOut@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC724D1ED62001D6A45 /* LightsOut@3x.png */; };
-		CF8DCE4924D1ED63001D6A45 /* LightsOut@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC724D1ED62001D6A45 /* LightsOut@3x.png */; };
-		CF8DCE4A24D1ED63001D6A45 /* LightsOut@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC724D1ED62001D6A45 /* LightsOut@3x.png */; };
-		CF8DCE4B24D1ED63001D6A45 /* LightsOut@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC724D1ED62001D6A45 /* LightsOut@3x.png */; };
-		CF8DCE4C24D1ED63001D6A45 /* CarminePink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC824D1ED62001D6A45 /* CarminePink@2x.png */; };
-		CF8DCE4D24D1ED63001D6A45 /* CarminePink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC824D1ED62001D6A45 /* CarminePink@2x.png */; };
-		CF8DCE4E24D1ED63001D6A45 /* CarminePink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC824D1ED62001D6A45 /* CarminePink@2x.png */; };
-		CF8DCE4F24D1ED63001D6A45 /* CarminePink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC824D1ED62001D6A45 /* CarminePink@2x.png */; };
-		CF8DCE5024D1ED63001D6A45 /* MaximumRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC924D1ED62001D6A45 /* MaximumRed@2x.png */; };
-		CF8DCE5124D1ED63001D6A45 /* MaximumRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC924D1ED62001D6A45 /* MaximumRed@2x.png */; };
-		CF8DCE5224D1ED63001D6A45 /* MaximumRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC924D1ED62001D6A45 /* MaximumRed@2x.png */; };
-		CF8DCE5324D1ED63001D6A45 /* MaximumRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDC924D1ED62001D6A45 /* MaximumRed@2x.png */; };
-		CF8DCE5424D1ED63001D6A45 /* TwilightZoneiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCA24D1ED62001D6A45 /* TwilightZoneiPad@2x.png */; };
-		CF8DCE5524D1ED63001D6A45 /* TwilightZoneiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCA24D1ED62001D6A45 /* TwilightZoneiPad@2x.png */; };
-		CF8DCE5624D1ED63001D6A45 /* TwilightZoneiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCA24D1ED62001D6A45 /* TwilightZoneiPad@2x.png */; };
-		CF8DCE5724D1ED63001D6A45 /* TwilightZoneiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCA24D1ED62001D6A45 /* TwilightZoneiPad@2x.png */; };
-		CF8DCE5824D1ED63001D6A45 /* DodgerBluePad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCB24D1ED62001D6A45 /* DodgerBluePad@3x.png */; };
-		CF8DCE5924D1ED63001D6A45 /* DodgerBluePad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCB24D1ED62001D6A45 /* DodgerBluePad@3x.png */; };
-		CF8DCE5A24D1ED63001D6A45 /* DodgerBluePad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCB24D1ED62001D6A45 /* DodgerBluePad@3x.png */; };
-		CF8DCE5B24D1ED63001D6A45 /* DodgerBluePad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCB24D1ED62001D6A45 /* DodgerBluePad@3x.png */; };
-		CF8DCE5C24D1ED63001D6A45 /* 8-BitiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCC24D1ED62001D6A45 /* 8-BitiPad@3x.png */; };
-		CF8DCE5D24D1ED63001D6A45 /* 8-BitiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCC24D1ED62001D6A45 /* 8-BitiPad@3x.png */; };
-		CF8DCE5E24D1ED63001D6A45 /* 8-BitiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCC24D1ED62001D6A45 /* 8-BitiPad@3x.png */; };
-		CF8DCE5F24D1ED63001D6A45 /* 8-BitiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCC24D1ED62001D6A45 /* 8-BitiPad@3x.png */; };
-		CF8DCE6024D1ED63001D6A45 /* TwilightZone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCD24D1ED62001D6A45 /* TwilightZone@2x.png */; };
-		CF8DCE6124D1ED63001D6A45 /* TwilightZone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCD24D1ED62001D6A45 /* TwilightZone@2x.png */; };
-		CF8DCE6224D1ED63001D6A45 /* TwilightZone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCD24D1ED62001D6A45 /* TwilightZone@2x.png */; };
-		CF8DCE6324D1ED63001D6A45 /* TwilightZone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCD24D1ED62001D6A45 /* TwilightZone@2x.png */; };
-		CF8DCE6424D1ED63001D6A45 /* MangoiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCE24D1ED62001D6A45 /* MangoiPad@3x.png */; };
-		CF8DCE6524D1ED63001D6A45 /* MangoiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCE24D1ED62001D6A45 /* MangoiPad@3x.png */; };
-		CF8DCE6624D1ED63001D6A45 /* MangoiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCE24D1ED62001D6A45 /* MangoiPad@3x.png */; };
-		CF8DCE6724D1ED63001D6A45 /* MangoiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCE24D1ED62001D6A45 /* MangoiPad@3x.png */; };
-		CF8DCE6824D1ED63001D6A45 /* MightyUmbrella@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCF24D1ED62001D6A45 /* MightyUmbrella@2x.png */; };
-		CF8DCE6924D1ED63001D6A45 /* MightyUmbrella@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCF24D1ED62001D6A45 /* MightyUmbrella@2x.png */; };
-		CF8DCE6A24D1ED63001D6A45 /* MightyUmbrella@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCF24D1ED62001D6A45 /* MightyUmbrella@2x.png */; };
-		CF8DCE6B24D1ED63001D6A45 /* MightyUmbrella@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDCF24D1ED62001D6A45 /* MightyUmbrella@2x.png */; };
-		CF8DCE6C24D1ED63001D6A45 /* Raindrop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD024D1ED62001D6A45 /* Raindrop@3x.png */; };
-		CF8DCE6D24D1ED63001D6A45 /* Raindrop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD024D1ED62001D6A45 /* Raindrop@3x.png */; };
-		CF8DCE6E24D1ED63001D6A45 /* Raindrop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD024D1ED62001D6A45 /* Raindrop@3x.png */; };
-		CF8DCE6F24D1ED63001D6A45 /* Raindrop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD024D1ED62001D6A45 /* Raindrop@3x.png */; };
-		CF8DCE7024D1ED63001D6A45 /* RaindropiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD124D1ED62001D6A45 /* RaindropiPad@3x.png */; };
-		CF8DCE7124D1ED63001D6A45 /* RaindropiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD124D1ED62001D6A45 /* RaindropiPad@3x.png */; };
-		CF8DCE7224D1ED63001D6A45 /* RaindropiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD124D1ED62001D6A45 /* RaindropiPad@3x.png */; };
-		CF8DCE7324D1ED63001D6A45 /* RaindropiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD124D1ED62001D6A45 /* RaindropiPad@3x.png */; };
-		CF8DCE7424D1ED63001D6A45 /* MangoiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD224D1ED62001D6A45 /* MangoiPad@2x.png */; };
-		CF8DCE7524D1ED63001D6A45 /* MangoiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD224D1ED62001D6A45 /* MangoiPad@2x.png */; };
-		CF8DCE7624D1ED63001D6A45 /* MangoiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD224D1ED62001D6A45 /* MangoiPad@2x.png */; };
-		CF8DCE7724D1ED63001D6A45 /* MangoiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD224D1ED62001D6A45 /* MangoiPad@2x.png */; };
-		CF8DCE7824D1ED63001D6A45 /* SpringGreeniPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD324D1ED62001D6A45 /* SpringGreeniPad@3x.png */; };
-		CF8DCE7924D1ED63001D6A45 /* SpringGreeniPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD324D1ED62001D6A45 /* SpringGreeniPad@3x.png */; };
-		CF8DCE7A24D1ED63001D6A45 /* SpringGreeniPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD324D1ED62001D6A45 /* SpringGreeniPad@3x.png */; };
-		CF8DCE7B24D1ED63001D6A45 /* SpringGreeniPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD324D1ED62001D6A45 /* SpringGreeniPad@3x.png */; };
-		CF8DCE7C24D1ED63001D6A45 /* LightsOut@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD424D1ED63001D6A45 /* LightsOut@2x.png */; };
-		CF8DCE7D24D1ED63001D6A45 /* LightsOut@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD424D1ED63001D6A45 /* LightsOut@2x.png */; };
-		CF8DCE7E24D1ED63001D6A45 /* LightsOut@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD424D1ED63001D6A45 /* LightsOut@2x.png */; };
-		CF8DCE7F24D1ED63001D6A45 /* LightsOut@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD424D1ED63001D6A45 /* LightsOut@2x.png */; };
-		CF8DCE8024D1ED63001D6A45 /* TwilightZoneiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD524D1ED63001D6A45 /* TwilightZoneiPad@3x.png */; };
-		CF8DCE8124D1ED63001D6A45 /* TwilightZoneiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD524D1ED63001D6A45 /* TwilightZoneiPad@3x.png */; };
-		CF8DCE8224D1ED63001D6A45 /* TwilightZoneiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD524D1ED63001D6A45 /* TwilightZoneiPad@3x.png */; };
-		CF8DCE8324D1ED63001D6A45 /* TwilightZoneiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD524D1ED63001D6A45 /* TwilightZoneiPad@3x.png */; };
-		CF8DCE8424D1ED63001D6A45 /* ThunderstormiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD624D1ED63001D6A45 /* ThunderstormiPad@2x.png */; };
-		CF8DCE8524D1ED63001D6A45 /* ThunderstormiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD624D1ED63001D6A45 /* ThunderstormiPad@2x.png */; };
-		CF8DCE8624D1ED63001D6A45 /* ThunderstormiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD624D1ED63001D6A45 /* ThunderstormiPad@2x.png */; };
-		CF8DCE8724D1ED63001D6A45 /* ThunderstormiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD624D1ED63001D6A45 /* ThunderstormiPad@2x.png */; };
-		CF8DCE8824D1ED63001D6A45 /* 8-BitiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD724D1ED63001D6A45 /* 8-BitiPad@2x.png */; };
-		CF8DCE8924D1ED63001D6A45 /* 8-BitiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD724D1ED63001D6A45 /* 8-BitiPad@2x.png */; };
-		CF8DCE8A24D1ED63001D6A45 /* 8-BitiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD724D1ED63001D6A45 /* 8-BitiPad@2x.png */; };
-		CF8DCE8B24D1ED63001D6A45 /* 8-BitiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD724D1ED63001D6A45 /* 8-BitiPad@2x.png */; };
-		CF8DCE8C24D1ED63001D6A45 /* TwilightZone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD824D1ED63001D6A45 /* TwilightZone@3x.png */; };
-		CF8DCE8D24D1ED63001D6A45 /* TwilightZone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD824D1ED63001D6A45 /* TwilightZone@3x.png */; };
-		CF8DCE8E24D1ED63001D6A45 /* TwilightZone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD824D1ED63001D6A45 /* TwilightZone@3x.png */; };
-		CF8DCE8F24D1ED63001D6A45 /* TwilightZone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD824D1ED63001D6A45 /* TwilightZone@3x.png */; };
-		CF8DCE9024D1ED63001D6A45 /* CarminePinkiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD924D1ED63001D6A45 /* CarminePinkiPad@3x.png */; };
-		CF8DCE9124D1ED63001D6A45 /* CarminePinkiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD924D1ED63001D6A45 /* CarminePinkiPad@3x.png */; };
-		CF8DCE9224D1ED63001D6A45 /* CarminePinkiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD924D1ED63001D6A45 /* CarminePinkiPad@3x.png */; };
-		CF8DCE9324D1ED63001D6A45 /* CarminePinkiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDD924D1ED63001D6A45 /* CarminePinkiPad@3x.png */; };
-		CF8DCE9424D1ED63001D6A45 /* SpringGreeniPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDDA24D1ED63001D6A45 /* SpringGreeniPad@2x.png */; };
-		CF8DCE9524D1ED63001D6A45 /* SpringGreeniPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDDA24D1ED63001D6A45 /* SpringGreeniPad@2x.png */; };
-		CF8DCE9624D1ED63001D6A45 /* SpringGreeniPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDDA24D1ED63001D6A45 /* SpringGreeniPad@2x.png */; };
-		CF8DCE9724D1ED63001D6A45 /* SpringGreeniPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDDA24D1ED63001D6A45 /* SpringGreeniPad@2x.png */; };
-		CF8DCE9824D1ED63001D6A45 /* LightsOutiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDDB24D1ED63001D6A45 /* LightsOutiPad@2x.png */; };
-		CF8DCE9924D1ED63001D6A45 /* LightsOutiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDDB24D1ED63001D6A45 /* LightsOutiPad@2x.png */; };
-		CF8DCE9A24D1ED63001D6A45 /* LightsOutiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDDB24D1ED63001D6A45 /* LightsOutiPad@2x.png */; };
-		CF8DCE9B24D1ED63001D6A45 /* LightsOutiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8DCDDB24D1ED63001D6A45 /* LightsOutiPad@2x.png */; };
 		CF9477492167DF0200DA8B38 /* SiriShortcutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9477482167DF0200DA8B38 /* SiriShortcutsTableViewController.swift */; };
 		CF94774B2167E48E00DA8B38 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF94774A2167E48E00DA8B38 /* Intents.framework */; };
 		CF9477532168080900DA8B38 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9477522168080900DA8B38 /* IntentHandler.swift */; };
@@ -265,6 +69,62 @@
 		CFD2DB9D24D8AA9900CB5EA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD2DB9C24D8AA9900CB5EA0 /* Assets.xcassets */; };
 		CFD2DBA224D8AA9900CB5EA0 /* Cumulus Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CFD2DB8324D8AA9700CB5EA0 /* Cumulus Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CFD5E8FC20E669B0002A5F0C /* AcknowledgementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD5E8FB20E669B0002A5F0C /* AcknowledgementsViewController.swift */; };
+		CFD6674424E3251600CFB98D /* ThunderstormiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6670C24E3251600CFB98D /* ThunderstormiPad@3x.png */; };
+		CFD6674524E3251600CFB98D /* LightsOut@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6670D24E3251600CFB98D /* LightsOut@2x.png */; };
+		CFD6674624E3251600CFB98D /* SpringGreeniPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6670E24E3251600CFB98D /* SpringGreeniPad@2x.png */; };
+		CFD6674724E3251600CFB98D /* 8-BitiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6670F24E3251600CFB98D /* 8-BitiPad@2x.png */; };
+		CFD6674824E3251600CFB98D /* 8-Bit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671024E3251600CFB98D /* 8-Bit@2x.png */; };
+		CFD6674924E3251600CFB98D /* PlumpPurple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671124E3251600CFB98D /* PlumpPurple@3x.png */; };
+		CFD6674A24E3251600CFB98D /* PlumpPurple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671224E3251600CFB98D /* PlumpPurple@2x.png */; };
+		CFD6674B24E3251600CFB98D /* 8-BitiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671324E3251600CFB98D /* 8-BitiPad@3x.png */; };
+		CFD6674C24E3251600CFB98D /* 8-Bit@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671424E3251600CFB98D /* 8-Bit@3x.png */; };
+		CFD6674D24E3251600CFB98D /* SpringGreeniPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671524E3251600CFB98D /* SpringGreeniPad@3x.png */; };
+		CFD6674E24E3251600CFB98D /* LightsOut@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671624E3251600CFB98D /* LightsOut@3x.png */; };
+		CFD6674F24E3251600CFB98D /* ThunderstormiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671724E3251600CFB98D /* ThunderstormiPad@2x.png */; };
+		CFD6675024E3251600CFB98D /* MightyUmbrella@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671824E3251600CFB98D /* MightyUmbrella@2x.png */; };
+		CFD6675124E3251600CFB98D /* SpringGreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671924E3251600CFB98D /* SpringGreen@3x.png */; };
+		CFD6675224E3251600CFB98D /* WindyDay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671A24E3251600CFB98D /* WindyDay@2x.png */; };
+		CFD6675324E3251600CFB98D /* RainDropiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671B24E3251600CFB98D /* RainDropiPad@3x.png */; };
+		CFD6675424E3251600CFB98D /* Mango@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671C24E3251600CFB98D /* Mango@3x.png */; };
+		CFD6675524E3251600CFB98D /* DodgerBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671D24E3251600CFB98D /* DodgerBlue@2x.png */; };
+		CFD6675624E3251600CFB98D /* DodgerBlue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671E24E3251600CFB98D /* DodgerBlue@3x.png */; };
+		CFD6675724E3251600CFB98D /* Mango@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671F24E3251600CFB98D /* Mango@2x.png */; };
+		CFD6675824E3251600CFB98D /* RainDropiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672024E3251600CFB98D /* RainDropiPad@2x.png */; };
+		CFD6675924E3251600CFB98D /* WindyDay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672124E3251600CFB98D /* WindyDay@3x.png */; };
+		CFD6675A24E3251600CFB98D /* SpringGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672224E3251600CFB98D /* SpringGreen@2x.png */; };
+		CFD6675B24E3251600CFB98D /* MightyUmbrella@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672324E3251600CFB98D /* MightyUmbrella@3x.png */; };
+		CFD6675C24E3251600CFB98D /* MangoiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672424E3251600CFB98D /* MangoiPad@3x.png */; };
+		CFD6675D24E3251600CFB98D /* TwilightZone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672524E3251600CFB98D /* TwilightZone@2x.png */; };
+		CFD6675E24E3251600CFB98D /* RainDrop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672624E3251600CFB98D /* RainDrop@3x.png */; };
+		CFD6675F24E3251600CFB98D /* TwilightZoneiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672724E3251600CFB98D /* TwilightZoneiPad@2x.png */; };
+		CFD6676024E3251600CFB98D /* WindyDayiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672824E3251600CFB98D /* WindyDayiPad@2x.png */; };
+		CFD6676124E3251600CFB98D /* LightsOutiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672924E3251600CFB98D /* LightsOutiPad@2x.png */; };
+		CFD6676224E3251600CFB98D /* OrchidiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672A24E3251600CFB98D /* OrchidiPad@3x.png */; };
+		CFD6676324E3251600CFB98D /* OrchidiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672B24E3251600CFB98D /* OrchidiPad@2x.png */; };
+		CFD6676424E3251600CFB98D /* LightsOutiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672C24E3251600CFB98D /* LightsOutiPad@3x.png */; };
+		CFD6676524E3251600CFB98D /* WindyDayiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672D24E3251600CFB98D /* WindyDayiPad@3x.png */; };
+		CFD6676624E3251600CFB98D /* TwilightZoneiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672E24E3251600CFB98D /* TwilightZoneiPad@3x.png */; };
+		CFD6676724E3251600CFB98D /* RainDrop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672F24E3251600CFB98D /* RainDrop@2x.png */; };
+		CFD6676824E3251600CFB98D /* TwilightZone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673024E3251600CFB98D /* TwilightZone@3x.png */; };
+		CFD6676924E3251600CFB98D /* MangoiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673124E3251600CFB98D /* MangoiPad@2x.png */; };
+		CFD6676A24E3251600CFB98D /* Moonlight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673224E3251600CFB98D /* Moonlight@3x.png */; };
+		CFD6676B24E3251600CFB98D /* DodgerBlueiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673324E3251600CFB98D /* DodgerBlueiPad@2x.png */; };
+		CFD6676C24E3251600CFB98D /* MightyUmbrellaiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673424E3251600CFB98D /* MightyUmbrellaiPad@3x.png */; };
+		CFD6676D24E3251600CFB98D /* Orchid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673524E3251600CFB98D /* Orchid@2x.png */; };
+		CFD6676E24E3251600CFB98D /* MaximumRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673624E3251600CFB98D /* MaximumRed@2x.png */; };
+		CFD6676F24E3251600CFB98D /* PlumpPurpleiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673724E3251600CFB98D /* PlumpPurpleiPad@2x.png */; };
+		CFD6677024E3251600CFB98D /* MoonlightiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673824E3251600CFB98D /* MoonlightiPad@3x.png */; };
+		CFD6677124E3251600CFB98D /* Thunderstorm@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673924E3251600CFB98D /* Thunderstorm@3x.png */; };
+		CFD6677224E3251600CFB98D /* MaximumRediPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673A24E3251600CFB98D /* MaximumRediPad@3x.png */; };
+		CFD6677324E3251600CFB98D /* MaximumRediPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673B24E3251600CFB98D /* MaximumRediPad@2x.png */; };
+		CFD6677424E3251600CFB98D /* DodgerBluePad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673C24E3251600CFB98D /* DodgerBluePad@3x.png */; };
+		CFD6677524E3251600CFB98D /* Thunderstorm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673D24E3251600CFB98D /* Thunderstorm@2x.png */; };
+		CFD6677624E3251600CFB98D /* MoonlightiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673E24E3251600CFB98D /* MoonlightiPad@2x.png */; };
+		CFD6677724E3251600CFB98D /* PlumpPurpleiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673F24E3251600CFB98D /* PlumpPurpleiPad@3x.png */; };
+		CFD6677824E3251600CFB98D /* MaximumRed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6674024E3251600CFB98D /* MaximumRed@3x.png */; };
+		CFD6677924E3251600CFB98D /* Orchid@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6674124E3251600CFB98D /* Orchid@3x.png */; };
+		CFD6677A24E3251600CFB98D /* MightyUmbrellaiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6674224E3251600CFB98D /* MightyUmbrellaiPad@2x.png */; };
+		CFD6677B24E3251600CFB98D /* Moonlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6674324E3251600CFB98D /* Moonlight@2x.png */; };
 		CFD790DA2151C4CD007E489D /* ColorThemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD790D92151C4CD007E489D /* ColorThemeTableViewController.swift */; };
 		CFDEEC0A20E26ED900BA5EA5 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFDEEC0920E26ED900BA5EA5 /* NotificationCenter.framework */; };
 		CFDEEC1020E26ED900BA5EA5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFDEEC0E20E26ED900BA5EA5 /* MainInterface.storyboard */; };
@@ -277,6 +137,7 @@
 		CFEE78B32470516A001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
 		CFF0A964242E9A2500FDDAF1 /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF824C3820E84EEB00E5F0A7 /* Locations.xcdatamodeld */; };
 		CFFB787720DF0B44008216F8 /* License in Resources */ = {isa = PBXBuildFile; fileRef = CFFB787620DF0B44008216F8 /* License */; };
+		E601DF3113985919CB2A3976 /* libPods-Cumulus Watch Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFB64F7FB172E23BB4578BF /* libPods-Cumulus Watch Extension.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -356,14 +217,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		44E339D8E54C1B7793F75051 /* Pods_Cumulus_GetForecastIntentUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_GetForecastIntentUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D8FF3C00459CA85D652C4D3 /* Pods-Cumulus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus/Pods-Cumulus.debug.xcconfig"; sourceTree = "<group>"; };
-		527721E71D9EA3845C8ECED7 /* Pods-Cumulus-GetForecastIntent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-GetForecastIntent.release.xcconfig"; path = "Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent.release.xcconfig"; sourceTree = "<group>"; };
-		553DEF07F3E32F82F588F305 /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-GetForecastIntentUI.release.xcconfig"; path = "Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI.release.xcconfig"; sourceTree = "<group>"; };
-		8290B2A54BCE97E1B9D5D80D /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-GetForecastIntent.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent.debug.xcconfig"; sourceTree = "<group>"; };
-		90D000CACEE85CFC1FE35356 /* Pods-Cumulus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus.release.xcconfig"; path = "Target Support Files/Pods-Cumulus/Pods-Cumulus.release.xcconfig"; sourceTree = "<group>"; };
-		99BD9EF9D7972BFE69F2B2C0 /* Pods-Cumulus-Cumulus Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-Cumulus Today.release.xcconfig"; path = "Target Support Files/Pods-Cumulus-Cumulus Today/Pods-Cumulus-Cumulus Today.release.xcconfig"; sourceTree = "<group>"; };
-		AD1320719B4CD614F66DA786 /* Pods_Cumulus_GetForecastIntent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_GetForecastIntent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1244FBDBACE3E02DC9BF94C1 /* Pods_Cumulus_GetForecastIntent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_GetForecastIntent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A6D4CF8C042312DCE77AB24 /* Pods-Cumulus-Cumulus Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-Cumulus Today.release.xcconfig"; path = "Target Support Files/Pods-Cumulus-Cumulus Today/Pods-Cumulus-Cumulus Today.release.xcconfig"; sourceTree = "<group>"; };
+		3463C4D9EF939EEF8FE4DB15 /* Pods-Cumulus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus/Pods-Cumulus.debug.xcconfig"; sourceTree = "<group>"; };
+		36DC2E72BF58325956AA20C1 /* Pods_Cumulus_Cumulus_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_Cumulus_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DFB64F7FB172E23BB4578BF /* libPods-Cumulus Watch Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cumulus Watch Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D568BACF01E8D784475C3EA /* Pods-Cumulus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus.release.xcconfig"; path = "Target Support Files/Pods-Cumulus/Pods-Cumulus.release.xcconfig"; sourceTree = "<group>"; };
+		7376BBA1043EF8E103A84320 /* Pods_Cumulus_GetForecastIntentUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_GetForecastIntentUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9258C92A02A923C33EDA2A5 /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-GetForecastIntent.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent.debug.xcconfig"; sourceTree = "<group>"; };
+		B17F9F663088780BF56633F6 /* Pods-Cumulus-GetForecastIntent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-GetForecastIntent.release.xcconfig"; path = "Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent.release.xcconfig"; sourceTree = "<group>"; };
+		C41E7862564091B6C3999365 /* Pods-Cumulus Watch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus Watch Extension.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus Watch Extension/Pods-Cumulus Watch Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		C63EE8141E9444611CB74A0A /* Pods_Cumulus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA5D7C1194DB905D6480B445 /* Pods-Cumulus Watch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus Watch Extension.release.xcconfig"; path = "Target Support Files/Pods-Cumulus Watch Extension/Pods-Cumulus Watch Extension.release.xcconfig"; sourceTree = "<group>"; };
 		CF1DF2DE2169B29F00BB233D /* GetForecastIntent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GetForecastIntent.entitlements; sourceTree = "<group>"; };
 		CF1DF2DF2169B2B100BB233D /* GetForecastIntentUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GetForecastIntentUI.entitlements; sourceTree = "<group>"; };
 		CF2C9313217CD08C00CC0F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/AppIntentVocabulary.plist; sourceTree = "<group>"; };
@@ -371,7 +236,6 @@
 		CF4A0E5E2108B1B30061CAAD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CF4A0E602108B5580061CAAD /* AppIconTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconTableViewController.swift; sourceTree = "<group>"; };
 		CF52ECD8210FA29D00A605A4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		CF55D7F22461CC67001E1683 /* CurrentWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherData.swift; sourceTree = "<group>"; };
 		CF5EB7B92435778F006FF5A5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CF602EA6247ED28E00E05491 /* LoadingScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenModel.swift; sourceTree = "<group>"; };
 		CF6E4A9E20DACFD8002349A7 /* Cumulus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cumulus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -381,54 +245,6 @@
 		CF6E4AA820DACFD9002349A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF6E4AAD20DACFD9002349A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF824C3920E84EEB00E5F0A7 /* Locations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Locations.xcdatamodel; sourceTree = "<group>"; };
-		CF8DCDAC24D1ED61001D6A45 /* PlumpPurple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PlumpPurple@2x.png"; path = "../../../../Icon/Dynamic App Icon/PlumpPurple@2x.png"; sourceTree = "<group>"; };
-		CF8DCDAD24D1ED61001D6A45 /* SpringGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SpringGreen@2x.png"; path = "../../../../Icon/Dynamic App Icon/SpringGreen@2x.png"; sourceTree = "<group>"; };
-		CF8DCDAE24D1ED61001D6A45 /* DodgerBlueiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DodgerBlueiPad@2x.png"; path = "../../../../Icon/Dynamic App Icon/DodgerBlueiPad@2x.png"; sourceTree = "<group>"; };
-		CF8DCDAF24D1ED61001D6A45 /* SpringGreen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SpringGreen@3x.png"; path = "../../../../Icon/Dynamic App Icon/SpringGreen@3x.png"; sourceTree = "<group>"; };
-		CF8DCDB024D1ED61001D6A45 /* MightyUmbrellaiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MightyUmbrellaiPad@3x.png"; path = "../../../../Icon/Dynamic App Icon/MightyUmbrellaiPad@3x.png"; sourceTree = "<group>"; };
-		CF8DCDB124D1ED61001D6A45 /* CarminePink@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CarminePink@3x.png"; path = "../../../../Icon/Dynamic App Icon/CarminePink@3x.png"; sourceTree = "<group>"; };
-		CF8DCDB224D1ED61001D6A45 /* DodgerBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DodgerBlue@2x.png"; path = "../../../../Icon/Dynamic App Icon/DodgerBlue@2x.png"; sourceTree = "<group>"; };
-		CF8DCDB324D1ED61001D6A45 /* Thunderstorm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Thunderstorm@2x.png"; path = "../../../../Icon/Dynamic App Icon/Thunderstorm@2x.png"; sourceTree = "<group>"; };
-		CF8DCDB424D1ED61001D6A45 /* MaximumRediPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MaximumRediPad@3x.png"; path = "../../../../Icon/Dynamic App Icon/MaximumRediPad@3x.png"; sourceTree = "<group>"; };
-		CF8DCDB524D1ED61001D6A45 /* 8-Bit@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "8-Bit@3x.png"; path = "../../../../Icon/Dynamic App Icon/8-Bit@3x.png"; sourceTree = "<group>"; };
-		CF8DCDB624D1ED61001D6A45 /* MaximumRed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MaximumRed@3x.png"; path = "../../../../Icon/Dynamic App Icon/MaximumRed@3x.png"; sourceTree = "<group>"; };
-		CF8DCDB724D1ED61001D6A45 /* MightyUmbrella@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MightyUmbrella@3x.png"; path = "../../../../Icon/Dynamic App Icon/MightyUmbrella@3x.png"; sourceTree = "<group>"; };
-		CF8DCDB824D1ED61001D6A45 /* Thunderstorm@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Thunderstorm@3x.png"; path = "../../../../Icon/Dynamic App Icon/Thunderstorm@3x.png"; sourceTree = "<group>"; };
-		CF8DCDB924D1ED61001D6A45 /* PlumpPurpleiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PlumpPurpleiPad@3x.png"; path = "../../../../Icon/Dynamic App Icon/PlumpPurpleiPad@3x.png"; sourceTree = "<group>"; };
-		CF8DCDBA24D1ED61001D6A45 /* Raindrop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Raindrop@2x.png"; path = "../../../../Icon/Dynamic App Icon/Raindrop@2x.png"; sourceTree = "<group>"; };
-		CF8DCDBB24D1ED61001D6A45 /* CarminePinkiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CarminePinkiPad@2x.png"; path = "../../../../Icon/Dynamic App Icon/CarminePinkiPad@2x.png"; sourceTree = "<group>"; };
-		CF8DCDBC24D1ED61001D6A45 /* ThunderstormiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ThunderstormiPad@3x.png"; path = "../../../../Icon/Dynamic App Icon/ThunderstormiPad@3x.png"; sourceTree = "<group>"; };
-		CF8DCDBD24D1ED61001D6A45 /* DodgerBlue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DodgerBlue@3x.png"; path = "../../../../Icon/Dynamic App Icon/DodgerBlue@3x.png"; sourceTree = "<group>"; };
-		CF8DCDBE24D1ED61001D6A45 /* MaximumRediPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MaximumRediPad@2x.png"; path = "../../../../Icon/Dynamic App Icon/MaximumRediPad@2x.png"; sourceTree = "<group>"; };
-		CF8DCDBF24D1ED62001D6A45 /* LightsOutiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LightsOutiPad@3x.png"; path = "../../../../Icon/Dynamic App Icon/LightsOutiPad@3x.png"; sourceTree = "<group>"; };
-		CF8DCDC024D1ED62001D6A45 /* Mango@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Mango@2x.png"; path = "../../../../Icon/Dynamic App Icon/Mango@2x.png"; sourceTree = "<group>"; };
-		CF8DCDC124D1ED62001D6A45 /* PlumpPurple@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PlumpPurple@3x.png"; path = "../../../../Icon/Dynamic App Icon/PlumpPurple@3x.png"; sourceTree = "<group>"; };
-		CF8DCDC224D1ED62001D6A45 /* 8-Bit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "8-Bit@2x.png"; path = "../../../../Icon/Dynamic App Icon/8-Bit@2x.png"; sourceTree = "<group>"; };
-		CF8DCDC324D1ED62001D6A45 /* MightyUmbrellaiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MightyUmbrellaiPad@2x.png"; path = "../../../../Icon/Dynamic App Icon/MightyUmbrellaiPad@2x.png"; sourceTree = "<group>"; };
-		CF8DCDC424D1ED62001D6A45 /* RaindropiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "RaindropiPad@2x.png"; path = "../../../../Icon/Dynamic App Icon/RaindropiPad@2x.png"; sourceTree = "<group>"; };
-		CF8DCDC524D1ED62001D6A45 /* Mango@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Mango@3x.png"; path = "../../../../Icon/Dynamic App Icon/Mango@3x.png"; sourceTree = "<group>"; };
-		CF8DCDC624D1ED62001D6A45 /* PlumpPurpleiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PlumpPurpleiPad@2x.png"; path = "../../../../Icon/Dynamic App Icon/PlumpPurpleiPad@2x.png"; sourceTree = "<group>"; };
-		CF8DCDC724D1ED62001D6A45 /* LightsOut@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LightsOut@3x.png"; path = "../../../../Icon/Dynamic App Icon/LightsOut@3x.png"; sourceTree = "<group>"; };
-		CF8DCDC824D1ED62001D6A45 /* CarminePink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CarminePink@2x.png"; path = "../../../../Icon/Dynamic App Icon/CarminePink@2x.png"; sourceTree = "<group>"; };
-		CF8DCDC924D1ED62001D6A45 /* MaximumRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MaximumRed@2x.png"; path = "../../../../Icon/Dynamic App Icon/MaximumRed@2x.png"; sourceTree = "<group>"; };
-		CF8DCDCA24D1ED62001D6A45 /* TwilightZoneiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TwilightZoneiPad@2x.png"; path = "../../../../Icon/Dynamic App Icon/TwilightZoneiPad@2x.png"; sourceTree = "<group>"; };
-		CF8DCDCB24D1ED62001D6A45 /* DodgerBluePad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DodgerBluePad@3x.png"; path = "../../../../Icon/Dynamic App Icon/DodgerBluePad@3x.png"; sourceTree = "<group>"; };
-		CF8DCDCC24D1ED62001D6A45 /* 8-BitiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "8-BitiPad@3x.png"; path = "../../../../Icon/Dynamic App Icon/8-BitiPad@3x.png"; sourceTree = "<group>"; };
-		CF8DCDCD24D1ED62001D6A45 /* TwilightZone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TwilightZone@2x.png"; path = "../../../../Icon/Dynamic App Icon/TwilightZone@2x.png"; sourceTree = "<group>"; };
-		CF8DCDCE24D1ED62001D6A45 /* MangoiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MangoiPad@3x.png"; path = "../../../../Icon/Dynamic App Icon/MangoiPad@3x.png"; sourceTree = "<group>"; };
-		CF8DCDCF24D1ED62001D6A45 /* MightyUmbrella@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MightyUmbrella@2x.png"; path = "../../../../Icon/Dynamic App Icon/MightyUmbrella@2x.png"; sourceTree = "<group>"; };
-		CF8DCDD024D1ED62001D6A45 /* Raindrop@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Raindrop@3x.png"; path = "../../../../Icon/Dynamic App Icon/Raindrop@3x.png"; sourceTree = "<group>"; };
-		CF8DCDD124D1ED62001D6A45 /* RaindropiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "RaindropiPad@3x.png"; path = "../../../../Icon/Dynamic App Icon/RaindropiPad@3x.png"; sourceTree = "<group>"; };
-		CF8DCDD224D1ED62001D6A45 /* MangoiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MangoiPad@2x.png"; path = "../../../../Icon/Dynamic App Icon/MangoiPad@2x.png"; sourceTree = "<group>"; };
-		CF8DCDD324D1ED62001D6A45 /* SpringGreeniPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SpringGreeniPad@3x.png"; path = "../../../../Icon/Dynamic App Icon/SpringGreeniPad@3x.png"; sourceTree = "<group>"; };
-		CF8DCDD424D1ED63001D6A45 /* LightsOut@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LightsOut@2x.png"; path = "../../../../Icon/Dynamic App Icon/LightsOut@2x.png"; sourceTree = "<group>"; };
-		CF8DCDD524D1ED63001D6A45 /* TwilightZoneiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TwilightZoneiPad@3x.png"; path = "../../../../Icon/Dynamic App Icon/TwilightZoneiPad@3x.png"; sourceTree = "<group>"; };
-		CF8DCDD624D1ED63001D6A45 /* ThunderstormiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ThunderstormiPad@2x.png"; path = "../../../../Icon/Dynamic App Icon/ThunderstormiPad@2x.png"; sourceTree = "<group>"; };
-		CF8DCDD724D1ED63001D6A45 /* 8-BitiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "8-BitiPad@2x.png"; path = "../../../../Icon/Dynamic App Icon/8-BitiPad@2x.png"; sourceTree = "<group>"; };
-		CF8DCDD824D1ED63001D6A45 /* TwilightZone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TwilightZone@3x.png"; path = "../../../../Icon/Dynamic App Icon/TwilightZone@3x.png"; sourceTree = "<group>"; };
-		CF8DCDD924D1ED63001D6A45 /* CarminePinkiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CarminePinkiPad@3x.png"; path = "../../../../Icon/Dynamic App Icon/CarminePinkiPad@3x.png"; sourceTree = "<group>"; };
-		CF8DCDDA24D1ED63001D6A45 /* SpringGreeniPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SpringGreeniPad@2x.png"; path = "../../../../Icon/Dynamic App Icon/SpringGreeniPad@2x.png"; sourceTree = "<group>"; };
-		CF8DCDDB24D1ED63001D6A45 /* LightsOutiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LightsOutiPad@2x.png"; path = "../../../../Icon/Dynamic App Icon/LightsOutiPad@2x.png"; sourceTree = "<group>"; };
 		CF9477482167DF0200DA8B38 /* SiriShortcutsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriShortcutsTableViewController.swift; sourceTree = "<group>"; };
 		CF94774A2167E48E00DA8B38 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		CF9477502168080900DA8B38 /* GetForecastIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GetForecastIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -465,6 +281,62 @@
 		CFD2DBAA24D8AAAD00CB5EA0 /* Cumulus Watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Cumulus Watch.entitlements"; sourceTree = "<group>"; };
 		CFD2DBAB24D8AAB300CB5EA0 /* Cumulus Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Cumulus Watch Extension.entitlements"; sourceTree = "<group>"; };
 		CFD5E8FB20E669B0002A5F0C /* AcknowledgementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsViewController.swift; sourceTree = "<group>"; };
+		CFD6670C24E3251600CFB98D /* ThunderstormiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ThunderstormiPad@3x.png"; sourceTree = "<group>"; };
+		CFD6670D24E3251600CFB98D /* LightsOut@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LightsOut@2x.png"; sourceTree = "<group>"; };
+		CFD6670E24E3251600CFB98D /* SpringGreeniPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpringGreeniPad@2x.png"; sourceTree = "<group>"; };
+		CFD6670F24E3251600CFB98D /* 8-BitiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-BitiPad@2x.png"; sourceTree = "<group>"; };
+		CFD6671024E3251600CFB98D /* 8-Bit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-Bit@2x.png"; sourceTree = "<group>"; };
+		CFD6671124E3251600CFB98D /* PlumpPurple@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlumpPurple@3x.png"; sourceTree = "<group>"; };
+		CFD6671224E3251600CFB98D /* PlumpPurple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlumpPurple@2x.png"; sourceTree = "<group>"; };
+		CFD6671324E3251600CFB98D /* 8-BitiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-BitiPad@3x.png"; sourceTree = "<group>"; };
+		CFD6671424E3251600CFB98D /* 8-Bit@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-Bit@3x.png"; sourceTree = "<group>"; };
+		CFD6671524E3251600CFB98D /* SpringGreeniPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpringGreeniPad@3x.png"; sourceTree = "<group>"; };
+		CFD6671624E3251600CFB98D /* LightsOut@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LightsOut@3x.png"; sourceTree = "<group>"; };
+		CFD6671724E3251600CFB98D /* ThunderstormiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ThunderstormiPad@2x.png"; sourceTree = "<group>"; };
+		CFD6671824E3251600CFB98D /* MightyUmbrella@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MightyUmbrella@2x.png"; sourceTree = "<group>"; };
+		CFD6671924E3251600CFB98D /* SpringGreen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpringGreen@3x.png"; sourceTree = "<group>"; };
+		CFD6671A24E3251600CFB98D /* WindyDay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WindyDay@2x.png"; sourceTree = "<group>"; };
+		CFD6671B24E3251600CFB98D /* RainDropiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RainDropiPad@3x.png"; sourceTree = "<group>"; };
+		CFD6671C24E3251600CFB98D /* Mango@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mango@3x.png"; sourceTree = "<group>"; };
+		CFD6671D24E3251600CFB98D /* DodgerBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DodgerBlue@2x.png"; sourceTree = "<group>"; };
+		CFD6671E24E3251600CFB98D /* DodgerBlue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DodgerBlue@3x.png"; sourceTree = "<group>"; };
+		CFD6671F24E3251600CFB98D /* Mango@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mango@2x.png"; sourceTree = "<group>"; };
+		CFD6672024E3251600CFB98D /* RainDropiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RainDropiPad@2x.png"; sourceTree = "<group>"; };
+		CFD6672124E3251600CFB98D /* WindyDay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WindyDay@3x.png"; sourceTree = "<group>"; };
+		CFD6672224E3251600CFB98D /* SpringGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpringGreen@2x.png"; sourceTree = "<group>"; };
+		CFD6672324E3251600CFB98D /* MightyUmbrella@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MightyUmbrella@3x.png"; sourceTree = "<group>"; };
+		CFD6672424E3251600CFB98D /* MangoiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MangoiPad@3x.png"; sourceTree = "<group>"; };
+		CFD6672524E3251600CFB98D /* TwilightZone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwilightZone@2x.png"; sourceTree = "<group>"; };
+		CFD6672624E3251600CFB98D /* RainDrop@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RainDrop@3x.png"; sourceTree = "<group>"; };
+		CFD6672724E3251600CFB98D /* TwilightZoneiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwilightZoneiPad@2x.png"; sourceTree = "<group>"; };
+		CFD6672824E3251600CFB98D /* WindyDayiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WindyDayiPad@2x.png"; sourceTree = "<group>"; };
+		CFD6672924E3251600CFB98D /* LightsOutiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LightsOutiPad@2x.png"; sourceTree = "<group>"; };
+		CFD6672A24E3251600CFB98D /* OrchidiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OrchidiPad@3x.png"; sourceTree = "<group>"; };
+		CFD6672B24E3251600CFB98D /* OrchidiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OrchidiPad@2x.png"; sourceTree = "<group>"; };
+		CFD6672C24E3251600CFB98D /* LightsOutiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LightsOutiPad@3x.png"; sourceTree = "<group>"; };
+		CFD6672D24E3251600CFB98D /* WindyDayiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WindyDayiPad@3x.png"; sourceTree = "<group>"; };
+		CFD6672E24E3251600CFB98D /* TwilightZoneiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwilightZoneiPad@3x.png"; sourceTree = "<group>"; };
+		CFD6672F24E3251600CFB98D /* RainDrop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RainDrop@2x.png"; sourceTree = "<group>"; };
+		CFD6673024E3251600CFB98D /* TwilightZone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwilightZone@3x.png"; sourceTree = "<group>"; };
+		CFD6673124E3251600CFB98D /* MangoiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MangoiPad@2x.png"; sourceTree = "<group>"; };
+		CFD6673224E3251600CFB98D /* Moonlight@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Moonlight@3x.png"; sourceTree = "<group>"; };
+		CFD6673324E3251600CFB98D /* DodgerBlueiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DodgerBlueiPad@2x.png"; sourceTree = "<group>"; };
+		CFD6673424E3251600CFB98D /* MightyUmbrellaiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MightyUmbrellaiPad@3x.png"; sourceTree = "<group>"; };
+		CFD6673524E3251600CFB98D /* Orchid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Orchid@2x.png"; sourceTree = "<group>"; };
+		CFD6673624E3251600CFB98D /* MaximumRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MaximumRed@2x.png"; sourceTree = "<group>"; };
+		CFD6673724E3251600CFB98D /* PlumpPurpleiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlumpPurpleiPad@2x.png"; sourceTree = "<group>"; };
+		CFD6673824E3251600CFB98D /* MoonlightiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoonlightiPad@3x.png"; sourceTree = "<group>"; };
+		CFD6673924E3251600CFB98D /* Thunderstorm@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thunderstorm@3x.png"; sourceTree = "<group>"; };
+		CFD6673A24E3251600CFB98D /* MaximumRediPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MaximumRediPad@3x.png"; sourceTree = "<group>"; };
+		CFD6673B24E3251600CFB98D /* MaximumRediPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MaximumRediPad@2x.png"; sourceTree = "<group>"; };
+		CFD6673C24E3251600CFB98D /* DodgerBluePad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DodgerBluePad@3x.png"; sourceTree = "<group>"; };
+		CFD6673D24E3251600CFB98D /* Thunderstorm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thunderstorm@2x.png"; sourceTree = "<group>"; };
+		CFD6673E24E3251600CFB98D /* MoonlightiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoonlightiPad@2x.png"; sourceTree = "<group>"; };
+		CFD6673F24E3251600CFB98D /* PlumpPurpleiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlumpPurpleiPad@3x.png"; sourceTree = "<group>"; };
+		CFD6674024E3251600CFB98D /* MaximumRed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MaximumRed@3x.png"; sourceTree = "<group>"; };
+		CFD6674124E3251600CFB98D /* Orchid@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Orchid@3x.png"; sourceTree = "<group>"; };
+		CFD6674224E3251600CFB98D /* MightyUmbrellaiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MightyUmbrellaiPad@2x.png"; sourceTree = "<group>"; };
+		CFD6674324E3251600CFB98D /* Moonlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Moonlight@2x.png"; sourceTree = "<group>"; };
 		CFD790D92151C4CD007E489D /* ColorThemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeTableViewController.swift; sourceTree = "<group>"; };
 		CFDEEC0820E26ED900BA5EA5 /* Cumulus Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Cumulus Today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDEEC0920E26ED900BA5EA5 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -475,13 +347,19 @@
 		CFEA0F7B24D437B100E62E5F /* WeatherUnitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUnitsViewController.swift; sourceTree = "<group>"; };
 		CFF0A95E242E92DB00FDDAF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Base; path = Base.lproj/Cumulus.entitlements; sourceTree = "<group>"; };
 		CFFB787620DF0B44008216F8 /* License */ = {isa = PBXFileReference; lastKnownFileType = text; path = License; sourceTree = "<group>"; };
-		E2A3A90AF22391FE320C990F /* Pods_Cumulus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAD509143D9AC6BCAB3F90CA /* Pods-Cumulus-Cumulus Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-Cumulus Today.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus-Cumulus Today/Pods-Cumulus-Cumulus Today.debug.xcconfig"; sourceTree = "<group>"; };
-		EB5FC965F8DEB6008B54A930 /* Pods_Cumulus_Cumulus_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_Cumulus_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA1AB6484AD4FC4F9F8CF28F /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-GetForecastIntentUI.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI.debug.xcconfig"; sourceTree = "<group>"; };
+		DCF231A6B38F667F53BB834D /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-GetForecastIntentUI.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI.debug.xcconfig"; sourceTree = "<group>"; };
+		DD732631DC5F64851FC6A2FE /* Pods-Cumulus-Cumulus Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-Cumulus Today.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus-Cumulus Today/Pods-Cumulus-Cumulus Today.debug.xcconfig"; sourceTree = "<group>"; };
+		FB77885AC784A606AF225F3B /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-GetForecastIntentUI.release.xcconfig"; path = "Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2E8CC69F6E8590A9FDF75FA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CF6E4A9B20DACFD8002349A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -489,7 +367,7 @@
 				CF94774B2167E48E00DA8B38 /* Intents.framework in Frameworks */,
 				CF52ECD9210FA29D00A605A4 /* StoreKit.framework in Frameworks */,
 				CF39201B2365217300FAFA53 /* MapKit.framework in Frameworks */,
-				1BB413B2FF129CF6218B07C9 /* Pods_Cumulus.framework in Frameworks */,
+				75CC0744A4378311FBDFB277 /* Pods_Cumulus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,7 +375,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				291AB24C2C2003380C3A1F83 /* Pods_Cumulus_GetForecastIntent.framework in Frameworks */,
+				0541F531F1EC29B776E93011 /* Pods_Cumulus_GetForecastIntent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF94775B2168080A00DA8B38 /* IntentsUI.framework in Frameworks */,
-				B7AE0E81331BD50CEE086B5F /* Pods_Cumulus_GetForecastIntentUI.framework in Frameworks */,
+				0B7B5387EAFCC3F6025F3166 /* Pods_Cumulus_GetForecastIntentUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +392,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E601DF3113985919CB2A3976 /* libPods-Cumulus Watch Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,7 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFDEEC0A20E26ED900BA5EA5 /* NotificationCenter.framework in Frameworks */,
-				0ACDC4E0477D3B8F3CB2BF7C /* Pods_Cumulus_Cumulus_Today.framework in Frameworks */,
+				0906EA9E1AECEAFD2839197E /* Pods_Cumulus_Cumulus_Today.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,14 +411,16 @@
 		34F474473D8808F01E8529E7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4D8FF3C00459CA85D652C4D3 /* Pods-Cumulus.debug.xcconfig */,
-				90D000CACEE85CFC1FE35356 /* Pods-Cumulus.release.xcconfig */,
-				EAD509143D9AC6BCAB3F90CA /* Pods-Cumulus-Cumulus Today.debug.xcconfig */,
-				99BD9EF9D7972BFE69F2B2C0 /* Pods-Cumulus-Cumulus Today.release.xcconfig */,
-				8290B2A54BCE97E1B9D5D80D /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */,
-				527721E71D9EA3845C8ECED7 /* Pods-Cumulus-GetForecastIntent.release.xcconfig */,
-				FA1AB6484AD4FC4F9F8CF28F /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */,
-				553DEF07F3E32F82F588F305 /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */,
+				3463C4D9EF939EEF8FE4DB15 /* Pods-Cumulus.debug.xcconfig */,
+				6D568BACF01E8D784475C3EA /* Pods-Cumulus.release.xcconfig */,
+				C41E7862564091B6C3999365 /* Pods-Cumulus Watch Extension.debug.xcconfig */,
+				CA5D7C1194DB905D6480B445 /* Pods-Cumulus Watch Extension.release.xcconfig */,
+				DD732631DC5F64851FC6A2FE /* Pods-Cumulus-Cumulus Today.debug.xcconfig */,
+				2A6D4CF8C042312DCE77AB24 /* Pods-Cumulus-Cumulus Today.release.xcconfig */,
+				A9258C92A02A923C33EDA2A5 /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */,
+				B17F9F663088780BF56633F6 /* Pods-Cumulus-GetForecastIntent.release.xcconfig */,
+				DCF231A6B38F667F53BB834D /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */,
+				FB77885AC784A606AF225F3B /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -552,10 +433,11 @@
 				CF52ECD8210FA29D00A605A4 /* StoreKit.framework */,
 				CFDEEC0920E26ED900BA5EA5 /* NotificationCenter.framework */,
 				CF94775A2168080A00DA8B38 /* IntentsUI.framework */,
-				E2A3A90AF22391FE320C990F /* Pods_Cumulus.framework */,
-				EB5FC965F8DEB6008B54A930 /* Pods_Cumulus_Cumulus_Today.framework */,
-				AD1320719B4CD614F66DA786 /* Pods_Cumulus_GetForecastIntent.framework */,
-				44E339D8E54C1B7793F75051 /* Pods_Cumulus_GetForecastIntentUI.framework */,
+				C63EE8141E9444611CB74A0A /* Pods_Cumulus.framework */,
+				5DFB64F7FB172E23BB4578BF /* libPods-Cumulus Watch Extension.a */,
+				36DC2E72BF58325956AA20C1 /* Pods_Cumulus_Cumulus_Today.framework */,
+				1244FBDBACE3E02DC9BF94C1 /* Pods_Cumulus_GetForecastIntent.framework */,
+				7376BBA1043EF8E103A84320 /* Pods_Cumulus_GetForecastIntentUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -613,61 +495,6 @@
 				CFAF60F5242E4CA5004FB831 /* Resources */,
 			);
 			path = Cumulus;
-			sourceTree = "<group>";
-		};
-		CF8DCDAB24D1ED50001D6A45 /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				CF8DCDC224D1ED62001D6A45 /* 8-Bit@2x.png */,
-				CF8DCDB524D1ED61001D6A45 /* 8-Bit@3x.png */,
-				CF8DCDD724D1ED63001D6A45 /* 8-BitiPad@2x.png */,
-				CF8DCDCC24D1ED62001D6A45 /* 8-BitiPad@3x.png */,
-				CF8DCDC824D1ED62001D6A45 /* CarminePink@2x.png */,
-				CF8DCDB124D1ED61001D6A45 /* CarminePink@3x.png */,
-				CF8DCDBB24D1ED61001D6A45 /* CarminePinkiPad@2x.png */,
-				CF8DCDD924D1ED63001D6A45 /* CarminePinkiPad@3x.png */,
-				CF8DCDB224D1ED61001D6A45 /* DodgerBlue@2x.png */,
-				CF8DCDBD24D1ED61001D6A45 /* DodgerBlue@3x.png */,
-				CF8DCDAE24D1ED61001D6A45 /* DodgerBlueiPad@2x.png */,
-				CF8DCDCB24D1ED62001D6A45 /* DodgerBluePad@3x.png */,
-				CF8DCDD424D1ED63001D6A45 /* LightsOut@2x.png */,
-				CF8DCDC724D1ED62001D6A45 /* LightsOut@3x.png */,
-				CF8DCDDB24D1ED63001D6A45 /* LightsOutiPad@2x.png */,
-				CF8DCDBF24D1ED62001D6A45 /* LightsOutiPad@3x.png */,
-				CF8DCDC024D1ED62001D6A45 /* Mango@2x.png */,
-				CF8DCDC524D1ED62001D6A45 /* Mango@3x.png */,
-				CF8DCDD224D1ED62001D6A45 /* MangoiPad@2x.png */,
-				CF8DCDCE24D1ED62001D6A45 /* MangoiPad@3x.png */,
-				CF8DCDC924D1ED62001D6A45 /* MaximumRed@2x.png */,
-				CF8DCDB624D1ED61001D6A45 /* MaximumRed@3x.png */,
-				CF8DCDBE24D1ED61001D6A45 /* MaximumRediPad@2x.png */,
-				CF8DCDB424D1ED61001D6A45 /* MaximumRediPad@3x.png */,
-				CF8DCDCF24D1ED62001D6A45 /* MightyUmbrella@2x.png */,
-				CF8DCDB724D1ED61001D6A45 /* MightyUmbrella@3x.png */,
-				CF8DCDC324D1ED62001D6A45 /* MightyUmbrellaiPad@2x.png */,
-				CF8DCDB024D1ED61001D6A45 /* MightyUmbrellaiPad@3x.png */,
-				CF8DCDAC24D1ED61001D6A45 /* PlumpPurple@2x.png */,
-				CF8DCDC124D1ED62001D6A45 /* PlumpPurple@3x.png */,
-				CF8DCDC624D1ED62001D6A45 /* PlumpPurpleiPad@2x.png */,
-				CF8DCDB924D1ED61001D6A45 /* PlumpPurpleiPad@3x.png */,
-				CF8DCDBA24D1ED61001D6A45 /* Raindrop@2x.png */,
-				CF8DCDD024D1ED62001D6A45 /* Raindrop@3x.png */,
-				CF8DCDC424D1ED62001D6A45 /* RaindropiPad@2x.png */,
-				CF8DCDD124D1ED62001D6A45 /* RaindropiPad@3x.png */,
-				CF8DCDAD24D1ED61001D6A45 /* SpringGreen@2x.png */,
-				CF8DCDAF24D1ED61001D6A45 /* SpringGreen@3x.png */,
-				CF8DCDDA24D1ED63001D6A45 /* SpringGreeniPad@2x.png */,
-				CF8DCDD324D1ED62001D6A45 /* SpringGreeniPad@3x.png */,
-				CF8DCDB324D1ED61001D6A45 /* Thunderstorm@2x.png */,
-				CF8DCDB824D1ED61001D6A45 /* Thunderstorm@3x.png */,
-				CF8DCDD624D1ED63001D6A45 /* ThunderstormiPad@2x.png */,
-				CF8DCDBC24D1ED61001D6A45 /* ThunderstormiPad@3x.png */,
-				CF8DCDCD24D1ED62001D6A45 /* TwilightZone@2x.png */,
-				CF8DCDD824D1ED63001D6A45 /* TwilightZone@3x.png */,
-				CF8DCDCA24D1ED62001D6A45 /* TwilightZoneiPad@2x.png */,
-				CF8DCDD524D1ED63001D6A45 /* TwilightZoneiPad@3x.png */,
-			);
-			path = Icons;
 			sourceTree = "<group>";
 		};
 		CF90306C2442641300538D52 /* Controllers */ = {
@@ -756,7 +583,7 @@
 		CFAF60F5242E4CA5004FB831 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CF8DCDAB24D1ED50001D6A45 /* Icons */,
+				CFD6670B24E3251600CFB98D /* Dynamic App Icon */,
 				CF6E4AA820DACFD9002349A7 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -800,11 +627,74 @@
 			children = (
 				CFAF60D0242E48E1004FB831 /* DarkSkyWeatherData.swift */,
 				CFAF60D1242E48E1004FB831 /* DarkSkyCurrentForecastData.swift */,
-				CF55D7F22461CC67001E1683 /* CurrentWeatherData.swift */,
 				CF602EA6247ED28E00E05491 /* LoadingScreenModel.swift */,
 				CF2C9314217CD08C00CC0F6F /* AppIntentVocabulary.plist */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CFD6670B24E3251600CFB98D /* Dynamic App Icon */ = {
+			isa = PBXGroup;
+			children = (
+				CFD6670C24E3251600CFB98D /* ThunderstormiPad@3x.png */,
+				CFD6670D24E3251600CFB98D /* LightsOut@2x.png */,
+				CFD6670E24E3251600CFB98D /* SpringGreeniPad@2x.png */,
+				CFD6670F24E3251600CFB98D /* 8-BitiPad@2x.png */,
+				CFD6671024E3251600CFB98D /* 8-Bit@2x.png */,
+				CFD6671124E3251600CFB98D /* PlumpPurple@3x.png */,
+				CFD6671224E3251600CFB98D /* PlumpPurple@2x.png */,
+				CFD6671324E3251600CFB98D /* 8-BitiPad@3x.png */,
+				CFD6671424E3251600CFB98D /* 8-Bit@3x.png */,
+				CFD6671524E3251600CFB98D /* SpringGreeniPad@3x.png */,
+				CFD6671624E3251600CFB98D /* LightsOut@3x.png */,
+				CFD6671724E3251600CFB98D /* ThunderstormiPad@2x.png */,
+				CFD6671824E3251600CFB98D /* MightyUmbrella@2x.png */,
+				CFD6671924E3251600CFB98D /* SpringGreen@3x.png */,
+				CFD6671A24E3251600CFB98D /* WindyDay@2x.png */,
+				CFD6671B24E3251600CFB98D /* RainDropiPad@3x.png */,
+				CFD6671C24E3251600CFB98D /* Mango@3x.png */,
+				CFD6671D24E3251600CFB98D /* DodgerBlue@2x.png */,
+				CFD6671E24E3251600CFB98D /* DodgerBlue@3x.png */,
+				CFD6671F24E3251600CFB98D /* Mango@2x.png */,
+				CFD6672024E3251600CFB98D /* RainDropiPad@2x.png */,
+				CFD6672124E3251600CFB98D /* WindyDay@3x.png */,
+				CFD6672224E3251600CFB98D /* SpringGreen@2x.png */,
+				CFD6672324E3251600CFB98D /* MightyUmbrella@3x.png */,
+				CFD6672424E3251600CFB98D /* MangoiPad@3x.png */,
+				CFD6672524E3251600CFB98D /* TwilightZone@2x.png */,
+				CFD6672624E3251600CFB98D /* RainDrop@3x.png */,
+				CFD6672724E3251600CFB98D /* TwilightZoneiPad@2x.png */,
+				CFD6672824E3251600CFB98D /* WindyDayiPad@2x.png */,
+				CFD6672924E3251600CFB98D /* LightsOutiPad@2x.png */,
+				CFD6672A24E3251600CFB98D /* OrchidiPad@3x.png */,
+				CFD6672B24E3251600CFB98D /* OrchidiPad@2x.png */,
+				CFD6672C24E3251600CFB98D /* LightsOutiPad@3x.png */,
+				CFD6672D24E3251600CFB98D /* WindyDayiPad@3x.png */,
+				CFD6672E24E3251600CFB98D /* TwilightZoneiPad@3x.png */,
+				CFD6672F24E3251600CFB98D /* RainDrop@2x.png */,
+				CFD6673024E3251600CFB98D /* TwilightZone@3x.png */,
+				CFD6673124E3251600CFB98D /* MangoiPad@2x.png */,
+				CFD6673224E3251600CFB98D /* Moonlight@3x.png */,
+				CFD6673324E3251600CFB98D /* DodgerBlueiPad@2x.png */,
+				CFD6673424E3251600CFB98D /* MightyUmbrellaiPad@3x.png */,
+				CFD6673524E3251600CFB98D /* Orchid@2x.png */,
+				CFD6673624E3251600CFB98D /* MaximumRed@2x.png */,
+				CFD6673724E3251600CFB98D /* PlumpPurpleiPad@2x.png */,
+				CFD6673824E3251600CFB98D /* MoonlightiPad@3x.png */,
+				CFD6673924E3251600CFB98D /* Thunderstorm@3x.png */,
+				CFD6673A24E3251600CFB98D /* MaximumRediPad@3x.png */,
+				CFD6673B24E3251600CFB98D /* MaximumRediPad@2x.png */,
+				CFD6673C24E3251600CFB98D /* DodgerBluePad@3x.png */,
+				CFD6673D24E3251600CFB98D /* Thunderstorm@2x.png */,
+				CFD6673E24E3251600CFB98D /* MoonlightiPad@2x.png */,
+				CFD6673F24E3251600CFB98D /* PlumpPurpleiPad@3x.png */,
+				CFD6674024E3251600CFB98D /* MaximumRed@3x.png */,
+				CFD6674124E3251600CFB98D /* Orchid@3x.png */,
+				CFD6674224E3251600CFB98D /* MightyUmbrellaiPad@2x.png */,
+				CFD6674324E3251600CFB98D /* Moonlight@2x.png */,
+			);
+			name = "Dynamic App Icon";
+			path = "../../../Icon/Dynamic App Icon";
 			sourceTree = "<group>";
 		};
 		CFDEEC0B20E26ED900BA5EA5 /* Cumulus Today */ = {
@@ -825,14 +715,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF6E4AB020DACFD9002349A7 /* Build configuration list for PBXNativeTarget "Cumulus" */;
 			buildPhases = (
-				81432E4BEC8D3FB9A316D767 /* [CP] Check Pods Manifest.lock */,
+				B13D588516F34FC87B8E70AF /* [CP] Check Pods Manifest.lock */,
 				CF6E4A9A20DACFD8002349A7 /* Sources */,
 				CF6E4A9B20DACFD8002349A7 /* Frameworks */,
 				CF6E4A9C20DACFD8002349A7 /* Resources */,
 				CFDEEC1820E26ED900BA5EA5 /* Embed App Extensions */,
 				CF07AB8920E4138D00810A64 /* Embed Watch Content */,
-				1938CCEC61DD5A43F8FCEAA0 /* [CP] Embed Pods Frameworks */,
-				78759B18CADD1F170FCA1215 /* [CP] Copy Pods Resources */,
+				B5CF1EFD23CBB9E80A2EC3C4 /* [CP] Embed Pods Frameworks */,
+				6118EC040938EAD100480A52 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -851,11 +741,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF94776C2168080A00DA8B38 /* Build configuration list for PBXNativeTarget "GetForecastIntent" */;
 			buildPhases = (
-				364428DF71D0CD1A2918D8CE /* [CP] Check Pods Manifest.lock */,
+				E09C5FB66EB437BE962E3B2D /* [CP] Check Pods Manifest.lock */,
 				CF94774C2168080900DA8B38 /* Sources */,
 				CF94774D2168080900DA8B38 /* Frameworks */,
 				CF94774E2168080900DA8B38 /* Resources */,
-				B25004982C48EAF9916AFA98 /* [CP] Copy Pods Resources */,
+				578EF71E6E5E13D3C7090CA3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -870,11 +760,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF9477692168080A00DA8B38 /* Build configuration list for PBXNativeTarget "GetForecastIntentUI" */;
 			buildPhases = (
-				70CD47F937F25B76756F8737 /* [CP] Check Pods Manifest.lock */,
+				2F2CFDC7764337AFFA283201 /* [CP] Check Pods Manifest.lock */,
 				CF9477552168080A00DA8B38 /* Sources */,
 				CF9477562168080A00DA8B38 /* Frameworks */,
 				CF9477572168080A00DA8B38 /* Resources */,
-				8150F754C82AEA7800DD57B2 /* [CP] Copy Pods Resources */,
+				3F40E92894B86D66F86AE579 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -891,6 +781,7 @@
 			buildPhases = (
 				CFD2DB8124D8AA9700CB5EA0 /* Resources */,
 				CFD2DBA624D8AA9900CB5EA0 /* Embed App Extensions */,
+				2E8CC69F6E8590A9FDF75FA4 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -906,6 +797,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFD2DBA324D8AA9900CB5EA0 /* Build configuration list for PBXNativeTarget "Cumulus Watch Extension" */;
 			buildPhases = (
+				888CE5A5CD151A2162D53131 /* [CP] Check Pods Manifest.lock */,
 				CFD2DB8B24D8AA9800CB5EA0 /* Sources */,
 				CFD2DB8C24D8AA9800CB5EA0 /* Frameworks */,
 				CFD2DB8D24D8AA9800CB5EA0 /* Resources */,
@@ -923,11 +815,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFDEEC1720E26ED900BA5EA5 /* Build configuration list for PBXNativeTarget "Cumulus Today" */;
 			buildPhases = (
-				7DCFE7909AF93B332069DC36 /* [CP] Check Pods Manifest.lock */,
+				B0C90BB7EEE52C55E2777155 /* [CP] Check Pods Manifest.lock */,
 				CFDEEC0420E26ED900BA5EA5 /* Sources */,
 				CFDEEC0520E26ED900BA5EA5 /* Frameworks */,
 				CFDEEC0620E26ED900BA5EA5 /* Resources */,
-				AFD5A4765819FDC909F65CFE /* [CP] Copy Pods Resources */,
+				F2042B8DB01FC9BC9641764D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1028,59 +920,67 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF8DCE6424D1ED63001D6A45 /* MangoiPad@3x.png in Resources */,
-				CF8DCE9424D1ED63001D6A45 /* SpringGreeniPad@2x.png in Resources */,
-				CF8DCE5C24D1ED63001D6A45 /* 8-BitiPad@3x.png in Resources */,
-				CF8DCE2824D1ED63001D6A45 /* LightsOutiPad@3x.png in Resources */,
-				CF8DCE7424D1ED63001D6A45 /* MangoiPad@2x.png in Resources */,
+				CFD6677124E3251600CFB98D /* Thunderstorm@3x.png in Resources */,
+				CFD6675724E3251600CFB98D /* Mango@2x.png in Resources */,
+				CFD6677224E3251600CFB98D /* MaximumRediPad@3x.png in Resources */,
+				CFD6677324E3251600CFB98D /* MaximumRediPad@2x.png in Resources */,
+				CFD6676C24E3251600CFB98D /* MightyUmbrellaiPad@3x.png in Resources */,
+				CFD6676F24E3251600CFB98D /* PlumpPurpleiPad@2x.png in Resources */,
+				CFD6676324E3251600CFB98D /* OrchidiPad@2x.png in Resources */,
+				CFD6674424E3251600CFB98D /* ThunderstormiPad@3x.png in Resources */,
+				CFD6677624E3251600CFB98D /* MoonlightiPad@2x.png in Resources */,
+				CFD6676A24E3251600CFB98D /* Moonlight@3x.png in Resources */,
+				CFD6677524E3251600CFB98D /* Thunderstorm@2x.png in Resources */,
+				CFD6676924E3251600CFB98D /* MangoiPad@2x.png in Resources */,
+				CFD6674E24E3251600CFB98D /* LightsOut@3x.png in Resources */,
+				CFD6675A24E3251600CFB98D /* SpringGreen@2x.png in Resources */,
+				CFD6675024E3251600CFB98D /* MightyUmbrella@2x.png in Resources */,
+				CFD6675B24E3251600CFB98D /* MightyUmbrella@3x.png in Resources */,
+				CFD6677B24E3251600CFB98D /* Moonlight@2x.png in Resources */,
+				CFD6675924E3251600CFB98D /* WindyDay@3x.png in Resources */,
+				CFD6674B24E3251600CFB98D /* 8-BitiPad@3x.png in Resources */,
+				CFD6675624E3251600CFB98D /* DodgerBlue@3x.png in Resources */,
+				CFD6676024E3251600CFB98D /* WindyDayiPad@2x.png in Resources */,
+				CFD6676624E3251600CFB98D /* TwilightZoneiPad@3x.png in Resources */,
+				CFD6676224E3251600CFB98D /* OrchidiPad@3x.png in Resources */,
+				CFD6676124E3251600CFB98D /* LightsOutiPad@2x.png in Resources */,
+				CFD6676524E3251600CFB98D /* WindyDayiPad@3x.png in Resources */,
+				CFD6677824E3251600CFB98D /* MaximumRed@3x.png in Resources */,
+				CFD6674A24E3251600CFB98D /* PlumpPurple@2x.png in Resources */,
+				CFD6676724E3251600CFB98D /* RainDrop@2x.png in Resources */,
+				CFD6674F24E3251600CFB98D /* ThunderstormiPad@2x.png in Resources */,
 				CF5EB7BA2435778F006FF5A5 /* Launch Screen.storyboard in Resources */,
-				CF8DCE1424D1ED63001D6A45 /* Raindrop@2x.png in Resources */,
-				CF8DCE4424D1ED63001D6A45 /* PlumpPurpleiPad@2x.png in Resources */,
-				CF8DCE2C24D1ED63001D6A45 /* Mango@2x.png in Resources */,
-				CF8DCE0024D1ED63001D6A45 /* 8-Bit@3x.png in Resources */,
-				CF8DCE9824D1ED63001D6A45 /* LightsOutiPad@2x.png in Resources */,
-				CF8DCE0424D1ED63001D6A45 /* MaximumRed@3x.png in Resources */,
-				CF8DCE2024D1ED63001D6A45 /* DodgerBlue@3x.png in Resources */,
-				CF8DCE5024D1ED63001D6A45 /* MaximumRed@2x.png in Resources */,
-				CF8DCE6C24D1ED63001D6A45 /* Raindrop@3x.png in Resources */,
-				CF8DCE8024D1ED63001D6A45 /* TwilightZoneiPad@3x.png in Resources */,
-				CF8DCE6024D1ED63001D6A45 /* TwilightZone@2x.png in Resources */,
+				CFD6675F24E3251600CFB98D /* TwilightZoneiPad@2x.png in Resources */,
+				CFD6676E24E3251600CFB98D /* MaximumRed@2x.png in Resources */,
+				CFD6676424E3251600CFB98D /* LightsOutiPad@3x.png in Resources */,
+				CFD6675E24E3251600CFB98D /* RainDrop@3x.png in Resources */,
+				CFD6677424E3251600CFB98D /* DodgerBluePad@3x.png in Resources */,
+				CFD6677A24E3251600CFB98D /* MightyUmbrellaiPad@2x.png in Resources */,
 				CF4A0E5F2108B1B30061CAAD /* Default-568h@2x.png in Resources */,
-				CF8DCE5824D1ED63001D6A45 /* DodgerBluePad@3x.png in Resources */,
-				CF8DCE5424D1ED63001D6A45 /* TwilightZoneiPad@2x.png in Resources */,
-				CF8DCDE024D1ED63001D6A45 /* SpringGreen@2x.png in Resources */,
+				CFD6674824E3251600CFB98D /* 8-Bit@2x.png in Resources */,
+				CFD6677724E3251600CFB98D /* PlumpPurpleiPad@3x.png in Resources */,
+				CFD6675824E3251600CFB98D /* RainDropiPad@2x.png in Resources */,
+				CFD6676B24E3251600CFB98D /* DodgerBlueiPad@2x.png in Resources */,
+				CFD6674C24E3251600CFB98D /* 8-Bit@3x.png in Resources */,
 				CF6E4AA720DACFD8002349A7 /* Main.storyboard in Resources */,
-				CF8DCDE824D1ED63001D6A45 /* SpringGreen@3x.png in Resources */,
-				CF8DCE3C24D1ED63001D6A45 /* RaindropiPad@2x.png in Resources */,
-				CF8DCE3424D1ED63001D6A45 /* 8-Bit@2x.png in Resources */,
-				CF8DCE2424D1ED63001D6A45 /* MaximumRediPad@2x.png in Resources */,
-				CF8DCE4024D1ED63001D6A45 /* Mango@3x.png in Resources */,
-				CF8DCE4824D1ED63001D6A45 /* LightsOut@3x.png in Resources */,
-				CF8DCDEC24D1ED63001D6A45 /* MightyUmbrellaiPad@3x.png in Resources */,
-				CF8DCE8424D1ED63001D6A45 /* ThunderstormiPad@2x.png in Resources */,
-				CF8DCE4C24D1ED63001D6A45 /* CarminePink@2x.png in Resources */,
-				CF8DCDDC24D1ED63001D6A45 /* PlumpPurple@2x.png in Resources */,
-				CF8DCE1024D1ED63001D6A45 /* PlumpPurpleiPad@3x.png in Resources */,
-				CF8DCDF824D1ED63001D6A45 /* Thunderstorm@2x.png in Resources */,
-				CF8DCE7C24D1ED63001D6A45 /* LightsOut@2x.png in Resources */,
-				CF8DCE7824D1ED63001D6A45 /* SpringGreeniPad@3x.png in Resources */,
-				CF8DCE0C24D1ED63001D6A45 /* Thunderstorm@3x.png in Resources */,
-				CF8DCE8C24D1ED63001D6A45 /* TwilightZone@3x.png in Resources */,
-				CF8DCDFC24D1ED63001D6A45 /* MaximumRediPad@3x.png in Resources */,
-				CF8DCE6824D1ED63001D6A45 /* MightyUmbrella@2x.png in Resources */,
-				CF8DCDF424D1ED63001D6A45 /* DodgerBlue@2x.png in Resources */,
-				CF8DCE3824D1ED63001D6A45 /* MightyUmbrellaiPad@2x.png in Resources */,
-				CF8DCE9024D1ED63001D6A45 /* CarminePinkiPad@3x.png in Resources */,
-				CF8DCE8824D1ED63001D6A45 /* 8-BitiPad@2x.png in Resources */,
-				CF8DCE1824D1ED63001D6A45 /* CarminePinkiPad@2x.png in Resources */,
-				CF8DCE1C24D1ED63001D6A45 /* ThunderstormiPad@3x.png in Resources */,
-				CF8DCE3024D1ED63001D6A45 /* PlumpPurple@3x.png in Resources */,
-				CF8DCDE424D1ED63001D6A45 /* DodgerBlueiPad@2x.png in Resources */,
-				CF8DCDF024D1ED63001D6A45 /* CarminePink@3x.png in Resources */,
-				CF8DCE7024D1ED63001D6A45 /* RaindropiPad@3x.png in Resources */,
-				CF8DCE0824D1ED63001D6A45 /* MightyUmbrella@3x.png in Resources */,
+				CFD6677024E3251600CFB98D /* MoonlightiPad@3x.png in Resources */,
+				CFD6674924E3251600CFB98D /* PlumpPurple@3x.png in Resources */,
 				CFFB787720DF0B44008216F8 /* License in Resources */,
+				CFD6674724E3251600CFB98D /* 8-BitiPad@2x.png in Resources */,
+				CFD6674624E3251600CFB98D /* SpringGreeniPad@2x.png in Resources */,
+				CFD6676D24E3251600CFB98D /* Orchid@2x.png in Resources */,
+				CFD6675124E3251600CFB98D /* SpringGreen@3x.png in Resources */,
+				CFD6675D24E3251600CFB98D /* TwilightZone@2x.png in Resources */,
+				CFD6675424E3251600CFB98D /* Mango@3x.png in Resources */,
+				CFD6677924E3251600CFB98D /* Orchid@3x.png in Resources */,
 				CFEE78B024705168001DE90B /* Assets.xcassets in Resources */,
+				CFD6675C24E3251600CFB98D /* MangoiPad@3x.png in Resources */,
+				CFD6675224E3251600CFB98D /* WindyDay@2x.png in Resources */,
+				CFD6675324E3251600CFB98D /* RainDropiPad@3x.png in Resources */,
+				CFD6674524E3251600CFB98D /* LightsOut@2x.png in Resources */,
+				CFD6674D24E3251600CFB98D /* SpringGreeniPad@3x.png in Resources */,
+				CFD6675524E3251600CFB98D /* DodgerBlue@2x.png in Resources */,
+				CFD6676824E3251600CFB98D /* TwilightZone@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1088,55 +988,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF8DCE7E24D1ED63001D6A45 /* LightsOut@2x.png in Resources */,
-				CF8DCE4E24D1ED63001D6A45 /* CarminePink@2x.png in Resources */,
-				CF8DCE4A24D1ED63001D6A45 /* LightsOut@3x.png in Resources */,
-				CF8DCE0E24D1ED63001D6A45 /* Thunderstorm@3x.png in Resources */,
-				CF8DCE2224D1ED63001D6A45 /* DodgerBlue@3x.png in Resources */,
-				CF8DCE6E24D1ED63001D6A45 /* Raindrop@3x.png in Resources */,
-				CF8DCE9A24D1ED63001D6A45 /* LightsOutiPad@2x.png in Resources */,
-				CF8DCE2A24D1ED63001D6A45 /* LightsOutiPad@3x.png in Resources */,
 				CFEE78B22470516A001DE90B /* Assets.xcassets in Resources */,
-				CF8DCE4224D1ED63001D6A45 /* Mango@3x.png in Resources */,
-				CF8DCE1E24D1ED63001D6A45 /* ThunderstormiPad@3x.png in Resources */,
-				CF8DCE7624D1ED63001D6A45 /* MangoiPad@2x.png in Resources */,
-				CF8DCE0224D1ED63001D6A45 /* 8-Bit@3x.png in Resources */,
-				CF8DCDDE24D1ED63001D6A45 /* PlumpPurple@2x.png in Resources */,
-				CF8DCE6224D1ED63001D6A45 /* TwilightZone@2x.png in Resources */,
-				CF8DCE3A24D1ED63001D6A45 /* MightyUmbrellaiPad@2x.png in Resources */,
-				CF8DCE7224D1ED63001D6A45 /* RaindropiPad@3x.png in Resources */,
-				CF8DCDFE24D1ED63001D6A45 /* MaximumRediPad@3x.png in Resources */,
-				CF8DCDEA24D1ED63001D6A45 /* SpringGreen@3x.png in Resources */,
-				CF8DCDEE24D1ED63001D6A45 /* MightyUmbrellaiPad@3x.png in Resources */,
-				CF8DCDE224D1ED63001D6A45 /* SpringGreen@2x.png in Resources */,
-				CF8DCDE624D1ED63001D6A45 /* DodgerBlueiPad@2x.png in Resources */,
-				CF8DCE8224D1ED63001D6A45 /* TwilightZoneiPad@3x.png in Resources */,
-				CF8DCE2624D1ED63001D6A45 /* MaximumRediPad@2x.png in Resources */,
-				CF8DCE1224D1ED63001D6A45 /* PlumpPurpleiPad@3x.png in Resources */,
-				CF8DCE0624D1ED63001D6A45 /* MaximumRed@3x.png in Resources */,
-				CF8DCE7A24D1ED63001D6A45 /* SpringGreeniPad@3x.png in Resources */,
-				CF8DCE6A24D1ED63001D6A45 /* MightyUmbrella@2x.png in Resources */,
-				CF8DCE5A24D1ED63001D6A45 /* DodgerBluePad@3x.png in Resources */,
-				CF8DCE1A24D1ED63001D6A45 /* CarminePinkiPad@2x.png in Resources */,
-				CF8DCE9624D1ED63001D6A45 /* SpringGreeniPad@2x.png in Resources */,
-				CF8DCDF224D1ED63001D6A45 /* CarminePink@3x.png in Resources */,
-				CF8DCE3624D1ED63001D6A45 /* 8-Bit@2x.png in Resources */,
-				CF8DCE3224D1ED63001D6A45 /* PlumpPurple@3x.png in Resources */,
-				CF8DCE0A24D1ED63001D6A45 /* MightyUmbrella@3x.png in Resources */,
-				CF8DCE2E24D1ED63001D6A45 /* Mango@2x.png in Resources */,
-				CF8DCE5624D1ED63001D6A45 /* TwilightZoneiPad@2x.png in Resources */,
-				CF8DCE5224D1ED63001D6A45 /* MaximumRed@2x.png in Resources */,
-				CF8DCE4624D1ED63001D6A45 /* PlumpPurpleiPad@2x.png in Resources */,
-				CF8DCE9224D1ED63001D6A45 /* CarminePinkiPad@3x.png in Resources */,
-				CF8DCE1624D1ED63001D6A45 /* Raindrop@2x.png in Resources */,
-				CF8DCE5E24D1ED63001D6A45 /* 8-BitiPad@3x.png in Resources */,
-				CF8DCE8E24D1ED63001D6A45 /* TwilightZone@3x.png in Resources */,
-				CF8DCE8624D1ED63001D6A45 /* ThunderstormiPad@2x.png in Resources */,
-				CF8DCE6624D1ED63001D6A45 /* MangoiPad@3x.png in Resources */,
-				CF8DCE3E24D1ED63001D6A45 /* RaindropiPad@2x.png in Resources */,
-				CF8DCDFA24D1ED63001D6A45 /* Thunderstorm@2x.png in Resources */,
-				CF8DCDF624D1ED63001D6A45 /* DodgerBlue@2x.png in Resources */,
-				CF8DCE8A24D1ED63001D6A45 /* 8-BitiPad@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1144,56 +996,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF8DCE2F24D1ED63001D6A45 /* Mango@2x.png in Resources */,
-				CF8DCE8724D1ED63001D6A45 /* ThunderstormiPad@2x.png in Resources */,
-				CF8DCE0F24D1ED63001D6A45 /* Thunderstorm@3x.png in Resources */,
-				CF8DCDE724D1ED63001D6A45 /* DodgerBlueiPad@2x.png in Resources */,
-				CF8DCE7724D1ED63001D6A45 /* MangoiPad@2x.png in Resources */,
-				CF8DCE1324D1ED63001D6A45 /* PlumpPurpleiPad@3x.png in Resources */,
-				CF8DCE3724D1ED63001D6A45 /* 8-Bit@2x.png in Resources */,
-				CF8DCE2B24D1ED63001D6A45 /* LightsOutiPad@3x.png in Resources */,
-				CF8DCE1724D1ED63001D6A45 /* Raindrop@2x.png in Resources */,
-				CF8DCDFF24D1ED63001D6A45 /* MaximumRediPad@3x.png in Resources */,
-				CF8DCE7B24D1ED63001D6A45 /* SpringGreeniPad@3x.png in Resources */,
-				CF8DCE2724D1ED63001D6A45 /* MaximumRediPad@2x.png in Resources */,
-				CF8DCE6324D1ED63001D6A45 /* TwilightZone@2x.png in Resources */,
-				CF8DCE9B24D1ED63001D6A45 /* LightsOutiPad@2x.png in Resources */,
-				CF8DCE4324D1ED63001D6A45 /* Mango@3x.png in Resources */,
-				CF8DCDE324D1ED63001D6A45 /* SpringGreen@2x.png in Resources */,
-				CF8DCE5B24D1ED63001D6A45 /* DodgerBluePad@3x.png in Resources */,
-				CF8DCE5F24D1ED63001D6A45 /* 8-BitiPad@3x.png in Resources */,
-				CF8DCE3F24D1ED63001D6A45 /* RaindropiPad@2x.png in Resources */,
-				CF8DCE6B24D1ED63001D6A45 /* MightyUmbrella@2x.png in Resources */,
-				CF8DCE8F24D1ED63001D6A45 /* TwilightZone@3x.png in Resources */,
-				CF8DCE5724D1ED63001D6A45 /* TwilightZoneiPad@2x.png in Resources */,
-				CF8DCDFB24D1ED63001D6A45 /* Thunderstorm@2x.png in Resources */,
 				CFEE78B32470516A001DE90B /* Assets.xcassets in Resources */,
-				CF8DCE7324D1ED63001D6A45 /* RaindropiPad@3x.png in Resources */,
-				CF8DCE7F24D1ED63001D6A45 /* LightsOut@2x.png in Resources */,
-				CF8DCE0324D1ED63001D6A45 /* 8-Bit@3x.png in Resources */,
-				CF8DCE8324D1ED63001D6A45 /* TwilightZoneiPad@3x.png in Resources */,
-				CF8DCE3B24D1ED63001D6A45 /* MightyUmbrellaiPad@2x.png in Resources */,
-				CF8DCE4F24D1ED63001D6A45 /* CarminePink@2x.png in Resources */,
-				CF8DCE4B24D1ED63001D6A45 /* LightsOut@3x.png in Resources */,
-				CF8DCE2324D1ED63001D6A45 /* DodgerBlue@3x.png in Resources */,
-				CF8DCE6724D1ED63001D6A45 /* MangoiPad@3x.png in Resources */,
-				CF8DCDEB24D1ED63001D6A45 /* SpringGreen@3x.png in Resources */,
-				CF8DCE0724D1ED63001D6A45 /* MaximumRed@3x.png in Resources */,
-				CF8DCE1F24D1ED63001D6A45 /* ThunderstormiPad@3x.png in Resources */,
-				CF8DCE0B24D1ED63001D6A45 /* MightyUmbrella@3x.png in Resources */,
-				CF8DCDF324D1ED63001D6A45 /* CarminePink@3x.png in Resources */,
-				CF8DCE6F24D1ED63001D6A45 /* Raindrop@3x.png in Resources */,
-				CF8DCE9324D1ED63001D6A45 /* CarminePinkiPad@3x.png in Resources */,
-				CF8DCE9724D1ED63001D6A45 /* SpringGreeniPad@2x.png in Resources */,
-				CF8DCE5324D1ED63001D6A45 /* MaximumRed@2x.png in Resources */,
-				CF8DCE1B24D1ED63001D6A45 /* CarminePinkiPad@2x.png in Resources */,
-				CF8DCE3324D1ED63001D6A45 /* PlumpPurple@3x.png in Resources */,
-				CF8DCDDF24D1ED63001D6A45 /* PlumpPurple@2x.png in Resources */,
 				CF9477612168080A00DA8B38 /* MainInterface.storyboard in Resources */,
-				CF8DCE4724D1ED63001D6A45 /* PlumpPurpleiPad@2x.png in Resources */,
-				CF8DCDEF24D1ED63001D6A45 /* MightyUmbrellaiPad@3x.png in Resources */,
-				CF8DCDF724D1ED63001D6A45 /* DodgerBlue@2x.png in Resources */,
-				CF8DCE8B24D1ED63001D6A45 /* 8-BitiPad@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1218,102 +1022,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF8DCE2D24D1ED63001D6A45 /* Mango@2x.png in Resources */,
-				CF8DCE8524D1ED63001D6A45 /* ThunderstormiPad@2x.png in Resources */,
-				CF8DCE0D24D1ED63001D6A45 /* Thunderstorm@3x.png in Resources */,
-				CF8DCDE524D1ED63001D6A45 /* DodgerBlueiPad@2x.png in Resources */,
-				CF8DCE7524D1ED63001D6A45 /* MangoiPad@2x.png in Resources */,
-				CF8DCE1124D1ED63001D6A45 /* PlumpPurpleiPad@3x.png in Resources */,
-				CF8DCE3524D1ED63001D6A45 /* 8-Bit@2x.png in Resources */,
-				CF8DCE2924D1ED63001D6A45 /* LightsOutiPad@3x.png in Resources */,
-				CF8DCE1524D1ED63001D6A45 /* Raindrop@2x.png in Resources */,
-				CF8DCDFD24D1ED63001D6A45 /* MaximumRediPad@3x.png in Resources */,
-				CF8DCE7924D1ED63001D6A45 /* SpringGreeniPad@3x.png in Resources */,
-				CF8DCE2524D1ED63001D6A45 /* MaximumRediPad@2x.png in Resources */,
-				CF8DCE6124D1ED63001D6A45 /* TwilightZone@2x.png in Resources */,
-				CF8DCE9924D1ED63001D6A45 /* LightsOutiPad@2x.png in Resources */,
-				CF8DCE4124D1ED63001D6A45 /* Mango@3x.png in Resources */,
-				CF8DCDE124D1ED63001D6A45 /* SpringGreen@2x.png in Resources */,
-				CF8DCE5924D1ED63001D6A45 /* DodgerBluePad@3x.png in Resources */,
-				CF8DCE5D24D1ED63001D6A45 /* 8-BitiPad@3x.png in Resources */,
-				CF8DCE3D24D1ED63001D6A45 /* RaindropiPad@2x.png in Resources */,
-				CF8DCE6924D1ED63001D6A45 /* MightyUmbrella@2x.png in Resources */,
-				CF8DCE8D24D1ED63001D6A45 /* TwilightZone@3x.png in Resources */,
-				CF8DCE5524D1ED63001D6A45 /* TwilightZoneiPad@2x.png in Resources */,
-				CF8DCDF924D1ED63001D6A45 /* Thunderstorm@2x.png in Resources */,
 				CFEE78B124705169001DE90B /* Assets.xcassets in Resources */,
-				CF8DCE7124D1ED63001D6A45 /* RaindropiPad@3x.png in Resources */,
-				CF8DCE7D24D1ED63001D6A45 /* LightsOut@2x.png in Resources */,
-				CF8DCE0124D1ED63001D6A45 /* 8-Bit@3x.png in Resources */,
-				CF8DCE8124D1ED63001D6A45 /* TwilightZoneiPad@3x.png in Resources */,
-				CF8DCE3924D1ED63001D6A45 /* MightyUmbrellaiPad@2x.png in Resources */,
-				CF8DCE4D24D1ED63001D6A45 /* CarminePink@2x.png in Resources */,
-				CF8DCE4924D1ED63001D6A45 /* LightsOut@3x.png in Resources */,
-				CF8DCE2124D1ED63001D6A45 /* DodgerBlue@3x.png in Resources */,
-				CF8DCE6524D1ED63001D6A45 /* MangoiPad@3x.png in Resources */,
-				CF8DCDE924D1ED63001D6A45 /* SpringGreen@3x.png in Resources */,
-				CF8DCE0524D1ED63001D6A45 /* MaximumRed@3x.png in Resources */,
-				CF8DCE1D24D1ED63001D6A45 /* ThunderstormiPad@3x.png in Resources */,
-				CF8DCE0924D1ED63001D6A45 /* MightyUmbrella@3x.png in Resources */,
-				CF8DCDF124D1ED63001D6A45 /* CarminePink@3x.png in Resources */,
-				CF8DCE6D24D1ED63001D6A45 /* Raindrop@3x.png in Resources */,
-				CF8DCE9124D1ED63001D6A45 /* CarminePinkiPad@3x.png in Resources */,
-				CF8DCE9524D1ED63001D6A45 /* SpringGreeniPad@2x.png in Resources */,
-				CF8DCE5124D1ED63001D6A45 /* MaximumRed@2x.png in Resources */,
-				CF8DCE1924D1ED63001D6A45 /* CarminePinkiPad@2x.png in Resources */,
-				CF8DCE3124D1ED63001D6A45 /* PlumpPurple@3x.png in Resources */,
-				CF8DCDDD24D1ED63001D6A45 /* PlumpPurple@2x.png in Resources */,
 				CFDEEC1020E26ED900BA5EA5 /* MainInterface.storyboard in Resources */,
-				CF8DCE4524D1ED63001D6A45 /* PlumpPurpleiPad@2x.png in Resources */,
-				CF8DCDED24D1ED63001D6A45 /* MightyUmbrellaiPad@3x.png in Resources */,
-				CF8DCDF524D1ED63001D6A45 /* DodgerBlue@2x.png in Resources */,
-				CF8DCE8924D1ED63001D6A45 /* 8-BitiPad@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1938CCEC61DD5A43F8FCEAA0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cumulus/Pods-Cumulus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cumulus/Pods-Cumulus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus/Pods-Cumulus-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		364428DF71D0CD1A2918D8CE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Cumulus-GetForecastIntent-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		70CD47F937F25B76756F8737 /* [CP] Check Pods Manifest.lock */ = {
+		2F2CFDC7764337AFFA283201 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1335,7 +1052,41 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		78759B18CADD1F170FCA1215 /* [CP] Copy Pods Resources */ = {
+		3F40E92894B86D66F86AE579 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		578EF71E6E5E13D3C7090CA3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6118EC040938EAD100480A52 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1352,7 +1103,29 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus/Pods-Cumulus-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7DCFE7909AF93B332069DC36 /* [CP] Check Pods Manifest.lock */ = {
+		888CE5A5CD151A2162D53131 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cumulus Watch Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0C90BB7EEE52C55E2777155 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1374,7 +1147,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		81432E4BEC8D3FB9A316D767 /* [CP] Check Pods Manifest.lock */ = {
+		B13D588516F34FC87B8E70AF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1396,24 +1169,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8150F754C82AEA7800DD57B2 /* [CP] Copy Pods Resources */ = {
+		B5CF1EFD23CBB9E80A2EC3C4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Cumulus/Pods-Cumulus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Cumulus/Pods-Cumulus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus/Pods-Cumulus-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AFD5A4765819FDC909F65CFE /* [CP] Copy Pods Resources */ = {
+		E09C5FB66EB437BE962E3B2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cumulus-GetForecastIntent-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2042B8DB01FC9BC9641764D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1428,23 +1223,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus-Cumulus Today/Pods-Cumulus-Cumulus Today-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B25004982C48EAF9916AFA98 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1465,7 +1243,6 @@
 				CFAF60D3242E48E1004FB831 /* InputFunctions.swift in Sources */,
 				CFB693E520F8577200DE669A /* PrivacyAndTermsViewController.swift in Sources */,
 				CFAF62DE242E5D3D004FB831 /* DarkSkyWeatherData.swift in Sources */,
-				CF55D7F32461CC67001E1683 /* CurrentWeatherData.swift in Sources */,
 				CFEA0F7C24D437B100E62E5F /* WeatherUnitsViewController.swift in Sources */,
 				CF4A0E612108B5580061CAAD /* AppIconTableViewController.swift in Sources */,
 				CFA3259E20E44DE500F4AFBD /* LocationsViewController.swift in Sources */,
@@ -1489,7 +1266,6 @@
 				CF947771216809C300DA8B38 /* Intents.intentdefinition in Sources */,
 				CFAF60D5242E48E1004FB831 /* InputFunctions.swift in Sources */,
 				CF9477752168109100DA8B38 /* ForecastIntentHandler.swift in Sources */,
-				CF55D7F62461DFFD001E1683 /* CurrentWeatherData.swift in Sources */,
 				CF9477532168080900DA8B38 /* IntentHandler.swift in Sources */,
 				CFAF60E5242E48E1004FB831 /* WeatherDataValues.swift in Sources */,
 				CFAF60D9242E48E1004FB831 /* SettingOptions.swift in Sources */,
@@ -1505,7 +1281,6 @@
 				CF947772216809C300DA8B38 /* Intents.intentdefinition in Sources */,
 				CFBE4388222F0174009F317D /* ForecastIntentHandler.swift in Sources */,
 				CFAF60D6242E48E1004FB831 /* InputFunctions.swift in Sources */,
-				CF55D7F52461DFFD001E1683 /* CurrentWeatherData.swift in Sources */,
 				CF94775E2168080A00DA8B38 /* IntentViewController.swift in Sources */,
 				CFAF60E6242E48E1004FB831 /* WeatherDataValues.swift in Sources */,
 				CFAF60DA242E48E1004FB831 /* SettingOptions.swift in Sources */,
@@ -1531,7 +1306,6 @@
 				CFE600CF20E3EFFD0057D914 /* TodayViewController.swift in Sources */,
 				CFAF60D4242E48E1004FB831 /* InputFunctions.swift in Sources */,
 				CFAF62E7242E5D97004FB831 /* DarkSkyCurrentForecastData.swift in Sources */,
-				CF55D7F42461DFFC001E1683 /* CurrentWeatherData.swift in Sources */,
 				CFAF60E4242E48E1004FB831 /* WeatherDataValues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1734,7 +1508,7 @@
 		};
 		CF6E4AB120DACFD9002349A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D8FF3C00459CA85D652C4D3 /* Pods-Cumulus.debug.xcconfig */;
+			baseConfigurationReference = 3463C4D9EF939EEF8FE4DB15 /* Pods-Cumulus.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
@@ -1759,7 +1533,7 @@
 		};
 		CF6E4AB220DACFD9002349A7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90D000CACEE85CFC1FE35356 /* Pods-Cumulus.release.xcconfig */;
+			baseConfigurationReference = 6D568BACF01E8D784475C3EA /* Pods-Cumulus.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
@@ -1784,7 +1558,7 @@
 		};
 		CF94776A2168080A00DA8B38 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA1AB6484AD4FC4F9F8CF28F /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */;
+			baseConfigurationReference = DCF231A6B38F667F53BB834D /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
@@ -1811,7 +1585,7 @@
 		};
 		CF94776B2168080A00DA8B38 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 553DEF07F3E32F82F588F305 /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */;
+			baseConfigurationReference = FB77885AC784A606AF225F3B /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
@@ -1837,7 +1611,7 @@
 		};
 		CF94776D2168080A00DA8B38 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8290B2A54BCE97E1B9D5D80D /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */;
+			baseConfigurationReference = A9258C92A02A923C33EDA2A5 /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
@@ -1864,7 +1638,7 @@
 		};
 		CF94776E2168080A00DA8B38 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 527721E71D9EA3845C8ECED7 /* Pods-Cumulus-GetForecastIntent.release.xcconfig */;
+			baseConfigurationReference = B17F9F663088780BF56633F6 /* Pods-Cumulus-GetForecastIntent.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
@@ -1890,6 +1664,7 @@
 		};
 		CFD2DBA424D8AA9900CB5EA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C41E7862564091B6C3999365 /* Pods-Cumulus Watch Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Watch Extension/Cumulus Watch Extension.entitlements";
@@ -1917,6 +1692,7 @@
 		};
 		CFD2DBA524D8AA9900CB5EA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA5D7C1194DB905D6480B445 /* Pods-Cumulus Watch Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Watch Extension/Cumulus Watch Extension.entitlements";
@@ -1990,7 +1766,7 @@
 		};
 		CFDEEC1520E26ED900BA5EA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAD509143D9AC6BCAB3F90CA /* Pods-Cumulus-Cumulus Today.debug.xcconfig */;
+			baseConfigurationReference = DD732631DC5F64851FC6A2FE /* Pods-Cumulus-Cumulus Today.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Today/Cumulus.entitlements";
@@ -2015,7 +1791,7 @@
 		};
 		CFDEEC1620E26ED900BA5EA5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99BD9EF9D7972BFE69F2B2C0 /* Pods-Cumulus-Cumulus Today.release.xcconfig */;
+			baseConfigurationReference = 2A6D4CF8C042312DCE77AB24 /* Pods-Cumulus-Cumulus Today.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Today/Cumulus.entitlements";

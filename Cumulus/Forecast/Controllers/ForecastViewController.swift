@@ -625,6 +625,13 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             hour1Value = "\(precipHour1)%"
             hour2Value = "\(precipHour2)%"
             hour3Value = "\(precipHour3)%"
+        } else if type.contains("Accum") == true {
+            hourlyLabel.text = "Hourly accumulation"
+            
+            hour0Value = "\(accumHour0)\(unitsPrecipitation)"
+            hour1Value = "\(accumHour1)\(unitsPrecipitation)"
+            hour2Value = "\(accumHour2)\(unitsPrecipitation)"
+            hour3Value = "\(accumHour3)\(unitsPrecipitation)"
         } else if type.contains("Temp") == true {
             hourlyLabel.text = "Hourly temperature"
             
@@ -681,7 +688,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             hour1Value = "\(precipHour5)%"
             hour2Value = "\(precipHour6)%"
             hour3Value = "\(precipHour7)%"
-        } else if type.contains("Temp") == true {
+         } else if type.contains("Accum") == true {
+             hourlyLabel.text = "Hourly accumulation"
+             
+             hour0Value = "\(accumHour4)\(unitsPrecipitation)"
+             hour1Value = "\(accumHour5)\(unitsPrecipitation)"
+             hour2Value = "\(accumHour6)\(unitsPrecipitation)"
+             hour3Value = "\(accumHour7)\(unitsPrecipitation)"
+         } else if type.contains("Temp") == true {
             hourlyLabel.text = "Hourly temperature"
             
             hour0Value = "\(tempHour4)°"
@@ -737,7 +751,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             hour1Value = "\(precipHour9)%"
             hour2Value = "\(precipHour10)%"
             hour3Value = "\(precipHour11)%"
-        } else if type.contains("Temp") == true {
+         } else if type.contains("Accum") == true {
+             hourlyLabel.text = "Hourly accumulation"
+             
+             hour0Value = "\(accumHour8)\(unitsPrecipitation)"
+             hour1Value = "\(accumHour9)\(unitsPrecipitation)"
+             hour2Value = "\(accumHour10)\(unitsPrecipitation)"
+             hour3Value = "\(accumHour11)\(unitsPrecipitation)"
+         } else if type.contains("Temp") == true {
             hourlyLabel.text = "Hourly temperature"
             
             hour0Value = "\(tempHour8)°"
@@ -785,7 +806,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         var hour1Value: String = ""
         var hour2Value: String = ""
         var hour3Value: String = ""
-        
+
         if type.contains("Precip") == true {
             hourlyLabel.text = "Hourly precipitation"
             
@@ -793,7 +814,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             hour1Value = "\(precipHour13)%"
             hour2Value = "\(precipHour14)%"
             hour3Value = "\(precipHour15)%"
-        } else if type.contains("Temp") == true {
+         } else if type.contains("Accum") == true {
+             hourlyLabel.text = "Hourly accumulation"
+             
+             hour0Value = "\(accumHour12)\(unitsPrecipitation)"
+             hour1Value = "\(accumHour13)\(unitsPrecipitation)"
+             hour2Value = "\(accumHour14)\(unitsPrecipitation)"
+             hour3Value = "\(accumHour15)\(unitsPrecipitation)"
+         } else if type.contains("Temp") == true {
             hourlyLabel.text = "Hourly temperature"
             
             hour0Value = "\(tempHour12)°"
@@ -849,7 +877,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             hour1Value = "\(precipHour1)%"
             hour2Value = "\(precipHour2)%"
             hour3Value = "\(precipHour3)%"
-        } else if type.contains("Temp") == true {
+         } else if type.contains("Accum") == true {
+             hourlyLabel.text = "Hourly accumulation"
+             
+             hour0Value = "\(accumHour0)\(unitsPrecipitation)"
+             hour1Value = "\(accumHour1)\(unitsPrecipitation)"
+             hour2Value = "\(accumHour2)\(unitsPrecipitation)"
+             hour3Value = "\(accumHour3)\(unitsPrecipitation)"
+         } else if type.contains("Temp") == true {
             hourlyLabel.text = "Hourly temperature"
             
             hour0Value = "\(tempHour0)°"
@@ -945,13 +980,16 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             setHourlyOutlets0(type: changedHourlyValues)
         }
     }
-    
+  
     // When tapped change hourly condition currently being shown
     @IBAction func hourlyConditionsGestureSwipeLeftTapped(_ sender: UISwipeGestureRecognizer) {
         if hourlyLabel.text?.contains("precipitation") == true {
-            changeHourlyOutlets(type: "Temp")
-            changedHourlyValues = "Temp"
-        } else if hourlyLabel.text?.contains("temperature") == true {
+            changeHourlyOutlets(type: "Accum")
+            changedHourlyValues = "Accum"
+         } else if hourlyLabel.text?.contains("accumulation") == true {
+             changeHourlyOutlets(type: "Temp")
+             changedHourlyValues = "Temp"
+         } else if hourlyLabel.text?.contains("temperature") == true {
             changeHourlyOutlets(type: "Humidity")
             changedHourlyValues = "Humidity"
         } else if hourlyLabel.text?.contains("humidity") == true {
@@ -973,9 +1011,12 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         if hourlyLabel.text?.contains("precipitation") == true {
             changeHourlyOutlets(type: "Cloud")
             changedHourlyValues = "Cloud"
-        } else if hourlyLabel.text?.contains("temperature") == true {
+        } else if hourlyLabel.text?.contains("accumulation") == true {
             changeHourlyOutlets(type: "Precip")
             changedHourlyValues = "Precip"
+        } else if hourlyLabel.text?.contains("temperature") == true {
+            changeHourlyOutlets(type: "Accum")
+            changedHourlyValues = "Accum"
         } else if hourlyLabel.text?.contains("humidity") == true {
             changeHourlyOutlets(type: "Temp")
             changedHourlyValues = "Temp"
@@ -1195,7 +1236,9 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         
         if defaults.string(forKey: "defaultHourlyCondition")?.contains("Precip") == true {
             changedHourlyValues = "Precip"
-        } else if defaults.string(forKey: "defaultHourlyCondition")?.contains("Temp") == true {
+         } else if defaults.string(forKey: "defaultHourlyCondition")?.contains("Accum") == true {
+             changedHourlyValues = "Accum"
+         } else if defaults.string(forKey: "defaultHourlyCondition")?.contains("Temp") == true {
             changedHourlyValues = "Temp"
         } else if defaults.string(forKey: "defaultHourlyCondition")?.contains("Humidity") == true {
             changedHourlyValues = "Humidity"

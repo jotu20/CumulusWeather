@@ -268,11 +268,23 @@ var precipHour13: Int = 0
 var precipHour14: Int = 0
 var precipHour15: Int = 0
 
-// MARK: - Hourly pressure values
-var pressureHour1: Int = 0
-var pressureHour2: Int = 0
-var pressureHour3: Int = 0
-var pressureHour4: Int = 0
+// MARK: - Hourly accumulation values
+var accumHour0: Double = 0
+var accumHour1: Double = 0
+var accumHour2: Double = 0
+var accumHour3: Double = 0
+var accumHour4: Double = 0
+var accumHour5: Double = 0
+var accumHour6: Double = 0
+var accumHour7: Double = 0
+var accumHour8: Double = 0
+var accumHour9: Double = 0
+var accumHour10: Double = 0
+var accumHour11: Double = 0
+var accumHour12: Double = 0
+var accumHour13: Double = 0
+var accumHour14: Double = 0
+var accumHour15: Double = 0
 
 // MARK: - Hourly temp values
 var tempHour0: Int = 0
@@ -988,6 +1000,25 @@ func hourPrecipProb(value: Int, hour: DataBlock?) -> Int {
     
     if hourArray.precipitationProbability != nil {
         hourValue = Int(hourArray.precipitationProbability! * 100)
+    } else {
+        hourValue = 0
+    }
+    
+    return hourValue
+}
+
+func hourAccumProb(value: Int, hour: DataBlock?) -> Double {
+    var hourValue: Double = 0
+    
+    let fetchHour = hour!.data[value]
+    let hourArray = fetchHour
+    
+    if hourArray.precipitationAccumulation != nil {
+        if unitsPrecipitation == "mm" {
+            hourValue = inToMM(amount: Double(hourArray.precipitationAccumulation!))
+        } else {
+            hourValue = Double(hourArray.precipitationAccumulation!)
+        }
     } else {
         hourValue = 0
     }

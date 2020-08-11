@@ -297,11 +297,6 @@ public func fetchDarkSkyWeatherData() {
             
             // Get hourly data and hourly precipitation through 12 hours
             if let hourly = currentForecast.hourly {
-                pressureHour1 = hourPressure(value: 1, hour: hourly)
-                pressureHour2 = hourPressure(value: 2, hour: hourly)
-                pressureHour3 = hourPressure(value: 3, hour: hourly)
-                pressureHour4 = hourPressure(value: 4, hour: hourly)
-                
                 cloudCoverHour1 = hourCloudCover(value: 1, hour: hourly)
                 cloudCoverHour2 = hourCloudCover(value: 2, hour: hourly)
                 cloudCoverHour3 = hourCloudCover(value: 3, hour: hourly)
@@ -326,6 +321,7 @@ public func fetchDarkSkyWeatherData() {
 
                 hour0 = hourTime(value: 0, hour: hourly)
                 precipHour0 = hourPrecipProb(value: 0, hour: hourly)
+                accumHour0 = hourAccumProb(value: 0, hour: hourly)
                 tempHour0 = hourTemp(value: 0, hour: hourly)
                 humidityHour0 = hourHumidity(value: 0, hour: hourly)
                 conditionHour0 = hourIcon(value: 0, hour: hourly)
@@ -335,6 +331,7 @@ public func fetchDarkSkyWeatherData() {
 
                 hour1 = hourTime(value: 1, hour: hourly)
                 precipHour1 = hourPrecipProb(value: 1, hour: hourly)
+                accumHour1 = hourAccumProb(value: 1, hour: hourly)
                 tempHour1 = hourTemp(value: 1, hour: hourly)
                 humidityHour1 = hourHumidity(value: 1, hour: hourly)
                 conditionHour1 = hourIcon(value: 1, hour: hourly)
@@ -344,6 +341,7 @@ public func fetchDarkSkyWeatherData() {
 
                 hour2 = hourTime(value: 2, hour: hourly)
                 precipHour2 = hourPrecipProb(value: 2, hour: hourly)
+                accumHour2 = hourAccumProb(value: 2, hour: hourly)
                 tempHour2 = hourTemp(value: 2, hour: hourly)
                 humidityHour2 = hourHumidity(value: 2, hour: hourly)
                 conditionHour2 = hourIcon(value: 2, hour: hourly)
@@ -353,6 +351,7 @@ public func fetchDarkSkyWeatherData() {
 
                 hour3 = hourTime(value: 3, hour: hourly)
                 precipHour3 = hourPrecipProb(value: 3, hour: hourly)
+                accumHour3 = hourAccumProb(value: 3, hour: hourly)
                 tempHour3 = hourTemp(value: 3, hour: hourly)
                 humidityHour3 = hourHumidity(value: 3, hour: hourly)
                 conditionHour3 = hourIcon(value: 3, hour: hourly)
@@ -362,6 +361,7 @@ public func fetchDarkSkyWeatherData() {
 
                 hour4 = hourTime(value: 4, hour: hourly)
                 precipHour4 = hourPrecipProb(value: 4, hour: hourly)
+                accumHour4 = hourAccumProb(value: 4, hour: hourly)
                 tempHour4 = hourTemp(value: 4, hour: hourly)
                 humidityHour4 = hourHumidity(value: 4, hour: hourly)
                 conditionHour4 = hourIcon(value: 4, hour: hourly)
@@ -371,6 +371,7 @@ public func fetchDarkSkyWeatherData() {
 
                 hour5 = hourTime(value: 5, hour: hourly)
                 precipHour5 = hourPrecipProb(value: 5, hour: hourly)
+                accumHour5 = hourAccumProb(value: 5, hour: hourly)
                 tempHour5 = hourTemp(value: 5, hour: hourly)
                 humidityHour5 = hourHumidity(value: 5, hour: hourly)
                 conditionHour5 = hourIcon(value: 5, hour: hourly)
@@ -380,6 +381,7 @@ public func fetchDarkSkyWeatherData() {
 
                 hour6 = hourTime(value: 6, hour: hourly)
                 precipHour6 = hourPrecipProb(value: 6, hour: hourly)
+                accumHour6 = hourAccumProb(value: 6, hour: hourly)
                 tempHour6 = hourTemp(value: 6, hour: hourly)
                 humidityHour6 = hourHumidity(value: 6, hour: hourly)
                 conditionHour6 = hourIcon(value: 6, hour: hourly)
@@ -389,6 +391,7 @@ public func fetchDarkSkyWeatherData() {
 
                 hour7 = hourTime(value: 7, hour: hourly)
                 precipHour7 = hourPrecipProb(value: 7, hour: hourly)
+                accumHour7 = hourAccumProb(value: 7, hour: hourly)
                 tempHour7 = hourTemp(value: 7, hour: hourly)
                 humidityHour7 = hourHumidity(value: 7, hour: hourly)
                 conditionHour7 = hourIcon(value: 7, hour: hourly)
@@ -398,6 +401,7 @@ public func fetchDarkSkyWeatherData() {
 
                 hour8 = hourTime(value: 8, hour: hourly)
                 precipHour8 = hourPrecipProb(value: 8, hour: hourly)
+                accumHour8 = hourAccumProb(value: 8, hour: hourly)
                 tempHour8 = hourTemp(value: 8, hour: hourly)
                 humidityHour8 = hourHumidity(value: 8, hour: hourly)
                 conditionHour8 = hourIcon(value: 8, hour: hourly)
@@ -407,6 +411,7 @@ public func fetchDarkSkyWeatherData() {
 
                 hour9 = hourTime(value: 9, hour: hourly)
                 precipHour9 = hourPrecipProb(value: 9, hour: hourly)
+                accumHour9 = hourAccumProb(value: 9, hour: hourly)
                 tempHour9 = hourTemp(value: 9, hour: hourly)
                 humidityHour9 = hourHumidity(value: 9, hour: hourly)
                 conditionHour9 = hourIcon(value: 9, hour: hourly)
@@ -416,6 +421,7 @@ public func fetchDarkSkyWeatherData() {
 
                 hour10 = hourTime(value: 10, hour: hourly)
                 precipHour10 = hourPrecipProb(value: 10, hour: hourly)
+                accumHour10 = hourAccumProb(value: 10, hour: hourly)
                 tempHour10 = hourTemp(value: 10, hour: hourly)
                 humidityHour10 = hourHumidity(value: 10, hour: hourly)
                 conditionHour10 = hourIcon(value: 10, hour: hourly)
@@ -425,6 +431,7 @@ public func fetchDarkSkyWeatherData() {
 
                 hour11 = hourTime(value: 11, hour: hourly)
                 precipHour11 = hourPrecipProb(value: 11, hour: hourly)
+                accumHour11 = hourAccumProb(value: 11, hour: hourly)
                 tempHour11 = hourTemp(value: 11, hour: hourly)
                 humidityHour11 = hourHumidity(value: 11, hour: hourly)
                 conditionHour11 = hourIcon(value: 11, hour: hourly)
@@ -434,6 +441,7 @@ public func fetchDarkSkyWeatherData() {
 
                 hour12 = hourTime(value: 12, hour: hourly)
                 precipHour12 = hourPrecipProb(value: 12, hour: hourly)
+                accumHour12 = hourAccumProb(value: 12, hour: hourly)
                 tempHour12 = hourTemp(value: 12, hour: hourly)
                 humidityHour12 = hourHumidity(value: 12, hour: hourly)
                 conditionHour12 = hourIcon(value: 12, hour: hourly)
@@ -443,6 +451,7 @@ public func fetchDarkSkyWeatherData() {
 
                 hour13 = hourTime(value: 13, hour: hourly)
                 precipHour13 = hourPrecipProb(value: 13, hour: hourly)
+                accumHour13 = hourAccumProb(value: 13, hour: hourly)
                 tempHour13 = hourTemp(value: 13, hour: hourly)
                 humidityHour13 = hourHumidity(value: 13, hour: hourly)
                 conditionHour13 = hourIcon(value: 13, hour: hourly)
@@ -452,6 +461,7 @@ public func fetchDarkSkyWeatherData() {
 
                 hour14 = hourTime(value: 14, hour: hourly)
                 precipHour14 = hourPrecipProb(value: 14, hour: hourly)
+                accumHour14 = hourAccumProb(value: 14, hour: hourly)
                 tempHour14 = hourTemp(value: 14, hour: hourly)
                 humidityHour14 = hourHumidity(value: 14, hour: hourly)
                 conditionHour14 = hourIcon(value: 14, hour: hourly)
@@ -461,6 +471,7 @@ public func fetchDarkSkyWeatherData() {
 
                 hour15 = hourTime(value: 15, hour: hourly)
                 precipHour15 = hourPrecipProb(value: 15, hour: hourly)
+                accumHour15 = hourAccumProb(value: 15, hour: hourly)
                 tempHour15 = hourTemp(value: 15, hour: hourly)
                 humidityHour15 = hourHumidity(value: 15, hour: hourly)
                 conditionHour15 = hourIcon(value: 15, hour: hourly)

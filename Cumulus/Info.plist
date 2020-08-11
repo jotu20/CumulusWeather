@@ -27,15 +27,6 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-Orchid</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Orchid</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
 			<key>AppIcon-DodgerBlue</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -77,6 +68,24 @@
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>MightyUmbrella</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>AppIcon-Moonlight</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Moonlight</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>AppIcon-Orchid</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Orchid</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -126,15 +135,6 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>AppIcon-Moonlight</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Moonlight</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
 			<key>AppIcon-WindyDay</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -164,15 +164,6 @@
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>8-BitiPad</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-Orchid</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>OrchidiPad</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -222,6 +213,24 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+			<key>AppIcon-Moonlight</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>MoonlightiPad</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>AppIcon-Orchid</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>OrchidiPad</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
 			<key>AppIcon-PlumpPurple</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -263,15 +272,6 @@
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>TwilightZoneiPad</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>AppIcon-Moonlight</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>MoonlightiPad</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -338,8 +338,6 @@
 		<string>Oswald-Light.ttf</string>
 		<string>Oswald-Regular.ttf</string>
 	</array>
-	<key>UIBackgroundModes</key>
-	<array/>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>

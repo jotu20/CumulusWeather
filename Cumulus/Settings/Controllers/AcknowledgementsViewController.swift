@@ -45,52 +45,6 @@ class AcknowledgementsViewController: UIViewController, UITextViewDelegate {
         
         self.acknowledgement1TextView.text = "Copyright (c) 2015-2016 Andrea Bizzotto bizz84@gmail.com. \n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: \n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software, \n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
         
-        var setWidth: CGFloat = 0
-        let screenSize = UIScreen.main.bounds
-        let screenHeight = screenSize.height
-        if screenHeight == 568 {
-            // iPhone SE
-            setWidth = 300
-            self.statement0Height.constant = 50
-            self.statement1Height.constant = 50
-            self.acknowledgement0LabelHeight.constant = 20
-            self.acknowledgement0TextViewHeight.constant = 645
-            self.acknowledgement1LabelHeight.constant = 20
-            self.acknowledgement1TextViewHeight.constant = 645
-            
-        } else if screenHeight == 667 {
-            // iPhone 8
-            setWidth = 359
-        } else if screenHeight == 736 {
-            // iPhone Plus
-            setWidth = 399
-        } else if screenHeight == 812 {
-            // iPhone XS
-            setWidth = 359
-        } else if screenHeight == 896 {
-            // iPhone XR & XS Max
-            setWidth = 390
-        } else if screenHeight == 1024 {
-            // iPad 9.7"
-            setWidth = 752
-        } else if screenHeight == 1112 {
-            // iPad 10.5"
-            setWidth = 795
-        } else if screenHeight == 1194 {
-            // iPad 11"
-            setWidth = 815
-        } else if screenHeight == 1366 {
-            // iPad 12.9"
-            setWidth = 1008
-        }
-        
-        self.statement0Width.constant = setWidth
-        self.statement1Width.constant = setWidth
-        self.acknowledgement0LabelWidth.constant = setWidth
-        self.acknowledgement0TextViewWidth.constant = setWidth
-        self.acknowledgement1LabelWidth.constant = setWidth
-        self.acknowledgement1TextViewWidth.constant = setWidth
-        
         // Check for dark mode
         if self.traitCollection.userInterfaceStyle == .light {
             self.poweredByButton.setBackgroundImage(UIImage(named: "poweredby-oneline.pdf"), for: .normal)

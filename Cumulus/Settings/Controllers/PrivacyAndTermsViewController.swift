@@ -60,54 +60,6 @@ class PrivacyAndTermsViewController: UIViewController {
 
         self.setLabels()
         
-        var setWidth: CGFloat = 0
-        let screenSize = UIScreen.main.bounds
-        let screenHeight = screenSize.height
-        if screenHeight == 568 {
-            // iPhone SE
-            setWidth = 300
-            self.statementDescription0Height.constant = 90
-            self.statementDescription1Height.constant = 180
-            self.statementDescription2Height.constant = 364
-            self.statementDescription3Height.constant = 120
-            self.statementDescription4Height.constant = 60
-        } else if screenHeight == 667 {
-            // iPhone 8
-            setWidth = 359
-        } else if screenHeight == 736 {
-            // iPhone Plus
-            setWidth = 399
-        } else if screenHeight == 812 {
-            // iPhone XS
-            setWidth = 359
-        } else if screenHeight == 896 {
-            // iPhone XR & XS Max
-            setWidth = 390
-        } else if screenHeight == 1024 {
-            // iPad 9.7"
-            setWidth = 752
-        } else if screenHeight == 1112 {
-            // iPad 10.5"
-            setWidth = 795
-        } else if screenHeight == 1194 {
-            // iPad 11"
-            setWidth = 815
-        } else if screenHeight == 1366 {
-            // iPad 12.9"
-            setWidth = 1008
-        }
-        
-        self.statementTitle0Width.constant = setWidth
-        self.statementDescription0Width.constant = setWidth
-        self.statementTitle1Width.constant = setWidth
-        self.statementDescription1Width.constant = setWidth
-        self.statementTitle2Width.constant = setWidth
-        self.statementDescription2Width.constant = setWidth
-        self.statementTitle3Width.constant = setWidth
-        self.statementDescription3Width.constant = setWidth
-        self.statementTitle4Width.constant = setWidth
-        self.statementDescription4Width.constant = setWidth
-        
         let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ColorThemeTableViewController.doneBarButtonTapped))
         setupBarButtonColor(button: doneBarButton)
         self.navigationItem.rightBarButtonItem = doneBarButton

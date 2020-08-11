@@ -60,14 +60,6 @@
 		CFBE4388222F0174009F317D /* ForecastIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94777321680BBB00DA8B38 /* ForecastIntentHandler.swift */; };
 		CFC186152131B8A800F56AD0 /* CumulusProTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC186142131B8A800F56AD0 /* CumulusProTableViewController.swift */; };
 		CFD1CD2320EE9544004ED831 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD1CD2220EE9544004ED831 /* SettingsTableViewController.swift */; };
-		CFD2DB8724D8AA9700CB5EA0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD2DB8524D8AA9700CB5EA0 /* Interface.storyboard */; };
-		CFD2DB8924D8AA9800CB5EA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD2DB8824D8AA9800CB5EA0 /* Assets.xcassets */; };
-		CFD2DB9024D8AA9800CB5EA0 /* Cumulus Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CFD2DB8F24D8AA9800CB5EA0 /* Cumulus Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		CFD2DB9524D8AA9800CB5EA0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2DB9424D8AA9800CB5EA0 /* InterfaceController.swift */; };
-		CFD2DB9724D8AA9800CB5EA0 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2DB9624D8AA9800CB5EA0 /* ExtensionDelegate.swift */; };
-		CFD2DB9B24D8AA9800CB5EA0 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2DB9A24D8AA9800CB5EA0 /* ComplicationController.swift */; };
-		CFD2DB9D24D8AA9900CB5EA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD2DB9C24D8AA9900CB5EA0 /* Assets.xcassets */; };
-		CFD2DBA224D8AA9900CB5EA0 /* Cumulus Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CFD2DB8324D8AA9700CB5EA0 /* Cumulus Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CFD5E8FC20E669B0002A5F0C /* AcknowledgementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD5E8FB20E669B0002A5F0C /* AcknowledgementsViewController.swift */; };
 		CFD6674424E3251600CFB98D /* ThunderstormiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6670C24E3251600CFB98D /* ThunderstormiPad@3x.png */; };
 		CFD6674524E3251600CFB98D /* LightsOut@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6670D24E3251600CFB98D /* LightsOut@2x.png */; };
@@ -137,7 +129,6 @@
 		CFEE78B32470516A001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
 		CFF0A964242E9A2500FDDAF1 /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF824C3820E84EEB00E5F0A7 /* Locations.xcdatamodeld */; };
 		CFFB787720DF0B44008216F8 /* License in Resources */ = {isa = PBXBuildFile; fileRef = CFFB787620DF0B44008216F8 /* License */; };
-		E601DF3113985919CB2A3976 /* libPods-Cumulus Watch Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFB64F7FB172E23BB4578BF /* libPods-Cumulus Watch Extension.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,20 +146,6 @@
 			remoteGlobalIDString = CF94774F2168080900DA8B38;
 			remoteInfo = GetForecastIntent;
 		};
-		CFD2DB9124D8AA9800CB5EA0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CF6E4A9620DACFD8002349A7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CFD2DB8E24D8AA9800CB5EA0;
-			remoteInfo = "Cumulus Watch Extension";
-		};
-		CFD2DBA024D8AA9900CB5EA0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CF6E4A9620DACFD8002349A7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CFD2DB8224D8AA9700CB5EA0;
-			remoteInfo = "Cumulus Watch";
-		};
 		CFDEEC1220E26ED900BA5EA5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CF6E4A9620DACFD8002349A7 /* Project object */;
@@ -185,20 +162,8 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				CFD2DBA224D8AA9900CB5EA0 /* Cumulus Watch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFD2DBA624D8AA9900CB5EA0 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				CFD2DB9024D8AA9800CB5EA0 /* Cumulus Watch Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CFDEEC1820E26ED900BA5EA5 /* Embed App Extensions */ = {
@@ -268,18 +233,6 @@
 		CFB693E420F8577200DE669A /* PrivacyAndTermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyAndTermsViewController.swift; sourceTree = "<group>"; };
 		CFC186142131B8A800F56AD0 /* CumulusProTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CumulusProTableViewController.swift; sourceTree = "<group>"; };
 		CFD1CD2220EE9544004ED831 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		CFD2DB8324D8AA9700CB5EA0 /* Cumulus Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cumulus Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFD2DB8624D8AA9700CB5EA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		CFD2DB8824D8AA9800CB5EA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CFD2DB8A24D8AA9800CB5EA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFD2DB8F24D8AA9800CB5EA0 /* Cumulus Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Cumulus Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFD2DB9424D8AA9800CB5EA0 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		CFD2DB9624D8AA9800CB5EA0 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		CFD2DB9A24D8AA9800CB5EA0 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		CFD2DB9C24D8AA9900CB5EA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CFD2DB9E24D8AA9900CB5EA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFD2DBAA24D8AAAD00CB5EA0 /* Cumulus Watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Cumulus Watch.entitlements"; sourceTree = "<group>"; };
-		CFD2DBAB24D8AAB300CB5EA0 /* Cumulus Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Cumulus Watch Extension.entitlements"; sourceTree = "<group>"; };
 		CFD5E8FB20E669B0002A5F0C /* AcknowledgementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsViewController.swift; sourceTree = "<group>"; };
 		CFD6670C24E3251600CFB98D /* ThunderstormiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ThunderstormiPad@3x.png"; sourceTree = "<group>"; };
 		CFD6670D24E3251600CFB98D /* LightsOut@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LightsOut@2x.png"; sourceTree = "<group>"; };
@@ -353,13 +306,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2E8CC69F6E8590A9FDF75FA4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CF6E4A9B20DACFD8002349A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -385,14 +331,6 @@
 			files = (
 				CF94775B2168080A00DA8B38 /* IntentsUI.framework in Frameworks */,
 				0B7B5387EAFCC3F6025F3166 /* Pods_Cumulus_GetForecastIntentUI.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFD2DB8C24D8AA9800CB5EA0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E601DF3113985919CB2A3976 /* libPods-Cumulus Watch Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,8 +398,6 @@
 				CFDEEC0B20E26ED900BA5EA5 /* Cumulus Today */,
 				CF9477512168080900DA8B38 /* GetForecastIntent */,
 				CF94775C2168080A00DA8B38 /* GetForecastIntentUI */,
-				CFD2DB8424D8AA9700CB5EA0 /* Cumulus Watch */,
-				CFD2DB9324D8AA9800CB5EA0 /* Cumulus Watch Extension */,
 				CF6E4A9F20DACFD8002349A7 /* Products */,
 				5EE996DAD71F1CE8D2F46C19 /* Frameworks */,
 				34F474473D8808F01E8529E7 /* Pods */,
@@ -475,8 +411,6 @@
 				CFDEEC0820E26ED900BA5EA5 /* Cumulus Today.appex */,
 				CF9477502168080900DA8B38 /* GetForecastIntent.appex */,
 				CF9477592168080A00DA8B38 /* GetForecastIntentUI.appex */,
-				CFD2DB8324D8AA9700CB5EA0 /* Cumulus Watch.app */,
-				CFD2DB8F24D8AA9800CB5EA0 /* Cumulus Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -598,30 +532,6 @@
 			path = Locations;
 			sourceTree = "<group>";
 		};
-		CFD2DB8424D8AA9700CB5EA0 /* Cumulus Watch */ = {
-			isa = PBXGroup;
-			children = (
-				CFD2DBAA24D8AAAD00CB5EA0 /* Cumulus Watch.entitlements */,
-				CFD2DB8524D8AA9700CB5EA0 /* Interface.storyboard */,
-				CFD2DB8824D8AA9800CB5EA0 /* Assets.xcassets */,
-				CFD2DB8A24D8AA9800CB5EA0 /* Info.plist */,
-			);
-			path = "Cumulus Watch";
-			sourceTree = "<group>";
-		};
-		CFD2DB9324D8AA9800CB5EA0 /* Cumulus Watch Extension */ = {
-			isa = PBXGroup;
-			children = (
-				CFD2DBAB24D8AAB300CB5EA0 /* Cumulus Watch Extension.entitlements */,
-				CFD2DB9424D8AA9800CB5EA0 /* InterfaceController.swift */,
-				CFD2DB9624D8AA9800CB5EA0 /* ExtensionDelegate.swift */,
-				CFD2DB9A24D8AA9800CB5EA0 /* ComplicationController.swift */,
-				CFD2DB9C24D8AA9900CB5EA0 /* Assets.xcassets */,
-				CFD2DB9E24D8AA9900CB5EA0 /* Info.plist */,
-			);
-			path = "Cumulus Watch Extension";
-			sourceTree = "<group>";
-		};
 		CFD3DF7C242E617B005DA2D2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -730,7 +640,6 @@
 				CFDEEC1320E26ED900BA5EA5 /* PBXTargetDependency */,
 				CF9477642168080A00DA8B38 /* PBXTargetDependency */,
 				CF9477672168080A00DA8B38 /* PBXTargetDependency */,
-				CFD2DBA124D8AA9900CB5EA0 /* PBXTargetDependency */,
 			);
 			name = Cumulus;
 			productName = "Puttle Weather";
@@ -774,42 +683,6 @@
 			productName = GetForecastIntentUI;
 			productReference = CF9477592168080A00DA8B38 /* GetForecastIntentUI.appex */;
 			productType = "com.apple.product-type.app-extension";
-		};
-		CFD2DB8224D8AA9700CB5EA0 /* Cumulus Watch */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CFD2DBA724D8AA9900CB5EA0 /* Build configuration list for PBXNativeTarget "Cumulus Watch" */;
-			buildPhases = (
-				CFD2DB8124D8AA9700CB5EA0 /* Resources */,
-				CFD2DBA624D8AA9900CB5EA0 /* Embed App Extensions */,
-				2E8CC69F6E8590A9FDF75FA4 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CFD2DB9224D8AA9800CB5EA0 /* PBXTargetDependency */,
-			);
-			name = "Cumulus Watch";
-			productName = "Cumulus Watch";
-			productReference = CFD2DB8324D8AA9700CB5EA0 /* Cumulus Watch.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		CFD2DB8E24D8AA9800CB5EA0 /* Cumulus Watch Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CFD2DBA324D8AA9900CB5EA0 /* Build configuration list for PBXNativeTarget "Cumulus Watch Extension" */;
-			buildPhases = (
-				888CE5A5CD151A2162D53131 /* [CP] Check Pods Manifest.lock */,
-				CFD2DB8B24D8AA9800CB5EA0 /* Sources */,
-				CFD2DB8C24D8AA9800CB5EA0 /* Frameworks */,
-				CFD2DB8D24D8AA9800CB5EA0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Cumulus Watch Extension";
-			productName = "Cumulus Watch Extension";
-			productReference = CFD2DB8F24D8AA9800CB5EA0 /* Cumulus Watch Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
 		};
 		CFDEEC0720E26ED900BA5EA5 /* Cumulus Today */ = {
 			isa = PBXNativeTarget;
@@ -876,12 +749,6 @@
 							};
 						};
 					};
-					CFD2DB8224D8AA9700CB5EA0 = {
-						CreatedOnToolsVersion = 11.6;
-					};
-					CFD2DB8E24D8AA9800CB5EA0 = {
-						CreatedOnToolsVersion = 11.6;
-					};
 					CFDEEC0720E26ED900BA5EA5 = {
 						CreatedOnToolsVersion = 9.4.1;
 						SystemCapabilities = {
@@ -909,8 +776,6 @@
 				CFDEEC0720E26ED900BA5EA5 /* Cumulus Today */,
 				CF94774F2168080900DA8B38 /* GetForecastIntent */,
 				CF9477582168080A00DA8B38 /* GetForecastIntentUI */,
-				CFD2DB8224D8AA9700CB5EA0 /* Cumulus Watch */,
-				CFD2DB8E24D8AA9800CB5EA0 /* Cumulus Watch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -1001,23 +866,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFD2DB8124D8AA9700CB5EA0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFD2DB8924D8AA9800CB5EA0 /* Assets.xcassets in Resources */,
-				CFD2DB8724D8AA9700CB5EA0 /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFD2DB8D24D8AA9800CB5EA0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFD2DB9D24D8AA9900CB5EA0 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CFDEEC0620E26ED900BA5EA5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1101,28 +949,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus/Pods-Cumulus-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		888CE5A5CD151A2162D53131 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Cumulus Watch Extension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B0C90BB7EEE52C55E2777155 /* [CP] Check Pods Manifest.lock */ = {
@@ -1287,16 +1113,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFD2DB8B24D8AA9800CB5EA0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFD2DB9B24D8AA9800CB5EA0 /* ComplicationController.swift in Sources */,
-				CFD2DB9724D8AA9800CB5EA0 /* ExtensionDelegate.swift in Sources */,
-				CFD2DB9524D8AA9800CB5EA0 /* InterfaceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CFDEEC0420E26ED900BA5EA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1322,16 +1138,6 @@
 			isa = PBXTargetDependency;
 			target = CF94774F2168080900DA8B38 /* GetForecastIntent */;
 			targetProxy = CF9477662168080A00DA8B38 /* PBXContainerItemProxy */;
-		};
-		CFD2DB9224D8AA9800CB5EA0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CFD2DB8E24D8AA9800CB5EA0 /* Cumulus Watch Extension */;
-			targetProxy = CFD2DB9124D8AA9800CB5EA0 /* PBXContainerItemProxy */;
-		};
-		CFD2DBA124D8AA9900CB5EA0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CFD2DB8224D8AA9700CB5EA0 /* Cumulus Watch */;
-			targetProxy = CFD2DBA024D8AA9900CB5EA0 /* PBXContainerItemProxy */;
 		};
 		CFDEEC1320E26ED900BA5EA5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1363,14 +1169,6 @@
 				CF9477602168080A00DA8B38 /* Base */,
 			);
 			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
-		CFD2DB8524D8AA9700CB5EA0 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CFD2DB8624D8AA9700CB5EA0 /* Base */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 		CFDEEC0E20E26ED900BA5EA5 /* MainInterface.storyboard */ = {
@@ -1662,108 +1460,6 @@
 			};
 			name = Release;
 		};
-		CFD2DBA424D8AA9900CB5EA0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C41E7862564091B6C3999365 /* Pods-Cumulus Watch Extension.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "Cumulus Watch Extension/Cumulus Watch Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.0.0;
-				DEVELOPMENT_TEAM = 24WZU35MAF;
-				INFOPLIST_FILE = "Cumulus Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 2.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.2;
-			};
-			name = Debug;
-		};
-		CFD2DBA524D8AA9900CB5EA0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA5D7C1194DB905D6480B445 /* Pods-Cumulus Watch Extension.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "Cumulus Watch Extension/Cumulus Watch Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.0.0;
-				DEVELOPMENT_TEAM = 24WZU35MAF;
-				INFOPLIST_FILE = "Cumulus Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 2.0;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.2;
-			};
-			name = Release;
-		};
-		CFD2DBA824D8AA9900CB5EA0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Cumulus Watch/Cumulus Watch.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.0.0;
-				DEVELOPMENT_TEAM = 24WZU35MAF;
-				IBSC_MODULE = Cumulus_Watch_Extension;
-				INFOPLIST_FILE = "Cumulus Watch/Info.plist";
-				MARKETING_VERSION = 2.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.2;
-			};
-			name = Debug;
-		};
-		CFD2DBA924D8AA9900CB5EA0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Cumulus Watch/Cumulus Watch.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.0.0;
-				DEVELOPMENT_TEAM = 24WZU35MAF;
-				IBSC_MODULE = Cumulus_Watch_Extension;
-				INFOPLIST_FILE = "Cumulus Watch/Info.plist";
-				MARKETING_VERSION = 2.0;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.2;
-			};
-			name = Release;
-		};
 		CFDEEC1520E26ED900BA5EA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DD732631DC5F64851FC6A2FE /* Pods-Cumulus-Cumulus Today.debug.xcconfig */;
@@ -1849,24 +1545,6 @@
 			buildConfigurations = (
 				CF94776D2168080A00DA8B38 /* Debug */,
 				CF94776E2168080A00DA8B38 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CFD2DBA324D8AA9900CB5EA0 /* Build configuration list for PBXNativeTarget "Cumulus Watch Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CFD2DBA424D8AA9900CB5EA0 /* Debug */,
-				CFD2DBA524D8AA9900CB5EA0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CFD2DBA724D8AA9900CB5EA0 /* Build configuration list for PBXNativeTarget "Cumulus Watch" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CFD2DBA824D8AA9900CB5EA0 /* Debug */,
-				CFD2DBA924D8AA9900CB5EA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

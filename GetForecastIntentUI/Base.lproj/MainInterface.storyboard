@@ -28,22 +28,22 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5dK-fn-amy">
-                                <rect key="frame" x="65" y="35" width="130" height="30"/>
+                                <rect key="frame" x="65" y="35" width="130" height="33"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqa-t4-EG2">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqa-t4-EG2">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="18"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="ClA-ms-xPs"/>
-                                            <constraint firstAttribute="height" constant="15" id="w5z-h6-kQG"/>
+                                            <constraint firstAttribute="width" constant="130" id="ClA-ms-xPs"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="w5z-h6-kQG"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gq-G6-ETc">
-                                        <rect key="frame" x="0.0" y="15" width="130" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gq-G6-ETc">
+                                        <rect key="frame" x="0.0" y="18" width="130" height="15"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="6qj-bo-tnF"/>
-                                            <constraint firstAttribute="height" constant="15" id="8xn-6T-s8R"/>
+                                            <constraint firstAttribute="width" constant="130" id="6qj-bo-tnF"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="8xn-6T-s8R"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="highlightedColor"/>

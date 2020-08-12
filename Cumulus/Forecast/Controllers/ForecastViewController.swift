@@ -427,10 +427,9 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                 
                 UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(latitudeValue, forKey: "setWidgetLatitude")
                 UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(longitudeValue, forKey: "setWidgetLongitude")
-                self.navigationController?.navigationBar.topItem?.title = "\(defaults.string(forKey: "selectedLocation") ?? "New York, NY")"
+                currentLocation = "\(defaults.string(forKey: "selectedLocation") ?? "New York, NY")"
                 self.setupInitialData()
             }
-            setWeatherDataLabels()
         } else {
             showLocationDisabledPopUp()
         }
@@ -466,19 +465,15 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                     }
                 case .restricted, .denied:
                     print("Restricted access")
-                    setupDeniedLocation()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         loadingView.removeFromSuperview()
-                        self.setupInitialLoad()
-                        self.setWeatherDataLabels()
+                        self.setupDeniedLocation()
                     }
                 case .authorizedAlways, .authorizedWhenInUse:
                     print("Access")
-                    setupGrantedLocationServices()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         loadingView.removeFromSuperview()
-                        self.setupInitialLoad()
-                        self.setWeatherDataLabels()
+                        self.setupGrantedLocationServices()
                     }
                 @unknown default:
                 break
@@ -497,7 +492,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @objc func didPullToRefresh() {
         setupInitialData()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.setWeatherDataLabels()
             self.refreshControl.endRefreshing()
         }
     }

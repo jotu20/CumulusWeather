@@ -49,7 +49,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" name="customControlColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="hYe-yh-GIG" firstAttribute="bottom" secondItem="TCf-kB-Iac" secondAttribute="bottom" id="34w-CU-7eG"/>
@@ -3052,7 +3052,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                 <rect key="frame" x="-7.5" y="0.0" width="390" height="618"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucT-hz-Uno">
-                                        <rect key="frame" x="15" y="65" width="360" height="100"/>
+                                        <rect key="frame" x="15" y="65" width="360" height="115"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heavy_rain" translatesAutoresizingMaskIntoConstraints="NO" id="y7R-Sp-dOd">
                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
@@ -3061,10 +3061,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <constraint firstAttribute="width" constant="70" id="ewg-5z-alh"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83E-W5-IGN">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83E-W5-IGN">
                                                 <rect key="frame" x="5" y="70" width="215" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="GLO-dC-dSu"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="GLO-dC-dSu"/>
                                                     <constraint firstAttribute="width" constant="215" id="ju7-IB-Ywj"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -3082,7 +3082,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0w3-cj-XKw">
-                                                <rect key="frame" x="220" y="7" width="130" height="86"/>
+                                                <rect key="frame" x="220" y="14.5" width="130" height="86"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feels like" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlZ-CI-juf">
                                                         <rect key="frame" x="0.0" y="0.0" width="130" height="20"/>
@@ -3138,7 +3138,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             <constraint firstAttribute="trailing" secondItem="0w3-cj-XKw" secondAttribute="trailing" constant="10" id="SKy-1W-Xrd"/>
                                             <constraint firstItem="7Hk-gf-tuj" firstAttribute="top" secondItem="ucT-hz-Uno" secondAttribute="top" id="X9D-11-i3H"/>
                                             <constraint firstItem="y7R-Sp-dOd" firstAttribute="leading" secondItem="ucT-hz-Uno" secondAttribute="leading" id="fcI-Kg-q9K"/>
-                                            <constraint firstAttribute="height" constant="100" id="tJC-og-ryA"/>
+                                            <constraint firstAttribute="height" constant="115" id="tJC-og-ryA"/>
                                             <constraint firstItem="y7R-Sp-dOd" firstAttribute="top" secondItem="ucT-hz-Uno" secondAttribute="top" id="ue8-8L-eF7"/>
                                         </constraints>
                                         <connections>
@@ -3191,7 +3191,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hourly" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUx-c3-dZc">
-                                        <rect key="frame" x="15" y="195" width="160" height="20"/>
+                                        <rect key="frame" x="15" y="210" width="160" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="160" id="qpq-qH-ffH"/>
                                             <constraint firstAttribute="height" constant="20" id="w7Z-vp-1ei"/>
@@ -3201,7 +3201,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUn-RY-l67">
-                                        <rect key="frame" x="15" y="350" width="160" height="20"/>
+                                        <rect key="frame" x="15" y="365" width="160" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Ysj-4g-Wm8"/>
                                             <constraint firstAttribute="width" constant="160" id="lJw-UM-idQ"/>
@@ -3211,7 +3211,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GQh-9o-KNu">
-                                        <rect key="frame" x="15" y="220" width="360" height="100"/>
+                                        <rect key="frame" x="15" y="235" width="360" height="100"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hg-jh-yKf">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="100"/>
@@ -3398,7 +3398,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         </connections>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7v6-1w-cYP">
-                                        <rect key="frame" x="15" y="375" width="360" height="2290"/>
+                                        <rect key="frame" x="15" y="390" width="360" height="2290"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0RJ-1L-fYN">
                                                 <rect key="frame" x="0.0" y="0.0" width="360" height="220"/>

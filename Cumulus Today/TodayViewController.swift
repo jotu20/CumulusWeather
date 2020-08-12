@@ -270,10 +270,10 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             // Set state for locations in the US
             if placemark.country! == "United States" {
                 currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
-                self.navigationController?.navigationBar.topItem?.title = "\(currentLocation)"
+                self.currentLocationLabel.text = "\(currentLocation)"
             } else {
                 currentLocation = "\(placemark.locality!), \(placemark.country!)"
-                self.navigationController?.navigationBar.topItem?.title = "\(currentLocation)"
+                self.currentLocationLabel.text = "\(currentLocation)"
             }
             fetchDarkSkyWeatherData()
             

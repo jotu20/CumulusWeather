@@ -461,6 +461,9 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             switch CLLocationManager.authorizationStatus() {
                 case .notDetermined:
                     print("No access")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+                        loadingView.removeFromSuperview()
+                    }
                 case .restricted, .denied:
                     print("Restricted access")
                     setupDeniedLocation()

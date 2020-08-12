@@ -132,6 +132,7 @@ class CumulusPlusTableViewController: UITableViewController {
                         case .purchased(let expiryDate, _):
                             print("Product is valid until \(expiryDate)")
                             defaults.set(true, forKey: "cumulusPlus")
+                            weatherLoaded = false
                         case .expired(let expiryDate, _):
                             print("Product is expired since \(expiryDate)")
                             defaults.set(false, forKey: "cumulusPlus")
@@ -171,6 +172,7 @@ class CumulusPlusTableViewController: UITableViewController {
                         case .purchased(let expiryDate, _):
                             print("Product is valid until \(expiryDate)")
                             defaults.set(true, forKey: "cumulusPlus")
+                            weatherLoaded = false
                         case .expired(let expiryDate, _):
                             print("Product is expired since \(expiryDate)")
                             defaults.set(false, forKey: "cumulusPlus")
@@ -193,6 +195,7 @@ class CumulusPlusTableViewController: UITableViewController {
             case .success(let purchase):
                 print("Purchase Success: \(purchase.productId)")
                 defaults.set(true, forKey: "cumulusPlus")
+                weatherLoaded = false
             case .error(let error):
                 switch error.code {
                 case .unknown: print("Unknown error. Please contact support")
@@ -222,6 +225,7 @@ class CumulusPlusTableViewController: UITableViewController {
                 case .purchased(let expiryDate, let items):
                     print("\(productIds) are valid until \(expiryDate)\n\(items)\n")
                     defaults.set(true, forKey: "cumulusPlus")
+                    weatherLoaded = false
                 case .expired(let expiryDate, let items):
                     print("\(productIds) are expired since \(expiryDate)\n\(items)\n")
                     defaults.set(false, forKey: "cumulusPlus")
@@ -252,6 +256,7 @@ class CumulusPlusTableViewController: UITableViewController {
                 case .purchased(let receiptItem):
                     print("\(productId) is purchased: \(receiptItem)")
                     defaults.set(true, forKey: "cumulusPlus")
+                    weatherLoaded = false
                 case .notPurchased:
                     print("The user has never purchased \(productId)")
                     

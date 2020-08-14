@@ -345,11 +345,11 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                 }
             }
         } else {
-            geocode(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!) { placemark, error in
+            latitudeValue = (manager.location?.coordinate.latitude)!
+            longitudeValue = (manager.location?.coordinate.longitude)!
+            
+            geocode(latitude: latitudeValue, longitude: longitudeValue) { placemark, error in
                 guard let placemark = placemark, error == nil else { return }
-
-                latitudeValue = (manager.location?.coordinate.latitude)!
-                longitudeValue = (manager.location?.coordinate.longitude)!
                 
                 // Set state for locations in the US
                 if placemark.country! == "United States" {
@@ -393,10 +393,11 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                 defaults.set(false, forKey: "userDeniedLocation")
                 locationManager.distanceFilter = 100
             }
+            
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
+            setupInitialData()
         }
-        setupInitialLoad()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
             if currentSummary.isEmpty == false {
@@ -496,16 +497,11 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         }
     }
     
-    // MARK: - Load all UI values for images and labels
-    func setupInitialLoad() {
-        setWeatherDataLabels()
-        setColorTheme()
-    }
-    
-    // MARK: Load weather data
+    // MARK: Load weather data and UI elements
     func setupInitialData() {
         fetchDarkSkyWeatherData()
         setWeatherDataLabels()
+        setColorTheme()
     }
     
     // MARK: - Set the user set theme

@@ -257,6 +257,7 @@ class CumulusPlusTableViewController: UITableViewController {
                     print("\(productId) is purchased: \(receiptItem)")
                     defaults.set(true, forKey: "cumulusPlus")
                     weatherLoaded = false
+                    print("test")
                 case .notPurchased:
                     print("The user has never purchased \(productId)")
                     

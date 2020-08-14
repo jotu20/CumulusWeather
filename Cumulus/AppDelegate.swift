@@ -31,8 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         // Deliver content from server
                         SwiftyStoreKit.finishTransaction(purchase.transaction)
                     }
-                    // Unlock content
-                    defaults.set(true, forKey: "cumulusPlus")
                 case .failed, .purchasing, .deferred:
                     break
                 @unknown default:

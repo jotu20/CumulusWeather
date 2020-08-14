@@ -234,11 +234,12 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     // MARK: - Get location and weather data
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         universalSettings()
-        geocode(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!) { placemark, error in
+        
+        latitudeValue = (manager.location?.coordinate.latitude)!
+        longitudeValue = (manager.location?.coordinate.longitude)!
+        
+        geocode(latitude: latitudeValue, longitude: longitudeValue) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
-
-            latitudeValue = (manager.location?.coordinate.latitude)!
-            longitudeValue = (manager.location?.coordinate.longitude)!
 
             // Set state for locations in the US
             if placemark.country! == "United States" {

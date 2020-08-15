@@ -255,10 +255,9 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.delegate = self
         self.locationManager.requestWhenInUseAuthorization()
+        self.setupGrantedLocationServices()
         
         DispatchQueue.main.async {
-            self.setupGrantedLocationServices()
-            
             if defaults.bool(forKey: "cumulusPlus") == false {
                 self.hourlyConditionsGesture.isEnabled = false
                 self.hourlyConditionsGestureSwipeLeft.isEnabled = false
@@ -388,12 +387,9 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     // MARK: - Fetch user location if granted location access
     func setupGrantedLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
+            defaults.set(false, forKey: "userDeniedLocation")
             locationManager.delegate = self
-            if userSelectedSavedLocation == false {
-                defaults.set(false, forKey: "userDeniedLocation")
-                locationManager.distanceFilter = 100
-            }
-            
+            locationManager.distanceFilter = 100
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
             setupInitialData()
@@ -954,6 +950,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     // When tapped show extended current conditions
     @IBAction func currentConditionsTapped(_ sender: UITapGestureRecognizer) {
+        enabledHapticFeedback()
+        
         if (conditionSlotLabel0.text?.contains("Feels"))! {
             setExtendedCurrentConditionOutlets()
         } else {
@@ -963,6 +961,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     // When tapped show extended hourly conditions
     @IBAction func hourlyConditionsTapped(_ sender: UITapGestureRecognizer) {
+        enabledHapticFeedback()
+        
         if hour0TimeLabel.text == hour0 {
             setHourlyOutlets1(type: changedHourlyValues)
         } else if hour0TimeLabel.text == hour4 {
@@ -1026,6 +1026,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
     
     @IBAction func day0CardTapped(_ sender: UITapGestureRecognizer) {
+        enabledHapticFeedback()
+        
         if day0Height.constant == 60 {
             day0Height.constant = 220
             
@@ -1040,6 +1042,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
     
     @IBAction func day1CardTapped(_ sender: UITapGestureRecognizer) {
+        enabledHapticFeedback()
+        
         if day1Height.constant == 60 {
             day1Height.constant = 220
             
@@ -1054,6 +1058,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
     
     @IBAction func day2CardTapped(_ sender: UITapGestureRecognizer) {
+        enabledHapticFeedback()
+        
         if day2Height.constant == 60 {
             day2Height.constant = 220
             
@@ -1068,6 +1074,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
 
     @IBAction func day3CardTapped(_ sender: UITapGestureRecognizer) {
+        enabledHapticFeedback()
+        
         if day3Height.constant == 60 {
             day3Height.constant = 220
             
@@ -1082,6 +1090,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
 
     @IBAction func day4CardTapped(_ sender: UITapGestureRecognizer) {
+        enabledHapticFeedback()
+        
         if day4Height.constant == 60 {
             day4Height.constant = 220
             
@@ -1096,6 +1106,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
 
     @IBAction func day5CardTapped(_ sender: UITapGestureRecognizer) {
+        enabledHapticFeedback()
+        
         if day5Height.constant == 60 {
             day5Height.constant = 220
             
@@ -1110,6 +1122,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
     
     @IBAction func day6CardTapped(_ sender: UITapGestureRecognizer) {
+        enabledHapticFeedback()
+        
         if day6Height.constant == 60 {
             day6Height.constant = 220
             
@@ -1124,6 +1138,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
     
     @IBAction func day7CardTapped(_ sender: UITapGestureRecognizer) {
+        enabledHapticFeedback()
+        
         if day7Height.constant == 60 {
             day7Height.constant = 220
             
@@ -1138,6 +1154,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
     
     @IBAction func day8CardTapped(_ sender: UITapGestureRecognizer) {
+        enabledHapticFeedback()
+        
         if day8Height.constant == 60 {
             day8Height.constant = 220
             
@@ -1152,6 +1170,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
     
     @IBAction func day9CardTapped(_ sender: UITapGestureRecognizer) {
+        enabledHapticFeedback()
+        
         if day9Height.constant == 60 {
             day9Height.constant = 220
             
@@ -1264,6 +1284,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             }
         } else {
             weatherAlertStackView.isHidden = true
+        }
+    }
+    
+    // MARK: - Haptic feedback
+    func enabledHapticFeedback() {
+        if (defaults.bool(forKey: "hapticFeedbackEnabled") == true) {
+            let generator = UIImpactFeedbackGenerator(style: .light)
+            generator.impactOccurred()
         }
     }
     

@@ -6,11 +6,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Oswald-Light.ttf">
-            <string>Oswald-Light</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Intent View Controller-->
         <scene sceneID="7MM-of-jgj">
@@ -28,10 +23,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5dK-fn-amy">
-                                <rect key="frame" x="65" y="35" width="130" height="33"/>
+                                <rect key="frame" x="65" y="35" width="130" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqa-t4-EG2">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqa-t4-EG2">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="130" id="ClA-ms-xPs"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="w5z-h6-kQG"/>
@@ -40,7 +35,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gq-G6-ETc">
-                                        <rect key="frame" x="0.0" y="18" width="130" height="15"/>
+                                        <rect key="frame" x="0.0" y="15" width="130" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="130" id="6qj-bo-tnF"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="8xn-6T-s8R"/>
@@ -108,7 +103,7 @@
                                                     <constraint firstAttribute="height" constant="20" id="8EK-4J-Poe"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="jTn-hN-opy"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cloud Cover" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ce-Jw-AAR">
@@ -117,7 +112,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="UEz-4m-Ecp"/>
                                                     <constraint firstAttribute="height" constant="20" id="bgZ-AF-TbX"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>

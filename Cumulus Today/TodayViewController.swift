@@ -237,6 +237,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         
         latitudeValue = (manager.location?.coordinate.latitude)!
         longitudeValue = (manager.location?.coordinate.longitude)!
+        fetchDarkSkyWeatherData()
         
         geocode(latitude: latitudeValue, longitude: longitudeValue) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
@@ -249,7 +250,6 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
                 currentLocation = "\(placemark.locality!), \(placemark.country!)"
                 self.currentLocationLabel.text = "\(currentLocation)"
             }
-            fetchDarkSkyWeatherData()
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.setWidgetLabels()
@@ -267,6 +267,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             
             latitudeValue = universalLatitude
             longitudeValue = universalLongitude
+            fetchDarkSkyWeatherData()
             
             // Set state for locations in the US
             if placemark.country! == "United States" {
@@ -276,7 +277,6 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
                 currentLocation = "\(placemark.locality!), \(placemark.country!)"
                 self.currentLocationLabel.text = "\(currentLocation)"
             }
-            fetchDarkSkyWeatherData()
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.setWidgetLabels()

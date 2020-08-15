@@ -91,7 +91,7 @@ public func fetchDarkSkyWeatherData() {
                 day0DayString = dayFormat(date: fetchDay0Array.time, fullLength: false)
                 day0DayStringFull = dayFormat(date: fetchDay0Array.time, fullLength: true)
                 day0DateString = dateFormat(date: fetchDay0Array.time)
-                day0Summary = fetchDay0Array.summary!
+                day0Summary = fetchDay0Array.summary ?? "Summary error."
                 day0Sunrise = sunFormat(date: fetchDay0Array.sunriseTime!)
                 day0Sunset = sunFormat(date: fetchDay0Array.sunsetTime!)
                 day0High = Int(fetchDay0Array.temperatureHigh ?? defaultInteger)
@@ -99,11 +99,11 @@ public func fetchDarkSkyWeatherData() {
                 day0Precip = dailyPrecipProb(day: fetchDay0Array)
                 day0PrecipAccum = dailyPrecipAccum(day: fetchDay0Array)
                 day0Humidity = dailyHumidityProb(day: fetchDay0Array)
-                day0Wind = fetchDay0Array.windSpeed!
-                day0DewPoint = Int(fetchDay0Array.dewPoint!)
-                day0Pressure = fetchDay0Array.pressure!
-                day0Visibility = Int(fetchDay0Array.visibility!)
-                day0UVIndex = Int(fetchDay0Array.uvIndex!)
+                day0Wind = fetchDay0Array.windSpeed ?? 0
+                day0DewPoint = Int(fetchDay0Array.dewPoint ?? 0)
+                day0Pressure = fetchDay0Array.pressure ?? 0
+                day0Visibility = Int(fetchDay0Array.visibility ?? 0)
+                day0UVIndex = Int(fetchDay0Array.uvIndex ?? 0)
             }
             
             // Get minutely data through 60 minutes
@@ -510,7 +510,7 @@ public func fetchDarkSkyWeatherData() {
             day1DayString = dayFormat(date: fetchDay1Array.time, fullLength: false)
             day1DayStringFull = dayFormat(date: fetchDay1Array.time, fullLength: true)
             day1DateString = dateFormat(date: fetchDay1Array.time)
-            day1Summary = fetchDay1Array.summary!
+            day1Summary = fetchDay1Array.summary ?? "Summary error."
             day1Sunrise = sunFormat(date: fetchDay1Array.sunriseTime!)
             day1Sunset = sunFormat(date: fetchDay1Array.sunsetTime!)
             day1High = Int(fetchDay1Array.temperatureHigh ?? defaultInteger)
@@ -518,11 +518,11 @@ public func fetchDarkSkyWeatherData() {
             day1Precip = dailyPrecipProb(day: fetchDay1Array)
             day1PrecipAccum = dailyPrecipAccum(day: fetchDay1Array)
             day1Humidity = dailyHumidityProb(day: fetchDay1Array)
-            day1Wind = fetchDay1Array.windSpeed!
-            day1DewPoint = Int(fetchDay1Array.dewPoint!)
-            day1Pressure = fetchDay1Array.pressure!
-            day1Visibility = Int(fetchDay1Array.visibility!)
-            day1UVIndex = Int(fetchDay1Array.uvIndex!)
+            day1Wind = fetchDay1Array.windSpeed ?? 0
+            day1DewPoint = Int(fetchDay1Array.dewPoint ?? 0)
+            day1Pressure = fetchDay1Array.pressure ?? 0
+            day1Visibility = Int(fetchDay1Array.visibility ?? 0)
+            day1UVIndex = Int(fetchDay1Array.uvIndex ?? 0)
         }
         case .failure(let error):
             print(error)
@@ -544,7 +544,7 @@ public func fetchDarkSkyWeatherData() {
             day2DayString = dayFormat(date: fetchDay2Array.time, fullLength: false)
             day2DayStringFull = dayFormat(date: fetchDay2Array.time, fullLength: true)
             day2DateString = dateFormat(date: fetchDay2Array.time)
-            day2Summary = fetchDay2Array.summary!
+            day2Summary = fetchDay2Array.summary ?? "Summary error."
             day2Sunrise = sunFormat(date: fetchDay2Array.sunriseTime!)
             day2Sunset = sunFormat(date: fetchDay2Array.sunsetTime!)
             day2High = Int(fetchDay2Array.temperatureHigh ?? defaultInteger)
@@ -552,11 +552,11 @@ public func fetchDarkSkyWeatherData() {
             day2Precip = dailyPrecipProb(day: fetchDay2Array)
             day2PrecipAccum = dailyPrecipAccum(day: fetchDay2Array)
             day2Humidity = dailyHumidityProb(day: fetchDay2Array)
-            day2Wind = fetchDay2Array.windSpeed!
-            day2DewPoint = Int(fetchDay2Array.dewPoint!)
-            day2Pressure = fetchDay2Array.pressure!
-            day2Visibility = Int(fetchDay2Array.visibility!)
-            day2UVIndex = Int(fetchDay2Array.uvIndex!)
+            day2Wind = fetchDay2Array.windSpeed ?? 0
+            day2DewPoint = Int(fetchDay2Array.dewPoint ?? 0)
+            day2Pressure = fetchDay2Array.pressure ?? 0
+            day2Visibility = Int(fetchDay2Array.visibility ?? 0)
+            day2UVIndex = Int(fetchDay2Array.uvIndex ?? 0)
         }
         case .failure(let error):
             print(error)
@@ -586,11 +586,11 @@ public func fetchDarkSkyWeatherData() {
             day3Precip = dailyPrecipProb(day: fetchDay3Array)
             day3PrecipAccum = dailyPrecipAccum(day: fetchDay3Array)
             day3Humidity = dailyHumidityProb(day: fetchDay3Array)
-            day3Wind = fetchDay3Array.windSpeed!
-            day3DewPoint = Int(fetchDay3Array.dewPoint!)
-            day3Pressure = fetchDay3Array.pressure!
-            day3Visibility = Int(fetchDay3Array.visibility!)
-            day3UVIndex = Int(fetchDay3Array.uvIndex!)
+            day3Wind = fetchDay3Array.windSpeed ?? 0
+            day3DewPoint = Int(fetchDay3Array.dewPoint ?? 0)
+            day3Pressure = fetchDay3Array.pressure ?? 0
+            day3Visibility = Int(fetchDay3Array.visibility ?? 0)
+            day3UVIndex = Int(fetchDay3Array.uvIndex ?? 0)
         }
         case .failure(let error):
             print(error)
@@ -612,7 +612,7 @@ public func fetchDarkSkyWeatherData() {
             day4DayString = dayFormat(date: fetchDay4Array.time, fullLength: false)
             day4DayStringFull = dayFormat(date: fetchDay4Array.time, fullLength: true)
             day4DateString = dateFormat(date: fetchDay4Array.time)
-            day4Summary = fetchDay4Array.summary!
+            day4Summary = fetchDay4Array.summary ?? "Summary error."
             day4Sunrise = sunFormat(date: fetchDay4Array.sunriseTime!)
             day4Sunset = sunFormat(date: fetchDay4Array.sunsetTime!)
             day4High = Int(fetchDay4Array.temperatureHigh ?? defaultInteger)
@@ -620,11 +620,11 @@ public func fetchDarkSkyWeatherData() {
             day4Precip = dailyPrecipProb(day: fetchDay4Array)
             day4PrecipAccum = dailyPrecipAccum(day: fetchDay4Array)
             day4Humidity = dailyHumidityProb(day: fetchDay4Array)
-            day4Wind = fetchDay4Array.windSpeed!
-            day4DewPoint = Int(fetchDay4Array.dewPoint!)
-            day4Pressure = fetchDay4Array.pressure!
-            day4Visibility = Int(fetchDay4Array.visibility!)
-            day4UVIndex = Int(fetchDay4Array.uvIndex!)
+            day4Wind = fetchDay4Array.windSpeed ?? 0
+            day4DewPoint = Int(fetchDay4Array.dewPoint ?? 0)
+            day4Pressure = fetchDay4Array.pressure ?? 0
+            day4Visibility = Int(fetchDay4Array.visibility ?? 0)
+            day4UVIndex = Int(fetchDay4Array.uvIndex ?? 0)
         }
         case .failure(let error):
             print(error)
@@ -646,7 +646,7 @@ public func fetchDarkSkyWeatherData() {
             day5DayString = dayFormat(date: fetchDay5Array.time, fullLength: false)
             day5DayStringFull = dayFormat(date: fetchDay5Array.time, fullLength: true)
             day5DateString = dateFormat(date: fetchDay5Array.time)
-            day5Summary = fetchDay5Array.summary!
+            day5Summary = fetchDay5Array.summary ?? "Summary error."
             day5Sunrise = sunFormat(date: fetchDay5Array.sunriseTime!)
             day5Sunset = sunFormat(date: fetchDay5Array.sunsetTime!)
             day5High = Int(fetchDay5Array.temperatureHigh ?? defaultInteger)
@@ -654,11 +654,11 @@ public func fetchDarkSkyWeatherData() {
             day5Precip = dailyPrecipProb(day: fetchDay5Array)
             day5PrecipAccum = dailyPrecipAccum(day: fetchDay5Array)
             day5Humidity = dailyHumidityProb(day: fetchDay5Array)
-            day5Wind = fetchDay5Array.windSpeed!
-            day5DewPoint = Int(fetchDay5Array.dewPoint!)
-            day5Pressure = fetchDay5Array.pressure!
-            day5Visibility = Int(fetchDay5Array.visibility!)
-            day5UVIndex = Int(fetchDay5Array.uvIndex!)
+            day5Wind = fetchDay5Array.windSpeed ?? 0
+            day5DewPoint = Int(fetchDay5Array.dewPoint ?? 0)
+            day5Pressure = fetchDay5Array.pressure ?? 0
+            day5Visibility = Int(fetchDay5Array.visibility ?? 0)
+            day5UVIndex = Int(fetchDay5Array.uvIndex ?? 0)
         }
         case .failure(let error):
             print(error)
@@ -680,7 +680,7 @@ public func fetchDarkSkyWeatherData() {
             day6DayString = dayFormat(date: fetchDay6Array.time, fullLength: false)
             day6DayStringFull = dayFormat(date: fetchDay6Array.time, fullLength: true)
             day6DateString = dateFormat(date: fetchDay6Array.time)
-            day6Summary = fetchDay6Array.summary!
+            day6Summary = fetchDay6Array.summary ?? "Summary error."
             day6Sunrise = sunFormat(date: fetchDay6Array.sunriseTime!)
             day6Sunset = sunFormat(date: fetchDay6Array.sunsetTime!)
             day6High = Int(fetchDay6Array.temperatureHigh ?? defaultInteger)
@@ -688,11 +688,11 @@ public func fetchDarkSkyWeatherData() {
             day6Precip = dailyPrecipProb(day: fetchDay6Array)
             day6PrecipAccum = dailyPrecipAccum(day: fetchDay6Array)
             day6Humidity = dailyHumidityProb(day: fetchDay6Array)
-            day6Wind = fetchDay6Array.windSpeed!
-            day6DewPoint = Int(fetchDay6Array.dewPoint!)
-            day6Pressure = fetchDay6Array.pressure!
-            day6Visibility = Int(fetchDay6Array.visibility!)
-            day6UVIndex = Int(fetchDay6Array.uvIndex!)
+            day6Wind = fetchDay6Array.windSpeed ?? 0
+            day6DewPoint = Int(fetchDay6Array.dewPoint ?? 0)
+            day6Pressure = fetchDay6Array.pressure ?? 0
+            day6Visibility = Int(fetchDay6Array.visibility ?? 0)
+            day6UVIndex = Int(fetchDay6Array.uvIndex ?? 0)
         }
         case .failure(let error):
             print(error)
@@ -714,7 +714,7 @@ public func fetchDarkSkyWeatherData() {
             day7DayString = dayFormat(date: fetchDay7Array.time, fullLength: false)
             day7DayStringFull = dayFormat(date: fetchDay7Array.time, fullLength: true)
             day7DateString = dateFormat(date: fetchDay7Array.time)
-            day7Summary = fetchDay7Array.summary!
+            day7Summary = fetchDay7Array.summary ?? "Summary error."
             day7Sunrise = sunFormat(date: fetchDay7Array.sunriseTime!)
             day7Sunset = sunFormat(date: fetchDay7Array.sunsetTime!)
             day7High = Int(fetchDay7Array.temperatureHigh ?? defaultInteger)
@@ -722,11 +722,11 @@ public func fetchDarkSkyWeatherData() {
             day7Precip = dailyPrecipProb(day: fetchDay7Array)
             day7PrecipAccum = dailyPrecipAccum(day: fetchDay7Array)
             day7Humidity = dailyHumidityProb(day: fetchDay7Array)
-            day7Wind = fetchDay7Array.windSpeed!
-            day7DewPoint = Int(fetchDay7Array.dewPoint!)
-            day7Pressure = fetchDay7Array.pressure!
-            day7Visibility = Int(fetchDay7Array.visibility!)
-            day7UVIndex = Int(fetchDay7Array.uvIndex!)
+            day7Wind = fetchDay7Array.windSpeed ?? 0
+            day7DewPoint = Int(fetchDay7Array.dewPoint ?? 0)
+            day7Pressure = fetchDay7Array.pressure ?? 0
+            day7Visibility = Int(fetchDay7Array.visibility ?? 0)
+            day7UVIndex = Int(fetchDay7Array.uvIndex ?? 0)
         }
         case .failure(let error):
             print(error)
@@ -748,7 +748,7 @@ public func fetchDarkSkyWeatherData() {
             day8DayString = dayFormat(date: fetchDay8Array.time, fullLength: false)
             day8DayStringFull = dayFormat(date: fetchDay8Array.time, fullLength: true)
             day8DateString = dateFormat(date: fetchDay8Array.time)
-            day8Summary = fetchDay8Array.summary!
+            day8Summary = fetchDay8Array.summary ?? "Summary error."
             day8Sunrise = sunFormat(date: fetchDay8Array.sunriseTime!)
             day8Sunset = sunFormat(date: fetchDay8Array.sunsetTime!)
             day8High = Int(fetchDay8Array.temperatureHigh ?? defaultInteger)
@@ -756,11 +756,11 @@ public func fetchDarkSkyWeatherData() {
             day8Precip = dailyPrecipProb(day: fetchDay8Array)
             day8PrecipAccum = dailyPrecipAccum(day: fetchDay8Array)
             day8Humidity = dailyHumidityProb(day: fetchDay8Array)
-            day8Wind = fetchDay8Array.windSpeed!
-            day8DewPoint = Int(fetchDay8Array.dewPoint!)
-            day8Pressure = fetchDay8Array.pressure!
-            day8Visibility = Int(fetchDay8Array.visibility!)
-            day8UVIndex = Int(fetchDay8Array.uvIndex!)
+            day8Wind = fetchDay8Array.windSpeed ?? 0
+            day8DewPoint = Int(fetchDay8Array.dewPoint ?? 0)
+            day8Pressure = fetchDay8Array.pressure ?? 0
+            day8Visibility = Int(fetchDay8Array.visibility ?? 0)
+            day8UVIndex = Int(fetchDay8Array.uvIndex ?? 0)
         }        case .failure(let error):
             print(error)
         }
@@ -781,7 +781,7 @@ public func fetchDarkSkyWeatherData() {
             day9DayString = dayFormat(date: fetchDay9Array.time, fullLength: false)
             day9DayStringFull = dayFormat(date: fetchDay9Array.time, fullLength: true)
             day9DateString = dateFormat(date: fetchDay9Array.time)
-            day9Summary = fetchDay9Array.summary!
+            day9Summary = fetchDay9Array.summary ?? "Summary error."
             day9Sunrise = sunFormat(date: fetchDay9Array.sunriseTime!)
             day9Sunset = sunFormat(date: fetchDay9Array.sunsetTime!)
             day9High = Int(fetchDay9Array.temperatureHigh ?? defaultInteger)
@@ -789,11 +789,11 @@ public func fetchDarkSkyWeatherData() {
             day9Precip = dailyPrecipProb(day: fetchDay9Array)
             day9PrecipAccum = dailyPrecipAccum(day: fetchDay9Array)
             day9Humidity = dailyHumidityProb(day: fetchDay9Array)
-            day9Wind = fetchDay9Array.windSpeed!
-            day9DewPoint = Int(fetchDay9Array.dewPoint!)
-            day9Pressure = fetchDay9Array.pressure!
-            day9Visibility = Int(fetchDay9Array.visibility!)
-            day9UVIndex = Int(fetchDay9Array.uvIndex!)
+            day9Wind = fetchDay9Array.windSpeed ?? 0
+            day9DewPoint = Int(fetchDay9Array.dewPoint ?? 0)
+            day9Pressure = fetchDay9Array.pressure ?? 0
+            day9Visibility = Int(fetchDay9Array.visibility ?? 0)
+            day9UVIndex = Int(fetchDay9Array.uvIndex ?? 0)
         }
         case .failure(let error):
             print(error)

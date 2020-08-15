@@ -25,6 +25,7 @@ var setupCounter: Int = 0
 var userViewedCounter: Int = 0
 var userInvocationPhrase: String = ""
 var twentyFourHourClockEnabled: Bool = false
+var hapticFeedbackEnabled: Bool = false
 
 // App icon & Color Themes
 var userSavedAppIconString: String = ""

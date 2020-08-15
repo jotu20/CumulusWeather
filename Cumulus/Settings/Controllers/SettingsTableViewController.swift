@@ -16,6 +16,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     @IBOutlet weak var weatherUnitsLabel: UILabel!
     
     @IBOutlet weak var twentyFourHourClockSwitch: UISwitch!
+    @IBOutlet weak var hapticFeedbackSwitch: UISwitch!
     
     @IBOutlet weak var cumulusPlusTableViewCell: UITableViewCell!
     @IBOutlet weak var cumulusPlusLabel: UILabel!
@@ -36,6 +37,18 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         self.tableView.tableFooterView = UIView(frame: .zero)
         
         weatherUnitsLabel.text = defaults.string(forKey: "weatherUnits")
+        
+        if defaults.bool(forKey: "twentyFourHourClockEnabled") == true {
+            twentyFourHourClockSwitch.isOn = true
+        } else {
+            twentyFourHourClockSwitch.isOn = false
+        }
+        
+        if defaults.bool(forKey: "hapticFeedbackEnabled") == true {
+            hapticFeedbackSwitch.isOn = true
+        } else {
+            hapticFeedbackSwitch.isOn = false
+        }
         
         forecastDataLabel.text = defaults.string(forKey: "dataSource")
         appIconLabel.text = defaults.string(forKey: "userSavedAppIconString")
@@ -72,6 +85,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         weatherUnitsLabel.textColor = color
         
         twentyFourHourClockSwitch.onTintColor = color
+        hapticFeedbackSwitch.onTintColor = color
         
         forecastDataTableViewCell.detailTextLabel?.textColor = color
         forecastDataLabel.textColor = color
@@ -96,6 +110,16 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         } else {
             twentyFourHourClockSwitch.isOn = false
             defaults.set(false, forKey: "twentyFourHourClockEnabled")
+        }
+    }
+    
+    @IBAction func hapticFeedbackSwitchTapped(_ sender: UISwitch) {
+        if defaults.bool(forKey: "hapticFeedbackEnabled") == false {
+            hapticFeedbackSwitch.isOn = true
+            defaults.set(true, forKey: "hapticFeedbackEnabled")
+        } else {
+            hapticFeedbackSwitch.isOn = false
+            defaults.set(false, forKey: "hapticFeedbackEnabled")
         }
     }
     

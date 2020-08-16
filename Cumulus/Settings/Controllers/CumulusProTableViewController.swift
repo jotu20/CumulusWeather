@@ -133,6 +133,10 @@ class CumulusPlusTableViewController: UITableViewController {
                             print("Product is valid until \(expiryDate)")
                             defaults.set(true, forKey: "cumulusPlus")
                             weatherLoaded = false
+                            
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            let controller = storyboard.instantiateViewController(withIdentifier: "Home")
+                            self.present(controller, animated: true, completion: nil)
                         case .expired(let expiryDate, _):
                             print("Product is expired since \(expiryDate)")
                             defaults.set(false, forKey: "cumulusPlus")
@@ -173,6 +177,10 @@ class CumulusPlusTableViewController: UITableViewController {
                             print("Product is valid until \(expiryDate)")
                             defaults.set(true, forKey: "cumulusPlus")
                             weatherLoaded = false
+                            
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            let controller = storyboard.instantiateViewController(withIdentifier: "Home")
+                            self.present(controller, animated: true, completion: nil)
                         case .expired(let expiryDate, _):
                             print("Product is expired since \(expiryDate)")
                             defaults.set(false, forKey: "cumulusPlus")
@@ -196,6 +204,10 @@ class CumulusPlusTableViewController: UITableViewController {
                 print("Purchase Success: \(purchase.productId)")
                 defaults.set(true, forKey: "cumulusPlus")
                 weatherLoaded = false
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "Home")
+                self.present(controller, animated: true, completion: nil)
             case .error(let error):
                 switch error.code {
                 case .unknown: print("Unknown error. Please contact support")
@@ -226,6 +238,10 @@ class CumulusPlusTableViewController: UITableViewController {
                     print("\(productIds) are valid until \(expiryDate)\n\(items)\n")
                     defaults.set(true, forKey: "cumulusPlus")
                     weatherLoaded = false
+                    
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let controller = storyboard.instantiateViewController(withIdentifier: "Home")
+                    self.present(controller, animated: true, completion: nil)
                 case .expired(let expiryDate, let items):
                     print("\(productIds) are expired since \(expiryDate)\n\(items)\n")
                     defaults.set(false, forKey: "cumulusPlus")
@@ -257,7 +273,10 @@ class CumulusPlusTableViewController: UITableViewController {
                     print("\(productId) is purchased: \(receiptItem)")
                     defaults.set(true, forKey: "cumulusPlus")
                     weatherLoaded = false
-                    print("test")
+                    
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let controller = storyboard.instantiateViewController(withIdentifier: "Home")
+                    self.present(controller, animated: true, completion: nil)
                 case .notPurchased:
                     print("The user has never purchased \(productId)")
                     

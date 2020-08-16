@@ -658,7 +658,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             hour3Value = "\(cloudCoverHour3)%"
         }
         
-        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: hour0, hourIconString: conditionHour0, hourConditionString: hour0Value)
+        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: "Now", hourIconString: conditionHour0, hourConditionString: hour0Value)
         setHourLabelAndIcons(hourTimeLabel: hour1TimeLabel, hourConditionIcon: hour1ConditionIcon, hourCondtionLabel: hour1ConditionLabel, hourTimeString: hour1, hourIconString: conditionHour1, hourConditionString: hour1Value)
         setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: hour2, hourIconString: conditionHour2, hourConditionString: hour2Value)
         setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: hour3, hourIconString: conditionHour3, hourConditionString: hour3Value)
@@ -910,7 +910,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             hour3Value = "\(cloudCoverHour3)%"
         }
         
-        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: hour0, hourIconString: conditionHour0, hourConditionString: hour0Value)
+        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: "Now", hourIconString: conditionHour0, hourConditionString: hour0Value)
         setHourLabelAndIcons(hourTimeLabel: hour1TimeLabel, hourConditionIcon: hour1ConditionIcon, hourCondtionLabel: hour1ConditionLabel, hourTimeString: hour1, hourIconString: conditionHour1, hourConditionString: hour1Value)
         setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: hour2, hourIconString: conditionHour2, hourConditionString: hour2Value)
         setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: hour3, hourIconString: conditionHour3, hourConditionString: hour3Value)
@@ -963,7 +963,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @IBAction func hourlyConditionsTapped(_ sender: UITapGestureRecognizer) {
         enabledHapticFeedback()
         
-        if hour0TimeLabel.text == hour0 {
+        if hour0TimeLabel.text == "Now" {
             setHourlyOutlets1(type: changedHourlyValues)
         } else if hour0TimeLabel.text == hour4 {
             setHourlyOutlets2(type: changedHourlyValues)

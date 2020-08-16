@@ -138,6 +138,11 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
                     case .purchased(let expiryDate, let items):
                         print("\(productIds) are valid until \(expiryDate)\n\(items)\n")
                         defaults.set(true, forKey: "cumulusPlus")
+                        weatherLoaded = false
+                        
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let controller = storyboard.instantiateViewController(withIdentifier: "Home")
+                        self.present(controller, animated: true, completion: nil)
                     case .expired(let expiryDate, let items):
                         print("\(productIds) are expired since \(expiryDate)\n\(items)\n")
                         defaults.set(false, forKey: "cumulusPlus")
@@ -168,6 +173,11 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
                     case .purchased(let receiptItem):
                         print("\(productId) is purchased: \(receiptItem)")
                         defaults.set(true, forKey: "cumulusPlus")
+                        weatherLoaded = false
+                        
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let controller = storyboard.instantiateViewController(withIdentifier: "Home")
+                        self.present(controller, animated: true, completion: nil)
                     case .notPurchased:
                         print("The user has never purchased \(productId)")
                         

@@ -38,6 +38,12 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         
         weatherUnitsLabel.text = defaults.string(forKey: "weatherUnits")
         
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            hapticFeedbackSwitch.isHidden = true
+        } else {
+            hapticFeedbackSwitch.isHidden = false
+        }
+        
         if defaults.bool(forKey: "twentyFourHourClockEnabled") == true {
             twentyFourHourClockSwitch.isOn = true
         } else {

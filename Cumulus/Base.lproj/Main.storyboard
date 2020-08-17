@@ -525,6 +525,7 @@
                         <outlet property="forecastDataLabel" destination="bdN-qw-vjb" id="zXH-wT-iOc"/>
                         <outlet property="forecastDataTableViewCell" destination="4CQ-Uu-Avy" id="iia-Gt-m8P"/>
                         <outlet property="hapticFeedbackSwitch" destination="Pwu-ia-Wu0" id="5NF-NL-Nu5"/>
+                        <outlet property="hapticFeedbackTableCell" destination="bft-ez-axY" id="iyE-HY-WYe"/>
                         <outlet property="themeColorLabel" destination="2yu-WK-fvK" id="Izr-NW-gvQ"/>
                         <outlet property="themeColorTableViewCell" destination="RmI-BP-uke" id="hMh-E1-wfh"/>
                         <outlet property="twentyFourHourClockSwitch" destination="BRD-yi-RGk" id="M5Z-ZJ-1C8"/>

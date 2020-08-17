@@ -16,6 +16,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     @IBOutlet weak var weatherUnitsLabel: UILabel!
     
     @IBOutlet weak var twentyFourHourClockSwitch: UISwitch!
+    @IBOutlet weak var hapticFeedbackTableCell: UITableViewCell!
     @IBOutlet weak var hapticFeedbackSwitch: UISwitch!
     
     @IBOutlet weak var cumulusPlusTableViewCell: UITableViewCell!
@@ -39,9 +40,9 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         weatherUnitsLabel.text = defaults.string(forKey: "weatherUnits")
         
         if UIDevice.current.userInterfaceIdiom == .pad {
-            hapticFeedbackSwitch.isHidden = true
+            hapticFeedbackTableCell.isHidden = true
         } else {
-            hapticFeedbackSwitch.isHidden = false
+            hapticFeedbackTableCell.isHidden = false
         }
         
         if defaults.bool(forKey: "twentyFourHourClockEnabled") == true {

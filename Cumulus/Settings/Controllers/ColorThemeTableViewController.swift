@@ -154,6 +154,7 @@ class ColorThemeTableViewController: UITableViewController {
             dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
             orchidTableCell.accessoryType = .none
+            springGreenTableCell.accessoryType = .none
             autoThemeTableCell.accessoryType = .none
         }
 

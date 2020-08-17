@@ -14,6 +14,7 @@ class CumulusPlusTableViewController: UITableViewController {
     @IBOutlet weak var cumulusPlusMonthlyButton: UIButton!
     @IBOutlet weak var cumulusPlusYearlyButton: UIButton!
     @IBOutlet weak var cumulusPlusLifetimeButton: UIButton!
+    @IBOutlet weak var privacyAndTermsButton: UIButton!
     
     @IBOutlet weak var cumulusPlusTextViewWidth: NSLayoutConstraint!
     @IBOutlet weak var cumulusPlusTextViewHeight: NSLayoutConstraint!
@@ -34,6 +35,7 @@ class CumulusPlusTableViewController: UITableViewController {
         cumulusPlusMonthlyButton.layer.cornerRadius = 10
         cumulusPlusYearlyButton.layer.cornerRadius = 10
         cumulusPlusLifetimeButton.layer.cornerRadius = 10
+        privacyAndTermsButton.layer.cornerRadius = 10
         
         SwiftyStoreKit.retrieveProductsInfo(["com.josephszafarowicz.CumulusPlus.Monthly"]) { result in
             if let product = result.retrievedProducts.first {
@@ -107,6 +109,7 @@ class CumulusPlusTableViewController: UITableViewController {
         cumulusPlusMonthlyButton.backgroundColor = color
         cumulusPlusYearlyButton.backgroundColor = color
         cumulusPlusLifetimeButton.backgroundColor = color
+        privacyAndTermsButton.backgroundColor = color
     }
 
     @IBAction func cumulusPlusMonthlyButtonTapped(_ sender: UIButton) {
@@ -288,6 +291,13 @@ class CumulusPlusTableViewController: UITableViewController {
                 print("Receipt verification failed: \(error)")
             }
         }
+    }
+    
+    @IBAction func privacyAndTermsButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "PrivacyTerms")
+        controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: true, completion: nil)
     }
     
     @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {

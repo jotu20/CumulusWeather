@@ -225,7 +225,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             self.currentConditionsTopConstraint.constant = 50
         } else {
             //expanded
-            self.preferredContentSize = CGSize(width: 0, height: 370)
+            self.preferredContentSize = CGSize(width: 0, height: 380)
             timeStackView.isHidden = false
             self.currentConditionsTopConstraint.constant = 25
         }

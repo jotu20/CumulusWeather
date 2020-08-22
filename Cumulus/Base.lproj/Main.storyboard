@@ -1531,14 +1531,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Support Indie Development" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CaE-os-b5k">
-                                                    <rect key="frame" x="91" y="13" width="209.5" height="20.5"/>
+                                                    <rect key="frame" x="83" y="13" width="209.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DYU-VT-uSe">
-                                                    <rect key="frame" x="91" y="36.5" width="267.5" height="57.5"/>
+                                                    <rect key="frame" x="83" y="36.5" width="284" height="57.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <string key="text">Cumulus is a one man operation funded by its loving customers. Your upgrade will help continue the development and improvement of Cumulus-it means the world for your support!</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -1546,7 +1546,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Support icon" id="u1o-gf-6oD">
-                                                    <rect key="frame" x="16" y="25" width="60" height="60"/>
+                                                    <rect key="frame" x="8" y="25" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -2797,43 +2797,43 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                             <outletCollection property="gestureRecognizers" destination="yV1-f5-t2b" appends="YES" id="S1F-cA-rIt"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="i1X-vh-qmI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="bW2-dH-gWS">
                                         <rect key="frame" x="0.0" y="88" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i1X-vh-qmI" id="Ibk-hL-xTI">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bW2-dH-gWS" id="qWc-fb-0dq">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mango" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7Q-jZ-RFw">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mango" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIf-Gc-olr">
                                                     <rect key="frame" x="82" y="13.5" width="180" height="43.5"/>
                                                     <gestureRecognizers/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="43.5" id="dQh-RM-Sda"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="rwu-11-QGV"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="9mq-1M-KkC"/>
+                                                        <constraint firstAttribute="height" constant="43.5" id="X9g-gD-Eog"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mango theme" translatesAutoresizingMaskIntoConstraints="NO" id="kAi-R0-yfv">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mango theme" translatesAutoresizingMaskIntoConstraints="NO" id="CiF-t2-Kjf">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="KXh-Lz-D6f"/>
-                                                        <constraint firstAttribute="width" constant="50" id="PsQ-Nx-tCz"/>
+                                                        <constraint firstAttribute="height" constant="50" id="Cc2-Iw-FEf"/>
+                                                        <constraint firstAttribute="width" constant="50" id="l77-eP-qdS"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="O7Q-jZ-RFw" firstAttribute="centerY" secondItem="Ibk-hL-xTI" secondAttribute="centerY" id="FQD-Rt-QXb"/>
-                                                <constraint firstItem="kAi-R0-yfv" firstAttribute="leading" secondItem="Ibk-hL-xTI" secondAttribute="leading" constant="16" id="aeL-5G-Xad"/>
-                                                <constraint firstItem="O7Q-jZ-RFw" firstAttribute="leading" secondItem="kAi-R0-yfv" secondAttribute="trailing" constant="16" id="nMc-6u-tk4"/>
-                                                <constraint firstItem="kAi-R0-yfv" firstAttribute="centerY" secondItem="Ibk-hL-xTI" secondAttribute="centerY" id="no1-CD-N2e"/>
+                                                <constraint firstItem="PIf-Gc-olr" firstAttribute="leading" secondItem="CiF-t2-Kjf" secondAttribute="trailing" constant="16" id="3MD-Ea-DUH"/>
+                                                <constraint firstItem="PIf-Gc-olr" firstAttribute="centerY" secondItem="qWc-fb-0dq" secondAttribute="centerY" id="Ypl-bq-1Qi"/>
+                                                <constraint firstItem="CiF-t2-Kjf" firstAttribute="leading" secondItem="qWc-fb-0dq" secondAttribute="leading" constant="16" id="n8I-i9-DKu"/>
+                                                <constraint firstItem="CiF-t2-Kjf" firstAttribute="centerY" secondItem="qWc-fb-0dq" secondAttribute="centerY" id="r1b-BS-A3u"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <gestureRecognizers/>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="0JX-GR-X2V" appends="YES" id="SZA-Io-Xme"/>
+                                            <outletCollection property="gestureRecognizers" destination="3DT-Hy-WBj" appends="YES" id="pAI-Ep-6n2"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" rowHeight="70" id="XhI-bQ-cYs">
@@ -3043,7 +3043,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     <connections>
                         <outlet property="autoThemeTableCell" destination="0WN-u6-2o4" id="Vn5-sH-20W"/>
                         <outlet property="dodgerBlueTableCell" destination="ksD-ht-s0f" id="e6M-EE-ada"/>
-                        <outlet property="mangoTableCell" destination="i1X-vh-qmI" id="sgn-Rv-yiY"/>
+                        <outlet property="mangoTableCell" destination="bW2-dH-gWS" id="GL3-mS-nBK"/>
                         <outlet property="maximumRedTableCell" destination="XhI-bQ-cYs" id="z5h-w0-IJz"/>
                         <outlet property="orchidTableCell" destination="L7B-Zs-UaE" id="MMg-dU-FO7"/>
                         <outlet property="plumpPurpleTableCell" destination="RH4-Ji-qOw" id="VMC-y4-3Lh"/>
@@ -3051,11 +3051,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMt-dV-pi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="0JX-GR-X2V">
-                    <connections>
-                        <action selector="mangoTapped:" destination="t1C-MU-Ksi" id="3K2-Ca-O7m"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <tapGestureRecognizer id="mER-q7-vXC">
                     <connections>
                         <action selector="maximumRedTapped:" destination="t1C-MU-Ksi" id="sXN-0M-nPZ"/>
@@ -3084,6 +3079,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <tapGestureRecognizer id="13D-nZ-ihc">
                     <connections>
                         <action selector="autoThemeTapped:" destination="t1C-MU-Ksi" id="PJN-b5-Euw"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="3DT-Hy-WBj">
+                    <connections>
+                        <action selector="mangoTapped:" destination="t1C-MU-Ksi" id="qpp-Sx-Xhe"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -5788,7 +5788,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Default Conditions" id="RL0-FF-5Hm">
+                            <tableViewSection headerTitle="Default" id="RL0-FF-5Hm">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KeQ-OL-5xM">
                                         <rect key="frame" x="0.0" y="155.5" width="375" height="44"/>
@@ -5831,12 +5831,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <gestureRecognizers/>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Default Conditions" id="ruV-bo-W49">
-                                <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="UAI-iE-seX">
-                                        <rect key="frame" x="0.0" y="255.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="199.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UAI-iE-seX" id="vrV-8a-GaE">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

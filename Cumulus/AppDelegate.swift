@@ -104,7 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         if (defaults.bool(forKey: "cumulusPlus") == false) || (defaults.bool(forKey: "autoThemeEnabled") == true) {
-            let autoTheme = Int(arc4random_uniform(UInt32(13)))
+            let autoTheme = Int(arc4random_uniform(UInt32(6)))
             
             if autoTheme == 0 || autoTheme == 1 {
                 defaults.set("Dodger Blue", forKey: "userSavedColorString")
@@ -118,8 +118,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 defaults.set("Plump Purple", forKey: "userSavedColorString")
             } else if autoTheme == 6 {
                 defaults.set("Spring Green", forKey: "userSavedColorString")
-            } else {
-                defaults.set("Dodger Blue", forKey: "userSavedColorString")
             }
         }
         

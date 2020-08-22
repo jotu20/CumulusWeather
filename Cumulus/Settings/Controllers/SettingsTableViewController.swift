@@ -63,6 +63,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         
         weatherLoaded = true
         distanceChange = false
+        userChangedColorTheme = false
         setupObjectColors()
         
         if defaults.bool(forKey: "cumulusPlus") == true {

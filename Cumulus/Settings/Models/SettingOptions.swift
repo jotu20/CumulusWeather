@@ -92,7 +92,7 @@ func universalSettings() {
 
 // Check user saved color
 func checkSavedColor() {
-    if defaults.string(forKey: "userSavedColorString") == "Mandarin" || defaults.string(forKey: "userSavedColorString") == "Maximum Red" || defaults.string(forKey: "userSavedColorString") == "Dodger Blue" || defaults.string(forKey: "userSavedColorString") == "Plump Purple" || defaults.string(forKey: "userSavedColorString") == "Orchid" || defaults.string(forKey: "userSavedColorString") == "Spring Green" {
+    if defaults.string(forKey: "userSavedColorString") == "Mango" || defaults.string(forKey: "userSavedColorString") == "Maximum Red" || defaults.string(forKey: "userSavedColorString") == "Dodger Blue" || defaults.string(forKey: "userSavedColorString") == "Plump Purple" || defaults.string(forKey: "userSavedColorString") == "Orchid" || defaults.string(forKey: "userSavedColorString") == "Spring Green" {
         // Nothing
     } else {
         defaults.set("Dodger Blue", forKey: "userSavedColorString")

@@ -24,6 +24,7 @@ class ColorThemeTableViewController: UITableViewController {
         self.tableView.tableFooterView = UIView(frame: .zero)
         
         weatherLoaded = true
+        userChangedColorTheme = false
         self.setColorTheme()
         
         let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ColorThemeTableViewController.doneBarButtonTapped))
@@ -120,7 +121,13 @@ class ColorThemeTableViewController: UITableViewController {
     }
     
     @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        if userChangedColorTheme == true {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "Home")
+            self.present(controller, animated: true, completion: nil)
+        } else {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     func setSelectedCheckMark(layerString: String, setColor: Bool) {
@@ -132,8 +139,9 @@ class ColorThemeTableViewController: UITableViewController {
             userChangedColorTheme = false
         }
 
-        if layerString == "Mandarin" {
-            defaults.set("Mandarin", forKey: "userSavedColorString")
+        if layerString == "Mango" {
+            defaults.set("Mango", forKey: "userSavedColorString")
+            defaults.set(false, forKey: "autoThemeEnabled")
             setTableViewCellColor(tableCell: mangoTableCell)
 
             mangoTableCell.accessoryType = .checkmark
@@ -147,6 +155,7 @@ class ColorThemeTableViewController: UITableViewController {
 
         if layerString == "Maximum Red" {
             defaults.set("Maximum Red", forKey: "userSavedColorString")
+            defaults.set(false, forKey: "autoThemeEnabled")
             setTableViewCellColor(tableCell: maximumRedTableCell)
 
             mangoTableCell.accessoryType = .none
@@ -160,6 +169,7 @@ class ColorThemeTableViewController: UITableViewController {
 
         if layerString == "Dodger Blue" {
             defaults.set("Dodger Blue", forKey: "userSavedColorString")
+            defaults.set(false, forKey: "autoThemeEnabled")
             setTableViewCellColor(tableCell: dodgerBlueTableCell)
 
             mangoTableCell.accessoryType = .none
@@ -173,6 +183,7 @@ class ColorThemeTableViewController: UITableViewController {
 
         if layerString == "Plump Purple" {
             defaults.set("Plump Purple", forKey: "userSavedColorString")
+            defaults.set(false, forKey: "autoThemeEnabled")
             setTableViewCellColor(tableCell: plumpPurpleTableCell)
 
             mangoTableCell.accessoryType = .none
@@ -186,6 +197,7 @@ class ColorThemeTableViewController: UITableViewController {
         
         if layerString == "Orchid" {
             defaults.set("Orchid", forKey: "userSavedColorString")
+            defaults.set(false, forKey: "autoThemeEnabled")
             setTableViewCellColor(tableCell: orchidTableCell)
 
             mangoTableCell.accessoryType = .none
@@ -199,6 +211,7 @@ class ColorThemeTableViewController: UITableViewController {
         
         if layerString == "Spring Green" {
             defaults.set("Spring Green", forKey: "userSavedColorString")
+            defaults.set(false, forKey: "autoThemeEnabled")
             setTableViewCellColor(tableCell: springGreenTableCell)
 
             mangoTableCell.accessoryType = .none
@@ -213,7 +226,7 @@ class ColorThemeTableViewController: UITableViewController {
         if layerString == "Auto" {
             defaults.set(true, forKey: "autoThemeEnabled")
 
-            let autoTheme = Int(arc4random_uniform(UInt32(13)))
+            let autoTheme = Int(arc4random_uniform(UInt32(6)))
             
             if autoTheme == 0 || autoTheme == 1 {
                 defaults.set("Dodger Blue", forKey: "userSavedColorString")
@@ -227,8 +240,6 @@ class ColorThemeTableViewController: UITableViewController {
                 defaults.set("Plump Purple", forKey: "userSavedColorString")
             } else if autoTheme == 6 {
                 defaults.set("Spring Green", forKey: "userSavedColorString")
-            } else {
-                defaults.set("Dodger Blue", forKey: "userSavedColorString")
             }
             setTableViewCellColor(tableCell: autoThemeTableCell)
 
@@ -240,5 +251,9 @@ class ColorThemeTableViewController: UITableViewController {
             springGreenTableCell.accessoryType = .none
             autoThemeTableCell.accessoryType = .checkmark
         }
+        
+        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ColorThemeTableViewController.doneBarButtonTapped))
+        setupBarButtonColor(button: doneBarButton)
+        self.navigationItem.rightBarButtonItem = doneBarButton
     }
 }

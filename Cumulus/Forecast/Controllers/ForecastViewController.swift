@@ -959,48 +959,10 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         }
     }
     
-    // When tapped show extended hourly conditions
+    // When tapped change hourly condition currently being shown
     @IBAction func hourlyConditionsTapped(_ sender: UITapGestureRecognizer) {
         enabledHapticFeedback()
         
-        if hour0TimeLabel.text == "Now" {
-            setHourlyOutlets1(type: changedHourlyValues)
-        } else if hour0TimeLabel.text == hour4 {
-            setHourlyOutlets2(type: changedHourlyValues)
-        } else if hour0TimeLabel.text == hour8 {
-            setHourlyOutlets3(type: changedHourlyValues)
-        } else if hour0TimeLabel.text == hour12 {
-            setHourlyOutlets0(type: changedHourlyValues)
-        }
-    }
-  
-    // When tapped change hourly condition currently being shown
-    @IBAction func hourlyConditionsGestureSwipeLeftTapped(_ sender: UISwipeGestureRecognizer) {
-        if hourlyLabel.text?.contains("precipitation") == true {
-            changeHourlyOutlets(type: "Accum")
-            changedHourlyValues = "Accum"
-         } else if hourlyLabel.text?.contains("accumulation") == true {
-             changeHourlyOutlets(type: "Temp")
-             changedHourlyValues = "Temp"
-         } else if hourlyLabel.text?.contains("temperature") == true {
-            changeHourlyOutlets(type: "Humidity")
-            changedHourlyValues = "Humidity"
-        } else if hourlyLabel.text?.contains("humidity") == true {
-            changeHourlyOutlets(type: "UV Index")
-            changedHourlyValues = "UV Index"
-        } else if hourlyLabel.text?.contains("uv index") == true {
-            changeHourlyOutlets(type: "Wind")
-            changedHourlyValues = "Wind"
-        } else if hourlyLabel.text?.contains("wind") == true {
-            changeHourlyOutlets(type: "Cloud")
-            changedHourlyValues = "Cloud"
-        } else if hourlyLabel.text?.contains("cloud cover") == true {
-            changeHourlyOutlets(type: "Precip")
-            changedHourlyValues = "Precip"
-        }
-    }
-    
-    @IBAction func hourlyConditionsGestureSwipeRightTapped(_ sender: UISwipeGestureRecognizer) {
         if hourlyLabel.text?.contains("precipitation") == true {
             changeHourlyOutlets(type: "Cloud")
             changedHourlyValues = "Cloud"
@@ -1022,6 +984,32 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else if hourlyLabel.text?.contains("cloud cover") == true {
             changeHourlyOutlets(type: "Wind")
             changedHourlyValues = "Wind"
+        }
+    }
+  
+    // When tapped show extended hourly conditions
+    @IBAction func hourlyConditionsGestureSwipeLeftTapped(_ sender: UISwipeGestureRecognizer) {
+        if hour0TimeLabel.text == "Now" {
+            setHourlyOutlets1(type: changedHourlyValues)
+        } else if hour0TimeLabel.text == hour4 {
+            setHourlyOutlets2(type: changedHourlyValues)
+        } else if hour0TimeLabel.text == hour8 {
+            setHourlyOutlets3(type: changedHourlyValues)
+        } else if hour0TimeLabel.text == hour12 {
+            setHourlyOutlets0(type: changedHourlyValues)
+        }
+    }
+    
+    // When tapped show extended hourly conditions
+    @IBAction func hourlyConditionsGestureSwipeRightTapped(_ sender: UISwipeGestureRecognizer) {
+        if hour0TimeLabel.text == "Now" {
+            setHourlyOutlets3(type: changedHourlyValues)
+        } else if hour0TimeLabel.text == hour12 {
+            setHourlyOutlets2(type: changedHourlyValues)
+        } else if hour0TimeLabel.text == hour8 {
+            setHourlyOutlets1(type: changedHourlyValues)
+        } else if hour0TimeLabel.text == hour4 {
+            setHourlyOutlets0(type: changedHourlyValues)
         }
     }
     

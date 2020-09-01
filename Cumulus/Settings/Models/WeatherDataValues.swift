@@ -674,12 +674,12 @@ func hourFormat(date: Date) -> String {
     var timeString: String = ""
     if defaults.bool(forKey: "twentyFourHourClockEnabled") == true {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "h"
-        timeString = "\(dateFormatter.string(from: date).lowercased()):00"
+        dateFormatter.dateFormat = "HH:mm"
+        timeString = dateFormatter.string(from: date)
     } else {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "ha"
-        timeString = dateFormatter.string(from: date).lowercased()
+        dateFormatter.dateFormat = "h a"
+        timeString = dateFormatter.string(from: date)
     }
     
     return timeString

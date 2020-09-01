@@ -2776,8 +2776,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dodger Blue theme" translatesAutoresizingMaskIntoConstraints="NO" id="T5d-JU-i1a">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T5d-JU-i1a">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
+                                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="jUu-qZ-fz7"/>
                                                         <constraint firstAttribute="width" constant="50" id="kiP-X7-THF"/>
@@ -2815,8 +2816,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mango theme" translatesAutoresizingMaskIntoConstraints="NO" id="CiF-t2-Kjf">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CiF-t2-Kjf">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
+                                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="Cc2-Iw-FEf"/>
                                                         <constraint firstAttribute="width" constant="50" id="l77-eP-qdS"/>
@@ -2854,8 +2856,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Maximum Red theme" translatesAutoresizingMaskIntoConstraints="NO" id="gLG-de-5if">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gLG-de-5if">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
+                                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="Ocq-ht-mSp"/>
                                                         <constraint firstAttribute="height" constant="50" id="n70-Um-NDW"/>
@@ -2893,8 +2896,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Orchid theme" translatesAutoresizingMaskIntoConstraints="NO" id="vt6-2e-6vH">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vt6-2e-6vH">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
+                                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="OPg-vy-P26"/>
                                                         <constraint firstAttribute="width" constant="50" id="vuu-ga-qZb"/>
@@ -2932,8 +2936,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plump Purple theme" translatesAutoresizingMaskIntoConstraints="NO" id="Nhy-id-FbQ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nhy-id-FbQ">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
+                                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="iEP-T5-AbC"/>
                                                         <constraint firstAttribute="width" constant="50" id="zzC-wD-HA2"/>
@@ -2971,8 +2976,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spring Green theme" translatesAutoresizingMaskIntoConstraints="NO" id="KRU-wW-hbc">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KRU-wW-hbc">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
+                                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="jwS-fJ-ukk"/>
                                                         <constraint firstAttribute="width" constant="50" id="qTi-Iy-BhY"/>
@@ -3042,11 +3048,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     <navigationItem key="navigationItem" id="oPQ-re-ytA"/>
                     <connections>
                         <outlet property="autoThemeTableCell" destination="0WN-u6-2o4" id="Vn5-sH-20W"/>
-                        <outlet property="dodgerBlueTableCell" destination="ksD-ht-s0f" id="e6M-EE-ada"/>
+                        <outlet property="defaultImageView" destination="T5d-JU-i1a" id="XGB-aU-90q"/>
+                        <outlet property="defaultTableCell" destination="ksD-ht-s0f" id="agm-6v-Qkl"/>
+                        <outlet property="mangoImageView" destination="CiF-t2-Kjf" id="Lns-Sz-dZn"/>
                         <outlet property="mangoTableCell" destination="bW2-dH-gWS" id="GL3-mS-nBK"/>
+                        <outlet property="maximumRedImageView" destination="gLG-de-5if" id="bTK-yq-6Gi"/>
                         <outlet property="maximumRedTableCell" destination="XhI-bQ-cYs" id="z5h-w0-IJz"/>
+                        <outlet property="orchidImageView" destination="vt6-2e-6vH" id="z7n-EO-QeB"/>
                         <outlet property="orchidTableCell" destination="L7B-Zs-UaE" id="MMg-dU-FO7"/>
+                        <outlet property="plumpPurpleImageView" destination="Nhy-id-FbQ" id="oMh-6X-SDI"/>
                         <outlet property="plumpPurpleTableCell" destination="RH4-Ji-qOw" id="VMC-y4-3Lh"/>
+                        <outlet property="springGreenImageView" destination="KRU-wW-hbc" id="DWC-2r-FUs"/>
                         <outlet property="springGreenTableCell" destination="Yub-9h-XB4" id="ldo-NT-wTg"/>
                     </connections>
                 </tableViewController>
@@ -3058,7 +3070,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="yV1-f5-t2b">
                     <connections>
-                        <action selector="dodgerBlueTapped:" destination="t1C-MU-Ksi" id="p04-2q-iun"/>
+                        <action selector="defaultTapped:" destination="t1C-MU-Ksi" id="JOd-Nj-Oxd"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="JEz-2C-x1o">
@@ -5920,27 +5932,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <image name="Auto theme" width="50" height="50"/>
         <image name="Conditions icon" width="60" height="60"/>
         <image name="Dodger Blue icon" width="50" height="50"/>
-        <image name="Dodger Blue theme" width="50" height="50"/>
         <image name="Forecast icon" width="22" height="24"/>
         <image name="Heavy_rain" width="100" height="100"/>
         <image name="Hourly condition icon" width="60" height="60"/>
         <image name="Lights Out icon" width="50" height="50"/>
         <image name="Locations icon" width="20" height="23"/>
         <image name="Mango icon" width="50" height="50"/>
-        <image name="Mango theme" width="50" height="50"/>
         <image name="Maximum Red icon" width="50" height="50"/>
-        <image name="Maximum Red theme" width="50" height="50"/>
         <image name="Mighty Umbrella icon" width="50" height="50"/>
         <image name="Moonlight icon" width="50" height="50"/>
         <image name="Orchid icon" width="50" height="50"/>
-        <image name="Orchid theme" width="50" height="50"/>
         <image name="Partly_cloudy" width="100" height="100"/>
         <image name="Plump Purple icon" width="50" height="50"/>
-        <image name="Plump Purple theme" width="50" height="50"/>
         <image name="Rain Drop icon" width="50" height="50"/>
         <image name="Settings icon" width="23" height="23"/>
         <image name="Spring Green icon" width="50" height="50"/>
-        <image name="Spring Green theme" width="50" height="50"/>
         <image name="Support icon" width="60" height="60"/>
         <image name="Themes icon" width="60" height="60"/>
         <image name="Thunderstorm icon" width="50" height="50"/>

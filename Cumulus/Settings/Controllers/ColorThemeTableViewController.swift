@@ -10,9 +10,16 @@ import UIKit
 
 class ColorThemeTableViewController: UITableViewController {
 
+    @IBOutlet weak var defaultImageView: UIImageView!
+    @IBOutlet weak var mangoImageView: UIImageView!
+    @IBOutlet weak var maximumRedImageView: UIImageView!
+    @IBOutlet weak var orchidImageView: UIImageView!
+    @IBOutlet weak var plumpPurpleImageView: UIImageView!
+    @IBOutlet weak var springGreenImageView: UIImageView!
+    
+    @IBOutlet weak var defaultTableCell: UITableViewCell!
     @IBOutlet weak var mangoTableCell: UITableViewCell!
     @IBOutlet weak var maximumRedTableCell: UITableViewCell!
-    @IBOutlet weak var dodgerBlueTableCell: UITableViewCell!
     @IBOutlet weak var orchidTableCell: UITableViewCell!
     @IBOutlet weak var plumpPurpleTableCell: UITableViewCell!
     @IBOutlet weak var springGreenTableCell: UITableViewCell!
@@ -30,6 +37,22 @@ class ColorThemeTableViewController: UITableViewController {
         let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ColorThemeTableViewController.doneBarButtonTapped))
         setupBarButtonColor(button: doneBarButton)
         self.navigationItem.rightBarButtonItem = doneBarButton
+        
+        DispatchQueue.main.async {
+            self.defaultImageView.backgroundColor = dodgerBlue
+            self.mangoImageView.backgroundColor = mango
+            self.maximumRedImageView.backgroundColor = maximumRed
+            self.orchidImageView.backgroundColor = orchid
+            self.plumpPurpleImageView.backgroundColor = plumpPurple
+            self.springGreenImageView.backgroundColor = springGreen
+            
+            self.defaultImageView.layer.cornerRadius = self.defaultImageView.bounds.width / 2
+            self.mangoImageView.layer.cornerRadius = self.mangoImageView.bounds.width / 2
+            self.maximumRedImageView.layer.cornerRadius = self.maximumRedImageView.bounds.width / 2
+            self.orchidImageView.layer.cornerRadius = self.orchidImageView.bounds.width / 2
+            self.plumpPurpleImageView.layer.cornerRadius = self.plumpPurpleImageView.bounds.width / 2
+            self.springGreenImageView.layer.cornerRadius = self.springGreenImageView.bounds.width / 2
+        }
     }
 
     func setColorTheme() {
@@ -47,6 +70,16 @@ class ColorThemeTableViewController: UITableViewController {
             setSelectedCheckMark(layerString: "Spring Green", setColor: false)
         } else {
             setSelectedCheckMark(layerString: "Dodger Blue", setColor: false)
+        }
+    }
+    
+    @IBAction func defaultTapped(_ sender: UITapGestureRecognizer) {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
+            setSelectedCheckMark(layerString: "Dodger Blue", setColor: true)
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
+            present(controller, animated: true, completion: nil)
         }
     }
     
@@ -100,16 +133,6 @@ class ColorThemeTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func dodgerBlueTapped(_ sender: UITapGestureRecognizer) {
-        if (defaults.bool(forKey: "cumulusPlus") == true) {
-            setSelectedCheckMark(layerString: "Dodger Blue", setColor: true)
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "Cumulus Plus")
-            present(controller, animated: true, completion: nil)
-        }
-    }
-    
     @IBAction func autoThemeTapped(_ sender: UITapGestureRecognizer) {
         if (defaults.bool(forKey: "cumulusPlus") == true) {
             setSelectedCheckMark(layerString: "Auto", setColor: true)
@@ -144,9 +167,9 @@ class ColorThemeTableViewController: UITableViewController {
             defaults.set(false, forKey: "autoThemeEnabled")
             setTableViewCellColor(tableCell: mangoTableCell)
 
+            defaultTableCell.accessoryType = .none
             mangoTableCell.accessoryType = .checkmark
             maximumRedTableCell.accessoryType = .none
-            dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
             orchidTableCell.accessoryType = .none
             springGreenTableCell.accessoryType = .none
@@ -158,9 +181,9 @@ class ColorThemeTableViewController: UITableViewController {
             defaults.set(false, forKey: "autoThemeEnabled")
             setTableViewCellColor(tableCell: maximumRedTableCell)
 
+            defaultTableCell.accessoryType = .none
             mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .checkmark
-            dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
             orchidTableCell.accessoryType = .none
             springGreenTableCell.accessoryType = .none
@@ -170,11 +193,11 @@ class ColorThemeTableViewController: UITableViewController {
         if layerString == "Dodger Blue" {
             defaults.set("Dodger Blue", forKey: "userSavedColorString")
             defaults.set(false, forKey: "autoThemeEnabled")
-            setTableViewCellColor(tableCell: dodgerBlueTableCell)
+            setTableViewCellColor(tableCell: defaultTableCell)
 
             mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
-            dodgerBlueTableCell.accessoryType = .checkmark
+            defaultTableCell.accessoryType = .checkmark
             plumpPurpleTableCell.accessoryType = .none
             orchidTableCell.accessoryType = .none
             springGreenTableCell.accessoryType = .none
@@ -186,9 +209,9 @@ class ColorThemeTableViewController: UITableViewController {
             defaults.set(false, forKey: "autoThemeEnabled")
             setTableViewCellColor(tableCell: plumpPurpleTableCell)
 
+            defaultTableCell.accessoryType = .none
             mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
-            dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .checkmark
             orchidTableCell.accessoryType = .none
             springGreenTableCell.accessoryType = .none
@@ -200,9 +223,9 @@ class ColorThemeTableViewController: UITableViewController {
             defaults.set(false, forKey: "autoThemeEnabled")
             setTableViewCellColor(tableCell: orchidTableCell)
 
+            defaultTableCell.accessoryType = .none
             mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
-            dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
             orchidTableCell.accessoryType = .checkmark
             springGreenTableCell.accessoryType = .none
@@ -214,9 +237,9 @@ class ColorThemeTableViewController: UITableViewController {
             defaults.set(false, forKey: "autoThemeEnabled")
             setTableViewCellColor(tableCell: springGreenTableCell)
 
+            defaultTableCell.accessoryType = .none
             mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
-            dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
             orchidTableCell.accessoryType = .none
             springGreenTableCell.accessoryType = .checkmark
@@ -243,9 +266,9 @@ class ColorThemeTableViewController: UITableViewController {
             }
             setTableViewCellColor(tableCell: autoThemeTableCell)
 
+            defaultTableCell.accessoryType = .none
             mangoTableCell.accessoryType = .none
             maximumRedTableCell.accessoryType = .none
-            dodgerBlueTableCell.accessoryType = .none
             plumpPurpleTableCell.accessoryType = .none
             orchidTableCell.accessoryType = .none
             springGreenTableCell.accessoryType = .none

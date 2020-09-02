@@ -241,15 +241,20 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         
         geocode(latitude: latitudeValue, longitude: longitudeValue) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
-
-            // Set state for locations in the US
-            if placemark.country! == "United States" {
-                currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
-                self.currentLocationLabel.text = "\(currentLocation)"
+            
+            // Set state/province for respective locations
+            if placemark.locality != nil && placemark.administrativeArea != nil && placemark.country != nil {
+                if placemark.country! == "Micronesia" || placemark.country! == "Myanmar" || placemark.country! == "United States" {
+                    currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                } else if placemark.country! == "Japan" {
+                    currentLocation = "\(placemark.administrativeArea!), \(placemark.country!)"
+                 } else {
+                   currentLocation = "\(placemark.locality!), \(placemark.country!)"
+                }
             } else {
-                currentLocation = "\(placemark.locality!), \(placemark.country!)"
-                self.currentLocationLabel.text = "\(currentLocation)"
+                currentLocation = "\(placemark.name!), \(placemark.country!)"
             }
+            self.currentLocationLabel.text = "\(currentLocation)"
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.setWidgetLabels()
@@ -269,14 +274,19 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             longitudeValue = universalLongitude
             fetchDarkSkyWeatherData()
             
-            // Set state for locations in the US
-            if placemark.country! == "United States" {
-                currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
-                self.currentLocationLabel.text = "\(currentLocation)"
+            // Set state/province for respective locations
+            if placemark.locality != nil && placemark.administrativeArea != nil && placemark.country != nil {
+                if placemark.country! == "Micronesia" || placemark.country! == "Myanmar" || placemark.country! == "United States" {
+                    currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                } else if placemark.country! == "Japan" {
+                    currentLocation = "\(placemark.administrativeArea!), \(placemark.country!)"
+                 } else {
+                   currentLocation = "\(placemark.locality!), \(placemark.country!)"
+                }
             } else {
-                currentLocation = "\(placemark.locality!), \(placemark.country!)"
-                self.currentLocationLabel.text = "\(currentLocation)"
+                currentLocation = "\(placemark.name!), \(placemark.country!)"
             }
+            self.currentLocationLabel.text = "\(currentLocation)"
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.setWidgetLabels()

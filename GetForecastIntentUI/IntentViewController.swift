@@ -14,7 +14,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
     
     @IBOutlet weak var currentConditionIcon: UIImageView!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var currentLocationLabel: UILabel!
     @IBOutlet weak var currentConditionLabel: UILabel!
     @IBOutlet weak var precipitationLabel: UILabel!
     @IBOutlet weak var precipitationAccumulationLabel: UILabel!
@@ -121,18 +121,22 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         }
         
         let userLocation = CLLocationCoordinate2D(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
-        
         geocode(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
-
-            // Set state for locations in the US
-            if placemark.country! == "United States" {
-                currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
-                self.locationLabel.text = "\(currentLocation)"
+            
+            // Set state/province for respective locations
+            if placemark.locality != nil && placemark.administrativeArea != nil && placemark.country != nil {
+                if placemark.country! == "Micronesia" || placemark.country! == "Myanmar" || placemark.country! == "United States" {
+                    currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                } else if placemark.country! == "Japan" {
+                    currentLocation = "\(placemark.administrativeArea!), \(placemark.country!)"
+                 } else {
+                   currentLocation = "\(placemark.locality!), \(placemark.country!)"
+                }
             } else {
-                currentLocation = "\(placemark.locality!), \(placemark.country!)"
-                self.locationLabel.text = "\(currentLocation)"
+                currentLocation = "\(placemark.name!), \(placemark.country!)"
             }
+            self.currentLocationLabel.text = "\(currentLocation)"
         }
         
         client.getForecast(location: userLocation) { result in

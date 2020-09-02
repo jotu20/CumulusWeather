@@ -331,17 +331,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                 latitudeValue = location.coordinate.latitude
                 longitudeValue = location.coordinate.longitude
                 
-                geocode(latitude: latitudeValue, longitude: longitudeValue) { placemark, error in
-                    guard let placemark = placemark, error == nil else { return }
-                    
-                    // Set state for locations in the US
-                    if placemark.country! == "United States" {
-                        currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
-                    } else {
-                        currentLocation = "\(placemark.locality!), \(placemark.country!)"
-                    }
-                    self.setupInitialData()
-                }
+                currentLocation = selectedLocation
+                self.setupInitialData()
             }
         } else {
             latitudeValue = (manager.location?.coordinate.latitude)!
@@ -350,11 +341,17 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             geocode(latitude: latitudeValue, longitude: longitudeValue) { placemark, error in
                 guard let placemark = placemark, error == nil else { return }
                 
-                // Set state for locations in the US
-                if placemark.country! == "United States" {
-                    currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                // Set state/province for respective locations
+                if placemark.locality != nil && placemark.administrativeArea != nil && placemark.country != nil {
+                    if placemark.country! == "Micronesia" || placemark.country! == "Myanmar" || placemark.country! == "United States" {
+                        currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                    } else if placemark.country! == "Japan" {
+                        currentLocation = "\(placemark.administrativeArea!), \(placemark.country!)"
+                     } else {
+                       currentLocation = "\(placemark.locality!), \(placemark.country!)"
+                    }
                 } else {
-                    currentLocation = "\(placemark.locality!), \(placemark.country!)"
+                    currentLocation = "\(placemark.name!), \(placemark.country!)"
                 }
                 self.setupInitialData()
             }

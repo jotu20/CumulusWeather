@@ -54,7 +54,7 @@ class SiriShortcutsTableViewController: UITableViewController {
         self.tableViewCell.addSubview(addShortcutButton)
 
         addShortcutButton.topAnchor.constraint(equalTo: margins.topAnchor, constant: 0).isActive = true
-        addShortcutButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: 25).isActive = true
+        addShortcutButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: 0).isActive = true
         
         self.donateInteraction()
     }

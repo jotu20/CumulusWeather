@@ -48,6 +48,30 @@ class PrivacyAndTermsViewController: UIViewController {
         self.navigationItem.title = "Privacy & Terms"
         weatherLoaded = true
         
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        if screenWidth < 375 {
+            let widthSize: CGFloat = 310
+            
+             statementTitle0Width.constant = widthSize
+             statementDescription0Width.constant = widthSize
+
+             statementTitle1Width.constant = widthSize
+             statementDescription1Width.constant = widthSize
+            
+             statementTitle2Width.constant = widthSize
+             statementDescription2Width.constant = widthSize
+             
+             statementTitle3Width.constant = widthSize
+             statementDescription3Width.constant = widthSize
+             
+             statementTitle4Width.constant = widthSize
+             statementDescription4Width.constant = widthSize
+             
+             statementTitle5Width.constant = widthSize
+             statementDescription5Width.constant = widthSize
+        }
+        
         self.statement0TextView.text = "Cumulus takes your privacy and personal data seriously. Cumulus will only retrieve the least information that is necessary. Individual users are never tracked and personal data is never given to third parties."
         
         self.statement1TextView.text = "You may opt to grant Cumulus access to your location to receive localized weather forecasts. Cumulus does not require access to your location however some of its features do. For the most accurate weather forecasts location permission is recommended but is not required. You can enable location access by selecting to allow location access \"While Using the App\" or \"Always\". You can always change the location access on your devices' settings."

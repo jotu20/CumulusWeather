@@ -748,11 +748,11 @@ func sunFormat(date: Date) -> String {
     if defaults.bool(forKey: "twentyFourHourClockEnabled") == true {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "H:mm"
-        timeString = dateFormatter.string(from: date).lowercased()
+        timeString = dateFormatter.string(from: date)
     } else {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "h:mma"
-        timeString = dateFormatter.string(from: date).lowercased()
+        dateFormatter.dateFormat = "h:mm a"
+        timeString = dateFormatter.string(from: date)
     }
     
     return timeString

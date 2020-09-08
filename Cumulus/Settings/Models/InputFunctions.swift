@@ -252,8 +252,8 @@ func hourlyValue(value: Int) -> Int {
     var valueInteger: Int = 0
     
     let screenSize = UIScreen.main.bounds
-    let screenHeight = screenSize.height
-    if screenHeight == 568 {
+    let screenWidth = screenSize.width
+    if screenWidth == 320 {
         valueInteger = value + 3
     } else {
         valueInteger = value + 6

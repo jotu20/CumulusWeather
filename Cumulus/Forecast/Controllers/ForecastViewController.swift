@@ -252,12 +252,53 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @IBOutlet weak var day9Slot9: UILabel!
     @IBOutlet weak var day9Slot10: UILabel!
     
+    // MARK: - Constraints
+    @IBOutlet weak var currentLocationLabelWidth: NSLayoutConstraint!
+    @IBOutlet weak var weatherAlertLableWidth: NSLayoutConstraint!
+    @IBOutlet weak var currentConditionViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var currentConditionLabelWidth: NSLayoutConstraint!
+    
+    @IBOutlet weak var hourlyConditionsStackView: UIStackView!
+    @IBOutlet weak var day0ViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var day1ViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var day2ViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var day3ViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var day4ViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var day5ViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var day6ViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var day7ViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var day8ViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var day9ViewWidth: NSLayoutConstraint!
+    
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.delegate = self
         self.locationManager.requestWhenInUseAuthorization()
         self.setupGrantedLocationServices()
         
         DispatchQueue.main.async {
+            let screenSize = UIScreen.main.bounds
+            let screenWidth = screenSize.width
+            if screenWidth < 375 {
+                let widthSize: CGFloat = 310
+                
+                self.currentLocationLabelWidth.constant = widthSize
+                self.weatherAlertLableWidth.constant = widthSize
+                self.currentConditionViewWidth.constant = widthSize
+                self.currentConditionLabelWidth.constant = 175
+                
+                self.hourlyConditionsStackView.spacing = 3
+                self.day0ViewWidth.constant = widthSize
+                self.day1ViewWidth.constant = widthSize
+                self.day2ViewWidth.constant = widthSize
+                self.day3ViewWidth.constant = widthSize
+                self.day4ViewWidth.constant = widthSize
+                self.day5ViewWidth.constant = widthSize
+                self.day6ViewWidth.constant = widthSize
+                self.day7ViewWidth.constant = widthSize
+                self.day8ViewWidth.constant = widthSize
+                self.day9ViewWidth.constant = widthSize
+            }
+            
             if defaults.bool(forKey: "cumulusPlus") == false {
                 self.hourlyConditionsGesture.isEnabled = false
                 self.hourlyConditionsGestureSwipeLeft.isEnabled = false
@@ -432,8 +473,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     // MARK: - Setup loading screen view
     func loadingScreen() {
         let screenSize = UIScreen.main.bounds
-        let screenHeight = screenSize.height
-        if screenHeight >= 812 {
+        let screenWidth = screenSize.width
+        if screenWidth >= 375 {
             loadFrame = CGRect(x: 0, y: 0, width: 2000, height: 2000)
         } else {
             loadFrame = CGRect(x: 0, y: 0, width: 815, height: 815)
@@ -961,26 +1002,29 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         enabledHapticFeedback()
         
         if hourlyLabel.text?.contains("precipitation") == true {
-            changeHourlyOutlets(type: "Cloud")
             changedHourlyValues = "Cloud"
         } else if hourlyLabel.text?.contains("accumulation") == true {
-            changeHourlyOutlets(type: "Precip")
             changedHourlyValues = "Precip"
         } else if hourlyLabel.text?.contains("temperature") == true {
-            changeHourlyOutlets(type: "Accum")
             changedHourlyValues = "Accum"
         } else if hourlyLabel.text?.contains("humidity") == true {
-            changeHourlyOutlets(type: "Temp")
             changedHourlyValues = "Temp"
         } else if hourlyLabel.text?.contains("uv index") == true {
-            changeHourlyOutlets(type: "Humidity")
             changedHourlyValues = "Humidity"
         } else if hourlyLabel.text?.contains("wind") == true {
-            changeHourlyOutlets(type: "UV Index")
             changedHourlyValues = "UV Index"
         } else if hourlyLabel.text?.contains("cloud cover") == true {
-            changeHourlyOutlets(type: "Wind")
             changedHourlyValues = "Wind"
+        }
+        
+        if hour0TimeLabel.text == "Now" {
+            setHourlyOutlets0(type: changedHourlyValues)
+        } else if hour0TimeLabel.text == hour4 {
+            setHourlyOutlets1(type: changedHourlyValues)
+        } else if hour0TimeLabel.text == hour8 {
+            setHourlyOutlets2(type: changedHourlyValues)
+        } else if hour0TimeLabel.text == hour12 {
+            setHourlyOutlets3(type: changedHourlyValues)
         }
     }
   

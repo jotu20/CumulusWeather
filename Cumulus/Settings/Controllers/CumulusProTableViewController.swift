@@ -16,21 +16,11 @@ class CumulusPlusTableViewController: UITableViewController {
     @IBOutlet weak var cumulusPlusLifetimeButton: UIButton!
     @IBOutlet weak var privacyAndTermsButton: UIButton!
     
-    @IBOutlet weak var cumulusPlusTextViewWidth: NSLayoutConstraint!
-    @IBOutlet weak var cumulusPlusTextViewHeight: NSLayoutConstraint!
-    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = "Cumulus+"
         self.navigationController?.isNavigationBarHidden = false
         weatherLoaded = true
         setupObjectColors()
-        
-        let screenSize = UIScreen.main.bounds
-        let screenHeight = screenSize.height
-        if screenHeight == 568 {
-            self.cumulusPlusTextViewWidth.constant = 300
-            self.cumulusPlusTextViewHeight.constant = 143
-        }
         
         cumulusPlusMonthlyButton.layer.cornerRadius = 10
         cumulusPlusYearlyButton.layer.cornerRadius = 10

@@ -53,19 +53,9 @@ class SiriShortcutsTableViewController: UITableViewController {
         addShortcutButton.translatesAutoresizingMaskIntoConstraints = false
         self.tableViewCell.addSubview(addShortcutButton)
 
-        let screenSize = UIScreen.main.bounds
-        let screenHeight = screenSize.height
-        if screenHeight <= 700 {
-            // iPhone SE
-            addShortcutButton.topAnchor.constraint(equalTo: margins.topAnchor, constant: 0).isActive = true
-            addShortcutButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 200).isActive = true
-        } else if screenHeight > 900 {
-            addShortcutButton.topAnchor.constraint(equalTo: margins.topAnchor, constant: 0).isActive = true
-            addShortcutButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 575).isActive = true
-        } else {
-            addShortcutButton.topAnchor.constraint(equalTo: margins.topAnchor, constant: 0).isActive = true
-            addShortcutButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 175).isActive = true
-        }
+        addShortcutButton.topAnchor.constraint(equalTo: margins.topAnchor, constant: 0).isActive = true
+        addShortcutButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: 25).isActive = true
+        
         self.donateInteraction()
     }
     

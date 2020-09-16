@@ -1,0 +1,6 @@
+framework module Pods_Cumulus_GetForecastIntent {
+  umbrella header "Pods-Cumulus-GetForecastIntent-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,28 @@
+PODS:
+  - ForecastIO (8.0.0)
+  - GoogleMaps/Base (3.9.0)
+  - GooglePlaces (3.9.0):
+    - GoogleMaps/Base (= 3.9.0)
+  - SwiftyStoreKit (0.15.0)
+
+DEPENDENCIES:
+  - ForecastIO (= 8.0.0)
+  - GooglePlaces (= 3.9.0)
+  - SwiftyStoreKit (= 0.15.0)
+
+SPEC REPOS:
+  trunk:
+    - ForecastIO
+    - GoogleMaps
+    - GooglePlaces
+    - SwiftyStoreKit
+
+SPEC CHECKSUMS:
+  ForecastIO: 68f8231be20748446036263a438cc449886a65ca
+  GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
+  GooglePlaces: 1634d019549b969d40fe0ccb0b9513055adebe01
+  SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
+
+PODFILE CHECKSUM: 2eca12dde412258a0290bec57912f9140ccb210e
+
+COCOAPODS: 1.9.3

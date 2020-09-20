@@ -533,7 +533,12 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     // MARK: Load weather data and UI elements
     func setupInitialData() {
-        fetchDarkSkyWeatherData()
+        if (defaults.string(forKey: "dataSource") == "Dark Sky") {
+            fetchDarkSkyWeatherData()
+        } else if (defaults.string(forKey: "dataSource") == "ClimaCell") {
+            fetchClimaCellCurrentForecastData()
+        }
+        
         setWeatherDataLabels()
         setColorTheme()
     }
@@ -1224,7 +1229,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             }
         }
         
-        conditionSlotLabel0.text = "Feels like \(apparentTemperature)°"
+        conditionSlotLabel0.text = "Feels like \(feelsLikeTemperature)°"
         conditionSlotLabel1.text = "Precipitation \(precipitation)%"
         
         // Set uv index

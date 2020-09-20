@@ -42,7 +42,7 @@ var weatherUnits: String = ""
 // MARK: - Current weather values
 var currentTemperature: Int = 0
 var currentCondition: String = ""
-var apparentTemperature: Int = 0
+var feelsLikeTemperature: Int = 0
 var currentSummary: String = ""
 var hourSummary: String = ""
 var nextHourCondition: String = ""
@@ -50,7 +50,6 @@ var minuteSummary: String = ""
 var endingMinuteSummary: String = ""
 var triggerMinute: Int = 0
 var nearestStormDirectionString: String = ""
-var windDirectionDegree: Double = 0
 var windDirectionString: String = ""
 var precipAccumulation: Double = 0
 var airQualityIndex: Int = 0

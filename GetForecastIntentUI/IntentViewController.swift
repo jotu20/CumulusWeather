@@ -199,8 +199,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                     uvIndex = Int(current.uvIndex!)
                     wind = Int(current.windSpeed!)
                     windGust = Int(current.windGust!)
-                    windDirectionDegree = current.windBearing!
-                    windDirectionString = windDirection(degree: windDirectionDegree)
+                    windDirectionString = windDirection(degree: current.windBearing!)
                     
                     if current.precipitationAccumulation != nil {
                         precipAccumulation = Double(current.precipitationAccumulation!)

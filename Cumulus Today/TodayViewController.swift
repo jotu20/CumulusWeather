@@ -87,7 +87,6 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     @IBOutlet weak var day3LowLabel: UILabel!
     
     func setWidgetLabels() {
-        universalSettings()
         // Check if summaries are equal for the hour
         if currentSummary == hourSummary {
             currentSummary = "\(hourSummary.capitalizingFirstLetter()) for the hour."
@@ -233,8 +232,6 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     
     // MARK: - Get location and weather data
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        universalSettings()
-        
         latitudeValue = (manager.location?.coordinate.latitude)!
         longitudeValue = (manager.location?.coordinate.longitude)!
         fetchDarkSkyWeatherData()
@@ -266,7 +263,6 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     // MARK: - Show error when location cannot be found
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Failed to find user's location: \(error.localizedDescription)")
-        universalSettings()
         geocode(latitude: universalLatitude, longitude: universalLongitude) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
             

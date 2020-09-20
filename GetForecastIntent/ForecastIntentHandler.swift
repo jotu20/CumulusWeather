@@ -23,7 +23,6 @@ class ForecastIntentHandler: NSObject, ForecastIntentHandling, CLLocationManager
         }
         
         let userLocation = CLLocationCoordinate2D(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
-        
         client.getForecast(location: userLocation) { result in
             switch result {
             case .success(let tuple):

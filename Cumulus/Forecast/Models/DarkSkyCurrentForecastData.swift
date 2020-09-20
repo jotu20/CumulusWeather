@@ -64,7 +64,7 @@ public func fetchDarkSkyCurrentForecastData() {
             if let current = currentForecast.currently {
                 currentCondition = "\(current.icon!.rawValue)"
                 currentTemperature = Int(current.temperature!)
-                apparentTemperature = Int(current.apparentTemperature!)
+                feelsLikeTemperature = Int(current.apparentTemperature!)
                 currentSummary = "\(current.summary!)"
                 precipitation = dailyPrecipProb(day: current)
                 humidity = dailyHumidityProb(day: current)
@@ -74,8 +74,7 @@ public func fetchDarkSkyCurrentForecastData() {
                 pressure = Int(current.pressure!)
                 wind = Int(current.windSpeed!)
                 windGust = Int(current.windGust!)
-                windDirectionDegree = current.windBearing!
-                windDirectionString = windDirection(degree: windDirectionDegree)
+                windDirectionString = windDirection(degree: current.windBearing!)
                 
                 if current.precipitationAccumulation != nil {
                     precipAccumulation = Double(current.precipitationAccumulation!)

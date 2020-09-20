@@ -347,6 +347,14 @@ extension CumulusPlusTableViewController {
                 return alertWithTitle("Purchase failed", message: "Missing parameters")
             case .invalidOfferPrice:
                 return alertWithTitle("Purchase failed", message: "Invalid offer price")
+            case .overlayCancelled:
+                return alertWithTitle("Purchase failed", message: "Overlay cancelled")
+            case .overlayInvalidConfiguration:
+                return alertWithTitle("Purchase failed", message: "Overlay invalid configuration")
+            case .overlayTimeout:
+                return alertWithTitle("Purchase failed", message: "Overlay timeout")
+            case .ineligibleForOffer:
+                return alertWithTitle("Purchase failed", message: "Ineligible for offer")
             @unknown default:
                 return alertWithTitle("Purchase failed", message: "Uknown error")
             }

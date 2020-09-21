@@ -318,6 +318,7 @@
 		CFD6674224E3251600CFB98D /* MightyUmbrellaiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MightyUmbrellaiPad@2x.png"; sourceTree = "<group>"; };
 		CFD6674324E3251600CFB98D /* Moonlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Moonlight@2x.png"; sourceTree = "<group>"; };
 		CFD790D92151C4CD007E489D /* ColorThemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeTableViewController.swift; sourceTree = "<group>"; };
+		CFD899672519295400FA9C59 /* Cumulus WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Cumulus WidgetExtension.entitlements"; sourceTree = "<group>"; };
 		CFDA656A2512719900FB7B50 /* ClimaCellWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimaCellWeatherData.swift; sourceTree = "<group>"; };
 		CFDEEC0820E26ED900BA5EA5 /* Cumulus Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Cumulus Today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDEEC0920E26ED900BA5EA5 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -438,6 +439,7 @@
 		CF6E4A9520DACFD8002349A7 = {
 			isa = PBXGroup;
 			children = (
+				CFD899672519295400FA9C59 /* Cumulus WidgetExtension.entitlements */,
 				CF4A0E5E2108B1B30061CAAD /* Default-568h@2x.png */,
 				CFFB787620DF0B44008216F8 /* License */,
 				CF6E4AA020DACFD8002349A7 /* Cumulus */,
@@ -1674,6 +1676,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Cumulus WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "Cumulus Widget/Info.plist";
@@ -1699,6 +1702,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Cumulus WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "Cumulus Widget/Info.plist";

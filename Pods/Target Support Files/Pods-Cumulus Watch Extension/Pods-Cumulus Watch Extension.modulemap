@@ -1,6 +1,0 @@
-module Pods_Cumulus_Watch_Extension {
-  umbrella header "Pods-Cumulus Watch Extension-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,6 +1,6 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ForecastIO-framework" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyStoreKit" "${PODS_ROOT}/GoogleMaps/Base/Frameworks" "${PODS_ROOT}/GooglePlaces/Frameworks"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ForecastIO" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyStoreKit" "${PODS_ROOT}/GoogleMaps/Base/Frameworks" "${PODS_ROOT}/GooglePlaces/Frameworks"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ForecastIO-framework/ForecastIO.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ForecastIO/ForecastIO.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks' '@executable_path/../../Frameworks'
 OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"z" -framework "CoreData" -framework "CoreGraphics" -framework "CoreLocation" -framework "ForecastIO" -framework "GoogleMapsBase" -framework "GooglePlaces" -framework "QuartzCore" -framework "SwiftyStoreKit" -framework "SystemConfiguration" -framework "UIKit"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS

@@ -16,6 +16,7 @@
 				D42315111F400C0605ACCD6B5CAF2178 /* PBXTargetDependency */,
 			);
 			name = GooglePlaces;
+			productName = GooglePlaces;
 		};
 		E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */ = {
 			isa = PBXAggregateTarget;
@@ -25,156 +26,123 @@
 			dependencies = (
 			);
 			name = GoogleMaps;
+			productName = GoogleMaps;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0370917FDC8B9D0C1FC29BFB266E0B5E /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3386CA0B6920B0E4CE8640DEA783A31A /* Icon.swift */; };
-		09B650AE0FE51DCCB25FD4D72ADE11D2 /* ForecastIO-framework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B6949F24C7847EFC2DCACFCAA13E093F /* ForecastIO-framework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D47F9854A59C4A5E62DA9A3AC6EFDAA /* RequestMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910F5D5CAA7F3E3AD6D5D1F356BBE /* RequestMetadata.swift */; };
-		126C5145A69D78716F828FF6C4AA0D29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		15A29D5C6FEA9379BBC61F17614DDB15 /* SwiftyStoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3441B8EB2A7EB300A497D196F74DA5B8 /* SwiftyStoreKit.swift */; };
 		17695C42661E6DA8419E9C68F1BCD333 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7FFFA4499C61E5679023A711E954FC /* InAppReceipt.swift */; };
-		1A71F4B14E0668DA2F4448D2CCEC3052 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3386CA0B6920B0E4CE8640DEA783A31A /* Icon.swift */; };
-		1C2DE3A17893FEC6A60C19B93BD78BBC /* DataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3EB36379F8E64C07668FF947587E2 /* DataPoint.swift */; };
-		1F5F35532BC23FD81841BAE05C6B387C /* Pods-Cumulus-Cumulus Today-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B885E28E317DB2EB873C453D1FD5C18 /* Pods-Cumulus-Cumulus Today-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2151552A1AB8DEC0724FE45481FD058C /* Pods-Cumulus-GetForecastIntent-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F1B97A727DD8E4D5C2A05FED0918EA37 /* Pods-Cumulus-GetForecastIntent-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20CD3FCAFAD38F8E53854ACB69618BCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		2832AC0AEA1EF2268C8E46C0BF8E4EFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		28F4A98D1FDC22DA340509374D72854B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		2A97652062690C1E54D6B8FC48321872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		2BF718B96902DAAB29AD381E8DC2D63D /* Pods-Cumulus-GetForecastIntentUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 715E74E72442FDD7A18FCB62B668CC90 /* Pods-Cumulus-GetForecastIntentUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C0D498C7785ECEC234D4EB9EA5FF458 /* InAppProductQueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AB0DCD78D465D9B65A66832693B57D /* InAppProductQueryRequest.swift */; };
 		2C8498AF2573866DF00271149F660EE4 /* InAppReceiptVerificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3787E4CB0351962AFABE8420F60AC70B /* InAppReceiptVerificator.swift */; };
-		34BBD56A3F199EBB2141DD2766329DBF /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC0589640A0704E2158BFCDF2D0590 /* Flag.swift */; };
-		35627CCFDBDABF7BFAF2F3922ED19C65 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50845D3AD1A042054C626DD2BA0A5F52 /* Alert.swift */; };
 		3B95F6D7813F2794DD6CF0BEAE2853DC /* PaymentQueueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7852FF0D1B12DE99478A4EB6F8503416 /* PaymentQueueController.swift */; };
-		415A20C166924C3BA51FCE08C5CF1A30 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303C6C771494E0CB45ADFAE5314BFB4D /* Units.swift */; };
-		4A5DA47C3937D7B626C2B51368FE74CD /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303C6C771494E0CB45ADFAE5314BFB4D /* Units.swift */; };
+		4857F2EE145A9CD3FDC35580730FB011 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		4BEC56EB2A2FBCEF4A32EE6EE1F48E22 /* SKProduct+LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906A5C3B64B16E451FEDC40FF2043294 /* SKProduct+LocalizedPrice.swift */; };
-		51A6B4F87843064ED4F6D54650594C17 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC0589640A0704E2158BFCDF2D0590 /* Flag.swift */; };
-		5258855D6E016ABBB45222C9EC4F48C0 /* ForecastIO-library-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 57DDD435BD21335FB4C10754144B1271 /* ForecastIO-library-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		546449E25093629B279FAC13219CF861 /* Pods-Cumulus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 063D3E88B560F6BDC43758BA1049ECCE /* Pods-Cumulus-dummy.m */; };
-		590B335BD67AEBA5ADCAD2AE4984178F /* DataBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298F3DCA6E5E2F70AD9B1D0F9A21CBE /* DataBlock.swift */; };
-		5A31CE67FC10F6D4D7B5786969A14247 /* RequestMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910F5D5CAA7F3E3AD6D5D1F356BBE /* RequestMetadata.swift */; };
-		5DA5A7A41F9DF4F842BA086B129C129F /* ForecastIO-library-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04041DE264B02D0C56D4D5D80AC0BC50 /* ForecastIO-library-dummy.m */; };
-		5FC8C1D6DE6043F5CD9217A14AB49641 /* Pods-Cumulus Watch Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AFD8A0FC7BA7FE4150337D22B7DA4309 /* Pods-Cumulus Watch Extension-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6B497F3EA33430FFCDF658813B46579D /* Pods-Cumulus-GetForecastIntentUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 900AD2D97DEAEE12C31A0798BA0492E2 /* Pods-Cumulus-GetForecastIntentUI-dummy.m */; };
-		726A480651F4EE68E084D9256DB39A9D /* Pods-Cumulus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1A3A5658BDBE522252AAC32FEFC8E12 /* Pods-Cumulus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		75E3380F121B4AFA11E6F52DB3C220DB /* Pods-Cumulus-Cumulus Today-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD8C0910E0C791D7CFF6AF214D5365C /* Pods-Cumulus-Cumulus Today-dummy.m */; };
-		81794AC152769D62C85178856428AE2A /* ForecastIO-framework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A789CF26BCC1269BEE900DC0B2DE468B /* ForecastIO-framework-dummy.m */; };
+		54F30EC4405B5DC57E44E8933F1AA4E2 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD415A1B9ADB4FFFADA082971BD69A4F /* Forecast.swift */; };
+		573C0A415160489950E463A8F92B0FC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		592BC4380C9F390216EF9342805FC971 /* Pods-Cumulus-Cumulus WidgetExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D7F046F9E59259802B8555C72B3D2210 /* Pods-Cumulus-Cumulus WidgetExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A2F8841A6FD3720D4C44AFB1BC79730 /* DataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B2AE5784FDDA59363576BB2B827D4A /* DataPoint.swift */; };
+		646B23335A74CEBDB19A3C9313DB3767 /* ForecastIO-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C79F99E78EA721CC5E0D614CE4883790 /* ForecastIO-dummy.m */; };
+		6C7B6FC7A8C57B814ED4FC07B466841E /* DarkSkyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F36635958706ED90B304EAB7E06BE /* DarkSkyClient.swift */; };
+		70BD335B95384B7F189F7A1F30494CB8 /* Pods-Cumulus-GetForecastIntentUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE9116D118CF1C012FBEB88A123A52 /* Pods-Cumulus-GetForecastIntentUI-dummy.m */; };
+		766EBF5B8FF1E69B218338DE2BBB1FC2 /* Pods-Cumulus-GetForecastIntent-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F1475688FD34D59657A541ABB63462B5 /* Pods-Cumulus-GetForecastIntent-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		777A55854207B022F19094ABB8FDF87D /* ForecastIO-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AFCAE7BCADF2DE3ABC2AAFD60C9D7672 /* ForecastIO-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78F3D342D7868D5BA4332B4932CDC270 /* Pods-Cumulus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C702DEFED21D58B8C98955E100EDEA8 /* Pods-Cumulus-dummy.m */; };
+		7D5A644F875EC685890CA8A79A659695 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		7E1224E930009EDEE7E71A090DA0DB3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		822D1BDEF7874226318DA7B57E2EAD7F /* Pods-Cumulus-Cumulus Today-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8520E6DE347C1EE0D72697E5CE8ECF /* Pods-Cumulus-Cumulus Today-dummy.m */; };
+		834FBA5F7DA0A416CC83EE5ED3655B7B /* Pods-Cumulus-GetForecastIntent-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39930937839E85E2ADBC8D4431EC459C /* Pods-Cumulus-GetForecastIntent-dummy.m */; };
+		847473B3EF591E2F22865B11CAADA0E1 /* DataBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303AF3A978A4653918C33D52A481DBE /* DataBlock.swift */; };
 		8B6EC57B99EF7733C02DA7BC47D3C827 /* SwiftyStoreKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ADC5DEE02E54258CFD155508C8D9244 /* SwiftyStoreKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8FA7E7319581BF15545DE2A744929391 /* ForecastIOError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BEBCAAB901A0F34FB986B4CB478C87 /* ForecastIOError.swift */; };
-		922B84FF9022E3D5CF557302C5AC576E /* Pods-Cumulus-GetForecastIntent-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B182114779BB49F2C443B0463CC6DD2 /* Pods-Cumulus-GetForecastIntent-dummy.m */; };
-		93177B96E3384B7B7048BC79490A6748 /* DarkSkyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FED0D246D0EBD1E48F1925FD8F627 /* DarkSkyClient.swift */; };
+		8BB2431C0132F8A39689E21A88665696 /* ForecastIOError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4775D5948B7DAB3A09B459E11308AA4B /* ForecastIOError.swift */; };
+		90C9D9DA5577E90199F3966A2D11FB4E /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648E9479E719F40CBE4755CA1A21BD89 /* Flag.swift */; };
 		94C4D411154B20E95D71F0A540BEFA9E /* AppleReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEEB7E58EDED84C20E4056C10E61BFD /* AppleReceiptValidator.swift */; };
 		96C050D6E6CE50C2BD3AF12853F2B6A8 /* PaymentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD3A2F6B98F90BA7ECEBB537711922A /* PaymentsController.swift */; };
-		9C9189E52958CD32D74C762B1E21A297 /* DataBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298F3DCA6E5E2F70AD9B1D0F9A21CBE /* DataBlock.swift */; };
-		9D521E0290EE556A0F011B110FD9802F /* Precipitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4E0A5CD49C8E6993DD05ADB9D2D6E /* Precipitation.swift */; };
-		ACADB092BB2D87955E52DE9316A523B6 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50845D3AD1A042054C626DD2BA0A5F52 /* Alert.swift */; };
-		AFB649F552D4A9CF6B8CCB3EB9FD766A /* DataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3EB36379F8E64C07668FF947587E2 /* DataPoint.swift */; };
+		9B45633625ED00C6DFC5C9BD376FEEF0 /* Precipitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CB347D2D833D09782D6E0BCED19FB8 /* Precipitation.swift */; };
+		A4C74283B4AD8BF5D61B60D2BE1BB7B6 /* Pods-Cumulus-Cumulus WidgetExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F497703FE5AF825DAF8B1239C23D0E /* Pods-Cumulus-Cumulus WidgetExtension-dummy.m */; };
+		AACBEFD0BDAFC07EFEEE66FC4F8AC983 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F077037FCE3FC5A10F55877A4E824BB /* Units.swift */; };
+		AFE7052CC22C7DD262F8F8F1460509CD /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAF69CCF7839F0E475C5158C660F58 /* Icon.swift */; };
 		B0F6DB3499903B3F58E262223E4B5A94 /* InAppReceiptRefreshRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69EFE8D3198540FB16B8FCDD8E2761A /* InAppReceiptRefreshRequest.swift */; };
 		B281D8A8ECC3FAF6633C0B14AA073F25 /* ProductsInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE09A52EA3D0BEBA5D367B7E0E8780E7 /* ProductsInfoController.swift */; };
 		B33068F24A37B5C3D7980AF7CE1E76DB /* SwiftyStoreKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6503677D775D03B9D17867D8EEA8E97A /* SwiftyStoreKit-dummy.m */; };
-		B38FA7B767C8642A31BCFF2285E4A72B /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BF668870809570BE8881783B5A35DA /* Language.swift */; };
-		B5BF11CB926CFF40ABC736CD789BAD03 /* DarkSkyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FED0D246D0EBD1E48F1925FD8F627 /* DarkSkyClient.swift */; };
-		C06FE4C6341490506B2EE6AD65886545 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		C78E0AA446C0068A7BEFBCFE0756F45C /* RestorePurchasesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA53155A66B1AFD3C72825A1FDDEE38 /* RestorePurchasesController.swift */; };
-		D0A7626C1DE4B0CD4DA382152F81F1E5 /* Pods-Cumulus Watch Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE100DFFE8C993EEFBB876C84B7A116C /* Pods-Cumulus Watch Extension-dummy.m */; };
+		CC667BC03C46C1400BD84960093E7082 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B80E8F80C9714C602D7445D7DFC4F /* Language.swift */; };
+		CE0CAAF838D6E0AFB1C53B9D640E69E9 /* RequestMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D303195C9BC5F0594C5BC12587F1B4 /* RequestMetadata.swift */; };
 		D14B54215BC9EE0D8E75A9B9F6657F91 /* CompleteTransactionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E93A20847FE1527CB66F0749725220 /* CompleteTransactionsController.swift */; };
-		DAB5C815686C316B582EA416BA3787F9 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879AA6F31769A25DE5995A890A992E61 /* Forecast.swift */; };
-		DAE6414B4FE820EEF2044D83BDBAF0C3 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BF668870809570BE8881783B5A35DA /* Language.swift */; };
 		DC5DD7164355AA955CE35C172C6CC8B8 /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92C456983C10830EE0DB8E5298C299 /* OS.swift */; };
-		DDA30240595799CC86A723364A43B255 /* Pods-Cumulus-GetForecastIntentUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 637674565E1364020DDB8CC1DBF0D7C4 /* Pods-Cumulus-GetForecastIntentUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6C1A95E49768F9D5F6DD6FF66F1BE9F /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879AA6F31769A25DE5995A890A992E61 /* Forecast.swift */; };
-		EBF32C4629C3359FEDF2FCAA508CACC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		F0DD9D1F341714F51829ED8E544D76BD /* Precipitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4E0A5CD49C8E6993DD05ADB9D2D6E /* Precipitation.swift */; };
+		E246575C98A782630663D069ACFF41E8 /* Pods-Cumulus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE32E6445C78FCE188160F8DD050BD8 /* Pods-Cumulus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E542EEE289DF1EC530FD09E8409CF78E /* Pods-Cumulus-Cumulus Today-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9972419B5DE041CF9781C093472EBB90 /* Pods-Cumulus-Cumulus Today-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1E60CBFF4BDEA4960372CB8B4F65140 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E0F3E71DB7316F955993808BC196CF /* Alert.swift */; };
 		F4E817F44A73CB188A81A97D3F504E76 /* SwiftyStoreKit+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA5B4C16A35962CDF51E976584B5A65 /* SwiftyStoreKit+Types.swift */; };
-		FF1EA10FC6844C7ECEE3B23154C15B78 /* ForecastIOError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BEBCAAB901A0F34FB986B4CB478C87 /* ForecastIOError.swift */; };
+		FB3AFD114002905D5B70B15908B03A0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		07B21180AB607AB033C930C063D58342 /* PBXContainerItemProxy */ = {
+		012D60F0AE50CB5579DEF773D89800D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E45419E802257D512C7541721BB2688A;
+			remoteInfo = ForecastIO;
+		};
+		01BCB74D690A6CDB828AC24D6F32E5A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+		19C89065347D53FFDBAE94A0AA6586EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0C1885900810601510E0C632060FAF26;
 			remoteInfo = GooglePlaces;
 		};
-		07EDD9F6C4430ED42D489E10D0188CCB /* PBXContainerItemProxy */ = {
+		1FC08F5DABF8B534906D3E37FA97BA92 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7D3777B459AEECAE67457ABBB7308DEB;
-			remoteInfo = "ForecastIO-library";
+			remoteGlobalIDString = E45419E802257D512C7541721BB2688A;
+			remoteInfo = ForecastIO;
 		};
-		0A9E9240652FFBD17D6439D06CFCC42E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EFF62E8E8608EAFF4BAF54568D95687E;
-			remoteInfo = "ForecastIO-framework";
-		};
-		1051E49FD79387C3262200D59F381E11 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
-			remoteInfo = GoogleMaps;
-		};
-		1B9384639947A14A0112ED024757D2CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCD4F1901DD86FEB184BFDD6673F4A7B;
-			remoteInfo = SwiftyStoreKit;
-		};
-		1DF75BB6E4E7D52A804B03F3A9899681 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCD4F1901DD86FEB184BFDD6673F4A7B;
-			remoteInfo = SwiftyStoreKit;
-		};
-		292816C6D6A8C038EC3A84E148C56EC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
-			remoteInfo = GoogleMaps;
-		};
-		3658A8A5C7742310C576538F5AFDF092 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCD4F1901DD86FEB184BFDD6673F4A7B;
-			remoteInfo = SwiftyStoreKit;
-		};
-		388554CD35631879CF549C262FD5B36E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCD4F1901DD86FEB184BFDD6673F4A7B;
-			remoteInfo = SwiftyStoreKit;
-		};
-		460A02461931F9C436632BFADCD4FCB7 /* PBXContainerItemProxy */ = {
+		246710FC12D5E5B753FBAC928ED4B87B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0C1885900810601510E0C632060FAF26;
 			remoteInfo = GooglePlaces;
 		};
-		4C8CB8DFC30D9B5E01895858A27A903A /* PBXContainerItemProxy */ = {
+		2A900346586AA2D2186FDFBC010622B5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
-			remoteInfo = GoogleMaps;
+			remoteGlobalIDString = FCD4F1901DD86FEB184BFDD6673F4A7B;
+			remoteInfo = SwiftyStoreKit;
 		};
-		620271DE5E17AA25AC38E931764F3084 /* PBXContainerItemProxy */ = {
+		404948CD75EA6099EA76300FE5B41C88 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EFF62E8E8608EAFF4BAF54568D95687E;
-			remoteInfo = "ForecastIO-framework";
+			remoteGlobalIDString = E45419E802257D512C7541721BB2688A;
+			remoteInfo = ForecastIO;
+		};
+		528E1C1C6A472864FD0D6259FF03E2FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C1885900810601510E0C632060FAF26;
+			remoteInfo = GooglePlaces;
+		};
+		5F2D7905FB67CE1642CEA35946D5A912 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E45419E802257D512C7541721BB2688A;
+			remoteInfo = ForecastIO;
 		};
 		6EB1C2DD30E6564FC3135C9E8002D8F7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -183,167 +151,220 @@
 			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
 			remoteInfo = GoogleMaps;
 		};
-		834AA37532EFFB2E17274991960FAA30 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EFF62E8E8608EAFF4BAF54568D95687E;
-			remoteInfo = "ForecastIO-framework";
-		};
-		B3E89DE17259EEBB8A4849D2EB9E833E /* PBXContainerItemProxy */ = {
+		74439A6A05AA0B1EAC177BF390A2D2AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0C1885900810601510E0C632060FAF26;
 			remoteInfo = GooglePlaces;
 		};
-		C01C3FE1235B119160338009A4086D56 /* PBXContainerItemProxy */ = {
+		89F0C221DD8278EBDB85587D45E0DEBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCD4F1901DD86FEB184BFDD6673F4A7B;
+			remoteInfo = SwiftyStoreKit;
+		};
+		904258837240E6DB039394ED21F703E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
 			remoteInfo = GoogleMaps;
 		};
-		D61D77BB2EDE9D5E1856DF6B99AB78E9 /* PBXContainerItemProxy */ = {
+		9EC84556F8E6FB2269039AF480B6138E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCD4F1901DD86FEB184BFDD6673F4A7B;
+			remoteInfo = SwiftyStoreKit;
+		};
+		A0A2A68A4F786FF4F7B281CE64D280EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E45419E802257D512C7541721BB2688A;
+			remoteInfo = ForecastIO;
+		};
+		A90809604ADA45006C4DE8943CEF43D7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0C1885900810601510E0C632060FAF26;
 			remoteInfo = GooglePlaces;
 		};
-		DA164362138F87635257BD2A1208B3E0 /* PBXContainerItemProxy */ = {
+		AAF61D01E5F05AD1AC3B797669DB235E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EFF62E8E8608EAFF4BAF54568D95687E;
-			remoteInfo = "ForecastIO-framework";
+			remoteGlobalIDString = FCD4F1901DD86FEB184BFDD6673F4A7B;
+			remoteInfo = SwiftyStoreKit;
+		};
+		C7F0CBCA592A10E339CA83AD0131151A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+		CE2A32F54BD1DC20B6195BBC0856823D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCD4F1901DD86FEB184BFDD6673F4A7B;
+			remoteInfo = SwiftyStoreKit;
+		};
+		EDF0DD7E3CF50C2FFEB4A607F833BF89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+		FF294A558B3973A4560BD29AACAA313B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00A910F5D5CAA7F3E3AD6D5D1F356BBE /* RequestMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestMetadata.swift; path = Source/RequestMetadata.swift; sourceTree = "<group>"; };
 		02AB0DCD78D465D9B65A66832693B57D /* InAppProductQueryRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppProductQueryRequest.swift; path = SwiftyStoreKit/InAppProductQueryRequest.swift; sourceTree = "<group>"; };
-		04041DE264B02D0C56D4D5D80AC0BC50 /* ForecastIO-library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ForecastIO-library-dummy.m"; path = "../ForecastIO-library/ForecastIO-library-dummy.m"; sourceTree = "<group>"; };
-		063D3E88B560F6BDC43758BA1049ECCE /* Pods-Cumulus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cumulus-dummy.m"; sourceTree = "<group>"; };
-		0A4050E910045A3AD6013492E99652D8 /* Pods-Cumulus-Cumulus Today-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cumulus-Cumulus Today-resources.sh"; sourceTree = "<group>"; };
-		0A80D91367C9BFA16968073F41AAAF7E /* Pods-Cumulus Watch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus Watch Extension.release.xcconfig"; sourceTree = "<group>"; };
-		0D69D9BC0669EBFBBDD5434BF675A813 /* ForecastIO-framework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "ForecastIO-framework.modulemap"; sourceTree = "<group>"; };
-		110A08C3D4E601554BEEBE1E11A81302 /* Pods-Cumulus-GetForecastIntent-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cumulus-GetForecastIntent-resources.sh"; sourceTree = "<group>"; };
+		03BEDBAC696828C98CD652286EE717B2 /* Pods-Cumulus-Cumulus WidgetExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cumulus-Cumulus WidgetExtension.modulemap"; sourceTree = "<group>"; };
+		04D303195C9BC5F0594C5BC12587F1B4 /* RequestMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestMetadata.swift; path = Source/RequestMetadata.swift; sourceTree = "<group>"; };
+		0ECF5A9A32C2AB38AFBE1D2E60B8205C /* Pods-Cumulus-Cumulus Today-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cumulus-Cumulus Today-resources.sh"; sourceTree = "<group>"; };
+		0F3BB893D440430909FA3F665DDCDA68 /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus-GetForecastIntent.debug.xcconfig"; sourceTree = "<group>"; };
 		15272A5B233F7D1AF95BE557A0BC086F /* GoogleMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.release.xcconfig; sourceTree = "<group>"; };
-		1844553CCF3A5E8EAD9F2952CD2265ED /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus-GetForecastIntentUI.debug.xcconfig"; sourceTree = "<group>"; };
-		1B182114779BB49F2C443B0463CC6DD2 /* Pods-Cumulus-GetForecastIntent-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cumulus-GetForecastIntent-dummy.m"; sourceTree = "<group>"; };
-		1B885E28E317DB2EB873C453D1FD5C18 /* Pods-Cumulus-Cumulus Today-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cumulus-Cumulus Today-umbrella.h"; sourceTree = "<group>"; };
-		1DF8A5AD702248B1D3FFA4C7BAE3472B /* Pods-Cumulus-Cumulus Today-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-Cumulus Today-acknowledgements.plist"; sourceTree = "<group>"; };
 		1E09EDCE0A2744D47E78074333AEC253 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
-		303C6C771494E0CB45ADFAE5314BFB4D /* Units.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Units.swift; path = Source/Units.swift; sourceTree = "<group>"; };
-		30725DB34A81ADF967EB1E52AC369B90 /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus-GetForecastIntentUI.release.xcconfig"; sourceTree = "<group>"; };
-		3075BFB3AB02D4D5C042C235DC3EDD02 /* Pods-Cumulus-Cumulus Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus-Cumulus Today.debug.xcconfig"; sourceTree = "<group>"; };
+		1F077037FCE3FC5A10F55877A4E824BB /* Units.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Units.swift; path = Source/Units.swift; sourceTree = "<group>"; };
+		21BE3544329767DF5A265D6E74286AAB /* Pods-Cumulus-Cumulus WidgetExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-Cumulus WidgetExtension-acknowledgements.plist"; sourceTree = "<group>"; };
+		226EA35243C88C180A5FC2E6849728BC /* Pods-Cumulus-GetForecastIntentUI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-GetForecastIntentUI-acknowledgements.plist"; sourceTree = "<group>"; };
+		22CB347D2D833D09782D6E0BCED19FB8 /* Precipitation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Precipitation.swift; path = Source/Precipitation.swift; sourceTree = "<group>"; };
+		2504AE868E7E0516F60447EC3DE093BD /* Pods-Cumulus-GetForecastIntent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus-GetForecastIntent.release.xcconfig"; sourceTree = "<group>"; };
+		27B481F59854A0F1CBD4BEB6E03AD482 /* Pods-Cumulus-GetForecastIntentUI-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cumulus-GetForecastIntentUI-resources.sh"; sourceTree = "<group>"; };
+		3055C2952F5D1D054C5545CD48695FB2 /* Pods-Cumulus-GetForecastIntent.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cumulus-GetForecastIntent.modulemap"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		32B68D5B8C0127052BE81786F59B46F6 /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyStoreKit.framework; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3386CA0B6920B0E4CE8640DEA783A31A /* Icon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Icon.swift; path = Source/Icon.swift; sourceTree = "<group>"; };
+		32864FE5C1FE9BBF6C828C3EA0691161 /* Pods-Cumulus-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cumulus-acknowledgements.markdown"; sourceTree = "<group>"; };
+		32B68D5B8C0127052BE81786F59B46F6 /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3441B8EB2A7EB300A497D196F74DA5B8 /* SwiftyStoreKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyStoreKit.swift; path = SwiftyStoreKit/SwiftyStoreKit.swift; sourceTree = "<group>"; };
-		34D2BC5370E5BF4288BE5F45E5FFCFD1 /* Pods-Cumulus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cumulus.modulemap"; sourceTree = "<group>"; };
-		35811CEC88FEF2C63E9F3FFF27E997B5 /* Pods-Cumulus-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cumulus-resources.sh"; sourceTree = "<group>"; };
-		36907E8235F56F170272930B4F70B011 /* Pods-Cumulus Watch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus Watch Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		36E0F3E71DB7316F955993808BC196CF /* Alert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alert.swift; path = Source/Alert.swift; sourceTree = "<group>"; };
 		3787E4CB0351962AFABE8420F60AC70B /* InAppReceiptVerificator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceiptVerificator.swift; path = SwiftyStoreKit/InAppReceiptVerificator.swift; sourceTree = "<group>"; };
-		3ADC0589640A0704E2158BFCDF2D0590 /* Flag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Flag.swift; path = Source/Flag.swift; sourceTree = "<group>"; };
-		3BCD84884938F7D29FC23CDC5B722485 /* Pods-Cumulus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus.release.xcconfig"; sourceTree = "<group>"; };
+		39930937839E85E2ADBC8D4431EC459C /* Pods-Cumulus-GetForecastIntent-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cumulus-GetForecastIntent-dummy.m"; sourceTree = "<group>"; };
+		3C702DEFED21D58B8C98955E100EDEA8 /* Pods-Cumulus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cumulus-dummy.m"; sourceTree = "<group>"; };
 		3D08D45FBA54D4368FB16DA774C3B259 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
-		41498DCC462353197FDBB838C8EBB234 /* Pods-Cumulus-GetForecastIntentUI-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cumulus-GetForecastIntentUI-resources.sh"; sourceTree = "<group>"; };
-		4171D3656EF626244E35495689E5FA69 /* ForecastIO-library.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "ForecastIO-library.modulemap"; path = "../ForecastIO-library/ForecastIO-library.modulemap"; sourceTree = "<group>"; };
-		4799F9E1B6FAD305A9FEDC11773B6359 /* Pods_Cumulus_GetForecastIntent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Cumulus_GetForecastIntent.framework; path = "Pods-Cumulus-GetForecastIntent.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E7C5F68E5F94BBDAF11637332ED9AEB /* ForecastIO-library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ForecastIO-library-prefix.pch"; path = "../ForecastIO-library/ForecastIO-library-prefix.pch"; sourceTree = "<group>"; };
+		3F9F36635958706ED90B304EAB7E06BE /* DarkSkyClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DarkSkyClient.swift; path = Source/DarkSkyClient.swift; sourceTree = "<group>"; };
+		4303AF3A978A4653918C33D52A481DBE /* DataBlock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataBlock.swift; path = Source/DataBlock.swift; sourceTree = "<group>"; };
+		44E4F96E9A726454F62EA1DA8AC9D1E8 /* Pods-Cumulus-Cumulus Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus-Cumulus Today.debug.xcconfig"; sourceTree = "<group>"; };
+		455B80E8F80C9714C602D7445D7DFC4F /* Language.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Language.swift; path = Source/Language.swift; sourceTree = "<group>"; };
+		4775D5948B7DAB3A09B459E11308AA4B /* ForecastIOError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ForecastIOError.swift; path = Source/ForecastIOError.swift; sourceTree = "<group>"; };
+		4799F9E1B6FAD305A9FEDC11773B6359 /* Pods_Cumulus_GetForecastIntent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_GetForecastIntent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D9A6985BB210AC452819D81BB9A8A93 /* Pods-Cumulus-Cumulus Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus-Cumulus Today.release.xcconfig"; sourceTree = "<group>"; };
+		4E1C080706A1E3375E8DB9F83945F16D /* Pods-Cumulus-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-Info.plist"; sourceTree = "<group>"; };
 		4FB439BEA59A3A4ACE0B0C0E9DD2BD3D /* SwiftyStoreKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStoreKit-prefix.pch"; sourceTree = "<group>"; };
-		50845D3AD1A042054C626DD2BA0A5F52 /* Alert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alert.swift; path = Source/Alert.swift; sourceTree = "<group>"; };
-		5366703BB89386449CA1AA046C956CEC /* Pods-Cumulus-GetForecastIntentUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cumulus-GetForecastIntentUI.modulemap"; sourceTree = "<group>"; };
-		57DDD435BD21335FB4C10754144B1271 /* ForecastIO-library-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ForecastIO-library-umbrella.h"; path = "../ForecastIO-library/ForecastIO-library-umbrella.h"; sourceTree = "<group>"; };
-		59C3D0935E30BC895020962A76F27EC7 /* Pods-Cumulus Watch Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cumulus Watch Extension.modulemap"; sourceTree = "<group>"; };
-		5BABF4533AC74823CF92F9270224D015 /* Pods_Cumulus_GetForecastIntentUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Cumulus_GetForecastIntentUI.framework; path = "Pods-Cumulus-GetForecastIntentUI.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		565EB95D84F6309752C3E4F6BDF454B7 /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus-GetForecastIntentUI.release.xcconfig"; sourceTree = "<group>"; };
+		59E3126A7930CA388E5395DE0EE84090 /* Pods-Cumulus-Cumulus Today-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cumulus-Cumulus Today-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5BABF4533AC74823CF92F9270224D015 /* Pods_Cumulus_GetForecastIntentUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_GetForecastIntentUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD3A2F6B98F90BA7ECEBB537711922A /* PaymentsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentsController.swift; path = SwiftyStoreKit/PaymentsController.swift; sourceTree = "<group>"; };
-		637674565E1364020DDB8CC1DBF0D7C4 /* Pods-Cumulus-GetForecastIntentUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cumulus-GetForecastIntentUI-umbrella.h"; sourceTree = "<group>"; };
+		5D39C27247B7C1FAC31840CCF1CDB814 /* Pods-Cumulus-GetForecastIntent-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-GetForecastIntent-Info.plist"; sourceTree = "<group>"; };
+		6069EA3D382BE09C07CFB3B9ED300A09 /* Pods-Cumulus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus.release.xcconfig"; sourceTree = "<group>"; };
+		648E9479E719F40CBE4755CA1A21BD89 /* Flag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Flag.swift; path = Source/Flag.swift; sourceTree = "<group>"; };
+		64B509500F26186FC33F7F9D60297388 /* Pods-Cumulus-GetForecastIntentUI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-GetForecastIntentUI-Info.plist"; sourceTree = "<group>"; };
 		6503677D775D03B9D17867D8EEA8E97A /* SwiftyStoreKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyStoreKit-dummy.m"; sourceTree = "<group>"; };
 		6519FD9FCECFA9BC11EBB3F9BFFE0732 /* SwiftyStoreKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyStoreKit.modulemap; sourceTree = "<group>"; };
+		65480C173F36247ED2A5C13236505415 /* Pods-Cumulus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus.debug.xcconfig"; sourceTree = "<group>"; };
 		675DAE4E38D9A1A0CA8AD1BBD8BA8135 /* SwiftyStoreKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyStoreKit.release.xcconfig; sourceTree = "<group>"; };
-		6971B0F1DC3AA0CD7BB43755B3D5D192 /* Pods-Cumulus-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-acknowledgements.plist"; sourceTree = "<group>"; };
-		69BEBCAAB901A0F34FB986B4CB478C87 /* ForecastIOError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ForecastIOError.swift; path = Source/ForecastIOError.swift; sourceTree = "<group>"; };
-		6A495E333DF8310E629CF813D6AA0F03 /* Pods-Cumulus-GetForecastIntent.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cumulus-GetForecastIntent.modulemap"; sourceTree = "<group>"; };
-		6DB7B7B22B73AE2E19D6F5463430A01B /* Pods_Cumulus_Cumulus_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Cumulus_Cumulus_Today.framework; path = "Pods-Cumulus-Cumulus Today.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7298F3DCA6E5E2F70AD9B1D0F9A21CBE /* DataBlock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataBlock.swift; path = Source/DataBlock.swift; sourceTree = "<group>"; };
+		6A83F98DABF6734C01D2B6A7D65C5C72 /* Pods-Cumulus-GetForecastIntentUI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cumulus-GetForecastIntentUI-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6C437624E8F5054DC0E2EC8D3A9293D4 /* Pods-Cumulus-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cumulus-resources.sh"; sourceTree = "<group>"; };
+		6DB7B7B22B73AE2E19D6F5463430A01B /* Pods_Cumulus_Cumulus_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_Cumulus_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70AA849683C2606C200452AF6BCF0A89 /* Pods-Cumulus-GetForecastIntent-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cumulus-GetForecastIntent-acknowledgements.markdown"; sourceTree = "<group>"; };
+		715E74E72442FDD7A18FCB62B668CC90 /* Pods-Cumulus-GetForecastIntentUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cumulus-GetForecastIntentUI-umbrella.h"; sourceTree = "<group>"; };
+		77B5678E98525CAE0AFD9677A96C8E30 /* Pods-Cumulus-Cumulus WidgetExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-Cumulus WidgetExtension-Info.plist"; sourceTree = "<group>"; };
+		77DFB649D821C4FC599D7A05F12C9286 /* ForecastIO.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ForecastIO.modulemap; sourceTree = "<group>"; };
 		7852FF0D1B12DE99478A4EB6F8503416 /* PaymentQueueController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentQueueController.swift; path = SwiftyStoreKit/PaymentQueueController.swift; sourceTree = "<group>"; };
-		879AA6F31769A25DE5995A890A992E61 /* Forecast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Forecast.swift; path = Source/Forecast.swift; sourceTree = "<group>"; };
+		791A3C14837374FF1630A0E26D13A15C /* ForecastIO-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ForecastIO-prefix.pch"; sourceTree = "<group>"; };
+		7A37A865B645BDE6DCE9EBFE1E8E4017 /* Pods-Cumulus-Cumulus WidgetExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cumulus-Cumulus WidgetExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		81B19A61396DF87835FF0CA7FD213F40 /* Pods-Cumulus-GetForecastIntentUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cumulus-GetForecastIntentUI.modulemap"; sourceTree = "<group>"; };
+		87B2AE5784FDDA59363576BB2B827D4A /* DataPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataPoint.swift; path = Source/DataPoint.swift; sourceTree = "<group>"; };
 		8ADC5DEE02E54258CFD155508C8D9244 /* SwiftyStoreKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStoreKit-umbrella.h"; sourceTree = "<group>"; };
-		8BDA285BF88860995E8EBDEFB982931F /* ForecastIO-framework-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ForecastIO-framework-Info.plist"; sourceTree = "<group>"; };
-		900AD2D97DEAEE12C31A0798BA0492E2 /* Pods-Cumulus-GetForecastIntentUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cumulus-GetForecastIntentUI-dummy.m"; sourceTree = "<group>"; };
+		8F8520E6DE347C1EE0D72697E5CE8ECF /* Pods-Cumulus-Cumulus Today-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cumulus-Cumulus Today-dummy.m"; sourceTree = "<group>"; };
 		906A5C3B64B16E451FEDC40FF2043294 /* SKProduct+LocalizedPrice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SKProduct+LocalizedPrice.swift"; path = "SwiftyStoreKit/SKProduct+LocalizedPrice.swift"; sourceTree = "<group>"; };
-		949A52940E3DD26B92949FE1102103BC /* Pods-Cumulus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus.debug.xcconfig"; sourceTree = "<group>"; };
-		995796E481F1E7B31AA72E663713B2ED /* Pods-Cumulus-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cumulus-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FD8C0910E0C791D7CFF6AF214D5365C /* Pods-Cumulus-Cumulus Today-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cumulus-Cumulus Today-dummy.m"; sourceTree = "<group>"; };
-		A74FED0D246D0EBD1E48F1925FD8F627 /* DarkSkyClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DarkSkyClient.swift; path = Source/DarkSkyClient.swift; sourceTree = "<group>"; };
-		A789CF26BCC1269BEE900DC0B2DE468B /* ForecastIO-framework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ForecastIO-framework-dummy.m"; sourceTree = "<group>"; };
-		A8A4E0A5CD49C8E6993DD05ADB9D2D6E /* Precipitation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Precipitation.swift; path = Source/Precipitation.swift; sourceTree = "<group>"; };
-		A9004D321AEB28798D924BE98618DF31 /* ForecastIO-framework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ForecastIO-framework.debug.xcconfig"; sourceTree = "<group>"; };
-		AE100DFFE8C993EEFBB876C84B7A116C /* Pods-Cumulus Watch Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cumulus Watch Extension-dummy.m"; sourceTree = "<group>"; };
+		943827A1D04E1098C3116F2991956EED /* Pods-Cumulus-Cumulus WidgetExtension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cumulus-Cumulus WidgetExtension-resources.sh"; sourceTree = "<group>"; };
+		94EAF69CCF7839F0E475C5158C660F58 /* Icon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Icon.swift; path = Source/Icon.swift; sourceTree = "<group>"; };
+		9814B28A4C786AA77196C30870623C61 /* Pods_Cumulus_Cumulus_WidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_Cumulus_WidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9972419B5DE041CF9781C093472EBB90 /* Pods-Cumulus-Cumulus Today-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cumulus-Cumulus Today-umbrella.h"; sourceTree = "<group>"; };
+		9D0652D0A9387293440BA53DCB0A282E /* Pods-Cumulus-Cumulus WidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus-Cumulus WidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DCE9116D118CF1C012FBEB88A123A52 /* Pods-Cumulus-GetForecastIntentUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cumulus-GetForecastIntentUI-dummy.m"; sourceTree = "<group>"; };
+		A0884D8CE1FEB42F10C6F7F4B2EC39C9 /* Pods-Cumulus-GetForecastIntent-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-GetForecastIntent-acknowledgements.plist"; sourceTree = "<group>"; };
 		AEA53155A66B1AFD3C72825A1FDDEE38 /* RestorePurchasesController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestorePurchasesController.swift; path = SwiftyStoreKit/RestorePurchasesController.swift; sourceTree = "<group>"; };
-		AFD8A0FC7BA7FE4150337D22B7DA4309 /* Pods-Cumulus Watch Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cumulus Watch Extension-umbrella.h"; sourceTree = "<group>"; };
-		B0B45C15A12C77D84F62970FD71D20B3 /* Pods-Cumulus-GetForecastIntentUI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-GetForecastIntentUI-Info.plist"; sourceTree = "<group>"; };
-		B6949F24C7847EFC2DCACFCAA13E093F /* ForecastIO-framework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ForecastIO-framework-umbrella.h"; sourceTree = "<group>"; };
+		AFAE267E770653132864E6A86C633E53 /* Pods-Cumulus-Cumulus Today-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-Cumulus Today-Info.plist"; sourceTree = "<group>"; };
+		AFCAE7BCADF2DE3ABC2AAFD60C9D7672 /* ForecastIO-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ForecastIO-umbrella.h"; sourceTree = "<group>"; };
 		B69EFE8D3198540FB16B8FCDD8E2761A /* InAppReceiptRefreshRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceiptRefreshRequest.swift; path = SwiftyStoreKit/InAppReceiptRefreshRequest.swift; sourceTree = "<group>"; };
-		B76700B870F612033610BF6AE02A5F45 /* ForecastIO-framework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ForecastIO-framework.release.xcconfig"; sourceTree = "<group>"; };
 		B76DF09657AB4D3C05A4CF39ADE22CD3 /* SwiftyStoreKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyStoreKit-Info.plist"; sourceTree = "<group>"; };
 		B7C264959CE38C52FBD4FBFE2A70E42B /* GooglePlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.debug.xcconfig; sourceTree = "<group>"; };
+		B7F497703FE5AF825DAF8B1239C23D0E /* Pods-Cumulus-Cumulus WidgetExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cumulus-Cumulus WidgetExtension-dummy.m"; sourceTree = "<group>"; };
+		BB4CF3F63007D516A7076F05689F0391 /* Pods-Cumulus-GetForecastIntent-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cumulus-GetForecastIntent-resources.sh"; sourceTree = "<group>"; };
+		BC8CEAD00EE84D97DCE725FA656FDA57 /* Pods-Cumulus-Cumulus Today.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cumulus-Cumulus Today.modulemap"; sourceTree = "<group>"; };
 		BE92C456983C10830EE0DB8E5298C299 /* OS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OS.swift; path = SwiftyStoreKit/OS.swift; sourceTree = "<group>"; };
-		C065797FFB63BAAD5CF4987F32069EDD /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus-GetForecastIntent.debug.xcconfig"; sourceTree = "<group>"; };
 		C0E93A20847FE1527CB66F0749725220 /* CompleteTransactionsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompleteTransactionsController.swift; path = SwiftyStoreKit/CompleteTransactionsController.swift; sourceTree = "<group>"; };
-		C167F96F433B637A20FFBE311AB903CC /* Pods-Cumulus-GetForecastIntentUI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-GetForecastIntentUI-acknowledgements.plist"; sourceTree = "<group>"; };
-		C1BAEE61D4B74FA87F8E83948B179D77 /* Pods-Cumulus-Cumulus Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus-Cumulus Today.release.xcconfig"; sourceTree = "<group>"; };
-		C3525BB5D655FD4ECDA58A823C91C00C /* Pods-Cumulus-Cumulus Today.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cumulus-Cumulus Today.modulemap"; sourceTree = "<group>"; };
-		C635B8BFC2A97389EF6E818950F62015 /* Pods-Cumulus Watch Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus Watch Extension-acknowledgements.plist"; sourceTree = "<group>"; };
-		CBE855B071917F4613B8D86572E6C886 /* Pods-Cumulus-Cumulus Today-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cumulus-Cumulus Today-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CFF7C9FCE41A5562BD7776DDF34444F3 /* libPods-Cumulus Watch Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Cumulus Watch Extension.a"; path = "libPods-Cumulus Watch Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2ABE2E9882CF7332627AE274BC9BDCC /* ForecastIO-framework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ForecastIO-framework-prefix.pch"; sourceTree = "<group>"; };
+		C3B0248DF2FDB63F4515BE6AD23308E1 /* ForecastIO-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ForecastIO-Info.plist"; sourceTree = "<group>"; };
+		C79F99E78EA721CC5E0D614CE4883790 /* ForecastIO-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ForecastIO-dummy.m"; sourceTree = "<group>"; };
+		C7A8EA1978ED5E465B2EF72056E3CCCD /* Pods-Cumulus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cumulus.modulemap"; sourceTree = "<group>"; };
+		D01A6465622853B3C934242157B23889 /* Pods-Cumulus-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cumulus-frameworks.sh"; sourceTree = "<group>"; };
+		D285CA6D259D647AB6AFE6961DCCB871 /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus-GetForecastIntentUI.debug.xcconfig"; sourceTree = "<group>"; };
 		D3E9F942FD6F1494718A965C7839817E /* SwiftyStoreKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyStoreKit.debug.xcconfig; sourceTree = "<group>"; };
-		D3ECBF9345980A83CC41832FC7B60CB0 /* Pods-Cumulus-GetForecastIntent-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cumulus-GetForecastIntent-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D4E9CC49FC5C178D106F2AF2D7B4BD10 /* Pods-Cumulus-GetForecastIntent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus-GetForecastIntent.release.xcconfig"; sourceTree = "<group>"; };
-		D53A203DC8AEA81D3E49E64203DDAEB2 /* Pods_Cumulus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Cumulus.framework; path = "Pods-Cumulus.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5F28017C69D1F1A754EBDBDDA309506 /* Pods-Cumulus-Cumulus Today-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-Cumulus Today-Info.plist"; sourceTree = "<group>"; };
+		D53A203DC8AEA81D3E49E64203DDAEB2 /* Pods_Cumulus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5EADA2846DAEF4476A9D6154BA160C8 /* Pods-Cumulus-Cumulus WidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cumulus-Cumulus WidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		D7F046F9E59259802B8555C72B3D2210 /* Pods-Cumulus-Cumulus WidgetExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cumulus-Cumulus WidgetExtension-umbrella.h"; sourceTree = "<group>"; };
 		D88A63B4F2688FE43B8887CDBB9D3D1A /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
-		D921B57E50A00B6BD57BE497056A946E /* Pods-Cumulus-GetForecastIntent-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-GetForecastIntent-Info.plist"; sourceTree = "<group>"; };
-		D9E128DC03F6523849416E9FCAEAFF6E /* ForecastIO-library.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "ForecastIO-library.debug.xcconfig"; path = "../ForecastIO-library/ForecastIO-library.debug.xcconfig"; sourceTree = "<group>"; };
+		D9C01BDF93EA3E1249906D5369E8EA56 /* Pods-Cumulus-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-acknowledgements.plist"; sourceTree = "<group>"; };
+		DAE32E6445C78FCE188160F8DD050BD8 /* Pods-Cumulus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cumulus-umbrella.h"; sourceTree = "<group>"; };
 		DAEDCA9DD8C7275182040A37FF804F79 /* GoogleMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.debug.xcconfig; sourceTree = "<group>"; };
+		DD415A1B9ADB4FFFADA082971BD69A4F /* Forecast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Forecast.swift; path = Source/Forecast.swift; sourceTree = "<group>"; };
+		DD849869380950F25F7551EF4FF6D48C /* ForecastIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ForecastIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA5B4C16A35962CDF51E976584B5A65 /* SwiftyStoreKit+Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwiftyStoreKit+Types.swift"; path = "SwiftyStoreKit/SwiftyStoreKit+Types.swift"; sourceTree = "<group>"; };
-		E1084864C6563C472BE877CBE934741C /* ForecastIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ForecastIO.framework; path = "ForecastIO-framework.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1A3A5658BDBE522252AAC32FEFC8E12 /* Pods-Cumulus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cumulus-umbrella.h"; sourceTree = "<group>"; };
-		E3D3CBD006509B31398134CD21DCDE91 /* Pods-Cumulus-GetForecastIntent-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-GetForecastIntent-acknowledgements.plist"; sourceTree = "<group>"; };
-		E6D9F2FC60C2AE757D52D808718B9E51 /* Pods-Cumulus-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cumulus-frameworks.sh"; sourceTree = "<group>"; };
+		E659BEC2C4971ADB25F596174616B90A /* ForecastIO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ForecastIO.debug.xcconfig; sourceTree = "<group>"; };
 		EAEEB7E58EDED84C20E4056C10E61BFD /* AppleReceiptValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppleReceiptValidator.swift; path = SwiftyStoreKit/AppleReceiptValidator.swift; sourceTree = "<group>"; };
-		EDA3EB36379F8E64C07668FF947587E2 /* DataPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataPoint.swift; path = Source/DataPoint.swift; sourceTree = "<group>"; };
+		EBABF97336480CB3E5BE56EDA42E3588 /* ForecastIO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ForecastIO.release.xcconfig; sourceTree = "<group>"; };
 		EE09A52EA3D0BEBA5D367B7E0E8780E7 /* ProductsInfoController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductsInfoController.swift; path = SwiftyStoreKit/ProductsInfoController.swift; sourceTree = "<group>"; };
-		F161BFAEBC34B771D2B07A3E2C74C9CA /* ForecastIO-library.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "ForecastIO-library.release.xcconfig"; path = "../ForecastIO-library/ForecastIO-library.release.xcconfig"; sourceTree = "<group>"; };
-		F1B97A727DD8E4D5C2A05FED0918EA37 /* Pods-Cumulus-GetForecastIntent-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cumulus-GetForecastIntent-umbrella.h"; sourceTree = "<group>"; };
-		F1BF668870809570BE8881783B5A35DA /* Language.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Language.swift; path = Source/Language.swift; sourceTree = "<group>"; };
-		F3243E3FEB1F1B0138F7E0EA4E60BF97 /* Pods-Cumulus-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-Info.plist"; sourceTree = "<group>"; };
-		F437A4C13E98F180ABB8942E9EBD23BF /* libForecastIO-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libForecastIO-library.a"; path = "libForecastIO-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4D9D0343D85AF4A83656F6968E7B7E2 /* Pods-Cumulus Watch Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cumulus Watch Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F1475688FD34D59657A541ABB63462B5 /* Pods-Cumulus-GetForecastIntent-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cumulus-GetForecastIntent-umbrella.h"; sourceTree = "<group>"; };
 		FC5E0DB00EB8B1DE554FFCF1EE834F0A /* GooglePlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.release.xcconfig; sourceTree = "<group>"; };
-		FCA6D29D5BB934EDF57B94C899C99F1B /* Pods-Cumulus-GetForecastIntentUI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cumulus-GetForecastIntentUI-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FF0A8E724C068E8865C815D6E61E1589 /* Pods-Cumulus-Cumulus Today-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cumulus-Cumulus Today-acknowledgements.plist"; sourceTree = "<group>"; };
 		FF7FFFA4499C61E5679023A711E954FC /* InAppReceipt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceipt.swift; path = SwiftyStoreKit/InAppReceipt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3EBF07D93D59B089BCE36B6C9DEC61AC /* Frameworks */ = {
+		050A07FFF0E1F484FDF67768A285F5BD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28F4A98D1FDC22DA340509374D72854B /* Foundation.framework in Frameworks */,
+				7E1224E930009EDEE7E71A090DA0DB3A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6B4AA0A88F75A45A6030EF90AACE42E0 /* Frameworks */ = {
+		1A3B4967E61B974C6F2F09762B8D3FF4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBF32C4629C3359FEDF2FCAA508CACC1 /* Foundation.framework in Frameworks */,
+				4857F2EE145A9CD3FDC35580730FB011 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35FE15086FE40906B9CD8DD9AE8AFA52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				573C0A415160489950E463A8F92B0FC2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A83F4EC09501116C81E7070A70CCC3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB3AFD114002905D5B70B15908B03A0C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,78 +376,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87D2900A7FC6C2988477045AADEE0D3F /* Frameworks */ = {
+		96BDA34F114D721DDD4E2835DE39458B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D5A644F875EC685890CA8A79A659695 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8F12F3AF2A2BB330CB5A65F77145DA5F /* Frameworks */ = {
+		A82C12DE30AFBA9672E018AD9AD363F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C06FE4C6341490506B2EE6AD65886545 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5258BDB5126E14C6FDED9D24900DBC5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				126C5145A69D78716F828FF6C4AA0D29 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB3533F929181218A4E15C248D6D636E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2A97652062690C1E54D6B8FC48321872 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAB28A625AE3577AD521F290B10BD490 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				20CD3FCAFAD38F8E53854ACB69618BCA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F2BA360C7F68CB1FA104B61F511F72F /* Support Files */ = {
+		17E87195536A361EEEDCD3F9ED177630 /* Pods-Cumulus-GetForecastIntent */ = {
 			isa = PBXGroup;
 			children = (
-				0D69D9BC0669EBFBBDD5434BF675A813 /* ForecastIO-framework.modulemap */,
-				A789CF26BCC1269BEE900DC0B2DE468B /* ForecastIO-framework-dummy.m */,
-				8BDA285BF88860995E8EBDEFB982931F /* ForecastIO-framework-Info.plist */,
-				D2ABE2E9882CF7332627AE274BC9BDCC /* ForecastIO-framework-prefix.pch */,
-				B6949F24C7847EFC2DCACFCAA13E093F /* ForecastIO-framework-umbrella.h */,
-				A9004D321AEB28798D924BE98618DF31 /* ForecastIO-framework.debug.xcconfig */,
-				B76700B870F612033610BF6AE02A5F45 /* ForecastIO-framework.release.xcconfig */,
-				4171D3656EF626244E35495689E5FA69 /* ForecastIO-library.modulemap */,
-				04041DE264B02D0C56D4D5D80AC0BC50 /* ForecastIO-library-dummy.m */,
-				4E7C5F68E5F94BBDAF11637332ED9AEB /* ForecastIO-library-prefix.pch */,
-				57DDD435BD21335FB4C10754144B1271 /* ForecastIO-library-umbrella.h */,
-				D9E128DC03F6523849416E9FCAEAFF6E /* ForecastIO-library.debug.xcconfig */,
-				F161BFAEBC34B771D2B07A3E2C74C9CA /* ForecastIO-library.release.xcconfig */,
+				3055C2952F5D1D054C5545CD48695FB2 /* Pods-Cumulus-GetForecastIntent.modulemap */,
+				70AA849683C2606C200452AF6BCF0A89 /* Pods-Cumulus-GetForecastIntent-acknowledgements.markdown */,
+				A0884D8CE1FEB42F10C6F7F4B2EC39C9 /* Pods-Cumulus-GetForecastIntent-acknowledgements.plist */,
+				39930937839E85E2ADBC8D4431EC459C /* Pods-Cumulus-GetForecastIntent-dummy.m */,
+				5D39C27247B7C1FAC31840CCF1CDB814 /* Pods-Cumulus-GetForecastIntent-Info.plist */,
+				BB4CF3F63007D516A7076F05689F0391 /* Pods-Cumulus-GetForecastIntent-resources.sh */,
+				F1475688FD34D59657A541ABB63462B5 /* Pods-Cumulus-GetForecastIntent-umbrella.h */,
+				0F3BB893D440430909FA3F665DDCDA68 /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */,
+				2504AE868E7E0516F60447EC3DE093BD /* Pods-Cumulus-GetForecastIntent.release.xcconfig */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/ForecastIO-framework";
-			sourceTree = "<group>";
-		};
-		18B7AD43D1C70597C2FD87E28CB38E49 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7B16AD2E8C107BFFBFBC01E9BBC29198 /* Pods-Cumulus */,
-				775D925B44602A2184460EDB51B73966 /* Pods-Cumulus Watch Extension */,
-				46820AD7B95C91C02CCECC76815EF487 /* Pods-Cumulus-Cumulus Today */,
-				FCE94668C2692D3DBA2515C8AFF64BBE /* Pods-Cumulus-GetForecastIntent */,
-				EFB70C6312596DECFE5D7B7ADD647FA2 /* Pods-Cumulus-GetForecastIntentUI */,
-			);
-			name = "Targets Support Files";
+			name = "Pods-Cumulus-GetForecastIntent";
+			path = "Target Support Files/Pods-Cumulus-GetForecastIntent";
 			sourceTree = "<group>";
 		};
 		1E7398F17BEEEF8C16334FA14314DA1C /* Base */ = {
@@ -437,75 +420,88 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
-		46820AD7B95C91C02CCECC76815EF487 /* Pods-Cumulus-Cumulus Today */ = {
+		369F9458A28907DECFB0AFD90F769A99 /* Pods-Cumulus-Cumulus Today */ = {
 			isa = PBXGroup;
 			children = (
-				C3525BB5D655FD4ECDA58A823C91C00C /* Pods-Cumulus-Cumulus Today.modulemap */,
-				CBE855B071917F4613B8D86572E6C886 /* Pods-Cumulus-Cumulus Today-acknowledgements.markdown */,
-				1DF8A5AD702248B1D3FFA4C7BAE3472B /* Pods-Cumulus-Cumulus Today-acknowledgements.plist */,
-				9FD8C0910E0C791D7CFF6AF214D5365C /* Pods-Cumulus-Cumulus Today-dummy.m */,
-				D5F28017C69D1F1A754EBDBDDA309506 /* Pods-Cumulus-Cumulus Today-Info.plist */,
-				0A4050E910045A3AD6013492E99652D8 /* Pods-Cumulus-Cumulus Today-resources.sh */,
-				1B885E28E317DB2EB873C453D1FD5C18 /* Pods-Cumulus-Cumulus Today-umbrella.h */,
-				3075BFB3AB02D4D5C042C235DC3EDD02 /* Pods-Cumulus-Cumulus Today.debug.xcconfig */,
-				C1BAEE61D4B74FA87F8E83948B179D77 /* Pods-Cumulus-Cumulus Today.release.xcconfig */,
+				BC8CEAD00EE84D97DCE725FA656FDA57 /* Pods-Cumulus-Cumulus Today.modulemap */,
+				59E3126A7930CA388E5395DE0EE84090 /* Pods-Cumulus-Cumulus Today-acknowledgements.markdown */,
+				FF0A8E724C068E8865C815D6E61E1589 /* Pods-Cumulus-Cumulus Today-acknowledgements.plist */,
+				8F8520E6DE347C1EE0D72697E5CE8ECF /* Pods-Cumulus-Cumulus Today-dummy.m */,
+				AFAE267E770653132864E6A86C633E53 /* Pods-Cumulus-Cumulus Today-Info.plist */,
+				0ECF5A9A32C2AB38AFBE1D2E60B8205C /* Pods-Cumulus-Cumulus Today-resources.sh */,
+				9972419B5DE041CF9781C093472EBB90 /* Pods-Cumulus-Cumulus Today-umbrella.h */,
+				44E4F96E9A726454F62EA1DA8AC9D1E8 /* Pods-Cumulus-Cumulus Today.debug.xcconfig */,
+				4D9A6985BB210AC452819D81BB9A8A93 /* Pods-Cumulus-Cumulus Today.release.xcconfig */,
 			);
 			name = "Pods-Cumulus-Cumulus Today";
 			path = "Target Support Files/Pods-Cumulus-Cumulus Today";
 			sourceTree = "<group>";
 		};
-		58129B148A59848CE52A9004A2D9D3D7 /* ForecastIO */ = {
+		44688BCD2D38D1202216526A8FC436B5 /* Pods-Cumulus-GetForecastIntentUI */ = {
 			isa = PBXGroup;
 			children = (
-				50845D3AD1A042054C626DD2BA0A5F52 /* Alert.swift */,
-				A74FED0D246D0EBD1E48F1925FD8F627 /* DarkSkyClient.swift */,
-				7298F3DCA6E5E2F70AD9B1D0F9A21CBE /* DataBlock.swift */,
-				EDA3EB36379F8E64C07668FF947587E2 /* DataPoint.swift */,
-				3ADC0589640A0704E2158BFCDF2D0590 /* Flag.swift */,
-				879AA6F31769A25DE5995A890A992E61 /* Forecast.swift */,
-				69BEBCAAB901A0F34FB986B4CB478C87 /* ForecastIOError.swift */,
-				3386CA0B6920B0E4CE8640DEA783A31A /* Icon.swift */,
-				F1BF668870809570BE8881783B5A35DA /* Language.swift */,
-				A8A4E0A5CD49C8E6993DD05ADB9D2D6E /* Precipitation.swift */,
-				00A910F5D5CAA7F3E3AD6D5D1F356BBE /* RequestMetadata.swift */,
-				303C6C771494E0CB45ADFAE5314BFB4D /* Units.swift */,
-				0F2BA360C7F68CB1FA104B61F511F72F /* Support Files */,
+				81B19A61396DF87835FF0CA7FD213F40 /* Pods-Cumulus-GetForecastIntentUI.modulemap */,
+				6A83F98DABF6734C01D2B6A7D65C5C72 /* Pods-Cumulus-GetForecastIntentUI-acknowledgements.markdown */,
+				226EA35243C88C180A5FC2E6849728BC /* Pods-Cumulus-GetForecastIntentUI-acknowledgements.plist */,
+				9DCE9116D118CF1C012FBEB88A123A52 /* Pods-Cumulus-GetForecastIntentUI-dummy.m */,
+				64B509500F26186FC33F7F9D60297388 /* Pods-Cumulus-GetForecastIntentUI-Info.plist */,
+				27B481F59854A0F1CBD4BEB6E03AD482 /* Pods-Cumulus-GetForecastIntentUI-resources.sh */,
+				715E74E72442FDD7A18FCB62B668CC90 /* Pods-Cumulus-GetForecastIntentUI-umbrella.h */,
+				D285CA6D259D647AB6AFE6961DCCB871 /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */,
+				565EB95D84F6309752C3E4F6BDF454B7 /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */,
 			);
-			name = ForecastIO;
-			path = ForecastIO;
+			name = "Pods-Cumulus-GetForecastIntentUI";
+			path = "Target Support Files/Pods-Cumulus-GetForecastIntentUI";
 			sourceTree = "<group>";
 		};
-		775D925B44602A2184460EDB51B73966 /* Pods-Cumulus Watch Extension */ = {
+		51F0D12B81FB9CEAE609EE6653E28C37 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				59C3D0935E30BC895020962A76F27EC7 /* Pods-Cumulus Watch Extension.modulemap */,
-				F4D9D0343D85AF4A83656F6968E7B7E2 /* Pods-Cumulus Watch Extension-acknowledgements.markdown */,
-				C635B8BFC2A97389EF6E818950F62015 /* Pods-Cumulus Watch Extension-acknowledgements.plist */,
-				AE100DFFE8C993EEFBB876C84B7A116C /* Pods-Cumulus Watch Extension-dummy.m */,
-				AFD8A0FC7BA7FE4150337D22B7DA4309 /* Pods-Cumulus Watch Extension-umbrella.h */,
-				36907E8235F56F170272930B4F70B011 /* Pods-Cumulus Watch Extension.debug.xcconfig */,
-				0A80D91367C9BFA16968073F41AAAF7E /* Pods-Cumulus Watch Extension.release.xcconfig */,
+				6139B1E4FB1420B80C0F78B5889E3BF3 /* Pods-Cumulus */,
+				369F9458A28907DECFB0AFD90F769A99 /* Pods-Cumulus-Cumulus Today */,
+				AFE39FD5BB94ED860A8299397D523068 /* Pods-Cumulus-Cumulus WidgetExtension */,
+				17E87195536A361EEEDCD3F9ED177630 /* Pods-Cumulus-GetForecastIntent */,
+				44688BCD2D38D1202216526A8FC436B5 /* Pods-Cumulus-GetForecastIntentUI */,
 			);
-			name = "Pods-Cumulus Watch Extension";
-			path = "Target Support Files/Pods-Cumulus Watch Extension";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7B16AD2E8C107BFFBFBC01E9BBC29198 /* Pods-Cumulus */ = {
+		6139B1E4FB1420B80C0F78B5889E3BF3 /* Pods-Cumulus */ = {
 			isa = PBXGroup;
 			children = (
-				34D2BC5370E5BF4288BE5F45E5FFCFD1 /* Pods-Cumulus.modulemap */,
-				995796E481F1E7B31AA72E663713B2ED /* Pods-Cumulus-acknowledgements.markdown */,
-				6971B0F1DC3AA0CD7BB43755B3D5D192 /* Pods-Cumulus-acknowledgements.plist */,
-				063D3E88B560F6BDC43758BA1049ECCE /* Pods-Cumulus-dummy.m */,
-				E6D9F2FC60C2AE757D52D808718B9E51 /* Pods-Cumulus-frameworks.sh */,
-				F3243E3FEB1F1B0138F7E0EA4E60BF97 /* Pods-Cumulus-Info.plist */,
-				35811CEC88FEF2C63E9F3FFF27E997B5 /* Pods-Cumulus-resources.sh */,
-				E1A3A5658BDBE522252AAC32FEFC8E12 /* Pods-Cumulus-umbrella.h */,
-				949A52940E3DD26B92949FE1102103BC /* Pods-Cumulus.debug.xcconfig */,
-				3BCD84884938F7D29FC23CDC5B722485 /* Pods-Cumulus.release.xcconfig */,
+				C7A8EA1978ED5E465B2EF72056E3CCCD /* Pods-Cumulus.modulemap */,
+				32864FE5C1FE9BBF6C828C3EA0691161 /* Pods-Cumulus-acknowledgements.markdown */,
+				D9C01BDF93EA3E1249906D5369E8EA56 /* Pods-Cumulus-acknowledgements.plist */,
+				3C702DEFED21D58B8C98955E100EDEA8 /* Pods-Cumulus-dummy.m */,
+				D01A6465622853B3C934242157B23889 /* Pods-Cumulus-frameworks.sh */,
+				4E1C080706A1E3375E8DB9F83945F16D /* Pods-Cumulus-Info.plist */,
+				6C437624E8F5054DC0E2EC8D3A9293D4 /* Pods-Cumulus-resources.sh */,
+				DAE32E6445C78FCE188160F8DD050BD8 /* Pods-Cumulus-umbrella.h */,
+				65480C173F36247ED2A5C13236505415 /* Pods-Cumulus.debug.xcconfig */,
+				6069EA3D382BE09C07CFB3B9ED300A09 /* Pods-Cumulus.release.xcconfig */,
 			);
 			name = "Pods-Cumulus";
 			path = "Target Support Files/Pods-Cumulus";
+			sourceTree = "<group>";
+		};
+		69D9E1CC72255030D8CA8A766530783E /* ForecastIO */ = {
+			isa = PBXGroup;
+			children = (
+				36E0F3E71DB7316F955993808BC196CF /* Alert.swift */,
+				3F9F36635958706ED90B304EAB7E06BE /* DarkSkyClient.swift */,
+				4303AF3A978A4653918C33D52A481DBE /* DataBlock.swift */,
+				87B2AE5784FDDA59363576BB2B827D4A /* DataPoint.swift */,
+				648E9479E719F40CBE4755CA1A21BD89 /* Flag.swift */,
+				DD415A1B9ADB4FFFADA082971BD69A4F /* Forecast.swift */,
+				4775D5948B7DAB3A09B459E11308AA4B /* ForecastIOError.swift */,
+				94EAF69CCF7839F0E475C5158C660F58 /* Icon.swift */,
+				455B80E8F80C9714C602D7445D7DFC4F /* Language.swift */,
+				22CB347D2D833D09782D6E0BCED19FB8 /* Precipitation.swift */,
+				04D303195C9BC5F0594C5BC12587F1B4 /* RequestMetadata.swift */,
+				1F077037FCE3FC5A10F55877A4E824BB /* Units.swift */,
+				B457B223A0B164ACB674822A46FECABD /* Support Files */,
+			);
+			path = ForecastIO;
 			sourceTree = "<group>";
 		};
 		993B35D76CA7D93E86A0ADCB0B2E2C8D /* Support Files */ = {
@@ -516,6 +512,20 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/GoogleMaps";
+			sourceTree = "<group>";
+		};
+		9C2A315CDE93B4E075FCA61F03F28FCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD849869380950F25F7551EF4FF6D48C /* ForecastIO.framework */,
+				D53A203DC8AEA81D3E49E64203DDAEB2 /* Pods_Cumulus.framework */,
+				6DB7B7B22B73AE2E19D6F5463430A01B /* Pods_Cumulus_Cumulus_Today.framework */,
+				9814B28A4C786AA77196C30870623C61 /* Pods_Cumulus_Cumulus_WidgetExtension.framework */,
+				4799F9E1B6FAD305A9FEDC11773B6359 /* Pods_Cumulus_GetForecastIntent.framework */,
+				5BABF4533AC74823CF92F9270224D015 /* Pods_Cumulus_GetForecastIntentUI.framework */,
+				32B68D5B8C0127052BE81786F59B46F6 /* SwiftyStoreKit.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		AD8464B8551915B4424D3E8BC31E421F /* Frameworks */ = {
@@ -529,12 +539,44 @@
 		AF3E64043B89DEBD2AE7B3D3E5AB520E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				58129B148A59848CE52A9004A2D9D3D7 /* ForecastIO */,
+				69D9E1CC72255030D8CA8A766530783E /* ForecastIO */,
 				E11EF77E3C2859552BF714D0E1FFE590 /* GoogleMaps */,
 				D9F541802875F28BC15734FF7045C60A /* GooglePlaces */,
 				BD070574E647263D92011C4DE8FFC5C9 /* SwiftyStoreKit */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		AFE39FD5BB94ED860A8299397D523068 /* Pods-Cumulus-Cumulus WidgetExtension */ = {
+			isa = PBXGroup;
+			children = (
+				03BEDBAC696828C98CD652286EE717B2 /* Pods-Cumulus-Cumulus WidgetExtension.modulemap */,
+				7A37A865B645BDE6DCE9EBFE1E8E4017 /* Pods-Cumulus-Cumulus WidgetExtension-acknowledgements.markdown */,
+				21BE3544329767DF5A265D6E74286AAB /* Pods-Cumulus-Cumulus WidgetExtension-acknowledgements.plist */,
+				B7F497703FE5AF825DAF8B1239C23D0E /* Pods-Cumulus-Cumulus WidgetExtension-dummy.m */,
+				77B5678E98525CAE0AFD9677A96C8E30 /* Pods-Cumulus-Cumulus WidgetExtension-Info.plist */,
+				943827A1D04E1098C3116F2991956EED /* Pods-Cumulus-Cumulus WidgetExtension-resources.sh */,
+				D7F046F9E59259802B8555C72B3D2210 /* Pods-Cumulus-Cumulus WidgetExtension-umbrella.h */,
+				D5EADA2846DAEF4476A9D6154BA160C8 /* Pods-Cumulus-Cumulus WidgetExtension.debug.xcconfig */,
+				9D0652D0A9387293440BA53DCB0A282E /* Pods-Cumulus-Cumulus WidgetExtension.release.xcconfig */,
+			);
+			name = "Pods-Cumulus-Cumulus WidgetExtension";
+			path = "Target Support Files/Pods-Cumulus-Cumulus WidgetExtension";
+			sourceTree = "<group>";
+		};
+		B457B223A0B164ACB674822A46FECABD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				77DFB649D821C4FC599D7A05F12C9286 /* ForecastIO.modulemap */,
+				C79F99E78EA721CC5E0D614CE4883790 /* ForecastIO-dummy.m */,
+				C3B0248DF2FDB63F4515BE6AD23308E1 /* ForecastIO-Info.plist */,
+				791A3C14837374FF1630A0E26D13A15C /* ForecastIO-prefix.pch */,
+				AFCAE7BCADF2DE3ABC2AAFD60C9D7672 /* ForecastIO-umbrella.h */,
+				E659BEC2C4971ADB25F596174616B90A /* ForecastIO.debug.xcconfig */,
+				EBABF97336480CB3E5BE56EDA42E3588 /* ForecastIO.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ForecastIO";
 			sourceTree = "<group>";
 		};
 		B56B46CA23628B34D0F3B78102272974 /* Resources */ = {
@@ -564,7 +606,6 @@
 				DFA5B4C16A35962CDF51E976584B5A65 /* SwiftyStoreKit+Types.swift */,
 				CABE0CB4741844532EA8F24E162DBCF7 /* Support Files */,
 			);
-			name = SwiftyStoreKit;
 			path = SwiftyStoreKit;
 			sourceTree = "<group>";
 		};
@@ -597,24 +638,9 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				AF3E64043B89DEBD2AE7B3D3E5AB520E /* Pods */,
-				D0647D45615D2B97AC94C64F3797410E /* Products */,
-				18B7AD43D1C70597C2FD87E28CB38E49 /* Targets Support Files */,
+				9C2A315CDE93B4E075FCA61F03F28FCB /* Products */,
+				51F0D12B81FB9CEAE609EE6653E28C37 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D0647D45615D2B97AC94C64F3797410E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E1084864C6563C472BE877CBE934741C /* ForecastIO.framework */,
-				F437A4C13E98F180ABB8942E9EBD23BF /* libForecastIO-library.a */,
-				CFF7C9FCE41A5562BD7776DDF34444F3 /* libPods-Cumulus Watch Extension.a */,
-				D53A203DC8AEA81D3E49E64203DDAEB2 /* Pods_Cumulus.framework */,
-				6DB7B7B22B73AE2E19D6F5463430A01B /* Pods_Cumulus_Cumulus_Today.framework */,
-				4799F9E1B6FAD305A9FEDC11773B6359 /* Pods_Cumulus_GetForecastIntent.framework */,
-				5BABF4533AC74823CF92F9270224D015 /* Pods_Cumulus_GetForecastIntentUI.framework */,
-				32B68D5B8C0127052BE81786F59B46F6 /* SwiftyStoreKit.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -632,7 +658,6 @@
 				B56B46CA23628B34D0F3B78102272974 /* Resources */,
 				FBB4DC31F2DB846EF523F70E2AB6209B /* Support Files */,
 			);
-			name = GooglePlaces;
 			path = GooglePlaces;
 			sourceTree = "<group>";
 		};
@@ -642,7 +667,6 @@
 				1E7398F17BEEEF8C16334FA14314DA1C /* Base */,
 				993B35D76CA7D93E86A0ADCB0B2E2C8D /* Support Files */,
 			);
-			name = GoogleMaps;
 			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
@@ -652,23 +676,6 @@
 				3D08D45FBA54D4368FB16DA774C3B259 /* GoogleMapsBase.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EFB70C6312596DECFE5D7B7ADD647FA2 /* Pods-Cumulus-GetForecastIntentUI */ = {
-			isa = PBXGroup;
-			children = (
-				5366703BB89386449CA1AA046C956CEC /* Pods-Cumulus-GetForecastIntentUI.modulemap */,
-				FCA6D29D5BB934EDF57B94C899C99F1B /* Pods-Cumulus-GetForecastIntentUI-acknowledgements.markdown */,
-				C167F96F433B637A20FFBE311AB903CC /* Pods-Cumulus-GetForecastIntentUI-acknowledgements.plist */,
-				900AD2D97DEAEE12C31A0798BA0492E2 /* Pods-Cumulus-GetForecastIntentUI-dummy.m */,
-				B0B45C15A12C77D84F62970FD71D20B3 /* Pods-Cumulus-GetForecastIntentUI-Info.plist */,
-				41498DCC462353197FDBB838C8EBB234 /* Pods-Cumulus-GetForecastIntentUI-resources.sh */,
-				637674565E1364020DDB8CC1DBF0D7C4 /* Pods-Cumulus-GetForecastIntentUI-umbrella.h */,
-				1844553CCF3A5E8EAD9F2952CD2265ED /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */,
-				30725DB34A81ADF967EB1E52AC369B90 /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */,
-			);
-			name = "Pods-Cumulus-GetForecastIntentUI";
-			path = "Target Support Files/Pods-Cumulus-GetForecastIntentUI";
 			sourceTree = "<group>";
 		};
 		FBB4DC31F2DB846EF523F70E2AB6209B /* Support Files */ = {
@@ -681,55 +688,14 @@
 			path = "../Target Support Files/GooglePlaces";
 			sourceTree = "<group>";
 		};
-		FCE94668C2692D3DBA2515C8AFF64BBE /* Pods-Cumulus-GetForecastIntent */ = {
-			isa = PBXGroup;
-			children = (
-				6A495E333DF8310E629CF813D6AA0F03 /* Pods-Cumulus-GetForecastIntent.modulemap */,
-				D3ECBF9345980A83CC41832FC7B60CB0 /* Pods-Cumulus-GetForecastIntent-acknowledgements.markdown */,
-				E3D3CBD006509B31398134CD21DCDE91 /* Pods-Cumulus-GetForecastIntent-acknowledgements.plist */,
-				1B182114779BB49F2C443B0463CC6DD2 /* Pods-Cumulus-GetForecastIntent-dummy.m */,
-				D921B57E50A00B6BD57BE497056A946E /* Pods-Cumulus-GetForecastIntent-Info.plist */,
-				110A08C3D4E601554BEEBE1E11A81302 /* Pods-Cumulus-GetForecastIntent-resources.sh */,
-				F1B97A727DD8E4D5C2A05FED0918EA37 /* Pods-Cumulus-GetForecastIntent-umbrella.h */,
-				C065797FFB63BAAD5CF4987F32069EDD /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */,
-				D4E9CC49FC5C178D106F2AF2D7B4BD10 /* Pods-Cumulus-GetForecastIntent.release.xcconfig */,
-			);
-			name = "Pods-Cumulus-GetForecastIntent";
-			path = "Target Support Files/Pods-Cumulus-GetForecastIntent";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		12604454BED8706B25B9632828A15BCF /* Headers */ = {
+		3807FE4EC219731A454D35E5DE5EAECD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F5F35532BC23FD81841BAE05C6B387C /* Pods-Cumulus-Cumulus Today-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1C5C645258BE24F329D57B221C38E4A9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5258855D6E016ABBB45222C9EC4F48C0 /* ForecastIO-library-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BF86F652942E9BB9605CD489493196E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				726A480651F4EE68E084D9256DB39A9D /* Pods-Cumulus-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		67930712C7A02BFFC9990824EFD761F3 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09B650AE0FE51DCCB25FD4D72ADE11D2 /* ForecastIO-framework-umbrella.h in Headers */,
+				E542EEE289DF1EC530FD09E8409CF78E /* Pods-Cumulus-Cumulus Today-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,169 +707,171 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		79E9F979831A72FD910A8C4D5737E364 /* Headers */ = {
+		C1EAF8A0AF87FC35ED5669E3B36B5380 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA30240595799CC86A723364A43B255 /* Pods-Cumulus-GetForecastIntentUI-umbrella.h in Headers */,
+				766EBF5B8FF1E69B218338DE2BBB1FC2 /* Pods-Cumulus-GetForecastIntent-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		85C3A15F13BAE9745EF6BEE23AE4F631 /* Headers */ = {
+		C2813ACA54EC4024D70D49152E5A2A4D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2151552A1AB8DEC0724FE45481FD058C /* Pods-Cumulus-GetForecastIntent-umbrella.h in Headers */,
+				592BC4380C9F390216EF9342805FC971 /* Pods-Cumulus-Cumulus WidgetExtension-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		88DA5E0F52CDF703214518CA2A16C8A9 /* Headers */ = {
+		DA7257D3A27A25152AFCEA28E9C60C2F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FC8C1D6DE6043F5CD9217A14AB49641 /* Pods-Cumulus Watch Extension-umbrella.h in Headers */,
+				2BF718B96902DAAB29AD381E8DC2D63D /* Pods-Cumulus-GetForecastIntentUI-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E08D4DBE53671FB50D40B78B89A1F87E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E246575C98A782630663D069ACFF41E8 /* Pods-Cumulus-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7B07291EB0A9743F4ECB59450C92E3F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				777A55854207B022F19094ABB8FDF87D /* ForecastIO-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2BB5BDA14F0DD2C951DCED6DD879CF79 /* Pods-Cumulus */ = {
+		17E07C278E923AEF14ABE4350E0DDF8B /* Pods-Cumulus-Cumulus WidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 775ECDCD7B0339ACB2B734DBCB121AF9 /* Build configuration list for PBXNativeTarget "Pods-Cumulus" */;
+			buildConfigurationList = D21122036593A15FEE0C2C6873252C66 /* Build configuration list for PBXNativeTarget "Pods-Cumulus-Cumulus WidgetExtension" */;
 			buildPhases = (
-				5BF86F652942E9BB9605CD489493196E /* Headers */,
-				D5CF84A9F01A25567884F6553AFDFD62 /* Sources */,
-				3EBF07D93D59B089BCE36B6C9DEC61AC /* Frameworks */,
-				67B3B5935112AA1CD73E86C90B937557 /* Resources */,
+				C2813ACA54EC4024D70D49152E5A2A4D /* Headers */,
+				BFFB63B9188525FAAF2224F04C33DEB8 /* Sources */,
+				050A07FFF0E1F484FDF67768A285F5BD /* Frameworks */,
+				F36F85AB8037C83EBEE5D056453589ED /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				53C4B511CA378B30478F14E933E502C1 /* PBXTargetDependency */,
-				7BE6347B48EBCD1C0ACC4D22A7BA15AF /* PBXTargetDependency */,
-				93561FF8DAB507206C34E452B541536D /* PBXTargetDependency */,
-				DD4318BEF584D0C1898F3684A3CD44AF /* PBXTargetDependency */,
+				0CD348DE1ABC1F7485834645B4E54A0C /* PBXTargetDependency */,
+				D18F090AFAE843533C3DC9E90D008EF6 /* PBXTargetDependency */,
+				CB2C68FC760345E03FB88158744FD6D6 /* PBXTargetDependency */,
+				B6B52A5ED61DA7EC9D2CAE4E2F5C5C6E /* PBXTargetDependency */,
+			);
+			name = "Pods-Cumulus-Cumulus WidgetExtension";
+			productName = "Pods-Cumulus-Cumulus WidgetExtension";
+			productReference = 9814B28A4C786AA77196C30870623C61 /* Pods_Cumulus_Cumulus_WidgetExtension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2BB5BDA14F0DD2C951DCED6DD879CF79 /* Pods-Cumulus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C628CC66F5FF55ADDE0D63C7277F965C /* Build configuration list for PBXNativeTarget "Pods-Cumulus" */;
+			buildPhases = (
+				E08D4DBE53671FB50D40B78B89A1F87E /* Headers */,
+				A42ABDB45EC1DE472439C9823DC06117 /* Sources */,
+				96BDA34F114D721DDD4E2835DE39458B /* Frameworks */,
+				C855D7F01DF069344AE85B44AF3378EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F7EE9F9D2C6E93503F9ECD3D0409C84 /* PBXTargetDependency */,
+				4ABCD5FE6F17909E764908F55444F699 /* PBXTargetDependency */,
+				2E23AFD7C72E4C26CBC305569D604C09 /* PBXTargetDependency */,
+				0E9C5ACAD24F36616D5965A49EF7100B /* PBXTargetDependency */,
 			);
 			name = "Pods-Cumulus";
 			productName = "Pods-Cumulus";
 			productReference = D53A203DC8AEA81D3E49E64203DDAEB2 /* Pods_Cumulus.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		5FE05C46C0E4360F902DAFEB53D9907C /* Pods-Cumulus Watch Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 84B1717CE6517DFB69B7D3C9EB0E3D6F /* Build configuration list for PBXNativeTarget "Pods-Cumulus Watch Extension" */;
-			buildPhases = (
-				88DA5E0F52CDF703214518CA2A16C8A9 /* Headers */,
-				EF314456C9E7B586B73B1DAE22C06D7C /* Sources */,
-				EAB28A625AE3577AD521F290B10BD490 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				91AE91EB928D3D70683087F998064937 /* PBXTargetDependency */,
-			);
-			name = "Pods-Cumulus Watch Extension";
-			productName = "Pods-Cumulus Watch Extension";
-			productReference = CFF7C9FCE41A5562BD7776DDF34444F3 /* libPods-Cumulus Watch Extension.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		67FBB2EE288359DD99568CF332CE927C /* Pods-Cumulus-Cumulus Today */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A31C5DD56A43C3EEC4B1C4D40437A2E2 /* Build configuration list for PBXNativeTarget "Pods-Cumulus-Cumulus Today" */;
+			buildConfigurationList = DE23838B6AA4D771E1C4B7A8CC810B4C /* Build configuration list for PBXNativeTarget "Pods-Cumulus-Cumulus Today" */;
 			buildPhases = (
-				12604454BED8706B25B9632828A15BCF /* Headers */,
-				4E50CD1108F25E5F35421494D5EF1971 /* Sources */,
-				C5258BDB5126E14C6FDED9D24900DBC5 /* Frameworks */,
-				C8F7111C592FEBF7ECFC74A94DB47F09 /* Resources */,
+				3807FE4EC219731A454D35E5DE5EAECD /* Headers */,
+				AB65EF7EE3F1C420A6251B922E240725 /* Sources */,
+				A82C12DE30AFBA9672E018AD9AD363F1 /* Frameworks */,
+				CDFA7C387F872CA27C61F6B1FBB9DE06 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				876F2E358D0ABFDA55AFAA3CD1AA2DFB /* PBXTargetDependency */,
-				76DC262478002509BB4766D578502427 /* PBXTargetDependency */,
-				60599CD6BF8F07CB1DBA7EAB4ADD4442 /* PBXTargetDependency */,
-				E9DFCA539ABA169485A04BD7A7082E21 /* PBXTargetDependency */,
+				1ACDBD9460017EAB785FB8230928071E /* PBXTargetDependency */,
+				231290B8B262A4D4FE7129F6DF677712 /* PBXTargetDependency */,
+				331AD4BF04C54E8D4E89116369C6459D /* PBXTargetDependency */,
+				2D4E8D3331C5D7DF70945CACFD8A9EC5 /* PBXTargetDependency */,
 			);
 			name = "Pods-Cumulus-Cumulus Today";
 			productName = "Pods-Cumulus-Cumulus Today";
 			productReference = 6DB7B7B22B73AE2E19D6F5463430A01B /* Pods_Cumulus_Cumulus_Today.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7D3777B459AEECAE67457ABBB7308DEB /* ForecastIO-library */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 58F90D4074DC0181EEBCB5B611CB2156 /* Build configuration list for PBXNativeTarget "ForecastIO-library" */;
-			buildPhases = (
-				1C5C645258BE24F329D57B221C38E4A9 /* Headers */,
-				A2C5CC5083D316AD161FFE90791E36D9 /* Sources */,
-				87D2900A7FC6C2988477045AADEE0D3F /* Frameworks */,
-				A12D9050653C45138798349A33ADCA4F /* Copy generated compatibility header */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ForecastIO-library";
-			productName = "ForecastIO-library";
-			productReference = F437A4C13E98F180ABB8942E9EBD23BF /* libForecastIO-library.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		9F36A29673D3E1EA39182CA0FBE17512 /* Pods-Cumulus-GetForecastIntent */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D0AF463675D6520C4502F1D2CA0488F /* Build configuration list for PBXNativeTarget "Pods-Cumulus-GetForecastIntent" */;
+			buildConfigurationList = CCB55BDF143ECCA2CAC3A15B17BF0FB9 /* Build configuration list for PBXNativeTarget "Pods-Cumulus-GetForecastIntent" */;
 			buildPhases = (
-				85C3A15F13BAE9745EF6BEE23AE4F631 /* Headers */,
-				50BFA34DCE524B324530810B650106C0 /* Sources */,
-				6B4AA0A88F75A45A6030EF90AACE42E0 /* Frameworks */,
-				C9AD4C629E6159F10A2E8EA2D8B74340 /* Resources */,
+				C1EAF8A0AF87FC35ED5669E3B36B5380 /* Headers */,
+				24841A41DDDC70A40B0BFBD0F6494798 /* Sources */,
+				1A3B4967E61B974C6F2F09762B8D3FF4 /* Frameworks */,
+				A11EBF08E884F6A853FD21B6606CEDA8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				442039BDCB0D3199415AEB96128C9A79 /* PBXTargetDependency */,
-				8A083212FD648356F53BAC3DEE12231E /* PBXTargetDependency */,
-				59B78EB5765C76F53256FA5A4DDD1D5A /* PBXTargetDependency */,
-				488821BF8B08549B7AFAB4BD9515C6C4 /* PBXTargetDependency */,
+				FB1584EA974ED61E17362428ECA162C2 /* PBXTargetDependency */,
+				677057983A7E4A0921542E50880DB83E /* PBXTargetDependency */,
+				6712467CDB0CFE43B3F9DC2EF67A6999 /* PBXTargetDependency */,
+				0DB008FDC65077083163B3F822CAF182 /* PBXTargetDependency */,
 			);
 			name = "Pods-Cumulus-GetForecastIntent";
 			productName = "Pods-Cumulus-GetForecastIntent";
 			productReference = 4799F9E1B6FAD305A9FEDC11773B6359 /* Pods_Cumulus_GetForecastIntent.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		EFF62E8E8608EAFF4BAF54568D95687E /* ForecastIO-framework */ = {
+		E45419E802257D512C7541721BB2688A /* ForecastIO */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8794F360B7B1687F24305143CBEAB54F /* Build configuration list for PBXNativeTarget "ForecastIO-framework" */;
+			buildConfigurationList = 97C26784AFD3B5EEED3251AEFB4BC0ED /* Build configuration list for PBXNativeTarget "ForecastIO" */;
 			buildPhases = (
-				67930712C7A02BFFC9990824EFD761F3 /* Headers */,
-				DC1E063A6E5AA610886EB384503D8EE5 /* Sources */,
-				CB3533F929181218A4E15C248D6D636E /* Frameworks */,
-				EB0E759920E8050EF9933524E170F933 /* Resources */,
+				F7B07291EB0A9743F4ECB59450C92E3F /* Headers */,
+				874D1DC7F8814BCFA5F7393AB8CEC271 /* Sources */,
+				35FE15086FE40906B9CD8DD9AE8AFA52 /* Frameworks */,
+				799F5BE3A71F0A2270CD00834324B2E3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "ForecastIO-framework";
-			productName = "ForecastIO-framework";
-			productReference = E1084864C6563C472BE877CBE934741C /* ForecastIO.framework */;
+			name = ForecastIO;
+			productName = ForecastIO;
+			productReference = DD849869380950F25F7551EF4FF6D48C /* ForecastIO.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F05CD7ABB006BE0143BFB9BFA41750E3 /* Pods-Cumulus-GetForecastIntentUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F472F600B2860BC0951BAA9E39EA85BE /* Build configuration list for PBXNativeTarget "Pods-Cumulus-GetForecastIntentUI" */;
+			buildConfigurationList = 1F5933253300C7534C903D204B8985D9 /* Build configuration list for PBXNativeTarget "Pods-Cumulus-GetForecastIntentUI" */;
 			buildPhases = (
-				79E9F979831A72FD910A8C4D5737E364 /* Headers */,
-				1825F515F1DF7760A483CFCAE9721F94 /* Sources */,
-				8F12F3AF2A2BB330CB5A65F77145DA5F /* Frameworks */,
-				338C0237FEB5AD4CD31EBF311CCD3907 /* Resources */,
+				DA7257D3A27A25152AFCEA28E9C60C2F /* Headers */,
+				72750ED84057C861E31BC5F21A399CED /* Sources */,
+				6A83F4EC09501116C81E7070A70CCC3F /* Frameworks */,
+				0E76AA0A54FE0B88271CB0712C549AFD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				29E30162BB107FC1AEB699AE72FAD557 /* PBXTargetDependency */,
-				B0AD83E391960959B8C3EC3AA0C97876 /* PBXTargetDependency */,
-				CF57C2ADCF5569BD5B4D5526C49E2476 /* PBXTargetDependency */,
-				26E0B92C9119873AE549A6EA52B81C59 /* PBXTargetDependency */,
+				85135A21FD45025741F51CE5B2E40DDA /* PBXTargetDependency */,
+				695ACD30890C172B9EF32E2EF10C859F /* PBXTargetDependency */,
+				4717FE00538608B732A6E6D0F94F1E8A /* PBXTargetDependency */,
+				0855C42200D644477AE9F23A8E3BD89B /* PBXTargetDependency */,
 			);
 			name = "Pods-Cumulus-GetForecastIntentUI";
 			productName = "Pods-Cumulus-GetForecastIntentUI";
@@ -935,7 +903,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -946,17 +914,16 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = D0647D45615D2B97AC94C64F3797410E /* Products */;
+			productRefGroup = 9C2A315CDE93B4E075FCA61F03F28FCB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EFF62E8E8608EAFF4BAF54568D95687E /* ForecastIO-framework */,
-				7D3777B459AEECAE67457ABBB7308DEB /* ForecastIO-library */,
+				E45419E802257D512C7541721BB2688A /* ForecastIO */,
 				E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */,
 				0C1885900810601510E0C632060FAF26 /* GooglePlaces */,
 				2BB5BDA14F0DD2C951DCED6DD879CF79 /* Pods-Cumulus */,
-				5FE05C46C0E4360F902DAFEB53D9907C /* Pods-Cumulus Watch Extension */,
 				67FBB2EE288359DD99568CF332CE927C /* Pods-Cumulus-Cumulus Today */,
+				17E07C278E923AEF14ABE4350E0DDF8B /* Pods-Cumulus-Cumulus WidgetExtension */,
 				9F36A29673D3E1EA39182CA0FBE17512 /* Pods-Cumulus-GetForecastIntent */,
 				F05CD7ABB006BE0143BFB9BFA41750E3 /* Pods-Cumulus-GetForecastIntentUI */,
 				FCD4F1901DD86FEB184BFDD6673F4A7B /* SwiftyStoreKit */,
@@ -965,14 +932,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		338C0237FEB5AD4CD31EBF311CCD3907 /* Resources */ = {
+		0E76AA0A54FE0B88271CB0712C549AFD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67B3B5935112AA1CD73E86C90B937557 /* Resources */ = {
+		799F5BE3A71F0A2270CD00834324B2E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A11EBF08E884F6A853FD21B6606CEDA8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -986,21 +960,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C8F7111C592FEBF7ECFC74A94DB47F09 /* Resources */ = {
+		C855D7F01DF069344AE85B44AF3378EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9AD4C629E6159F10A2E8EA2D8B74340 /* Resources */ = {
+		CDFA7C387F872CA27C61F6B1FBB9DE06 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB0E759920E8050EF9933524E170F933 /* Resources */ = {
+		F36F85AB8037C83EBEE5D056453589ED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1009,55 +983,20 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		A12D9050653C45138798349A33ADCA4F /* Copy generated compatibility header */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/ForecastIO/ForecastIO-library.modulemap",
-				"${PODS_ROOT}/Headers/Public/ForecastIO/ForecastIO-library-umbrella.h",
-			);
-			name = "Copy generated compatibility header";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/ForecastIO-library-umbrella.h",
-				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/ForecastIO/ForecastIO-library.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/ForecastIO/ForecastIO-library-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		1825F515F1DF7760A483CFCAE9721F94 /* Sources */ = {
+		24841A41DDDC70A40B0BFBD0F6494798 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B497F3EA33430FFCDF658813B46579D /* Pods-Cumulus-GetForecastIntentUI-dummy.m in Sources */,
+				834FBA5F7DA0A416CC83EE5ED3655B7B /* Pods-Cumulus-GetForecastIntent-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E50CD1108F25E5F35421494D5EF1971 /* Sources */ = {
+		72750ED84057C861E31BC5F21A399CED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75E3380F121B4AFA11E6F52DB3C220DB /* Pods-Cumulus-Cumulus Today-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		50BFA34DCE524B324530810B650106C0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				922B84FF9022E3D5CF557302C5AC576E /* Pods-Cumulus-GetForecastIntent-dummy.m in Sources */,
+				70BD335B95384B7F189F7A1F30494CB8 /* Pods-Cumulus-GetForecastIntentUI-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1083,154 +1022,166 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A2C5CC5083D316AD161FFE90791E36D9 /* Sources */ = {
+		874D1DC7F8814BCFA5F7393AB8CEC271 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35627CCFDBDABF7BFAF2F3922ED19C65 /* Alert.swift in Sources */,
-				93177B96E3384B7B7048BC79490A6748 /* DarkSkyClient.swift in Sources */,
-				590B335BD67AEBA5ADCAD2AE4984178F /* DataBlock.swift in Sources */,
-				AFB649F552D4A9CF6B8CCB3EB9FD766A /* DataPoint.swift in Sources */,
-				34BBD56A3F199EBB2141DD2766329DBF /* Flag.swift in Sources */,
-				E6C1A95E49768F9D5F6DD6FF66F1BE9F /* Forecast.swift in Sources */,
-				5DA5A7A41F9DF4F842BA086B129C129F /* ForecastIO-library-dummy.m in Sources */,
-				8FA7E7319581BF15545DE2A744929391 /* ForecastIOError.swift in Sources */,
-				0370917FDC8B9D0C1FC29BFB266E0B5E /* Icon.swift in Sources */,
-				DAE6414B4FE820EEF2044D83BDBAF0C3 /* Language.swift in Sources */,
-				F0DD9D1F341714F51829ED8E544D76BD /* Precipitation.swift in Sources */,
-				0D47F9854A59C4A5E62DA9A3AC6EFDAA /* RequestMetadata.swift in Sources */,
-				415A20C166924C3BA51FCE08C5CF1A30 /* Units.swift in Sources */,
+				F1E60CBFF4BDEA4960372CB8B4F65140 /* Alert.swift in Sources */,
+				6C7B6FC7A8C57B814ED4FC07B466841E /* DarkSkyClient.swift in Sources */,
+				847473B3EF591E2F22865B11CAADA0E1 /* DataBlock.swift in Sources */,
+				5A2F8841A6FD3720D4C44AFB1BC79730 /* DataPoint.swift in Sources */,
+				90C9D9DA5577E90199F3966A2D11FB4E /* Flag.swift in Sources */,
+				54F30EC4405B5DC57E44E8933F1AA4E2 /* Forecast.swift in Sources */,
+				646B23335A74CEBDB19A3C9313DB3767 /* ForecastIO-dummy.m in Sources */,
+				8BB2431C0132F8A39689E21A88665696 /* ForecastIOError.swift in Sources */,
+				AFE7052CC22C7DD262F8F8F1460509CD /* Icon.swift in Sources */,
+				CC667BC03C46C1400BD84960093E7082 /* Language.swift in Sources */,
+				9B45633625ED00C6DFC5C9BD376FEEF0 /* Precipitation.swift in Sources */,
+				CE0CAAF838D6E0AFB1C53B9D640E69E9 /* RequestMetadata.swift in Sources */,
+				AACBEFD0BDAFC07EFEEE66FC4F8AC983 /* Units.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5CF84A9F01A25567884F6553AFDFD62 /* Sources */ = {
+		A42ABDB45EC1DE472439C9823DC06117 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				546449E25093629B279FAC13219CF861 /* Pods-Cumulus-dummy.m in Sources */,
+				78F3D342D7868D5BA4332B4932CDC270 /* Pods-Cumulus-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DC1E063A6E5AA610886EB384503D8EE5 /* Sources */ = {
+		AB65EF7EE3F1C420A6251B922E240725 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACADB092BB2D87955E52DE9316A523B6 /* Alert.swift in Sources */,
-				B5BF11CB926CFF40ABC736CD789BAD03 /* DarkSkyClient.swift in Sources */,
-				9C9189E52958CD32D74C762B1E21A297 /* DataBlock.swift in Sources */,
-				1C2DE3A17893FEC6A60C19B93BD78BBC /* DataPoint.swift in Sources */,
-				51A6B4F87843064ED4F6D54650594C17 /* Flag.swift in Sources */,
-				DAB5C815686C316B582EA416BA3787F9 /* Forecast.swift in Sources */,
-				81794AC152769D62C85178856428AE2A /* ForecastIO-framework-dummy.m in Sources */,
-				FF1EA10FC6844C7ECEE3B23154C15B78 /* ForecastIOError.swift in Sources */,
-				1A71F4B14E0668DA2F4448D2CCEC3052 /* Icon.swift in Sources */,
-				B38FA7B767C8642A31BCFF2285E4A72B /* Language.swift in Sources */,
-				9D521E0290EE556A0F011B110FD9802F /* Precipitation.swift in Sources */,
-				5A31CE67FC10F6D4D7B5786969A14247 /* RequestMetadata.swift in Sources */,
-				4A5DA47C3937D7B626C2B51368FE74CD /* Units.swift in Sources */,
+				822D1BDEF7874226318DA7B57E2EAD7F /* Pods-Cumulus-Cumulus Today-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EF314456C9E7B586B73B1DAE22C06D7C /* Sources */ = {
+		BFFB63B9188525FAAF2224F04C33DEB8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0A7626C1DE4B0CD4DA382152F81F1E5 /* Pods-Cumulus Watch Extension-dummy.m in Sources */,
+				A4C74283B4AD8BF5D61B60D2BE1BB7B6 /* Pods-Cumulus-Cumulus WidgetExtension-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		26E0B92C9119873AE549A6EA52B81C59 /* PBXTargetDependency */ = {
+		0855C42200D644477AE9F23A8E3BD89B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyStoreKit;
 			target = FCD4F1901DD86FEB184BFDD6673F4A7B /* SwiftyStoreKit */;
-			targetProxy = 388554CD35631879CF549C262FD5B36E /* PBXContainerItemProxy */;
+			targetProxy = 89F0C221DD8278EBDB85587D45E0DEBA /* PBXContainerItemProxy */;
 		};
-		29E30162BB107FC1AEB699AE72FAD557 /* PBXTargetDependency */ = {
+		0CD348DE1ABC1F7485834645B4E54A0C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "ForecastIO-framework";
-			target = EFF62E8E8608EAFF4BAF54568D95687E /* ForecastIO-framework */;
-			targetProxy = DA164362138F87635257BD2A1208B3E0 /* PBXContainerItemProxy */;
+			name = ForecastIO;
+			target = E45419E802257D512C7541721BB2688A /* ForecastIO */;
+			targetProxy = 5F2D7905FB67CE1642CEA35946D5A912 /* PBXContainerItemProxy */;
 		};
-		442039BDCB0D3199415AEB96128C9A79 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ForecastIO-framework";
-			target = EFF62E8E8608EAFF4BAF54568D95687E /* ForecastIO-framework */;
-			targetProxy = 0A9E9240652FFBD17D6439D06CFCC42E /* PBXContainerItemProxy */;
-		};
-		488821BF8B08549B7AFAB4BD9515C6C4 /* PBXTargetDependency */ = {
+		0DB008FDC65077083163B3F822CAF182 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyStoreKit;
 			target = FCD4F1901DD86FEB184BFDD6673F4A7B /* SwiftyStoreKit */;
-			targetProxy = 3658A8A5C7742310C576538F5AFDF092 /* PBXContainerItemProxy */;
+			targetProxy = AAF61D01E5F05AD1AC3B797669DB235E /* PBXContainerItemProxy */;
 		};
-		53C4B511CA378B30478F14E933E502C1 /* PBXTargetDependency */ = {
+		0E9C5ACAD24F36616D5965A49EF7100B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "ForecastIO-framework";
-			target = EFF62E8E8608EAFF4BAF54568D95687E /* ForecastIO-framework */;
-			targetProxy = 834AA37532EFFB2E17274991960FAA30 /* PBXContainerItemProxy */;
+			name = SwiftyStoreKit;
+			target = FCD4F1901DD86FEB184BFDD6673F4A7B /* SwiftyStoreKit */;
+			targetProxy = 9EC84556F8E6FB2269039AF480B6138E /* PBXContainerItemProxy */;
 		};
-		59B78EB5765C76F53256FA5A4DDD1D5A /* PBXTargetDependency */ = {
+		1ACDBD9460017EAB785FB8230928071E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = GooglePlaces;
-			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
-			targetProxy = 460A02461931F9C436632BFADCD4FCB7 /* PBXContainerItemProxy */;
+			name = ForecastIO;
+			target = E45419E802257D512C7541721BB2688A /* ForecastIO */;
+			targetProxy = 012D60F0AE50CB5579DEF773D89800D3 /* PBXContainerItemProxy */;
 		};
-		60599CD6BF8F07CB1DBA7EAB4ADD4442 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GooglePlaces;
-			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
-			targetProxy = 07B21180AB607AB033C930C063D58342 /* PBXContainerItemProxy */;
-		};
-		76DC262478002509BB4766D578502427 /* PBXTargetDependency */ = {
+		231290B8B262A4D4FE7129F6DF677712 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleMaps;
 			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
-			targetProxy = 4C8CB8DFC30D9B5E01895858A27A903A /* PBXContainerItemProxy */;
+			targetProxy = FF294A558B3973A4560BD29AACAA313B /* PBXContainerItemProxy */;
 		};
-		7BE6347B48EBCD1C0ACC4D22A7BA15AF /* PBXTargetDependency */ = {
+		2D4E8D3331C5D7DF70945CACFD8A9EC5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = GoogleMaps;
-			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
-			targetProxy = 292816C6D6A8C038EC3A84E148C56EC4 /* PBXContainerItemProxy */;
+			name = SwiftyStoreKit;
+			target = FCD4F1901DD86FEB184BFDD6673F4A7B /* SwiftyStoreKit */;
+			targetProxy = CE2A32F54BD1DC20B6195BBC0856823D /* PBXContainerItemProxy */;
 		};
-		876F2E358D0ABFDA55AFAA3CD1AA2DFB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ForecastIO-framework";
-			target = EFF62E8E8608EAFF4BAF54568D95687E /* ForecastIO-framework */;
-			targetProxy = 620271DE5E17AA25AC38E931764F3084 /* PBXContainerItemProxy */;
-		};
-		8A083212FD648356F53BAC3DEE12231E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GoogleMaps;
-			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
-			targetProxy = C01C3FE1235B119160338009A4086D56 /* PBXContainerItemProxy */;
-		};
-		91AE91EB928D3D70683087F998064937 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ForecastIO-library";
-			target = 7D3777B459AEECAE67457ABBB7308DEB /* ForecastIO-library */;
-			targetProxy = 07EDD9F6C4430ED42D489E10D0188CCB /* PBXContainerItemProxy */;
-		};
-		93561FF8DAB507206C34E452B541536D /* PBXTargetDependency */ = {
+		2E23AFD7C72E4C26CBC305569D604C09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GooglePlaces;
 			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
-			targetProxy = B3E89DE17259EEBB8A4849D2EB9E833E /* PBXContainerItemProxy */;
+			targetProxy = 246710FC12D5E5B753FBAC928ED4B87B /* PBXContainerItemProxy */;
 		};
-		B0AD83E391960959B8C3EC3AA0C97876 /* PBXTargetDependency */ = {
+		2F7EE9F9D2C6E93503F9ECD3D0409C84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = GoogleMaps;
-			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
-			targetProxy = 1051E49FD79387C3262200D59F381E11 /* PBXContainerItemProxy */;
+			name = ForecastIO;
+			target = E45419E802257D512C7541721BB2688A /* ForecastIO */;
+			targetProxy = 1FC08F5DABF8B534906D3E37FA97BA92 /* PBXContainerItemProxy */;
 		};
-		CF57C2ADCF5569BD5B4D5526C49E2476 /* PBXTargetDependency */ = {
+		331AD4BF04C54E8D4E89116369C6459D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GooglePlaces;
 			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
-			targetProxy = D61D77BB2EDE9D5E1856DF6B99AB78E9 /* PBXContainerItemProxy */;
+			targetProxy = 528E1C1C6A472864FD0D6259FF03E2FB /* PBXContainerItemProxy */;
+		};
+		4717FE00538608B732A6E6D0F94F1E8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GooglePlaces;
+			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
+			targetProxy = 19C89065347D53FFDBAE94A0AA6586EC /* PBXContainerItemProxy */;
+		};
+		4ABCD5FE6F17909E764908F55444F699 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = 01BCB74D690A6CDB828AC24D6F32E5A3 /* PBXContainerItemProxy */;
+		};
+		6712467CDB0CFE43B3F9DC2EF67A6999 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GooglePlaces;
+			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
+			targetProxy = 74439A6A05AA0B1EAC177BF390A2D2AC /* PBXContainerItemProxy */;
+		};
+		677057983A7E4A0921542E50880DB83E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = EDF0DD7E3CF50C2FFEB4A607F833BF89 /* PBXContainerItemProxy */;
+		};
+		695ACD30890C172B9EF32E2EF10C859F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = 904258837240E6DB039394ED21F703E4 /* PBXContainerItemProxy */;
+		};
+		85135A21FD45025741F51CE5B2E40DDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ForecastIO;
+			target = E45419E802257D512C7541721BB2688A /* ForecastIO */;
+			targetProxy = 404948CD75EA6099EA76300FE5B41C88 /* PBXContainerItemProxy */;
+		};
+		B6B52A5ED61DA7EC9D2CAE4E2F5C5C6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyStoreKit;
+			target = FCD4F1901DD86FEB184BFDD6673F4A7B /* SwiftyStoreKit */;
+			targetProxy = 2A900346586AA2D2186FDFBC010622B5 /* PBXContainerItemProxy */;
+		};
+		CB2C68FC760345E03FB88158744FD6D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GooglePlaces;
+			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
+			targetProxy = A90809604ADA45006C4DE8943CEF43D7 /* PBXContainerItemProxy */;
+		};
+		D18F090AFAE843533C3DC9E90D008EF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = C7F0CBCA592A10E339CA83AD0131151A /* PBXContainerItemProxy */;
 		};
 		D42315111F400C0605ACCD6B5CAF2178 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1238,24 +1189,117 @@
 			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
 			targetProxy = 6EB1C2DD30E6564FC3135C9E8002D8F7 /* PBXContainerItemProxy */;
 		};
-		DD4318BEF584D0C1898F3684A3CD44AF /* PBXTargetDependency */ = {
+		FB1584EA974ED61E17362428ECA162C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SwiftyStoreKit;
-			target = FCD4F1901DD86FEB184BFDD6673F4A7B /* SwiftyStoreKit */;
-			targetProxy = 1DF75BB6E4E7D52A804B03F3A9899681 /* PBXContainerItemProxy */;
-		};
-		E9DFCA539ABA169485A04BD7A7082E21 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftyStoreKit;
-			target = FCD4F1901DD86FEB184BFDD6673F4A7B /* SwiftyStoreKit */;
-			targetProxy = 1B9384639947A14A0112ED024757D2CA /* PBXContainerItemProxy */;
+			name = ForecastIO;
+			target = E45419E802257D512C7541721BB2688A /* ForecastIO */;
+			targetProxy = A0A2A68A4F786FF4F7B281CE64D280EA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1311652E1D5A46633BB210EACF13556A /* Debug */ = {
+		1422B121EAEAEA11307496903FA623C6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 949A52940E3DD26B92949FE1102103BC /* Pods-Cumulus.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		1C1E968A93B48EC5339490EE2E291925 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44E4F96E9A726454F62EA1DA8AC9D1E8 /* Pods-Cumulus-Cumulus Today.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Cumulus-Cumulus Today/Pods-Cumulus-Cumulus Today-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus-Cumulus Today/Pods-Cumulus-Cumulus Today.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		22D8DF13517B8836CDB3221A55D6E802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65480C173F36247ED2A5C13236505415 /* Pods-Cumulus.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1291,7 +1335,454 @@
 			};
 			name = Debug;
 		};
-		29F68654DC9808A14846079FB67289B7 /* Debug */ = {
+		2CE277F77A32359A2254ED2F88402C6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2504AE868E7E0516F60447EC3DE093BD /* Pods-Cumulus-GetForecastIntent.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		43715F30BD5F598A2190C14AF613C2BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5EADA2846DAEF4476A9D6154BA160C8 /* Pods-Cumulus-Cumulus WidgetExtension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Cumulus-Cumulus WidgetExtension/Pods-Cumulus-Cumulus WidgetExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus-Cumulus WidgetExtension/Pods-Cumulus-Cumulus WidgetExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4AE9FC8A852243DC9A2EFE9BA39BAC7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7C264959CE38C52FBD4FBFE2A70E42B /* GooglePlaces.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5231E7CEB293602FC7185BA33D892409 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D0652D0A9387293440BA53DCB0A282E /* Pods-Cumulus-Cumulus WidgetExtension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Cumulus-Cumulus WidgetExtension/Pods-Cumulus-Cumulus WidgetExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus-Cumulus WidgetExtension/Pods-Cumulus-Cumulus WidgetExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		573B04AB9E058A1911353A22A780E993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC5E0DB00EB8B1DE554FFCF1EE834F0A /* GooglePlaces.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67B512ACC760A8801F611D79C2DD96E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 565EB95D84F6309752C3E4F6BDF454B7 /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7981A094AF0F74851BD2F8E2CF8BB601 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F3BB893D440430909FA3F665DDCDA68 /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8B237D5CF5EE5F3A2D5F2DA454FFA45B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 675DAE4E38D9A1A0CA8AD1BBD8BA8135 /* SwiftyStoreKit.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyStoreKit;
+				PRODUCT_NAME = SwiftyStoreKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8CE5BA3EF4F6FABF028CE30772ECDA11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15272A5B233F7D1AF95BE557A0BC086F /* GoogleMaps.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95958F6D94922FCCB7F363C712112CE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBABF97336480CB3E5BE56EDA42E3588 /* ForecastIO.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ForecastIO/ForecastIO-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ForecastIO/ForecastIO-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ForecastIO/ForecastIO.modulemap";
+				PRODUCT_MODULE_NAME = ForecastIO;
+				PRODUCT_NAME = ForecastIO;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AD5FBD4CDD2A1AB73F389E52608CB0EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D9A6985BB210AC452819D81BB9A8A93 /* Pods-Cumulus-Cumulus Today.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Cumulus-Cumulus Today/Pods-Cumulus-Cumulus Today-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus-Cumulus Today/Pods-Cumulus-Cumulus Today.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B06F3CB3D9B8066CF86864F6403A95C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6069EA3D382BE09C07CFB3B9ED300A09 /* Pods-Cumulus.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Cumulus/Pods-Cumulus-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus/Pods-Cumulus.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C707BE66FCDD471897CF5F476273B1F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D285CA6D259D647AB6AFE6961DCCB871 /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E1E452060D51DF935547186CE54B26CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAEDCA9DD8C7275182040A37FF804F79 /* GoogleMaps.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED7888FA6713EABBF66D26A8003AD1CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1317,6 +1808,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1352,605 +1844,8 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Debug;
-		};
-		384F3B364CA806CCE9705E59946C8E8D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BCD84884938F7D29FC23CDC5B722485 /* Pods-Cumulus.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Cumulus/Pods-Cumulus-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus/Pods-Cumulus.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4AE9FC8A852243DC9A2EFE9BA39BAC7B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7C264959CE38C52FBD4FBFE2A70E42B /* GooglePlaces.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		4FE0F500323176213588E5DCECE64633 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1844553CCF3A5E8EAD9F2952CD2265ED /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		573B04AB9E058A1911353A22A780E993 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC5E0DB00EB8B1DE554FFCF1EE834F0A /* GooglePlaces.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		639E5F5DC54ED5A96F98CE3A0EA22632 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30725DB34A81ADF967EB1E52AC369B90 /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		778AF76F7D78B1F3C104C525639AEA13 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9E128DC03F6523849416E9FCAEAFF6E /* ForecastIO-library.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/ForecastIO-library/ForecastIO-library-prefix.pch";
-				MODULEMAP_FILE = "Headers/Public/ForecastIO/ForecastIO-library.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = ForecastIO;
-				PRODUCT_NAME = "ForecastIO-library";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		897F3D80F6DF064CCBF156704247E4B1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1BAEE61D4B74FA87F8E83948B179D77 /* Pods-Cumulus-Cumulus Today.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Cumulus-Cumulus Today/Pods-Cumulus-Cumulus Today-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus-Cumulus Today/Pods-Cumulus-Cumulus Today.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8B237D5CF5EE5F3A2D5F2DA454FFA45B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 675DAE4E38D9A1A0CA8AD1BBD8BA8135 /* SwiftyStoreKit.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyStoreKit;
-				PRODUCT_NAME = SwiftyStoreKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8C4A8CC0905BDE30C91DF0EBA8BB7F63 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Release;
-		};
-		8CE5BA3EF4F6FABF028CE30772ECDA11 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15272A5B233F7D1AF95BE557A0BC086F /* GoogleMaps.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9507269649202A12EC9CBD956B9DA74C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9004D321AEB28798D924BE98618DF31 /* ForecastIO-framework.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ForecastIO-framework/ForecastIO-framework-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ForecastIO-framework/ForecastIO-framework-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ForecastIO-framework/ForecastIO-framework.modulemap";
-				PRODUCT_MODULE_NAME = ForecastIO;
-				PRODUCT_NAME = ForecastIO;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9A1EDD68985BCF5090C2613BA3E418B1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A80D91367C9BFA16968073F41AAAF7E /* Pods-Cumulus Watch Extension.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus Watch Extension/Pods-Cumulus Watch Extension.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Release;
-		};
-		AD21BA4CB4BFA9C24369E656758AA772 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4E9CC49FC5C178D106F2AF2D7B4BD10 /* Pods-Cumulus-GetForecastIntent.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B45AA12DAAB1036DF1B9B9CF53706890 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36907E8235F56F170272930B4F70B011 /* Pods-Cumulus Watch Extension.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus Watch Extension/Pods-Cumulus Watch Extension.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Debug;
-		};
-		C4C4352F4B0671A98369FB1B21FCE7BA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3075BFB3AB02D4D5C042C235DC3EDD02 /* Pods-Cumulus-Cumulus Today.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Cumulus-Cumulus Today/Pods-Cumulus-Cumulus Today-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus-Cumulus Today/Pods-Cumulus-Cumulus Today.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		CD544D16AA25D851F6B09C9085DB0D5D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B76700B870F612033610BF6AE02A5F45 /* ForecastIO-framework.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ForecastIO-framework/ForecastIO-framework-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ForecastIO-framework/ForecastIO-framework-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ForecastIO-framework/ForecastIO-framework.modulemap";
-				PRODUCT_MODULE_NAME = ForecastIO;
-				PRODUCT_NAME = ForecastIO;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D1A030C299D21A511838DBBDBE4C4A4A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C065797FFB63BAAD5CF4987F32069EDD /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E1E452060D51DF935547186CE54B26CC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAEDCA9DD8C7275182040A37FF804F79 /* GoogleMaps.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F669AA78ACD9030006A8A836FEBA32A5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F161BFAEBC34B771D2B07A3E2C74C9CA /* ForecastIO-library.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/ForecastIO-library/ForecastIO-library-prefix.pch";
-				MODULEMAP_FILE = "Headers/Public/ForecastIO/ForecastIO-library.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = ForecastIO;
-				PRODUCT_NAME = "ForecastIO-library";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
 		};
 		F77873C50060007140299C23D87897DC /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1968,7 +1863,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1987,14 +1882,49 @@
 			};
 			name = Debug;
 		};
+		FB68C314FA3036B01496D53C8155D32C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E659BEC2C4971ADB25F596174616B90A /* ForecastIO.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ForecastIO/ForecastIO-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ForecastIO/ForecastIO-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ForecastIO/ForecastIO.modulemap";
+				PRODUCT_MODULE_NAME = ForecastIO;
+				PRODUCT_NAME = ForecastIO;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D0AF463675D6520C4502F1D2CA0488F /* Build configuration list for PBXNativeTarget "Pods-Cumulus-GetForecastIntent" */ = {
+		1F5933253300C7534C903D204B8985D9 /* Build configuration list for PBXNativeTarget "Pods-Cumulus-GetForecastIntentUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D1A030C299D21A511838DBBDBE4C4A4A /* Debug */,
-				AD21BA4CB4BFA9C24369E656758AA772 /* Release */,
+				C707BE66FCDD471897CF5F476273B1F8 /* Debug */,
+				67B512ACC760A8801F611D79C2DD96E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2020,53 +1950,17 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				29F68654DC9808A14846079FB67289B7 /* Debug */,
-				8C4A8CC0905BDE30C91DF0EBA8BB7F63 /* Release */,
+				ED7888FA6713EABBF66D26A8003AD1CA /* Debug */,
+				1422B121EAEAEA11307496903FA623C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58F90D4074DC0181EEBCB5B611CB2156 /* Build configuration list for PBXNativeTarget "ForecastIO-library" */ = {
+		97C26784AFD3B5EEED3251AEFB4BC0ED /* Build configuration list for PBXNativeTarget "ForecastIO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				778AF76F7D78B1F3C104C525639AEA13 /* Debug */,
-				F669AA78ACD9030006A8A836FEBA32A5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		775ECDCD7B0339ACB2B734DBCB121AF9 /* Build configuration list for PBXNativeTarget "Pods-Cumulus" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1311652E1D5A46633BB210EACF13556A /* Debug */,
-				384F3B364CA806CCE9705E59946C8E8D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		84B1717CE6517DFB69B7D3C9EB0E3D6F /* Build configuration list for PBXNativeTarget "Pods-Cumulus Watch Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B45AA12DAAB1036DF1B9B9CF53706890 /* Debug */,
-				9A1EDD68985BCF5090C2613BA3E418B1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8794F360B7B1687F24305143CBEAB54F /* Build configuration list for PBXNativeTarget "ForecastIO-framework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9507269649202A12EC9CBD956B9DA74C /* Debug */,
-				CD544D16AA25D851F6B09C9085DB0D5D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A31C5DD56A43C3EEC4B1C4D40437A2E2 /* Build configuration list for PBXNativeTarget "Pods-Cumulus-Cumulus Today" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C4C4352F4B0671A98369FB1B21FCE7BA /* Debug */,
-				897F3D80F6DF064CCBF156704247E4B1 /* Release */,
+				FB68C314FA3036B01496D53C8155D32C /* Debug */,
+				95958F6D94922FCCB7F363C712112CE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2080,11 +1974,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F472F600B2860BC0951BAA9E39EA85BE /* Build configuration list for PBXNativeTarget "Pods-Cumulus-GetForecastIntentUI" */ = {
+		C628CC66F5FF55ADDE0D63C7277F965C /* Build configuration list for PBXNativeTarget "Pods-Cumulus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4FE0F500323176213588E5DCECE64633 /* Debug */,
-				639E5F5DC54ED5A96F98CE3A0EA22632 /* Release */,
+				22D8DF13517B8836CDB3221A55D6E802 /* Debug */,
+				B06F3CB3D9B8066CF86864F6403A95C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCB55BDF143ECCA2CAC3A15B17BF0FB9 /* Build configuration list for PBXNativeTarget "Pods-Cumulus-GetForecastIntent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7981A094AF0F74851BD2F8E2CF8BB601 /* Debug */,
+				2CE277F77A32359A2254ED2F88402C6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D21122036593A15FEE0C2C6873252C66 /* Build configuration list for PBXNativeTarget "Pods-Cumulus-Cumulus WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43715F30BD5F598A2190C14AF613C2BB /* Debug */,
+				5231E7CEB293602FC7185BA33D892409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE23838B6AA4D771E1C4B7A8CC810B4C /* Build configuration list for PBXNativeTarget "Pods-Cumulus-Cumulus Today" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C1E968A93B48EC5339490EE2E291925 /* Debug */,
+				AD5FBD4CDD2A1AB73F389E52608CB0EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

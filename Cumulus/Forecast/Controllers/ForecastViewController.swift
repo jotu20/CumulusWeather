@@ -433,7 +433,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             setupInitialData()
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             if currentSummary.isEmpty == false {
                 self.locationManager.stopUpdatingLocation()
             }
@@ -536,7 +536,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         if (defaults.string(forKey: "dataSource") == "Dark Sky") {
             fetchDarkSkyWeatherData()
         } else if (defaults.string(forKey: "dataSource") == "ClimaCell") {
-            fetchClimaCellCurrentForecastData()
+            fetchClimaCellWeatherData()
         }
         
         setWeatherDataLabels()
@@ -612,7 +612,20 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         label6.text = "Accum. \(accum)\(unitsPrecipitation)"
         label7.text = "Wind \(wind)\(unitsWindSpeed)"
         label8.text = "Pressure \(pressure)\(unitsPressure)"
-        label9.text = "UV index \(uvIndex)"
+        
+        // Set uv index
+        if uvIndex < 2 {
+            label9.text = "UV index low (\(uvIndex))"
+        } else if uvIndex >= 3 && uvIndex <= 5 {
+            label9.text = "UV index moderate (\(uvIndex))"
+        } else if uvIndex >= 6 && uvIndex <= 7 {
+            label9.text = "UV index high (\(uvIndex))"
+        } else if uvIndex >= 8 && uvIndex <= 10 {
+            label9.text = "UV index very high (\(uvIndex))"
+        } else if uvIndex >= 11 {
+            label9.text = "UV index extreme (\(uvIndex))"
+        }
+        
         label10.text = "Sunset \(sunset)"
     }
     
@@ -701,7 +714,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             hour3Value = "\(cloudCoverHour3)%"
         }
         
-        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: "Now", hourIconString: conditionHour0, hourConditionString: hour0Value)
+        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: "NOW", hourIconString: conditionHour0, hourConditionString: hour0Value)
         setHourLabelAndIcons(hourTimeLabel: hour1TimeLabel, hourConditionIcon: hour1ConditionIcon, hourCondtionLabel: hour1ConditionLabel, hourTimeString: hour1, hourIconString: conditionHour1, hourConditionString: hour1Value)
         setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: hour2, hourIconString: conditionHour2, hourConditionString: hour2Value)
         setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: hour3, hourIconString: conditionHour3, hourConditionString: hour3Value)
@@ -953,7 +966,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             hour3Value = "\(cloudCoverHour3)%"
         }
         
-        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: "Now", hourIconString: conditionHour0, hourConditionString: hour0Value)
+        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: "NOW", hourIconString: conditionHour0, hourConditionString: hour0Value)
         setHourLabelAndIcons(hourTimeLabel: hour1TimeLabel, hourConditionIcon: hour1ConditionIcon, hourCondtionLabel: hour1ConditionLabel, hourTimeString: hour1, hourIconString: conditionHour1, hourConditionString: hour1Value)
         setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: hour2, hourIconString: conditionHour2, hourConditionString: hour2Value)
         setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: hour3, hourIconString: conditionHour3, hourConditionString: hour3Value)
@@ -1022,7 +1035,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             changedHourlyValues = "Wind"
         }
         
-        if hour0TimeLabel.text == "Now" {
+        if hour0TimeLabel.text == "NOW" {
             setHourlyOutlets0(type: changedHourlyValues)
         } else if hour0TimeLabel.text == hour4 {
             setHourlyOutlets1(type: changedHourlyValues)
@@ -1035,7 +1048,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
   
     // When tapped show extended hourly conditions
     @IBAction func hourlyConditionsGestureSwipeLeftTapped(_ sender: UISwipeGestureRecognizer) {
-        if hour0TimeLabel.text == "Now" {
+        if hour0TimeLabel.text == "NOW" {
             setHourlyOutlets1(type: changedHourlyValues)
         } else if hour0TimeLabel.text == hour4 {
             setHourlyOutlets2(type: changedHourlyValues)
@@ -1048,7 +1061,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     // When tapped show extended hourly conditions
     @IBAction func hourlyConditionsGestureSwipeRightTapped(_ sender: UISwipeGestureRecognizer) {
-        if hour0TimeLabel.text == "Now" {
+        if hour0TimeLabel.text == "NOW" {
             setHourlyOutlets3(type: changedHourlyValues)
         } else if hour0TimeLabel.text == hour12 {
             setHourlyOutlets2(type: changedHourlyValues)

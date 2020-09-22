@@ -74,8 +74,37 @@ public func fetchDarkSkyWeatherData() {
             let (currentForecast, _) = tuple
             TimeZone.ReferenceType.default = TimeZone(identifier: "\(currentForecast.timezone)")!
             
-            if universalDataSource == "Dark Sky" {
-                fetchDarkSkyCurrentForecastData()
+            if let current = currentForecast.currently {
+                currentCondition = "\(current.icon!.rawValue)"
+                currentTemperature = Int(current.temperature!)
+                feelsLikeTemperature = Int(current.apparentTemperature!)
+                currentSummary = "\(current.summary!)"
+                precipitation = dailyPrecipProb(day: current)
+                humidity = dailyHumidityProb(day: current)
+                cloudCover = dailyCloudCoverProb(day: current)
+                uvIndex = Int(current.uvIndex!)
+                visibility = Int(current.visibility!)
+                pressure = Int(current.pressure!)
+                wind = Int(current.windSpeed!)
+                windGust = Int(current.windGust!)
+                windDirectionString = windDirection(degree: current.windBearing!)
+                
+                if current.precipitationAccumulation != nil {
+                    precipAccumulation = Double(current.precipitationAccumulation!)
+                }
+                
+                if current.precipitationType != nil {
+                    precipitationType = "\(current.precipitationType!)"
+                } else {
+                    precipitationType = "none"
+                }
+                
+                precipHour0 = precipitation
+                tempHour0 = currentTemperature
+                humidityHour0 = humidity
+                uvindexHour0 = uvIndex
+                windSpeedHour0 = wind
+                cloudCoverHour0 = cloudCover
             }
             
             if let daily = currentForecast.daily {

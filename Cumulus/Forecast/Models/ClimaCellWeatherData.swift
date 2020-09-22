@@ -9,7 +9,7 @@
 import Foundation
 
 // Fetch Realtime data <1min out
-func fetchClimaCellCurrentForecastData() {
+func fetchClimaCellWeatherData() {
     universalSettings()
     
     var units: String = ""

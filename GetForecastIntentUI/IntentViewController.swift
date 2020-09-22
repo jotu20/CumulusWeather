@@ -85,25 +85,25 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         
         // Day Zero
         self.day0ConditionImage.image = UIImage(named: weatherCondition(condition: day0Condition, type: "daily", circle: universalIcons))
-        self.day0Label.text = "\(day0DayString.capitalizingFirstLetter())"
+        self.day0Label.text = "\(day0DayString)"
         self.day0HighLabel.text = "\(day0High)°"
         self.day0LowLabel.text = "\(day0Low)°"
         
         // Day One
         self.day1ConditionImage.image = UIImage(named: weatherCondition(condition: day1Condition, type: "daily", circle: universalIcons))
-        self.day1Label.text = "\(day1DayString.capitalizingFirstLetter())"
+        self.day1Label.text = "\(day1DayString)"
         self.day1HighLabel.text = "\(day1High)°"
         self.day1LowLabel.text = "\(day1Low)°"
         
         // Day Two
         self.day2ConditionImage.image = UIImage(named: weatherCondition(condition: day2Condition, type: "daily", circle: universalIcons))
-        self.day2Label.text = "\(day2DayString.capitalizingFirstLetter())"
+        self.day2Label.text = "\(day2DayString)"
         self.day2HighLabel.text = "\(day2High)°"
         self.day2LowLabel.text = "\(day2Low)°"
         
         // Day Three
         self.day3ConditionImage.image = UIImage(named: weatherCondition(condition: day3Condition, type: "daily", circle: universalIcons))
-        self.day3Label.text = "\(day3DayString.capitalizingFirstLetter())"
+        self.day3Label.text = "\(day3DayString)"
         self.day3HighLabel.text = "\(day3High)°"
         self.day3LowLabel.text = "\(day3Low)°"
     }

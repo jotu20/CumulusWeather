@@ -678,6 +678,8 @@ func hourFormat(date: Date) -> String {
     } else {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "h a"
+        dateFormatter.amSymbol = "AM"
+        dateFormatter.pmSymbol = "PM"
         timeString = dateFormatter.string(from: date)
     }
     
@@ -751,6 +753,8 @@ func sunFormat(date: Date) -> String {
     } else {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "h:mm a"
+        dateFormatter.amSymbol = "AM"
+        dateFormatter.pmSymbol = "PM"
         timeString = dateFormatter.string(from: date)
     }
     

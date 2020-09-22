@@ -138,7 +138,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         }
         
         // 12 Hour Forecast
-        hour0Time.text = "Now"
+        hour0Time.text = "NOW"
         hour1Time.text = "\(hour3)"
         hour2Time.text = "\(hour6)"
         hour3Time.text = "\(hour10)"
@@ -166,25 +166,25 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         hour5Value.text = "\(tempHour15)°"
         
         // Day Zero
-        day0Label.text = "\(day0DayString.capitalizingFirstLetter())"
+        day0Label.text = "\(day0DayString)"
         day0ConditionImage.image = UIImage(named: weatherCondition(condition: day0Condition, type: "daily", circle: universalIcons))
         day0HighLabel.text = "\(day0High)°"
         day0LowLabel.text = "\(day0Low)°"
         
         // Day One
-        day1Label.text = "\(day1DayString.capitalizingFirstLetter())"
+        day1Label.text = "\(day1DayString)"
         day1ConditionImage.image = UIImage(named: weatherCondition(condition: day1Condition, type: "daily", circle: universalIcons))
         day1HighLabel.text = "\(day1High)°"
         day1LowLabel.text = "\(day1Low)°"
         
         // Day Two
-        day2Label.text = "\(day2DayString.capitalizingFirstLetter())"
+        day2Label.text = "\(day2DayString)"
         day2ConditionImage.image = UIImage(named: weatherCondition(condition: day2Condition, type: "daily", circle: universalIcons))
         day2HighLabel.text = "\(day2High)°"
         day2LowLabel.text = "\(day2Low)°"
         
         // Day Three
-        day3Label.text = "\(day3DayString.capitalizingFirstLetter())"
+        day3Label.text = "\(day3DayString)"
         day3ConditionImage.image = UIImage(named: weatherCondition(condition: day3Condition, type: "daily", circle: universalIcons))
         day3HighLabel.text = "\(day3High)°"
         day3LowLabel.text = "\(day3Low)°"

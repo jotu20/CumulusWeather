@@ -24,11 +24,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Cumulus-Cumulus WidgetExtension.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Cumulus-GetForecastIntent.xcscheme</key>
 		<dict>
 			<key>isShown</key>

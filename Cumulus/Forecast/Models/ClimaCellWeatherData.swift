@@ -51,9 +51,9 @@ func fetchClimaCellWeatherData() {
                 wind = Int(forecast.windSpeed.value)
                 windGust = Int(forecast.windGust.value)
 //                windDirectionDegree = current.windBearing!
-                windDirectionString = windDirection(degree: forecast.windDirection.value)
+                windBearing = windDirection(degree: forecast.windDirection.value)
                 print(forecast.windDirection.value)
-                print(windDirectionString)
+                print(windBearing)
 //
 //                if current.precipitationAccumulation != nil {
 //                    precipAccumulation = Double(current.precipitationAccumulation!)

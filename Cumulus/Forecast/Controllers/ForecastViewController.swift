@@ -602,7 +602,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         dayHighLabel.text = "\(dayHigh)°"
     }
     
-    func setExtendedDayLabels(summary: String, precip: Int, humidity: Int, dewPoint: Int, visibility: Int, sunrise: String, accum: Double, wind: Double, pressure: Double, uvIndex: Int, sunset: String, label0: UILabel!, label1: UILabel!, label2: UILabel!, label3: UILabel!, label4: UILabel!, label5: UILabel!, label6: UILabel!, label7: UILabel!, label8: UILabel!, label9: UILabel!, label10: UILabel!) {
+    func setExtendedDayLabels(summary: String, precip: Int, humidity: Int, dewPoint: Int, visibility: Int, sunrise: String, accum: Double, wind: Double, windGust: Double, windBearing: String, pressure: Double, uvIndex: Int, sunset: String, label0: UILabel!, label1: UILabel!, label2: UILabel!, label3: UILabel!, label4: UILabel!, label5: UILabel!, label6: UILabel!, label7: UILabel!, label8: UILabel!, label9: UILabel!, label10: UILabel!) {
         label0.text = summary
         label1.text = "Precip. \(precip)%"
         label2.text = "Humidity \(humidity)%"
@@ -610,7 +610,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         label4.text = "Visibility \(visibility) \(unitsDistance)"
         label5.text = "Sunrise \(sunrise)"
         label6.text = "Accum. \(accum)\(unitsPrecipitation)"
-        label7.text = "Wind \(wind)\(unitsWindSpeed)"
+        label7.text = "Wind \(Int(wind))(\(Int(windGust)))\(unitsWindSpeed) \(windBearing)"
         label8.text = "Pressure \(pressure)\(unitsPressure)"
         
         // Set uv index
@@ -1080,7 +1080,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             
             hideExtendedDayLabels(hidden: false, label0: day0SummaryLabel, label1: day0Slot1, label2: day0Slot2, label3: day0Slot3, label4: day0Slot4, label5: day0Slot5, label6: day0Slot6!, label7: day0Slot7, label8: day0Slot8, label9: day0Slot9, label10: day0Slot10)
             
-            setExtendedDayLabels(summary: day0Summary, precip: day0Precip, humidity: day0Humidity, dewPoint: day0DewPoint, visibility: day0Visibility, sunrise: day0Sunrise, accum: day0PrecipAccum, wind: day0Wind, pressure: day0Pressure, uvIndex: day0UVIndex, sunset: day0Sunset, label0: day0SummaryLabel, label1: day0Slot1, label2: day0Slot2, label3: day0Slot3, label4: day0Slot4, label5: day0Slot5, label6: day0Slot6, label7: day0Slot7, label8: day0Slot8, label9: day0Slot9, label10: day0Slot10)
+            setExtendedDayLabels(summary: day0Summary, precip: day0Precip, humidity: day0Humidity, dewPoint: day0DewPoint, visibility: day0Visibility, sunrise: day0Sunrise, accum: day0PrecipAccum, wind: day0Wind, windGust: day0WindGust, windBearing: day0WindBearing, pressure: day0Pressure, uvIndex: day0UVIndex, sunset: day0Sunset, label0: day0SummaryLabel, label1: day0Slot1, label2: day0Slot2, label3: day0Slot3, label4: day0Slot4, label5: day0Slot5, label6: day0Slot6, label7: day0Slot7, label8: day0Slot8, label9: day0Slot9, label10: day0Slot10)
         } else {
             day0Height.constant = 60
             
@@ -1096,7 +1096,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             
             hideExtendedDayLabels(hidden: false, label0: day1SummaryLabel, label1: day1Slot1, label2: day1Slot2, label3: day1Slot3, label4: day1Slot4, label5: day1Slot5, label6: day1Slot6!, label7: day1Slot7, label8: day1Slot8, label9: day1Slot9, label10: day1Slot10)
             
-            setExtendedDayLabels(summary: day1Summary, precip: day1Precip, humidity: day1Humidity, dewPoint: day1DewPoint, visibility: day1Visibility, sunrise: day1Sunrise, accum: day1PrecipAccum, wind: day1Wind, pressure: day1Pressure, uvIndex: day1UVIndex, sunset: day1Sunset, label0: day1SummaryLabel, label1: day1Slot1, label2: day1Slot2, label3: day1Slot3, label4: day1Slot4, label5: day1Slot5, label6: day1Slot6, label7: day1Slot7, label8: day1Slot8, label9: day1Slot9, label10: day1Slot10)
+            setExtendedDayLabels(summary: day1Summary, precip: day1Precip, humidity: day1Humidity, dewPoint: day1DewPoint, visibility: day1Visibility, sunrise: day1Sunrise, accum: day1PrecipAccum, wind: day1Wind, windGust: day1WindGust, windBearing: day1WindBearing, pressure: day1Pressure, uvIndex: day1UVIndex, sunset: day1Sunset, label0: day1SummaryLabel, label1: day1Slot1, label2: day1Slot2, label3: day1Slot3, label4: day1Slot4, label5: day1Slot5, label6: day1Slot6, label7: day1Slot7, label8: day1Slot8, label9: day1Slot9, label10: day1Slot10)
         } else {
             day1Height.constant = 60
             
@@ -1112,7 +1112,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             
             hideExtendedDayLabels(hidden: false, label0: day2SummaryLabel, label1: day2Slot1, label2: day2Slot2, label3: day2Slot3, label4: day2Slot4, label5: day2Slot5, label6: day2Slot6!, label7: day2Slot7, label8: day2Slot8, label9: day2Slot9, label10: day2Slot10)
             
-            setExtendedDayLabels(summary: day2Summary, precip: day2Precip, humidity: day2Humidity, dewPoint: day2DewPoint, visibility: day2Visibility, sunrise: day2Sunrise, accum: day2PrecipAccum, wind: day2Wind, pressure: day2Pressure, uvIndex: day2UVIndex, sunset: day2Sunset, label0: day2SummaryLabel, label1: day2Slot1, label2: day2Slot2, label3: day2Slot3, label4: day2Slot4, label5: day2Slot5, label6: day2Slot6, label7: day2Slot7, label8: day2Slot8, label9: day2Slot9, label10: day2Slot10)
+            setExtendedDayLabels(summary: day2Summary, precip: day2Precip, humidity: day2Humidity, dewPoint: day2DewPoint, visibility: day2Visibility, sunrise: day2Sunrise, accum: day2PrecipAccum, wind: day2Wind, windGust: day2WindGust, windBearing: day2WindBearing, pressure: day2Pressure, uvIndex: day2UVIndex, sunset: day2Sunset, label0: day2SummaryLabel, label1: day2Slot1, label2: day2Slot2, label3: day2Slot3, label4: day2Slot4, label5: day2Slot5, label6: day2Slot6, label7: day2Slot7, label8: day2Slot8, label9: day2Slot9, label10: day2Slot10)
         } else {
             day2Height.constant = 60
             
@@ -1128,7 +1128,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             
             hideExtendedDayLabels(hidden: false, label0: day3SummaryLabel, label1: day3Slot1, label2: day3Slot2, label3: day3Slot3, label4: day3Slot4, label5: day3Slot5, label6: day3Slot6!, label7: day3Slot7, label8: day3Slot8, label9: day3Slot9, label10: day3Slot10)
             
-            setExtendedDayLabels(summary: day3Summary, precip: day3Precip, humidity: day3Humidity, dewPoint: day3DewPoint, visibility: day3Visibility, sunrise: day3Sunrise, accum: day3PrecipAccum, wind: day3Wind, pressure: day3Pressure, uvIndex: day3UVIndex, sunset: day3Sunset, label0: day3SummaryLabel, label1: day3Slot1, label2: day3Slot2, label3: day3Slot3, label4: day3Slot4, label5: day3Slot5, label6: day3Slot6, label7: day3Slot7, label8: day3Slot8, label9: day3Slot9, label10: day3Slot10)
+            setExtendedDayLabels(summary: day3Summary, precip: day3Precip, humidity: day3Humidity, dewPoint: day3DewPoint, visibility: day3Visibility, sunrise: day3Sunrise, accum: day3PrecipAccum, wind: day3Wind, windGust: day3WindGust, windBearing: day3WindBearing, pressure: day3Pressure, uvIndex: day3UVIndex, sunset: day3Sunset, label0: day3SummaryLabel, label1: day3Slot1, label2: day3Slot2, label3: day3Slot3, label4: day3Slot4, label5: day3Slot5, label6: day3Slot6, label7: day3Slot7, label8: day3Slot8, label9: day3Slot9, label10: day3Slot10)
         } else {
             day3Height.constant = 60
             
@@ -1144,7 +1144,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             
             hideExtendedDayLabels(hidden: false, label0: day4SummaryLabel, label1: day4Slot1, label2: day4Slot2, label3: day4Slot3, label4: day4Slot4, label5: day4Slot5, label6: day4Slot6!, label7: day4Slot7, label8: day4Slot8, label9: day4Slot9, label10: day4Slot10)
             
-            setExtendedDayLabels(summary: day4Summary, precip: day4Precip, humidity: day4Humidity, dewPoint: day4DewPoint, visibility: day4Visibility, sunrise: day4Sunrise, accum: day4PrecipAccum, wind: day4Wind, pressure: day4Pressure, uvIndex: day4UVIndex, sunset: day4Sunset, label0: day4SummaryLabel, label1: day4Slot1, label2: day4Slot2, label3: day4Slot3, label4: day4Slot4, label5: day4Slot5, label6: day4Slot6, label7: day4Slot7, label8: day4Slot8, label9: day4Slot9, label10: day4Slot10)
+            setExtendedDayLabels(summary: day4Summary, precip: day4Precip, humidity: day4Humidity, dewPoint: day4DewPoint, visibility: day4Visibility, sunrise: day4Sunrise, accum: day4PrecipAccum, wind: day4Wind, windGust: day4WindGust, windBearing: day4WindBearing, pressure: day4Pressure, uvIndex: day4UVIndex, sunset: day4Sunset, label0: day4SummaryLabel, label1: day4Slot1, label2: day4Slot2, label3: day4Slot3, label4: day4Slot4, label5: day4Slot5, label6: day4Slot6, label7: day4Slot7, label8: day4Slot8, label9: day4Slot9, label10: day4Slot10)
         } else {
             day4Height.constant = 60
             
@@ -1160,7 +1160,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             
             hideExtendedDayLabels(hidden: false, label0: day5SummaryLabel, label1: day5Slot1, label2: day5Slot2, label3: day5Slot3, label4: day5Slot4, label5: day5Slot5, label6: day5Slot6!, label7: day5Slot7, label8: day5Slot8, label9: day5Slot9, label10: day5Slot10)
             
-            setExtendedDayLabels(summary: day5Summary, precip: day5Precip, humidity: day5Humidity, dewPoint: day5DewPoint, visibility: day5Visibility, sunrise: day5Sunrise, accum: day5PrecipAccum, wind: day5Wind, pressure: day5Pressure, uvIndex: day5UVIndex, sunset: day5Sunset, label0: day5SummaryLabel, label1: day5Slot1, label2: day5Slot2, label3: day5Slot3, label4: day5Slot4, label5: day5Slot5, label6: day5Slot6, label7: day5Slot7, label8: day5Slot8, label9: day5Slot9, label10: day5Slot10)
+            setExtendedDayLabels(summary: day5Summary, precip: day5Precip, humidity: day5Humidity, dewPoint: day5DewPoint, visibility: day5Visibility, sunrise: day5Sunrise, accum: day5PrecipAccum, wind: day5Wind, windGust: day5WindGust, windBearing: day5WindBearing, pressure: day5Pressure, uvIndex: day5UVIndex, sunset: day5Sunset, label0: day5SummaryLabel, label1: day5Slot1, label2: day5Slot2, label3: day5Slot3, label4: day5Slot4, label5: day5Slot5, label6: day5Slot6, label7: day5Slot7, label8: day5Slot8, label9: day5Slot9, label10: day5Slot10)
         } else {
             day5Height.constant = 60
             
@@ -1176,7 +1176,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             
             hideExtendedDayLabels(hidden: false, label0: day6SummaryLabel, label1: day6Slot1, label2: day6Slot2, label3: day6Slot3, label4: day6Slot4, label5: day6Slot5, label6: day6Slot6!, label7: day6Slot7, label8: day6Slot8, label9: day6Slot9, label10: day6Slot10)
             
-            setExtendedDayLabels(summary: day6Summary, precip: day6Precip, humidity: day6Humidity, dewPoint: day6DewPoint, visibility: day6Visibility, sunrise: day6Sunrise, accum: day6PrecipAccum, wind: day6Wind, pressure: day6Pressure, uvIndex: day6UVIndex, sunset: day6Sunset, label0: day6SummaryLabel, label1: day6Slot1, label2: day6Slot2, label3: day6Slot3, label4: day6Slot4, label5: day6Slot5, label6: day6Slot6, label7: day6Slot7, label8: day6Slot8, label9: day6Slot9, label10: day6Slot10)
+            setExtendedDayLabels(summary: day6Summary, precip: day6Precip, humidity: day6Humidity, dewPoint: day6DewPoint, visibility: day6Visibility, sunrise: day6Sunrise, accum: day6PrecipAccum, wind: day6Wind, windGust: day6WindGust, windBearing: day6WindBearing, pressure: day6Pressure, uvIndex: day6UVIndex, sunset: day6Sunset, label0: day6SummaryLabel, label1: day6Slot1, label2: day6Slot2, label3: day6Slot3, label4: day6Slot4, label5: day6Slot5, label6: day6Slot6, label7: day6Slot7, label8: day6Slot8, label9: day6Slot9, label10: day6Slot10)
         } else {
             day6Height.constant = 60
             
@@ -1192,7 +1192,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             
             hideExtendedDayLabels(hidden: false, label0: day7SummaryLabel, label1: day7Slot1, label2: day7Slot2, label3: day7Slot3, label4: day7Slot4, label5: day7Slot5, label6: day7Slot6!, label7: day7Slot7, label8: day7Slot8, label9: day7Slot9, label10: day7Slot10)
             
-            setExtendedDayLabels(summary: day7Summary, precip: day7Precip, humidity: day7Humidity, dewPoint: day7DewPoint, visibility: day7Visibility, sunrise: day7Sunrise, accum: day7PrecipAccum, wind: day7Wind, pressure: day7Pressure, uvIndex: day7UVIndex, sunset: day7Sunset, label0: day7SummaryLabel, label1: day7Slot1, label2: day7Slot2, label3: day7Slot3, label4: day7Slot4, label5: day7Slot5, label6: day7Slot6, label7: day7Slot7, label8: day7Slot8, label9: day7Slot9, label10: day7Slot10)
+            setExtendedDayLabels(summary: day7Summary, precip: day7Precip, humidity: day7Humidity, dewPoint: day7DewPoint, visibility: day7Visibility, sunrise: day7Sunrise, accum: day7PrecipAccum, wind: day7Wind, windGust: day7WindGust, windBearing: day7WindBearing, pressure: day7Pressure, uvIndex: day7UVIndex, sunset: day7Sunset, label0: day7SummaryLabel, label1: day7Slot1, label2: day7Slot2, label3: day7Slot3, label4: day7Slot4, label5: day7Slot5, label6: day7Slot6, label7: day7Slot7, label8: day7Slot8, label9: day7Slot9, label10: day7Slot10)
         } else {
             day7Height.constant = 60
             
@@ -1208,7 +1208,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             
             hideExtendedDayLabels(hidden: false, label0: day8SummaryLabel, label1: day8Slot1, label2: day8Slot2, label3: day8Slot3, label4: day8Slot4, label5: day8Slot5, label6: day8Slot6!, label7: day8Slot7, label8: day8Slot8, label9: day8Slot9, label10: day8Slot10)
             
-            setExtendedDayLabels(summary: day8Summary, precip: day8Precip, humidity: day8Humidity, dewPoint: day8DewPoint, visibility: day8Visibility, sunrise: day8Sunrise, accum: day8PrecipAccum, wind: day8Wind, pressure: day8Pressure, uvIndex: day8UVIndex, sunset: day8Sunset, label0: day8SummaryLabel, label1: day8Slot1, label2: day8Slot2, label3: day8Slot3, label4: day8Slot4, label5: day8Slot5, label6: day8Slot6, label7: day8Slot7, label8: day8Slot8, label9: day8Slot9, label10: day8Slot10)
+            setExtendedDayLabels(summary: day8Summary, precip: day8Precip, humidity: day8Humidity, dewPoint: day8DewPoint, visibility: day8Visibility, sunrise: day8Sunrise, accum: day8PrecipAccum, wind: day8Wind, windGust: day8WindGust, windBearing: day8WindBearing, pressure: day8Pressure, uvIndex: day8UVIndex, sunset: day8Sunset, label0: day8SummaryLabel, label1: day8Slot1, label2: day8Slot2, label3: day8Slot3, label4: day8Slot4, label5: day8Slot5, label6: day8Slot6, label7: day8Slot7, label8: day8Slot8, label9: day8Slot9, label10: day8Slot10)
         } else {
             day8Height.constant = 60
             
@@ -1224,7 +1224,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             
             hideExtendedDayLabels(hidden: false, label0: day9SummaryLabel, label1: day9Slot1, label2: day9Slot2, label3: day9Slot3, label4: day9Slot4, label5: day9Slot5, label6: day9Slot6!, label7: day9Slot7, label8: day9Slot8, label9: day9Slot9, label10: day9Slot10)
             
-            setExtendedDayLabels(summary: day9Summary, precip: day9Precip, humidity: day9Humidity, dewPoint: day9DewPoint, visibility: day9Visibility, sunrise: day9Sunrise, accum: day9PrecipAccum, wind: day9Wind, pressure: day9Pressure, uvIndex: day9UVIndex, sunset: day9Sunset, label0: day9SummaryLabel, label1: day9Slot1, label2: day9Slot2, label3: day9Slot3, label4: day9Slot4, label5: day9Slot5, label6: day9Slot6, label7: day9Slot7, label8: day9Slot8, label9: day9Slot9, label10: day9Slot10)
+            setExtendedDayLabels(summary: day9Summary, precip: day9Precip, humidity: day9Humidity, dewPoint: day9DewPoint, visibility: day9Visibility, sunrise: day9Sunrise, accum: day9PrecipAccum, wind: day9Wind, windGust: day9WindGust, windBearing: day9WindBearing, pressure: day9Pressure, uvIndex: day9UVIndex, sunset: day9Sunset, label0: day9SummaryLabel, label1: day9Slot1, label2: day9Slot2, label3: day9Slot3, label4: day9Slot4, label5: day9Slot5, label6: day9Slot6, label7: day9Slot7, label8: day9Slot8, label9: day9Slot9, label10: day9Slot10)
         } else {
             day9Height.constant = 60
             
@@ -1260,9 +1260,9 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         
         // Set wind
         if windGust == wind {
-            conditionSlotLabel2.text = "Wind \(wind)\(unitsWindSpeed) \(windDirectionString)"
+            conditionSlotLabel2.text = "Wind \(wind)\(unitsWindSpeed) \(windBearing)"
         } else {
-            conditionSlotLabel2.text = "Wind \(wind)(\(windGust))\(unitsWindSpeed) \(windDirectionString)"
+            conditionSlotLabel2.text = "Wind \(wind)(\(windGust))\(unitsWindSpeed) \(windBearing)"
         }
     }
     

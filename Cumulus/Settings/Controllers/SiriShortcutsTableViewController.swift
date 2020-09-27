@@ -45,7 +45,7 @@ class SiriShortcutsTableViewController: UITableViewController {
 
         // Intent Siri Button
         let intent = ForecastIntent()
-        let addShortcutButton = INUIAddVoiceShortcutButton(style: .white)
+        let addShortcutButton = INUIAddVoiceShortcutButton(style: .automatic)
         addShortcutButton.shortcut = INShortcut(intent: intent)
         addShortcutButton.delegate = self
         

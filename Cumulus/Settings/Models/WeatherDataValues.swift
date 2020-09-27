@@ -49,10 +49,7 @@ var nextHourCondition: String = ""
 var minuteSummary: String = ""
 var endingMinuteSummary: String = ""
 var triggerMinute: Int = 0
-var nearestStormDirectionString: String = ""
-var windDirectionString: String = ""
 var precipAccumulation: Double = 0
-var airQualityIndex: Int = 0
 
 // MARK: - Minutely precip probability values
 // 1-20
@@ -445,6 +442,7 @@ var precipitationType: String = ""
 var humidity: Int = 0
 var wind: Int = 0
 var windGust: Int = 0
+var windBearing: String = ""
 var sunrise: String = ""
 var sunset: String = ""
 var moonPhaseString: String = ""
@@ -467,6 +465,8 @@ var day0Precip: Int = 0
 var day0PrecipAccum: Double = 0
 var day0Humidity: Int = 0
 var day0Wind: Double = 0
+var day0WindGust: Double = 0
+var day0WindBearing: String = ""
 var day0DewPoint: Int = 0
 var day0Pressure: Double = 0
 var day0Visibility: Int = 0
@@ -486,6 +486,8 @@ var day1Precip: Int = 0
 var day1PrecipAccum: Double = 0
 var day1Humidity: Int = 0
 var day1Wind: Double = 0
+var day1WindGust: Double = 0
+var day1WindBearing: String = ""
 var day1DewPoint: Int = 0
 var day1Pressure: Double = 0
 var day1Visibility: Int = 0
@@ -505,6 +507,8 @@ var day2Precip: Int = 0
 var day2PrecipAccum: Double = 0
 var day2Humidity: Int = 0
 var day2Wind: Double = 0
+var day2WindGust: Double = 0
+var day2WindBearing: String = ""
 var day2DewPoint: Int = 0
 var day2Pressure: Double = 0
 var day2Visibility: Int = 0
@@ -524,6 +528,8 @@ var day3Precip: Int = 0
 var day3PrecipAccum: Double = 0
 var day3Humidity: Int = 0
 var day3Wind: Double = 0
+var day3WindGust: Double = 0
+var day3WindBearing: String = ""
 var day3DewPoint: Int = 0
 var day3Pressure: Double = 0
 var day3Visibility: Int = 0
@@ -543,6 +549,8 @@ var day4Precip: Int = 0
 var day4PrecipAccum: Double = 0
 var day4Humidity: Int = 0
 var day4Wind: Double = 0
+var day4WindGust: Double = 0
+var day4WindBearing: String = ""
 var day4DewPoint: Int = 0
 var day4Pressure: Double = 0
 var day4Visibility: Int = 0
@@ -562,6 +570,8 @@ var day5Precip: Int = 0
 var day5PrecipAccum: Double = 0
 var day5Humidity: Int = 0
 var day5Wind: Double = 0
+var day5WindGust: Double = 0
+var day5WindBearing: String = ""
 var day5DewPoint: Int = 0
 var day5Pressure: Double = 0
 var day5Visibility: Int = 0
@@ -581,6 +591,8 @@ var day6Precip: Int = 0
 var day6PrecipAccum: Double = 0
 var day6Humidity: Int = 0
 var day6Wind: Double = 0
+var day6WindGust: Double = 0
+var day6WindBearing: String = ""
 var day6DewPoint: Int = 0
 var day6Pressure: Double = 0
 var day6Visibility: Int = 0
@@ -600,6 +612,8 @@ var day7Precip: Int = 0
 var day7PrecipAccum: Double = 0
 var day7Humidity: Int = 0
 var day7Wind: Double = 0
+var day7WindGust: Double = 0
+var day7WindBearing: String = ""
 var day7DewPoint: Int = 0
 var day7Pressure: Double = 0
 var day7Visibility: Int = 0
@@ -619,6 +633,8 @@ var day8Precip: Int = 0
 var day8PrecipAccum: Double = 0
 var day8Humidity: Int = 0
 var day8Wind: Double = 0
+var day8WindGust: Double = 0
+var day8WindBearing: String = ""
 var day8DewPoint: Int = 0
 var day8Pressure: Double = 0
 var day8Visibility: Int = 0
@@ -638,6 +654,8 @@ var day9Precip: Int = 0
 var day9PrecipAccum: Double = 0
 var day9Humidity: Int = 0
 var day9Wind: Double = 0
+var day9WindGust: Double = 0
+var day9WindBearing: String = ""
 var day9DewPoint: Int = 0
 var day9Pressure: Double = 0
 var day9Visibility: Int = 0
@@ -759,47 +777,6 @@ func sunFormat(date: Date) -> String {
     }
     
     return timeString
-}
-
-// MARK: - Get storm direction
-func stormDirection(degree: Double) -> String {
-    var directionString: String = ""
-    
-    if degree == 0 && degree <= 22.4 {
-        directionString = "north"
-    } else if degree >= 22.5 && degree <= 44 {
-        directionString = "northeast"
-    } else if degree >= 45 && degree <= 67.4 {
-        directionString = "northeast"
-    } else if degree >= 67.5 && degree <= 89 {
-        directionString = "northeast"
-    } else if degree >= 90 && degree <= 112.4 {
-        directionString = "east"
-    } else if degree >= 112.5 && degree <= 134 {
-        directionString = "southeast"
-    } else if degree >= 135 && degree <= 157.4 {
-        directionString = "southeast"
-    } else if degree >= 157.5 && degree <= 179 {
-        directionString = "southeast"
-    } else if degree >= 180 && degree <= 202.4 {
-        directionString = "south"
-    } else if degree >= 202.5 && degree <= 224 {
-        directionString = "southwest"
-    } else if degree >= 225 && degree <= 147.4 {
-        directionString = "southwest"
-    } else if degree >= 147.5 && degree <= 269 {
-        directionString = "southwest"
-    } else if degree >= 270 && degree <= 292.4 {
-        directionString = "west"
-    } else if degree >= 292.5 && degree <= 314 {
-        directionString = "northwest"
-    } else if degree >= 315 && degree <= 337.4 {
-        directionString = "northwest"
-    } else if degree >= 337.5 && degree <= 360 {
-        directionString = "northwest"
-    }
-    
-    return directionString
 }
 
 // MARK: - Get wind direction

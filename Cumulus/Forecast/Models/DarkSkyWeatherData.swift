@@ -87,7 +87,7 @@ public func fetchDarkSkyWeatherData() {
                 pressure = Int(current.pressure!)
                 wind = Int(current.windSpeed!)
                 windGust = Int(current.windGust!)
-                windDirectionString = windDirection(degree: current.windBearing!)
+                windBearing = windDirection(degree: current.windBearing!)
                 
                 if current.precipitationAccumulation != nil {
                     precipAccumulation = Double(current.precipitationAccumulation!)
@@ -129,6 +129,8 @@ public func fetchDarkSkyWeatherData() {
                 day0PrecipAccum = dailyPrecipAccum(day: fetchDay0Array)
                 day0Humidity = dailyHumidityProb(day: fetchDay0Array)
                 day0Wind = fetchDay0Array.windSpeed ?? 0
+                day0WindGust = fetchDay0Array.windGust ?? 0
+                day0WindBearing = windDirection(degree: fetchDay0Array.windBearing!)
                 day0DewPoint = Int(fetchDay0Array.dewPoint ?? 0)
                 day0Pressure = fetchDay0Array.pressure ?? 0
                 day0Visibility = Int(fetchDay0Array.visibility ?? 0)
@@ -324,7 +326,7 @@ public func fetchDarkSkyWeatherData() {
             // Get minute statements
             getMinutelyStatements()
             
-            // Get hourly data and hourly precipitation through 12 hours
+            // MARK: - Hourly data
             if let hourly = currentForecast.hourly {
                 cloudCoverHour1 = hourCloudCover(value: 1, hour: hourly)
                 cloudCoverHour2 = hourCloudCover(value: 2, hour: hourly)
@@ -548,6 +550,8 @@ public func fetchDarkSkyWeatherData() {
             day1PrecipAccum = dailyPrecipAccum(day: fetchDay1Array)
             day1Humidity = dailyHumidityProb(day: fetchDay1Array)
             day1Wind = fetchDay1Array.windSpeed ?? 0
+            day1WindGust = fetchDay1Array.windGust ?? 0
+            day1WindBearing = windDirection(degree: fetchDay1Array.windBearing!)
             day1DewPoint = Int(fetchDay1Array.dewPoint ?? 0)
             day1Pressure = fetchDay1Array.pressure ?? 0
             day1Visibility = Int(fetchDay1Array.visibility ?? 0)
@@ -582,6 +586,8 @@ public func fetchDarkSkyWeatherData() {
             day2PrecipAccum = dailyPrecipAccum(day: fetchDay2Array)
             day2Humidity = dailyHumidityProb(day: fetchDay2Array)
             day2Wind = fetchDay2Array.windSpeed ?? 0
+            day2WindGust = fetchDay2Array.windGust ?? 0
+            day2WindBearing = windDirection(degree: fetchDay2Array.windBearing!)
             day2DewPoint = Int(fetchDay2Array.dewPoint ?? 0)
             day2Pressure = fetchDay2Array.pressure ?? 0
             day2Visibility = Int(fetchDay2Array.visibility ?? 0)
@@ -616,6 +622,8 @@ public func fetchDarkSkyWeatherData() {
             day3PrecipAccum = dailyPrecipAccum(day: fetchDay3Array)
             day3Humidity = dailyHumidityProb(day: fetchDay3Array)
             day3Wind = fetchDay3Array.windSpeed ?? 0
+            day3WindGust = fetchDay3Array.windGust ?? 0
+            day3WindBearing = windDirection(degree: fetchDay3Array.windBearing!)
             day3DewPoint = Int(fetchDay3Array.dewPoint ?? 0)
             day3Pressure = fetchDay3Array.pressure ?? 0
             day3Visibility = Int(fetchDay3Array.visibility ?? 0)
@@ -650,6 +658,8 @@ public func fetchDarkSkyWeatherData() {
             day4PrecipAccum = dailyPrecipAccum(day: fetchDay4Array)
             day4Humidity = dailyHumidityProb(day: fetchDay4Array)
             day4Wind = fetchDay4Array.windSpeed ?? 0
+            day4WindGust = fetchDay4Array.windGust ?? 0
+            day4WindBearing = windDirection(degree: fetchDay4Array.windBearing!)
             day4DewPoint = Int(fetchDay4Array.dewPoint ?? 0)
             day4Pressure = fetchDay4Array.pressure ?? 0
             day4Visibility = Int(fetchDay4Array.visibility ?? 0)
@@ -684,6 +694,8 @@ public func fetchDarkSkyWeatherData() {
             day5PrecipAccum = dailyPrecipAccum(day: fetchDay5Array)
             day5Humidity = dailyHumidityProb(day: fetchDay5Array)
             day5Wind = fetchDay5Array.windSpeed ?? 0
+            day5WindGust = fetchDay5Array.windGust ?? 0
+            day5WindBearing = windDirection(degree: fetchDay5Array.windBearing!)
             day5DewPoint = Int(fetchDay5Array.dewPoint ?? 0)
             day5Pressure = fetchDay5Array.pressure ?? 0
             day5Visibility = Int(fetchDay5Array.visibility ?? 0)
@@ -718,6 +730,8 @@ public func fetchDarkSkyWeatherData() {
             day6PrecipAccum = dailyPrecipAccum(day: fetchDay6Array)
             day6Humidity = dailyHumidityProb(day: fetchDay6Array)
             day6Wind = fetchDay6Array.windSpeed ?? 0
+            day6WindGust = fetchDay6Array.windGust ?? 0
+            day6WindBearing = windDirection(degree: fetchDay6Array.windBearing!)
             day6DewPoint = Int(fetchDay6Array.dewPoint ?? 0)
             day6Pressure = fetchDay6Array.pressure ?? 0
             day6Visibility = Int(fetchDay6Array.visibility ?? 0)
@@ -752,6 +766,8 @@ public func fetchDarkSkyWeatherData() {
             day7PrecipAccum = dailyPrecipAccum(day: fetchDay7Array)
             day7Humidity = dailyHumidityProb(day: fetchDay7Array)
             day7Wind = fetchDay7Array.windSpeed ?? 0
+            day7WindGust = fetchDay7Array.windGust ?? 0
+            day7WindBearing = windDirection(degree: fetchDay7Array.windBearing!)
             day7DewPoint = Int(fetchDay7Array.dewPoint ?? 0)
             day7Pressure = fetchDay7Array.pressure ?? 0
             day7Visibility = Int(fetchDay7Array.visibility ?? 0)
@@ -786,6 +802,8 @@ public func fetchDarkSkyWeatherData() {
             day8PrecipAccum = dailyPrecipAccum(day: fetchDay8Array)
             day8Humidity = dailyHumidityProb(day: fetchDay8Array)
             day8Wind = fetchDay8Array.windSpeed ?? 0
+            day8WindGust = fetchDay8Array.windGust ?? 0
+            day8WindBearing = windDirection(degree: fetchDay8Array.windBearing!)
             day8DewPoint = Int(fetchDay8Array.dewPoint ?? 0)
             day8Pressure = fetchDay8Array.pressure ?? 0
             day8Visibility = Int(fetchDay8Array.visibility ?? 0)
@@ -819,6 +837,8 @@ public func fetchDarkSkyWeatherData() {
             day9PrecipAccum = dailyPrecipAccum(day: fetchDay9Array)
             day9Humidity = dailyHumidityProb(day: fetchDay9Array)
             day9Wind = fetchDay9Array.windSpeed ?? 0
+            day9WindGust = fetchDay9Array.windGust ?? 0
+            day9WindBearing = windDirection(degree: fetchDay9Array.windBearing!)
             day9DewPoint = Int(fetchDay9Array.dewPoint ?? 0)
             day9Pressure = fetchDay9Array.pressure ?? 0
             day9Visibility = Int(fetchDay9Array.visibility ?? 0)

@@ -69,9 +69,9 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
 
         // Set wind
         if windGust == wind {
-            windLabel.text = "Wind \(wind)\(unitsWindSpeed) \(windDirectionString)"
+            windLabel.text = "Wind \(wind)\(unitsWindSpeed) \(windBearing)"
         } else {
-            windLabel.text = "Wind \(wind)(\(windGust))\(unitsWindSpeed) \(windDirectionString)"
+            windLabel.text = "Wind \(wind)(\(windGust))\(unitsWindSpeed) \(windBearing)"
         }
         
         // Set cloud cover
@@ -199,7 +199,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                     uvIndex = Int(current.uvIndex!)
                     wind = Int(current.windSpeed!)
                     windGust = Int(current.windGust!)
-                    windDirectionString = windDirection(degree: current.windBearing!)
+                    windBearing = windDirection(degree: current.windBearing!)
                     
                     if current.precipitationAccumulation != nil {
                         precipAccumulation = Double(current.precipitationAccumulation!)

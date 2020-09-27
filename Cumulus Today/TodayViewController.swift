@@ -123,9 +123,9 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
 
         // Set wind
         if windGust == wind {
-            windLabel.text = "Wind \(wind)\(unitsWindSpeed) \(windDirectionString)"
+            windLabel.text = "Wind \(wind)\(unitsWindSpeed) \(windBearing)"
         } else {
-            windLabel.text = "Wind \(wind)(\(windGust))\(unitsWindSpeed) \(windDirectionString)"
+            windLabel.text = "Wind \(wind)(\(windGust))\(unitsWindSpeed) \(windBearing)"
         }
         
         // Set cloud cover

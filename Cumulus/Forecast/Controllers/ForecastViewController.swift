@@ -611,7 +611,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         label5.text = "Sunrise \(sunrise)"
         label6.text = "Accum. \(accum)\(unitsPrecipitation)"
         label7.text = "Wind \(Int(wind))(\(Int(windGust)))\(unitsWindSpeed) \(windBearing)"
-        label8.text = "Pressure \(pressure)\(unitsPressure)"
+        label8.text = "Pressure \(Int(pressure))\(unitsPressure)"
         
         // Set uv index
         if uvIndex < 2 {

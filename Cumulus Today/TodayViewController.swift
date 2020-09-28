@@ -208,7 +208,6 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
-            locationManager.distanceFilter = 100
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }

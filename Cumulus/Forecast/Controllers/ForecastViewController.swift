@@ -270,7 +270,92 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @IBOutlet weak var day8ViewWidth: NSLayoutConstraint!
     @IBOutlet weak var day9ViewWidth: NSLayoutConstraint!
     
-    override func viewWillAppear(_ animated: Bool) {
+//    override func viewWillAppear(_ animated: Bool) {
+//        self.tabBarController?.delegate = self
+//        self.locationManager.requestWhenInUseAuthorization()
+//        self.setupGrantedLocationServices()
+//
+//        // Check for loaded weather, distance change, or color theme change
+//        if weatherLoaded == false || distanceChange == true || dataSourceChanged == true || userChangedColorTheme == true {
+//            loadingScreen()
+//        }
+//
+//        // Check for units or clock change
+//        if unitsChanged == true || clockChanged == true {
+//            loadingScreen()
+//            unitsChanged = false
+//            clockChanged = false
+//        }
+//
+//        DispatchQueue.main.async {
+//            let screenSize = UIScreen.main.bounds
+//            let screenWidth = screenSize.width
+//            if screenWidth < 375 {
+//                let widthSize: CGFloat = 310
+//
+//                self.currentLocationLabelWidth.constant = widthSize
+//                self.weatherAlertLableWidth.constant = widthSize
+//                self.currentConditionViewWidth.constant = widthSize
+//                self.currentConditionLabelWidth.constant = 175
+//
+//                self.hourlyConditionsStackView.spacing = 3
+//                self.day0ViewWidth.constant = widthSize
+//                self.day1ViewWidth.constant = widthSize
+//                self.day2ViewWidth.constant = widthSize
+//                self.day3ViewWidth.constant = widthSize
+//                self.day4ViewWidth.constant = widthSize
+//                self.day5ViewWidth.constant = widthSize
+//                self.day6ViewWidth.constant = widthSize
+//                self.day7ViewWidth.constant = widthSize
+//                self.day8ViewWidth.constant = widthSize
+//                self.day9ViewWidth.constant = widthSize
+//            }
+//
+//            if defaults.bool(forKey: "cumulusPlus") == false {
+//                self.hourlyConditionsGesture.isEnabled = false
+//                self.hourlyConditionsGestureSwipeLeft.isEnabled = false
+//                self.hourlyConditionsGestureSwipeRight.isEnabled = false
+//
+//                self.day6View.isHidden = true
+//                self.day7View.isHidden = true
+//                self.day8View.isHidden = true
+//                self.day9View.isHidden = true
+//            }
+//
+//            self.currentConditionView.layer.cornerRadius = 10
+//
+//            self.hour0View.layer.cornerRadius = 10
+//            self.hour1View.layer.cornerRadius = 10
+//            self.hour2View.layer.cornerRadius = 10
+//            self.hour3View.layer.cornerRadius = 10
+//
+//            self.day0View.layer.cornerRadius = 10
+//            self.day1View.layer.cornerRadius = 10
+//            self.day2View.layer.cornerRadius = 10
+//            self.day3View.layer.cornerRadius = 10
+//            self.day4View.layer.cornerRadius = 10
+//            self.day5View.layer.cornerRadius = 10
+//            self.day6View.layer.cornerRadius = 10
+//            self.day7View.layer.cornerRadius = 10
+//            self.day8View.layer.cornerRadius = 10
+//            self.day9View.layer.cornerRadius = 10
+//
+//            // Setup for pull to refresh
+//            self.scrollView.alwaysBounceVertical = true
+//            self.scrollView.bounces  = true
+//            self.refreshControl = UIRefreshControl()
+//            self.refreshControl.addTarget(self, action: #selector(self.didPullToRefresh), for: .valueChanged)
+//            self.scrollView.addSubview(self.refreshControl)
+//        }
+//
+//        // If user has viewed 10 times request review
+//        defaults.set((defaults.integer(forKey: "userViewedCounter") + 1), forKey: "userViewedCounter")
+//        if defaults.integer(forKey: "userViewedCounter") == 10 {
+//            SKStoreReviewController.requestReview()
+//        }
+//    }
+    
+    override func viewDidLoad() {
         self.tabBarController?.delegate = self
         self.locationManager.requestWhenInUseAuthorization()
         self.setupGrantedLocationServices()
@@ -355,7 +440,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         }
     }
     
-    // MARK: - Get location and weather data
+    // MARK: - Location Manager
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if userSelectedSavedLocation == true {
             let address = "\(selectedLocation)"
@@ -422,24 +507,17 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         setupDeniedLocation()
     }
 
-    // MARK: - Fetch user location if granted location access
+    // MARK: - Fetch granted location access
     func setupGrantedLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
             defaults.set(false, forKey: "userDeniedLocation")
             locationManager.delegate = self
-            locationManager.distanceFilter = 100
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            if currentSummary.isEmpty == false {
-                self.locationManager.stopUpdatingLocation()
-            }
-        }
     } 
     
-    // MARK: - Fetch user location if denied location access
+    // MARK: - Fetch denied location access
     func setupDeniedLocation() {
         placesClient = GMSPlacesClient.shared()
         defaults.set(true, forKey: "userDeniedLocation")
@@ -540,6 +618,12 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         
         setWeatherDataLabels()
         setColorTheme()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            if currentLocation.isEmpty == false {
+                self.locationManager.stopUpdatingLocation()
+            }
+        }
     }
     
     // MARK: - Set the user set theme

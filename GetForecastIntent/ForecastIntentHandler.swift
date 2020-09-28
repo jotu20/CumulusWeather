@@ -17,7 +17,6 @@ class ForecastIntentHandler: NSObject, ForecastIntentHandling, CLLocationManager
 
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
-            locationManager.distanceFilter = 100
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }

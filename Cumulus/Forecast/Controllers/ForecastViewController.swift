@@ -275,6 +275,18 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         self.locationManager.requestWhenInUseAuthorization()
         self.setupGrantedLocationServices()
         
+        // Check for loaded weather, distance change, or color theme change
+        if weatherLoaded == false || distanceChange == true || dataSourceChanged == true || userChangedColorTheme == true {
+            loadingScreen()
+        }
+
+        // Check for units or clock change
+        if unitsChanged == true || clockChanged == true {
+            loadingScreen()
+            unitsChanged = false
+            clockChanged = false
+        }
+        
         DispatchQueue.main.async {
             let screenSize = UIScreen.main.bounds
             let screenWidth = screenSize.width
@@ -327,31 +339,19 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             self.day7View.layer.cornerRadius = 10
             self.day8View.layer.cornerRadius = 10
             self.day9View.layer.cornerRadius = 10
-
-            // If user has viewed 10 times request review
-            defaults.set((defaults.integer(forKey: "userViewedCounter") + 1), forKey: "userViewedCounter")
-            if defaults.integer(forKey: "userViewedCounter") == 10 {
-                SKStoreReviewController.requestReview()
-            }
             
-            // Check for loaded weather, distance change, or color theme change
-            if weatherLoaded == false || distanceChange == true || dataSourceChanged == true || userChangedColorTheme == true {
-                self.loadingScreen()
-            }
-
-            // Check for units or clock change
-            if unitsChanged == true || clockChanged == true {
-                self.loadingScreen()
-                unitsChanged = false
-                clockChanged = false
-            }
-
             // Setup for pull to refresh
             self.scrollView.alwaysBounceVertical = true
             self.scrollView.bounces  = true
             self.refreshControl = UIRefreshControl()
             self.refreshControl.addTarget(self, action: #selector(self.didPullToRefresh), for: .valueChanged)
             self.scrollView.addSubview(self.refreshControl)
+        }
+
+        // If user has viewed 10 times request review
+        defaults.set((defaults.integer(forKey: "userViewedCounter") + 1), forKey: "userViewedCounter")
+        if defaults.integer(forKey: "userViewedCounter") == 10 {
+            SKStoreReviewController.requestReview()
         }
     }
     
@@ -430,10 +430,9 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             locationManager.distanceFilter = 100
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
-            setupInitialData()
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             if currentSummary.isEmpty == false {
                 self.locationManager.stopUpdatingLocation()
             }

@@ -16,7 +16,7 @@ let client = DarkSkyClient(apiKey: "90cfdd5277e3269bdd8f31a177508114")
 public func fetchDarkSkyWeatherData() {
     universalSettings()
     let userLocation = CLLocationCoordinate2D(latitude: latitudeValue, longitude: longitudeValue)
-    
+    print("Test")
     let dayOneDate = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date()
     let dayTwoDate = Calendar.current.date(byAdding: .day, value: 2, to: Date()) ?? Date()
     let dayThreeDate = Calendar.current.date(byAdding: .day, value: 3, to: Date()) ?? Date()

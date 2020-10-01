@@ -76,8 +76,6 @@ public func fetchDarkSkyWeatherData() {
             
             if let current = currentForecast.currently {
                 currentCondition = "\(current.icon!.rawValue)"
-                conditionHour0 = "\(current.icon!.rawValue)"
-                
                 currentTemperature = Int(current.temperature!)
                 feelsLikeTemperature = Int(current.apparentTemperature!)
                 currentSummary = "\(current.summary!)"
@@ -346,6 +344,8 @@ public func fetchDarkSkyWeatherData() {
                     precipIntensity = 0
                 }
                 
+                conditionHour0 = "\(precipArray0.icon!.rawValue)"
+                
                 let fetchHourly1 = hourly.data[1]
                 let precipArray1 = fetchHourly1
                 nextHourCondition = "\(precipArray1.icon!.rawValue)"
@@ -355,6 +355,7 @@ public func fetchDarkSkyWeatherData() {
                 accumHour0 = hourAccumProb(value: 0, hour: hourly)
                 tempHour0 = hourTemp(value: 0, hour: hourly)
                 humidityHour0 = hourHumidity(value: 0, hour: hourly)
+                conditionHour0 = hourIcon(value: 0, hour: hourly)
                 uvindexHour0 = hourUVIndex(value: 0, hour: hourly)
                 windSpeedHour0 = hourWindSpeed(value: 0, hour: hourly)
                 cloudCoverHour0 = hourCloudCover(value: 0, hour: hourly)

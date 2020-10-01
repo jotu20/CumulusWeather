@@ -430,6 +430,12 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            if currentLocation.isEmpty == false {
+                self.locationManager.stopUpdatingLocation()
+            }
+        }
     }
     
     // MARK: - Fetch denied location access
@@ -533,12 +539,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         
         setWeatherDataLabels()
         setColorTheme()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            if currentLocation.isEmpty == false {
-                self.locationManager.stopUpdatingLocation()
-            }
-        }
     }
     
     // MARK: - Set the user set theme

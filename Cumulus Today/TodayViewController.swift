@@ -145,18 +145,18 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         hour4Time.text = "\(hour13)"
         hour5Time.text = "\(hour15)"
         
-        hour0Image.image = UIImage(named: weatherCondition(condition: conditionHour1, type: "widget", circle: universalIcons))
-        hour1Image.image = UIImage(named: weatherCondition(condition: conditionHour2, type: "widget", circle: universalIcons))
-        hour2Image.image = UIImage(named: weatherCondition(condition: conditionHour3, type: "widget", circle: universalIcons))
-        hour3Image.image = UIImage(named: weatherCondition(condition: conditionHour4, type: "widget", circle: universalIcons))
-        hour4Image.image = UIImage(named: weatherCondition(condition: conditionHour5, type: "widget", circle: universalIcons))
-        hour5Image.image = UIImage(named: weatherCondition(condition: conditionHour6, type: "widget", circle: universalIcons))
-        hour6Image.image = UIImage(named: weatherCondition(condition: conditionHour7, type: "widget", circle: universalIcons))
-        hour7Image.image = UIImage(named: weatherCondition(condition: conditionHour8, type: "widget", circle: universalIcons))
-        hour8Image.image = UIImage(named: weatherCondition(condition: conditionHour10, type: "widget", circle: universalIcons))
-        hour9Image.image = UIImage(named: weatherCondition(condition: conditionHour11, type: "widget", circle: universalIcons))
-        hour10Image.image = UIImage(named: weatherCondition(condition: conditionHour13, type: "widget", circle: universalIcons))
-        hour11Image.image = UIImage(named: weatherCondition(condition: conditionHour15, type: "widget", circle: universalIcons))
+        hour0Image.image = UIImage(named: weatherCondition(condition: conditionHour1, type: "today_ext", circle: universalIcons))
+        hour1Image.image = UIImage(named: weatherCondition(condition: conditionHour2, type: "today_ext", circle: universalIcons))
+        hour2Image.image = UIImage(named: weatherCondition(condition: conditionHour3, type: "today_ext", circle: universalIcons))
+        hour3Image.image = UIImage(named: weatherCondition(condition: conditionHour4, type: "today_ext", circle: universalIcons))
+        hour4Image.image = UIImage(named: weatherCondition(condition: conditionHour5, type: "today_ext", circle: universalIcons))
+        hour5Image.image = UIImage(named: weatherCondition(condition: conditionHour6, type: "today_ext", circle: universalIcons))
+        hour6Image.image = UIImage(named: weatherCondition(condition: conditionHour7, type: "today_ext", circle: universalIcons))
+        hour7Image.image = UIImage(named: weatherCondition(condition: conditionHour8, type: "today_ext", circle: universalIcons))
+        hour8Image.image = UIImage(named: weatherCondition(condition: conditionHour10, type: "today_ext", circle: universalIcons))
+        hour9Image.image = UIImage(named: weatherCondition(condition: conditionHour11, type: "today_ext", circle: universalIcons))
+        hour10Image.image = UIImage(named: weatherCondition(condition: conditionHour13, type: "today_ext", circle: universalIcons))
+        hour11Image.image = UIImage(named: weatherCondition(condition: conditionHour15, type: "today_ext", circle: universalIcons))
         
         hour0Value.text = "\(tempHour0)°"
         hour1Value.text = "\(tempHour3)°"

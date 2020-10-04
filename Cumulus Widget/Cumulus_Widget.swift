@@ -2,7 +2,7 @@
 //  Cumulus_Widget.swift
 //  Cumulus Widget
 //
-//  Created by Joseph Szafarowicz on 9/19/20.
+//  Created by Joseph Szafarowicz on 10/3/20.
 //  Copyright © 2020 Joseph Szafarowicz. All rights reserved.
 //
 
@@ -11,19 +11,38 @@ import SwiftUI
 import CoreLocation
 import ForecastIO
 
-struct WidgetData {
+struct Provider: TimelineProvider {
+    func placeholder(in context: Context) -> SimpleEntry {
+        SimpleEntry(date: Date())
+    }
+
+    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
+        let entry = SimpleEntry(date: Date())
+        completion(entry)
+    }
+
+    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+        var entries: [SimpleEntry] = []
+
+        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
+        let currentDate = Date()
+        for hourOffset in 0 ..< 5 {
+            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
+            let entry = SimpleEntry(date: entryDate)
+            entries.append(entry)
+        }
+
+        let timeline = Timeline(entries: entries, policy: .atEnd)
+        completion(timeline)
+    }
+}
+
+struct SimpleEntry: TimelineEntry {
     let date: Date
-    let latitude: Double
-    let longitude: Double 
 }
 
-extension WidgetData {
-    static let previewData = WidgetData(date: Date(), latitude: latitudeValue, longitude: longitudeValue)
-}
-
-@available(iOS 14.0, *)
-struct WidgetView: View {
-    let data: WidgetData
+struct Cumulus_WidgetEntryView : View {
+    var entry: Provider.Entry
     
     @ObservedObject var locationManager = LocationManager()
     @Environment(\.widgetFamily) var widgetFamily
@@ -40,7 +59,7 @@ struct WidgetView: View {
                         .frame(maxWidth: .infinity, maxHeight: 10, alignment: .bottom)
                         .foregroundColor(Color(dodgerBlue))
                     HStack {
-                        Image(weatherCondition(condition: currentCondition, type: "image", circle: universalIcons))
+                        Image(weatherCondition(condition: currentCondition, type: "widget", circle: universalIcons))
                             .resizable()
                             .frame(maxWidth: 60, maxHeight: 60, alignment: .center)
                         Text("\(currentTemperature)°")
@@ -54,7 +73,7 @@ struct WidgetView: View {
                         .foregroundColor(Color(dodgerBlue))
                 }
             }
-            
+
             if widgetFamily == .systemMedium {
                 Color(UIColor.systemBackground)
                 VStack {
@@ -70,143 +89,153 @@ struct WidgetView: View {
                                 .frame(maxWidth: 80, maxHeight: 50, alignment: .leading)
                                 .foregroundColor(Color(dodgerBlue))
                         }
-                        VStack {
+                        VStack(alignment: .trailing) {
                             Text("\(currentSummary)")
                                 .font(Font.body.weight(.regular))
-                                .frame(maxWidth: 150, maxHeight: 60, alignment: .top)
+                                .frame(maxWidth: 150, maxHeight: 25, alignment: .trailing)
                                 .foregroundColor(Color(dodgerBlue))
+                            HStack {
+                                Text("\(highTemperature)° \(lowTemperature)°")
+                                    .font(Font.body.weight(.regular))
+                                    .frame(maxWidth: 150, maxHeight: 25, alignment: .trailing)
+                                    .foregroundColor(Color(dodgerBlue))
+                            }
                         }
                     }
-                    
+
                     // Hourly values
                     HStack(spacing: 20) {
                         VStack {
-                            Text("Now")
+                            Text("NOW")
                                 .font(Font.subheadline.weight(.medium))
-                                .frame(maxWidth: 40, maxHeight: 10, alignment: .center)
+                                .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                                 .foregroundColor(Color(dodgerBlue))
                             Image(weatherCondition(condition: conditionHour1, type: "widget", circle: universalIcons))
                                 .resizable()
-                                .frame(maxWidth: 40, maxHeight: 40, alignment: .center)
-                            Text("100%")
+                                .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
+                            Text("\(tempHour0)°")
                                 .font(Font.subheadline.weight(.regular))
-                                .frame(maxWidth: 40, maxHeight: 10, alignment: .center)
+                                .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                                 .foregroundColor(Color(dodgerBlue))
                         }
                         VStack {
                             Text("\(hour3)")
                                 .font(Font.subheadline.weight(.medium))
-                                .frame(maxWidth: 40, maxHeight: 10, alignment: .center)
+                                .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                                 .foregroundColor(Color(dodgerBlue))
                             Image(weatherCondition(condition: conditionHour3, type: "widget", circle: universalIcons))
                                 .resizable()
-                                .frame(maxWidth: 40, maxHeight: 40, alignment: .center)
-                            Text("100%")
+                                .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
+                            Text("\(tempHour3)°")
                                 .font(Font.subheadline.weight(.regular))
-                                .frame(maxWidth: 40, maxHeight: 10, alignment: .center)
+                                .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                                 .foregroundColor(Color(dodgerBlue))
                         }
                         VStack {
                             Text("\(hour6)")
                                 .font(Font.subheadline.weight(.medium))
-                                .frame(maxWidth: 40, maxHeight: 10, alignment: .center)
+                                .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                                 .foregroundColor(Color(dodgerBlue))
                             Image(weatherCondition(condition: conditionHour6, type: "widget", circle: universalIcons))
                                 .resizable()
-                                .frame(maxWidth: 40, maxHeight: 40, alignment: .center)
-                            Text("100%")
+                                .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
+                            Text("\(tempHour6)°")
                                 .font(Font.subheadline.weight(.regular))
-                                .frame(maxWidth: 40, maxHeight: 10, alignment: .center)
+                                .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                                 .foregroundColor(Color(dodgerBlue))
                         }
                         VStack {
                             Text("\(hour10)")
                                 .font(Font.subheadline.weight(.medium))
-                                .frame(maxWidth: 40, maxHeight: 10, alignment: .center)
+                                .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                                 .foregroundColor(Color(dodgerBlue))
                             Image(weatherCondition(condition: conditionHour10, type: "widget", circle: universalIcons))
                                 .resizable()
-                                .frame(maxWidth: 40, maxHeight: 40, alignment: .center)
-                            Text("100%")
+                                .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
+                            Text("\(tempHour10)°")
                                 .font(Font.subheadline.weight(.regular))
-                                .frame(maxWidth: 40, maxHeight: 10, alignment: .center)
+                                .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                                 .foregroundColor(Color(dodgerBlue))
                         }
                         VStack {
                             Text("\(hour13)")
                                 .font(Font.subheadline.weight(.medium))
-                                .frame(maxWidth: 40, maxHeight: 10, alignment: .center)
+                                .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                                 .foregroundColor(Color(dodgerBlue))
                             Image(weatherCondition(condition: conditionHour13, type: "widget", circle: universalIcons))
                                 .resizable()
-                                .frame(maxWidth: 40, maxHeight: 40, alignment: .center)
-                            Text("100%")
+                                .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
+                            Text("\(tempHour13)°")
                                 .font(Font.subheadline.weight(.regular))
-                                .frame(maxWidth: 40, maxHeight: 10, alignment: .center)
+                                .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                                 .foregroundColor(Color(dodgerBlue))
                         }
                         VStack {
                             Text("\(hour15)")
                                 .font(Font.subheadline.weight(.medium))
-                                .frame(maxWidth: 40, maxHeight: 10, alignment: .center)
+                                .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                                 .foregroundColor(Color(dodgerBlue))
                             Image(weatherCondition(condition: conditionHour15, type: "widget", circle: universalIcons))
                                 .resizable()
-                                .frame(maxWidth: 40, maxHeight: 40, alignment: .center)
-                            Text("100%")
+                                .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
+                            Text("\(tempHour15)°")
                                 .font(Font.subheadline.weight(.regular))
-                                .frame(maxWidth: 40, maxHeight: 10, alignment: .center)
+                                .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                                 .foregroundColor(Color(dodgerBlue))
                         }
                     }
                 }
             }
-            
+
             if widgetFamily == .systemLarge {
-                
+
             }
         }
     }
 }
 
-struct WidgetView_Previews:  PreviewProvider {
-    static var previews: some View {
-        Group {
-            if #available(iOS 14.0, *) {
-                WidgetView(data:
-                    .previewData)
-                    .previewContext(WidgetPreviewContext(family: .systemSmall))
-                WidgetView(data:
-                    .previewData)
-                    .previewContext(WidgetPreviewContext(family: .systemMedium))
-                WidgetView(data:
-                    .previewData)
-                    .previewContext(WidgetPreviewContext(family: .systemLarge))
-            } else {
-                // Fallback on earlier versions
-            }
+@main
+struct Cumulus_Widget: Widget {
+    let kind: String = "Cumulus_Widget"
+
+    var body: some WidgetConfiguration {
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+            Cumulus_WidgetEntryView(entry: entry)
         }
+        .configurationDisplayName("Cumulus Widget")
+        .description("This is an example widget.")
+    }
+}
+
+struct Cumulus_Widget_Previews: PreviewProvider {
+    static var previews: some View {
+        Cumulus_WidgetEntryView(entry: SimpleEntry(date: Date()))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        Cumulus_WidgetEntryView(entry: SimpleEntry(date: Date()))
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
+        Cumulus_WidgetEntryView(entry: SimpleEntry(date: Date()))
+            .previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }
 
 class LocationManager: NSObject, ObservableObject {
     override init() {
         super.init()
-        
+
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.distanceFilter = 100
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
-        
+
         latitudeValue = 37.3230 //(locationManager.location?.coordinate.latitude)!
         longitudeValue = -122.0322 //(locationManager.location?.coordinate.longitude)!
         fetchDarkSkyWeatherData()
-        
+
         geocode(latitude: latitudeValue, longitude: longitudeValue) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
-            
+
             // Set state/province for respective locations
             if placemark.locality != nil && placemark.administrativeArea != nil && placemark.country != nil {
                 if placemark.country! == "Micronesia" || placemark.country! == "Myanmar" || placemark.country! == "United States" {

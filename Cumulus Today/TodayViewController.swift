@@ -231,7 +231,8 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     
     // MARK: - Get location and weather data
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
+        latitudeValue = (manager.location?.coordinate.latitude)!
+        longitudeValue = (manager.location?.coordinate.longitude)!
         
         geocode(latitude: latitudeValue, longitude: longitudeValue) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
@@ -250,6 +251,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             }
             self.currentLocationLabel.text = "\(currentLocation)"
             self.locationManager.stopUpdatingLocation()
+            fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.setWidgetLabels()
@@ -261,7 +263,6 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     // MARK: - Show error when location cannot be found
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Failed to find user's location: \(error.localizedDescription)")
-        fetchDarkSkyWeatherData(lat: universalLatitude, long: universalLongitude)
         
         geocode(latitude: universalLatitude, longitude: universalLongitude) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
@@ -280,6 +281,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
             }
             self.currentLocationLabel.text = "\(currentLocation)"
             self.locationManager.stopUpdatingLocation()
+            fetchDarkSkyWeatherData(lat: universalLatitude, long: universalLongitude)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.setWidgetLabels()

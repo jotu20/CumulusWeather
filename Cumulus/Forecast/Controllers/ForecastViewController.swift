@@ -371,9 +371,9 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
 
                 latitudeValue = location.coordinate.latitude
                 longitudeValue = location.coordinate.longitude
-                
                 currentLocation = selectedLocation
-                self.setupInitialData()
+                self.locationManager.stopUpdatingLocation()
+                fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
             }
         } else {
             latitudeValue = (manager.location?.coordinate.latitude)!
@@ -394,7 +394,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                 } else {
                     currentLocation = "\(placemark.name!), \(placemark.country!)"
                 }
-                self.setupInitialData()
+                self.locationManager.stopUpdatingLocation()
+                fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
             }
         }
     }
@@ -430,12 +431,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            if currentLocation.isEmpty == false {
-                self.locationManager.stopUpdatingLocation()
-            }
-        }
     }
     
     // MARK: - Fetch denied location access
@@ -461,7 +456,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                 UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(latitudeValue, forKey: "setWidgetLatitude")
                 UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(longitudeValue, forKey: "setWidgetLongitude")
                 currentLocation = "\(defaults.string(forKey: "selectedLocation") ?? "New York, NY")"
-                self.setupInitialData()
+                fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
             }
         } else {
             showLocationDisabledPopUp()
@@ -500,13 +495,15 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                     print("Restricted access")
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         loadingView.removeFromSuperview()
-                        self.setupDeniedLocation()
+                        self.setWeatherDataLabels()
+                        self.setColorTheme()
                     }
                 case .authorizedAlways, .authorizedWhenInUse:
                     print("Access")
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         loadingView.removeFromSuperview()
-                        self.setupGrantedLocationServices()
+                        self.setWeatherDataLabels()
+                        self.setColorTheme()
                     }
                 @unknown default:
                 break
@@ -523,22 +520,17 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     // MARK: - Refresh data and labels
     @objc func didPullToRefresh() {
-        setupInitialData()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.refreshControl.endRefreshing()
-        }
-    }
-    
-    // MARK: Load weather data and UI elements
-    func setupInitialData() {
         if (defaults.string(forKey: "dataSource") == "Dark Sky") {
-            fetchDarkSkyWeatherData()
+            fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
         } else if (defaults.string(forKey: "dataSource") == "ClimaCell") {
             fetchClimaCellWeatherData()
         }
-        
         setWeatherDataLabels()
         setColorTheme()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.refreshControl.endRefreshing()
+        }
     }
     
     // MARK: - Set the user set theme

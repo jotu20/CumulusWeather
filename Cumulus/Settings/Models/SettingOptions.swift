@@ -63,6 +63,9 @@ var setUnits: String = ""
 var universalIcons: String = ""
 var setIcons: String = ""
 
+var universalColor: String = ""
+var setColor: String = ""
+
 var universalLatitude: Double = 0
 var universalLongitude: Double = 0
 var setWidgetLatitude: Double = 0
@@ -87,6 +90,10 @@ func universalSettings() {
     
     if let widgetSetIcons = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.string(forKey: "setIcons") {
         universalIcons = widgetSetIcons
+    }
+    
+    if let widgetSetColor = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.string(forKey: "setColor") {
+        universalColor = widgetSetColor
     }
 }
 

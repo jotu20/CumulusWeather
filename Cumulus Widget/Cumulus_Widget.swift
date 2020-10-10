@@ -12,60 +12,128 @@ import CoreLocation
 import ForecastIO
 
 struct ForecastTimeline: TimelineProvider {
+    var hasFetchedForecastStatus: Bool
+    var forecastStatusFromServer: String
+    
     func placeholder(in context: Context) -> ForecastEntry {
-//        let fakeForecast = Forecast(currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Clear")
-        ForecastEntry(date: Date())
+       return ForecastEntry(date: Date(), currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Partly cloudy for the hour.")
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (ForecastEntry) -> ()) {
-//        let fakeForecast = Forecast(currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Clear")
-        let entry = ForecastEntry(date: Date())
+//    func getSnapshot(in context: Context, completion: @escaping (ForecastEntry) -> ()) {
+//        let entry = ForecastEntry(date: Date(), currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Partly cloudy for the hour.")
+//        completion(entry)
+//    }
+    
+    func getSnapshot(in context: Context, completion: @escaping (ForecastEntry) -> Void) {
+        let date = Date()
+        let entry: ForecastEntry
+
+        if context.isPreview && !hasFetchedForecastStatus {
+            entry = ForecastEntry(date: date, currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Partly cloudy for the hour.")
+        } else {
+            entry = ForecastEntry(date: date, currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: forecastStatusFromServer)
+        }
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<ForecastEntry>) -> ()) {
         let currentDate = Date()
-        let refreshDate = Calendar.current.date(byAdding: .hour, value: 1, to: currentDate)!
-        ForecastLoader.fetch { result in
-//            let forecast: Forecast
-//            if case .success(let fetchedForecast) = result {
-//                forecast = fetchedForecast
-//            } else {
-//                forecast = Forecast(currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Clear")
-//            }
-            let entry = ForecastEntry(date: currentDate)
-            let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
-            completion(timeline)
-        }
+        let refreshDate = Calendar.current.date(byAdding: .minute, value: 30, to: currentDate)!
+        let entry = ForecastEntry(date: Date(), currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Partly cloudy for the hour.")
+        let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
+        completion(timeline)
     }
 }
 
-//struct Forecast {
-//    let currentLocation: String
-//    let currentTemperature: String
-//    let currentCondition: String
-//}
-
 struct ForecastLoader {
     static func fetch(completion: @escaping (Result<Forecast, Error>) -> Void) {
-        fetchDarkSkyWeatherData()
+        let widgetLocationManager = WidgetLocationManager()
+        
+        widgetLocationManager.fetchLocation(handler: { location in
+            latitudeValue = 37.3230 //location.coordinate.latitude  //37.3230
+            longitudeValue = -122.0322 //location.coordinate.longitude //-122.0322
+            //fetchDarkSkyWeatherData()
+
+            geocode(latitude: latitudeValue, longitude: longitudeValue) { placemark, error in
+                guard let placemark = placemark, error == nil else { return }
+
+                // Set state/province for respective locations
+                if placemark.locality != nil && placemark.administrativeArea != nil && placemark.country != nil {
+                    if placemark.country! == "Micronesia" || placemark.country! == "Myanmar" || placemark.country! == "United States" {
+                        currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                    } else if placemark.country! == "Japan" {
+                        currentLocation = "\(placemark.administrativeArea!), \(placemark.country!)"
+                     } else {
+                       currentLocation = "\(placemark.locality!), \(placemark.country!)"
+                    }
+                } else {
+                    currentLocation = "\(placemark.name!), \(placemark.country!)"
+                }
+            }
+        })
     }
-//    static func getForecastInfo(fromData data: Foundation.Data) -> Forecast {
-//        return Forecast(currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Clear")
-//    }
 }
 
 struct ForecastEntry: TimelineEntry {
     let date: Date
-//    let forecast: Forecast
+    var currentLocation: String
+    var currentTemperature: String
+    var currentCondition: String
+}
+
+struct PlaceholderView : View {
+    var body: some View {
+        ZStack {
+            Color(UIColor.systemBackground)
+            VStack {
+                Spacer()
+                    .frame(height: 20)
+                Text("Cupertino, CA")
+                    .font(Font.body.weight(.semibold))
+                    .frame(maxWidth: .infinity, maxHeight: 10, alignment: .bottom)
+                HStack {
+                    Image("Partly Cloudy")
+                        .resizable()
+                        .frame(maxWidth: 60, maxHeight: 60, alignment: .center)
+                    Text("79°")
+                        .font(Font.largeTitle.weight(.semibold))
+                        .frame(maxWidth: 80, maxHeight: 60, alignment: .leading)
+                }
+                Text("Partly cloudy for the hour.")
+                    .font(Font.body.weight(.regular))
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            }
+        }
+    }
 }
 
 struct CurrentForecastWidgetView : View {
     let entry: ForecastEntry
     
-    @ObservedObject var locationManager = LocationManager()
+//    var color = universalColor
+//    var textColor: Color!
 
     var body: some View {
+        
+//        if color == "Mango" {
+//            textColor = mango
+//        }
+//        if color == "Maximum Red" {
+//            textColor = maximumRed
+//        }
+//        if color == "Dodger Blue" {
+//            textColor = dodgerBlue
+//        }
+//        if color == "Plump Purple" {
+//            textColor = plumpPurple
+//        }
+//        if color == "Orchid" {
+//            textColor = orchid
+//        }
+//        if color == "Spring Green" {
+//            textColor = springGreen
+//        }
+        
         ZStack {
             Color(UIColor.systemBackground)
             VStack {
@@ -92,8 +160,6 @@ struct CurrentForecastWidgetView : View {
 
 struct HourlyForecastWidgetView : View {
     let entry: ForecastEntry
-    
-    @ObservedObject var locationManager = LocationManager()
 
     var body: some View {
         ZStack {
@@ -199,7 +265,7 @@ struct CurrentForecastWidget: Widget {
     let kind: String = "CurrentForecastWidget"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: ForecastTimeline()) { entry in
+        StaticConfiguration(kind: kind, provider: ForecastTimeline(hasFetchedForecastStatus: true, forecastStatusFromServer: "Test")) { entry in
             CurrentForecastWidgetView(entry: entry)
         }
         .configurationDisplayName("Current Forecast")
@@ -212,7 +278,7 @@ struct HourlyForecastWidget: Widget {
     let kind: String = "HourlyForecastWidget"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: ForecastTimeline()) { entry in
+        StaticConfiguration(kind: kind, provider: ForecastTimeline(hasFetchedForecastStatus: true, forecastStatusFromServer: "Test")) { entry in
             HourlyForecastWidgetView(entry: entry)
         }
         .configurationDisplayName("Hourly Forecast")
@@ -232,84 +298,44 @@ struct SwiftWidgetsBundle: WidgetBundle {
 
 struct Cumulus_Widget_Previews: PreviewProvider {
     static var previews: some View {
-//        let fakeForecast = Forecast(currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Clear")
-        CurrentForecastWidgetView(entry: ForecastEntry(date: Date()))
+        CurrentForecastWidgetView(entry: ForecastEntry(date: Date(), currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Partly cloudy for the hour."))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
-        HourlyForecastWidgetView(entry: ForecastEntry(date: Date()))
+        HourlyForecastWidgetView(entry: ForecastEntry(date: Date(), currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Partly cloudy for the hour."))
             .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
 
-class LocationManager: NSObject, ObservableObject {
+class WidgetLocationManager: NSObject, CLLocationManagerDelegate {
+    var locationManager: CLLocationManager?
+    private var handler: ((CLLocation) -> Void)?
+
     override init() {
         super.init()
-
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-        }
-
-        latitudeValue = (locationManager.location?.coordinate.latitude)! //37.3230
-        longitudeValue = (locationManager.location?.coordinate.longitude)! //-122.0322
-        fetchDarkSkyWeatherData()
-
-        geocode(latitude: latitudeValue, longitude: longitudeValue) { placemark, error in
-            guard let placemark = placemark, error == nil else { return }
-
-            // Set state/province for respective locations
-            if placemark.locality != nil && placemark.administrativeArea != nil && placemark.country != nil {
-                if placemark.country! == "Micronesia" || placemark.country! == "Myanmar" || placemark.country! == "United States" {
-                    currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
-                } else if placemark.country! == "Japan" {
-                    currentLocation = "\(placemark.administrativeArea!), \(placemark.country!)"
-                 } else {
-                   currentLocation = "\(placemark.locality!), \(placemark.country!)"
-                }
-            } else {
-                currentLocation = "\(placemark.name!), \(placemark.country!)"
+        DispatchQueue.main.async {
+            self.locationManager = CLLocationManager()
+            self.locationManager!.delegate = self
+            if self.locationManager!.authorizationStatus == .notDetermined {
+                self.locationManager!.requestWhenInUseAuthorization()
+            }
+            
+            if CLLocationManager.locationServicesEnabled() {
+                self.locationManager!.delegate = self
+                self.locationManager!.desiredAccuracy = kCLLocationAccuracyBest
+                self.locationManager!.startUpdatingLocation()
             }
         }
     }
-
-    @Published var locationStatus: CLAuthorizationStatus? {
-        willSet {
-            objectWillChange.send()
-        }
-    }
-
-    @Published var lastLocation: CLLocation? {
-        willSet {
-            objectWillChange.send()
-        }
-    }
-
-    var statusString: String {
-        guard let status = locationStatus else {
-            return "unknown"
-        }
-
-        switch status {
-        case .notDetermined: return "notDetermined"
-        case .authorizedWhenInUse: return "authorizedWhenInUse"
-        case .authorizedAlways: return "authorizedAlways"
-        case .restricted: return "restricted"
-        case .denied: return "denied"
-        default: return "unknown"
-        }
-    }
-    private let locationManager = CLLocationManager()
-}
-
-extension LocationManager: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        self.locationStatus = status
-        print(#function, statusString)
+    
+    func fetchLocation(handler: @escaping (CLLocation) -> Void) {
+        self.handler = handler
+        self.locationManager!.requestLocation()
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        self.lastLocation = location
-        print(#function, location)
+        self.handler!(locations.last!)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
     }
 }

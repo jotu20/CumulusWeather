@@ -231,10 +231,6 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     
     // MARK: - Get location and weather data
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        latitudeValue = (manager.location?.coordinate.latitude)!
-        longitudeValue = (manager.location?.coordinate.longitude)!
-        fetchDarkSkyWeatherData()
-        
         geocode(latitude: latitudeValue, longitude: longitudeValue) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
             
@@ -251,6 +247,8 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
                 currentLocation = "\(placemark.name!), \(placemark.country!)"
             }
             self.currentLocationLabel.text = "\(currentLocation)"
+            self.locationManager.stopUpdatingLocation()
+            fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.setWidgetLabels()
@@ -265,10 +263,6 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         geocode(latitude: universalLatitude, longitude: universalLongitude) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
             
-            latitudeValue = universalLatitude
-            longitudeValue = universalLongitude
-            fetchDarkSkyWeatherData()
-            
             // Set state/province for respective locations
             if placemark.locality != nil && placemark.administrativeArea != nil && placemark.country != nil {
                 if placemark.country! == "Micronesia" || placemark.country! == "Myanmar" || placemark.country! == "United States" {
@@ -282,6 +276,8 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
                 currentLocation = "\(placemark.name!), \(placemark.country!)"
             }
             self.currentLocationLabel.text = "\(currentLocation)"
+            self.locationManager.stopUpdatingLocation()
+            fetchDarkSkyWeatherData(lat: universalLatitude, long: universalLongitude)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.setWidgetLabels()

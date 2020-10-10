@@ -274,6 +274,7 @@ class ColorThemeTableViewController: UITableViewController {
             springGreenTableCell.accessoryType = .none
             autoThemeTableCell.accessoryType = .checkmark
         }
+        UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("\(userSavedColorString)", forKey: "setColor")
         
         let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ColorThemeTableViewController.doneBarButtonTapped))
         setupBarButtonColor(button: doneBarButton)

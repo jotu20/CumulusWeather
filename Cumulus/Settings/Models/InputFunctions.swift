@@ -47,8 +47,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Blizzard"
         } else if type == "daily" {
             conditionString = "Heavy_snow\(circle).pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Heavy_snow_widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Heavy_snow_widget\(circle)"
         }
     }
     
@@ -59,8 +61,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Clear"
         } else if type == "daily" {
             conditionString = "Clear\(circle).pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Clear_night_widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Clear_night_widget\(circle)"
         }
     }
     
@@ -71,8 +75,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Clear"
         } else if type == "daily" {
             conditionString = "Clear\(circle).pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Clear_widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Clear_widget\(circle)"
         }
     }
     
@@ -83,8 +89,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Cloudy & windy"
         } else if type == "daily" {
             conditionString = "Windy\(circle).pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Windy_widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Windy_widget\(circle)"
         }
     }
     
@@ -95,8 +103,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Cloudy"
         } else if type == "daily" {
             conditionString = "Cloudy\(circle).pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Cloudy_widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Cloudy_widget\(circle)"
         }
     }
     
@@ -107,8 +117,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Flurries"
         } else if type == "daily" {
             conditionString = "Flurries\(circle).pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Flurries_widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Flurries_widget\(circle)"
         }
     }
     
@@ -119,8 +131,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Fog"
         } else if type == "daily" {
             conditionString = "Fog\(circle).pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Fog_widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Fog_widget\(circle)"
         }
     }
     
@@ -131,8 +145,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Freezing rain"
         } else if type == "daily" {
             conditionString = "Freezing_rain\(circle).pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Freezing_rain widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Freezing_rain widget\(circle)"
         }
     }
     
@@ -143,8 +159,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Partly cloudy"
         } else if type == "daily" {
             conditionString = "Partly_cloudy\(circle).pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Partly_cloudy_night_widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Partly_cloudy_night_widget\(circle)"
         }
     }
     
@@ -155,8 +173,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Partly cloudy & rain"
         } else if type == "daily" {
             conditionString = "Rain\(circle).pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Rain_widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Rain_widget\(circle)"
         }
     }
     
@@ -167,8 +187,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Partly cloudy & snow"
         } else if type == "daily" {
             conditionString = "Snow\(circle).pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Snow_widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Snow_widget\(circle)"
         }
     }
     
@@ -179,8 +201,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Partly cloudy"
         } else if type == "daily" {
             conditionString = "Partly_cloudy\(circle).pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Partly_cloudy_widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Partly_cloudy_widget\(circle)"
         }
     }
     
@@ -191,8 +215,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Rain"
         } else if type == "daily" {
             conditionString = "Rain\(circle).pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Rain_widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Rain_widget\(circle)"
         }
     }
     
@@ -203,8 +229,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Snow"
         } else if type == "daily" {
             conditionString = "Snow\(circle).pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Snow_widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Snow_widget\(circle)"
         }
     }
     
@@ -215,8 +243,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Thunderstorm"
         } else if type == "daily" {
             conditionString = "Thunderstorm\(circle).pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Thunderstorm_widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Thunderstorm_widget\(circle)"
         }
     }
     
@@ -227,8 +257,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Windy"
         } else if type == "daily" {
             conditionString = "Windy\(circle).pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Windy_widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Windy_widget\(circle)"
         }
     }
     
@@ -239,8 +271,10 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
             conditionString = "Partly Cloudy"
         } else if type == "daily" {
             conditionString = "Partly Cloudy.pdf"
-        } else if type == "widget" {
+        } else if type == "today_ext" {
             conditionString = "Partly Cloudy widget.pdf"
+        } else if type == "widget" {
+            conditionString = "Partly Cloudy widget"
         }
     }
     

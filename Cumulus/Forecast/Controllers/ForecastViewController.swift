@@ -352,6 +352,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         defaults.set((defaults.integer(forKey: "userViewedCounter") + 1), forKey: "userViewedCounter")
         if defaults.integer(forKey: "userViewedCounter") == 10 {
             SKStoreReviewController.requestReview()
+        } else if defaults.integer(forKey: "userViewedCounter") == 1 {
+            self.setWeatherDataLabels()
         }
     }
     

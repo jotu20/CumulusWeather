@@ -12,73 +12,33 @@ import CoreLocation
 import ForecastIO
 
 struct ForecastTimeline: TimelineProvider {
-    var hasFetchedForecastStatus: Bool
-    var forecastStatusFromServer: String
-    
     func placeholder(in context: Context) -> ForecastEntry {
-       return ForecastEntry(date: Date(), currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Partly cloudy for the hour.")
+        return ForecastEntry(date: Date(), latitude: 37.3230, longitude: -122.0322, currentLocation: "Cupertino,CA", currentCondition: "Partly Cloudy", currentTemperature: 79, currentSummary: "Partly cloudy for the hour.")
     }
 
-//    func getSnapshot(in context: Context, completion: @escaping (ForecastEntry) -> ()) {
-//        let entry = ForecastEntry(date: Date(), currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Partly cloudy for the hour.")
-//        completion(entry)
-//    }
-    
-    func getSnapshot(in context: Context, completion: @escaping (ForecastEntry) -> Void) {
-        let date = Date()
-        let entry: ForecastEntry
-
-        if context.isPreview && !hasFetchedForecastStatus {
-            entry = ForecastEntry(date: date, currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Partly cloudy for the hour.")
-        } else {
-            entry = ForecastEntry(date: date, currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: forecastStatusFromServer)
-        }
-        completion(entry)
+    func getSnapshot(in context: Context, completion: @escaping (ForecastEntry) -> ()) {
+        let entry = ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary)
+        return completion(entry)
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<ForecastEntry>) -> ()) {
+    func getTimeline(in context: Context, completion: @escaping (Timeline<ForecastEntry>) -> Void) {
         let currentDate = Date()
-        let refreshDate = Calendar.current.date(byAdding: .minute, value: 30, to: currentDate)!
-        let entry = ForecastEntry(date: Date(), currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Partly cloudy for the hour.")
+        let refreshDate = Calendar.current.date(byAdding: .minute, value: 10, to: currentDate)!
+        let entry = ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary)
         let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
         completion(timeline)
     }
 }
 
-struct ForecastLoader {
-    static func fetch(completion: @escaping (Result<Forecast, Error>) -> Void) {
-        let widgetLocationManager = WidgetLocationManager()
-        
-        widgetLocationManager.fetchLocation(handler: { location in
-            latitudeValue = 37.3230 //location.coordinate.latitude  //37.3230
-            longitudeValue = -122.0322 //location.coordinate.longitude //-122.0322
-            //fetchDarkSkyWeatherData()
-
-            geocode(latitude: latitudeValue, longitude: longitudeValue) { placemark, error in
-                guard let placemark = placemark, error == nil else { return }
-
-                // Set state/province for respective locations
-                if placemark.locality != nil && placemark.administrativeArea != nil && placemark.country != nil {
-                    if placemark.country! == "Micronesia" || placemark.country! == "Myanmar" || placemark.country! == "United States" {
-                        currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
-                    } else if placemark.country! == "Japan" {
-                        currentLocation = "\(placemark.administrativeArea!), \(placemark.country!)"
-                     } else {
-                       currentLocation = "\(placemark.locality!), \(placemark.country!)"
-                    }
-                } else {
-                    currentLocation = "\(placemark.name!), \(placemark.country!)"
-                }
-            }
-        })
-    }
-}
-
 struct ForecastEntry: TimelineEntry {
     let date: Date
+    let latitude: Double
+    let longitude: Double
+    
     var currentLocation: String
-    var currentTemperature: String
     var currentCondition: String
+    var currentTemperature: Int
+    var currentSummary: String
 }
 
 struct PlaceholderView : View {
@@ -108,11 +68,11 @@ struct PlaceholderView : View {
 }
 
 struct CurrentForecastWidgetView : View {
-    let entry: ForecastEntry
+    let data: ForecastEntry
+    @ObservedObject var locationManager = LocationManager()
     
 //    var color = universalColor
 //    var textColor: Color!
-
     var body: some View {
         
 //        if color == "Mango" {
@@ -139,18 +99,18 @@ struct CurrentForecastWidgetView : View {
             VStack {
                 Spacer()
                     .frame(height: 20)
-                Text("\(currentLocation)")
+                Text("\(data.currentLocation)")
                     .font(Font.body.weight(.semibold))
                     .frame(maxWidth: .infinity, maxHeight: 10, alignment: .bottom)
                 HStack {
-                    Image(weatherCondition(condition: currentCondition, type: "widget", circle: universalIcons))
+                    Image(weatherCondition(condition: data.currentCondition, type: "widget", circle: universalIcons))
                         .resizable()
                         .frame(maxWidth: 60, maxHeight: 60, alignment: .center)
-                    Text("\(currentTemperature)°")
+                    Text("\(data.currentTemperature)°")
                         .font(Font.largeTitle.weight(.semibold))
                         .frame(maxWidth: 80, maxHeight: 60, alignment: .leading)
                 }
-                Text("\(currentSummary)")
+                Text("\(data.currentSummary)")
                     .font(Font.body.weight(.regular))
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             }
@@ -159,7 +119,8 @@ struct CurrentForecastWidgetView : View {
 }
 
 struct HourlyForecastWidgetView : View {
-    let entry: ForecastEntry
+    let data: ForecastEntry
+    @ObservedObject var locationManager = LocationManager()
 
     var body: some View {
         ZStack {
@@ -262,11 +223,11 @@ struct HourlyForecastWidgetView : View {
 }
 
 struct CurrentForecastWidget: Widget {
-    let kind: String = "CurrentForecastWidget"
+    private let kind = "CurrentForecastWidget"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: ForecastTimeline(hasFetchedForecastStatus: true, forecastStatusFromServer: "Test")) { entry in
-            CurrentForecastWidgetView(entry: entry)
+        StaticConfiguration(kind: kind, provider: ForecastTimeline()) { entry in
+            CurrentForecastWidgetView(data: ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary))
         }
         .configurationDisplayName("Current Forecast")
         .description("Shows the current forecast in your area.")
@@ -275,11 +236,11 @@ struct CurrentForecastWidget: Widget {
 }
 
 struct HourlyForecastWidget: Widget {
-    let kind: String = "HourlyForecastWidget"
+    private let kind = "HourlyForecastWidget"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: ForecastTimeline(hasFetchedForecastStatus: true, forecastStatusFromServer: "Test")) { entry in
-            HourlyForecastWidgetView(entry: entry)
+        StaticConfiguration(kind: kind, provider: ForecastTimeline()) { entry in
+            HourlyForecastWidgetView(data: ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary))
         }
         .configurationDisplayName("Hourly Forecast")
         .description("Shows the hourly forecasts in your area.")
@@ -298,44 +259,104 @@ struct SwiftWidgetsBundle: WidgetBundle {
 
 struct Cumulus_Widget_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentForecastWidgetView(entry: ForecastEntry(date: Date(), currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Partly cloudy for the hour."))
+        CurrentForecastWidgetView(data: ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
-        HourlyForecastWidgetView(entry: ForecastEntry(date: Date(), currentLocation: "Cupertino, CA", currentTemperature: "79°", currentCondition: "Partly cloudy for the hour."))
+        HourlyForecastWidgetView(data: ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary))
             .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
 
-class WidgetLocationManager: NSObject, CLLocationManagerDelegate {
-    var locationManager: CLLocationManager?
-    private var handler: ((CLLocation) -> Void)?
-
+class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
+    private let locationManager = CLLocationManager()
+    
     override init() {
         super.init()
-        DispatchQueue.main.async {
-            self.locationManager = CLLocationManager()
-            self.locationManager!.delegate = self
-            if self.locationManager!.authorizationStatus == .notDetermined {
-                self.locationManager!.requestWhenInUseAuthorization()
-            }
+
+        if CLLocationManager.locationServicesEnabled() {
+            self.locationManager.delegate = self
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            self.locationManager.startUpdatingLocation()
             
-            if CLLocationManager.locationServicesEnabled() {
-                self.locationManager!.delegate = self
-                self.locationManager!.desiredAccuracy = kCLLocationAccuracyBest
-                self.locationManager!.startUpdatingLocation()
-            }
+//            latitudeValue = 37.3230
+//            longitudeValue = -122.0322
+//
+//            latitudeValue = (locationManager.location?.coordinate.latitude)!
+//            longitudeValue = (locationManager.location?.coordinate.longitude)!
+//
+//            geocode(latitude: latitudeValue, longitude: longitudeValue) { placemark, error in
+//                guard let placemark = placemark, error == nil else { return }
+//
+//                // Set state/province for respective locations
+//                if placemark.locality != nil && placemark.administrativeArea != nil && placemark.country != nil {
+//                    if placemark.country! == "Micronesia" || placemark.country! == "Myanmar" || placemark.country! == "United States" {
+//                        currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
+//                    } else if placemark.country! == "Japan" {
+//                        currentLocation = "\(placemark.administrativeArea!), \(placemark.country!)"
+//                     } else {
+//                       currentLocation = "\(placemark.locality!), \(placemark.country!)"
+//                    }
+//                } else {
+//                    currentLocation = "\(placemark.name!), \(placemark.country!)"
+//                }
+//                self.locationManager.stopUpdatingLocation()
+//                fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
+//            }
+        }
+    }
+
+    @Published var locationStatus: CLAuthorizationStatus? {
+        willSet {
+            objectWillChange.send()
+        }
+    }
+
+    @Published var lastLocation: CLLocation? {
+        willSet {
+            objectWillChange.send()
+        }
+    }
+
+    var statusString: String {
+        guard let status = locationStatus else {
+            return "unknown"
+        }
+
+        switch status {
+        case .notDetermined: return "notDetermined"
+        case .authorizedWhenInUse: return "authorizedWhenInUse"
+        case .authorizedAlways: return "authorizedAlways"
+        case .restricted: return "restricted"
+        case .denied: return "denied"
+        default: return "unknown"
         }
     }
     
-    func fetchLocation(handler: @escaping (CLLocation) -> Void) {
-        self.handler = handler
-        self.locationManager!.requestLocation()
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        self.locationStatus = status
+        print(#function, statusString)
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        self.handler!(locations.last!)
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error)
+        latitudeValue = 37.3230 //(manager.location?.coordinate.latitude)!
+        longitudeValue = -122.0322 //(manager.location?.coordinate.longitude)!
+
+        geocode(latitude: latitudeValue, longitude: longitudeValue) { placemark, error in
+            guard let placemark = placemark, error == nil else { return }
+
+            // Set state/province for respective locations
+            if placemark.locality != nil && placemark.administrativeArea != nil && placemark.country != nil {
+                if placemark.country! == "Micronesia" || placemark.country! == "Myanmar" || placemark.country! == "United States" {
+                    currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                } else if placemark.country! == "Japan" {
+                    currentLocation = "\(placemark.administrativeArea!), \(placemark.country!)"
+                 } else {
+                   currentLocation = "\(placemark.locality!), \(placemark.country!)"
+                }
+            } else {
+                currentLocation = "\(placemark.name!), \(placemark.country!)"
+            }
+            self.locationManager.stopUpdatingLocation()
+            fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
+        }
     }
 }

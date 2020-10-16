@@ -23,4 +23,9 @@ target 'Cumulus' do
 	pod 'ForecastIO', '8.0.0'
  	end
 
+	target 'Cumulus WidgetExtension' do 
+
+	pod 'ForecastIO', '8.0.0'
+ 	end
+
 end 

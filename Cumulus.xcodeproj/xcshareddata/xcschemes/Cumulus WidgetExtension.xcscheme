@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CFEF393E25164B080051D347"
+               BlueprintIdentifier = "CFD9CDF92535FD3200CB128E"
                BuildableName = "Cumulus WidgetExtension.appex"
                BlueprintName = "Cumulus WidgetExtension"
                ReferencedContainer = "container:Cumulus.xcodeproj">

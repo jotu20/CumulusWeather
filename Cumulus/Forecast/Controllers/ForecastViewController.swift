@@ -991,7 +991,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
     
     // MARK: - Action to open weather alerts
-    @IBAction func weatherAlertsButtonTapped(_ sender: UIButton) {
+    @IBAction func weatherAlertTapGestureTapped(_ sender: UITapGestureRecognizer) {
         let svc = SFSafariViewController(url: URL(string: alertURI)!)
         present(svc, animated: true, completion: nil)
     }

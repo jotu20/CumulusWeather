@@ -3170,6 +3170,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T3H-rO-peV">
                                                         <rect key="frame" x="35" y="0.0" width="315" height="30"/>
+                                                        <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="315" id="0Ts-4i-a76"/>
                                                             <constraint firstAttribute="height" constant="30" id="9Z6-bG-BRE"/>
@@ -3177,6 +3178,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="AZ9-fl-zMH" appends="YES" id="tnJ-qK-lwX"/>
+                                                        </connections>
                                                     </label>
                                                 </subviews>
                                             </stackView>
@@ -5684,6 +5688,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tbp-tq-TEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="AZ9-fl-zMH">
+                    <connections>
+                        <action selector="weatherAlertTapGestureTapped:" destination="tbR-PR-y6h" id="x4L-sw-xbZ"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <tapGestureRecognizer id="tBM-35-NUx">
                     <connections>
                         <action selector="currentConditionsTapped:" destination="tbR-PR-y6h" id="iDA-jy-h6y"/>

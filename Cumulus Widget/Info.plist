@@ -26,8 +26,8 @@
 		<string>com.apple.widgetkit-extension</string>
 	</dict>
 	<key>NSLocationUsageDescription</key>
-	<string>Allows Cumulus to show you the latest weather for your area.</string>
+	<string>Allows Cumulus to retrieve the latest weather for your area.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Allows Cumulus to show you the latest weather for your area.</string>
+	<string>Allows Cumulus to retrieve the latest weather for your area.</string>
 </dict>
 </plist>

@@ -326,9 +326,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationUsageDescription</key>
-	<string>Allows Cumulus to show you the latest weather for your area.</string>
+	<string>Allows Cumulus to retrieve the latest weather for your area.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Allows Cumulus to show you the latest weather for your area.</string>
+	<string>Allows Cumulus to retrieve the latest weather for your area.</string>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>ForecastIntent</string>

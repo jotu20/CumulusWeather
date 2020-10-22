@@ -23,6 +23,8 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
     @IBOutlet weak var currentLocationLabel: UILabel!
     @IBOutlet weak var currentConditionLabel: UILabel!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
+    @IBOutlet weak var currentHighTemperatureLabel: UILabel!
+    @IBOutlet weak var currentLowTemperatureLabel: UILabel!
     
     @IBOutlet weak var precipitationLabel: UILabel!
     @IBOutlet weak var accumulationLabel: UILabel!
@@ -93,6 +95,8 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         }
         
         currentTemperatureLabel.text = "\(currentTemperature)°"
+        currentHighTemperatureLabel.text = "\(day0High)°"
+        currentLowTemperatureLabel.text = "\(day0Low)°"
         currentConditionLabel.text = "\(currentSummary.capitalizingFirstLetter())"
         currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image", circle: universalIcons))
         
@@ -166,28 +170,28 @@ class TodayViewController: UIViewController, NCWidgetProviding, CLLocationManage
         hour5Value.text = "\(tempHour15)°"
         
         // Day Zero
-        day0Label.text = "\(day0DayString)"
-        day0ConditionImage.image = UIImage(named: weatherCondition(condition: day0Condition, type: "daily", circle: universalIcons))
-        day0HighLabel.text = "\(day0High)°"
-        day0LowLabel.text = "\(day0Low)°"
+        day0Label.text = "\(day1DayString)"
+        day0ConditionImage.image = UIImage(named: weatherCondition(condition: day1Condition, type: "daily", circle: universalIcons))
+        day0HighLabel.text = "\(day1High)°"
+        day0LowLabel.text = "\(day1Low)°"
         
         // Day One
-        day1Label.text = "\(day1DayString)"
-        day1ConditionImage.image = UIImage(named: weatherCondition(condition: day1Condition, type: "daily", circle: universalIcons))
-        day1HighLabel.text = "\(day1High)°"
-        day1LowLabel.text = "\(day1Low)°"
+        day1Label.text = "\(day2DayString)"
+        day1ConditionImage.image = UIImage(named: weatherCondition(condition: day2Condition, type: "daily", circle: universalIcons))
+        day1HighLabel.text = "\(day2High)°"
+        day1LowLabel.text = "\(day2Low)°"
         
         // Day Two
-        day2Label.text = "\(day2DayString)"
-        day2ConditionImage.image = UIImage(named: weatherCondition(condition: day2Condition, type: "daily", circle: universalIcons))
-        day2HighLabel.text = "\(day2High)°"
-        day2LowLabel.text = "\(day2Low)°"
+        day2Label.text = "\(day3DayString)"
+        day2ConditionImage.image = UIImage(named: weatherCondition(condition: day3Condition, type: "daily", circle: universalIcons))
+        day2HighLabel.text = "\(day3High)°"
+        day2LowLabel.text = "\(day3Low)°"
         
         // Day Three
-        day3Label.text = "\(day3DayString)"
-        day3ConditionImage.image = UIImage(named: weatherCondition(condition: day3Condition, type: "daily", circle: universalIcons))
-        day3HighLabel.text = "\(day3High)°"
-        day3LowLabel.text = "\(day3Low)°"
+        day3Label.text = "\(day4DayString)"
+        day3ConditionImage.image = UIImage(named: weatherCondition(condition: day4Condition, type: "daily", circle: universalIcons))
+        day3HighLabel.text = "\(day4High)°"
+        day3LowLabel.text = "\(day4Low)°"
     }
     
     @IBAction func openApplicationTapped(_ sender: UITapGestureRecognizer) {

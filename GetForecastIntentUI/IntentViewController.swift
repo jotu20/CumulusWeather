@@ -14,6 +14,8 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
     
     @IBOutlet weak var currentConditionIcon: UIImageView!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
+    @IBOutlet weak var currentHighTemperatureLabel: UILabel!
+    @IBOutlet weak var currentLowTemperatureLabel: UILabel!
     @IBOutlet weak var currentLocationLabel: UILabel!
     @IBOutlet weak var currentConditionLabel: UILabel!
     @IBOutlet weak var precipitationLabel: UILabel!
@@ -48,6 +50,8 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         // Current condition labels
         self.currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image", circle: universalIcons))
         self.currentTemperatureLabel.text = "\(currentTemperature)°"
+        self.currentHighTemperatureLabel.text = "\(day0High)°"
+        self.currentLowTemperatureLabel.text = "\(day0Low)°"
         self.currentConditionLabel.text = "\(weatherCondition(condition: currentCondition, type: "text", circle: universalIcons))"
         
         self.precipitationLabel.text = "Precip. \(precipitation)%"
@@ -84,28 +88,28 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         }
         
         // Day Zero
-        self.day0ConditionImage.image = UIImage(named: weatherCondition(condition: day0Condition, type: "daily", circle: universalIcons))
-        self.day0Label.text = "\(day0DayString)"
-        self.day0HighLabel.text = "\(day0High)°"
-        self.day0LowLabel.text = "\(day0Low)°"
+        self.day0ConditionImage.image = UIImage(named: weatherCondition(condition: day1Condition, type: "daily", circle: universalIcons))
+        self.day0Label.text = "\(day1DayString)"
+        self.day0HighLabel.text = "\(day1High)°"
+        self.day0LowLabel.text = "\(day1Low)°"
         
         // Day One
-        self.day1ConditionImage.image = UIImage(named: weatherCondition(condition: day1Condition, type: "daily", circle: universalIcons))
-        self.day1Label.text = "\(day1DayString)"
-        self.day1HighLabel.text = "\(day1High)°"
-        self.day1LowLabel.text = "\(day1Low)°"
+        self.day1ConditionImage.image = UIImage(named: weatherCondition(condition: day2Condition, type: "daily", circle: universalIcons))
+        self.day1Label.text = "\(day2DayString)"
+        self.day1HighLabel.text = "\(day2High)°"
+        self.day1LowLabel.text = "\(day2Low)°"
         
         // Day Two
-        self.day2ConditionImage.image = UIImage(named: weatherCondition(condition: day2Condition, type: "daily", circle: universalIcons))
-        self.day2Label.text = "\(day2DayString)"
-        self.day2HighLabel.text = "\(day2High)°"
-        self.day2LowLabel.text = "\(day2Low)°"
+        self.day2ConditionImage.image = UIImage(named: weatherCondition(condition: day3Condition, type: "daily", circle: universalIcons))
+        self.day2Label.text = "\(day3DayString)"
+        self.day2HighLabel.text = "\(day3High)°"
+        self.day2LowLabel.text = "\(day3Low)°"
         
         // Day Three
-        self.day3ConditionImage.image = UIImage(named: weatherCondition(condition: day3Condition, type: "daily", circle: universalIcons))
-        self.day3Label.text = "\(day3DayString)"
-        self.day3HighLabel.text = "\(day3High)°"
-        self.day3LowLabel.text = "\(day3Low)°"
+        self.day3ConditionImage.image = UIImage(named: weatherCondition(condition: day4Condition, type: "daily", circle: universalIcons))
+        self.day3Label.text = "\(day4DayString)"
+        self.day3HighLabel.text = "\(day4High)°"
+        self.day3LowLabel.text = "\(day4Low)°"
     }
     
     // Prepare your view controller for the interaction to handle.

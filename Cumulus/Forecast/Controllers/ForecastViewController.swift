@@ -588,7 +588,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     func setDayLabelAndIcons(dayViewHeight: NSLayoutConstraint!, dayLabel: UILabel!, dayConditionIcon: UIImageView!, dayLowLabel: UILabel!, dayHighLabel: UILabel!, dayString: String, dateString: String, dayConditionIconString: String, dayLow: Int, dayHigh: Int) {
         
         dayViewHeight.constant = 60
-        dayLabel.text = "\(dayString.capitalizingFirstLetter()) \(dateString)"
+        dayLabel.text = "\(dayString.capitalizingFirstLetter())"
         dayConditionIcon.image = UIImage(named: weatherCondition(condition: dayConditionIconString, type: "daily", circle: defaults.string(forKey: "defaultConditionIcons")!))
         dayLowLabel.text = "\(dayLow)°"
         dayHighLabel.text = "\(dayHigh)°"
@@ -978,7 +978,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         hideExtendedDayLabels(hidden: true, label0: day8SummaryLabel, label1: day8Slot1, label2: day8Slot2, label3: day8Slot3, label4: day8Slot4, label5: day8Slot5, label6: day8Slot6!, label7: day8Slot7, label8: day8Slot8, label9: day8Slot9, label10: day8Slot10)
         hideExtendedDayLabels(hidden: true, label0: day9SummaryLabel, label1: day9Slot1, label2: day9Slot2, label3: day9Slot3, label4: day9Slot4, label5: day9Slot5, label6: day9Slot6!, label7: day9Slot7, label8: day9Slot8, label9: day9Slot9, label10: day9Slot10)
         
-        setDayLabelAndIcons(dayViewHeight: day0Height, dayLabel: day0Label, dayConditionIcon: day0ConditionIcon, dayLowLabel: day0LowLabel, dayHighLabel: day0HighLabel, dayString: day0DayStringFull, dateString: day0DateString, dayConditionIconString: day0Condition, dayLow: day0Low, dayHigh: day0High)
+        setDayLabelAndIcons(dayViewHeight: day0Height, dayLabel: day0Label, dayConditionIcon: day0ConditionIcon, dayLowLabel: day0LowLabel, dayHighLabel: day0HighLabel, dayString: "TODAY", dateString: day0DateString, dayConditionIconString: day0Condition, dayLow: day0Low, dayHigh: day0High)
         setDayLabelAndIcons(dayViewHeight: day1Height, dayLabel: day1Label, dayConditionIcon: day1ConditionIcon, dayLowLabel: day1LowLabel, dayHighLabel: day1HighLabel, dayString: day1DayStringFull, dateString: day1DateString, dayConditionIconString: day1Condition, dayLow: day1Low, dayHigh: day1High)
         setDayLabelAndIcons(dayViewHeight: day2Height, dayLabel: day2Label, dayConditionIcon: day2ConditionIcon, dayLowLabel: day2LowLabel, dayHighLabel: day2HighLabel, dayString: day2DayStringFull, dateString: day2DateString, dayConditionIconString: day2Condition, dayLow: day2Low, dayHigh: day2High)
         setDayLabelAndIcons(dayViewHeight: day3Height, dayLabel: day3Label, dayConditionIcon: day3ConditionIcon, dayLowLabel: day3LowLabel, dayHighLabel: day3HighLabel, dayString: day3DayStringFull, dateString: day3DateString, dayConditionIconString: day3Condition, dayLow: day3Low, dayHigh: day3High)

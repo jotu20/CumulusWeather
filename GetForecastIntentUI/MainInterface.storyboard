@@ -3,7 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -151,7 +151,7 @@
                                                             <constraint firstAttribute="width" constant="40" id="ZX2-10-hkl"/>
                                                             <constraint firstAttribute="height" constant="50" id="cMv-Th-Lme"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -197,7 +197,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="POU-JI-Pfe"/>
                                                             <constraint firstAttribute="width" constant="40" id="lOT-TU-Czi"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -243,7 +243,7 @@
                                                             <constraint firstAttribute="width" constant="40" id="Wm1-Z5-Mvg"/>
                                                             <constraint firstAttribute="height" constant="50" id="gwg-hp-DhC"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -289,7 +289,7 @@
                                                             <constraint firstAttribute="width" constant="40" id="KYC-IU-pP4"/>
                                                             <constraint firstAttribute="height" constant="50" id="TRE-Uf-Qlk"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>

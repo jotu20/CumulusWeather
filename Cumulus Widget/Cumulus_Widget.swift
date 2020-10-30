@@ -19,31 +19,21 @@ struct ForecastTimeline: TimelineProvider {
 
     func getSnapshot(in context: Context, completion: @escaping (ForecastEntry) -> ()) {
         let entry = ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary)
-        return completion(entry)
+        completion(entry)
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [ForecastEntry] = []
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
+        // Generate a timeline for ten minute intervals, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 6 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = ForecastEntry(date: entryDate, latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary)
-            entries.append(entry)
-        }
+        let entryDate = Calendar.current.date(byAdding: .minute, value: 10, to: currentDate)!
+        let entry = ForecastEntry(date: entryDate, latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary)
+        entries.append(entry)
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
-
-//    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
-//        let currentDate = Date()
-//        let refreshDate = Calendar.current.date(byAdding: .minute, value: 10, to: currentDate)!
-//        let entry = ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary)
-//        let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
-//        completion(timeline)
-//    }
 }
 
 struct ForecastEntry: TimelineEntry {
@@ -238,12 +228,6 @@ struct DailyForecastWidgetView : View {
                             Text("\(highTemperature)° \(lowTemperature)°")
                                 .font(.system(size: 15, weight: .regular, design: .default))
                                 .frame(maxWidth: 150, maxHeight: 25, alignment: .trailing)
-//                            Text("\(day3High)°")
-//                                .font(.system(size: 12, weight: .medium, design: .default))
-//                                .frame(maxWidth: 45, maxHeight: 10, alignment: .trailing)
-//                            Text("\(day3Low)°")
-//                                .font(.system(size: 12, weight: .regular, design: .default))
-//                                .frame(maxWidth: 45, maxHeight: 10, alignment: .leading)
                         }
                     }
                 }
@@ -327,7 +311,7 @@ struct DailyForecastWidgetView : View {
                             .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day1High)°")
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .trailing)
                         Text("\(day1Low)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -341,7 +325,7 @@ struct DailyForecastWidgetView : View {
                             .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day2High)°")
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .trailing)
                         Text("\(day2Low)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -355,7 +339,7 @@ struct DailyForecastWidgetView : View {
                             .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day3High)°")
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .trailing)
                         Text("\(day3Low)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -369,7 +353,7 @@ struct DailyForecastWidgetView : View {
                             .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day4High)°")
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .trailing)
                         Text("\(day4Low)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -402,7 +386,7 @@ struct HourlyForecastWidget: Widget {
             HourlyForecastWidgetView(data: ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary))
         }
         .configurationDisplayName("Hourly Forecast")
-        .description("View the current and hourly forecasts for your area.")
+        .description("View the hourly forecast for your area.")
         .supportedFamilies([.systemMedium])
     }
 }
@@ -415,7 +399,7 @@ struct DailyForecastWidget: Widget {
             DailyForecastWidgetView(data: ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary))
         }
         .configurationDisplayName("Daily Forecast")
-        .description("View the current, hourly, and daily forecasts for your area.")
+        .description("View the daily forecast for your area.")
         .supportedFamilies([.systemLarge])
     }
 }
@@ -464,10 +448,10 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
   }
 
   private func geocoder() {
-    latitudeValue = 37.3230
-    longitudeValue = -122.0322
-//        latitudeValue = (locationManager.location?.coordinate.latitude)!
-//        longitudeValue = (locationManager.location?.coordinate.longitude)!
+//    latitudeValue = 37.3230
+//    longitudeValue = -122.0322
+        latitudeValue = (locationManager.location?.coordinate.latitude)!
+        longitudeValue = (locationManager.location?.coordinate.longitude)!
     
     geocode(latitude: latitudeValue, longitude: longitudeValue) { placemark, error in
         guard let placemark = placemark, error == nil else { return }
@@ -484,7 +468,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         } else {
             currentLocation = "\(placemark.name!), \(placemark.country!)"
         }
-        //self.locationManager.stopUpdatingLocation()
+        self.locationManager.stopUpdatingLocation()
         fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
     }
   }

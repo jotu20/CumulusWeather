@@ -14,24 +14,23 @@ import Combine
 
 struct ForecastTimeline: TimelineProvider {
     func placeholder(in context: Context) -> ForecastEntry {
-        ForecastEntry(date: Date(), latitude: 37.3230, longitude: -122.0322, currentLocation: "Cupertino,CA", currentCondition: "Partly cloudy", currentTemperature: 79, currentSummary: "Partly cloudy for the hour.")
+        return ForecastEntry(date: Date(), latitude: 37.3230, longitude: -122.0322, currentLocation: "Cupertino,CA", currentCondition: "Partly cloudy", currentTemperature: 79, currentSummary: "Partly cloudy for the hour.")
     }
 
     func getSnapshot(in context: Context, completion: @escaping (ForecastEntry) -> ()) {
         let entry = ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary)
-        completion(entry)
+        return completion(entry)
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [ForecastEntry] = []
 
-        // Generate a timeline for ten minute intervals, starting from the current date.
         let currentDate = Date()
         let entryDate = Calendar.current.date(byAdding: .minute, value: 10, to: currentDate)!
         let entry = ForecastEntry(date: entryDate, latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary)
         entries.append(entry)
 
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        let timeline = Timeline(entries: entries, policy: .after(currentDate))
         completion(timeline)
     }
 }
@@ -50,30 +49,8 @@ struct ForecastEntry: TimelineEntry {
 struct CurrentForecastWidgetView : View {
     let data: ForecastEntry
     @ObservedObject var lm = LocationManager()
-    
-//    var color = universalColor
-//    var textColor: Color!
+
     var body: some View {
-        
-//        if color == "Mango" {
-//            textColor = mango
-//        }
-//        if color == "Maximum Red" {
-//            textColor = maximumRed
-//        }
-//        if color == "Dodger Blue" {
-//            textColor = dodgerBlue
-//        }
-//        if color == "Plump Purple" {
-//            textColor = plumpPurple
-//        }
-//        if color == "Orchid" {
-//            textColor = orchid
-//        }
-//        if color == "Spring Green" {
-//            textColor = springGreen
-//        }
-        
         ZStack {
             Color(UIColor.systemBackground)
             VStack {
@@ -472,4 +449,30 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
     }
   }
+    
+//    func colorCoder() -> Color {
+//        let color = universalColor
+//        var textColor: Color!
+//
+//        if color == "Mango" {
+//            textColor = Color(mango)
+//        }
+//        if color == "Maximum Red" {
+//            textColor = Color(maximumRed)
+//        }
+//        if color == "Dodger Blue" {
+//            textColor = Color(dodgerBlue)
+//        }
+//        if color == "Plump Purple" {
+//            textColor = Color(plumpPurple)
+//        }
+//        if color == "Orchid" {
+//            textColor = Color(orchid)
+//        }
+//        if color == "Spring Green" {
+//            textColor = Color(springGreen)
+//        }
+//
+//        return textColor
+//    }
 }

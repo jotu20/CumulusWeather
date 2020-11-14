@@ -1,4 +1,7 @@
 PODS:
+  - Dynatrace (8.203.1.1005):
+    - Dynatrace/framework (= 8.203.1.1005)
+  - Dynatrace/framework (8.203.1.1005)
   - ForecastIO (8.0.0)
   - GoogleMaps/Base (3.9.0)
   - GooglePlaces (3.9.0):
@@ -6,23 +9,26 @@ PODS:
   - SwiftyStoreKit (0.15.0)
 
 DEPENDENCIES:
+  - Dynatrace (~> 8.197)
   - ForecastIO (= 8.0.0)
   - GooglePlaces (= 3.9.0)
   - SwiftyStoreKit (= 0.15.0)
 
 SPEC REPOS:
   trunk:
+    - Dynatrace
     - ForecastIO
     - GoogleMaps
     - GooglePlaces
     - SwiftyStoreKit
 
 SPEC CHECKSUMS:
+  Dynatrace: 439e8522b86e7005f0ae67a01f7ad33d4dca9d20
   ForecastIO: 68f8231be20748446036263a438cc449886a65ca
   GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
   GooglePlaces: 1634d019549b969d40fe0ccb0b9513055adebe01
   SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
 
-PODFILE CHECKSUM: 98d01bf46fcefa9cf3fe12713a0fdc546e931503
+PODFILE CHECKSUM: 7c43c7f9d47c5c4f6182f1e1a49e19cc1dcc19e0
 
 COCOAPODS: 1.9.3

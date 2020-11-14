@@ -29,5 +29,7 @@
 	<string>Allows Cumulus to retrieve the latest weather for your area.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allows Cumulus to retrieve the latest weather for your area.</string>
+	<key>NSWidgetWantsLocation</key>
+	<true/>
 </dict>
 </plist>

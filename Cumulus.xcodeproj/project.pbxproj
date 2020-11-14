@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1A9534F478BDCC1CA1A301F8 /* Pods_Cumulus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1552077F3129E1DB25E779 /* Pods_Cumulus.framework */; };
-		7C063181DE9BC6C8E52F758D /* Pods_Cumulus_Cumulus_Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBEA5BFD47EF3E12D230275 /* Pods_Cumulus_Cumulus_Today.framework */; };
 		88C63440B7C0F66603A56ED4 /* Pods_Cumulus_GetForecastIntent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B17BE7140191D0144CF6B2 /* Pods_Cumulus_GetForecastIntent.framework */; };
 		AECCAEA7DAE76FBFFB1ED0D2 /* Pods_Cumulus_Cumulus_WidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D176297E89BDC2A9E06D7E /* Pods_Cumulus_Cumulus_WidgetExtension.framework */; };
 		C79D750E9859160D582771AC /* Pods_Cumulus_GetForecastIntentUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1656CE125FD32DFB8BD15E3 /* Pods_Cumulus_GetForecastIntentUI.framework */; };
@@ -20,7 +19,6 @@
 		CF602EA9247ED3D200E05491 /* LoadingScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF602EA6247ED28E00E05491 /* LoadingScreenModel.swift */; };
 		CF6E4AA220DACFD8002349A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E4AA120DACFD8002349A7 /* AppDelegate.swift */; };
 		CF6E4AA420DACFD8002349A7 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E4AA320DACFD8002349A7 /* ForecastViewController.swift */; };
-		CF81A5D22519440000ED93A2 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF81A5D12519440000ED93A2 /* MainInterface.storyboard */; };
 		CF81A5E32519441500ED93A2 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF81A5E22519441500ED93A2 /* MainInterface.storyboard */; };
 		CF81A5EF2519443100ED93A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF81A5EE2519443100ED93A2 /* Main.storyboard */; };
 		CF9477492167DF0200DA8B38 /* SiriShortcutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9477482167DF0200DA8B38 /* SiriShortcutsTableViewController.swift */; };
@@ -38,19 +36,15 @@
 		CFA3259E20E44DE500F4AFBD /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3259D20E44DE500F4AFBD /* LocationsViewController.swift */; };
 		CFAB4446211F3A2000A7E3CB /* ForecastDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB4445211F3A2000A7E3CB /* ForecastDataTableViewController.swift */; };
 		CFAF60D3242E48E1004FB831 /* InputFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CE242E48E1004FB831 /* InputFunctions.swift */; };
-		CFAF60D4242E48E1004FB831 /* InputFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CE242E48E1004FB831 /* InputFunctions.swift */; };
 		CFAF60D5242E48E1004FB831 /* InputFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CE242E48E1004FB831 /* InputFunctions.swift */; };
 		CFAF60D6242E48E1004FB831 /* InputFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CE242E48E1004FB831 /* InputFunctions.swift */; };
 		CFAF60D7242E48E1004FB831 /* SettingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CF242E48E1004FB831 /* SettingOptions.swift */; };
-		CFAF60D8242E48E1004FB831 /* SettingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CF242E48E1004FB831 /* SettingOptions.swift */; };
 		CFAF60D9242E48E1004FB831 /* SettingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CF242E48E1004FB831 /* SettingOptions.swift */; };
 		CFAF60DA242E48E1004FB831 /* SettingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CF242E48E1004FB831 /* SettingOptions.swift */; };
 		CFAF60E3242E48E1004FB831 /* WeatherDataValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D2242E48E1004FB831 /* WeatherDataValues.swift */; };
-		CFAF60E4242E48E1004FB831 /* WeatherDataValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D2242E48E1004FB831 /* WeatherDataValues.swift */; };
 		CFAF60E5242E48E1004FB831 /* WeatherDataValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D2242E48E1004FB831 /* WeatherDataValues.swift */; };
 		CFAF60E6242E48E1004FB831 /* WeatherDataValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D2242E48E1004FB831 /* WeatherDataValues.swift */; };
 		CFAF62DE242E5D3D004FB831 /* DarkSkyWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D0242E48E1004FB831 /* DarkSkyWeatherData.swift */; };
-		CFAF62E6242E5D97004FB831 /* DarkSkyWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D0242E48E1004FB831 /* DarkSkyWeatherData.swift */; };
 		CFAF62E8242E5D98004FB831 /* DarkSkyWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D0242E48E1004FB831 /* DarkSkyWeatherData.swift */; };
 		CFAF62EA242E5D98004FB831 /* DarkSkyWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D0242E48E1004FB831 /* DarkSkyWeatherData.swift */; };
 		CFB1E84520E5972200972F19 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1E84420E5972200972F19 /* LocationCell.swift */; };
@@ -128,15 +122,10 @@
 		CFD9CE592535FFAE00CB128E /* DarkSkyWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D0242E48E1004FB831 /* DarkSkyWeatherData.swift */; };
 		CFD9CE5F2535FFB100CB128E /* ClimaCellWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA656A2512719900FB7B50 /* ClimaCellWeatherData.swift */; };
 		CFDA656B2512719900FB7B50 /* ClimaCellWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA656A2512719900FB7B50 /* ClimaCellWeatherData.swift */; };
-		CFDA656C2512719900FB7B50 /* ClimaCellWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA656A2512719900FB7B50 /* ClimaCellWeatherData.swift */; };
 		CFDA656D2512719900FB7B50 /* ClimaCellWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA656A2512719900FB7B50 /* ClimaCellWeatherData.swift */; };
 		CFDA656E2512719900FB7B50 /* ClimaCellWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA656A2512719900FB7B50 /* ClimaCellWeatherData.swift */; };
-		CFDEEC0A20E26ED900BA5EA5 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFDEEC0920E26ED900BA5EA5 /* NotificationCenter.framework */; };
-		CFDEEC1420E26ED900BA5EA5 /* Cumulus Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CFDEEC0820E26ED900BA5EA5 /* Cumulus Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		CFE600CF20E3EFFD0057D914 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDEEC0C20E26ED900BA5EA5 /* TodayViewController.swift */; };
 		CFEA0F7C24D437B100E62E5F /* WeatherUnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA0F7B24D437B100E62E5F /* WeatherUnitsViewController.swift */; };
 		CFEE78B024705168001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
-		CFEE78B124705169001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
 		CFEE78B22470516A001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
 		CFEE78B32470516A001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
 		CFF0A964242E9A2500FDDAF1 /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF824C3820E84EEB00E5F0A7 /* Locations.xcdatamodeld */; };
@@ -165,13 +154,6 @@
 			remoteGlobalIDString = CFD9CDF92535FD3200CB128E;
 			remoteInfo = "Cumulus WidgetExtension";
 		};
-		CFDEEC1220E26ED900BA5EA5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CF6E4A9620DACFD8002349A7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CFDEEC0720E26ED900BA5EA5;
-			remoteInfo = "Puttle Weather Today";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -193,7 +175,6 @@
 			files = (
 				CFD9CE052535FD3200CB128E /* Cumulus WidgetExtension.appex in Embed App Extensions */,
 				CF9477652168080A00DA8B38 /* GetForecastIntentUI.appex in Embed App Extensions */,
-				CFDEEC1420E26ED900BA5EA5 /* Cumulus Today.appex in Embed App Extensions */,
 				CF9477682168080A00DA8B38 /* GetForecastIntent.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -228,7 +209,6 @@
 		CF6E4AA820DACFD9002349A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF6E4AAD20DACFD9002349A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF81A59D2519435700ED93A2 /* Cumulus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cumulus.entitlements; sourceTree = "<group>"; };
-		CF81A5D12519440000ED93A2 /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		CF81A5E22519441500ED93A2 /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		CF81A5EE2519443100ED93A2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CF824C3920E84EEB00E5F0A7 /* Locations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Locations.xcdatamodel; sourceTree = "<group>"; };
@@ -316,11 +296,7 @@
 		CFD9CE002535FD3200CB128E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFD9CE022535FD3200CB128E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFDA656A2512719900FB7B50 /* ClimaCellWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimaCellWeatherData.swift; sourceTree = "<group>"; };
-		CFDEEC0820E26ED900BA5EA5 /* Cumulus Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Cumulus Today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDEEC0920E26ED900BA5EA5 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		CFDEEC0C20E26ED900BA5EA5 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		CFDEEC1120E26ED900BA5EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFDEEC1A20E26F3400BA5EA5 /* Cumulus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cumulus.entitlements; sourceTree = "<group>"; };
 		CFEA0F7B24D437B100E62E5F /* WeatherUnitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUnitsViewController.swift; sourceTree = "<group>"; };
 		CFF42EA42513CC3D005119C9 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		CFF42EA62513CC3D005119C9 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -367,15 +343,6 @@
 				CFD9CDFC2535FD3200CB128E /* SwiftUI.framework in Frameworks */,
 				CFD9CDFB2535FD3200CB128E /* WidgetKit.framework in Frameworks */,
 				AECCAEA7DAE76FBFFB1ED0D2 /* Pods_Cumulus_Cumulus_WidgetExtension.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFDEEC0520E26ED900BA5EA5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFDEEC0A20E26ED900BA5EA5 /* NotificationCenter.framework in Frameworks */,
-				7C063181DE9BC6C8E52F758D /* Pods_Cumulus_Cumulus_Today.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +400,6 @@
 				CF4A0E5E2108B1B30061CAAD /* Default-568h@2x.png */,
 				CFFB787620DF0B44008216F8 /* License */,
 				CF6E4AA020DACFD8002349A7 /* Cumulus */,
-				CFDEEC0B20E26ED900BA5EA5 /* Cumulus Today */,
 				CF9477512168080900DA8B38 /* GetForecastIntent */,
 				CF94775C2168080A00DA8B38 /* GetForecastIntentUI */,
 				CFD9CDFD2535FD3200CB128E /* Cumulus Widget */,
@@ -447,7 +413,6 @@
 			isa = PBXGroup;
 			children = (
 				CF6E4A9E20DACFD8002349A7 /* Cumulus.app */,
-				CFDEEC0820E26ED900BA5EA5 /* Cumulus Today.appex */,
 				CF9477502168080900DA8B38 /* GetForecastIntent.appex */,
 				CF9477592168080A00DA8B38 /* GetForecastIntentUI.appex */,
 				CFD9CDFA2535FD3200CB128E /* Cumulus WidgetExtension.appex */,
@@ -657,17 +622,6 @@
 			path = "Cumulus Widget";
 			sourceTree = "<group>";
 		};
-		CFDEEC0B20E26ED900BA5EA5 /* Cumulus Today */ = {
-			isa = PBXGroup;
-			children = (
-				CFDEEC0C20E26ED900BA5EA5 /* TodayViewController.swift */,
-				CF81A5D12519440000ED93A2 /* MainInterface.storyboard */,
-				CFDEEC1120E26ED900BA5EA5 /* Info.plist */,
-				CFDEEC1A20E26F3400BA5EA5 /* Cumulus.entitlements */,
-			);
-			path = "Cumulus Today";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -687,7 +641,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				CFDEEC1320E26ED900BA5EA5 /* PBXTargetDependency */,
 				CF9477642168080A00DA8B38 /* PBXTargetDependency */,
 				CF9477672168080A00DA8B38 /* PBXTargetDependency */,
 				CFD9CE042535FD3200CB128E /* PBXTargetDependency */,
@@ -754,25 +707,6 @@
 			productReference = CFD9CDFA2535FD3200CB128E /* Cumulus WidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		CFDEEC0720E26ED900BA5EA5 /* Cumulus Today */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CFDEEC1720E26ED900BA5EA5 /* Build configuration list for PBXNativeTarget "Cumulus Today" */;
-			buildPhases = (
-				B5DC9C355341F285D111EB05 /* [CP] Check Pods Manifest.lock */,
-				CFDEEC0420E26ED900BA5EA5 /* Sources */,
-				CFDEEC0520E26ED900BA5EA5 /* Frameworks */,
-				CFDEEC0620E26ED900BA5EA5 /* Resources */,
-				9CB27E722F50E17EA371EF1F /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Cumulus Today";
-			productName = "Puttle Weather Today";
-			productReference = CFDEEC0820E26ED900BA5EA5 /* Cumulus Today.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -822,14 +756,6 @@
 					CFD9CDF92535FD3200CB128E = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
-					CFDEEC0720E26ED900BA5EA5 = {
-						CreatedOnToolsVersion = 9.4.1;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
-					};
 				};
 			};
 			buildConfigurationList = CF6E4A9920DACFD8002349A7 /* Build configuration list for PBXProject "Cumulus" */;
@@ -846,7 +772,6 @@
 			projectRoot = "";
 			targets = (
 				CF6E4A9D20DACFD8002349A7 /* Cumulus */,
-				CFDEEC0720E26ED900BA5EA5 /* Cumulus Today */,
 				CF94774F2168080900DA8B38 /* GetForecastIntent */,
 				CF9477582168080A00DA8B38 /* GetForecastIntentUI */,
 				CFD9CDF92535FD3200CB128E /* Cumulus WidgetExtension */,
@@ -949,15 +874,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFDEEC0620E26ED900BA5EA5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFEE78B124705169001DE90B /* Assets.xcassets in Resources */,
-				CF81A5D22519440000ED93A2 /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1037,45 +953,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9CB27E722F50E17EA371EF1F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-Cumulus Today/Pods-Cumulus-Cumulus Today-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-Cumulus Today/Pods-Cumulus-Cumulus Today-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus-Cumulus Today/Pods-Cumulus-Cumulus Today-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B5DC9C355341F285D111EB05 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Cumulus-Cumulus Today-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BA75F0CE3AB2880536501369 /* [CP] Copy Pods Resources */ = {
@@ -1248,19 +1125,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFDEEC0420E26ED900BA5EA5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFAF62E6242E5D97004FB831 /* DarkSkyWeatherData.swift in Sources */,
-				CFAF60D8242E48E1004FB831 /* SettingOptions.swift in Sources */,
-				CFDA656C2512719900FB7B50 /* ClimaCellWeatherData.swift in Sources */,
-				CFE600CF20E3EFFD0057D914 /* TodayViewController.swift in Sources */,
-				CFAF60D4242E48E1004FB831 /* InputFunctions.swift in Sources */,
-				CFAF60E4242E48E1004FB831 /* WeatherDataValues.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1278,11 +1142,6 @@
 			isa = PBXTargetDependency;
 			target = CFD9CDF92535FD3200CB128E /* Cumulus WidgetExtension */;
 			targetProxy = CFD9CE032535FD3200CB128E /* PBXContainerItemProxy */;
-		};
-		CFDEEC1320E26ED900BA5EA5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CFDEEC0720E26ED900BA5EA5 /* Cumulus Today */;
-			targetProxy = CFDEEC1220E26ED900BA5EA5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1412,7 +1271,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.2;
+				CURRENT_PROJECT_VERSION = 2.1.3;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1437,7 +1296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.2;
+				CURRENT_PROJECT_VERSION = 2.1.3;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1460,7 +1319,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.2;
+				CURRENT_PROJECT_VERSION = 2.1.3;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntentUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1487,7 +1346,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.2;
+				CURRENT_PROJECT_VERSION = 2.1.3;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntentUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1513,7 +1372,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.2;
+				CURRENT_PROJECT_VERSION = 2.1.3;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1540,7 +1399,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.2;
+				CURRENT_PROJECT_VERSION = 2.1.3;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1566,7 +1425,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.2;
+				CURRENT_PROJECT_VERSION = 2.1.3;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "Cumulus Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1593,7 +1452,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.2;
+				CURRENT_PROJECT_VERSION = 2.1.3;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "Cumulus Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1605,56 +1464,6 @@
 				MARKETING_VERSION = 2.1;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.josephszafarowicz.Cumulus.Cumulus-Widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		CFDEEC1520E26ED900BA5EA5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 015E89D4BED81CA4FCB464F2 /* Pods-Cumulus-Cumulus Today.debug.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
-				CODE_SIGN_ENTITLEMENTS = "Cumulus Today/Cumulus.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.2;
-				DEVELOPMENT_TEAM = 24WZU35MAF;
-				INFOPLIST_FILE = "$(SRCROOT)/Cumulus Today/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.josephszafarowicz.Cumulus.Cumulus-Today";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		CFDEEC1620E26ED900BA5EA5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F871B855D5DFA8D677F5804A /* Pods-Cumulus-Cumulus Today.release.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
-				CODE_SIGN_ENTITLEMENTS = "Cumulus Today/Cumulus.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.2;
-				DEVELOPMENT_TEAM = 24WZU35MAF;
-				INFOPLIST_FILE = "$(SRCROOT)/Cumulus Today/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.josephszafarowicz.Cumulus.Cumulus-Today";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1706,15 +1515,6 @@
 			buildConfigurations = (
 				CFD9CE062535FD3200CB128E /* Debug */,
 				CFD9CE072535FD3200CB128E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CFDEEC1720E26ED900BA5EA5 /* Build configuration list for PBXNativeTarget "Cumulus Today" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CFDEEC1520E26ED900BA5EA5 /* Debug */,
-				CFDEEC1620E26ED900BA5EA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

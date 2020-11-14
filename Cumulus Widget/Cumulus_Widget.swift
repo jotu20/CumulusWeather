@@ -20,8 +20,14 @@ struct ForecastTimeline: TimelineProvider {
     }
 
     func getSnapshot(in context: Context, completion: @escaping (ForecastEntry) -> ()) {
-        let entry = ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary)
-        return completion(entry)
+        if widgetLocationManager.locationManager == nil {
+            widgetLocationManager.locationManager = CLLocationManager()
+            widgetLocationManager.locationManager!.requestWhenInUseAuthorization()
+        }
+        widgetLocationManager.fetchLocation(handler: { location in
+            let entry = ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary)
+            return completion(entry)
+        })
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
@@ -73,18 +79,18 @@ struct CurrentForecastWidgetView : View {
                 Spacer()
                     .frame(height: 20)
                 Text("\(data.currentLocation)")
-                    .font(Font.body.weight(.semibold))
-                    .frame(maxWidth: .infinity, maxHeight: 10, alignment: .bottom)
+                    .font(.system(size: 15, weight: .semibold, design: .default))
+                    .frame(maxWidth: .infinity, maxHeight: 20, alignment: .bottom)
                 HStack {
                     Image(weatherCondition(condition: data.currentCondition, type: "widget", circle: universalIcons))
                         .resizable()
-                        .frame(maxWidth: 60, maxHeight: 60, alignment: .center)
+                        .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                     Text("\(data.currentTemperature)°")
-                        .font(Font.largeTitle.weight(.semibold))
+                        .font(.system(size: 30, weight: .semibold, design: .default))
                         .frame(maxWidth: 80, maxHeight: 60, alignment: .leading)
                 }
                 Text("\(data.currentSummary)")
-                    .font(Font.body.weight(.regular))
+                    .font(.system(size: 12, weight: .regular, design: .default))
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             }
         }
@@ -101,21 +107,25 @@ struct HourlyForecastWidgetView : View {
                 // Current values
                 HStack {
                     VStack(alignment: .leading) {
+                        Spacer()
+                            .frame(height: 10)
                         Text("\(currentLocation)")
-                            .font(Font.body.weight(.semibold))
-                            .frame(maxWidth: 175, maxHeight: 10,alignment: .leading)
+                            .font(.system(size: 15, weight: .semibold, design: .default))
+                            .frame(maxWidth: 175, maxHeight: 20, alignment: .leading)
                         Text("\(currentTemperature)°")
-                            .font(Font.largeTitle.weight(.semibold))
-                            .frame(maxWidth: 80, maxHeight: 50, alignment: .leading)
+                            .font(.system(size: 30, weight: .semibold, design: .default))
+                            .frame(maxWidth: 80, maxHeight: 30, alignment: .leading)
                     }
                     VStack(alignment: .trailing) {
+                        Spacer()
+                            .frame(height: 10)
                         Text("\(currentSummary)")
-                            .font(.system(size: 15, weight: .regular, design: .default))
-                            .frame(maxWidth: 150, maxHeight: 25, alignment: .trailing)
+                            .font(.system(size: 12, weight: .regular, design: .default))
+                            .frame(maxWidth: 150, maxHeight: 30, alignment: .trailing)
                         HStack {
                             Text("\(highTemperature)° \(lowTemperature)°")
-                                .font(.system(size: 15, weight: .regular, design: .default))
-                                .frame(maxWidth: 150, maxHeight: 25, alignment: .trailing)
+                                .font(.system(size: 12, weight: .regular, design: .default))
+                                .frame(maxWidth: 70, maxHeight: 20, alignment: .center)
                         }
                     }
                 }
@@ -132,6 +142,8 @@ struct HourlyForecastWidgetView : View {
                         Text("\(tempHour0)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                        Spacer()
+                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour3)")
@@ -143,6 +155,7 @@ struct HourlyForecastWidgetView : View {
                         Text("\(tempHour3)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                        
                     }
                     VStack {
                         Text("\(hour6)")
@@ -154,6 +167,8 @@ struct HourlyForecastWidgetView : View {
                         Text("\(tempHour6)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                        Spacer()
+                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour10)")
@@ -165,6 +180,8 @@ struct HourlyForecastWidgetView : View {
                         Text("\(tempHour10)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                        Spacer()
+                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour13)")
@@ -176,6 +193,8 @@ struct HourlyForecastWidgetView : View {
                         Text("\(tempHour13)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                        Spacer()
+                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour15)")
@@ -187,6 +206,8 @@ struct HourlyForecastWidgetView : View {
                         Text("\(tempHour15)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                        Spacer()
+                            .frame(height: 10)
                     }
                 }
             }
@@ -204,21 +225,25 @@ struct DailyForecastWidgetView : View {
                 // Current values
                 HStack {
                     VStack(alignment: .leading) {
+                        Spacer()
+                            .frame(height: 10)
                         Text("\(currentLocation)")
-                            .font(Font.body.weight(.semibold))
-                            .frame(maxWidth: 175, maxHeight: 10,alignment: .leading)
+                            .font(.system(size: 15, weight: .semibold, design: .default))
+                            .frame(maxWidth: 175, maxHeight: 20, alignment: .leading)
                         Text("\(currentTemperature)°")
-                            .font(Font.largeTitle.weight(.semibold))
-                            .frame(maxWidth: 80, maxHeight: 50, alignment: .leading)
+                            .font(.system(size: 30, weight: .semibold, design: .default))
+                            .frame(maxWidth: 80, maxHeight: 30, alignment: .leading)
                     }
                     VStack(alignment: .trailing) {
+                        Spacer()
+                            .frame(height: 10)
                         Text("\(currentSummary)")
-                            .font(.system(size: 15, weight: .regular, design: .default))
-                            .frame(maxWidth: 150, maxHeight: 25, alignment: .trailing)
+                            .font(.system(size: 12, weight: .regular, design: .default))
+                            .frame(maxWidth: 150, maxHeight: 30, alignment: .trailing)
                         HStack {
                             Text("\(highTemperature)° \(lowTemperature)°")
-                                .font(.system(size: 15, weight: .regular, design: .default))
-                                .frame(maxWidth: 150, maxHeight: 25, alignment: .trailing)
+                                .font(.system(size: 12, weight: .regular, design: .default))
+                                .frame(maxWidth: 70, maxHeight: 20, alignment: .center)
                         }
                     }
                 }
@@ -235,6 +260,8 @@ struct DailyForecastWidgetView : View {
                         Text("\(tempHour0)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                        Spacer()
+                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour3)")
@@ -246,6 +273,8 @@ struct DailyForecastWidgetView : View {
                         Text("\(tempHour3)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                        Spacer()
+                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour6)")
@@ -257,6 +286,8 @@ struct DailyForecastWidgetView : View {
                         Text("\(tempHour6)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                        Spacer()
+                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour10)")
@@ -268,6 +299,8 @@ struct DailyForecastWidgetView : View {
                         Text("\(tempHour10)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                        Spacer()
+                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour13)")
@@ -279,6 +312,8 @@ struct DailyForecastWidgetView : View {
                         Text("\(tempHour13)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                        Spacer()
+                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour15)")
@@ -290,6 +325,8 @@ struct DailyForecastWidgetView : View {
                         Text("\(tempHour15)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                        Spacer()
+                            .frame(height: 10)
                     }
                 }
                 
@@ -457,52 +494,6 @@ class WidgetLocationManager: NSObject, CLLocationManagerDelegate {
         print(error)
     }
 }
-
-//class WidgetLocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
-//  private let locationManager = CLLocationManager()
-//  let objectWillChange = PassthroughSubject<Void, Never>()
-//
-//  @Published var status: CLAuthorizationStatus? {
-//    willSet { objectWillChange.send() }
-//  }
-//
-//  @Published var location: CLLocation? {
-//    willSet { objectWillChange.send() }
-//  }
-//
-//  override init() {
-//    super.init()
-//
-//    self.locationManager.delegate = self
-//    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//    self.locationManager.requestWhenInUseAuthorization()
-////    self.locationManager.startUpdatingLocation()
-//
-//    latitudeValue = 37.3230
-//    longitudeValue = -122.0322
-////    latitudeValue = (self.locationManager.location?.coordinate.latitude)!
-////    longitudeValue = (self.locationManager.location?.coordinate.longitude)!
-//
-//    geocode(latitude: latitudeValue, longitude: longitudeValue) { placemark, error in
-//        guard let placemark = placemark, error == nil else { return }
-//
-//        // Set state/province for respective locations
-//        if placemark.locality != nil && placemark.administrativeArea != nil && placemark.country != nil {
-//            if placemark.country! == "Micronesia" || placemark.country! == "Myanmar" || placemark.country! == "United States" {
-//                currentLocation = "\(placemark.locality!), \(placemark.administrativeArea!)"
-//            } else if placemark.country! == "Japan" {
-//                currentLocation = "\(placemark.administrativeArea!), \(placemark.country!)"
-//             } else {
-//               currentLocation = "\(placemark.locality!), \(placemark.country!)"
-//            }
-//        } else {
-//            currentLocation = "\(placemark.name!), \(placemark.country!)"
-//        }
-////        self.locationManager.stopUpdatingLocation()
-//        fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
-//        WidgetCenter.shared.reloadAllTimelines()
-//    }
-//  }
     
 //    func colorCoder() -> Color {
 //        let color = universalColor

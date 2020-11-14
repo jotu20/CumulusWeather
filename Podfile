@@ -9,11 +9,6 @@ target 'Cumulus' do
  	pod 'SwiftyStoreKit', '0.15.0'
 	pod 'Dynatrace', '~> 8.197'
 
-	target 'Cumulus Today' do 
-
-	pod 'ForecastIO', '8.0.0'
-	end 
-
 	target 'GetForecastIntent' do 
 
 	pod 'ForecastIO', '8.0.0'

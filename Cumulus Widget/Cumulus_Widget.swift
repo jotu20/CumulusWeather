@@ -46,15 +46,6 @@ struct ForecastTimeline: TimelineProvider {
             let timeline = Timeline(entries: entries, policy: .after(currentDate))
             completion(timeline)
         })
-//        var entries: [ForecastEntry] = []
-//
-//        let currentDate = Date()
-//        let entryDate = Calendar.current.date(byAdding: .minute, value: 10, to: currentDate)!
-//        let entry = ForecastEntry(date: entryDate, latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary)
-//        entries.append(entry)
-//
-//        let timeline = Timeline(entries: entries, policy: .after(currentDate))
-//        completion(timeline)
     }
 }
 
@@ -83,7 +74,6 @@ struct CurrentForecastWidgetView : View {
                     .frame(maxWidth: .infinity, maxHeight: 20, alignment: .bottom)
                 HStack {
                     Image(weatherCondition(condition: data.currentCondition, type: "widget", circle: universalIcons))
-                        .resizable()
                         .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                     Text("\(data.currentTemperature)°")
                         .font(.system(size: 30, weight: .semibold, design: .default))
@@ -131,83 +121,66 @@ struct HourlyForecastWidgetView : View {
                 }
 
                 // Hourly values
-                HStack(spacing: 20) {
+                HStack(spacing: 10) {
                     VStack {
                         Text("NOW")
-                            .font(.system(size: 12, weight: .medium, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                            .font(.system(size: 12, weight: .medium, design: .default))
                         Image(weatherCondition(condition: conditionHour1, type: "widget", circle: universalIcons))
-                            .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour0)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Spacer()
-                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour3)")
-                            .font(.system(size: 12, weight: .medium, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                            .font(.system(size: 12, weight: .medium, design: .default))
                         Image(weatherCondition(condition: conditionHour3, type: "widget", circle: universalIcons))
-                            .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour3)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        
                     }
                     VStack {
                         Text("\(hour6)")
-                            .font(.system(size: 12, weight: .medium, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                            .font(.system(size: 12, weight: .medium, design: .default))
                         Image(weatherCondition(condition: conditionHour6, type: "widget", circle: universalIcons))
-                            .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour6)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Spacer()
-                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour10)")
-                            .font(.system(size: 12, weight: .medium, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                            .font(.system(size: 12, weight: .medium, design: .default))
                         Image(weatherCondition(condition: conditionHour10, type: "widget", circle: universalIcons))
-                            .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour10)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Spacer()
-                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour13)")
-                            .font(.system(size: 12, weight: .medium, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                            .font(.system(size: 12, weight: .medium, design: .default))
                         Image(weatherCondition(condition: conditionHour13, type: "widget", circle: universalIcons))
-                            .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour13)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Spacer()
-                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour15)")
-                            .font(.system(size: 12, weight: .medium, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                            .font(.system(size: 12, weight: .medium, design: .default))
                         Image(weatherCondition(condition: conditionHour15, type: "widget", circle: universalIcons))
-                            .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour15)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Spacer()
-                            .frame(height: 10)
                     }
                 }
             }
@@ -249,84 +222,66 @@ struct DailyForecastWidgetView : View {
                 }
 
                 // Hourly values
-                HStack(spacing: 20) {
+                HStack(spacing: 10) {
                     VStack {
                         Text("NOW")
-                            .font(.system(size: 12, weight: .medium, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                            .font(.system(size: 12, weight: .medium, design: .default))
                         Image(weatherCondition(condition: conditionHour1, type: "widget", circle: universalIcons))
-                            .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour0)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Spacer()
-                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour3)")
-                            .font(.system(size: 12, weight: .medium, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                            .font(.system(size: 12, weight: .medium, design: .default))
                         Image(weatherCondition(condition: conditionHour3, type: "widget", circle: universalIcons))
-                            .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour3)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Spacer()
-                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour6)")
-                            .font(.system(size: 12, weight: .medium, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                            .font(.system(size: 12, weight: .medium, design: .default))
                         Image(weatherCondition(condition: conditionHour6, type: "widget", circle: universalIcons))
-                            .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour6)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Spacer()
-                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour10)")
-                            .font(.system(size: 12, weight: .medium, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                            .font(.system(size: 12, weight: .medium, design: .default))
                         Image(weatherCondition(condition: conditionHour10, type: "widget", circle: universalIcons))
-                            .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour10)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Spacer()
-                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour13)")
-                            .font(.system(size: 12, weight: .medium, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                            .font(.system(size: 12, weight: .medium, design: .default))
                         Image(weatherCondition(condition: conditionHour13, type: "widget", circle: universalIcons))
-                            .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour13)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Spacer()
-                            .frame(height: 10)
                     }
                     VStack {
                         Text("\(hour15)")
-                            .font(.system(size: 12, weight: .medium, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
+                            .font(.system(size: 12, weight: .medium, design: .default))
                         Image(weatherCondition(condition: conditionHour15, type: "widget", circle: universalIcons))
-                            .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour15)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Spacer()
-                            .frame(height: 10)
                     }
                 }
                 
@@ -336,7 +291,6 @@ struct DailyForecastWidgetView : View {
                             .font(.system(size: 12, weight: .medium, design: .default))
                             .frame(maxWidth: 175, maxHeight: 10, alignment: .leading)
                         Image(weatherCondition(condition: day1Condition, type: "widget", circle: universalIcons))
-                            .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day1High)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -350,7 +304,6 @@ struct DailyForecastWidgetView : View {
                             .font(.system(size: 12, weight: .medium, design: .default))
                             .frame(maxWidth: 175, maxHeight: 10, alignment: .leading)
                         Image(weatherCondition(condition: day2Condition, type: "widget", circle: universalIcons))
-                            .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day2High)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -364,7 +317,6 @@ struct DailyForecastWidgetView : View {
                             .font(.system(size: 12, weight: .medium, design: .default))
                             .frame(maxWidth: 175, maxHeight: 10, alignment: .leading)
                         Image(weatherCondition(condition: day3Condition, type: "widget", circle: universalIcons))
-                            .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day3High)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -378,7 +330,6 @@ struct DailyForecastWidgetView : View {
                             .font(.system(size: 12, weight: .medium, design: .default))
                             .frame(maxWidth: 175, maxHeight: 10, alignment: .leading)
                         Image(weatherCondition(condition: day4Condition, type: "widget", circle: universalIcons))
-                            .resizable()
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day4High)°")
                             .font(.system(size: 12, weight: .regular, design: .default))

@@ -200,6 +200,7 @@ class CumulusPlusTableViewController: UITableViewController {
             case .success(let purchase):
                 print("Purchase Success: \(purchase.productId)")
                 defaults.set(true, forKey: "cumulusPlus")
+                UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("true", forKey: "setCumulusPlus")
                 weatherLoaded = false
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)

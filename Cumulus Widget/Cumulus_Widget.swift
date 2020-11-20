@@ -26,18 +26,28 @@ struct ForecastTimeline: TimelineProvider {
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [ForecastEntry] = []
+        universalSettings()
         
         if widgetLocationManager.locationManager == nil {
             widgetLocationManager.locationManager = CLLocationManager()
             widgetLocationManager.locationManager!.requestWhenInUseAuthorization()
         }
         widgetLocationManager.fetchLocation(handler: { location in
-            let entryDate = Calendar.current.date(byAdding: .minute, value: 10, to: Date())!
-            let entry = ForecastEntry(date: entryDate, latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary)
-            entries.append(entry)
+            if universalCumulusPlus == "true" {
+                let entryDate = Calendar.current.date(byAdding: .minute, value: 15, to: Date())!
+                let entry = ForecastEntry(date: entryDate, latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary)
+                entries.append(entry)
 
-            let timeline = Timeline(entries: entries, policy: .atEnd)
-            completion(timeline)
+                let timeline = Timeline(entries: entries, policy: .atEnd)
+                completion(timeline)
+            } else {
+                let entryDate = Calendar.current.date(byAdding: .minute, value: 30, to: Date())!
+                let entry = ForecastEntry(date: entryDate, latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary)
+                entries.append(entry)
+
+                let timeline = Timeline(entries: entries, policy: .atEnd)
+                completion(timeline)
+            }
         })
     }
 }
@@ -103,7 +113,7 @@ struct HourlyForecastWidgetView : View {
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 250, maxHeight: 25, alignment: .bottomTrailing)
                         HStack {
-                            Text("\(highTemperature)° \(lowTemperature)°")
+                            Text("↑\(highTemperature)° ↓\(lowTemperature)°")
                                 .font(.system(size: 12, weight: .regular, design: .default))
                                 .frame(maxWidth: 70, maxHeight: 20, alignment: .topTrailing)
                         }
@@ -115,7 +125,7 @@ struct HourlyForecastWidgetView : View {
                     VStack {
                         Text("NOW")
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: conditionHour1, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour0)°")
@@ -125,7 +135,7 @@ struct HourlyForecastWidgetView : View {
                     VStack {
                         Text("\(hour3)")
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: conditionHour3, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour3)°")
@@ -135,7 +145,7 @@ struct HourlyForecastWidgetView : View {
                     VStack {
                         Text("\(hour6)")
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: conditionHour6, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour6)°")
@@ -145,7 +155,7 @@ struct HourlyForecastWidgetView : View {
                     VStack {
                         Text("\(hour10)")
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: conditionHour10, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour10)°")
@@ -155,7 +165,7 @@ struct HourlyForecastWidgetView : View {
                     VStack {
                         Text("\(hour13)")
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: conditionHour13, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour13)°")
@@ -165,7 +175,7 @@ struct HourlyForecastWidgetView : View {
                     VStack {
                         Text("\(hour15)")
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: conditionHour15, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour15)°")
@@ -200,7 +210,7 @@ struct DailyForecastWidgetView : View {
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 250, maxHeight: 25, alignment: .bottomTrailing)
                         HStack {
-                            Text("\(highTemperature)° \(lowTemperature)°")
+                            Text("↑\(highTemperature)° ↓\(lowTemperature)°")
                                 .font(.system(size: 12, weight: .regular, design: .default))
                                 .frame(maxWidth: 70, maxHeight: 20, alignment: .topTrailing)
                         }
@@ -212,7 +222,7 @@ struct DailyForecastWidgetView : View {
                     VStack {
                         Text("NOW")
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: conditionHour1, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour0)°")
@@ -222,7 +232,7 @@ struct DailyForecastWidgetView : View {
                     VStack {
                         Text("\(hour3)")
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: conditionHour3, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour3)°")
@@ -232,7 +242,7 @@ struct DailyForecastWidgetView : View {
                     VStack {
                         Text("\(hour6)")
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: conditionHour6, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour6)°")
@@ -242,7 +252,7 @@ struct DailyForecastWidgetView : View {
                     VStack {
                         Text("\(hour10)")
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: conditionHour10, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour10)°")
@@ -252,7 +262,7 @@ struct DailyForecastWidgetView : View {
                     VStack {
                         Text("\(hour13)")
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: conditionHour13, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour13)°")
@@ -262,7 +272,7 @@ struct DailyForecastWidgetView : View {
                     VStack {
                         Text("\(hour15)")
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: conditionHour15, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour15)°")
@@ -276,7 +286,7 @@ struct DailyForecastWidgetView : View {
                     HStack {
                         Text("\(day1DayStringFull)")
                             .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: day1Condition, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day1High)°")
@@ -284,12 +294,13 @@ struct DailyForecastWidgetView : View {
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .trailing)
                         Text("\(day1Low)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(.gray)
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .leading)
                     }
                     HStack {
                         Text("\(day2DayStringFull)")
                             .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: day2Condition, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day2High)°")
@@ -297,12 +308,13 @@ struct DailyForecastWidgetView : View {
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .trailing)
                         Text("\(day2Low)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(.gray)
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .leading)
                     }
                     HStack {
                         Text("\(day3DayStringFull)")
                             .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: day3Condition, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day3High)°")
@@ -315,7 +327,7 @@ struct DailyForecastWidgetView : View {
                     HStack {
                         Text("\(day4DayStringFull)")
                             .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
-                            .font(.system(size: 12, weight: .medium, design: .default))
+                            .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: day4Condition, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day4High)°")
@@ -323,6 +335,7 @@ struct DailyForecastWidgetView : View {
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .trailing)
                         Text("\(day4Low)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(.gray)
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .leading)
                     }
                 }
@@ -339,7 +352,7 @@ struct CurrentForecastWidget: Widget {
             CurrentForecastWidgetView(data: ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary), viewModel: WidgetColorManager())
         }
         .configurationDisplayName("Current Forecast")
-        .description("View the current forecast for your area.")
+        .description("View the current forecast.")
         .supportedFamilies([.systemSmall])
     }
 }
@@ -352,7 +365,7 @@ struct HourlyForecastWidget: Widget {
             HourlyForecastWidgetView(data: ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary), viewModel: WidgetColorManager())
         }
         .configurationDisplayName("Hourly Forecast")
-        .description("View the hourly forecast for your area.")
+        .description("View the hourly forecast.")
         .supportedFamilies([.systemMedium])
     }
 }
@@ -365,7 +378,7 @@ struct DailyForecastWidget: Widget {
             DailyForecastWidgetView(data: ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary), viewModel: WidgetColorManager())
         }
         .configurationDisplayName("Daily Forecast")
-        .description("View the daily forecast for your area.")
+        .description("View the daily forecast.")
         .supportedFamilies([.systemLarge])
     }
 }
@@ -440,17 +453,19 @@ class WidgetColorManager: ObservableObject {
     var textColor: Color!
     
     func colorCoder() -> Color {
-        if defaults.string(forKey: "userSavedColorString") == "Mango" {
+        universalSettings()
+        
+        if universalColor == "Mango" {
             textColor = Color(mango)
-        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
+        } else if universalColor == "Maximum Red" {
             textColor = Color(maximumRed)
-        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
+        } else if universalColor == "Dodger Blue" {
             textColor = Color(dodgerBlue)
-        } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+        } else if universalColor == "Orchid" {
             textColor = Color(orchid)
-        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
+        } else if universalColor == "Plump Purple" {
             textColor = Color(plumpPurple)
-        } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
+        } else if universalColor == "Spring Green" {
             textColor = Color(springGreen)
         } else {
             textColor = Color(dodgerBlue)

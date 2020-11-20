@@ -7,7 +7,6 @@ target 'Cumulus' do
 	pod 'ForecastIO', '8.0.0'
  	pod 'GooglePlaces', '3.9.0'
  	pod 'SwiftyStoreKit', '0.15.0'
-	pod 'Dynatrace', '~> 8.197'
 
 	target 'GetForecastIntent' do 
 

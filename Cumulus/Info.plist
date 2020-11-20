@@ -319,14 +319,6 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
-	<key>DTXApplicationID</key>
-	<string>8d137d82-65cb-4eaf-92ac-39420ff2092b</string>
-	<key>DTXBeaconURL</key>
-	<string>https://bf75514fpn.bf.dynatrace.com/mbeacon</string>
-	<key>DTXStartupLoadBalancing</key>
-	<true/>
-	<key>DTXUserOptIn</key>
-	<true/>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-5439458304114589~5449535943</string>
 	<key>LSApplicationCategoryType</key>

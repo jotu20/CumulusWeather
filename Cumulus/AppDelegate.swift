@@ -10,7 +10,6 @@ import UIKit
 import CoreData
 import GooglePlaces
 import SwiftyStoreKit
-import Dynatrace
  
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,18 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         checkSavedColor()
-        
-        // Privacy settings configured below are only provided
-        // to allow a quick start with capturing monitoring data.
-        // This has to be requested from the user
-        // (e.g. in a privacy settings screen) and the user decision
-        // has to be applied similar to this example.
-        let privacyConfig = Dynatrace.userPrivacyOptions()
-        privacyConfig.dataCollectionLevel = .userBehavior
-        privacyConfig.crashReportingOptedIn = true
-        Dynatrace.applyUserPrivacyOptions(privacyConfig) { (Bool) in
-            // callback after privacy changed
-        }
         
         // Initialize Google Places
         GMSPlacesClient.provideAPIKey("AIzaSyD7itQU5T62p9XCRa9qXSXvqjTCB4f9nGI")
@@ -63,9 +50,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 case .purchased(let expiryDate, let items):
                     print("\(productIds) are valid until \(expiryDate)\n\(items)\n")
                     defaults.set(true, forKey: "cumulusPlus")
+                    UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("true", forKey: "setCumulusPlus")
                 case .expired(let expiryDate, let items):
                     print("\(productIds) are expired since \(expiryDate)\n\(items)\n")
                     defaults.set(false, forKey: "cumulusPlus")
+                    UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("false", forKey: "setCumulusPlus")
                 case .notPurchased:
                     print("The user has never purchased \(productIds)")
                 }
@@ -89,6 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 case .purchased(let receiptItem):
                     print("\(productId) is purchased: \(receiptItem)")
                     defaults.set(true, forKey: "cumulusPlus")
+                    UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("true", forKey: "setCumulusPlus")
                 case .notPurchased:
                     print("The user has never purchased \(productId)")
                 }
@@ -132,6 +122,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             } else if autoTheme == 6 {
                 defaults.set("Spring Green", forKey: "userSavedColorString")
             }
+            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("\(userSavedColorString)", forKey: "setColor")
         }
         
         return true

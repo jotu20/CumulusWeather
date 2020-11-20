@@ -125,6 +125,7 @@ class CumulusPlusTableViewController: UITableViewController {
                         case .purchased(let expiryDate, _):
                             print("Product is valid until \(expiryDate)")
                             defaults.set(true, forKey: "cumulusPlus")
+                            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("true", forKey: "setCumulusPlus")
                             weatherLoaded = false
                             
                             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -133,6 +134,7 @@ class CumulusPlusTableViewController: UITableViewController {
                         case .expired(let expiryDate, _):
                             print("Product is expired since \(expiryDate)")
                             defaults.set(false, forKey: "cumulusPlus")
+                            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("false", forKey: "setCumulusPlus")
                         case .notPurchased:
                             print("This product has never been purchased")
                         }
@@ -169,6 +171,7 @@ class CumulusPlusTableViewController: UITableViewController {
                         case .purchased(let expiryDate, _):
                             print("Product is valid until \(expiryDate)")
                             defaults.set(true, forKey: "cumulusPlus")
+                            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("true", forKey: "setCumulusPlus")
                             weatherLoaded = false
                             
                             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -177,6 +180,7 @@ class CumulusPlusTableViewController: UITableViewController {
                         case .expired(let expiryDate, _):
                             print("Product is expired since \(expiryDate)")
                             defaults.set(false, forKey: "cumulusPlus")
+                            UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("false", forKey: "setCumulusPlus")
                         case .notPurchased:
                             print("This product has never been purchased")
                         }
@@ -230,6 +234,7 @@ class CumulusPlusTableViewController: UITableViewController {
                 case .purchased(let expiryDate, let items):
                     print("\(productIds) are valid until \(expiryDate)\n\(items)\n")
                     defaults.set(true, forKey: "cumulusPlus")
+                    UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("true", forKey: "setCumulusPlus")
                     weatherLoaded = false
                     
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -238,6 +243,7 @@ class CumulusPlusTableViewController: UITableViewController {
                 case .expired(let expiryDate, let items):
                     print("\(productIds) are expired since \(expiryDate)\n\(items)\n")
                     defaults.set(false, forKey: "cumulusPlus")
+                    UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("false", forKey: "setCumulusPlus")
                 case .notPurchased:
                     print("The user has never purchased \(productIds)")
                     
@@ -265,6 +271,7 @@ class CumulusPlusTableViewController: UITableViewController {
                 case .purchased(let receiptItem):
                     print("\(productId) is purchased: \(receiptItem)")
                     defaults.set(true, forKey: "cumulusPlus")
+                    UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("true", forKey: "setCumulusPlus")
                     weatherLoaded = false
                     
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -14,8 +14,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
     
     @IBOutlet weak var currentConditionIcon: UIImageView!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
-    @IBOutlet weak var currentHighTemperatureLabel: UILabel!
-    @IBOutlet weak var currentLowTemperatureLabel: UILabel!
+    @IBOutlet weak var currentHighAndLowTemperatureLabel: UILabel!
     @IBOutlet weak var currentLocationLabel: UILabel!
     @IBOutlet weak var currentConditionLabel: UILabel!
     @IBOutlet weak var precipitationLabel: UILabel!
@@ -50,8 +49,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         // Current condition labels
         self.currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image", circle: universalIcons))
         self.currentTemperatureLabel.text = "\(currentTemperature)°"
-        self.currentHighTemperatureLabel.text = "\(day0High)°"
-        self.currentLowTemperatureLabel.text = "\(day0Low)°"
+        self.currentHighAndLowTemperatureLabel.text = "↑\(day0High)° ↓\(day0Low)°"
         self.currentConditionLabel.text = "\(weatherCondition(condition: currentCondition, type: "text", circle: universalIcons))"
         
         self.precipitationLabel.text = "Precip. \(precipitation)%"
@@ -281,6 +279,22 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                     
                     // Precipitation
                     day3Precip = Int(fetchDayThreeArray.precipitationProbability! * 100)
+                    
+                    // Day Four
+                    let dayFourArray = daily.data[4]
+                    let fetchDayFourArray = dayFourArray
+                    
+                    day4Condition = "\(fetchDayFourArray.icon!.rawValue)"
+                    
+                    // Date
+                    day4DayString = dayFormat(date: fetchDayFourArray.time, fullLength: false)
+                    
+                    // High and Low
+                    day4High = Int(fetchDayFourArray.temperatureHigh!)
+                    day4Low = Int(fetchDayFourArray.temperatureLow!)
+                    
+                    // Precipitation
+                    day4Precip = Int(fetchDayFourArray.precipitationProbability! * 100)
                 }
                 
                 DispatchQueue.main.async() {

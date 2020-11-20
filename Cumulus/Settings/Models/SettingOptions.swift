@@ -60,6 +60,9 @@ var setDataSource: String = ""
 var universalUnits: String = ""
 var setUnits: String = ""
 
+var universalCumulusPlus: String = ""
+var setCumulusPlus: String = ""
+
 var universalIcons: String = ""
 var setIcons: String = ""
 
@@ -86,6 +89,10 @@ func universalSettings() {
     
     if let widgetSetLongitude = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.double(forKey: "setWidgetLongitude") {
         universalLongitude = widgetSetLongitude
+    }
+    
+    if let widgetSetCumulusPlus = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.string(forKey: "setCumulusPlus") {
+        universalCumulusPlus = widgetSetCumulusPlus
     }
     
     if let widgetSetIcons = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.string(forKey: "setIcons") {

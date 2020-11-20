@@ -322,6 +322,7 @@ struct DailyForecastWidgetView : View {
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .trailing)
                         Text("\(day3Low)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(.gray)
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .leading)
                     }
                     HStack {
@@ -365,7 +366,7 @@ struct HourlyForecastWidget: Widget {
             HourlyForecastWidgetView(data: ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary), viewModel: WidgetColorManager())
         }
         .configurationDisplayName("Hourly Forecast")
-        .description("View the hourly forecast.")
+        .description("View the current and hourly forecasts.")
         .supportedFamilies([.systemMedium])
     }
 }
@@ -378,7 +379,7 @@ struct DailyForecastWidget: Widget {
             DailyForecastWidgetView(data: ForecastEntry(date: Date(), latitude: latitudeValue, longitude: longitudeValue, currentLocation: currentLocation, currentCondition: currentCondition, currentTemperature: currentTemperature, currentSummary: currentSummary), viewModel: WidgetColorManager())
         }
         .configurationDisplayName("Daily Forecast")
-        .description("View the daily forecast.")
+        .description("View the current, hourly, and daily forecasts.")
         .supportedFamilies([.systemLarge])
     }
 }

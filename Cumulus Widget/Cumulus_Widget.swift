@@ -26,7 +26,6 @@ struct ForecastTimeline: TimelineProvider {
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [ForecastEntry] = []
-        universalSettings()
         
         if widgetLocationManager.locationManager == nil {
             widgetLocationManager.locationManager = CLLocationManager()
@@ -452,10 +451,8 @@ class WidgetLocationManager: NSObject, CLLocationManagerDelegate {
 
 class WidgetColorManager: ObservableObject {
     var textColor: Color!
-    
+
     func colorCoder() -> Color {
-        universalSettings()
-        
         if universalColor == "Mango" {
             textColor = Color(mango)
         } else if universalColor == "Maximum Red" {

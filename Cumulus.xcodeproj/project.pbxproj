@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		086CE4F1F527893D1A5BBC9E /* Pods_Cumulus_GetForecastIntent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7E6798848D7576F41F3A90 /* Pods_Cumulus_GetForecastIntent.framework */; };
-		51B7BA330EE0F498170DF5B4 /* Pods_Cumulus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B6B8106298CA608EDA2FCE /* Pods_Cumulus.framework */; };
-		AE008D54FC55AEA3001ED64F /* Pods_Cumulus_Cumulus_WidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67AA7101BE6471F0075D442D /* Pods_Cumulus_Cumulus_WidgetExtension.framework */; };
-		B8A05ABC738256D21A7A9703 /* Pods_Cumulus_GetForecastIntentUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E7014EB6314B3A531E2299 /* Pods_Cumulus_GetForecastIntentUI.framework */; };
+		0B2A726B72126DF51B655F79 /* Pods_Cumulus_GetForecastIntent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61005310E8B275B35207D939 /* Pods_Cumulus_GetForecastIntent.framework */; };
+		0E534D382CB508F6AF1866A4 /* Pods_Cumulus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A87CF6EBF5D489A848B2AA72 /* Pods_Cumulus.framework */; };
+		5B0948686F4D49BC4ACE44B5 /* Pods_Cumulus_Cumulus_WidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6126C7FFB09EE3E13867A1F /* Pods_Cumulus_Cumulus_WidgetExtension.framework */; };
+		B716BEA793A2786D0A5637CB /* Pods_Cumulus_GetForecastIntentUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21CE9643318C77B374E83FB /* Pods_Cumulus_GetForecastIntentUI.framework */; };
 		CF39201B2365217300FAFA53 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF39201A2365217300FAFA53 /* MapKit.framework */; };
 		CF4A0E5F2108B1B30061CAAD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4A0E5E2108B1B30061CAAD /* Default-568h@2x.png */; };
 		CF4A0E612108B5580061CAAD /* AppIconTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A0E602108B5580061CAAD /* AppIconTableViewController.swift */; };
@@ -183,16 +183,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		03E97048695F6DC57B16B1CE /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-GetForecastIntent.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent.debug.xcconfig"; sourceTree = "<group>"; };
-		2CCA32833928FDC6E8521511 /* Pods-Cumulus-Cumulus WidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-Cumulus WidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus-Cumulus WidgetExtension/Pods-Cumulus-Cumulus WidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
-		33C4BAB462A68F0E289760BF /* Pods-Cumulus-Cumulus WidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-Cumulus WidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-Cumulus-Cumulus WidgetExtension/Pods-Cumulus-Cumulus WidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
-		3C7E6798848D7576F41F3A90 /* Pods_Cumulus_GetForecastIntent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_GetForecastIntent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		67AA7101BE6471F0075D442D /* Pods_Cumulus_Cumulus_WidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_Cumulus_WidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		68E27ACCDF098D7DBEDAE111 /* Pods-Cumulus-GetForecastIntent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-GetForecastIntent.release.xcconfig"; path = "Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent.release.xcconfig"; sourceTree = "<group>"; };
-		90C8A7AE52FE2A1F0AB8DD52 /* Pods-Cumulus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus/Pods-Cumulus.debug.xcconfig"; sourceTree = "<group>"; };
-		96393497E15B3F1B0AA853E1 /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-GetForecastIntentUI.release.xcconfig"; path = "Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI.release.xcconfig"; sourceTree = "<group>"; };
-		A2B6B8106298CA608EDA2FCE /* Pods_Cumulus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3073E58C58DA2FD8599D138 /* Pods-Cumulus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus.release.xcconfig"; path = "Target Support Files/Pods-Cumulus/Pods-Cumulus.release.xcconfig"; sourceTree = "<group>"; };
+		56E2C427F4BFD16944DEB726 /* Pods-Cumulus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus/Pods-Cumulus.debug.xcconfig"; sourceTree = "<group>"; };
+		61005310E8B275B35207D939 /* Pods_Cumulus_GetForecastIntent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_GetForecastIntent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63E3819D1CC5D5C6F01B48AB /* Pods-Cumulus-Cumulus WidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-Cumulus WidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-Cumulus-Cumulus WidgetExtension/Pods-Cumulus-Cumulus WidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
+		82ADC16C928DAEA4B13F33EA /* Pods-Cumulus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus.release.xcconfig"; path = "Target Support Files/Pods-Cumulus/Pods-Cumulus.release.xcconfig"; sourceTree = "<group>"; };
+		9148308CA1BB05A69EAF1B10 /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-GetForecastIntentUI.release.xcconfig"; path = "Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI.release.xcconfig"; sourceTree = "<group>"; };
+		A87CF6EBF5D489A848B2AA72 /* Pods_Cumulus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE49D7424472F4ADD36563D5 /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-GetForecastIntentUI.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI.debug.xcconfig"; sourceTree = "<group>"; };
+		B977CACB34EE11EA5F4FC0E4 /* Pods-Cumulus-Cumulus WidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-Cumulus WidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus-Cumulus WidgetExtension/Pods-Cumulus-Cumulus WidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		CF1B83C0252269C400F305A6 /* AppIntentVocabulary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppIntentVocabulary.plist; sourceTree = "<group>"; };
 		CF1DF2DE2169B29F00BB233D /* GetForecastIntent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GetForecastIntent.entitlements; sourceTree = "<group>"; };
 		CF1DF2DF2169B2B100BB233D /* GetForecastIntentUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GetForecastIntentUI.entitlements; sourceTree = "<group>"; };
@@ -301,8 +299,10 @@
 		CFF42EA42513CC3D005119C9 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		CFF42EA62513CC3D005119C9 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		CFFB787620DF0B44008216F8 /* License */ = {isa = PBXFileReference; lastKnownFileType = text; path = License; sourceTree = "<group>"; };
-		EF10617219D58DDFB7017BDE /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-GetForecastIntentUI.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI.debug.xcconfig"; sourceTree = "<group>"; };
-		F0E7014EB6314B3A531E2299 /* Pods_Cumulus_GetForecastIntentUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_GetForecastIntentUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE45B0BDBBE428328B17986D /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-GetForecastIntent.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent.debug.xcconfig"; sourceTree = "<group>"; };
+		E21CE9643318C77B374E83FB /* Pods_Cumulus_GetForecastIntentUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_GetForecastIntentUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC64538BBCB25559F82921DA /* Pods-Cumulus-GetForecastIntent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus-GetForecastIntent.release.xcconfig"; path = "Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent.release.xcconfig"; sourceTree = "<group>"; };
+		F6126C7FFB09EE3E13867A1F /* Pods_Cumulus_Cumulus_WidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_Cumulus_WidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,7 +313,7 @@
 				CF94774B2167E48E00DA8B38 /* Intents.framework in Frameworks */,
 				CF52ECD9210FA29D00A605A4 /* StoreKit.framework in Frameworks */,
 				CF39201B2365217300FAFA53 /* MapKit.framework in Frameworks */,
-				51B7BA330EE0F498170DF5B4 /* Pods_Cumulus.framework in Frameworks */,
+				0E534D382CB508F6AF1866A4 /* Pods_Cumulus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +321,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				086CE4F1F527893D1A5BBC9E /* Pods_Cumulus_GetForecastIntent.framework in Frameworks */,
+				0B2A726B72126DF51B655F79 /* Pods_Cumulus_GetForecastIntent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF94775B2168080A00DA8B38 /* IntentsUI.framework in Frameworks */,
-				B8A05ABC738256D21A7A9703 /* Pods_Cumulus_GetForecastIntentUI.framework in Frameworks */,
+				B716BEA793A2786D0A5637CB /* Pods_Cumulus_GetForecastIntentUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +340,7 @@
 			files = (
 				CFD9CDFC2535FD3200CB128E /* SwiftUI.framework in Frameworks */,
 				CFD9CDFB2535FD3200CB128E /* WidgetKit.framework in Frameworks */,
-				AE008D54FC55AEA3001ED64F /* Pods_Cumulus_Cumulus_WidgetExtension.framework in Frameworks */,
+				5B0948686F4D49BC4ACE44B5 /* Pods_Cumulus_Cumulus_WidgetExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,14 +350,14 @@
 		34F474473D8808F01E8529E7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				90C8A7AE52FE2A1F0AB8DD52 /* Pods-Cumulus.debug.xcconfig */,
-				C3073E58C58DA2FD8599D138 /* Pods-Cumulus.release.xcconfig */,
-				2CCA32833928FDC6E8521511 /* Pods-Cumulus-Cumulus WidgetExtension.debug.xcconfig */,
-				33C4BAB462A68F0E289760BF /* Pods-Cumulus-Cumulus WidgetExtension.release.xcconfig */,
-				03E97048695F6DC57B16B1CE /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */,
-				68E27ACCDF098D7DBEDAE111 /* Pods-Cumulus-GetForecastIntent.release.xcconfig */,
-				EF10617219D58DDFB7017BDE /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */,
-				96393497E15B3F1B0AA853E1 /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */,
+				56E2C427F4BFD16944DEB726 /* Pods-Cumulus.debug.xcconfig */,
+				82ADC16C928DAEA4B13F33EA /* Pods-Cumulus.release.xcconfig */,
+				B977CACB34EE11EA5F4FC0E4 /* Pods-Cumulus-Cumulus WidgetExtension.debug.xcconfig */,
+				63E3819D1CC5D5C6F01B48AB /* Pods-Cumulus-Cumulus WidgetExtension.release.xcconfig */,
+				DE45B0BDBBE428328B17986D /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */,
+				EC64538BBCB25559F82921DA /* Pods-Cumulus-GetForecastIntent.release.xcconfig */,
+				AE49D7424472F4ADD36563D5 /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */,
+				9148308CA1BB05A69EAF1B10 /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -372,10 +372,10 @@
 				CF94775A2168080A00DA8B38 /* IntentsUI.framework */,
 				CFF42EA42513CC3D005119C9 /* WidgetKit.framework */,
 				CFF42EA62513CC3D005119C9 /* SwiftUI.framework */,
-				A2B6B8106298CA608EDA2FCE /* Pods_Cumulus.framework */,
-				67AA7101BE6471F0075D442D /* Pods_Cumulus_Cumulus_WidgetExtension.framework */,
-				3C7E6798848D7576F41F3A90 /* Pods_Cumulus_GetForecastIntent.framework */,
-				F0E7014EB6314B3A531E2299 /* Pods_Cumulus_GetForecastIntentUI.framework */,
+				A87CF6EBF5D489A848B2AA72 /* Pods_Cumulus.framework */,
+				F6126C7FFB09EE3E13867A1F /* Pods_Cumulus_Cumulus_WidgetExtension.framework */,
+				61005310E8B275B35207D939 /* Pods_Cumulus_GetForecastIntent.framework */,
+				E21CE9643318C77B374E83FB /* Pods_Cumulus_GetForecastIntentUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -625,14 +625,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF6E4AB020DACFD9002349A7 /* Build configuration list for PBXNativeTarget "Cumulus" */;
 			buildPhases = (
-				CEC769EF0CF6D7CB1BF81B93 /* [CP] Check Pods Manifest.lock */,
+				54DB97E3172BA6B639E98473 /* [CP] Check Pods Manifest.lock */,
 				CF6E4A9A20DACFD8002349A7 /* Sources */,
 				CF6E4A9B20DACFD8002349A7 /* Frameworks */,
 				CF6E4A9C20DACFD8002349A7 /* Resources */,
 				CFDEEC1820E26ED900BA5EA5 /* Embed App Extensions */,
 				CF07AB8920E4138D00810A64 /* Embed Watch Content */,
-				591FC6AE664B5F2C7EEFA1A2 /* [CP] Embed Pods Frameworks */,
-				CB102CE910C6B0F833E131B6 /* [CP] Copy Pods Resources */,
+				8668ACBB74BC2DC0DA66764B /* [CP] Embed Pods Frameworks */,
+				1CCBB37D751A9A693CC4A7BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -650,11 +650,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF94776C2168080A00DA8B38 /* Build configuration list for PBXNativeTarget "GetForecastIntent" */;
 			buildPhases = (
-				4FB0845BAE4CD06EF0999540 /* [CP] Check Pods Manifest.lock */,
+				84D4C16F4BD42300DD50FBA0 /* [CP] Check Pods Manifest.lock */,
 				CF94774C2168080900DA8B38 /* Sources */,
 				CF94774D2168080900DA8B38 /* Frameworks */,
 				CF94774E2168080900DA8B38 /* Resources */,
-				130F2CAAC2158D74B88D35D1 /* [CP] Copy Pods Resources */,
+				F6390050747A78542E8A20C5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -669,11 +669,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF9477692168080A00DA8B38 /* Build configuration list for PBXNativeTarget "GetForecastIntentUI" */;
 			buildPhases = (
-				3FC9D81D37F7A08C1FC66385 /* [CP] Check Pods Manifest.lock */,
+				8F9288BF442BAED2265C6C82 /* [CP] Check Pods Manifest.lock */,
 				CF9477552168080A00DA8B38 /* Sources */,
 				CF9477562168080A00DA8B38 /* Frameworks */,
 				CF9477572168080A00DA8B38 /* Resources */,
-				E34F06D21B7FFFBA9791A437 /* [CP] Copy Pods Resources */,
+				BEC125611BED41180DB51321 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -688,11 +688,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFD9CE082535FD3200CB128E /* Build configuration list for PBXNativeTarget "Cumulus WidgetExtension" */;
 			buildPhases = (
-				562865C8B3CDE5B44F8C1B82 /* [CP] Check Pods Manifest.lock */,
+				B966C87BE962B09E24736522 /* [CP] Check Pods Manifest.lock */,
 				CFD9CDF62535FD3200CB128E /* Sources */,
 				CFD9CDF72535FD3200CB128E /* Frameworks */,
 				CFD9CDF82535FD3200CB128E /* Resources */,
-				B67C32C22136E831526BE60A /* [CP] Copy Pods Resources */,
+				ABB2E4E1E0DC6459057C226B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -873,124 +873,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		130F2CAAC2158D74B88D35D1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3FC9D81D37F7A08C1FC66385 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Cumulus-GetForecastIntentUI-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4FB0845BAE4CD06EF0999540 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Cumulus-GetForecastIntent-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		562865C8B3CDE5B44F8C1B82 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Cumulus-Cumulus WidgetExtension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		591FC6AE664B5F2C7EEFA1A2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cumulus/Pods-Cumulus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cumulus/Pods-Cumulus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus/Pods-Cumulus-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B67C32C22136E831526BE60A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-Cumulus WidgetExtension/Pods-Cumulus-Cumulus WidgetExtension-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-Cumulus WidgetExtension/Pods-Cumulus-Cumulus WidgetExtension-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus-Cumulus WidgetExtension/Pods-Cumulus-Cumulus WidgetExtension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CB102CE910C6B0F833E131B6 /* [CP] Copy Pods Resources */ = {
+		1CCBB37D751A9A693CC4A7BC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1007,7 +890,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus/Pods-Cumulus-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CEC769EF0CF6D7CB1BF81B93 /* [CP] Check Pods Manifest.lock */ = {
+		54DB97E3172BA6B639E98473 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1029,7 +912,107 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E34F06D21B7FFFBA9791A437 /* [CP] Copy Pods Resources */ = {
+		84D4C16F4BD42300DD50FBA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cumulus-GetForecastIntent-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8668ACBB74BC2DC0DA66764B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cumulus/Pods-Cumulus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cumulus/Pods-Cumulus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus/Pods-Cumulus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F9288BF442BAED2265C6C82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cumulus-GetForecastIntentUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABB2E4E1E0DC6459057C226B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-Cumulus WidgetExtension/Pods-Cumulus-Cumulus WidgetExtension-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-Cumulus WidgetExtension/Pods-Cumulus-Cumulus WidgetExtension-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus-Cumulus WidgetExtension/Pods-Cumulus-Cumulus WidgetExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B966C87BE962B09E24736522 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cumulus-Cumulus WidgetExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEC125611BED41180DB51321 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1044,6 +1027,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntentUI/Pods-Cumulus-GetForecastIntentUI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6390050747A78542E8A20C5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cumulus-GetForecastIntent/Pods-Cumulus-GetForecastIntent-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1260,14 +1260,14 @@
 		};
 		CF6E4AB120DACFD9002349A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90C8A7AE52FE2A1F0AB8DD52 /* Pods-Cumulus.debug.xcconfig */;
+			baseConfigurationReference = 56E2C427F4BFD16944DEB726 /* Pods-Cumulus.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.14;
+				CURRENT_PROJECT_VERSION = 2.1.15;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1285,14 +1285,14 @@
 		};
 		CF6E4AB220DACFD9002349A7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3073E58C58DA2FD8599D138 /* Pods-Cumulus.release.xcconfig */;
+			baseConfigurationReference = 82ADC16C928DAEA4B13F33EA /* Pods-Cumulus.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.14;
+				CURRENT_PROJECT_VERSION = 2.1.15;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1310,12 +1310,12 @@
 		};
 		CF94776A2168080A00DA8B38 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF10617219D58DDFB7017BDE /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */;
+			baseConfigurationReference = AE49D7424472F4ADD36563D5 /* Pods-Cumulus-GetForecastIntentUI.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.14;
+				CURRENT_PROJECT_VERSION = 2.1.15;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntentUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1337,12 +1337,12 @@
 		};
 		CF94776B2168080A00DA8B38 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96393497E15B3F1B0AA853E1 /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */;
+			baseConfigurationReference = 9148308CA1BB05A69EAF1B10 /* Pods-Cumulus-GetForecastIntentUI.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.14;
+				CURRENT_PROJECT_VERSION = 2.1.15;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntentUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1363,12 +1363,12 @@
 		};
 		CF94776D2168080A00DA8B38 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03E97048695F6DC57B16B1CE /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */;
+			baseConfigurationReference = DE45B0BDBBE428328B17986D /* Pods-Cumulus-GetForecastIntent.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.14;
+				CURRENT_PROJECT_VERSION = 2.1.15;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1390,12 +1390,12 @@
 		};
 		CF94776E2168080A00DA8B38 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68E27ACCDF098D7DBEDAE111 /* Pods-Cumulus-GetForecastIntent.release.xcconfig */;
+			baseConfigurationReference = EC64538BBCB25559F82921DA /* Pods-Cumulus-GetForecastIntent.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.14;
+				CURRENT_PROJECT_VERSION = 2.1.15;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1416,13 +1416,13 @@
 		};
 		CFD9CE062535FD3200CB128E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CCA32833928FDC6E8521511 /* Pods-Cumulus-Cumulus WidgetExtension.debug.xcconfig */;
+			baseConfigurationReference = B977CACB34EE11EA5F4FC0E4 /* Pods-Cumulus-Cumulus WidgetExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.14;
+				CURRENT_PROJECT_VERSION = 2.1.15;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "Cumulus Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1444,13 +1444,13 @@
 		};
 		CFD9CE072535FD3200CB128E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33C4BAB462A68F0E289760BF /* Pods-Cumulus-Cumulus WidgetExtension.release.xcconfig */;
+			baseConfigurationReference = 63E3819D1CC5D5C6F01B48AB /* Pods-Cumulus-Cumulus WidgetExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.14;
+				CURRENT_PROJECT_VERSION = 2.1.15;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "Cumulus Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

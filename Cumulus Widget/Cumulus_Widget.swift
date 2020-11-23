@@ -84,7 +84,10 @@ struct CurrentForecastWidgetView : View {
                 }
                 Text("\(data.currentSummary.capitalizingFirstLetter())")
                     .font(.system(size: 12, weight: .regular, design: .default))
-                    .frame(maxWidth: 150, maxHeight: 50, alignment: .top)
+                    .frame(maxWidth: 150, maxHeight: 30, alignment: .top)
+                Text("↑\(highTemperature)° ↓\(lowTemperature)°")
+                    .font(.system(size: 12, weight: .regular, design: .default))
+                    .frame(maxWidth: 150, maxHeight: 10, alignment: .center)
             }
         }
     }

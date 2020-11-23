@@ -3207,11 +3207,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
-                                                        <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="AZ9-fl-zMH" appends="YES" id="tnJ-qK-lwX"/>
-                                                        </connections>
                                                     </label>
                                                 </subviews>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="AZ9-fl-zMH" appends="YES" id="mxL-aK-oOi"/>
+                                                </connections>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -5717,11 +5718,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tbp-tq-TEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="AZ9-fl-zMH">
-                    <connections>
-                        <action selector="weatherAlertTapGestureTapped:" destination="tbR-PR-y6h" id="x4L-sw-xbZ"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <tapGestureRecognizer id="tBM-35-NUx">
                     <connections>
                         <action selector="currentConditionsTapped:" destination="tbR-PR-y6h" id="iDA-jy-h6y"/>
@@ -5790,6 +5786,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <tapGestureRecognizer id="0B0-bP-8wS">
                     <connections>
                         <action selector="day9CardTapped:" destination="tbR-PR-y6h" id="AB3-hp-Nfn"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="AZ9-fl-zMH">
+                    <connections>
+                        <action selector="weatherAlertTapGestureTapped:" destination="tbR-PR-y6h" id="x4L-sw-xbZ"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

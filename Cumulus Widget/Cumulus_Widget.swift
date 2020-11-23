@@ -82,7 +82,7 @@ struct CurrentForecastWidgetView : View {
                         .font(.system(size: 30, weight: .semibold, design: .default))
                         .frame(maxWidth: 80, maxHeight: 45, alignment: .leading)
                 }
-                Text("\(data.currentSummary)")
+                Text("\(data.currentSummary.capitalizingFirstLetter())")
                     .font(.system(size: 12, weight: .regular, design: .default))
                     .frame(maxWidth: 150, maxHeight: 50, alignment: .top)
             }
@@ -108,7 +108,7 @@ struct HourlyForecastWidgetView : View {
                         .font(.system(size: 30, weight: .semibold, design: .default))
                         .frame(maxWidth: 75, maxHeight: 45, alignment: .leading)
                     VStack(alignment: .trailing) {
-                        Text("\(currentSummary)")
+                        Text("\(currentSummary.capitalizingFirstLetter())")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 250, maxHeight: 25, alignment: .bottomTrailing)
                         HStack {
@@ -205,7 +205,7 @@ struct DailyForecastWidgetView : View {
                         .font(.system(size: 30, weight: .semibold, design: .default))
                         .frame(maxWidth: 75, maxHeight: 45, alignment: .leading)
                     VStack(alignment: .trailing) {
-                        Text("\(currentSummary)")
+                        Text("\(currentSummary.capitalizingFirstLetter())")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 250, maxHeight: 25, alignment: .bottomTrailing)
                         HStack {

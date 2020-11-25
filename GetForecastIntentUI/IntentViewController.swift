@@ -49,7 +49,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         // Current condition labels
         self.currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image", circle: universalIcons))
         self.currentTemperatureLabel.text = "\(currentTemperature)°"
-        self.currentHighAndLowTemperatureLabel.text = "↑\(day0High)° ↓\(day0Low)°"
+        self.currentHighAndLowTemperatureLabel.text = "↑\(highTemperature)° ↓\(lowTemperature)°"
         self.currentConditionLabel.text = "\(weatherCondition(condition: currentCondition, type: "text", circle: universalIcons))"
         
         self.precipitationLabel.text = "Precip. \(precipitation)%"
@@ -87,25 +87,25 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         
         // Day Zero
         self.day0ConditionImage.image = UIImage(named: weatherCondition(condition: day1Condition, type: "daily", circle: universalIcons))
-        self.day0Label.text = "\(day1DayString)"
+        self.day0Label.text = "\(day1DayStringFull.capitalizingFirstLetter())"
         self.day0HighLabel.text = "\(day1High)°"
         self.day0LowLabel.text = "\(day1Low)°"
         
         // Day One
         self.day1ConditionImage.image = UIImage(named: weatherCondition(condition: day2Condition, type: "daily", circle: universalIcons))
-        self.day1Label.text = "\(day2DayString)"
+        self.day1Label.text = "\(day2DayStringFull.capitalizingFirstLetter())"
         self.day1HighLabel.text = "\(day2High)°"
         self.day1LowLabel.text = "\(day2Low)°"
         
         // Day Two
         self.day2ConditionImage.image = UIImage(named: weatherCondition(condition: day3Condition, type: "daily", circle: universalIcons))
-        self.day2Label.text = "\(day3DayString)"
+        self.day2Label.text = "\(day3DayStringFull.capitalizingFirstLetter())"
         self.day2HighLabel.text = "\(day3High)°"
         self.day2LowLabel.text = "\(day3Low)°"
         
         // Day Three
         self.day3ConditionImage.image = UIImage(named: weatherCondition(condition: day4Condition, type: "daily", circle: universalIcons))
-        self.day3Label.text = "\(day4DayString)"
+        self.day3Label.text = "\(day4DayStringFull.capitalizingFirstLetter())"
         self.day3HighLabel.text = "\(day4High)°"
         self.day3LowLabel.text = "\(day4Low)°"
     }
@@ -239,7 +239,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                     day1Condition = "\(fetchDayOneArray.icon!.rawValue)"
                     
                     // Date
-                    day1DayString = dayFormat(date: dayOneArray.time, fullLength: false)
+                    day1DayStringFull = dayFormat(date: dayOneArray.time, fullLength: true)
                     
                     // High and Low
                     day1High = Int(fetchDayOneArray.temperatureHigh!)
@@ -255,7 +255,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                     day2Condition = "\(fetchDayTwoArray.icon!.rawValue)"
                     
                     // Date
-                    day2DayString = dayFormat(date: dayTwoArray.time, fullLength: false)
+                    day2DayStringFull = dayFormat(date: dayTwoArray.time, fullLength: true)
                     
                     // High and Low
                     day2High = Int(fetchDayTwoArray.temperatureHigh!)
@@ -271,7 +271,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                     day3Condition = "\(fetchDayThreeArray.icon!.rawValue)"
                     
                     // Date
-                    day3DayString = dayFormat(date: dayThreeArray.time, fullLength: false)
+                    day3DayStringFull = dayFormat(date: dayThreeArray.time, fullLength: true)
                     
                     // High and Low
                     day3High = Int(fetchDayThreeArray.temperatureHigh!)
@@ -287,7 +287,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                     day4Condition = "\(fetchDayFourArray.icon!.rawValue)"
                     
                     // Date
-                    day4DayString = dayFormat(date: fetchDayFourArray.time, fullLength: false)
+                    day4DayStringFull = dayFormat(date: fetchDayFourArray.time, fullLength: true)
                     
                     // High and Low
                     day4High = Int(fetchDayFourArray.temperatureHigh!)

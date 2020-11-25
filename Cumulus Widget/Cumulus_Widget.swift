@@ -286,7 +286,7 @@ struct DailyForecastWidgetView : View {
                 // Daily values
                 VStack(spacing: 0) {
                     HStack {
-                        Text("\(day1DayStringFull)")
+                        Text("\(day1DayStringFull.capitalizingFirstLetter())")
                             .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
                             .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: day1Condition, type: "widget", circle: universalIcons))
@@ -300,7 +300,7 @@ struct DailyForecastWidgetView : View {
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .leading)
                     }
                     HStack {
-                        Text("\(day2DayStringFull)")
+                        Text("\(day2DayStringFull.capitalizingFirstLetter())")
                             .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
                             .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: day2Condition, type: "widget", circle: universalIcons))
@@ -314,7 +314,7 @@ struct DailyForecastWidgetView : View {
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .leading)
                     }
                     HStack {
-                        Text("\(day3DayStringFull)")
+                        Text("\(day3DayStringFull.capitalizingFirstLetter())")
                             .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
                             .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: day3Condition, type: "widget", circle: universalIcons))
@@ -328,7 +328,7 @@ struct DailyForecastWidgetView : View {
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .leading)
                     }
                     HStack {
-                        Text("\(day4DayStringFull)")
+                        Text("\(day4DayStringFull.capitalizingFirstLetter())")
                             .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
                             .font(.system(size: 12, weight: .regular, design: .default))
                         Image(weatherCondition(condition: day4Condition, type: "widget", circle: universalIcons))

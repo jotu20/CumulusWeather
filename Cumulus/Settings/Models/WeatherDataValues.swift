@@ -427,6 +427,7 @@ var hour14: String = ""
 var hour15: String = ""
 
 // MARK: - Other weather values
+var airQualityConcern: String = ""
 var uvIndex: Int = 0
 var visibility: Int = 0
 var pressure: Int = 0

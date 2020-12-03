@@ -3247,7 +3247,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0w3-cj-XKw">
-                                                <rect key="frame" x="220" y="14.5" width="130" height="86"/>
+                                                <rect key="frame" x="220" y="3.5" width="130" height="108"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feels like" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nlZ-CI-juf">
                                                         <rect key="frame" x="0.0" y="0.0" width="130" height="20"/>
@@ -3284,6 +3284,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="130" id="Qty-8g-A8j"/>
                                                             <constraint firstAttribute="height" constant="20" id="iqT-1u-NJD"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Air Quality " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jFc-mL-pxS">
+                                                        <rect key="frame" x="0.0" y="88" width="130" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="61c-4K-u2I"/>
+                                                            <constraint firstAttribute="width" constant="130" id="vsO-RF-56H"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
@@ -5498,9 +5508,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <outlet property="conditionSlotLabel1" destination="Qqd-Oq-poo" id="goU-Nx-ad8"/>
                         <outlet property="conditionSlotLabel2" destination="3r8-2a-5jZ" id="ljP-5d-o61"/>
                         <outlet property="conditionSlotLabel3" destination="JWm-uA-hpm" id="LCy-js-Q1C"/>
+                        <outlet property="conditionSlotLabel4" destination="jFc-mL-pxS" id="0wy-pC-Pes"/>
                         <outlet property="currentConditionIcon" destination="y7R-Sp-dOd" id="oH6-b1-2Le"/>
                         <outlet property="currentConditionLabelWidth" destination="ju7-IB-Ywj" id="cIf-Es-vmA"/>
                         <outlet property="currentConditionView" destination="ucT-hz-Uno" id="a2F-Sd-OWH"/>
+                        <outlet property="currentConditionViewHeight" destination="tJC-og-ryA" id="AIo-kB-Yor"/>
                         <outlet property="currentConditionViewWidth" destination="43G-MV-pNS" id="0p1-6I-2bg"/>
                         <outlet property="currentConditonLabel" destination="83E-W5-IGN" id="ku9-tY-JND"/>
                         <outlet property="currentLocationIcon" destination="yaF-So-sxS" id="56p-3G-PhP"/>

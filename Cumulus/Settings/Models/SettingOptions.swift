@@ -52,7 +52,6 @@ var defaultConditionIcons: String = ""
 
 // Weather Units
 var dataSource: String = ""
-var dataSourceChanged: Bool = false
 
 var universalDataSource: String = ""
 var setDataSource: String = ""

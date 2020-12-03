@@ -25,6 +25,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     // MARK: - Current conditions outlets
     @IBOutlet weak var currentConditionView: UIView!
+    @IBOutlet weak var currentConditionViewHeight: NSLayoutConstraint!
     
     @IBOutlet weak var currentLocationIcon: UIImageView!
     @IBOutlet weak var currentLocationLabel: UILabel!
@@ -41,6 +42,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @IBOutlet weak var conditionSlotLabel1: UILabel!
     @IBOutlet weak var conditionSlotLabel2: UILabel!
     @IBOutlet weak var conditionSlotLabel3: UILabel!
+    @IBOutlet weak var conditionSlotLabel4: UILabel!
     
     // MARK: - Hourly outlets
     @IBOutlet var hourlyConditionsGesture: UITapGestureRecognizer!
@@ -276,7 +278,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         self.setupGrantedLocationServices()
         
         // Check for loaded weather, distance change, or color theme change
-        if weatherLoaded == false || distanceChange == true || dataSourceChanged == true || userChangedColorTheme == true {
+        if weatherLoaded == false || distanceChange == true || userChangedColorTheme == true {
             loadingScreen()
         }
 
@@ -375,7 +377,12 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                 longitudeValue = location.coordinate.longitude
                 currentLocation = selectedLocation
                 self.locationManager.stopUpdatingLocation()
-                fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
+                
+                if (defaults.string(forKey: "dataSource") == "Dark Sky") {
+                    fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
+                } else if (defaults.string(forKey: "dataSource") == "ClimaCell") {
+                    fetchClimaCellWeatherData()
+                }
             }
         } else {
             latitudeValue = (manager.location?.coordinate.latitude)!
@@ -397,7 +404,12 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                     currentLocation = "\(placemark.name!), \(placemark.country!)"
                 }
                 self.locationManager.stopUpdatingLocation()
-                fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
+                
+                if (defaults.string(forKey: "dataSource") == "Dark Sky") {
+                    fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
+                } else if (defaults.string(forKey: "dataSource") == "ClimaCell") {
+                    fetchClimaCellWeatherData()
+                }
             }
         }
     }
@@ -458,7 +470,12 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                 UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(latitudeValue, forKey: "setWidgetLatitude")
                 UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(longitudeValue, forKey: "setWidgetLongitude")
                 currentLocation = "\(defaults.string(forKey: "selectedLocation") ?? "New York, NY")"
-                fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
+                
+                if (defaults.string(forKey: "dataSource") == "Dark Sky") {
+                    fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
+                } else if (defaults.string(forKey: "dataSource") == "ClimaCell") {
+                    fetchClimaCellWeatherData()
+                }
             }
         } else {
             showLocationDisabledPopUp()
@@ -1226,6 +1243,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     // MARK: - Set current condition labels
     func setCurrentConditionOutlets() {
+        if (defaults.string(forKey: "dataSource") == "ClimaCell") {
+            conditionSlotLabel4.isHidden = false
+            currentConditionViewHeight.constant = 135
+            conditionSlotLabel4.text = "AQ is \(airQualityConcern.lowercased())"
+        } else {
+            currentConditionViewHeight.constant = 115
+        }
+        
         // Check for current precipitation
         if minuteSummary.isEmpty == false && minuteSummary != "none" {
             // Check if there is current precipitation
@@ -1260,6 +1285,9 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     // MARK: - Set extended current condition labels
     func setExtendedCurrentConditionOutlets() {
+        conditionSlotLabel4.isHidden = true
+        currentConditionViewHeight.constant = 115
+        
         conditionSlotLabel0.text = "Accum. \(precipAccumulation)\(unitsPrecipitation)"
         conditionSlotLabel1.text = "Humidity \(humidity)%"
         
@@ -1271,7 +1299,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else {
             conditionSlotLabel2.text = "Clouds \(cloudCover)%"
         }
-        
+             
         // Set sunrise/sunset
         if currentCondition.contains("night") {
             conditionSlotLabel3.text = "Sunrise \(sunrise)"

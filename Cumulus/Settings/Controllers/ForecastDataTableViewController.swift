@@ -30,7 +30,6 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
         self.setupObjectColors()
         self.hideKeyboard()
 
-        self.dataSourceTextField.isEnabled = false
         self.dataSourceTextField.text = defaults.string(forKey: "dataSource")
         self.hourlyConditionsTextField.text = defaults.string(forKey: "defaultHourlyCondition")
         
@@ -109,7 +108,7 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
             defaultHourlyCondition = "\(defaultHourlyConditionTypes[row])"
             defaults.set("\(defaultHourlyConditionTypes[row])", forKey: "defaultHourlyCondition")
         } else if currentTextField == dataSourceTextField {
-            dataSourceChanged = true
+            weatherLoaded = false
             dataSourceTextField.text = dataSourceTypes[row]
             dataSource = "\(dataSourceTypes[row])"
             defaults.set(dataSource, forKey: "dataSource")

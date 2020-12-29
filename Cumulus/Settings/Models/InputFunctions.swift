@@ -96,7 +96,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "cloudy" || condition == "cloudy.png" || condition == "cloudyn.png" {
+    if condition == "cloudy" || condition == "clouds" || condition == "cloudy.png" || condition == "cloudyn.png" {
         if type == "image" {
             conditionString = "Cloudy\(circle).pdf"
         } else if type == "text" {

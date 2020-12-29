@@ -380,8 +380,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                 
                 if (defaults.string(forKey: "dataSource") == "Dark Sky") {
                     fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
-                } else if (defaults.string(forKey: "dataSource") == "ClimaCell") {
-                    fetchClimaCellWeatherData()
+                } else if (defaults.string(forKey: "dataSource") == "OpenWeather") {
+                    fetchOpenWeatherData(lat: latitudeValue, long: longitudeValue)
                 }
             }
         } else {
@@ -407,8 +407,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                 
                 if (defaults.string(forKey: "dataSource") == "Dark Sky") {
                     fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
-                } else if (defaults.string(forKey: "dataSource") == "ClimaCell") {
-                    fetchClimaCellWeatherData()
+                } else if (defaults.string(forKey: "dataSource") == "OpenWeather") {
+                    fetchOpenWeatherData(lat: latitudeValue, long: longitudeValue)
                 }
             }
         }
@@ -473,8 +473,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                 
                 if (defaults.string(forKey: "dataSource") == "Dark Sky") {
                     fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
-                } else if (defaults.string(forKey: "dataSource") == "ClimaCell") {
-                    fetchClimaCellWeatherData()
+                } else if (defaults.string(forKey: "dataSource") == "OpenWeather") {
+                    fetchOpenWeatherData(lat: latitudeValue, long: longitudeValue)
                 }
             }
         } else {
@@ -541,8 +541,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @objc func didPullToRefresh() {
         if (defaults.string(forKey: "dataSource") == "Dark Sky") {
             fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
-        } else if (defaults.string(forKey: "dataSource") == "ClimaCell") {
-            fetchClimaCellWeatherData()
+        } else if (defaults.string(forKey: "dataSource") == "OpenWeather") {
+            fetchOpenWeatherData(lat: latitudeValue, long: longitudeValue)
         }
         setWeatherDataLabels()
         setColorTheme()
@@ -1248,6 +1248,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             currentConditionViewHeight.constant = 135
             conditionSlotLabel4.text = "AQ is \(airQualityConcern.lowercased())"
         } else {
+            conditionSlotLabel4.isHidden = true
             currentConditionViewHeight.constant = 115
         }
         
@@ -1285,26 +1286,50 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     // MARK: - Set extended current condition labels
     func setExtendedCurrentConditionOutlets() {
-        conditionSlotLabel4.isHidden = true
-        currentConditionViewHeight.constant = 115
-        
-        conditionSlotLabel0.text = "Accum. \(precipAccumulation)\(unitsPrecipitation)"
-        conditionSlotLabel1.text = "Humidity \(humidity)%"
-        
-        // Set cloud cover
-        if cloudCover > cloudCoverHour1 || cloudCover > cloudCoverHour2 || cloudCover > cloudCoverHour3 || cloudCover > cloudCoverHour4 {
-            conditionSlotLabel2.text = "Clouds \(cloudCover)% & decr."
-        } else if cloudCover < cloudCoverHour1 || cloudCover < cloudCoverHour2 || cloudCover < cloudCoverHour3 || cloudCover < cloudCoverHour4 {
-            conditionSlotLabel2.text = "Clouds \(cloudCover)% & incr."
+        if (defaults.string(forKey: "dataSource") == "ClimaCell") {
+            conditionSlotLabel4.isHidden = false
+            currentConditionViewHeight.constant = 135
+                        
+            conditionSlotLabel0.text = "Accum. \(precipAccumulation)\(unitsPrecipitation)"
+            conditionSlotLabel1.text = "Humidity \(humidity)%"
+            conditionSlotLabel2.text = "Pressure \(pressure)\(unitsPressure)"
+            
+            // Set cloud cover
+            if cloudCover > cloudCoverHour1 || cloudCover > cloudCoverHour2 || cloudCover > cloudCoverHour3 || cloudCover > cloudCoverHour4 {
+                conditionSlotLabel3.text = "Clouds \(cloudCover)% & decr."
+            } else if cloudCover < cloudCoverHour1 || cloudCover < cloudCoverHour2 || cloudCover < cloudCoverHour3 || cloudCover < cloudCoverHour4 {
+                conditionSlotLabel3.text = "Clouds \(cloudCover)% & incr."
+            } else {
+                conditionSlotLabel3.text = "Clouds \(cloudCover)%"
+            }
+                 
+            // Set sunrise/sunset
+            if currentCondition.contains("night") {
+                conditionSlotLabel4.text = "Sunrise \(sunrise)"
+            } else {
+                conditionSlotLabel4.text = "Sunset \(sunset)"
+            }
         } else {
-            conditionSlotLabel2.text = "Clouds \(cloudCover)%"
-        }
-             
-        // Set sunrise/sunset
-        if currentCondition.contains("night") {
-            conditionSlotLabel3.text = "Sunrise \(sunrise)"
-        } else {
-            conditionSlotLabel3.text = "Sunset \(sunset)"
+            currentConditionViewHeight.constant = 115
+            
+            conditionSlotLabel0.text = "Accum. \(precipAccumulation)\(unitsPrecipitation)"
+            conditionSlotLabel1.text = "Humidity \(humidity)%"
+            
+            // Set cloud cover
+            if cloudCover > cloudCoverHour1 || cloudCover > cloudCoverHour2 || cloudCover > cloudCoverHour3 || cloudCover > cloudCoverHour4 {
+                conditionSlotLabel2.text = "Clouds \(cloudCover)% & decr."
+            } else if cloudCover < cloudCoverHour1 || cloudCover < cloudCoverHour2 || cloudCover < cloudCoverHour3 || cloudCover < cloudCoverHour4 {
+                conditionSlotLabel2.text = "Clouds \(cloudCover)% & incr."
+            } else {
+                conditionSlotLabel2.text = "Clouds \(cloudCover)%"
+            }
+                 
+            // Set sunrise/sunset
+            if currentCondition.contains("night") {
+                conditionSlotLabel3.text = "Sunrise \(sunrise)"
+            } else {
+                conditionSlotLabel3.text = "Sunset \(sunset)"
+            }
         }
     }
     
@@ -1339,7 +1364,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         
         currentTemperatureLabel.text = "\(currentTemperature)°"
         currentConditonLabel.text = "\(currentSummary.capitalizingFirstLetter())"
-        currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image", circle: defaults.string(forKey: "defaultConditionIcons")!))
+        currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition.lowercased(), type: "image", circle: defaults.string(forKey: "defaultConditionIcons")!))
         
         // If alert is active show button
         if alertTitle.isEmpty == false {

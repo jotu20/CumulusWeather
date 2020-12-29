@@ -13,7 +13,7 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
     var currentTextField = UITextField()
     var pickerView = UIPickerView()
     
-    let dataSourceTypes = ["Dark Sky", "ClimaCell"]
+    let dataSourceTypes = ["Dark Sky", "OpenWeather"]
     let defaultHourlyConditionTypes = ["Precip (%)", "Accumulation (%)", "Temp (°\(unitsTemperature))", "Humidity (%)", "UV Index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
     let conditionIconTypes = ["Default", "Circle"]
     
@@ -146,7 +146,13 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
     }
     
     @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        if weatherLoaded == true {
+            dismiss(animated: true, completion: nil)
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "Home")
+            self.present(controller, animated: true, completion: nil)
+        }
     }
 }
 

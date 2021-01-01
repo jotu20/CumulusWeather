@@ -1040,10 +1040,23 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         setDayLabelAndIcons(dayViewHeight: day9Height, dayLabel: day9Label, dayConditionIcon: day9ConditionIcon, dayLowLabel: day9LowLabel, dayHighLabel: day9HighLabel, dayString: day9DayStringFull, dateString: day9DateString, dayConditionIconString: day9Condition, dayLow: day9Low, dayHigh: day9High)
     }
     
-    // MARK: - Action to open weather alerts
+    // MARK: - Action to show and open weather alerts
     @IBAction func weatherAlertTapGestureTapped(_ sender: UITapGestureRecognizer) {
-        let svc = SFSafariViewController(url: URL(string: alertURI)!)
-        present(svc, animated: true, completion: nil)
+        if (defaults.string(forKey: "dataSource") == "OpenWeather") {
+            let alert = UIAlertController(title: "\(alertTitle)", message: "\(alertDescription)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Done", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            let alertController = UIAlertController(title: "\(alertTitle)", message: "\(alertDescription)", preferredStyle: .alert)
+            let openAction = UIAlertAction(title: "Open", style: .default) {
+                UIAlertAction in
+                let svc = SFSafariViewController(url: URL(string: alertURI)!)
+                self.present(svc, animated: true, completion: nil)
+            }
+            alertController.addAction(openAction)
+            alertController.addAction(UIAlertAction(title: "Done", style: .default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     // When tapped show extended current conditions

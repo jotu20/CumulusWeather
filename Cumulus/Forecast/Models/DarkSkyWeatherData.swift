@@ -516,7 +516,7 @@ public func fetchDarkSkyWeatherData() {
                 
                 alertCount = alerts.count
                 alertTitle = "\(fetchAlertArray.title)"
-                alertBody = "\(fetchAlertArray.description)"
+                alertDescription = "\(fetchAlertArray.description)"
                 alertURI = "\(fetchAlertArray.uri)"
             }
         case .failure(let error):

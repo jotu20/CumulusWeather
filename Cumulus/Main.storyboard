@@ -596,10 +596,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="768" height="667"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VOg-Xt-6s0">
-                                                <rect key="frame" x="8" y="25" width="359" height="1585"/>
+                                                <rect key="frame" x="8" y="25" width="359" height="1430"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qhE-PB-RlN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="185"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="190"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cumulus' forecasting abilities are made possible by the following data sources:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxX-Vx-DfV">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="50"/>
@@ -635,24 +635,14 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6z-sy-uPe">
                                                                 <rect key="frame" x="59.5" y="60" width="240" height="55"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="55" id="6Vd-Co-sSI"/>
                                                                     <constraint firstAttribute="height" constant="55" id="YNc-Q3-hSB"/>
-                                                                    <constraint firstAttribute="width" constant="240" id="p5Q-G9-eyl"/>
                                                                     <constraint firstAttribute="width" constant="240" id="tnK-11-cuF"/>
                                                                 </constraints>
                                                                 <state key="normal" backgroundImage="DarkSkyLogo-Dark"/>
-                                                                <variation key="default">
-                                                                    <mask key="constraints">
-                                                                        <exclude reference="6Vd-Co-sSI"/>
-                                                                        <exclude reference="p5Q-G9-eyl"/>
-                                                                    </mask>
-                                                                </variation>
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <mask key="constraints">
-                                                                        <include reference="6Vd-Co-sSI"/>
-                                                                        <exclude reference="YNc-Q3-hSB"/>
-                                                                        <include reference="p5Q-G9-eyl"/>
-                                                                        <exclude reference="tnK-11-cuF"/>
+                                                                        <include reference="YNc-Q3-hSB"/>
+                                                                        <include reference="tnK-11-cuF"/>
                                                                     </mask>
                                                                 </variation>
                                                                 <connections>
@@ -660,26 +650,16 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iT6-tE-MGV">
-                                                                <rect key="frame" x="104.5" y="125" width="150" height="60"/>
+                                                                <rect key="frame" x="97" y="125" width="165" height="65"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="55" id="1fR-dl-D84"/>
-                                                                    <constraint firstAttribute="height" constant="60" id="1oi-JG-lpa"/>
-                                                                    <constraint firstAttribute="width" constant="150" id="ewR-Tj-Axr"/>
-                                                                    <constraint firstAttribute="width" constant="240" id="uUJ-BN-WzU"/>
+                                                                    <constraint firstAttribute="height" constant="65" id="1oi-JG-lpa"/>
+                                                                    <constraint firstAttribute="width" constant="165" id="ewR-Tj-Axr"/>
                                                                 </constraints>
                                                                 <state key="normal" backgroundImage="OpenWeatherLogo-Dark"/>
-                                                                <variation key="default">
-                                                                    <mask key="constraints">
-                                                                        <exclude reference="1fR-dl-D84"/>
-                                                                        <exclude reference="uUJ-BN-WzU"/>
-                                                                    </mask>
-                                                                </variation>
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <mask key="constraints">
-                                                                        <include reference="1fR-dl-D84"/>
-                                                                        <exclude reference="1oi-JG-lpa"/>
-                                                                        <include reference="uUJ-BN-WzU"/>
-                                                                        <exclude reference="ewR-Tj-Axr"/>
+                                                                        <include reference="1oi-JG-lpa"/>
+                                                                        <include reference="ewR-Tj-Axr"/>
                                                                     </mask>
                                                                 </variation>
                                                                 <connections>
@@ -689,7 +669,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The following open source components were used in the making of Cumulus:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWR-w4-q9j">
-                                                        <rect key="frame" x="0.0" y="205" width="359" height="50"/>
+                                                        <rect key="frame" x="0.0" y="210" width="359" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="359" id="2IW-XA-iv1"/>
                                                             <constraint firstAttribute="width" constant="678" id="7P4-Ms-OFd">
@@ -719,7 +699,7 @@
                                                         </variation>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rtU-6u-H22">
-                                                        <rect key="frame" x="0.0" y="275" width="359" height="645"/>
+                                                        <rect key="frame" x="0.0" y="280" width="359" height="565"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forecast IO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hF2-WS-xnP">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
@@ -747,8 +727,8 @@
                                                                     </mask>
                                                                 </variation>
                                                             </label>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wry-IM-fhk">
-                                                                <rect key="frame" x="0.0" y="20" width="359" height="625"/>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Copyright (c) 2016 Satyam Ghodasara &lt;sghodas@gmail.com&gt;. " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wry-IM-fhk">
+                                                                <rect key="frame" x="0.0" y="20" width="359" height="545"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="359" id="al2-mW-YXC">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="650"/>
@@ -757,9 +737,6 @@
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="305"/>
                                                                     </constraint>
                                                                 </constraints>
-                                                                <string key="text">Copyright (c) 2016 Satyam Ghodasara &lt;sghodas@gmail.com&gt;. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -767,7 +744,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ceb-Bu-Xkz">
-                                                        <rect key="frame" x="0.0" y="940" width="359" height="645"/>
+                                                        <rect key="frame" x="0.0" y="865" width="359" height="565"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SwiftyStoreKit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvV-IG-twQ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
@@ -795,8 +772,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                     </mask>
                                                                 </variation>
                                                             </label>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0M-AJ-nYj">
-                                                                <rect key="frame" x="0.0" y="20" width="359" height="625"/>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Copyright (c) 2015-2016 Andrea Bizzotto bizz84@gmail.com. " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0M-AJ-nYj">
+                                                                <rect key="frame" x="0.0" y="20" width="359" height="545"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="545" id="2Zk-Ke-PQP">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="305"/>
@@ -805,9 +782,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="650"/>
                                                                     </constraint>
                                                                 </constraints>
-                                                                <string key="text">Copyright (c) 2015-2016 Andrea Bizzotto bizz84@gmail.com. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

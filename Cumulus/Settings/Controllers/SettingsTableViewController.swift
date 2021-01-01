@@ -160,7 +160,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
                         print("The user has never purchased \(productIds)")
                         
                         let alert = UIAlertController(title: "", message: "No previous purchases were found.", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
                     }
                 case .error(let error):
@@ -193,7 +193,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
                         print("The user has never purchased \(productId)")
                         
                         let alert = UIAlertController(title: "", message: "No previous purchases were found.", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
                     }
                 case .error(let error):
@@ -250,7 +250,7 @@ extension SettingsTableViewController {
     func alertWithTitle(_ title: String, message: String) -> UIAlertController {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         return alert
     }
     

@@ -444,9 +444,9 @@ class WidgetLocationManager: NSObject, CLLocationManagerDelegate {
                 currentLocation = "\(placemark.name!), \(placemark.country!)"
             }
             
-            if (defaults.string(forKey: "dataSource") == "Dark Sky") {
+            if (defaults.string(forKey: "universalDataSource") == "Dark Sky") {
                 fetchDarkSkyWeatherData()
-            } else if (defaults.string(forKey: "dataSource") == "OpenWeather") {
+            } else if (defaults.string(forKey: "universalDataSource") == "OpenWeather") {
                 fetchOpenWeatherData()
             }
         }

@@ -68,7 +68,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "clear" {
+    if condition == "clear-day" || condition == "clear" {
         if type == "image" {
             conditionString = "Clear\(circle).pdf"
         } else if type == "text" {

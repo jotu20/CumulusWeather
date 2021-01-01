@@ -27,7 +27,7 @@ var currentLocation: String = ""
 // MARK: - Alert value
 var alertCount: Int = 0
 var alertTitle: String = ""
-var alertBody: String = ""
+var alertDescription: String = ""
 var alertURI: String = ""
 
 // MARK: - Units values

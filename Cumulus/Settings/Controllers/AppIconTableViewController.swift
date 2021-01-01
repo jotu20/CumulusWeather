@@ -32,33 +32,33 @@ class AppIconTableViewController: UITableViewController {
         
         self.tableView.tableFooterView = UIView(frame: .zero)
         
-        if defaults.string(forKey: "userSavedAppIconString") == "8-Bit" {
+        if (defaults.string(forKey: "userSavedAppIconString") == "8-Bit") {
             self.setSelectedCheckMark(layerString: "8-Bit", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Orchid" {
+        } else if (defaults.string(forKey: "userSavedAppIconString") == "Orchid") {
             self.setSelectedCheckMark(layerString: "Orchid", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Dodger Blue" {
+        } else if (defaults.string(forKey: "userSavedAppIconString") == "Dodger Blue") {
             self.setSelectedCheckMark(layerString: "Dodger Blue", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Lights Out" {
+        } else if (defaults.string(forKey: "userSavedAppIconString") == "Lights Out") {
             self.setSelectedCheckMark(layerString: "Lights Out", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Mango" {
+        } else if (defaults.string(forKey: "userSavedAppIconString") == "Mango") {
             self.setSelectedCheckMark(layerString: "Mango", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Maximum Red" {
+        } else if (defaults.string(forKey: "userSavedAppIconString") == "Maximum Red") {
             self.setSelectedCheckMark(layerString: "Maximum Red", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Mighty Umbrella" {
+        } else if (defaults.string(forKey: "userSavedAppIconString") == "Mighty Umbrella") {
             self.setSelectedCheckMark(layerString: "Mighty Umbrella", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Plump Purple" {
+        } else if (defaults.string(forKey: "userSavedAppIconString") == "Plump Purple") {
             self.setSelectedCheckMark(layerString: "Plump Purple", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Rain Drop" {
+        } else if (defaults.string(forKey: "userSavedAppIconString") == "Rain Drop") {
             self.setSelectedCheckMark(layerString: "Rain Drop", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Spring Green" {
+        } else if (defaults.string(forKey: "userSavedAppIconString") == "Spring Green") {
             self.setSelectedCheckMark(layerString: "Spring Green", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Thunderstorm" {
+        } else if (defaults.string(forKey: "userSavedAppIconString") == "Thunderstorm") {
             self.setSelectedCheckMark(layerString: "Thunderstorm", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Twilight Zone" {
+        } else if (defaults.string(forKey: "userSavedAppIconString") == "Twilight Zone") {
             self.setSelectedCheckMark(layerString: "Twilight Zone", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Moonlight" {
+        } else if (defaults.string(forKey: "userSavedAppIconString") == "Moonlight") {
             self.setSelectedCheckMark(layerString: "Moonlight", setIcon: false)
-        } else if defaults.string(forKey: "userSavedAppIconString") == "Windy Day" {
+        } else if (defaults.string(forKey: "userSavedAppIconString") == "Windy Day") {
             self.setSelectedCheckMark(layerString: "Windy Day", setIcon: false)
         } else {
             self.setSelectedCheckMark(layerString: "Dodger Blue", setIcon: false)

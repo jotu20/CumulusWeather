@@ -443,7 +443,12 @@ class WidgetLocationManager: NSObject, CLLocationManagerDelegate {
             } else {
                 currentLocation = "\(placemark.name!), \(placemark.country!)"
             }
-            fetchDarkSkyWeatherData(lat: latitudeValue, long: longitudeValue)
+            
+            if (defaults.string(forKey: "dataSource") == "Dark Sky") {
+                fetchDarkSkyWeatherData()
+            } else if (defaults.string(forKey: "dataSource") == "OpenWeather") {
+                fetchOpenWeatherData()
+            }
         }
     }
     

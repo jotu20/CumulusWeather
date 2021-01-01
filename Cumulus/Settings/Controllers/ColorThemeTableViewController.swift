@@ -56,17 +56,17 @@ class ColorThemeTableViewController: UITableViewController {
     }
 
     func setColorTheme() {
-        if defaults.string(forKey: "userSavedColorString") == "Mango" {
+        if (defaults.string(forKey: "userSavedColorString") == "Mango") {
             setSelectedCheckMark(layerString: "Mango", setColor: false)
-        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Maximum Red") {
             setSelectedCheckMark(layerString: "Maximum Red", setColor: false)
-        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Dodger Blue") {
             setSelectedCheckMark(layerString: "Dodger Blue", setColor: false)
-        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Plump Purple") {
             setSelectedCheckMark(layerString: "Plump Purple", setColor: false)
-        } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Orchid") {
             setSelectedCheckMark(layerString: "Orchid", setColor: false)
-        } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Spring Green") {
             setSelectedCheckMark(layerString: "Spring Green", setColor: false)
         } else {
             setSelectedCheckMark(layerString: "Dodger Blue", setColor: false)

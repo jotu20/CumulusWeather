@@ -80,17 +80,17 @@ class CumulusPlusTableViewController: UITableViewController {
     
     func setupObjectColors() {
         var color: UIColor?
-        if defaults.string(forKey: "userSavedColorString") == "Mango" {
+        if (defaults.string(forKey: "userSavedColorString") == "Mango") {
             color = mango
-        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Maximum Red") {
             color = maximumRed
-        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Dodger Blue") {
             color = dodgerBlue
-        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Plump Purple") {
             color = plumpPurple
-        } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Orchid") {
             color = orchid
-        } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Spring Green") {
             color = springGreen
         } else {
             color = dodgerBlue

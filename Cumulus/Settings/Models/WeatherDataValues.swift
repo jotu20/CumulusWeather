@@ -690,7 +690,7 @@ func dateFormat(date: Date) -> String {
 // MARK: - Get hour times from date
 func hourFormat(date: Date) -> String {
     var timeString: String = ""
-    if defaults.bool(forKey: "twentyFourHourClockEnabled") == true {
+    if (defaults.bool(forKey: "twentyFourHourClockEnabled") == true) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "H:mm"
         timeString = dateFormatter.string(from: date)
@@ -765,7 +765,7 @@ func twentyFourHour(hour: Int, meridiem: String) -> Int {
 // MARK: - Get sunrise and sunset times
 func sunFormat(date: Date) -> String {
     var timeString: String = ""
-    if defaults.bool(forKey: "twentyFourHourClockEnabled") == true {
+    if (defaults.bool(forKey: "twentyFourHourClockEnabled") == true) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "H:mm"
         timeString = dateFormatter.string(from: date)

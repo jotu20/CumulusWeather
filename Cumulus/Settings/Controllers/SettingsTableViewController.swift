@@ -45,13 +45,13 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
             hapticFeedbackTableCell.isHidden = false
         }
         
-        if defaults.bool(forKey: "twentyFourHourClockEnabled") == true {
+        if (defaults.bool(forKey: "twentyFourHourClockEnabled") == true) {
             twentyFourHourClockSwitch.isOn = true
         } else {
             twentyFourHourClockSwitch.isOn = false
         }
         
-        if defaults.bool(forKey: "hapticFeedbackEnabled") == true {
+        if (defaults.bool(forKey: "hapticFeedbackEnabled") == true) {
             hapticFeedbackSwitch.isOn = true
         } else {
             hapticFeedbackSwitch.isOn = false
@@ -66,24 +66,24 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         userChangedColorTheme = false
         setupObjectColors()
         
-        if defaults.bool(forKey: "cumulusPlus") == true {
+        if (defaults.bool(forKey: "cumulusPlus") == true) {
             cumulusPlusLabel.text = "Restore Cumulus+"
         }
     }
     
     func setupObjectColors() {
         var color: UIColor?
-        if defaults.string(forKey: "userSavedColorString") == "Mango" {
+        if (defaults.string(forKey: "userSavedColorString") == "Mango") {
             color = mango
-        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Maximum Red") {
             color = maximumRed
-        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Dodger Blue") {
             color = dodgerBlue
-        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Plump Purple") {
             color = plumpPurple
-        } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Orchid") {
             color = orchid
-        } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Spring Green") {
             color = springGreen
         } else {
             color = dodgerBlue
@@ -112,7 +112,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     @IBAction func twentyFourHourClockSwitchTapped(_ sender: UISwitch) {
         weatherLoaded = false
         clockChanged = true
-        if defaults.bool(forKey: "twentyFourHourClockEnabled") == false {
+        if (defaults.bool(forKey: "twentyFourHourClockEnabled") == false) {
             twentyFourHourClockSwitch.isOn = true
             defaults.set(true, forKey: "twentyFourHourClockEnabled")
         } else {
@@ -122,7 +122,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     }
     
     @IBAction func hapticFeedbackSwitchTapped(_ sender: UISwitch) {
-        if defaults.bool(forKey: "hapticFeedbackEnabled") == false {
+        if (defaults.bool(forKey: "hapticFeedbackEnabled") == false) {
             hapticFeedbackSwitch.isOn = true
             defaults.set(true, forKey: "hapticFeedbackEnabled")
         } else {
@@ -132,7 +132,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     }
     
     @IBAction func cumulusPlusTapped(_ sender: UITapGestureRecognizer) {
-        if defaults.bool(forKey: "cumulusPlus") == false {
+        if (defaults.bool(forKey: "cumulusPlus") == false) {
             performSegue(withIdentifier: "cumulusPlusPush", sender: nil)
         } else {
             // Verify subscriptions
@@ -204,7 +204,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     }
     
     @IBAction func forecastDataTapped(_ sender: UITapGestureRecognizer) {
-        if defaults.bool(forKey: "cumulusPlus") == false {
+        if (defaults.bool(forKey: "cumulusPlus") == false) {
             performSegue(withIdentifier: "cumulusPlusPush", sender: nil)
         } else {
             performSegue(withIdentifier: "forecastDataPush", sender: nil)
@@ -212,7 +212,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     }
     
     @IBAction func appIconTapped(_ sender: UITapGestureRecognizer) {
-        if defaults.bool(forKey: "cumulusPlus") == false {
+        if (defaults.bool(forKey: "cumulusPlus") == false) {
             performSegue(withIdentifier: "cumulusPlusPush", sender: nil)
         } else {
             performSegue(withIdentifier: "appIconPush", sender: nil)
@@ -220,7 +220,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     }
     
     @IBAction func themeColorTapped(_ sender: UITapGestureRecognizer) {
-        if defaults.bool(forKey: "cumulusPlus") == false {
+        if (defaults.bool(forKey: "cumulusPlus") == false) {
             performSegue(withIdentifier: "cumulusPlusPush", sender: nil)
         } else {
             performSegue(withIdentifier: "themeColorPush", sender: nil)

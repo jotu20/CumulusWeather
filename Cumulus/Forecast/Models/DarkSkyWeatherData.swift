@@ -13,9 +13,9 @@ import ForecastIO
 let client = DarkSkyClient(apiKey: "90cfdd5277e3269bdd8f31a177508114")
 
 // MARK: - Fetches weather data
-public func fetchDarkSkyWeatherData(lat: Double, long: Double) {
+public func fetchDarkSkyWeatherData() {
     universalSettings()
-    let userLocation = CLLocationCoordinate2D(latitude: lat, longitude: long)
+    let userLocation = CLLocationCoordinate2D(latitude: latitudeValue, longitude: longitudeValue)
     let dayOneDate = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date()
     let dayTwoDate = Calendar.current.date(byAdding: .day, value: 2, to: Date()) ?? Date()
     let dayThreeDate = Calendar.current.date(byAdding: .day, value: 3, to: Date()) ?? Date()

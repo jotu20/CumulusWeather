@@ -14,7 +14,7 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
     var pickerView = UIPickerView()
     
     let dataSourceTypes = ["Dark Sky", "OpenWeather"]
-    let defaultHourlyConditionTypes = ["Precip (%)", "Accumulation (%)", "Temp (°\(unitsTemperature))", "Humidity (%)", "UV Index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
+    var defaultHourlyConditionTypes = ["Precip (%)", "Accumulation (%)", "Temp (°\(unitsTemperature))", "Humidity (%)", "UV Index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
     let conditionIconTypes = ["Default", "Circle"]
     
     @IBOutlet weak var dataSourceTextField: UITextField!
@@ -33,10 +33,14 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
         self.dataSourceTextField.text = defaults.string(forKey: "dataSource")
         self.hourlyConditionsTextField.text = defaults.string(forKey: "defaultHourlyCondition")
         
-        if defaults.string(forKey: "defaultConditionIcons")?.isEmpty == true {
+        if (defaults.string(forKey: "defaultConditionIcons")?.isEmpty == true) {
              self.conditionIconsTextField.text = "Default"
         } else {
              self.conditionIconsTextField.text = "Circle"
+        }
+        
+        if (defaults.string(forKey: "dataSource") == "OpenWeather") {
+            defaultHourlyConditionTypes = ["Precip (%)", "Temp (°\(unitsTemperature))", "Humidity (%)", "UV Index", "Wind (\(unitsWindSpeed))", "Cloud cover (%)"]
         }
         
         let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ForecastDataTableViewController.doneBarButtonTapped))
@@ -46,17 +50,17 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
     
     func setupObjectColors() {
         var color: UIColor?
-        if defaults.string(forKey: "userSavedColorString") == "Mango" {
+        if (defaults.string(forKey: "userSavedColorString") == "Mango") {
             color = mango
-        } else if defaults.string(forKey: "userSavedColorString") == "Maximum Red" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Maximum Red") {
             color = maximumRed
-        } else if defaults.string(forKey: "userSavedColorString") == "Dodger Blue" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Dodger Blue") {
             color = dodgerBlue
-        } else if defaults.string(forKey: "userSavedColorString") == "Plump Purple" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Plump Purple") {
             color = plumpPurple
-        } else if defaults.string(forKey: "userSavedColorString") == "Orchid" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Orchid") {
             color = orchid
-        } else if defaults.string(forKey: "userSavedColorString") == "Spring Green" {
+        } else if (defaults.string(forKey: "userSavedColorString") == "Spring Green") {
             color = springGreen
         } else {
             color = dodgerBlue

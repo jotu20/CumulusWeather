@@ -101,7 +101,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Dark Sky", forKey: "setDataSource")
         }
         
-        if defaults.string(forKey: "weatherUnits") == nil {
+        if (defaults.string(forKey: "weatherUnits")) == nil {
             defaults.set("USA", forKey: "weatherUnits")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("USA", forKey: "setUnits")
         }

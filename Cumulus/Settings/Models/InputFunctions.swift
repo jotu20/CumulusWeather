@@ -40,7 +40,7 @@ func setupHourlyConditionText(label: UILabel!, condition: String, windDirection:
 func weatherCondition(condition: String, type: String, circle: String) -> String {
     var conditionString: String = ""
     
-    if condition == "blizzard" || condition == "blizzard.png" || condition == "blizzardn.png" {
+    if condition == "blizzard" {
         if type == "image" {
             conditionString = "Heavy_snow\(circle).pdf"
         } else if type == "text" {
@@ -54,7 +54,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "clear-night" || condition == "clearn.png" || condition == "sunnyn.png" || condition == "sunnywn.png" {
+    if condition == "clear-night" {
         if type == "image" {
             conditionString = "Clear_night\(circle).pdf"
         } else if type == "text" {
@@ -68,7 +68,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "clear" || condition == "clear-day" || condition == "clear.png" || condition == "sunny.png" || condition == "sunnyw.png" {
+    if condition == "clear" {
         if type == "image" {
             conditionString = "Clear\(circle).pdf"
         } else if type == "text" {
@@ -82,7 +82,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "cloudy-windy" || condition == "cloudyw.png" || condition == "cloudywn.png" {
+    if condition == "cloudy-windy" {
         if type == "image" {
             conditionString = "Windy\(circle).pdf"
         } else if type == "text" {
@@ -96,7 +96,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "cloudy" || condition == "clouds" || condition == "cloudy.png" || condition == "cloudyn.png" {
+    if condition == "cloudy" || condition == "clouds" {
         if type == "image" {
             conditionString = "Cloudy\(circle).pdf"
         } else if type == "text" {
@@ -110,7 +110,21 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "flurries" || condition == "flurries.png" || condition == "flurriesn.png" || condition == "flurriesw.png" || condition == "flurrieswn.png" {
+    if condition == "drizzle" {
+        if type == "image" {
+            conditionString = "Drizzle\(circle).pdf"
+        } else if type == "text" {
+            conditionString = "Drizzle"
+        } else if type == "daily" {
+            conditionString = "Drizzle\(circle).pdf"
+        } else if type == "today_ext" {
+            conditionString = "Drizzle_widget\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Drizzle_widget\(circle)"
+        }
+    }
+    
+    if condition == "flurries" {
         if type == "image" {
             conditionString = "Flurries\(circle).pdf"
         } else if type == "text" {
@@ -124,7 +138,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "fog" || condition == "fog.png" || condition == "fogn.png" {
+    if condition == "fog" {
         if type == "image" {
             conditionString = "Fog\(circle).pdf"
         } else if type == "text" {
@@ -138,7 +152,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "freezing-rain" || condition == "freezingrain.png" || condition == "freezingrainn.png" || condition == "sleet.png" || condition == "sleetn.png" {
+    if condition == "freezing-rain" {
         if type == "image" {
             conditionString = "Freezing_rain\(circle).pdf"
         } else if type == "text" {
@@ -152,7 +166,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "partly-cloudy-night" || condition == "pcloudyn.png" || condition == "pcloudysfn.png" || condition == "pcloudysfwn.png" || condition == "pcloudyswn.png" || condition == "pcloudywn.png" {
+    if condition == "partly-cloudy-night" {
         if type == "image" {
             conditionString = "Partly_cloudy_night\(circle).pdf"
         } else if type == "text" {
@@ -166,7 +180,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "partly-cloudy-rain" || condition == "mcloudyr.png" || condition == "mcloudyrn.png" || condition == "mcloudyrw.png" || condition == "mcloudyrwn.png" || condition == "pcloudyr.png" || condition == "pcloudyrn.png" || condition == "pcloudyrw.png" || condition == "pcloudyrwn.png" {
+    if condition == "partly-cloudy-rain" {
         if type == "image" {
             conditionString = "Rain\(circle).pdf"
         } else if type == "text" {
@@ -180,7 +194,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "partly-cloudy-snow" || condition == "mcloudys.png" || condition == "mcloudysn.png" || condition == "pcloudys.png" || condition == "pcloudysn.png" {
+    if condition == "partly-cloudy-snow" {
         if type == "image" {
             conditionString = "Snow\(circle).pdf"
         } else if type == "text" {
@@ -194,7 +208,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "partly-cloudy-day" || condition == "pcloudy.png" || condition == "pcloudysf.png" || condition == "pcloudysfw.png" || condition == "pcloudysw.png" || condition == "pcloudyw.png" {
+    if condition == "partly-cloudy-day" {
         if type == "image" {
             conditionString = "Partly_cloudy\(circle).pdf"
         } else if type == "text" {
@@ -208,7 +222,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "rain" || condition == "drizzle.png" || condition == "drizzlen.png" || condition == "drizzlef.png" || condition == "fdrizzlen.png" || condition == "rain.png" || condition == "rainn.png" || condition == "rainw.png" {
+    if condition == "rain" {
         if type == "image" {
             conditionString = "Rain\(circle).pdf"
         } else if type == "text" {
@@ -222,7 +236,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "snow" || condition == "blowingsnow.png" || condition == "blowingsnown.png" || condition == "snow.png" || condition == "snown.png" || condition == "snoww.png" || condition == "snowwn.png" || condition == "snowshowers.png" || condition == "snowshowersn.png" || condition == "snowshowersw.png" || condition == "snowshowerswn.png" {
+    if condition == "snow" {
         if type == "image" {
             conditionString = "Snow\(circle).pdf"
         } else if type == "text" {
@@ -236,7 +250,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "thunderstorm" || condition == "tstorm.png" || condition == "tstormn.png" || condition == "tstorms.png" || condition == "tstormsn.png" || condition == "tstormsw.png" || condition == "tstormswn.png" {
+    if condition == "thunderstorm" {
         if type == "image" {
             conditionString = "Thunderstorm\(circle).pdf"
         } else if type == "text" {
@@ -250,7 +264,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition == "wind" || condition == "mcloudysfw.png" || condition == "mcloudysfwn.png" || condition == "mcloudysw.png" || condition == "mcloudyswn.png" || condition == "mcloudyw.png" || condition == "mcloudywn.png" || condition == "wind.png" || condition == "windn.png" {
+    if condition == "wind" {
         if type == "image" {
             conditionString = "Windy\(circle).pdf"
         } else if type == "text" {
@@ -264,7 +278,7 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
-    if condition.isEmpty == true || condition == "na.png" {
+    if condition.isEmpty == true {
         if type == "image" {
             conditionString = "Partly Cloudy.pdf"
         } else if type == "text" {

@@ -24,16 +24,16 @@ class WeatherUnitsTableViewController: UITableViewController, UITabBarController
         weatherLoaded = true
         distanceChange = false
 
-        if defaults.string(forKey: "weatherUnits") == "USA" {
+        if (defaults.string(forKey: "weatherUnits") == "USA") {
             self.setSelectedCheckMark(unitsString: "USA")
         }
-        if defaults.string(forKey: "weatherUnits") == "UK" {
+        if (defaults.string(forKey: "weatherUnits") == "UK") {
             self.setSelectedCheckMark(unitsString: "UK")
         }
-        if defaults.string(forKey: "weatherUnits") == "Canada" {
+        if (defaults.string(forKey: "weatherUnits") == "Canada") {
             self.setSelectedCheckMark(unitsString: "Canada")
         }
-        if defaults.string(forKey: "weatherUnits") == "International" {
+        if (defaults.string(forKey: "weatherUnits") == "International") {
             self.setSelectedCheckMark(unitsString: "International")
         }
         
@@ -73,7 +73,7 @@ class WeatherUnitsTableViewController: UITableViewController, UITabBarController
 
             defaults.set("USA", forKey: "weatherUnits")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("USA", forKey: "setUnits")
-            if defaults.string(forKey: "weatherUnits") == "USA" {
+            if (defaults.string(forKey: "weatherUnits") == "USA") {
                 USATableViewCell.accessoryType = .checkmark
                 UKTableViewCell.accessoryType = .none
                 canadaTableViewCell.accessoryType = .none
@@ -86,7 +86,7 @@ class WeatherUnitsTableViewController: UITableViewController, UITabBarController
 
             defaults.set("UK", forKey: "weatherUnits")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("UK", forKey: "setUnits")
-            if defaults.string(forKey: "weatherUnits") == "UK" {
+            if (defaults.string(forKey: "weatherUnits") == "UK") {
                 USATableViewCell.accessoryType = .none
                 UKTableViewCell.accessoryType = .checkmark
                 canadaTableViewCell.accessoryType = .none
@@ -99,7 +99,7 @@ class WeatherUnitsTableViewController: UITableViewController, UITabBarController
 
             defaults.set("Canada", forKey: "weatherUnits")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Canada", forKey: "setUnits")
-            if defaults.string(forKey: "weatherUnits") == "Canada" {
+            if (defaults.string(forKey: "weatherUnits") == "Canada") {
                 USATableViewCell.accessoryType = .none
                 UKTableViewCell.accessoryType = .none
                 canadaTableViewCell.accessoryType = .checkmark
@@ -112,7 +112,7 @@ class WeatherUnitsTableViewController: UITableViewController, UITabBarController
 
             defaults.set("International", forKey: "weatherUnits")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("International", forKey: "setUnits")
-            if defaults.string(forKey: "weatherUnits") == "International" {
+            if (defaults.string(forKey: "weatherUnits") == "International") {
                 USATableViewCell.accessoryType = .none
                 UKTableViewCell.accessoryType = .none
                 canadaTableViewCell.accessoryType = .none

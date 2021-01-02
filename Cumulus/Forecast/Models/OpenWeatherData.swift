@@ -273,7 +273,7 @@ func fetchOpenWeatherDataHourly() {
             precipitation = Int(decodedResponse.hourly[0].pop * 100)
 
             hour0 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[0].dt)))
-            conditionHour0 = nightTimeIcon(main: decodedResponse.hourly[0].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[0].hourlyWeather[0].icon.lowercased())
+            conditionHour0 = currentCondition
             precipHour0 = Int(decodedResponse.hourly[0].pop * 100)
             tempHour0 = Int(decodedResponse.hourly[0].temp)
             humidityHour0 = Int(decodedResponse.hourly[0].humidity)

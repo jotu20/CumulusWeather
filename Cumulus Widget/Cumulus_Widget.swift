@@ -422,6 +422,7 @@ class WidgetLocationManager: NSObject, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         self.handler!(locations.last!)
+        universalSettings()
         
 //        latitudeValue = 37.3230
 //        longitudeValue = -122.0322

@@ -359,7 +359,7 @@
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme Color" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NK2-GB-baA">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NK2-GB-baA">
                                                     <rect key="frame" x="16" y="9.5" width="200" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="bAm-wh-sEd"/>
@@ -381,7 +381,7 @@
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="2zL-fK-7oW" appends="YES" id="pp6-aF-coZ"/>
-                                            <segue destination="hST-KR-bEf" kind="show" identifier="themeColorPush" id="F3R-9d-S88"/>
+                                            <segue destination="hST-KR-bEf" kind="show" identifier="themePush" id="F3R-9d-S88"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="e3e-dj-9HY">
@@ -525,8 +525,8 @@
                         <outlet property="forecastDataTableViewCell" destination="4CQ-Uu-Avy" id="iia-Gt-m8P"/>
                         <outlet property="hapticFeedbackSwitch" destination="Pwu-ia-Wu0" id="5NF-NL-Nu5"/>
                         <outlet property="hapticFeedbackTableCell" destination="bft-ez-axY" id="iyE-HY-WYe"/>
-                        <outlet property="themeColorLabel" destination="2yu-WK-fvK" id="Izr-NW-gvQ"/>
-                        <outlet property="themeColorTableViewCell" destination="RmI-BP-uke" id="hMh-E1-wfh"/>
+                        <outlet property="themeLabel" destination="2yu-WK-fvK" id="ysJ-sN-jdV"/>
+                        <outlet property="themeTableViewCell" destination="RmI-BP-uke" id="jfz-Pj-umA"/>
                         <outlet property="twentyFourHourClockSwitch" destination="BRD-yi-RGk" id="M5Z-ZJ-1C8"/>
                         <outlet property="weatherUnitsLabel" destination="KrD-Fk-qIc" id="hSX-cR-5De"/>
                         <outlet property="weatherUnitsTableViewCell" destination="yJg-tX-4Zr" id="fO5-4G-WMl"/>
@@ -555,7 +555,7 @@
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="2zL-fK-7oW">
                     <connections>
-                        <action selector="themeColorTapped:" destination="QJa-Ff-GNZ" id="1ue-WJ-F1Q"/>
+                        <action selector="themeTapped:" destination="QJa-Ff-GNZ" id="NB3-bu-4ak"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="dmV-Jy-Ycg">
@@ -1636,7 +1636,7 @@
         <!--Navigation Controller-->
         <scene sceneID="zcI-Cf-wlm">
             <objects>
-                <navigationController storyboardIdentifier="ColorTheme" automaticallyAdjustsScrollViewInsets="NO" id="hST-KR-bEf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Theme" automaticallyAdjustsScrollViewInsets="NO" id="hST-KR-bEf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="26b-Qu-bs5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Z7O-v2-8dy">
@@ -2774,10 +2774,10 @@
             </objects>
             <point key="canvasLocation" x="2063" y="1819"/>
         </scene>
-        <!--Color Theme Table View Controller-->
+        <!--Theme Table View Controller-->
         <scene sceneID="3GQ-xL-l2f">
             <objects>
-                <tableViewController modalPresentationStyle="fullScreen" clearsSelectionOnViewWillAppear="NO" id="t1C-MU-Ksi" customClass="ColorThemeTableViewController" customModule="Cumulus" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" clearsSelectionOnViewWillAppear="NO" id="t1C-MU-Ksi" customClass="ThemeTableViewController" customModule="Cumulus" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" dataMode="static" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="sa6-rg-7ow">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

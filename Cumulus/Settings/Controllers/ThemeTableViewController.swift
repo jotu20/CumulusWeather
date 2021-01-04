@@ -1,5 +1,5 @@
 //
-//  ColorThemeViewController.swift
+//  ThemeViewController.swift
 //  Cumulus
 //
 //  Created by Joseph Szafarowicz on 9/18/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ColorThemeTableViewController: UITableViewController {
+class ThemeTableViewController: UITableViewController {
 
     @IBOutlet weak var defaultImageView: UIImageView!
     @IBOutlet weak var mangoImageView: UIImageView!
@@ -27,14 +27,14 @@ class ColorThemeTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
-        self.navigationItem.title = "Color Theme"
+        self.navigationItem.title = "Theme"
         self.tableView.tableFooterView = UIView(frame: .zero)
         
         weatherLoaded = true
-        userChangedColorTheme = false
-        self.setColorTheme()
+        userChangedTheme = false
+        self.setTheme()
         
-        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ColorThemeTableViewController.doneBarButtonTapped))
+        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ThemeTableViewController.doneBarButtonTapped))
         setupBarButtonColor(button: doneBarButton)
         self.navigationItem.rightBarButtonItem = doneBarButton
         
@@ -55,7 +55,7 @@ class ColorThemeTableViewController: UITableViewController {
         }
     }
 
-    func setColorTheme() {
+    func setTheme() {
         if (defaults.string(forKey: "userSavedColorString") == "Mango") {
             setSelectedCheckMark(layerString: "Mango", setColor: false)
         } else if (defaults.string(forKey: "userSavedColorString") == "Maximum Red") {
@@ -144,7 +144,7 @@ class ColorThemeTableViewController: UITableViewController {
     }
     
     @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
-        if userChangedColorTheme == true {
+        if userChangedTheme == true {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "Home")
             self.present(controller, animated: true, completion: nil)
@@ -157,9 +157,9 @@ class ColorThemeTableViewController: UITableViewController {
         weatherLoaded = true
         
         if setColor == true {
-            userChangedColorTheme = true
+            userChangedTheme = true
         } else {
-            userChangedColorTheme = false
+            userChangedTheme = false
         }
 
         if layerString == "Mango" {
@@ -276,7 +276,7 @@ class ColorThemeTableViewController: UITableViewController {
         }
         UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("\(userSavedColorString)", forKey: "setColor")
         
-        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ColorThemeTableViewController.doneBarButtonTapped))
+        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ThemeTableViewController.doneBarButtonTapped))
         setupBarButtonColor(button: doneBarButton)
         self.navigationItem.rightBarButtonItem = doneBarButton
     }

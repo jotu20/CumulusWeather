@@ -28,8 +28,8 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     @IBOutlet weak var appIconTableViewCell: UITableViewCell!
     @IBOutlet weak var appIconLabel: UILabel!
     
-    @IBOutlet weak var themeColorTableViewCell: UITableViewCell!
-    @IBOutlet weak var themeColorLabel: UILabel!
+    @IBOutlet weak var themeTableViewCell: UITableViewCell!
+    @IBOutlet weak var themeLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.delegate = self
@@ -59,11 +59,11 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         
         forecastDataLabel.text = defaults.string(forKey: "dataSource")
         appIconLabel.text = defaults.string(forKey: "userSavedAppIconString")
-        themeColorLabel.text = defaults.string(forKey: "userSavedColorString")
+        themeLabel.text = defaults.string(forKey: "userSavedColorString")
         
         weatherLoaded = true
         distanceChange = false
-        userChangedColorTheme = false
+        userChangedTheme = false
         setupObjectColors()
         
         if (defaults.bool(forKey: "cumulusPlus") == true) {
@@ -101,8 +101,8 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         appIconTableViewCell.detailTextLabel?.textColor = color
         appIconLabel.textColor = color
         
-        themeColorTableViewCell.detailTextLabel?.textColor = color
-        themeColorLabel.textColor = color
+        themeTableViewCell.detailTextLabel?.textColor = color
+        themeLabel.textColor = color
     }
     
     @IBAction func weatherUnitsTapped(_ sender: UITapGestureRecognizer) {
@@ -219,11 +219,11 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         }
     }
     
-    @IBAction func themeColorTapped(_ sender: UITapGestureRecognizer) {
+    @IBAction func themeTapped(_ sender: UITapGestureRecognizer) {
         if (defaults.bool(forKey: "cumulusPlus") == false) {
             performSegue(withIdentifier: "cumulusPlusPush", sender: nil)
         } else {
-            performSegue(withIdentifier: "themeColorPush", sender: nil)
+            performSegue(withIdentifier: "themePush", sender: nil)
         }
     }
     

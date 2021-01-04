@@ -278,7 +278,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         self.setupGrantedLocationServices()
         
         // Check for loaded weather, distance change, or color theme change
-        if weatherLoaded == false || distanceChange == true || userChangedColorTheme == true {
+        if weatherLoaded == false || distanceChange == true || userChangedTheme == true {
             loadingScreen()
         }
 
@@ -521,14 +521,14 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         loadingView.removeFromSuperview()
                         self.setWeatherDataLabels()
-                        self.setColorTheme()
+                        self.setTheme()
                     }
                 case .authorizedAlways, .authorizedWhenInUse:
                     print("Access")
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         loadingView.removeFromSuperview()
                         self.setWeatherDataLabels()
-                        self.setColorTheme()
+                        self.setTheme()
                     }
                 @unknown default:
                 break
@@ -551,7 +551,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             fetchOpenWeatherData()
         }
         setWeatherDataLabels()
-        setColorTheme()
+        setTheme()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.refreshControl.endRefreshing()
@@ -559,7 +559,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     }
     
     // MARK: - Set the user set theme
-    func setColorTheme() {
+    func setTheme() {
         let color: UIColor?
         
         if (defaults.string(forKey: "userSavedColorString") == "Mango") {

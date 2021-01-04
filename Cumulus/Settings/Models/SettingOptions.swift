@@ -32,7 +32,7 @@ var userSavedAppIconString: String = ""
 var autoThemeEnabled: Bool = false
 
 // Colors
-var userChangedColorTheme: Bool = false
+var userChangedTheme: Bool = false
 var userSavedColorString: String = ""
 var buttonColor: String = ""
 

@@ -39,7 +39,7 @@ class SiriShortcutsTableViewController: UITableViewController {
         
         self.tableView.tableFooterView = UIView(frame: .zero)
         
-        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ColorThemeTableViewController.doneBarButtonTapped))
+        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ThemeTableViewController.doneBarButtonTapped))
         setupBarButtonColor(button: doneBarButton)
         self.navigationItem.rightBarButtonItem = doneBarButton
 

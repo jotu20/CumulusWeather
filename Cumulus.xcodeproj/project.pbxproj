@@ -113,7 +113,7 @@
 		CFD6677924E3251600CFB98D /* Orchid@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6674124E3251600CFB98D /* Orchid@3x.png */; };
 		CFD6677A24E3251600CFB98D /* MightyUmbrellaiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6674224E3251600CFB98D /* MightyUmbrellaiPad@2x.png */; };
 		CFD6677B24E3251600CFB98D /* Moonlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6674324E3251600CFB98D /* Moonlight@2x.png */; };
-		CFD790DA2151C4CD007E489D /* ColorThemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD790D92151C4CD007E489D /* ColorThemeTableViewController.swift */; };
+		CFD790DA2151C4CD007E489D /* ThemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD790D92151C4CD007E489D /* ThemeTableViewController.swift */; };
 		CFD9CDFB2535FD3200CB128E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF42EA42513CC3D005119C9 /* WidgetKit.framework */; };
 		CFD9CDFC2535FD3200CB128E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF42EA62513CC3D005119C9 /* SwiftUI.framework */; };
 		CFD9CDFF2535FD3200CB128E /* Cumulus_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD9CDFE2535FD3200CB128E /* Cumulus_Widget.swift */; };
@@ -288,7 +288,7 @@
 		CFD6674124E3251600CFB98D /* Orchid@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Orchid@3x.png"; sourceTree = "<group>"; };
 		CFD6674224E3251600CFB98D /* MightyUmbrellaiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MightyUmbrellaiPad@2x.png"; sourceTree = "<group>"; };
 		CFD6674324E3251600CFB98D /* Moonlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Moonlight@2x.png"; sourceTree = "<group>"; };
-		CFD790D92151C4CD007E489D /* ColorThemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeTableViewController.swift; sourceTree = "<group>"; };
+		CFD790D92151C4CD007E489D /* ThemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTableViewController.swift; sourceTree = "<group>"; };
 		CFD9CDFA2535FD3200CB128E /* Cumulus WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Cumulus WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD9CDFE2535FD3200CB128E /* Cumulus_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cumulus_Widget.swift; sourceTree = "<group>"; };
 		CFD9CE002535FD3200CB128E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -439,7 +439,7 @@
 				CFAB4445211F3A2000A7E3CB /* ForecastDataTableViewController.swift */,
 				CFEA0F7B24D437B100E62E5F /* WeatherUnitsViewController.swift */,
 				CF4A0E602108B5580061CAAD /* AppIconTableViewController.swift */,
-				CFD790D92151C4CD007E489D /* ColorThemeTableViewController.swift */,
+				CFD790D92151C4CD007E489D /* ThemeTableViewController.swift */,
 				CF9477482167DF0200DA8B38 /* SiriShortcutsTableViewController.swift */,
 				CFB693E420F8577200DE669A /* PrivacyAndTermsViewController.swift */,
 				CFD5E8FB20E669B0002A5F0C /* AcknowledgementsViewController.swift */,
@@ -1053,7 +1053,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFD790DA2151C4CD007E489D /* ColorThemeTableViewController.swift in Sources */,
+				CFD790DA2151C4CD007E489D /* ThemeTableViewController.swift in Sources */,
 				CF6E4AA420DACFD8002349A7 /* ForecastViewController.swift in Sources */,
 				CFF0A964242E9A2500FDDAF1 /* Locations.xcdatamodeld in Sources */,
 				CF9477492167DF0200DA8B38 /* SiriShortcutsTableViewController.swift in Sources */,
@@ -1267,7 +1267,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.6;
+				CURRENT_PROJECT_VERSION = 2.2.7;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1292,7 +1292,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.6;
+				CURRENT_PROJECT_VERSION = 2.2.7;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1315,7 +1315,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.6;
+				CURRENT_PROJECT_VERSION = 2.2.7;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntentUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1342,7 +1342,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.6;
+				CURRENT_PROJECT_VERSION = 2.2.7;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntentUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1368,7 +1368,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.6;
+				CURRENT_PROJECT_VERSION = 2.2.7;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1395,7 +1395,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.6;
+				CURRENT_PROJECT_VERSION = 2.2.7;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1422,7 +1422,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Widget/Cumulus WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.6;
+				CURRENT_PROJECT_VERSION = 2.2.7;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "Cumulus Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1450,7 +1450,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Widget/Cumulus WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.6;
+				CURRENT_PROJECT_VERSION = 2.2.7;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "Cumulus Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

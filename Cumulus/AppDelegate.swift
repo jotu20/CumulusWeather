@@ -88,6 +88,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         // Setup all the default values
+        if (defaults.bool(forKey: "cumulusPlus") == false) {
+            defaults.set("Dodger Blue", forKey: "userSavedAppIconString")
+        }
+        
         if (defaults.string(forKey: "defaultHourlyCondition") == nil) || (defaults.bool(forKey: "cumulusPlus") == false) {
             defaults.set("Precip (%)", forKey: "defaultHourlyCondition")
         }

@@ -475,6 +475,9 @@ func fetchOpenWeatherDataDaily() {
           do {
             let decodedResponse = try JSONDecoder().decode(OpenWeatherDaily.self, from: data)
             
+            highTemperature = Int(decodedResponse.daily[0].temp.max)
+            lowTemperature = Int(decodedResponse.daily[0].temp.min)
+            
             day0Condition = decodedResponse.daily[0].dailyWeather[0].main.lowercased()
             day0DayString = dayFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.daily[0].dt)), fullLength: false)
             day0DayStringFull = dayFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.daily[0].dt)), fullLength: true)

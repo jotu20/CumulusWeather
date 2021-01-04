@@ -97,7 +97,7 @@ class PrivacyAndTermsViewController: UIViewController {
             .foregroundColor: UIColor.label,
         ]
         
-        let attributedString = NSMutableAttributedString(string:"To report any issues, ask questions, or give feedback, please feel free to reach out.", attributes: attributes)
+        let attributedString = NSMutableAttributedString(string:"To report any issues, ask questions, give feedback, or request features, please feel free to reach out.", attributes: attributes)
         let linkWasSet = attributedString.setAsLink(textToFind: "reach out", linkURL: "mailto:support@cumulusweatherapp.com")
 
         if linkWasSet {

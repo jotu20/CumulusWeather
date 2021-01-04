@@ -318,6 +318,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
                 self.hourlyConditionsGestureSwipeLeft.isEnabled = false
                 self.hourlyConditionsGestureSwipeRight.isEnabled = false
                 
+                self.day5View.isHidden = true
                 self.day6View.isHidden = true
                 self.day7View.isHidden = true
                 self.day8View.isHidden = true

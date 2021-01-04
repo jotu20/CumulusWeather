@@ -74,6 +74,7 @@ struct CurrentForecastWidgetView : View {
             VStack {
                 Text("\(data.currentLocation)")
                     .font(.system(size: 15, weight: .semibold, design: .default))
+                    .foregroundColor(viewModel.textColor)
                     .frame(maxWidth: .infinity, maxHeight: 30, alignment: .bottom)
                 HStack {
                     Image(weatherCondition(condition: data.currentCondition, type: "widget", circle: universalIcons))
@@ -105,6 +106,7 @@ struct HourlyForecastWidgetView : View {
             VStack {
                 Text("\(currentLocation)")
                     .font(.system(size: 15, weight: .semibold, design: .default))
+                    .foregroundColor(viewModel.textColor)
                     .frame(maxWidth: 325, maxHeight: 10, alignment: .leading)
                 HStack {
                     Text("\(currentTemperature)°")
@@ -126,8 +128,9 @@ struct HourlyForecastWidgetView : View {
                 HStack(spacing: 10) {
                     VStack {
                         Text("NOW")
-                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(viewModel.textColor)
+                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                         Image(weatherCondition(condition: conditionHour1, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour0)°")
@@ -136,8 +139,9 @@ struct HourlyForecastWidgetView : View {
                     }
                     VStack {
                         Text("\(hour3)")
-                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(viewModel.textColor)
+                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                         Image(weatherCondition(condition: conditionHour3, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour3)°")
@@ -146,8 +150,9 @@ struct HourlyForecastWidgetView : View {
                     }
                     VStack {
                         Text("\(hour6)")
-                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(viewModel.textColor)
+                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                         Image(weatherCondition(condition: conditionHour6, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour6)°")
@@ -156,8 +161,9 @@ struct HourlyForecastWidgetView : View {
                     }
                     VStack {
                         Text("\(hour10)")
-                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(viewModel.textColor)
+                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                         Image(weatherCondition(condition: conditionHour10, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour10)°")
@@ -166,8 +172,9 @@ struct HourlyForecastWidgetView : View {
                     }
                     VStack {
                         Text("\(hour13)")
-                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(viewModel.textColor)
+                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                         Image(weatherCondition(condition: conditionHour13, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour13)°")
@@ -176,8 +183,9 @@ struct HourlyForecastWidgetView : View {
                     }
                     VStack {
                         Text("\(hour15)")
-                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(viewModel.textColor)
+                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                         Image(weatherCondition(condition: conditionHour15, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour15)°")
@@ -202,6 +210,7 @@ struct DailyForecastWidgetView : View {
             VStack {
                 Text("\(currentLocation)")
                     .font(.system(size: 15, weight: .semibold, design: .default))
+                    .foregroundColor(viewModel.textColor)
                     .frame(maxWidth: 325, maxHeight: 10, alignment: .leading)
                 HStack {
                     Text("\(currentTemperature)°")
@@ -223,8 +232,9 @@ struct DailyForecastWidgetView : View {
                 HStack(spacing: 10) {
                     VStack {
                         Text("NOW")
-                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(viewModel.textColor)
+                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                         Image(weatherCondition(condition: conditionHour1, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour0)°")
@@ -233,8 +243,9 @@ struct DailyForecastWidgetView : View {
                     }
                     VStack {
                         Text("\(hour3)")
-                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(viewModel.textColor)
+                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                         Image(weatherCondition(condition: conditionHour3, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour3)°")
@@ -243,8 +254,9 @@ struct DailyForecastWidgetView : View {
                     }
                     VStack {
                         Text("\(hour6)")
-                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(viewModel.textColor)
+                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                         Image(weatherCondition(condition: conditionHour6, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour6)°")
@@ -253,8 +265,9 @@ struct DailyForecastWidgetView : View {
                     }
                     VStack {
                         Text("\(hour10)")
-                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(viewModel.textColor)
+                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                         Image(weatherCondition(condition: conditionHour10, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour10)°")
@@ -263,8 +276,9 @@ struct DailyForecastWidgetView : View {
                     }
                     VStack {
                         Text("\(hour13)")
-                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(viewModel.textColor)
+                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                         Image(weatherCondition(condition: conditionHour13, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour13)°")
@@ -273,8 +287,9 @@ struct DailyForecastWidgetView : View {
                     }
                     VStack {
                         Text("\(hour15)")
-                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(viewModel.textColor)
+                            .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
                         Image(weatherCondition(condition: conditionHour15, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour15)°")
@@ -287,8 +302,9 @@ struct DailyForecastWidgetView : View {
                 VStack(spacing: 0) {
                     HStack {
                         Text("\(day1DayStringFull.capitalizingFirstLetter())")
-                            .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(viewModel.textColor)
+                            .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
                         Image(weatherCondition(condition: day1Condition, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day1High)°")
@@ -301,8 +317,9 @@ struct DailyForecastWidgetView : View {
                     }
                     HStack {
                         Text("\(day2DayStringFull.capitalizingFirstLetter())")
-                            .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(viewModel.textColor)
+                            .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
                         Image(weatherCondition(condition: day2Condition, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day2High)°")
@@ -315,8 +332,9 @@ struct DailyForecastWidgetView : View {
                     }
                     HStack {
                         Text("\(day3DayStringFull.capitalizingFirstLetter())")
-                            .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(viewModel.textColor)
+                            .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
                         Image(weatherCondition(condition: day3Condition, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day3High)°")
@@ -329,8 +347,9 @@ struct DailyForecastWidgetView : View {
                     }
                     HStack {
                         Text("\(day4DayStringFull.capitalizingFirstLetter())")
-                            .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
                             .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(viewModel.textColor)
+                            .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
                         Image(weatherCondition(condition: day4Condition, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day4High)°")

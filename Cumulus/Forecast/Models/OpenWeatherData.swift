@@ -210,14 +210,54 @@ struct Alert: Codable {
     }
 }
 
-
-func nightTimeIcon(main: String, icon: String) -> String {
+func conditionIcon(id: Int, main: String, icon: String) -> String {
     var conditionIcon: String = ""
+    print(id)
 
-    if icon.hasSuffix("01n") {
+    if icon.hasSuffix("01d") {
+        // clear sky
+        conditionIcon = "clear"
+    } else if icon.hasSuffix("01n") {
+        // clear sky
         conditionIcon = "clear-night"
-    } else if icon.hasSuffix("02n") || icon.hasSuffix("03n") || icon.hasSuffix("04n"){
+    } else if icon.hasSuffix("02d") {
+        // few clouds
+        conditionIcon = "partly-cloudy"
+    } else if icon.hasSuffix("02n") {
+        // few clouds
         conditionIcon = "partly-cloudy-night"
+    } else if icon.hasSuffix("03d") || icon.hasSuffix("03n") {
+        // scattered clouds
+        conditionIcon = "mostly-cloudy"
+    } else if icon.hasSuffix("04d") || icon.hasSuffix("04n") {
+        // broken clouds
+        conditionIcon = "cloudy"
+    } else if id == 500 {
+        conditionIcon = "light-rain"
+    } else if id == 501 {
+        conditionIcon = "moderate-rain"
+    } else if id == 502 || id == 503 || id == 504 {
+        conditionIcon = "heavy-rain"
+    } else if id == 511 {
+        conditionIcon = "freezing-rain"
+    } else if id == 600 {
+        conditionIcon = "light-snow"
+    } else if id == 601 {
+        conditionIcon = "snow"
+    } else if id == 602 {
+        conditionIcon = "heavy-snow"
+    } else if id == 611 {
+        conditionIcon = "ice-pellets"
+    } else if id == 612 {
+        conditionIcon = "light-ice-pellets"
+    } else if id == 613 {
+        conditionIcon = "heavy-ice-pellets"
+    } else if id == 620 {
+        conditionIcon = "light-snow"
+    } else if id == 621 {
+        conditionIcon = "snow"
+    } else if id == 622 {
+        conditionIcon = "heavy-snow"
     } else {
         conditionIcon = main
     }
@@ -237,7 +277,7 @@ func fetchOpenWeatherDataCurrent() {
             let decodedResponse = try JSONDecoder().decode(OpenWeatherCurrent.self, from: data)
 
             currentTemperature = Int(decodedResponse.current.temp)
-            currentCondition = nightTimeIcon(main: decodedResponse.current.currentWeather[0].main.lowercased(), icon: decodedResponse.current.currentWeather[0].icon.lowercased())
+            currentCondition = conditionIcon(id: decodedResponse.current.currentWeather[0].id, main: decodedResponse.current.currentWeather[0].main.lowercased(), icon: decodedResponse.current.currentWeather[0].icon.lowercased())
             feelsLikeTemperature = Int(decodedResponse.current.feelsLike)
             currentSummary = decodedResponse.current.currentWeather[0].description
             humidity = Int(decodedResponse.current.humidity)
@@ -282,7 +322,7 @@ func fetchOpenWeatherDataHourly() {
             cloudCoverHour0 = Int(decodedResponse.hourly[0].clouds)
 
             hour1 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[1].dt)))
-            conditionHour1 = nightTimeIcon(main: decodedResponse.hourly[1].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[1].hourlyWeather[0].icon.lowercased())
+            conditionHour1 = conditionIcon(id: decodedResponse.hourly[1].hourlyWeather[0].id, main: decodedResponse.hourly[1].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[1].hourlyWeather[0].icon.lowercased())
             precipHour1 = Int(decodedResponse.hourly[1].pop * 100)
             tempHour1 = Int(decodedResponse.hourly[1].temp)
             humidityHour1 = Int(decodedResponse.hourly[1].humidity)
@@ -291,7 +331,7 @@ func fetchOpenWeatherDataHourly() {
             cloudCoverHour1 = Int(decodedResponse.hourly[1].clouds)
             
             hour2 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[2].dt)))
-            conditionHour2 = nightTimeIcon(main: decodedResponse.hourly[2].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[2].hourlyWeather[0].icon.lowercased())
+            conditionHour2 = conditionIcon(id: decodedResponse.hourly[2].hourlyWeather[0].id, main: decodedResponse.hourly[2].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[2].hourlyWeather[0].icon.lowercased())
             precipHour2 = Int(decodedResponse.hourly[2].pop * 100)
             tempHour2 = Int(decodedResponse.hourly[2].temp)
             humidityHour2 = Int(decodedResponse.hourly[2].humidity)
@@ -300,7 +340,7 @@ func fetchOpenWeatherDataHourly() {
             cloudCoverHour2 = Int(decodedResponse.hourly[2].clouds)
             
             hour3 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[3].dt)))
-            conditionHour3 = nightTimeIcon(main: decodedResponse.hourly[3].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[3].hourlyWeather[0].icon.lowercased())
+            conditionHour3 = conditionIcon(id: decodedResponse.hourly[3].hourlyWeather[0].id, main: decodedResponse.hourly[3].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[3].hourlyWeather[0].icon.lowercased())
             precipHour3 = Int(decodedResponse.hourly[3].pop * 100)
             tempHour3 = Int(decodedResponse.hourly[3].temp)
             humidityHour3 = Int(decodedResponse.hourly[3].humidity)
@@ -309,7 +349,7 @@ func fetchOpenWeatherDataHourly() {
             cloudCoverHour3 = Int(decodedResponse.hourly[3].clouds)
             
             hour4 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[4].dt)))
-            conditionHour4 = nightTimeIcon(main: decodedResponse.hourly[4].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[4].hourlyWeather[0].icon.lowercased())
+            conditionHour4 = conditionIcon(id: decodedResponse.hourly[4].hourlyWeather[0].id, main: decodedResponse.hourly[4].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[4].hourlyWeather[0].icon.lowercased())
             precipHour4 = Int(decodedResponse.hourly[4].pop * 100)
             tempHour4 = Int(decodedResponse.hourly[4].temp)
             humidityHour4 = Int(decodedResponse.hourly[4].humidity)
@@ -318,7 +358,7 @@ func fetchOpenWeatherDataHourly() {
             cloudCoverHour4 = Int(decodedResponse.hourly[4].clouds)
             
             hour5 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[5].dt)))
-            conditionHour5 = nightTimeIcon(main: decodedResponse.hourly[5].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[5].hourlyWeather[0].icon.lowercased())
+            conditionHour5 = conditionIcon(id: decodedResponse.hourly[5].hourlyWeather[0].id, main: decodedResponse.hourly[5].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[5].hourlyWeather[0].icon.lowercased())
             precipHour5 = Int(decodedResponse.hourly[5].pop * 100)
             tempHour5 = Int(decodedResponse.hourly[5].temp)
             humidityHour5 = Int(decodedResponse.hourly[5].humidity)
@@ -327,7 +367,7 @@ func fetchOpenWeatherDataHourly() {
             cloudCoverHour5 = Int(decodedResponse.hourly[5].clouds)
             
             hour6 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[6].dt)))
-            conditionHour6 = nightTimeIcon(main: decodedResponse.hourly[6].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[6].hourlyWeather[0].icon.lowercased())
+            conditionHour6 = conditionIcon(id: decodedResponse.hourly[6].hourlyWeather[0].id, main: decodedResponse.hourly[6].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[6].hourlyWeather[0].icon.lowercased())
             precipHour6 = Int(decodedResponse.hourly[6].pop * 100)
             tempHour6 = Int(decodedResponse.hourly[6].temp)
             humidityHour6 = Int(decodedResponse.hourly[6].humidity)
@@ -336,7 +376,7 @@ func fetchOpenWeatherDataHourly() {
             cloudCoverHour6 = Int(decodedResponse.hourly[6].clouds)
             
             hour7 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[7].dt)))
-            conditionHour7 = nightTimeIcon(main: decodedResponse.hourly[7].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[7].hourlyWeather[0].icon.lowercased())
+            conditionHour7 = conditionIcon(id: decodedResponse.hourly[7].hourlyWeather[0].id, main: decodedResponse.hourly[7].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[7].hourlyWeather[0].icon.lowercased())
             precipHour7 = Int(decodedResponse.hourly[7].pop * 100)
             tempHour7 = Int(decodedResponse.hourly[7].temp)
             humidityHour7 = Int(decodedResponse.hourly[7].humidity)
@@ -345,7 +385,7 @@ func fetchOpenWeatherDataHourly() {
             cloudCoverHour7 = Int(decodedResponse.hourly[7].clouds)
             
             hour8 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[8].dt)))
-            conditionHour8 = nightTimeIcon(main: decodedResponse.hourly[8].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[8].hourlyWeather[0].icon.lowercased())
+            conditionHour8 = conditionIcon(id: decodedResponse.hourly[8].hourlyWeather[0].id, main: decodedResponse.hourly[8].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[8].hourlyWeather[0].icon.lowercased())
             precipHour8 = Int(decodedResponse.hourly[8].pop * 100)
             tempHour8 = Int(decodedResponse.hourly[8].temp)
             humidityHour8 = Int(decodedResponse.hourly[8].humidity)
@@ -354,7 +394,7 @@ func fetchOpenWeatherDataHourly() {
             cloudCoverHour8 = Int(decodedResponse.hourly[8].clouds)
             
             hour9 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[9].dt)))
-            conditionHour9 = nightTimeIcon(main: decodedResponse.hourly[9].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[9].hourlyWeather[0].icon.lowercased())
+            conditionHour9 = conditionIcon(id: decodedResponse.hourly[9].hourlyWeather[0].id, main: decodedResponse.hourly[9].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[9].hourlyWeather[0].icon.lowercased())
             precipHour9 = Int(decodedResponse.hourly[9].pop * 100)
             tempHour9 = Int(decodedResponse.hourly[9].temp)
             humidityHour9 = Int(decodedResponse.hourly[9].humidity)
@@ -363,7 +403,7 @@ func fetchOpenWeatherDataHourly() {
             cloudCoverHour9 = Int(decodedResponse.hourly[9].clouds)
             
             hour10 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[10].dt)))
-            conditionHour10 = nightTimeIcon(main: decodedResponse.hourly[10].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[10].hourlyWeather[0].icon.lowercased())
+            conditionHour10 = conditionIcon(id: decodedResponse.hourly[10].hourlyWeather[0].id, main: decodedResponse.hourly[10].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[10].hourlyWeather[0].icon.lowercased())
             precipHour10 = Int(decodedResponse.hourly[10].pop * 100)
             tempHour10 = Int(decodedResponse.hourly[10].temp)
             humidityHour10 = Int(decodedResponse.hourly[10].humidity)
@@ -372,7 +412,7 @@ func fetchOpenWeatherDataHourly() {
             cloudCoverHour10 = Int(decodedResponse.hourly[10].clouds)
             
             hour11 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[11].dt)))
-            conditionHour11 = nightTimeIcon(main: decodedResponse.hourly[11].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[11].hourlyWeather[0].icon.lowercased())
+            conditionHour11 = conditionIcon(id: decodedResponse.hourly[11].hourlyWeather[0].id, main: decodedResponse.hourly[11].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[11].hourlyWeather[0].icon.lowercased())
             precipHour11 = Int(decodedResponse.hourly[11].pop * 100)
             tempHour11 = Int(decodedResponse.hourly[11].temp)
             humidityHour11 = Int(decodedResponse.hourly[11].humidity)
@@ -381,7 +421,7 @@ func fetchOpenWeatherDataHourly() {
             cloudCoverHour11 = Int(decodedResponse.hourly[11].clouds)
             
             hour12 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[12].dt)))
-            conditionHour12 = nightTimeIcon(main: decodedResponse.hourly[12].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[12].hourlyWeather[0].icon.lowercased())
+            conditionHour12 = conditionIcon(id: decodedResponse.hourly[12].hourlyWeather[0].id, main: decodedResponse.hourly[12].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[12].hourlyWeather[0].icon.lowercased())
             precipHour12 = Int(decodedResponse.hourly[12].pop * 100)
             tempHour12 = Int(decodedResponse.hourly[12].temp)
             humidityHour12 = Int(decodedResponse.hourly[12].humidity)
@@ -390,7 +430,7 @@ func fetchOpenWeatherDataHourly() {
             cloudCoverHour12 = Int(decodedResponse.hourly[12].clouds)
             
             hour13 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[13].dt)))
-            conditionHour13 = nightTimeIcon(main: decodedResponse.hourly[13].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[13].hourlyWeather[0].icon.lowercased())
+            conditionHour13 = conditionIcon(id: decodedResponse.hourly[13].hourlyWeather[0].id, main: decodedResponse.hourly[13].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[13].hourlyWeather[0].icon.lowercased())
             precipHour13 = Int(decodedResponse.hourly[13].pop * 100)
             tempHour13 = Int(decodedResponse.hourly[13].temp)
             humidityHour13 = Int(decodedResponse.hourly[13].humidity)
@@ -399,7 +439,7 @@ func fetchOpenWeatherDataHourly() {
             cloudCoverHour13 = Int(decodedResponse.hourly[13].clouds)
             
             hour14 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[14].dt)))
-            conditionHour14 = nightTimeIcon(main: decodedResponse.hourly[14].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[14].hourlyWeather[0].icon.lowercased())
+            conditionHour14 = conditionIcon(id: decodedResponse.hourly[14].hourlyWeather[0].id, main: decodedResponse.hourly[14].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[14].hourlyWeather[0].icon.lowercased())
             precipHour14 = Int(decodedResponse.hourly[14].pop * 100)
             tempHour14 = Int(decodedResponse.hourly[14].temp)
             humidityHour14 = Int(decodedResponse.hourly[14].humidity)
@@ -408,7 +448,7 @@ func fetchOpenWeatherDataHourly() {
             cloudCoverHour14 = Int(decodedResponse.hourly[14].clouds)
             
             hour15 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[15].dt)))
-            conditionHour15 = nightTimeIcon(main: decodedResponse.hourly[15].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[15].hourlyWeather[0].icon.lowercased())
+            conditionHour15 = conditionIcon(id: decodedResponse.hourly[15].hourlyWeather[0].id, main: decodedResponse.hourly[15].hourlyWeather[0].main.lowercased(), icon: decodedResponse.hourly[15].hourlyWeather[0].icon.lowercased())
             precipHour15 = Int(decodedResponse.hourly[15].pop * 100)
             tempHour15 = Int(decodedResponse.hourly[15].temp)
             humidityHour15 = Int(decodedResponse.hourly[15].humidity)

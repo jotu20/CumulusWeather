@@ -212,24 +212,23 @@ struct Alert: Codable {
 
 func conditionIcon(id: Int, main: String, icon: String) -> String {
     var conditionIcon: String = ""
-    print(id)
 
-    if icon.hasSuffix("01d") {
+    if icon == "01d" {
         // clear sky
         conditionIcon = "clear"
-    } else if icon.hasSuffix("01n") {
+    } else if icon == "01n" {
         // clear sky
         conditionIcon = "clear-night"
-    } else if icon.hasSuffix("02d") {
+    } else if icon == "02d" {
         // few clouds
         conditionIcon = "partly-cloudy"
-    } else if icon.hasSuffix("02n") {
+    } else if icon == "02n" {
         // few clouds
         conditionIcon = "partly-cloudy-night"
-    } else if icon.hasSuffix("03d") || icon.hasSuffix("03n") {
+    } else if icon == "03d" || icon == "03n" {
         // scattered clouds
         conditionIcon = "mostly-cloudy"
-    } else if icon.hasSuffix("04d") || icon.hasSuffix("04n") {
+    } else if icon == "04d" || icon == "04n" {
         // broken clouds
         conditionIcon = "cloudy"
     } else if id == 500 {

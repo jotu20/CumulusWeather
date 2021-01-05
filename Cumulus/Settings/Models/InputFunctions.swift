@@ -220,6 +220,18 @@ func weatherCondition(condition: String, type: String, circle: String) -> String
         }
     }
     
+    if condition == "mostly-cloudy" {
+        if type == "image" {
+            conditionString = "Mostly_cloudy\(circle).pdf"
+        } else if type == "text" {
+            conditionString = "Mostly cloudy"
+        } else if type == "daily" {
+            conditionString = "Mostly_cloudy\(circle).pdf"
+        } else if type == "widget" {
+            conditionString = "Mostly_cloudy_widget\(circle)"
+        }
+    }
+    
     if condition == "partly-cloudy-day" {
         if type == "image" {
             conditionString = "Partly_cloudy\(circle).pdf"

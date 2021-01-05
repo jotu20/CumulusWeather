@@ -286,7 +286,7 @@ func fetchOpenWeatherDataCurrent() {
             wind = Int(decodedResponse.current.windSpeed)
             windGust = wind
             windBearing = windDirection(degree: Double(decodedResponse.current.windDeg))
-
+            
             sunrise = sunFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.current.sunrise)))
             sunset = sunFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.current.sunset)))
           } catch {

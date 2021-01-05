@@ -1345,6 +1345,8 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             conditionSlotLabel3.text = "UV index very high (\(uvIndex))"
         } else if uvIndex >= 11 {
             conditionSlotLabel3.text = "UV index extreme (\(uvIndex))"
+        } else {
+            conditionSlotLabel3.text = "UV index low (0)"
         }
         
         if windGust == wind {

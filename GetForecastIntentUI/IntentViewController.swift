@@ -114,6 +114,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
     func configureView(for parameters: Set<INParameter>, of interaction: INInteraction, interactiveBehavior: INUIInteractiveBehavior, context: INUIHostedViewContext, completion: @escaping (Bool, Set<INParameter>, CGSize) -> Void) {
         // Do configuration here, including preparing views and calculating a desired size for presentation.
         let locationManager = CLLocationManager()
+        universalSettings()
 
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
@@ -121,7 +122,6 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
             locationManager.startUpdatingLocation()
         }
         
-        let userLocation = CLLocationCoordinate2D(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
         geocode(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
             
@@ -140,171 +140,10 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
             self.currentLocationLabel.text = "\(currentLocation)"
         }
         
-        client.getForecast(location: userLocation) { result in
-            switch result {
-            case .success(let tuple):
-                let (currentForecast, _) = tuple
-                universalSettings()
-                
-                if universalUnits == "USA" {
-                    client.units = .us
-                    client.language = .english
-                    unitsTemperature = "F"
-                    unitsDistance = "miles"
-                    unitsWindSpeed = "mph"
-                    unitsPressure = "mB"
-                    unitsPrecipitation = "in"
-                }
-                
-                if universalUnits == "UK" {
-                    client.units = .uk
-                    client.language = .english
-                    unitsTemperature = "C"
-                    unitsDistance = "miles"
-                    unitsWindSpeed = "mph"
-                    unitsPressure = "hPa"
-                    unitsPrecipitation = "mm"
-                }
-                
-                if universalUnits == "Canada" {
-                    client.units = .ca
-                    client.language = .english
-                    unitsTemperature = "C"
-                    unitsDistance = "kilometers"
-                    unitsWindSpeed = "km/h"
-                    unitsPressure = "hPa"
-                    unitsPrecipitation = "mm"
-                }
-                
-                if universalUnits == "International" {
-                    client.units = .si
-                    client.language = .english
-                    unitsTemperature = "C"
-                    unitsDistance = "kilometers"
-                    unitsWindSpeed = "m/s"
-                    unitsPressure = "hPa"
-                    unitsPrecipitation = "mm"
-                }
-                
-                // Set timezone to local timezone of location
-                TimeZone.ReferenceType.default = TimeZone(identifier: "\(currentForecast.timezone)")!
-                
-                // Manage weather data
-                // Get current weather data
-                if let current = currentForecast.currently {
-                    currentCondition = "\(current.icon!.rawValue)"
-                    currentTemperature = Int(current.temperature!)
-                    precipitation = dailyPrecipProb(day: current)
-                    humidity = dailyHumidityProb(day: current)
-                    cloudCover = dailyCloudCoverProb(day: current)
-                    uvIndex = Int(current.uvIndex!)
-                    wind = Int(current.windSpeed!)
-                    windGust = Int(current.windGust!)
-                    windBearing = windDirection(degree: current.windBearing!)
-                    
-                    if current.precipitationAccumulation != nil {
-                        precipAccumulation = Double(current.precipitationAccumulation!)
-                    }
-                }
-                
-                // Get weather data for the day
-                if let daily = currentForecast.daily {
-                    let firstArray = daily.data[0]
-                    let fetchArray = firstArray
-                    
-                    day0Condition = "\(fetchArray.icon!.rawValue)"
-                    
-                    highTemperature = Int(fetchArray.temperatureHigh!)
-                    lowTemperature = Int(fetchArray.temperatureLow!)
-                    
-                    // Seven day forecast
-                    // Day Zero
-                    let dayZeroArray = daily.data[0]
-                    let fetchDayZeroArray = dayZeroArray
-                    
-                    // Date
-                    day0DayString = dayFormat(date: dayZeroArray.time, fullLength: false)
-                    
-                    // High and Low
-                    day0High = Int(fetchDayZeroArray.temperatureHigh!)
-                    day0Low = Int(fetchDayZeroArray.temperatureLow!)
-                    
-                    // Precipitation
-                    day0Precip = Int(fetchDayZeroArray.precipitationProbability! * 100)
-                    
-                    // Day One
-                    let dayOneArray = daily.data[1]
-                    let fetchDayOneArray = dayOneArray
-                    
-                    day1Condition = "\(fetchDayOneArray.icon!.rawValue)"
-                    
-                    // Date
-                    day1DayStringFull = dayFormat(date: dayOneArray.time, fullLength: true)
-                    
-                    // High and Low
-                    day1High = Int(fetchDayOneArray.temperatureHigh!)
-                    day1Low = Int(fetchDayOneArray.temperatureLow!)
-                    
-                    // Precipitation
-                    day1Precip = Int(fetchDayOneArray.precipitationProbability! * 100)
-                    
-                    // Day Two
-                    let dayTwoArray = daily.data[2]
-                    let fetchDayTwoArray = dayTwoArray
-                    
-                    day2Condition = "\(fetchDayTwoArray.icon!.rawValue)"
-                    
-                    // Date
-                    day2DayStringFull = dayFormat(date: dayTwoArray.time, fullLength: true)
-                    
-                    // High and Low
-                    day2High = Int(fetchDayTwoArray.temperatureHigh!)
-                    day2Low = Int(fetchDayTwoArray.temperatureLow!)
-                    
-                    // Precipitation
-                    day2Precip = Int(fetchDayTwoArray.precipitationProbability! * 100)
-                    
-                    // Day Three
-                    let dayThreeArray = daily.data[3]
-                    let fetchDayThreeArray = dayThreeArray
-                    
-                    day3Condition = "\(fetchDayThreeArray.icon!.rawValue)"
-                    
-                    // Date
-                    day3DayStringFull = dayFormat(date: dayThreeArray.time, fullLength: true)
-                    
-                    // High and Low
-                    day3High = Int(fetchDayThreeArray.temperatureHigh!)
-                    day3Low = Int(fetchDayThreeArray.temperatureLow!)
-                    
-                    // Precipitation
-                    day3Precip = Int(fetchDayThreeArray.precipitationProbability! * 100)
-                    
-                    // Day Four
-                    let dayFourArray = daily.data[4]
-                    let fetchDayFourArray = dayFourArray
-                    
-                    day4Condition = "\(fetchDayFourArray.icon!.rawValue)"
-                    
-                    // Date
-                    day4DayStringFull = dayFormat(date: fetchDayFourArray.time, fullLength: true)
-                    
-                    // High and Low
-                    day4High = Int(fetchDayFourArray.temperatureHigh!)
-                    day4Low = Int(fetchDayFourArray.temperatureLow!)
-                    
-                    // Precipitation
-                    day4Precip = Int(fetchDayFourArray.precipitationProbability! * 100)
-                }
-                
-                DispatchQueue.main.async() {
-                    self.setWeatherDataLabels()
-                    completion(true, parameters, self.desiredSize)
-                }
-                
-            case .failure(let error):
-                print(error)
-            }
+        if universalDataSource == "Dark Sky" {
+            fetchDarkSkyWeatherData()
+        } else if universalDataSource == "OpenWeather" {
+            fetchOpenWeatherData()
         }
     }
     

@@ -264,7 +264,7 @@ func conditionIcon(id: Int, main: String, icon: String) -> String {
     return conditionIcon
 }
 
-func fetchOpenWeatherDataCurrent() {
+func fetchCurrentOpenWeatherData() {
     guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(latitudeValue)&lon=\(longitudeValue)&units=\(openWeatherUnits)&exclude=minutely,hourly,daily&appid=8426f2e9a7736dbbb6db33e8bc36c0ed") else {
         print("Invalid URL")
         return
@@ -298,7 +298,7 @@ func fetchOpenWeatherDataCurrent() {
     }.resume()
 }
 
-func fetchOpenWeatherDataHourly() {
+func fetchHourlyOpenWeatherData() {
     guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(latitudeValue)&lon=\(longitudeValue)&units=\(openWeatherUnits)&exclude=current,minutely,daily&appid=8426f2e9a7736dbbb6db33e8bc36c0ed") else {
         print("Invalid URL")
         return
@@ -463,7 +463,7 @@ func fetchOpenWeatherDataHourly() {
     }.resume()
 }
 
-func fetchOpenWeatherDataDaily() {
+func fetchDailyOpenWeatherData() {
     guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(latitudeValue)&lon=\(longitudeValue)&units=\(openWeatherUnits)&exclude=current,minutely,hourly&appid=8426f2e9a7736dbbb6db33e8bc36c0ed") else {
         print("Invalid URL")
         return
@@ -676,8 +676,8 @@ func fetchOpenWeatherData() {
         unitsPrecipitation = "mm"
     }
     
-    fetchOpenWeatherDataCurrent()
-    fetchOpenWeatherDataHourly()
-    fetchOpenWeatherDataDaily()
+    fetchCurrentOpenWeatherData()
+    fetchHourlyOpenWeatherData()
+    fetchDailyOpenWeatherData()
     fetchOpenWeatherDataAlerts()
 }

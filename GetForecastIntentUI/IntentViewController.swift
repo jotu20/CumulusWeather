@@ -17,47 +17,45 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
     @IBOutlet weak var currentHighAndLowTemperatureLabel: UILabel!
     @IBOutlet weak var currentLocationLabel: UILabel!
     @IBOutlet weak var currentConditionLabel: UILabel!
-    
+
     @IBOutlet weak var conditionLabel0: UILabel!
     @IBOutlet weak var conditionLabel1: UILabel!
     @IBOutlet weak var conditionLabel2: UILabel!
     @IBOutlet weak var conditionLabel3: UILabel!
     @IBOutlet weak var conditionLabel4: UILabel!
     @IBOutlet weak var conditionLabel5: UILabel!
-    
+
     @IBOutlet weak var day0ConditionImage: UIImageView!
     @IBOutlet weak var day1ConditionImage: UIImageView!
     @IBOutlet weak var day2ConditionImage: UIImageView!
     @IBOutlet weak var day3ConditionImage: UIImageView!
-    
+
     @IBOutlet weak var day0Label: UILabel!
     @IBOutlet weak var day0HighLabel: UILabel!
     @IBOutlet weak var day0LowLabel: UILabel!
-    
+
     @IBOutlet weak var day1Label: UILabel!
     @IBOutlet weak var day1HighLabel: UILabel!
     @IBOutlet weak var day1LowLabel: UILabel!
-    
+
     @IBOutlet weak var day2Label: UILabel!
     @IBOutlet weak var day2HighLabel: UILabel!
     @IBOutlet weak var day2LowLabel: UILabel!
-    
+
     @IBOutlet weak var day3Label: UILabel!
     @IBOutlet weak var day3HighLabel: UILabel!
     @IBOutlet weak var day3LowLabel: UILabel!
     
     func setWeatherDataLabels() {
-        // Current condition labels
-        self.currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image", circle: universalIcons))
-        self.currentTemperatureLabel.text = "\(currentTemperature)°"
-        self.currentHighAndLowTemperatureLabel.text = "↑\(highTemperature)° ↓\(lowTemperature)°"
-        self.currentConditionLabel.text = "\(weatherCondition(condition: currentCondition, type: "text", circle: universalIcons))"
-        
-        self.conditionLabel0.text = "Precip. \(precipitation)%"
-        self.conditionLabel1.text = "Accum. \(precipAccumulation) \(unitsPrecipitation)"
-        self.conditionLabel2.text = "Humidity \(humidity)%"
-        
-        // Set uv index
+        currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition, type: "image", circle: universalIcons))
+        currentTemperatureLabel.text = "\(currentTemperature)°"
+        currentHighAndLowTemperatureLabel.text = "↑\(highTemperature)° ↓\(lowTemperature)°"
+        currentConditionLabel.text = "\(weatherCondition(condition: currentCondition, type: "text", circle: universalIcons))"
+
+        conditionLabel0.text = "Precip. \(precipitation)%"
+        conditionLabel1.text = "Accum. \(precipAccumulation) \(unitsPrecipitation)"
+        conditionLabel2.text = "Humidity \(humidity)%"
+
         if uvIndex < 2 {
             conditionLabel3.text = "UV index low (\(uvIndex))"
         } else if uvIndex >= 3 && uvIndex <= 5 {
@@ -70,14 +68,12 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
             conditionLabel3.text = "UV index extreme (\(uvIndex))"
         }
 
-        // Set wind
         if windGust == wind {
             conditionLabel4.text = "Wind \(wind)\(unitsWindSpeed) \(windBearing)"
         } else {
             conditionLabel4.text = "Wind \(wind)(\(windGust))\(unitsWindSpeed) \(windBearing)"
         }
-        
-        // Set cloud cover
+
         if cloudCover > cloudCoverHour1 || cloudCover > cloudCoverHour2 || cloudCover > cloudCoverHour3 || cloudCover > cloudCoverHour4 {
             conditionLabel5.text = "Clouds \(cloudCover)% & decr."
         } else if cloudCover < cloudCoverHour1 || cloudCover < cloudCoverHour2 || cloudCover < cloudCoverHour3 || cloudCover < cloudCoverHour4 {
@@ -85,30 +81,26 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         } else {
             conditionLabel5.text = "Clouds \(cloudCover)%"
         }
-        
-        // Day Zero
-        self.day0ConditionImage.image = UIImage(named: weatherCondition(condition: day1Condition, type: "daily", circle: universalIcons))
-        self.day0Label.text = "\(day1DayStringFull.capitalizingFirstLetter())"
-        self.day0HighLabel.text = "\(day1High)°"
-        self.day0LowLabel.text = "\(day1Low)°"
-        
-        // Day One
-        self.day1ConditionImage.image = UIImage(named: weatherCondition(condition: day2Condition, type: "daily", circle: universalIcons))
-        self.day1Label.text = "\(day2DayStringFull.capitalizingFirstLetter())"
-        self.day1HighLabel.text = "\(day2High)°"
-        self.day1LowLabel.text = "\(day2Low)°"
-        
-        // Day Two
-        self.day2ConditionImage.image = UIImage(named: weatherCondition(condition: day3Condition, type: "daily", circle: universalIcons))
-        self.day2Label.text = "\(day3DayStringFull.capitalizingFirstLetter())"
-        self.day2HighLabel.text = "\(day3High)°"
-        self.day2LowLabel.text = "\(day3Low)°"
-        
-        // Day Three
-        self.day3ConditionImage.image = UIImage(named: weatherCondition(condition: day4Condition, type: "daily", circle: universalIcons))
-        self.day3Label.text = "\(day4DayStringFull.capitalizingFirstLetter())"
-        self.day3HighLabel.text = "\(day4High)°"
-        self.day3LowLabel.text = "\(day4Low)°"
+
+        day0ConditionImage.image = UIImage(named: weatherCondition(condition: day1Condition, type: "daily", circle: universalIcons))
+        day0Label.text = "\(day1DayStringFull.capitalizingFirstLetter())"
+        day0HighLabel.text = "\(day1High)°"
+        day0LowLabel.text = "\(day1Low)°"
+
+        day1ConditionImage.image = UIImage(named: weatherCondition(condition: day2Condition, type: "daily", circle: universalIcons))
+        day1Label.text = "\(day2DayStringFull.capitalizingFirstLetter())"
+        day1HighLabel.text = "\(day2High)°"
+        day1LowLabel.text = "\(day2Low)°"
+
+        day2ConditionImage.image = UIImage(named: weatherCondition(condition: day3Condition, type: "daily", circle: universalIcons))
+        day2Label.text = "\(day3DayStringFull.capitalizingFirstLetter())"
+        day2HighLabel.text = "\(day3High)°"
+        day2LowLabel.text = "\(day3Low)°"
+
+        day3ConditionImage.image = UIImage(named: weatherCondition(condition: day4Condition, type: "daily", circle: universalIcons))
+        day3Label.text = "\(day4DayStringFull.capitalizingFirstLetter())"
+        day3HighLabel.text = "\(day4High)°"
+        day3LowLabel.text = "\(day4Low)°"
     }
     
     // Prepare your view controller for the interaction to handle.
@@ -123,6 +115,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
             locationManager.startUpdatingLocation()
         }
         
+        let userLocation = CLLocationCoordinate2D(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
         geocode(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
             
@@ -142,12 +135,6 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
         }
         
         if universalDataSource == "Dark Sky" {
-            universalSettings()
-            let dayOneDate = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date()
-            let dayTwoDate = Calendar.current.date(byAdding: .day, value: 2, to: Date()) ?? Date()
-            let dayThreeDate = Calendar.current.date(byAdding: .day, value: 3, to: Date()) ?? Date()
-            let dayFourDate = Calendar.current.date(byAdding: .day, value: 4, to: Date()) ?? Date()
-            
             if universalUnits == "USA" {
                 client.units = .us
                 client.language = .english
@@ -188,22 +175,22 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                 unitsPrecipitation = "mm"
             }
             
-            let userLocation = CLLocationCoordinate2D(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
             client.getForecast(location: userLocation) { result in
                 switch result {
                 case .success(let tuple):
                     let (currentForecast, _) = tuple
-                    TimeZone.ReferenceType.default = TimeZone(identifier: "\(currentForecast.timezone)")!
                     
+                    TimeZone.ReferenceType.default = TimeZone(identifier: "\(currentForecast.timezone)")!
+
                     if let current = currentForecast.currently {
                         currentCondition = "\(current.icon!.rawValue)"
                         currentTemperature = Int(current.temperature!)
-                        currentSummary = "\(current.summary!)"
+                        highTemperature = Int(current.temperatureHigh!)
+                        lowTemperature = Int(current.temperatureLow!)
                         precipitation = dailyPrecipProb(day: current)
                         humidity = dailyHumidityProb(day: current)
                         cloudCover = dailyCloudCoverProb(day: current)
                         uvIndex = Int(current.uvIndex!)
-                        visibility = Int(current.visibility!)
                         wind = Int(current.windSpeed!)
                         windGust = Int(current.windGust!)
                         windBearing = windDirection(degree: current.windBearing!)
@@ -213,92 +200,48 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                         }
                     }
                     
-                    client.getForecast(location: userLocation, time: dayOneDate) { result in
-                        switch result {
-                        case .success(let tuple):
-                            let (forecast, _) = tuple
-                            TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
-                            
-                        if let daily = forecast.daily {
-                            let day1Array = daily.data[0]
-                            let fetchDay1Array = day1Array
-                            
-                            day1Condition = "\(fetchDay1Array.icon!.rawValue)"
-                            day1DayStringFull = dayFormat(date: fetchDay1Array.time, fullLength: true)
-                            day1Summary = fetchDay1Array.summary ?? "Summary error."
-                            day1High = Int(fetchDay1Array.temperatureHigh ?? defaultInteger)
-                            day1Low = Int(fetchDay1Array.temperatureLow ?? defaultInteger)
-                        }
-                        case .failure(let error):
-                            print(error)
-                        }
+                    if let daily = currentForecast.daily {
+                        let dayZeroArray = daily.data[0]
+                        let fetchDayZeroArray = dayZeroArray
+
+                        day0Condition = "\(fetchDayZeroArray.icon!.rawValue)"
+                        day0DayString = dayFormat(date: dayZeroArray.time, fullLength: false)
+                        day0High = Int(fetchDayZeroArray.temperatureHigh!)
+                        day0Low = Int(fetchDayZeroArray.temperatureLow!)
+                        
+                        let dayOneArray = daily.data[1]
+                        let fetchDayOneArray = dayOneArray
+                        
+                        day1Condition = "\(fetchDayOneArray.icon!.rawValue)"
+                        day1DayStringFull = dayFormat(date: dayOneArray.time, fullLength: true)
+                        day1High = Int(fetchDayOneArray.temperatureHigh!)
+                        day1Low = Int(fetchDayOneArray.temperatureLow!)
+                        
+                        let dayTwoArray = daily.data[2]
+                        let fetchDayTwoArray = dayTwoArray
+                        day2Condition = "\(fetchDayTwoArray.icon!.rawValue)"
+                        day2DayStringFull = dayFormat(date: dayTwoArray.time, fullLength: true)
+                        day2High = Int(fetchDayTwoArray.temperatureHigh!)
+                        day2Low = Int(fetchDayTwoArray.temperatureLow!)
+                        
+                        let dayThreeArray = daily.data[3]
+                        let fetchDayThreeArray = dayThreeArray
+                        day3Condition = "\(fetchDayThreeArray.icon!.rawValue)"
+                        day3DayStringFull = dayFormat(date: dayThreeArray.time, fullLength: true)
+                        day3High = Int(fetchDayThreeArray.temperatureHigh!)
+                        day3Low = Int(fetchDayThreeArray.temperatureLow!)
+                        
+                        let dayFourArray = daily.data[4]
+                        let fetchDayFourArray = dayFourArray
+                        day4Condition = "\(fetchDayFourArray.icon!.rawValue)"
+                        day4DayStringFull = dayFormat(date: fetchDayFourArray.time, fullLength: true)
+                        day4High = Int(fetchDayFourArray.temperatureHigh!)
+                        day4Low = Int(fetchDayFourArray.temperatureLow!)
                     }
                     
-                    client.getForecast(location: userLocation, time: dayTwoDate) { result in
-                        switch result {
-                        case .success(let tuple):
-                            let (forecast, _) = tuple
-                            TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
-                            
-                        if let daily = forecast.daily {
-                            let day2Array = daily.data[0]
-                            let fetchDay2Array = day2Array
-                            
-                            day2Condition = "\(fetchDay2Array.icon!.rawValue)"
-                            day2DayStringFull = dayFormat(date: fetchDay2Array.time, fullLength: true)
-                            day2Summary = fetchDay2Array.summary ?? "Summary error."
-                            day2High = Int(fetchDay2Array.temperatureHigh ?? defaultInteger)
-                            day2Low = Int(fetchDay2Array.temperatureLow ?? defaultInteger)
-                        }
-                        case .failure(let error):
-                            print(error)
-                        }
-                    }
-                    
-                    client.getForecast(location: userLocation, time: dayThreeDate) { result in
-                        switch result {
-                        case .success(let tuple):
-                            let (forecast, _) = tuple
-                            TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
-                            
-                        if let daily = forecast.daily {
-                            let day3Array = daily.data[0]
-                            let fetchDay3Array = day3Array
-                            
-                            day3Condition = "\(fetchDay3Array.icon!.rawValue)"
-                            day3DayStringFull = dayFormat(date: fetchDay3Array.time, fullLength: true)
-                            day3Summary = fetchDay3Array.summary!
-                            day3High = Int(fetchDay3Array.temperatureHigh ?? defaultInteger)
-                            day3Low = Int(fetchDay3Array.temperatureLow ?? defaultInteger)
-                        }
-                        case .failure(let error):
-                            print(error)
-                        }
-                    }
-                    
-                    client.getForecast(location: userLocation, time: dayFourDate) { result in
-                        switch result {
-                        case .success(let tuple):
-                            let (forecast, _) = tuple
-                            TimeZone.ReferenceType.default = TimeZone(identifier: "\(forecast.timezone)")!
-                            
-                        if let daily = forecast.daily {
-                            let day4Array = daily.data[0]
-                            let fetchDay4Array = day4Array
-                            
-                            day4Condition = "\(fetchDay4Array.icon!.rawValue)"
-                            day4DayStringFull = dayFormat(date: fetchDay4Array.time, fullLength: true)
-                            day4Summary = fetchDay4Array.summary ?? "Summary error."
-                            day4High = Int(fetchDay4Array.temperatureHigh ?? defaultInteger)
-                            day4Low = Int(fetchDay4Array.temperatureLow ?? defaultInteger)
-                        }
-                        case .failure(let error):
-                            print(error)
-                        }
-                    }
-                    
-                    DispatchQueue.main.async {
+                    DispatchQueue.main.async() {
                         self.setWeatherDataLabels()
+                        completion(true, parameters, self.desiredSize)
                     }
                     
                 case .failure(let error):
@@ -307,7 +250,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
             }
         } else if universalDataSource == "OpenWeather" {
             universalSettings()
-            
+
             if universalUnits == "USA" {
                 openWeatherUnits = "imperial"
                 unitsTemperature = "F"
@@ -316,7 +259,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                 unitsPressure = "hPa"
                 unitsPrecipitation = "mm"
             }
-            
+
             if universalUnits == "UK" || universalUnits == "Canada" || universalUnits == "Intertnational" {
                 openWeatherUnits = "metric"
                 unitsTemperature = "C"
@@ -325,7 +268,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                 unitsPressure = "hPa"
                 unitsPrecipitation = "mm"
             }
-            
+
             fetchOpenWeatherDataAlerts()
             guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\((locationManager.location?.coordinate.latitude)!)&lon=\((locationManager.location?.coordinate.longitude)!)&units=\(openWeatherUnits)&exclude=minutely,alerts&appid=8426f2e9a7736dbbb6db33e8bc36c0ed") else {
                 print("Invalid URL")
@@ -342,40 +285,39 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, CLLocat
                     lowTemperature = Int(decodedResponse.daily[0].temp.min)
                     currentSummary = decodedResponse.current.currentWeather[0].weatherDescription
                     precipitation = Int(decodedResponse.hourly[0].pop * 100)
-                    
+
                     day1Condition = decodedResponse.daily[1].dailyWeather[0].main.lowercased()
                     day1DayStringFull = dayFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.daily[1].dt)), fullLength: true)
                     day1Summary = decodedResponse.daily[1].dailyWeather[0].weatherDescription.capitalizingFirstLetter()
                     day1High = Int(decodedResponse.daily[1].temp.max)
                     day1Low = Int(decodedResponse.daily[1].temp.min)
-                              
+
                     day2Condition = decodedResponse.daily[2].dailyWeather[0].main.lowercased()
                     day2DayStringFull = dayFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.daily[2].dt)), fullLength: true)
                     day2Summary = decodedResponse.daily[2].dailyWeather[0].weatherDescription.capitalizingFirstLetter()
                     day2High = Int(decodedResponse.daily[2].temp.max)
                     day2Low = Int(decodedResponse.daily[2].temp.min)
-                    
+
                     day3Condition = decodedResponse.daily[3].dailyWeather[0].main.lowercased()
                     day3DayStringFull = dayFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.daily[3].dt)), fullLength: true)
                     day3Summary = decodedResponse.daily[3].dailyWeather[0].weatherDescription.capitalizingFirstLetter()
                     day3High = Int(decodedResponse.daily[3].temp.max)
                     day3Low = Int(decodedResponse.daily[3].temp.min)
-                    
+
                     day4Condition = decodedResponse.daily[4].dailyWeather[0].main.lowercased()
                     day4DayStringFull = dayFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.daily[4].dt)), fullLength: true)
                     day4Summary = decodedResponse.daily[4].dailyWeather[0].weatherDescription.capitalizingFirstLetter()
                     day4High = Int(decodedResponse.daily[4].temp.max)
                     day4Low = Int(decodedResponse.daily[4].temp.min)
-    
                   } catch {
                     debugPrint(error)
                     print(error.localizedDescription)
                   }
-                    
+
                     DispatchQueue.main.async {
                         self.setWeatherDataLabels()
                     }
-                    
+
                   return
                 }
             }.resume()

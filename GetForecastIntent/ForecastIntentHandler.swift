@@ -123,7 +123,7 @@ class ForecastIntentHandler: NSObject, ForecastIntentHandling, CLLocationManager
                     precipitation = Int(decodedResponse.hourly[0].pop * 100)
                     
                     completion(ForecastIntentResponse.success(weatherSummary: "It is currently \(currentTemperature)°, \(precipitation)% chance of precipitation, and \(currentSummary.lowercased()). Today's high is \(highTemperature)° and the low is \(lowTemperature)°."))
-    
+                    
                   } catch {
                     debugPrint(error)
                     print(error.localizedDescription)

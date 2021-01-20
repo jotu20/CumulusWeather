@@ -12,11 +12,9 @@ import ForecastIO
 var weatherLoaded: Bool = false
 var distanceChange: Bool = false
 
-// MARK: - Default values
 var defaultInteger: Double = 0
 var defaultString = "Oops! No summary found."
 
-// MARK: - Location values
 var selectedLocation: String = ""
 var userDeniedLocation: Bool = false
 var latitudeValue: Double = 0
@@ -24,13 +22,11 @@ var longitudeValue: Double = 0
 var userSelectedSavedLocation: Bool = false
 var currentLocation: String = ""   
 
-// MARK: - Alert value
 var alertCount: Int = 0
 var alertTitle: String = ""
 var alertDescription: String = ""
 var alertURI: String = ""
 
-// MARK: - Units values
 var unitsPrecipitation: String = ""
 var unitsTemperature: String = ""
 var unitsWindSpeed: String = ""
@@ -38,8 +34,6 @@ var unitsDistance: String = ""
 var unitsPressure: String = ""
 var weatherUnits: String = ""
 
-// All weather values
-// MARK: - Current weather values
 var currentTemperature: Int = 0
 var currentCondition: String = ""
 var feelsLikeTemperature: Int = 0
@@ -51,8 +45,6 @@ var endingMinuteSummary: String = ""
 var triggerMinute: Int = 0
 var precipAccumulation: Double = 0
 
-// MARK: - Minutely precip probability values
-// 1-20
 var minutelyChance1: Int = 0
 var minutelyChance2: Int = 0
 var minutelyChance3: Int = 0
@@ -73,7 +65,6 @@ var minutelyChance17: Int = 0
 var minutelyChance18: Int = 0
 var minutelyChance19: Int = 0
 var minutelyChance20: Int = 0
-// 21-40
 var minutelyChance21: Int = 0
 var minutelyChance22: Int = 0
 var minutelyChance23: Int = 0
@@ -94,7 +85,6 @@ var minutelyChance37: Int = 0
 var minutelyChance38: Int = 0
 var minutelyChance39: Int = 0
 var minutelyChance40: Int = 0
-// 41-60
 var minutelyChance41: Int = 0
 var minutelyChance42: Int = 0
 var minutelyChance43: Int = 0
@@ -116,8 +106,6 @@ var minutelyChance58: Int = 0
 var minutelyChance59: Int = 0
 var minutelyChance60: Int = 0
 
-// MARK: - Minutely precip type values
-// 1-20
 var minutelyType1: String = ""
 var minutelyType2: String = ""
 var minutelyType3: String = ""
@@ -138,7 +126,6 @@ var minutelyType17: String = ""
 var minutelyType18: String = ""
 var minutelyType19: String = ""
 var minutelyType20: String = ""
-// 21-40
 var minutelyType21: String = ""
 var minutelyType22: String = ""
 var minutelyType23: String = ""
@@ -159,7 +146,6 @@ var minutelyType37: String = ""
 var minutelyType38: String = ""
 var minutelyType39: String = ""
 var minutelyType40: String = ""
-// 41-60
 var minutelyType41: String = ""
 var minutelyType42: String = ""
 var minutelyType43: String = ""
@@ -181,8 +167,6 @@ var minutelyType58: String = ""
 var minutelyType59: String = ""
 var minutelyType60: String = ""
 
-// MARK: - Minutely precip intensity values
-// 1-20
 var minutelyIntensity1: Double = 0
 var minutelyIntensity2: Double = 0
 var minutelyIntensity3: Double = 0
@@ -203,7 +187,6 @@ var minutelyIntensity17: Double = 0
 var minutelyIntensity18: Double = 0
 var minutelyIntensity19: Double = 0
 var minutelyIntensity20: Double = 0
-// 21-40
 var minutelyIntensity21: Double = 0
 var minutelyIntensity22: Double = 0
 var minutelyIntensity23: Double = 0
@@ -224,7 +207,6 @@ var minutelyIntensity37: Double = 0
 var minutelyIntensity38: Double = 0
 var minutelyIntensity39: Double = 0
 var minutelyIntensity40: Double = 0
-// 41-60
 var minutelyIntensity41: Double = 0
 var minutelyIntensity42: Double = 0
 var minutelyIntensity43: Double = 0
@@ -246,7 +228,6 @@ var minutelyIntensity58: Double = 0
 var minutelyIntensity59: Double = 0
 var minutelyIntensity60: Double = 0
 
-// MARK: - Hourly precip values
 var precipHour0: Int = 0
 var precipHour1: Int = 0
 var precipHour2: Int = 0
@@ -264,7 +245,6 @@ var precipHour13: Int = 0
 var precipHour14: Int = 0
 var precipHour15: Int = 0
 
-// MARK: - Hourly accumulation values
 var accumHour0: Double = 0
 var accumHour1: Double = 0
 var accumHour2: Double = 0
@@ -282,7 +262,6 @@ var accumHour13: Double = 0
 var accumHour14: Double = 0
 var accumHour15: Double = 0
 
-// MARK: - Hourly temp values
 var tempHour0: Int = 0
 var tempHour1: Int = 0
 var tempHour2: Int = 0
@@ -300,7 +279,6 @@ var tempHour13: Int = 0
 var tempHour14: Int = 0
 var tempHour15: Int = 0
 
-// MARK: - Hourly humidity values
 var humidityHour0: Int = 0
 var humidityHour1: Int = 0
 var humidityHour2: Int = 0
@@ -318,7 +296,6 @@ var humidityHour13: Int = 0
 var humidityHour14: Int = 0
 var humidityHour15: Int = 0
 
-// MARK: - Hourly uv index values
 var uvindexHour0: Int = 0
 var uvindexHour1: Int = 0
 var uvindexHour2: Int = 0
@@ -336,7 +313,6 @@ var uvindexHour13: Int = 0
 var uvindexHour14: Int = 0
 var uvindexHour15: Int = 0
 
-// MARK: - Hourly wind speed values
 var windSpeedHour0: Int = 0
 var windSpeedHour1: Int = 0
 var windSpeedHour2: Int = 0
@@ -354,7 +330,6 @@ var windSpeedHour13: Int = 0
 var windSpeedHour14: Int = 0
 var windSpeedHour15: Int = 0
 
-// MARK: - Hourly wind direction values
 var windDirectionHour0: String = ""
 var windDirectionHour1: String = ""
 var windDirectionHour2: String = ""
@@ -372,7 +347,6 @@ var windDirectionHour13: String = ""
 var windDirectionHour14: String = ""
 var windDirectionHour15: String = ""
 
-// MARK: - Hourly cloud cover values
 var cloudCoverHour0: Int = 0
 var cloudCoverHour1: Int = 0
 var cloudCoverHour2: Int = 0
@@ -390,7 +364,6 @@ var cloudCoverHour13: Int = 0
 var cloudCoverHour14: Int = 0
 var cloudCoverHour15: Int = 0
 
-// MARK: - Hourly condition values
 var conditionHour0: String = ""
 var conditionHour1: String = ""
 var conditionHour2: String = ""
@@ -408,7 +381,6 @@ var conditionHour13: String = ""
 var conditionHour14: String = ""
 var conditionHour15: String = ""
 
-// MARK: - Hourly strings
 var hour0: String = ""
 var hour1: String = ""
 var hour2: String = ""
@@ -426,7 +398,6 @@ var hour13: String = ""
 var hour14: String = ""
 var hour15: String = ""
 
-// MARK: - Other weather values
 var airQualityConcern: String = ""
 var uvIndex: Int = 0
 var visibility: Int = 0
@@ -435,7 +406,6 @@ var dewPoint: Int = 0
 var cloudCover: Int = 0
 var precipIntensity: Double = 0
 
-// MARK: - Daily weather values
 var highTemperature: Int = 0
 var lowTemperature: Int = 0
 var precipitation: Int = 0
@@ -447,12 +417,9 @@ var windBearing: String = ""
 var sunrise: String = ""
 var sunset: String = ""
 var moonPhaseString: String = ""
-
 var sunriseDate = Date()
 var sunsetDate = Date()
 
-// MARK: - Seven day forecast day values
-// Day Zero
 var day0Condition: String = ""
 var day0DayString: String = ""
 var day0DayStringFull: String = ""
@@ -473,7 +440,6 @@ var day0Pressure: Double = 0
 var day0Visibility: Int = 0
 var day0UVIndex: Int = 0
 
-// Day One
 var day1Condition: String = ""
 var day1DayString: String = ""
 var day1DayStringFull: String = ""
@@ -494,7 +460,6 @@ var day1Pressure: Double = 0
 var day1Visibility: Int = 0
 var day1UVIndex: Int = 0
 
-// Day Two
 var day2Condition: String = ""
 var day2DayString: String = ""
 var day2DayStringFull: String = ""
@@ -515,7 +480,6 @@ var day2Pressure: Double = 0
 var day2Visibility: Int = 0
 var day2UVIndex: Int = 0
 
-// Day Three
 var day3Condition: String = ""
 var day3DayString: String = ""
 var day3DayStringFull: String = ""
@@ -536,7 +500,6 @@ var day3Pressure: Double = 0
 var day3Visibility: Int = 0
 var day3UVIndex: Int = 0
 
-// Day Four
 var day4Condition: String = ""
 var day4DayString: String = ""
 var day4DayStringFull: String = ""
@@ -557,7 +520,6 @@ var day4Pressure: Double = 0
 var day4Visibility: Int = 0
 var day4UVIndex: Int = 0
 
-// Day Five
 var day5Condition: String = ""
 var day5DayString: String = ""
 var day5DayStringFull: String = ""
@@ -578,7 +540,6 @@ var day5Pressure: Double = 0
 var day5Visibility: Int = 0
 var day5UVIndex: Int = 0
 
-// Day Six
 var day6Condition: String = ""
 var day6DayString: String = ""
 var day6DayStringFull: String = ""
@@ -599,7 +560,6 @@ var day6Pressure: Double = 0
 var day6Visibility: Int = 0
 var day6UVIndex: Int = 0
 
-// Day Seven
 var day7Condition: String = ""
 var day7DayString: String = ""
 var day7DayStringFull: String = ""
@@ -620,7 +580,6 @@ var day7Pressure: Double = 0
 var day7Visibility: Int = 0
 var day7UVIndex: Int = 0
 
-// Day Eight
 var day8Condition: String = ""
 var day8DayString: String = ""
 var day8DayStringFull: String = ""
@@ -641,7 +600,6 @@ var day8Pressure: Double = 0
 var day8Visibility: Int = 0
 var day8UVIndex: Int = 0
 
-// Day Nine
 var day9Condition: String = ""
 var day9DayString: String = ""
 var day9DayStringFull: String = ""
@@ -679,7 +637,6 @@ func dayFormat(date: Date, fullLength: Bool) -> String {
     return dayString
 }
 
-// MARK: - Get date of day
 func dateFormat(date: Date) -> String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "d"
@@ -705,7 +662,6 @@ func hourFormat(date: Date) -> String {
     return timeString
 }
 
-// MARK: - Get 24-Hour Format
 func twentyFourHour(hour: Int, meridiem: String) -> Int {
     var hourTime: Int = 0
     
@@ -762,7 +718,6 @@ func twentyFourHour(hour: Int, meridiem: String) -> Int {
     return hourTime
 }
 
-// MARK: - Get sunrise and sunset times
 func sunFormat(date: Date) -> String {
     var timeString: String = ""
     if (defaults.bool(forKey: "twentyFourHourClockEnabled") == true) {
@@ -780,7 +735,6 @@ func sunFormat(date: Date) -> String {
     return timeString
 }
 
-// MARK: - Get wind direction
 func windDirection(degree: Double) -> String {
     var directionString: String = ""
     
@@ -821,7 +775,6 @@ func windDirection(degree: Double) -> String {
     return directionString
 }
 
-// MARK: - Get moon phase
 func moonPhase(percentage: Double) -> String {
     let value = percentage * 100
     
@@ -846,12 +799,10 @@ func moonPhase(percentage: Double) -> String {
     return moonPhaseString
 }
 
-// Convert KMH to MS
 func kmhToMS(speed: CGFloat) -> Int {
     return Int(speed / 3.6)
 }
 
-// Convert Inches to Millimeters
 func inToMM(amount: Double) -> Double {
     return Double(amount * 25.4)
 }
@@ -872,7 +823,6 @@ func dailyPrecipAccum(day: DataPoint) -> Double {
     return dailyValue
 }
 
-// Get daily precip probability
 func dailyPrecipProb(day: DataPoint) -> Int {
     var dailyValue: Int = 0
     
@@ -885,7 +835,6 @@ func dailyPrecipProb(day: DataPoint) -> Int {
     return dailyValue
 }
 
-// Get float precip probability
 func cgFloatPrecipProb(day: CGFloat) -> Int {
     var dailyValue: Int = 0
     
@@ -898,7 +847,6 @@ func cgFloatPrecipProb(day: CGFloat) -> Int {
     return dailyValue
 }
 
-// Get daily humidity
 func dailyHumidityProb(day: DataPoint) -> Int {
     var dailyValue: Int = 0
     
@@ -911,7 +859,6 @@ func dailyHumidityProb(day: DataPoint) -> Int {
     return dailyValue
 }
 
-// Get daily cloud cover
 func dailyCloudCoverProb(day: DataPoint) -> Int {
     var dailyValue: Int = 0
     
@@ -924,7 +871,6 @@ func dailyCloudCoverProb(day: DataPoint) -> Int {
     return dailyValue
 }
 
-// Get minute precip probability
 func minutePrecipProb(value: Int, minute: DataBlock?) -> Int {
     var minuteValue: Int = 0
     
@@ -940,7 +886,6 @@ func minutePrecipProb(value: Int, minute: DataBlock?) -> Int {
     return minuteValue
 }
 
-// Get minute precip intensity
 func minutePrecipIntensity(value: Int, minute: DataBlock?) -> Double {
     var minuteValue: Double = 0
     
@@ -956,7 +901,6 @@ func minutePrecipIntensity(value: Int, minute: DataBlock?) -> Double {
     return minuteValue
 }
 
-// Get minute precip type
 func minutePrecipType(value: Int, minute: DataBlock?) -> String {
     var minuteValue: String = ""
     
@@ -972,7 +916,6 @@ func minutePrecipType(value: Int, minute: DataBlock?) -> String {
     return minuteValue
 }
 
-// Get hour precipitation
 func hourPrecipProb(value: Int, hour: DataBlock?) -> Int {
     var hourValue: Int = 0
     
@@ -1007,7 +950,6 @@ func hourAccumProb(value: Int, hour: DataBlock?) -> Double {
     return hourValue
 }
 
-// Get hour temperature
 func hourTemp(value: Int, hour: DataBlock?) -> Int {
     var hourValue: Int = 0
     
@@ -1023,7 +965,6 @@ func hourTemp(value: Int, hour: DataBlock?) -> Int {
     return hourValue
 }
 
-// Get hour humidity
 func hourHumidity(value: Int, hour: DataBlock?) -> Int {
     var hourValue: Int = 0
     
@@ -1039,7 +980,6 @@ func hourHumidity(value: Int, hour: DataBlock?) -> Int {
     return hourValue
 }
 
-// Get hour uv index
 func hourUVIndex(value: Int, hour: DataBlock?) -> Int {
     var hourValue: Int = 0
     
@@ -1055,7 +995,6 @@ func hourUVIndex(value: Int, hour: DataBlock?) -> Int {
     return hourValue
 }
 
-// Get hour pressure
 func hourPressure(value: Int, hour: DataBlock?) -> Int {
     var hourValue: Int = 0
     
@@ -1071,7 +1010,6 @@ func hourPressure(value: Int, hour: DataBlock?) -> Int {
     return hourValue
 }
 
-// Get hour wind speed
 func hourWindSpeed(value: Int, hour: DataBlock?) -> Int {
     var hourValue: Int = 0
     
@@ -1087,7 +1025,6 @@ func hourWindSpeed(value: Int, hour: DataBlock?) -> Int {
     return hourValue
 }
 
-// Get hour wind direction
 func hourWindDirection(value: Int, hour: DataBlock?) -> String {
     var hourValue: Double = 0
     var hourDirectionString: String = ""
@@ -1105,7 +1042,6 @@ func hourWindDirection(value: Int, hour: DataBlock?) -> String {
     return hourDirectionString
 }
 
-// Get hour cloud cover
 func hourCloudCover(value: Int, hour: DataBlock?) -> Int {
     var hourValue: Int = 0
     
@@ -1121,7 +1057,6 @@ func hourCloudCover(value: Int, hour: DataBlock?) -> Int {
     return hourValue
 }
 
-// Get hour icon
 func hourIcon(value: Int, hour: DataBlock?) -> String {
     var hourValue: String = ""
     
@@ -1137,7 +1072,6 @@ func hourIcon(value: Int, hour: DataBlock?) -> String {
     return hourValue
 }
 
-// Get hour time
 func hourTime(value: Int, hour: DataBlock?) -> String {
     var hourValue: String = ""
     

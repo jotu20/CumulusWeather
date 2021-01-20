@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import CoreLocation
 
-// MARK: - Geo code function
 func geocode(latitude: Double, longitude: Double, completion: @escaping (CLPlacemark?, Error?) -> ())  {
     CLGeocoder().reverseGeocodeLocation(CLLocation(latitude: latitude, longitude: longitude)) { placemarks, error in
         guard let placemark = placemarks?.first, error == nil else {
@@ -21,12 +20,10 @@ func geocode(latitude: Double, longitude: Double, completion: @escaping (CLPlace
     }
 }
 
-// MARK: - Set button title color
 func setButtonTextColor(button: UIButton!) {
     button.setTitleColor(UIColor.label, for: .normal)
 }
 
-// MARK: - Set hourly condition values
 func setupHourlyConditionText(label: UILabel!, condition: String, windDirection: String) {
     label.text = "\(weatherCondition(condition: condition, type: "text", circle: defaults.string(forKey: "defaultConditionIcons")!))"
     

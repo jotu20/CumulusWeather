@@ -18,7 +18,6 @@ var placesClient: GMSPlacesClient!
 // Shared Secret for IAPs, API, and Ad keys
 var sharedSecret: String = "28d11783d1a94fb1895f62c10c4db49b"
 
-// Random
 var clockChanged: Bool = false
 var unitsChanged: Bool = false
 var setupCounter: Int = 0
@@ -27,19 +26,13 @@ var userInvocationPhrase: String = ""
 var twentyFourHourClockEnabled: Bool = false
 var hapticFeedbackEnabled: Bool = false
 
-// App icon & Color Themes
+// Colors
 var userSavedAppIconString: String = ""
 var autoThemeEnabled: Bool = false
-
-// Colors
 var userChangedTheme: Bool = false
 var userSavedColorString: String = ""
 var buttonColor: String = ""
-
-// Weather Alert color
 let alertColor = UIColor(rgb: 0xEA2027)
-
-// Theme Colors
 let orchid = UIColor(rgb: 0xFFA9E7)
 let dodgerBlue = UIColor(rgb: 0x4361EE)
 let mango = UIColor(rgb: 0xFFA500)
@@ -52,26 +45,16 @@ var defaultConditionIcons: String = ""
 
 // Weather Units
 var dataSource: String = ""
-
 var universalDataSource: String = ""
 var setDataSource: String = ""
-
 var universalUnits: String = ""
 var setUnits: String = ""
-
 var universalCumulusPlus: String = ""
 var setCumulusPlus: String = ""
-
 var universalIcons: String = ""
 var setIcons: String = ""
-
 var universalColor: String = ""
 var setColor: String = ""
-
-var universalLatitude: Double = 0
-var universalLongitude: Double = 0
-var setWidgetLatitude: Double = 0
-var setWidgetLongitude: Double = 0
 
 func universalSettings() {
     if let widgetSetDataSource = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.string(forKey: "setDataSource") {
@@ -80,14 +63,6 @@ func universalSettings() {
     
     if let widgetSet = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.string(forKey: "setUnits") {
         universalUnits = widgetSet
-    }
-    
-    if let widgetSetLatitude = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.double(forKey: "setWidgetLatitude") {
-        universalLatitude = widgetSetLatitude
-    }
-    
-    if let widgetSetLongitude = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.double(forKey: "setWidgetLongitude") {
-        universalLongitude = widgetSetLongitude
     }
     
     if let widgetSetCumulusPlus = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.string(forKey: "setCumulusPlus") {
@@ -103,7 +78,6 @@ func universalSettings() {
     }
 }
 
-// Check user saved color
 func checkSavedColor() {
     if (defaults.string(forKey: "userSavedColorString") == "Mango") || (defaults.string(forKey: "userSavedColorString") == "Maximum Red") || (defaults.string(forKey: "userSavedColorString") == "Dodger Blue") || (defaults.string(forKey: "userSavedColorString") == "Plump Purple") || (defaults.string(forKey: "userSavedColorString") == "Orchid") || (defaults.string(forKey: "userSavedColorString") == "Spring Green") {
         // Nothing
@@ -112,7 +86,6 @@ func checkSavedColor() {
     }
 }
 
-// Set table cell appearance
 func setTableViewCellColor(tableCell: UITableViewCell) {
     if (defaults.string(forKey: "userSavedColorString") == "Mango") {
         tableCell.tintColor = mango
@@ -131,7 +104,6 @@ func setTableViewCellColor(tableCell: UITableViewCell) {
     }
 }
 
-// Set tab bar appearance
 func setTabBarColor(tabBar: UITabBarController) {
     if (defaults.string(forKey: "userSavedColorString") == "Mango") {
         tabBar.tabBar.tintColor = mango
@@ -150,7 +122,6 @@ func setTabBarColor(tabBar: UITabBarController) {
     }
 }
 
-// Check for user saved color and sets button title color
 func setupLabelColor(label: UILabel!) {
     if (defaults.string(forKey: "userSavedColorString") == "Mango") {
          label.textColor = mango
@@ -169,7 +140,6 @@ func setupLabelColor(label: UILabel!) {
     }
 }
 
-// Check for user saved color and sets button title color
 func setupButtonColor(button: UIButton!) {
     if (defaults.string(forKey: "userSavedColorString") == "Mango") {
          button.setTitleColor(mango, for: .normal)
@@ -188,7 +158,6 @@ func setupButtonColor(button: UIButton!) {
     }
 }
 
-// Check for user saved color and sets button title color
 func setupBarButtonColor(button: UIBarButtonItem!) {
     if (defaults.string(forKey: "userSavedColorString") == "Mango") {
         button.tintColor = mango
@@ -207,7 +176,6 @@ func setupBarButtonColor(button: UIBarButtonItem!) {
     }
 }
 
-// Check for user saved color and sets switch title color
 func setupSwitchColor(switchOne: UISwitch!) {
     if (defaults.string(forKey: "userSavedColorString") == "Mango") {
          switchOne.onTintColor = mango
@@ -226,7 +194,6 @@ func setupSwitchColor(switchOne: UISwitch!) {
     }
 }
 
-// Check for user saved color and sets text field text color
 func setupTextFieldColor(textField: UITextField!) {
     if (defaults.string(forKey: "userSavedColorString") == "Mango") {
          textField.textColor = mango

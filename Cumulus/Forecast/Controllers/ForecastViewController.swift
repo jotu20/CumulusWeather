@@ -472,9 +472,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
 
                 latitudeValue = location.coordinate.latitude
                 longitudeValue = location.coordinate.longitude
-                
-                UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(latitudeValue, forKey: "setWidgetLatitude")
-                UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(longitudeValue, forKey: "setWidgetLongitude")
                 currentLocation = "\(defaults.string(forKey: "selectedLocation") ?? "New York, NY")"
                 
                 if (defaults.string(forKey: "dataSource") == "Dark Sky") {

@@ -17,14 +17,13 @@ struct OpenWeather: Codable {
     let timezone: String
     let timezoneOffset: Int
     let current: Current
-    let minutely: [Minutely]
     let hourly: [Hourly]
     let daily: [Daily]
 
     enum CodingKeys: String, CodingKey {
         case lat, lon, timezone
         case timezoneOffset = "timezone_offset"
-        case current, minutely, hourly, daily
+        case current, hourly, daily
     }
 }
 
@@ -146,10 +145,6 @@ struct FeelsLike: Codable {
 struct Temp: Codable {
     let day, min, max, night: Double
     let eve, morn: Double
-}
-
-struct Minutely: Codable {
-    let dt, precipitation: Int
 }
 
 // MARK: - OpenWeatherAlerts
@@ -280,7 +275,7 @@ func fetchOpenWeatherData() {
     }
     
     fetchOpenWeatherDataAlerts()
-    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(latitudeValue)&lon=\(longitudeValue)&units=\(openWeatherUnits)&exclude=alerts&appid=8426f2e9a7736dbbb6db33e8bc36c0ed") else {
+    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(latitudeValue)&lon=\(longitudeValue)&units=\(openWeatherUnits)&exclude=minutely,alerts&appid=8426f2e9a7736dbbb6db33e8bc36c0ed") else {
         print("Invalid URL")
         return
     }

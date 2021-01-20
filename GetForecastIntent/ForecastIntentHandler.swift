@@ -106,7 +106,7 @@ class ForecastIntentHandler: NSObject, ForecastIntentHandling, CLLocationManager
             }
             
             fetchOpenWeatherDataAlerts()
-            guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\((locationManager.location?.coordinate.latitude)!)&lon=\((locationManager.location?.coordinate.longitude)!)&units=\(openWeatherUnits)&exclude=alerts&appid=8426f2e9a7736dbbb6db33e8bc36c0ed") else {
+            guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\((locationManager.location?.coordinate.latitude)!)&lon=\((locationManager.location?.coordinate.longitude)!)&units=\(openWeatherUnits)&exclude=minutely,alerts&appid=8426f2e9a7736dbbb6db33e8bc36c0ed") else {
                 print("Invalid URL")
                 return
             }

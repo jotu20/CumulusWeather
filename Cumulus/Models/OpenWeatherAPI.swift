@@ -5,23 +5,26 @@
 //  Created by Joseph Szafarowicz on 12/29/20.
 //  Copyright © 2020 Joseph Szafarowicz. All rights reserved.
 //
-
 // API Key: 8426f2e9a7736dbbb6db33e8bc36c0ed
 
 import Foundation
 
 var openWeatherUnits: String = ""
 
-// MARK: - OpenWeatherCurrent
-struct OpenWeatherCurrent: Codable {
-    let lat: Double
-    let lon: Double
+// MARK: - OpenWeather
+struct OpenWeather: Codable {
+    let lat, lon: Double
     let timezone: String
     let timezoneOffset: Int
     let current: Current
+    let minutely: [Minutely]
+    let hourly: [Hourly]
+    let daily: [Daily]
 
     enum CodingKeys: String, CodingKey {
-        case lat, lon, timezone, timezoneOffset = "timezone_offset", current
+        case lat, lon, timezone
+        case timezoneOffset = "timezone_offset"
+        case current, minutely, hourly, daily
     }
 }
 
@@ -39,7 +42,7 @@ struct Current: Codable {
     let visibility: Int
     let windSpeed: Double
     let windDeg: Int
-    let currentWeather: [CurrentWeather]
+    let currentWeather: [Weather]
 
     enum CodingKeys: String, CodingKey {
         case dt, sunrise, sunset, temp
@@ -53,31 +56,6 @@ struct Current: Codable {
     }
 }
 
-struct CurrentWeather: Codable {
-    let id: Int
-    let main: String
-    let description: String
-    let icon: String
-
-    enum CodingKeys: String, CodingKey {
-        case id, main, description, icon
-    }
-}
-
-// MARK: - OpenWeatherHourly
-struct OpenWeatherHourly: Codable {
-    let lat, lon: Double
-    let timezone: String
-    let timezoneOffset: Int
-    let hourly: [Hourly]
-
-    enum CodingKeys: String, CodingKey {
-        case lat, lon, timezone
-        case timezoneOffset = "timezone_offset"
-        case hourly
-    }
-}
-
 struct Hourly: Codable {
     let dt: Int
     let temp, feelsLike: Double
@@ -86,7 +64,7 @@ struct Hourly: Codable {
     let clouds, visibility: Int
     let windSpeed: Double
     let windDeg: Int
-    let hourlyWeather: [HourlyWeather]
+    let hourlyWeather: [Weather]
     let pop: Double
     let hourlyRain: HourlyRain?
 
@@ -112,7 +90,7 @@ struct HourlyRain: Codable {
     }
 }
 
-struct HourlyWeather: Codable {
+struct Weather: Codable {
     let id: Int
     let main: String
     let weatherDescription: String
@@ -122,20 +100,6 @@ struct HourlyWeather: Codable {
         case id, main
         case weatherDescription = "description"
         case icon
-    }
-}
-
-// MARK: - OpenWeatherDaily
-struct OpenWeatherDaily: Codable {
-    let lat, lon: Double
-    let timezone: String
-    let timezoneOffset: Int
-    let daily: [Daily]
-
-    enum CodingKeys: String, CodingKey {
-        case lat, lon, timezone
-        case timezoneOffset = "timezone_offset"
-        case daily
     }
 }
 
@@ -164,15 +128,6 @@ struct Daily: Codable {
     }
 }
 
-struct FeelsLike: Codable {
-    let day, night, eve, morn: Double
-}
-
-struct Temp: Codable {
-    let day, min, max, night: Double
-    let eve, morn: Double
-}
-
 struct DailyWeather: Codable {
     let id: Int
     let main, weatherDescription, icon: String
@@ -182,6 +137,19 @@ struct DailyWeather: Codable {
         case weatherDescription = "description"
         case icon
     }
+}
+
+struct FeelsLike: Codable {
+    let day, night, eve, morn: Double
+}
+
+struct Temp: Codable {
+    let day, min, max, night: Double
+    let eve, morn: Double
+}
+
+struct Minutely: Codable {
+    let dt, precipitation: Int
 }
 
 // MARK: - OpenWeatherAlerts
@@ -264,8 +232,55 @@ func conditionIcon(id: Int, main: String, icon: String) -> String {
     return conditionIcon
 }
 
-func fetchCurrentOpenWeatherData() {
+func fetchOpenWeatherDataAlerts() {
     guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(latitudeValue)&lon=\(longitudeValue)&units=\(openWeatherUnits)&exclude=minutely,hourly,daily&appid=8426f2e9a7736dbbb6db33e8bc36c0ed") else {
+        print("Invalid URL")
+        return
+    }
+    let request = URLRequest(url: url)
+    URLSession.shared.dataTask(with: request) {data, response, error in
+        
+        if let data = data {
+          do {
+            let decodedResponse = try JSONDecoder().decode(OpenWeatherAlerts.self, from: data)
+            
+            if decodedResponse.alerts.count > 0 {
+                alertCount = decodedResponse.alerts.count
+                alertTitle = decodedResponse.alerts[0].event
+                alertDescription = decodedResponse.alerts[0].alertDescription
+            }
+          } catch {
+            debugPrint(error)
+            print(error.localizedDescription)
+          }
+          return
+        }
+    }.resume()
+}
+
+func fetchOpenWeatherData() {
+    universalSettings()
+    
+    if universalUnits == "USA" {
+        openWeatherUnits = "imperial"
+        unitsTemperature = "F"
+        unitsDistance = "miles"
+        unitsWindSpeed = "mph"
+        unitsPressure = "hPa"
+        unitsPrecipitation = "mm"
+    }
+    
+    if universalUnits == "UK" || universalUnits == "Canada" || universalUnits == "Intertnational" {
+        openWeatherUnits = "metric"
+        unitsTemperature = "C"
+        unitsDistance = "meters"
+        unitsWindSpeed = "m/s"
+        unitsPressure = "hPa"
+        unitsPrecipitation = "mm"
+    }
+    
+    fetchOpenWeatherDataAlerts()
+    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(latitudeValue)&lon=\(longitudeValue)&units=\(openWeatherUnits)&exclude=alerts&appid=8426f2e9a7736dbbb6db33e8bc36c0ed") else {
         print("Invalid URL")
         return
     }
@@ -273,12 +288,16 @@ func fetchCurrentOpenWeatherData() {
     URLSession.shared.dataTask(with: request) {data, response, error in
         if let data = data {
           do {
-            let decodedResponse = try JSONDecoder().decode(OpenWeatherCurrent.self, from: data)
+            let decodedResponse = try JSONDecoder().decode(OpenWeather.self, from: data)
 
-            currentTemperature = Int(decodedResponse.current.temp)
+            // MARK: - Current
             currentCondition = conditionIcon(id: decodedResponse.current.currentWeather[0].id, main: decodedResponse.current.currentWeather[0].main.lowercased(), icon: decodedResponse.current.currentWeather[0].icon.lowercased())
+            currentTemperature = Int(decodedResponse.current.temp)
             feelsLikeTemperature = Int(decodedResponse.current.feelsLike)
-            currentSummary = decodedResponse.current.currentWeather[0].description
+            highTemperature = Int(decodedResponse.daily[0].temp.max)
+            lowTemperature = Int(decodedResponse.daily[0].temp.min)
+            currentSummary = decodedResponse.current.currentWeather[0].weatherDescription
+            precipitation = Int(decodedResponse.hourly[0].pop * 100)
             humidity = Int(decodedResponse.current.humidity)
             cloudCover = Int(decodedResponse.current.clouds)
             uvIndex = Int(decodedResponse.current.uvi)
@@ -289,28 +308,8 @@ func fetchCurrentOpenWeatherData() {
             
             sunrise = sunFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.current.sunrise)))
             sunset = sunFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.current.sunset)))
-          } catch {
-            debugPrint(error)
-            print(error.localizedDescription)
-          }
-          return
-        }
-    }.resume()
-}
 
-func fetchHourlyOpenWeatherData() {
-    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(latitudeValue)&lon=\(longitudeValue)&units=\(openWeatherUnits)&exclude=current,minutely,daily&appid=8426f2e9a7736dbbb6db33e8bc36c0ed") else {
-        print("Invalid URL")
-        return
-    }
-    let request = URLRequest(url: url)
-    URLSession.shared.dataTask(with: request) {data, response, error in
-        if let data = data {
-          do {
-            let decodedResponse = try JSONDecoder().decode(OpenWeatherHourly.self, from: data)
-            
-            precipitation = Int(decodedResponse.hourly[0].pop * 100)
-
+            // MARK: - Hourly
             hour0 = hourFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.hourly[0].dt)))
             conditionHour0 = currentCondition
             precipHour0 = Int(decodedResponse.hourly[0].pop * 100)
@@ -454,29 +453,8 @@ func fetchHourlyOpenWeatherData() {
             uvindexHour15 = Int(decodedResponse.hourly[15].uvi)
             windSpeedHour15 = Int(decodedResponse.hourly[15].windSpeed)
             cloudCoverHour15 = Int(decodedResponse.hourly[15].clouds)
-          } catch {
-            debugPrint(error)
-            print(error.localizedDescription)
-          }
-          return
-        }
-    }.resume()
-}
-
-func fetchDailyOpenWeatherData() {
-    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(latitudeValue)&lon=\(longitudeValue)&units=\(openWeatherUnits)&exclude=current,minutely,hourly&appid=8426f2e9a7736dbbb6db33e8bc36c0ed") else {
-        print("Invalid URL")
-        return
-    }
-    let request = URLRequest(url: url)
-    URLSession.shared.dataTask(with: request) {data, response, error in
-        if let data = data {
-          do {
-            let decodedResponse = try JSONDecoder().decode(OpenWeatherDaily.self, from: data)
             
-            highTemperature = Int(decodedResponse.daily[0].temp.max)
-            lowTemperature = Int(decodedResponse.daily[0].temp.min)
-            
+            // MARK: - Daily
             day0Condition = decodedResponse.daily[0].dailyWeather[0].main.lowercased()
             day0DayString = dayFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.daily[0].dt)), fullLength: false)
             day0DayStringFull = dayFormat(date: Date(timeIntervalSince1970: TimeInterval(decodedResponse.daily[0].dt)), fullLength: true)
@@ -627,57 +605,4 @@ func fetchDailyOpenWeatherData() {
           return
         }
     }.resume()
-}
-
-func fetchOpenWeatherDataAlerts() {
-    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(latitudeValue)&lon=\(longitudeValue)&units=\(openWeatherUnits)&exclude=minutely,hourly,daily&appid=8426f2e9a7736dbbb6db33e8bc36c0ed") else {
-        print("Invalid URL")
-        return
-    }
-    let request = URLRequest(url: url)
-    URLSession.shared.dataTask(with: request) {data, response, error in
-        
-        if let data = data {
-          do {
-            let decodedResponse = try JSONDecoder().decode(OpenWeatherAlerts.self, from: data)
-            
-            if decodedResponse.alerts.count > 0 {
-                alertCount = decodedResponse.alerts.count
-                alertTitle = decodedResponse.alerts[0].event
-                alertDescription = decodedResponse.alerts[0].alertDescription
-            }
-          } catch {
-            debugPrint(error)
-            print(error.localizedDescription)
-          }
-          return
-        }
-    }.resume()
-}
-
-func fetchOpenWeatherData() {
-    universalSettings()
-    
-    if universalUnits == "USA" {
-        openWeatherUnits = "imperial"
-        unitsTemperature = "F"
-        unitsDistance = "miles"
-        unitsWindSpeed = "mph"
-        unitsPressure = "hPa"
-        unitsPrecipitation = "mm"
-    }
-    
-    if universalUnits == "UK" || universalUnits == "Canada" || universalUnits == "Intertnational" {
-        openWeatherUnits = "metric"
-        unitsTemperature = "C"
-        unitsDistance = "meters"
-        unitsWindSpeed = "m/s"
-        unitsPressure = "hPa"
-        unitsPrecipitation = "mm"
-    }
-    
-    fetchCurrentOpenWeatherData()
-    fetchHourlyOpenWeatherData()
-    fetchDailyOpenWeatherData()
-    fetchOpenWeatherDataAlerts()
 }

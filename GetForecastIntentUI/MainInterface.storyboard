@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -356,7 +356,12 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="425"/>
                     <connections>
-                        <outlet property="cloudCoverLabel" destination="2Ce-Jw-AAR" id="ePb-r1-Gdc"/>
+                        <outlet property="conditionLabel0" destination="PKQ-rK-qT2" id="aE7-rL-5Yh"/>
+                        <outlet property="conditionLabel1" destination="3Qb-hA-Y8C" id="Zyq-Ct-K4q"/>
+                        <outlet property="conditionLabel2" destination="d3Z-Sc-94a" id="GvG-as-qW0"/>
+                        <outlet property="conditionLabel3" destination="jO6-S2-Paj" id="sgD-Qw-FCl"/>
+                        <outlet property="conditionLabel4" destination="VBB-oY-sr9" id="X6N-1G-zIp"/>
+                        <outlet property="conditionLabel5" destination="2Ce-Jw-AAR" id="FrG-hi-iSy"/>
                         <outlet property="currentConditionIcon" destination="wPR-14-VJD" id="Hlc-ow-9CU"/>
                         <outlet property="currentConditionLabel" destination="6gq-G6-ETc" id="fLC-no-i0R"/>
                         <outlet property="currentHighAndLowTemperatureLabel" destination="xgp-YL-bNe" id="jZF-YU-Ekk"/>
@@ -378,11 +383,6 @@
                         <outlet property="day3HighLabel" destination="vAr-yu-LZa" id="Tjb-4a-zRl"/>
                         <outlet property="day3Label" destination="s8x-WH-bnf" id="pdJ-db-JZe"/>
                         <outlet property="day3LowLabel" destination="s40-uA-X8I" id="VBz-Zi-HdK"/>
-                        <outlet property="humidityLabel" destination="d3Z-Sc-94a" id="nnR-db-QwR"/>
-                        <outlet property="precipitationAccumulationLabel" destination="3Qb-hA-Y8C" id="LPw-sd-oRa"/>
-                        <outlet property="precipitationLabel" destination="PKQ-rK-qT2" id="9aB-Yf-3pU"/>
-                        <outlet property="uvIndexLabel" destination="jO6-S2-Paj" id="g75-nm-rRR"/>
-                        <outlet property="windLabel" destination="VBB-oY-sr9" id="DXy-38-ysa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>

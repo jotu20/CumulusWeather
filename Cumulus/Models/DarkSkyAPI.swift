@@ -12,7 +12,6 @@ import ForecastIO
 
 let client = DarkSkyClient(apiKey: "90cfdd5277e3269bdd8f31a177508114")
 
-// MARK: - Fetches weather data
 public func fetchDarkSkyWeatherData() {
     universalSettings()
     let userLocation = CLLocationCoordinate2D(latitude: latitudeValue, longitude: longitudeValue)
@@ -66,7 +65,6 @@ public func fetchDarkSkyWeatherData() {
         unitsPrecipitation = "mm"
     }
     
-    // Current Forecast
     client.getForecast(location: userLocation) { result in
         switch result {
         case .success(let tuple):
@@ -138,7 +136,6 @@ public func fetchDarkSkyWeatherData() {
                 day0UVIndex = Int(fetchDay0Array.uvIndex ?? 0)
             }
             
-            // Get minutely data through 60 minutes
             if let minutely = currentForecast.minutely {
                 minutelyChance1 = minutePrecipProb(value: 1, minute: minutely)
                 minutelyChance2 = minutePrecipProb(value: 2, minute: minutely)
@@ -323,11 +320,9 @@ public func fetchDarkSkyWeatherData() {
                 minutelyType59 = minutePrecipType(value: 59, minute: minutely)
                 minutelyType60 = minutePrecipType(value: 60, minute: minutely)
             }
-            
-            // Get minute statements
             getMinutelyStatements()
             
-            // MARK: - Hourly data
+            // MARK: - Hourly
             if let hourly = currentForecast.hourly {
                 cloudCoverHour1 = hourCloudCover(value: 1, hour: hourly)
                 cloudCoverHour2 = hourCloudCover(value: 2, hour: hourly)
@@ -848,7 +843,6 @@ public func fetchDarkSkyWeatherData() {
     }
 }
 
-// MARK: - Get minute statements
 func getMinutelyStatements() {
     // Get minute statements
     var minuteString: String = ""
@@ -1065,19 +1059,4 @@ func getMinutelyStatements() {
     checkTriggerMinute(statement: statement58, minute: 58)
     checkTriggerMinute(statement: statement59, minute: 59)
     checkTriggerMinute(statement: statement60, minute: 60)
-}
-
-extension Date {
-    func localString(dateStyle: DateFormatter.Style = .medium,
-                     timeStyle: DateFormatter.Style = .medium) -> String {
-        return DateFormatter.localizedString(
-            from: self,
-            dateStyle: dateStyle,
-            timeStyle: timeStyle)
-    }
-    
-    var midnight: Date {
-        let cal = Calendar(identifier: .gregorian)
-        return cal.startOfDay(for: self)
-    }
 }

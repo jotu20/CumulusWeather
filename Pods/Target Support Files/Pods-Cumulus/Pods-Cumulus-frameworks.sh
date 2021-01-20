@@ -197,12 +197,10 @@ if [ -r "${ARTIFACT_LIST_FILE}" ]; then
 fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${PODS_ROOT}/Dynatrace/iOS/agent/Dynatrace.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ForecastIO/ForecastIO.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${PODS_ROOT}/Dynatrace/iOS/agent/Dynatrace.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ForecastIO/ForecastIO.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework"
 fi

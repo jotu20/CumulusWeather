@@ -227,10 +227,6 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         }
     }
     
-    @IBAction func siriShortcutsTapped(_ sender: UITapGestureRecognizer) {
-        performSegue(withIdentifier: "siriShortcutsPush", sender: nil)
-    }
-    
     @IBAction func privacyTermsTapped(_ sender: UITapGestureRecognizer) {
         performSegue(withIdentifier: "privacyTermsPush", sender: nil)
     }

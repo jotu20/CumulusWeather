@@ -456,7 +456,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review This App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeI-1B-MeQ">
-                                                    <rect key="frame" x="8" y="9.5" width="200" height="25"/>
+                                                    <rect key="frame" x="16" y="9.5" width="200" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="216-gA-Dhu"/>
                                                         <constraint firstAttribute="height" constant="25" id="U8e-Tf-lzf"/>
@@ -1358,9 +1358,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ASX-Kd-X9S">
-                                                    <rect key="frame" x="91" y="29.5" width="267" height="72"/>
+                                                    <rect key="frame" x="91" y="29.5" width="257" height="72"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <string key="text">Want to see into the future? With extended forecasts you can view weather up to 24 hours and 10 days in advance. You also gain access to more hourly conditions like humidity, cloud cover, temperature, and more!</string>
+                                                    <string key="text">Want to see into the future? With extended forecasts you can view daily conditions up to 10 days. You also gain access to more hourly conditions like humidity, cloud cover, temperature, and more!</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

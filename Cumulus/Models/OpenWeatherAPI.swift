@@ -173,6 +173,27 @@ struct Alert: Codable {
     }
 }
 
+// MARK: - OpenWeatherAQ
+struct OpenWeatherAQ: Codable {
+    let coord: Coord
+    let list: [List]
+}
+
+struct Coord: Codable {
+    let lon, lat: Double
+}
+
+struct List: Codable {
+    let main: Main
+    let components: [String: Double]
+    let dt: Int
+}
+
+struct Main: Codable {
+    let aqi: Int
+}
+
+// Fetches condition and returns a readable string for setting the conditions icon
 func conditionIcon(id: Int, main: String, icon: String) -> String {
     var conditionIcon: String = ""
 
@@ -253,6 +274,41 @@ func fetchOpenWeatherDataAlerts() {
     }.resume()
 }
 
+func fetchOpenWeatherDataAQ() {
+    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/air_pollution?lat=\(latitudeValue)&lon=\(longitudeValue)&appid=8426f2e9a7736dbbb6db33e8bc36c0ed") else {
+        print("Invalid URL")
+        return
+    }
+    let request = URLRequest(url: url)
+    URLSession.shared.dataTask(with: request) {data, response, error in
+        
+        if let data = data {
+          do {
+            let decodedResponse = try JSONDecoder().decode(OpenWeatherAQ.self, from: data)
+            let int = decodedResponse.list[0].main.aqi
+            
+            if int >= 0 && int <= 50 {
+                aqi = "AQI good (\(int))"
+            } else if int >= 51 && int <= 100 {
+                aqi = "AQI moderate (\(int))"
+            } else if int >= 101 && int <= 150 {
+                aqi = "AQI unhealthy if sensitive (\(int))"
+            } else if int >= 151 && int <= 200 {
+                aqi = "AQI unhealthy (\(int))"
+            } else if int >= 201 && int <= 300 {
+                aqi = "AQI very unhealthy (\(int))"
+            } else if int >= 301 {
+                aqi = "AQI hazardous (\(int))"
+            }
+          } catch {
+            debugPrint(error)
+            print(error.localizedDescription)
+          }
+          return
+        }
+    }.resume()
+}
+
 func fetchOpenWeatherData() {
     universalSettings()
     
@@ -275,6 +331,7 @@ func fetchOpenWeatherData() {
     }
     
     fetchOpenWeatherDataAlerts()
+    fetchOpenWeatherDataAQ()
     guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(latitudeValue)&lon=\(longitudeValue)&units=\(openWeatherUnits)&exclude=minutely,alerts&appid=8426f2e9a7736dbbb6db33e8bc36c0ed") else {
         print("Invalid URL")
         return

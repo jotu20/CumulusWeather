@@ -27,7 +27,7 @@
 		CF4205AE25B78B68002C2F97 /* DarkSkyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4205AB25B78B68002C2F97 /* DarkSkyAPI.swift */; };
 		CF4205AF25B78B68002C2F97 /* DarkSkyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4205AB25B78B68002C2F97 /* DarkSkyAPI.swift */; };
 		CF4205E525B78D0B002C2F97 /* OpenWeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD612AC259B8C9300FBC677 /* OpenWeatherAPI.swift */; };
-		CF4205EA25B78D8D002C2F97 /* SettingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CF242E48E1004FB831 /* SettingOptions.swift */; };
+		CF4205EA25B78D8D002C2F97 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CF242E48E1004FB831 /* SettingsModel.swift */; };
 		CF4A0E5F2108B1B30061CAAD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4A0E5E2108B1B30061CAAD /* Default-568h@2x.png */; };
 		CF4A0E612108B5580061CAAD /* AppIconTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A0E602108B5580061CAAD /* AppIconTableViewController.swift */; };
 		CF52ECD9210FA29D00A605A4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF52ECD8210FA29D00A605A4 /* StoreKit.framework */; };
@@ -54,12 +54,9 @@
 		CFAF60D3242E48E1004FB831 /* InputFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CE242E48E1004FB831 /* InputFunctions.swift */; };
 		CFAF60D5242E48E1004FB831 /* InputFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CE242E48E1004FB831 /* InputFunctions.swift */; };
 		CFAF60D6242E48E1004FB831 /* InputFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CE242E48E1004FB831 /* InputFunctions.swift */; };
-		CFAF60D7242E48E1004FB831 /* SettingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CF242E48E1004FB831 /* SettingOptions.swift */; };
-		CFAF60D9242E48E1004FB831 /* SettingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CF242E48E1004FB831 /* SettingOptions.swift */; };
-		CFAF60DA242E48E1004FB831 /* SettingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CF242E48E1004FB831 /* SettingOptions.swift */; };
-		CFAF60E3242E48E1004FB831 /* WeatherDataValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D2242E48E1004FB831 /* WeatherDataValues.swift */; };
-		CFAF60E5242E48E1004FB831 /* WeatherDataValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D2242E48E1004FB831 /* WeatherDataValues.swift */; };
-		CFAF60E6242E48E1004FB831 /* WeatherDataValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D2242E48E1004FB831 /* WeatherDataValues.swift */; };
+		CFAF60D7242E48E1004FB831 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CF242E48E1004FB831 /* SettingsModel.swift */; };
+		CFAF60D9242E48E1004FB831 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CF242E48E1004FB831 /* SettingsModel.swift */; };
+		CFAF60DA242E48E1004FB831 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CF242E48E1004FB831 /* SettingsModel.swift */; };
 		CFB1E84520E5972200972F19 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1E84420E5972200972F19 /* LocationCell.swift */; };
 		CFB693E520F8577200DE669A /* PrivacyAndTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB693E420F8577200DE669A /* PrivacyAndTermsViewController.swift */; };
 		CFBE4388222F0174009F317D /* ForecastIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94777321680BBB00DA8B38 /* ForecastIntentHandler.swift */; };
@@ -132,12 +129,15 @@
 		CFD9CE012535FD3200CB128E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD9CE002535FD3200CB128E /* Assets.xcassets */; };
 		CFD9CE052535FD3200CB128E /* Cumulus WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CFD9CDFA2535FD3200CB128E /* Cumulus WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CFD9CE0E2535FD3F00CB128E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
-		CFD9CE232535FE7700CB128E /* WeatherDataValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60D2242E48E1004FB831 /* WeatherDataValues.swift */; };
 		CFD9CE242535FE7700CB128E /* InputFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CE242E48E1004FB831 /* InputFunctions.swift */; };
 		CFEA0F7C24D437B100E62E5F /* WeatherUnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA0F7B24D437B100E62E5F /* WeatherUnitsViewController.swift */; };
 		CFEE78B024705168001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
 		CFEE78B22470516A001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
 		CFEE78B32470516A001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
+		CFEF243325B9CA0F001B79E8 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF243225B9CA0F001B79E8 /* ForecastModel.swift */; };
+		CFEF243425B9CA0F001B79E8 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF243225B9CA0F001B79E8 /* ForecastModel.swift */; };
+		CFEF243525B9CA0F001B79E8 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF243225B9CA0F001B79E8 /* ForecastModel.swift */; };
+		CFEF243625B9CA0F001B79E8 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF243225B9CA0F001B79E8 /* ForecastModel.swift */; };
 		CFF0A964242E9A2500FDDAF1 /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF824C3820E84EEB00E5F0A7 /* Locations.xcdatamodeld */; };
 		CFFB787720DF0B44008216F8 /* License in Resources */ = {isa = PBXBuildFile; fileRef = CFFB787620DF0B44008216F8 /* License */; };
 		D58AD336D7BE96FC0AE3BD11 /* Pods_Cumulus_GetForecastIntentUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B665C45BF97CCFB4B7BFCC51 /* Pods_Cumulus_GetForecastIntentUI.framework */; };
@@ -241,8 +241,7 @@
 		CFA3259D20E44DE500F4AFBD /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		CFAB4445211F3A2000A7E3CB /* ForecastDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDataTableViewController.swift; sourceTree = "<group>"; };
 		CFAF60CE242E48E1004FB831 /* InputFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFunctions.swift; sourceTree = "<group>"; };
-		CFAF60CF242E48E1004FB831 /* SettingOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingOptions.swift; sourceTree = "<group>"; };
-		CFAF60D2242E48E1004FB831 /* WeatherDataValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDataValues.swift; sourceTree = "<group>"; };
+		CFAF60CF242E48E1004FB831 /* SettingsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		CFB1E84420E5972200972F19 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		CFB693E420F8577200DE669A /* PrivacyAndTermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyAndTermsViewController.swift; sourceTree = "<group>"; };
 		CFC186142131B8A800F56AD0 /* CumulusPlusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CumulusPlusTableViewController.swift; sourceTree = "<group>"; };
@@ -313,6 +312,7 @@
 		CFDEEC0920E26ED900BA5EA5 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		CFE76B4125A11F610040D4C9 /* Cumulus WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Cumulus WidgetExtension.entitlements"; sourceTree = "<group>"; };
 		CFEA0F7B24D437B100E62E5F /* WeatherUnitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUnitsViewController.swift; sourceTree = "<group>"; };
+		CFEF243225B9CA0F001B79E8 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		CFF42EA42513CC3D005119C9 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		CFF42EA62513CC3D005119C9 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		CFF5D40E331932230915860C /* Pods-Cumulus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus/Pods-Cumulus.debug.xcconfig"; sourceTree = "<group>"; };
@@ -525,9 +525,7 @@
 		CFAF60E8242E498D004FB831 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CFAF60CE242E48E1004FB831 /* InputFunctions.swift */,
-				CFAF60CF242E48E1004FB831 /* SettingOptions.swift */,
-				CFAF60D2242E48E1004FB831 /* WeatherDataValues.swift */,
+				CFAF60CF242E48E1004FB831 /* SettingsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -536,6 +534,7 @@
 			isa = PBXGroup;
 			children = (
 				CF90306D244264BD00538D52 /* Controllers */,
+				CFEF243125B9C9FE001B79E8 /* Models */,
 			);
 			path = Forecast;
 			sourceTree = "<group>";
@@ -563,6 +562,7 @@
 			children = (
 				CF4205AB25B78B68002C2F97 /* DarkSkyAPI.swift */,
 				CFD612AC259B8C9300FBC677 /* OpenWeatherAPI.swift */,
+				CFAF60CE242E48E1004FB831 /* InputFunctions.swift */,
 				CF602EA6247ED28E00E05491 /* LoadingScreenModel.swift */,
 				CF1B83C0252269C400F305A6 /* AppIntentVocabulary.plist */,
 			);
@@ -642,6 +642,14 @@
 				CFE76B4125A11F610040D4C9 /* Cumulus WidgetExtension.entitlements */,
 			);
 			path = "Cumulus Widget";
+			sourceTree = "<group>";
+		};
+		CFEF243125B9C9FE001B79E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CFEF243225B9CA0F001B79E8 /* ForecastModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1085,7 +1093,7 @@
 				CF9477492167DF0200DA8B38 /* SiriShortcutsTableViewController.swift in Sources */,
 				CFAB4446211F3A2000A7E3CB /* ForecastDataTableViewController.swift in Sources */,
 				CFD1CD2320EE9544004ED831 /* SettingsTableViewController.swift in Sources */,
-				CFAF60D7242E48E1004FB831 /* SettingOptions.swift in Sources */,
+				CFAF60D7242E48E1004FB831 /* SettingsModel.swift in Sources */,
 				CFC186152131B8A800F56AD0 /* CumulusPlusTableViewController.swift in Sources */,
 				CFAF60D3242E48E1004FB831 /* InputFunctions.swift in Sources */,
 				CF42059625B78B25002C2F97 /* VariableExtensions.swift in Sources */,
@@ -1093,10 +1101,10 @@
 				CF42059F25B78B34002C2F97 /* DateExtensions.swift in Sources */,
 				CF42058D25B78B1D002C2F97 /* UIKitExtensions.swift in Sources */,
 				CFEA0F7C24D437B100E62E5F /* WeatherUnitsViewController.swift in Sources */,
+				CFEF243325B9CA0F001B79E8 /* ForecastModel.swift in Sources */,
 				CF4A0E612108B5580061CAAD /* AppIconTableViewController.swift in Sources */,
 				CFA3259E20E44DE500F4AFBD /* LocationsViewController.swift in Sources */,
 				CF602EA9247ED3D200E05491 /* LoadingScreenModel.swift in Sources */,
-				CFAF60E3242E48E1004FB831 /* WeatherDataValues.swift in Sources */,
 				CF4205AC25B78B68002C2F97 /* DarkSkyAPI.swift in Sources */,
 				CFD5E8FC20E669B0002A5F0C /* AcknowledgementsViewController.swift in Sources */,
 				CF6E4AA220DACFD8002349A7 /* AppDelegate.swift in Sources */,
@@ -1119,8 +1127,8 @@
 				CF4205A025B78B34002C2F97 /* DateExtensions.swift in Sources */,
 				CF42059725B78B25002C2F97 /* VariableExtensions.swift in Sources */,
 				CF9477532168080900DA8B38 /* IntentHandler.swift in Sources */,
-				CFAF60E5242E48E1004FB831 /* WeatherDataValues.swift in Sources */,
-				CFAF60D9242E48E1004FB831 /* SettingOptions.swift in Sources */,
+				CFAF60D9242E48E1004FB831 /* SettingsModel.swift in Sources */,
+				CFEF243425B9CA0F001B79E8 /* ForecastModel.swift in Sources */,
 				CFD612AE259B8C9300FBC677 /* OpenWeatherAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1137,8 +1145,8 @@
 				CF4205A125B78B34002C2F97 /* DateExtensions.swift in Sources */,
 				CF42059825B78B25002C2F97 /* VariableExtensions.swift in Sources */,
 				CF94775E2168080A00DA8B38 /* IntentViewController.swift in Sources */,
-				CFAF60E6242E48E1004FB831 /* WeatherDataValues.swift in Sources */,
-				CFAF60DA242E48E1004FB831 /* SettingOptions.swift in Sources */,
+				CFAF60DA242E48E1004FB831 /* SettingsModel.swift in Sources */,
+				CFEF243525B9CA0F001B79E8 /* ForecastModel.swift in Sources */,
 				CFD612AF259B8C9300FBC677 /* OpenWeatherAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1147,7 +1155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF4205EA25B78D8D002C2F97 /* SettingOptions.swift in Sources */,
+				CF4205EA25B78D8D002C2F97 /* SettingsModel.swift in Sources */,
 				CF42059925B78B25002C2F97 /* VariableExtensions.swift in Sources */,
 				CFD9CE242535FE7700CB128E /* InputFunctions.swift in Sources */,
 				CFD9CDFF2535FD3200CB128E /* Cumulus_Widget.swift in Sources */,
@@ -1155,7 +1163,7 @@
 				CF4205AF25B78B68002C2F97 /* DarkSkyAPI.swift in Sources */,
 				CF4205A225B78B34002C2F97 /* DateExtensions.swift in Sources */,
 				CF42059025B78B1D002C2F97 /* UIKitExtensions.swift in Sources */,
-				CFD9CE232535FE7700CB128E /* WeatherDataValues.swift in Sources */,
+				CFEF243625B9CA0F001B79E8 /* ForecastModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1305,7 +1313,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.14;
+				CURRENT_PROJECT_VERSION = 2.2.15;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1330,7 +1338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.14;
+				CURRENT_PROJECT_VERSION = 2.2.15;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1353,7 +1361,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.14;
+				CURRENT_PROJECT_VERSION = 2.2.15;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntentUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1380,7 +1388,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntentUI/GetForecastIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.14;
+				CURRENT_PROJECT_VERSION = 2.2.15;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntentUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1406,7 +1414,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.14;
+				CURRENT_PROJECT_VERSION = 2.2.15;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1433,7 +1441,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = GetForecastIntent/GetForecastIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.14;
+				CURRENT_PROJECT_VERSION = 2.2.15;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = GetForecastIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1460,7 +1468,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Widget/Cumulus WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.14;
+				CURRENT_PROJECT_VERSION = 2.2.15;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "Cumulus Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1488,7 +1496,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Widget/Cumulus WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.14;
+				CURRENT_PROJECT_VERSION = 2.2.15;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "Cumulus Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

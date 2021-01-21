@@ -1313,13 +1313,12 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     
     // MARK: - Set current condition labels
     func setCurrentConditionOutlets() {
-        if (defaults.string(forKey: "dataSource") == "ClimaCell") {
-            conditionSlotLabel4.isHidden = false
+        if (defaults.string(forKey: "dataSource") == "OpenWeather") {
             currentConditionViewHeight.constant = 135
-            conditionSlotLabel4.text = "AQ is \(airQualityConcern.lowercased())"
+            conditionSlotLabel4.text = "\(aqi)"
         } else {
-            conditionSlotLabel4.isHidden = true
             currentConditionViewHeight.constant = 115
+            conditionSlotLabel4.isHidden = true
         }
         
         if minuteSummary.isEmpty == false && minuteSummary != "none" {
@@ -1331,6 +1330,12 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         
         conditionSlotLabel0.text = "Feels like \(feelsLikeTemperature)°"
         conditionSlotLabel1.text = "Precipitation \(precipitation)%"
+        
+        if windGust == wind {
+            conditionSlotLabel2.text = "Wind \(wind)\(unitsWindSpeed) \(windBearing)"
+        } else {
+            conditionSlotLabel2.text = "Wind \(wind)(\(windGust))\(unitsWindSpeed) \(windBearing)"
+        }
         
         if uvIndex < 2 {
             conditionSlotLabel3.text = "UV index low (\(uvIndex))"
@@ -1345,52 +1350,33 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else {
             conditionSlotLabel3.text = "UV index low (0)"
         }
-        
-        if windGust == wind {
-            conditionSlotLabel2.text = "Wind \(wind)\(unitsWindSpeed) \(windBearing)"
-        } else {
-            conditionSlotLabel2.text = "Wind \(wind)(\(windGust))\(unitsWindSpeed) \(windBearing)"
-        }
     }
     
     // MARK: - Set extended current condition labels
     func setExtendedCurrentConditionOutlets() {
         if (defaults.string(forKey: "dataSource") == "OpenWeather") {
-            conditionSlotLabel0.text = "Humidity \(humidity)%"
-            conditionSlotLabel1.text = "Pressure \(pressure)\(unitsPressure)"
-            conditionSlotLabel4.isHidden = true
-
-            if cloudCover > cloudCoverHour1 || cloudCover > cloudCoverHour2 || cloudCover > cloudCoverHour3 || cloudCover > cloudCoverHour4 {
-                conditionSlotLabel2.text = "Clouds \(cloudCover)% & decr."
-            } else if cloudCover < cloudCoverHour1 || cloudCover < cloudCoverHour2 || cloudCover < cloudCoverHour3 || cloudCover < cloudCoverHour4 {
-                conditionSlotLabel2.text = "Clouds \(cloudCover)% & incr."
-            } else {
-                conditionSlotLabel2.text = "Clouds \(cloudCover)%"
-            }
-            
-            if currentCondition.contains("night") {
-                conditionSlotLabel3.text = "Sunrise \(sunrise)"
-            } else {
-                conditionSlotLabel3.text = "Sunset \(sunset)"
-            }
+            currentConditionViewHeight.constant = 135
         } else {
             currentConditionViewHeight.constant = 115
-            conditionSlotLabel0.text = "Accum. \(precipAccumulation)\(unitsPrecipitation)"
-            conditionSlotLabel1.text = "Humidity \(humidity)%"
+            conditionSlotLabel4.isHidden = true
+        }
+        
+        conditionSlotLabel0.text = "Accum. \(precipAccumulation)\(unitsPrecipitation)"
+        conditionSlotLabel1.text = "Humidity \(humidity)%"
+        conditionSlotLabel2.text = "Pressure \(pressure)\(unitsPressure)"
 
-            if cloudCover > cloudCoverHour1 || cloudCover > cloudCoverHour2 || cloudCover > cloudCoverHour3 || cloudCover > cloudCoverHour4 {
-                conditionSlotLabel2.text = "Clouds \(cloudCover)% & decr."
-            } else if cloudCover < cloudCoverHour1 || cloudCover < cloudCoverHour2 || cloudCover < cloudCoverHour3 || cloudCover < cloudCoverHour4 {
-                conditionSlotLabel2.text = "Clouds \(cloudCover)% & incr."
-            } else {
-                conditionSlotLabel2.text = "Clouds \(cloudCover)%"
-            }
-            
-            if currentCondition.contains("night") {
-                conditionSlotLabel3.text = "Sunrise \(sunrise)"
-            } else {
-                conditionSlotLabel3.text = "Sunset \(sunset)"
-            }
+        if cloudCover > cloudCoverHour1 || cloudCover > cloudCoverHour2 || cloudCover > cloudCoverHour3 || cloudCover > cloudCoverHour4 {
+            conditionSlotLabel3.text = "Clouds \(cloudCover)% & decr."
+        } else if cloudCover < cloudCoverHour1 || cloudCover < cloudCoverHour2 || cloudCover < cloudCoverHour3 || cloudCover < cloudCoverHour4 {
+            conditionSlotLabel3.text = "Clouds \(cloudCover)% & incr."
+        } else {
+            conditionSlotLabel3.text = "Clouds \(cloudCover)%"
+        }
+        
+        if currentCondition.contains("night") {
+            conditionSlotLabel4.text = "Sunrise \(sunrise)"
+        } else {
+            conditionSlotLabel4.text = "Sunset \(sunset)"
         }
     }
     

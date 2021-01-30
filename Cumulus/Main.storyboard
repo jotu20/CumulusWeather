@@ -603,7 +603,7 @@
                                                                     <constraint firstAttribute="height" constant="55" id="YNc-Q3-hSB"/>
                                                                     <constraint firstAttribute="width" constant="240" id="tnK-11-cuF"/>
                                                                 </constraints>
-                                                                <state key="normal" backgroundImage="DarkSkyLogo-Dark"/>
+                                                                <state key="normal" backgroundImage="DarkSkyLogoDark"/>
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <mask key="constraints">
                                                                         <include reference="YNc-Q3-hSB"/>
@@ -620,7 +620,7 @@
                                                                     <constraint firstAttribute="height" constant="65" id="1oi-JG-lpa"/>
                                                                     <constraint firstAttribute="width" constant="165" id="ewR-Tj-Axr"/>
                                                                 </constraints>
-                                                                <state key="normal" backgroundImage="OpenWeatherLogo-Dark"/>
+                                                                <state key="normal" backgroundImage="OpenWeatherLogoDark"/>
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <mask key="constraints">
                                                                         <include reference="1oi-JG-lpa"/>
@@ -817,7 +817,7 @@
             <objects>
                 <navigationController storyboardIdentifier="Locations" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AfO-6y-JEH" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Locations" image="Locations icon" id="rZj-Wk-nh5"/>
+                    <tabBarItem key="tabBarItem" title="Locations" image="LocationsIcon" id="rZj-Wk-nh5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="sXd-Bm-SX6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -843,7 +843,7 @@
             <objects>
                 <navigationController storyboardIdentifier="Settings" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Msi-i6-uYY" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Settings" image="Settings icon" id="wD4-hD-2IY"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="SettingsIcon" id="wD4-hD-2IY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="wS2-Bj-gfJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1206,7 +1206,7 @@
             <objects>
                 <navigationController storyboardIdentifier="Forecast" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="EMa-zd-tfV" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Forecast" image="Forecast icon" id="Q7w-0j-XHC"/>
+                    <tabBarItem key="tabBarItem" title="Forecast" image="ForecastIcon" id="Q7w-0j-XHC"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Cs9-16-PpU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="W0O-OD-LS8">
@@ -1365,7 +1365,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Hourly condition icon" id="mbz-Ee-lyF">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="HourlyConditionIcon" id="mbz-Ee-lyF">
                                                     <rect key="frame" x="16" y="25" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -1394,7 +1394,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="App icon" id="Oyd-cF-aQU">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="AppIconCumulusPlus" id="Oyd-cF-aQU">
                                                     <rect key="frame" x="16" y="25" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -1423,7 +1423,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Widget icon" id="bQK-JE-i9r">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="WidgetIcon" id="bQK-JE-i9r">
                                                     <rect key="frame" x="16" y="25" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -1452,7 +1452,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Conditions icon" id="DHy-kq-lNE">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="ConditionsIcon" id="DHy-kq-lNE">
                                                     <rect key="frame" x="16" y="25" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -1481,7 +1481,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Themes icon" id="Ghy-cP-8JV">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="ThemesIcon" id="Ghy-cP-8JV">
                                                     <rect key="frame" x="16" y="25" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -1510,7 +1510,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Refresh icon" id="dol-Xi-RIz">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="RefreshIcon" id="dol-Xi-RIz">
                                                     <rect key="frame" x="8" y="25" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -1540,7 +1540,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Support icon" id="u1o-gf-6oD">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="SupportIcon" id="u1o-gf-6oD">
                                                     <rect key="frame" x="8" y="25" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -2016,7 +2016,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dodger Blue icon" translatesAutoresizingMaskIntoConstraints="NO" id="Erm-Nc-gnk">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DodgerBlueIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Erm-Nc-gnk">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="6Hh-Yu-Akt"/>
@@ -2055,7 +2055,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8-Bit icon" translatesAutoresizingMaskIntoConstraints="NO" id="VAM-Ob-49t">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8BitIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VAM-Ob-49t">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="7Aq-fl-HTQ"/>
@@ -2094,7 +2094,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lights Out icon" translatesAutoresizingMaskIntoConstraints="NO" id="KVa-GE-ovD">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LightsOutIcon" translatesAutoresizingMaskIntoConstraints="NO" id="KVa-GE-ovD">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="jvB-fJ-dHy"/>
@@ -2133,7 +2133,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mango icon" translatesAutoresizingMaskIntoConstraints="NO" id="HXQ-O2-fni">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MangoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="HXQ-O2-fni">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="81J-qU-xsg"/>
@@ -2172,7 +2172,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Maximum Red icon" translatesAutoresizingMaskIntoConstraints="NO" id="ZMS-NF-Gv8">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MaximumRedIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ZMS-NF-Gv8">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="5Wi-A3-Ndg"/>
@@ -2211,7 +2211,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mighty Umbrella icon" translatesAutoresizingMaskIntoConstraints="NO" id="N6N-Qj-9dN">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MightyUmbrellaIcon" translatesAutoresizingMaskIntoConstraints="NO" id="N6N-Qj-9dN">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="dsF-od-uUJ"/>
@@ -2250,7 +2250,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Moonlight icon" translatesAutoresizingMaskIntoConstraints="NO" id="dhq-aG-fNx">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoonlightIcon" translatesAutoresizingMaskIntoConstraints="NO" id="dhq-aG-fNx">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="AyE-pH-n6G"/>
@@ -2289,7 +2289,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plump Purple icon" translatesAutoresizingMaskIntoConstraints="NO" id="3a0-iT-v2Z">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlumpPurpleIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3a0-iT-v2Z">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="K4K-bf-gXC"/>
@@ -2328,7 +2328,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Orchid icon" translatesAutoresizingMaskIntoConstraints="NO" id="Zq4-NF-jXE">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OrchidIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Zq4-NF-jXE">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="Ds2-fg-YD3"/>
@@ -2367,7 +2367,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rain Drop icon" translatesAutoresizingMaskIntoConstraints="NO" id="YQ1-W9-kPo">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RainDropIcon" translatesAutoresizingMaskIntoConstraints="NO" id="YQ1-W9-kPo">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="WBP-PF-cfR"/>
@@ -2406,7 +2406,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spring Green icon" translatesAutoresizingMaskIntoConstraints="NO" id="kW6-8E-yWD">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpringGreenIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kW6-8E-yWD">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="Hnf-gF-Qyc"/>
@@ -2445,7 +2445,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Thunderstorm icon" translatesAutoresizingMaskIntoConstraints="NO" id="v8s-0Z-JE9">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ThunderstormIcon" translatesAutoresizingMaskIntoConstraints="NO" id="v8s-0Z-JE9">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="KtM-gl-l63"/>
@@ -2484,7 +2484,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Twilight Zone icon" translatesAutoresizingMaskIntoConstraints="NO" id="ijH-eq-b0T">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TwilightZoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ijH-eq-b0T">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="5dl-4z-Y4Y"/>
@@ -2523,7 +2523,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Windy Day icon" translatesAutoresizingMaskIntoConstraints="NO" id="0DA-KT-o5w">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WindyDayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0DA-KT-o5w">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="GfA-ph-Z9j"/>
@@ -2914,7 +2914,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Auto theme" translatesAutoresizingMaskIntoConstraints="NO" id="ZrV-KS-X6c">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AutoThemeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ZrV-KS-X6c">
                                                     <rect key="frame" x="16" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="4TP-oc-5QI"/>
@@ -3091,7 +3091,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucT-hz-Uno">
                                         <rect key="frame" x="15" y="105" width="360" height="115"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heavy_rain" translatesAutoresizingMaskIntoConstraints="NO" id="y7R-Sp-dOd">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartlyCloudy" translatesAutoresizingMaskIntoConstraints="NO" id="y7R-Sp-dOd">
                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="PQX-Bb-gcL"/>
@@ -3231,7 +3231,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Partly_cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="3bi-27-Q2T">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartlyCloudy" translatesAutoresizingMaskIntoConstraints="NO" id="3bi-27-Q2T">
                                                                 <rect key="frame" x="0.0" y="17" width="50" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="OwX-a7-BP5"/>
@@ -3275,7 +3275,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Partly_cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="u9y-bY-ya6">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartlyCloudy" translatesAutoresizingMaskIntoConstraints="NO" id="u9y-bY-ya6">
                                                                 <rect key="frame" x="0.0" y="17" width="50" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="Y9H-FK-QEm"/>
@@ -3319,7 +3319,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Partly_cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="rj8-2I-uIf">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartlyCloudy" translatesAutoresizingMaskIntoConstraints="NO" id="rj8-2I-uIf">
                                                                 <rect key="frame" x="0.0" y="17" width="50" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="2Pg-X4-TYp"/>
@@ -3363,7 +3363,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Partly_cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="l6p-2t-OXY">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartlyCloudy" translatesAutoresizingMaskIntoConstraints="NO" id="l6p-2t-OXY">
                                                                 <rect key="frame" x="0.0" y="17" width="50" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="cXY-eW-XO6"/>
@@ -3418,7 +3418,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Partly_cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="GRu-OO-gzF">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartlyCloudy" translatesAutoresizingMaskIntoConstraints="NO" id="GRu-OO-gzF">
                                                                 <rect key="frame" x="130" y="0.0" width="50" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="39K-Ju-pK8"/>
@@ -3612,7 +3612,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Partly_cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="Gzd-Mj-z62">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartlyCloudy" translatesAutoresizingMaskIntoConstraints="NO" id="Gzd-Mj-z62">
                                                                 <rect key="frame" x="130" y="0.0" width="50" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="fs8-Mi-VVk"/>
@@ -3806,7 +3806,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Partly_cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="PzW-fm-6W4">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartlyCloudy" translatesAutoresizingMaskIntoConstraints="NO" id="PzW-fm-6W4">
                                                                 <rect key="frame" x="130" y="0.0" width="50" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="I9C-jE-O5A"/>
@@ -4000,7 +4000,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Partly_cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="bxM-vc-WD9">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartlyCloudy" translatesAutoresizingMaskIntoConstraints="NO" id="bxM-vc-WD9">
                                                                 <rect key="frame" x="130" y="0.0" width="50" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="OBg-vt-hA2"/>
@@ -4194,7 +4194,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Partly_cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="Trh-vc-lus">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartlyCloudy" translatesAutoresizingMaskIntoConstraints="NO" id="Trh-vc-lus">
                                                                 <rect key="frame" x="130" y="0.0" width="50" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="Okr-Vy-c57"/>
@@ -4388,7 +4388,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Partly_cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="bWS-Wj-4K1">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartlyCloudy" translatesAutoresizingMaskIntoConstraints="NO" id="bWS-Wj-4K1">
                                                                 <rect key="frame" x="130" y="0.0" width="50" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="FlB-05-jpJ"/>
@@ -4776,7 +4776,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Partly_cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="zfi-zC-r9U">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartlyCloudy" translatesAutoresizingMaskIntoConstraints="NO" id="zfi-zC-r9U">
                                                                 <rect key="frame" x="130" y="0.0" width="50" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="YBn-te-NGw"/>
@@ -4970,7 +4970,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Partly_cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="a8e-NQ-iS0">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartlyCloudy" translatesAutoresizingMaskIntoConstraints="NO" id="a8e-NQ-iS0">
                                                                 <rect key="frame" x="130" y="0.0" width="50" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="fNM-Ul-BZP"/>
@@ -5164,7 +5164,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Partly_cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="CRa-o6-3Or">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartlyCloudy" translatesAutoresizingMaskIntoConstraints="NO" id="CRa-o6-3Or">
                                                                 <rect key="frame" x="130" y="0.0" width="50" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="9F1-eH-UXh"/>
@@ -5863,35 +5863,35 @@
         </scene>
     </scenes>
     <resources>
-        <image name="8-Bit icon" width="50" height="50"/>
-        <image name="App icon" width="60" height="60"/>
-        <image name="Auto theme" width="50" height="50"/>
-        <image name="Conditions icon" width="60" height="60"/>
-        <image name="DarkSkyLogo-Dark" width="3350" height="759"/>
-        <image name="Dodger Blue icon" width="50" height="50"/>
-        <image name="Forecast icon" width="22" height="24"/>
-        <image name="Heavy_rain" width="100" height="100"/>
-        <image name="Hourly condition icon" width="60" height="60"/>
-        <image name="Lights Out icon" width="50" height="50"/>
-        <image name="Locations icon" width="20" height="23"/>
-        <image name="Mango icon" width="50" height="50"/>
-        <image name="Maximum Red icon" width="50" height="50"/>
-        <image name="Mighty Umbrella icon" width="50" height="50"/>
-        <image name="Moonlight icon" width="50" height="50"/>
-        <image name="OpenWeatherLogo-Dark" width="600" height="256"/>
-        <image name="Orchid icon" width="50" height="50"/>
+        <image name="8BitIcon" width="50" height="50"/>
+        <image name="AppIconCumulusPlus" width="60" height="60"/>
+        <image name="AutoThemeIcon" width="50" height="50"/>
+        <image name="ConditionsIcon" width="60" height="60"/>
+        <image name="DarkSkyLogoDark" width="3350" height="759"/>
+        <image name="DodgerBlueIcon" width="50" height="50"/>
+        <image name="ForecastIcon" width="22" height="24"/>
+        <image name="HourlyConditionIcon" width="60" height="60"/>
+        <image name="LightsOutIcon" width="50" height="50"/>
+        <image name="LocationsIcon" width="20" height="23"/>
+        <image name="MangoIcon" width="50" height="50"/>
+        <image name="MaximumRedIcon" width="50" height="50"/>
+        <image name="MightyUmbrellaIcon" width="50" height="50"/>
+        <image name="MoonlightIcon" width="50" height="50"/>
+        <image name="OpenWeatherLogoDark" width="600" height="256"/>
+        <image name="OrchidIcon" width="50" height="50"/>
+        <image name="PartlyCloudy" width="100" height="100"/>
         <image name="Partly_cloudy" width="100" height="100"/>
-        <image name="Plump Purple icon" width="50" height="50"/>
-        <image name="Rain Drop icon" width="50" height="50"/>
-        <image name="Refresh icon" width="60" height="60"/>
-        <image name="Settings icon" width="23" height="23"/>
-        <image name="Spring Green icon" width="50" height="50"/>
-        <image name="Support icon" width="60" height="60"/>
-        <image name="Themes icon" width="60" height="60"/>
-        <image name="Thunderstorm icon" width="50" height="50"/>
-        <image name="Twilight Zone icon" width="50" height="50"/>
-        <image name="Widget icon" width="60" height="60"/>
-        <image name="Windy Day icon" width="50" height="50"/>
+        <image name="PlumpPurpleIcon" width="50" height="50"/>
+        <image name="RainDropIcon" width="50" height="50"/>
+        <image name="RefreshIcon" width="60" height="60"/>
+        <image name="SettingsIcon" width="23" height="23"/>
+        <image name="SpringGreenIcon" width="50" height="50"/>
+        <image name="SupportIcon" width="60" height="60"/>
+        <image name="ThemesIcon" width="60" height="60"/>
+        <image name="ThunderstormIcon" width="50" height="50"/>
+        <image name="TwilightZoneIcon" width="50" height="50"/>
+        <image name="WidgetIcon" width="60" height="60"/>
+        <image name="WindyDayIcon" width="50" height="50"/>
         <image name="exclamationmark.triangle" catalog="system" width="128" height="112"/>
         <image name="location.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">

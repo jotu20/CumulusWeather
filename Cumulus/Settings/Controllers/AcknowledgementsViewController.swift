@@ -63,11 +63,11 @@ class AcknowledgementsViewController: UIViewController, UITextViewDelegate {
         
         // Check for dark mode
         if self.traitCollection.userInterfaceStyle == .light {
-            self.poweredByDarkSkyButton.setBackgroundImage(UIImage(named: "DarkSkyLogo-Dark.pdf"), for: .normal)
-            self.poweredByOpenWeatherButton.setBackgroundImage(UIImage(named: "OpenWeatherLogo-Dark.pdf"), for: .normal)
+            self.poweredByDarkSkyButton.setBackgroundImage(UIImage(named: "DarkSkyLogoDark.pdf"), for: .normal)
+            self.poweredByOpenWeatherButton.setBackgroundImage(UIImage(named: "OpenWeatherLogoDark.pdf"), for: .normal)
         } else {
-            self.poweredByDarkSkyButton.setBackgroundImage(UIImage(named: "DarkSkyLogo-Light.pdf"), for: .normal)
-            self.poweredByOpenWeatherButton.setBackgroundImage(UIImage(named: "OpenWeatherLogo-Light.pdf"), for: .normal)
+            self.poweredByDarkSkyButton.setBackgroundImage(UIImage(named: "DarkSkyLogoLight.pdf"), for: .normal)
+            self.poweredByOpenWeatherButton.setBackgroundImage(UIImage(named: "OpenWeatherLogoLight.pdf"), for: .normal)
         }
         
         let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ThemeTableViewController.doneBarButtonTapped))

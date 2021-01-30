@@ -123,8 +123,8 @@ class ForecastDataTableViewController: UITableViewController,  UITextFieldDelega
             defaultConditionIcons = "\(conditionIconTypes[row])"
             
             if defaultConditionIcons == "Circle" {
-                defaults.set("_circle", forKey: "defaultConditionIcons")
-                UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("_circle", forKey: "setIcons")
+                defaults.set("Circle", forKey: "defaultConditionIcons")
+                UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("Circle", forKey: "setIcons")
             } else {
                 defaults.set("", forKey: "defaultConditionIcons")
                 UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set("", forKey: "setIcons")

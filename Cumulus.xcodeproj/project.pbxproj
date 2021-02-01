@@ -10,91 +10,41 @@
 		53111DA333D7D0336A2BC2E4 /* Pods_Cumulus_Cumulus_WidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E47BC464007A121C5941E6 /* Pods_Cumulus_Cumulus_WidgetExtension.framework */; };
 		9D27A63FDE35F09133A238A2 /* Pods_Cumulus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C2E6D604107EC03F5FBE23 /* Pods_Cumulus.framework */; };
 		CF39201B2365217300FAFA53 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF39201A2365217300FAFA53 /* MapKit.framework */; };
-		CF42058D25B78B1D002C2F97 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42058C25B78B1D002C2F97 /* UIKitExtensions.swift */; };
-		CF42059025B78B1D002C2F97 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42058C25B78B1D002C2F97 /* UIKitExtensions.swift */; };
-		CF42059625B78B25002C2F97 /* VariableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42059525B78B25002C2F97 /* VariableExtensions.swift */; };
-		CF42059925B78B25002C2F97 /* VariableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42059525B78B25002C2F97 /* VariableExtensions.swift */; };
-		CF42059F25B78B34002C2F97 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42059E25B78B34002C2F97 /* DateExtensions.swift */; };
-		CF4205A225B78B34002C2F97 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42059E25B78B34002C2F97 /* DateExtensions.swift */; };
 		CF4205AC25B78B68002C2F97 /* DarkSkyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4205AB25B78B68002C2F97 /* DarkSkyAPI.swift */; };
 		CF4205AF25B78B68002C2F97 /* DarkSkyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4205AB25B78B68002C2F97 /* DarkSkyAPI.swift */; };
 		CF4205E525B78D0B002C2F97 /* OpenWeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD612AC259B8C9300FBC677 /* OpenWeatherAPI.swift */; };
-		CF4205EA25B78D8D002C2F97 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CF242E48E1004FB831 /* SettingsModel.swift */; };
 		CF4A0E5F2108B1B30061CAAD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4A0E5E2108B1B30061CAAD /* Default-568h@2x.png */; };
 		CF4A0E612108B5580061CAAD /* AppIconTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A0E602108B5580061CAAD /* AppIconTableViewController.swift */; };
 		CF52ECD9210FA29D00A605A4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF52ECD8210FA29D00A605A4 /* StoreKit.framework */; };
 		CF5EB7BA2435778F006FF5A5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5EB7B92435778F006FF5A5 /* Launch Screen.storyboard */; };
-		CF602EA9247ED3D200E05491 /* LoadingScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF602EA6247ED28E00E05491 /* LoadingScreenModel.swift */; };
 		CF6E4AA220DACFD8002349A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E4AA120DACFD8002349A7 /* AppDelegate.swift */; };
 		CF6E4AA420DACFD8002349A7 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E4AA320DACFD8002349A7 /* ForecastViewController.swift */; };
 		CF81A5EF2519443100ED93A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF81A5EE2519443100ED93A2 /* Main.storyboard */; };
 		CF94774B2167E48E00DA8B38 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF94774A2167E48E00DA8B38 /* Intents.framework */; };
 		CFA3259E20E44DE500F4AFBD /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3259D20E44DE500F4AFBD /* LocationsViewController.swift */; };
 		CFAB4446211F3A2000A7E3CB /* ForecastDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB4445211F3A2000A7E3CB /* ForecastDataTableViewController.swift */; };
-		CFAF60D3242E48E1004FB831 /* InputFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CE242E48E1004FB831 /* InputFunctions.swift */; };
-		CFAF60D7242E48E1004FB831 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CF242E48E1004FB831 /* SettingsModel.swift */; };
 		CFB1E84520E5972200972F19 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1E84420E5972200972F19 /* LocationCell.swift */; };
 		CFB693E520F8577200DE669A /* PrivacyAndTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB693E420F8577200DE669A /* PrivacyAndTermsViewController.swift */; };
+		CFBE904B25C87898006A5C2B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE904A25C87898006A5C2B /* Color.swift */; };
+		CFBE904F25C878B0006A5C2B /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE904E25C878B0006A5C2B /* Toolbar.swift */; };
+		CFBE905725C878CA006A5C2B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE905625C878CA006A5C2B /* Date.swift */; };
+		CFBE905D25C87901006A5C2B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE905C25C87901006A5C2B /* Strings.swift */; };
+		CFBE906125C87907006A5C2B /* Doubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE906025C87907006A5C2B /* Doubles.swift */; };
+		CFBE906825C879A8006A5C2B /* UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE906725C879A8006A5C2B /* UISetup.swift */; };
+		CFBE906E25C879C0006A5C2B /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE906D25C879C0006A5C2B /* Variables.swift */; };
+		CFBE907225C879DD006A5C2B /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE907125C879DD006A5C2B /* Functions.swift */; };
+		CFBE90C925C87C30006A5C2B /* UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE906725C879A8006A5C2B /* UISetup.swift */; };
+		CFBE90CC25C87C32006A5C2B /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE906D25C879C0006A5C2B /* Variables.swift */; };
+		CFBE90CD25C87C3E006A5C2B /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE907125C879DD006A5C2B /* Functions.swift */; };
+		CFBE90D025C87C83006A5C2B /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE904E25C878B0006A5C2B /* Toolbar.swift */; };
+		CFBE90D125C87C83006A5C2B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE905C25C87901006A5C2B /* Strings.swift */; };
+		CFBE90D225C87C83006A5C2B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE905625C878CA006A5C2B /* Date.swift */; };
+		CFBE90D325C87C83006A5C2B /* Doubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE906025C87907006A5C2B /* Doubles.swift */; };
+		CFBE90D425C87C83006A5C2B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE904A25C87898006A5C2B /* Color.swift */; };
 		CFC186152131B8A800F56AD0 /* CumulusPlusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC186142131B8A800F56AD0 /* CumulusPlusTableViewController.swift */; };
 		CFD1CD2320EE9544004ED831 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD1CD2220EE9544004ED831 /* SettingsTableViewController.swift */; };
 		CFD5E8FC20E669B0002A5F0C /* AcknowledgementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD5E8FB20E669B0002A5F0C /* AcknowledgementsViewController.swift */; };
 		CFD612AD259B8C9300FBC677 /* OpenWeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD612AC259B8C9300FBC677 /* OpenWeatherAPI.swift */; };
-		CFD6674424E3251600CFB98D /* ThunderstormiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6670C24E3251600CFB98D /* ThunderstormiPad@3x.png */; };
-		CFD6674524E3251600CFB98D /* LightsOut@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6670D24E3251600CFB98D /* LightsOut@2x.png */; };
-		CFD6674624E3251600CFB98D /* SpringGreeniPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6670E24E3251600CFB98D /* SpringGreeniPad@2x.png */; };
-		CFD6674724E3251600CFB98D /* 8-BitiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6670F24E3251600CFB98D /* 8-BitiPad@2x.png */; };
-		CFD6674824E3251600CFB98D /* 8-Bit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671024E3251600CFB98D /* 8-Bit@2x.png */; };
-		CFD6674924E3251600CFB98D /* PlumpPurple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671124E3251600CFB98D /* PlumpPurple@3x.png */; };
-		CFD6674A24E3251600CFB98D /* PlumpPurple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671224E3251600CFB98D /* PlumpPurple@2x.png */; };
-		CFD6674B24E3251600CFB98D /* 8-BitiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671324E3251600CFB98D /* 8-BitiPad@3x.png */; };
-		CFD6674C24E3251600CFB98D /* 8-Bit@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671424E3251600CFB98D /* 8-Bit@3x.png */; };
-		CFD6674D24E3251600CFB98D /* SpringGreeniPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671524E3251600CFB98D /* SpringGreeniPad@3x.png */; };
-		CFD6674E24E3251600CFB98D /* LightsOut@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671624E3251600CFB98D /* LightsOut@3x.png */; };
-		CFD6674F24E3251600CFB98D /* ThunderstormiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671724E3251600CFB98D /* ThunderstormiPad@2x.png */; };
-		CFD6675024E3251600CFB98D /* MightyUmbrella@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671824E3251600CFB98D /* MightyUmbrella@2x.png */; };
-		CFD6675124E3251600CFB98D /* SpringGreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671924E3251600CFB98D /* SpringGreen@3x.png */; };
-		CFD6675224E3251600CFB98D /* WindyDay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671A24E3251600CFB98D /* WindyDay@2x.png */; };
-		CFD6675324E3251600CFB98D /* RainDropiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671B24E3251600CFB98D /* RainDropiPad@3x.png */; };
-		CFD6675424E3251600CFB98D /* Mango@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671C24E3251600CFB98D /* Mango@3x.png */; };
-		CFD6675524E3251600CFB98D /* DodgerBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671D24E3251600CFB98D /* DodgerBlue@2x.png */; };
-		CFD6675624E3251600CFB98D /* DodgerBlue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671E24E3251600CFB98D /* DodgerBlue@3x.png */; };
-		CFD6675724E3251600CFB98D /* Mango@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6671F24E3251600CFB98D /* Mango@2x.png */; };
-		CFD6675824E3251600CFB98D /* RainDropiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672024E3251600CFB98D /* RainDropiPad@2x.png */; };
-		CFD6675924E3251600CFB98D /* WindyDay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672124E3251600CFB98D /* WindyDay@3x.png */; };
-		CFD6675A24E3251600CFB98D /* SpringGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672224E3251600CFB98D /* SpringGreen@2x.png */; };
-		CFD6675B24E3251600CFB98D /* MightyUmbrella@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672324E3251600CFB98D /* MightyUmbrella@3x.png */; };
-		CFD6675C24E3251600CFB98D /* MangoiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672424E3251600CFB98D /* MangoiPad@3x.png */; };
-		CFD6675D24E3251600CFB98D /* TwilightZone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672524E3251600CFB98D /* TwilightZone@2x.png */; };
-		CFD6675E24E3251600CFB98D /* RainDrop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672624E3251600CFB98D /* RainDrop@3x.png */; };
-		CFD6675F24E3251600CFB98D /* TwilightZoneiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672724E3251600CFB98D /* TwilightZoneiPad@2x.png */; };
-		CFD6676024E3251600CFB98D /* WindyDayiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672824E3251600CFB98D /* WindyDayiPad@2x.png */; };
-		CFD6676124E3251600CFB98D /* LightsOutiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672924E3251600CFB98D /* LightsOutiPad@2x.png */; };
-		CFD6676224E3251600CFB98D /* OrchidiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672A24E3251600CFB98D /* OrchidiPad@3x.png */; };
-		CFD6676324E3251600CFB98D /* OrchidiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672B24E3251600CFB98D /* OrchidiPad@2x.png */; };
-		CFD6676424E3251600CFB98D /* LightsOutiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672C24E3251600CFB98D /* LightsOutiPad@3x.png */; };
-		CFD6676524E3251600CFB98D /* WindyDayiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672D24E3251600CFB98D /* WindyDayiPad@3x.png */; };
-		CFD6676624E3251600CFB98D /* TwilightZoneiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672E24E3251600CFB98D /* TwilightZoneiPad@3x.png */; };
-		CFD6676724E3251600CFB98D /* RainDrop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6672F24E3251600CFB98D /* RainDrop@2x.png */; };
-		CFD6676824E3251600CFB98D /* TwilightZone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673024E3251600CFB98D /* TwilightZone@3x.png */; };
-		CFD6676924E3251600CFB98D /* MangoiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673124E3251600CFB98D /* MangoiPad@2x.png */; };
-		CFD6676A24E3251600CFB98D /* Moonlight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673224E3251600CFB98D /* Moonlight@3x.png */; };
-		CFD6676B24E3251600CFB98D /* DodgerBlueiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673324E3251600CFB98D /* DodgerBlueiPad@2x.png */; };
-		CFD6676C24E3251600CFB98D /* MightyUmbrellaiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673424E3251600CFB98D /* MightyUmbrellaiPad@3x.png */; };
-		CFD6676D24E3251600CFB98D /* Orchid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673524E3251600CFB98D /* Orchid@2x.png */; };
-		CFD6676E24E3251600CFB98D /* MaximumRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673624E3251600CFB98D /* MaximumRed@2x.png */; };
-		CFD6676F24E3251600CFB98D /* PlumpPurpleiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673724E3251600CFB98D /* PlumpPurpleiPad@2x.png */; };
-		CFD6677024E3251600CFB98D /* MoonlightiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673824E3251600CFB98D /* MoonlightiPad@3x.png */; };
-		CFD6677124E3251600CFB98D /* Thunderstorm@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673924E3251600CFB98D /* Thunderstorm@3x.png */; };
-		CFD6677224E3251600CFB98D /* MaximumRediPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673A24E3251600CFB98D /* MaximumRediPad@3x.png */; };
-		CFD6677324E3251600CFB98D /* MaximumRediPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673B24E3251600CFB98D /* MaximumRediPad@2x.png */; };
-		CFD6677424E3251600CFB98D /* DodgerBluePad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673C24E3251600CFB98D /* DodgerBluePad@3x.png */; };
-		CFD6677524E3251600CFB98D /* Thunderstorm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673D24E3251600CFB98D /* Thunderstorm@2x.png */; };
-		CFD6677624E3251600CFB98D /* MoonlightiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673E24E3251600CFB98D /* MoonlightiPad@2x.png */; };
-		CFD6677724E3251600CFB98D /* PlumpPurpleiPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6673F24E3251600CFB98D /* PlumpPurpleiPad@3x.png */; };
-		CFD6677824E3251600CFB98D /* MaximumRed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6674024E3251600CFB98D /* MaximumRed@3x.png */; };
-		CFD6677924E3251600CFB98D /* Orchid@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6674124E3251600CFB98D /* Orchid@3x.png */; };
-		CFD6677A24E3251600CFB98D /* MightyUmbrellaiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6674224E3251600CFB98D /* MightyUmbrellaiPad@2x.png */; };
-		CFD6677B24E3251600CFB98D /* Moonlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD6674324E3251600CFB98D /* Moonlight@2x.png */; };
 		CFD790DA2151C4CD007E489D /* ThemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD790D92151C4CD007E489D /* ThemeTableViewController.swift */; };
 		CFD9CDFB2535FD3200CB128E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF42EA42513CC3D005119C9 /* WidgetKit.framework */; };
 		CFD9CDFC2535FD3200CB128E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF42EA62513CC3D005119C9 /* SwiftUI.framework */; };
@@ -102,11 +52,8 @@
 		CFD9CE012535FD3200CB128E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD9CE002535FD3200CB128E /* Assets.xcassets */; };
 		CFD9CE052535FD3200CB128E /* Cumulus WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CFD9CDFA2535FD3200CB128E /* Cumulus WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CFD9CE0E2535FD3F00CB128E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
-		CFD9CE242535FE7700CB128E /* InputFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF60CE242E48E1004FB831 /* InputFunctions.swift */; };
 		CFEA0F7C24D437B100E62E5F /* WeatherUnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA0F7B24D437B100E62E5F /* WeatherUnitsViewController.swift */; };
 		CFEE78B024705168001DE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E4AA820DACFD9002349A7 /* Assets.xcassets */; };
-		CFEF243325B9CA0F001B79E8 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF243225B9CA0F001B79E8 /* ForecastModel.swift */; };
-		CFEF243625B9CA0F001B79E8 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF243225B9CA0F001B79E8 /* ForecastModel.swift */; };
 		CFF0A964242E9A2500FDDAF1 /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF824C3820E84EEB00E5F0A7 /* Locations.xcdatamodeld */; };
 		CFFB787720DF0B44008216F8 /* License in Resources */ = {isa = PBXBuildFile; fileRef = CFFB787620DF0B44008216F8 /* License */; };
 /* End PBXBuildFile section */
@@ -158,15 +105,11 @@
 		BEE96CD4DBD1537816458A1B /* Pods_Cumulus_GetForecastIntent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumulus_GetForecastIntent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1B83C0252269C400F305A6 /* AppIntentVocabulary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppIntentVocabulary.plist; sourceTree = "<group>"; };
 		CF39201A2365217300FAFA53 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		CF42058C25B78B1D002C2F97 /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
-		CF42059525B78B25002C2F97 /* VariableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableExtensions.swift; sourceTree = "<group>"; };
-		CF42059E25B78B34002C2F97 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		CF4205AB25B78B68002C2F97 /* DarkSkyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSkyAPI.swift; sourceTree = "<group>"; };
 		CF4A0E5E2108B1B30061CAAD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CF4A0E602108B5580061CAAD /* AppIconTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconTableViewController.swift; sourceTree = "<group>"; };
 		CF52ECD8210FA29D00A605A4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CF5EB7B92435778F006FF5A5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		CF602EA6247ED28E00E05491 /* LoadingScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenModel.swift; sourceTree = "<group>"; };
 		CF6E4A9E20DACFD8002349A7 /* Cumulus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cumulus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6E4AA120DACFD8002349A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF6E4AA320DACFD8002349A7 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
@@ -179,70 +122,76 @@
 		CF94775A2168080A00DA8B38 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		CFA3259D20E44DE500F4AFBD /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		CFAB4445211F3A2000A7E3CB /* ForecastDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDataTableViewController.swift; sourceTree = "<group>"; };
-		CFAF60CE242E48E1004FB831 /* InputFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFunctions.swift; sourceTree = "<group>"; };
-		CFAF60CF242E48E1004FB831 /* SettingsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		CFB1E84420E5972200972F19 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		CFB693E420F8577200DE669A /* PrivacyAndTermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyAndTermsViewController.swift; sourceTree = "<group>"; };
+		CFBE904A25C87898006A5C2B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		CFBE904E25C878B0006A5C2B /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
+		CFBE905625C878CA006A5C2B /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		CFBE905C25C87901006A5C2B /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		CFBE906025C87907006A5C2B /* Doubles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doubles.swift; sourceTree = "<group>"; };
+		CFBE906725C879A8006A5C2B /* UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISetup.swift; sourceTree = "<group>"; };
+		CFBE906D25C879C0006A5C2B /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
+		CFBE907125C879DD006A5C2B /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		CFBE908525C87BBB006A5C2B /* RainDrop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RainDrop@2x.png"; sourceTree = "<group>"; };
+		CFBE908625C87BBB006A5C2B /* MaximumRediPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MaximumRediPad@2x.png"; sourceTree = "<group>"; };
+		CFBE908725C87BBB006A5C2B /* Mango@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mango@2x.png"; sourceTree = "<group>"; };
+		CFBE908825C87BBB006A5C2B /* RainDropiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RainDropiPad@2x.png"; sourceTree = "<group>"; };
+		CFBE908925C87BBC006A5C2B /* MoonlightiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoonlightiPad@2x.png"; sourceTree = "<group>"; };
+		CFBE908A25C87BBC006A5C2B /* 8-BitiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-BitiPad@3x.png"; sourceTree = "<group>"; };
+		CFBE908B25C87BBC006A5C2B /* MangoiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MangoiPad@2x.png"; sourceTree = "<group>"; };
+		CFBE908C25C87BBC006A5C2B /* PlumpPurpleiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlumpPurpleiPad@3x.png"; sourceTree = "<group>"; };
+		CFBE908D25C87BBD006A5C2B /* WindyDay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WindyDay@2x.png"; sourceTree = "<group>"; };
+		CFBE908E25C87BBD006A5C2B /* TwilightZone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwilightZone@3x.png"; sourceTree = "<group>"; };
+		CFBE908F25C87BBD006A5C2B /* DodgerBlueiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DodgerBlueiPad@2x.png"; sourceTree = "<group>"; };
+		CFBE909025C87BBD006A5C2B /* WindyDay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WindyDay@3x.png"; sourceTree = "<group>"; };
+		CFBE909125C87BBE006A5C2B /* OrchidiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OrchidiPad@2x.png"; sourceTree = "<group>"; };
+		CFBE909225C87BBE006A5C2B /* LightsOut@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LightsOut@2x.png"; sourceTree = "<group>"; };
+		CFBE909325C87BBE006A5C2B /* Orchid@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Orchid@3x.png"; sourceTree = "<group>"; };
+		CFBE909425C87BBE006A5C2B /* MaximumRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MaximumRed@2x.png"; sourceTree = "<group>"; };
+		CFBE909525C87BBF006A5C2B /* TwilightZoneiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwilightZoneiPad@3x.png"; sourceTree = "<group>"; };
+		CFBE909625C87BBF006A5C2B /* PlumpPurple@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlumpPurple@3x.png"; sourceTree = "<group>"; };
+		CFBE909725C87BBF006A5C2B /* WindyDayiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WindyDayiPad@3x.png"; sourceTree = "<group>"; };
+		CFBE909825C87BBF006A5C2B /* Moonlight@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Moonlight@3x.png"; sourceTree = "<group>"; };
+		CFBE909925C87BC0006A5C2B /* Mango@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mango@3x.png"; sourceTree = "<group>"; };
+		CFBE909A25C87BC0006A5C2B /* Thunderstorm@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thunderstorm@3x.png"; sourceTree = "<group>"; };
+		CFBE909B25C87BC0006A5C2B /* 8-Bit@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-Bit@3x.png"; sourceTree = "<group>"; };
+		CFBE909C25C87BC0006A5C2B /* DodgerBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DodgerBlue@2x.png"; sourceTree = "<group>"; };
+		CFBE909D25C87BC0006A5C2B /* LightsOut@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LightsOut@3x.png"; sourceTree = "<group>"; };
+		CFBE909E25C87BC1006A5C2B /* SpringGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpringGreen@2x.png"; sourceTree = "<group>"; };
+		CFBE909F25C87BC1006A5C2B /* 8-Bit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-Bit@2x.png"; sourceTree = "<group>"; };
+		CFBE90A025C87BC1006A5C2B /* PlumpPurpleiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlumpPurpleiPad@2x.png"; sourceTree = "<group>"; };
+		CFBE90A125C87BC1006A5C2B /* DodgerBlue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DodgerBlue@3x.png"; sourceTree = "<group>"; };
+		CFBE90A225C87BC2006A5C2B /* MightyUmbrella@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MightyUmbrella@2x.png"; sourceTree = "<group>"; };
+		CFBE90A325C87BC2006A5C2B /* LightsOutiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LightsOutiPad@2x.png"; sourceTree = "<group>"; };
+		CFBE90A425C87BC2006A5C2B /* MightyUmbrellaiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MightyUmbrellaiPad@2x.png"; sourceTree = "<group>"; };
+		CFBE90A525C87BC2006A5C2B /* MoonlightiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoonlightiPad@3x.png"; sourceTree = "<group>"; };
+		CFBE90A625C87BC3006A5C2B /* WindyDayiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WindyDayiPad@2x.png"; sourceTree = "<group>"; };
+		CFBE90A725C87BC3006A5C2B /* ThunderstormiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ThunderstormiPad@2x.png"; sourceTree = "<group>"; };
+		CFBE90A825C87BC3006A5C2B /* DodgerBluePad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DodgerBluePad@3x.png"; sourceTree = "<group>"; };
+		CFBE90A925C87BC3006A5C2B /* TwilightZone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwilightZone@2x.png"; sourceTree = "<group>"; };
+		CFBE90AA25C87BC4006A5C2B /* RainDropiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RainDropiPad@3x.png"; sourceTree = "<group>"; };
+		CFBE90AB25C87BC4006A5C2B /* Thunderstorm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thunderstorm@2x.png"; sourceTree = "<group>"; };
+		CFBE90AC25C87BC4006A5C2B /* RainDrop@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RainDrop@3x.png"; sourceTree = "<group>"; };
+		CFBE90AD25C87BC4006A5C2B /* SpringGreeniPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpringGreeniPad@2x.png"; sourceTree = "<group>"; };
+		CFBE90AE25C87BC4006A5C2B /* 8-BitiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-BitiPad@2x.png"; sourceTree = "<group>"; };
+		CFBE90AF25C87BC5006A5C2B /* ThunderstormiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ThunderstormiPad@3x.png"; sourceTree = "<group>"; };
+		CFBE90B025C87BC5006A5C2B /* TwilightZoneiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwilightZoneiPad@2x.png"; sourceTree = "<group>"; };
+		CFBE90B125C87BC5006A5C2B /* MightyUmbrellaiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MightyUmbrellaiPad@3x.png"; sourceTree = "<group>"; };
+		CFBE90B225C87BC5006A5C2B /* MightyUmbrella@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MightyUmbrella@3x.png"; sourceTree = "<group>"; };
+		CFBE90B325C87BC6006A5C2B /* PlumpPurple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlumpPurple@2x.png"; sourceTree = "<group>"; };
+		CFBE90B425C87BC6006A5C2B /* Moonlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Moonlight@2x.png"; sourceTree = "<group>"; };
+		CFBE90B525C87BC6006A5C2B /* MangoiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MangoiPad@3x.png"; sourceTree = "<group>"; };
+		CFBE90B625C87BC6006A5C2B /* Orchid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Orchid@2x.png"; sourceTree = "<group>"; };
+		CFBE90B725C87BC7006A5C2B /* MaximumRed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MaximumRed@3x.png"; sourceTree = "<group>"; };
+		CFBE90B825C87BC7006A5C2B /* SpringGreen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpringGreen@3x.png"; sourceTree = "<group>"; };
+		CFBE90B925C87BC7006A5C2B /* SpringGreeniPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpringGreeniPad@3x.png"; sourceTree = "<group>"; };
+		CFBE90BA25C87BC7006A5C2B /* LightsOutiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LightsOutiPad@3x.png"; sourceTree = "<group>"; };
+		CFBE90BB25C87BC8006A5C2B /* MaximumRediPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MaximumRediPad@3x.png"; sourceTree = "<group>"; };
+		CFBE90BC25C87BC8006A5C2B /* OrchidiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OrchidiPad@3x.png"; sourceTree = "<group>"; };
 		CFC186142131B8A800F56AD0 /* CumulusPlusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CumulusPlusTableViewController.swift; sourceTree = "<group>"; };
 		CFD1CD2220EE9544004ED831 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		CFD5E8FB20E669B0002A5F0C /* AcknowledgementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsViewController.swift; sourceTree = "<group>"; };
 		CFD612AC259B8C9300FBC677 /* OpenWeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherAPI.swift; sourceTree = "<group>"; };
-		CFD6670C24E3251600CFB98D /* ThunderstormiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ThunderstormiPad@3x.png"; sourceTree = "<group>"; };
-		CFD6670D24E3251600CFB98D /* LightsOut@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LightsOut@2x.png"; sourceTree = "<group>"; };
-		CFD6670E24E3251600CFB98D /* SpringGreeniPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpringGreeniPad@2x.png"; sourceTree = "<group>"; };
-		CFD6670F24E3251600CFB98D /* 8-BitiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-BitiPad@2x.png"; sourceTree = "<group>"; };
-		CFD6671024E3251600CFB98D /* 8-Bit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-Bit@2x.png"; sourceTree = "<group>"; };
-		CFD6671124E3251600CFB98D /* PlumpPurple@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlumpPurple@3x.png"; sourceTree = "<group>"; };
-		CFD6671224E3251600CFB98D /* PlumpPurple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlumpPurple@2x.png"; sourceTree = "<group>"; };
-		CFD6671324E3251600CFB98D /* 8-BitiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-BitiPad@3x.png"; sourceTree = "<group>"; };
-		CFD6671424E3251600CFB98D /* 8-Bit@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-Bit@3x.png"; sourceTree = "<group>"; };
-		CFD6671524E3251600CFB98D /* SpringGreeniPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpringGreeniPad@3x.png"; sourceTree = "<group>"; };
-		CFD6671624E3251600CFB98D /* LightsOut@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LightsOut@3x.png"; sourceTree = "<group>"; };
-		CFD6671724E3251600CFB98D /* ThunderstormiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ThunderstormiPad@2x.png"; sourceTree = "<group>"; };
-		CFD6671824E3251600CFB98D /* MightyUmbrella@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MightyUmbrella@2x.png"; sourceTree = "<group>"; };
-		CFD6671924E3251600CFB98D /* SpringGreen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpringGreen@3x.png"; sourceTree = "<group>"; };
-		CFD6671A24E3251600CFB98D /* WindyDay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WindyDay@2x.png"; sourceTree = "<group>"; };
-		CFD6671B24E3251600CFB98D /* RainDropiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RainDropiPad@3x.png"; sourceTree = "<group>"; };
-		CFD6671C24E3251600CFB98D /* Mango@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mango@3x.png"; sourceTree = "<group>"; };
-		CFD6671D24E3251600CFB98D /* DodgerBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DodgerBlue@2x.png"; sourceTree = "<group>"; };
-		CFD6671E24E3251600CFB98D /* DodgerBlue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DodgerBlue@3x.png"; sourceTree = "<group>"; };
-		CFD6671F24E3251600CFB98D /* Mango@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mango@2x.png"; sourceTree = "<group>"; };
-		CFD6672024E3251600CFB98D /* RainDropiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RainDropiPad@2x.png"; sourceTree = "<group>"; };
-		CFD6672124E3251600CFB98D /* WindyDay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WindyDay@3x.png"; sourceTree = "<group>"; };
-		CFD6672224E3251600CFB98D /* SpringGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SpringGreen@2x.png"; sourceTree = "<group>"; };
-		CFD6672324E3251600CFB98D /* MightyUmbrella@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MightyUmbrella@3x.png"; sourceTree = "<group>"; };
-		CFD6672424E3251600CFB98D /* MangoiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MangoiPad@3x.png"; sourceTree = "<group>"; };
-		CFD6672524E3251600CFB98D /* TwilightZone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwilightZone@2x.png"; sourceTree = "<group>"; };
-		CFD6672624E3251600CFB98D /* RainDrop@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RainDrop@3x.png"; sourceTree = "<group>"; };
-		CFD6672724E3251600CFB98D /* TwilightZoneiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwilightZoneiPad@2x.png"; sourceTree = "<group>"; };
-		CFD6672824E3251600CFB98D /* WindyDayiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WindyDayiPad@2x.png"; sourceTree = "<group>"; };
-		CFD6672924E3251600CFB98D /* LightsOutiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LightsOutiPad@2x.png"; sourceTree = "<group>"; };
-		CFD6672A24E3251600CFB98D /* OrchidiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OrchidiPad@3x.png"; sourceTree = "<group>"; };
-		CFD6672B24E3251600CFB98D /* OrchidiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OrchidiPad@2x.png"; sourceTree = "<group>"; };
-		CFD6672C24E3251600CFB98D /* LightsOutiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LightsOutiPad@3x.png"; sourceTree = "<group>"; };
-		CFD6672D24E3251600CFB98D /* WindyDayiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WindyDayiPad@3x.png"; sourceTree = "<group>"; };
-		CFD6672E24E3251600CFB98D /* TwilightZoneiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwilightZoneiPad@3x.png"; sourceTree = "<group>"; };
-		CFD6672F24E3251600CFB98D /* RainDrop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RainDrop@2x.png"; sourceTree = "<group>"; };
-		CFD6673024E3251600CFB98D /* TwilightZone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwilightZone@3x.png"; sourceTree = "<group>"; };
-		CFD6673124E3251600CFB98D /* MangoiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MangoiPad@2x.png"; sourceTree = "<group>"; };
-		CFD6673224E3251600CFB98D /* Moonlight@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Moonlight@3x.png"; sourceTree = "<group>"; };
-		CFD6673324E3251600CFB98D /* DodgerBlueiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DodgerBlueiPad@2x.png"; sourceTree = "<group>"; };
-		CFD6673424E3251600CFB98D /* MightyUmbrellaiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MightyUmbrellaiPad@3x.png"; sourceTree = "<group>"; };
-		CFD6673524E3251600CFB98D /* Orchid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Orchid@2x.png"; sourceTree = "<group>"; };
-		CFD6673624E3251600CFB98D /* MaximumRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MaximumRed@2x.png"; sourceTree = "<group>"; };
-		CFD6673724E3251600CFB98D /* PlumpPurpleiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlumpPurpleiPad@2x.png"; sourceTree = "<group>"; };
-		CFD6673824E3251600CFB98D /* MoonlightiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoonlightiPad@3x.png"; sourceTree = "<group>"; };
-		CFD6673924E3251600CFB98D /* Thunderstorm@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thunderstorm@3x.png"; sourceTree = "<group>"; };
-		CFD6673A24E3251600CFB98D /* MaximumRediPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MaximumRediPad@3x.png"; sourceTree = "<group>"; };
-		CFD6673B24E3251600CFB98D /* MaximumRediPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MaximumRediPad@2x.png"; sourceTree = "<group>"; };
-		CFD6673C24E3251600CFB98D /* DodgerBluePad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DodgerBluePad@3x.png"; sourceTree = "<group>"; };
-		CFD6673D24E3251600CFB98D /* Thunderstorm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thunderstorm@2x.png"; sourceTree = "<group>"; };
-		CFD6673E24E3251600CFB98D /* MoonlightiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoonlightiPad@2x.png"; sourceTree = "<group>"; };
-		CFD6673F24E3251600CFB98D /* PlumpPurpleiPad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlumpPurpleiPad@3x.png"; sourceTree = "<group>"; };
-		CFD6674024E3251600CFB98D /* MaximumRed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MaximumRed@3x.png"; sourceTree = "<group>"; };
-		CFD6674124E3251600CFB98D /* Orchid@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Orchid@3x.png"; sourceTree = "<group>"; };
-		CFD6674224E3251600CFB98D /* MightyUmbrellaiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MightyUmbrellaiPad@2x.png"; sourceTree = "<group>"; };
-		CFD6674324E3251600CFB98D /* Moonlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Moonlight@2x.png"; sourceTree = "<group>"; };
 		CFD790D92151C4CD007E489D /* ThemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTableViewController.swift; sourceTree = "<group>"; };
 		CFD9CDFA2535FD3200CB128E /* Cumulus WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Cumulus WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD9CDFE2535FD3200CB128E /* Cumulus_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cumulus_Widget.swift; sourceTree = "<group>"; };
@@ -251,7 +200,6 @@
 		CFDEEC0920E26ED900BA5EA5 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		CFE76B4125A11F610040D4C9 /* Cumulus WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Cumulus WidgetExtension.entitlements"; sourceTree = "<group>"; };
 		CFEA0F7B24D437B100E62E5F /* WeatherUnitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUnitsViewController.swift; sourceTree = "<group>"; };
-		CFEF243225B9CA0F001B79E8 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		CFF42EA42513CC3D005119C9 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		CFF42EA62513CC3D005119C9 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		CFF5D40E331932230915860C /* Pods-Cumulus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumulus.debug.xcconfig"; path = "Target Support Files/Pods-Cumulus/Pods-Cumulus.debug.xcconfig"; sourceTree = "<group>"; };
@@ -317,21 +265,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CF3AAF39211B52EF0084EFF6 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				CF90306C2442641300538D52 /* Controllers */,
-				CFAF60E8242E498D004FB831 /* Models */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
 		CF42057F25B78ABA002C2F97 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CF42058C25B78B1D002C2F97 /* UIKitExtensions.swift */,
-				CF42059525B78B25002C2F97 /* VariableExtensions.swift */,
-				CF42059E25B78B34002C2F97 /* DateExtensions.swift */,
+				CFBE904A25C87898006A5C2B /* Color.swift */,
+				CFBE904E25C878B0006A5C2B /* Toolbar.swift */,
+				CFBE905625C878CA006A5C2B /* Date.swift */,
+				CFBE905C25C87901006A5C2B /* Strings.swift */,
+				CFBE906025C87907006A5C2B /* Doubles.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -361,22 +302,78 @@
 		CF6E4AA020DACFD8002349A7 /* Cumulus */ = {
 			isa = PBXGroup;
 			children = (
+				CF42057F25B78ABA002C2F97 /* Extensions */,
+				CFBE906625C8794E006A5C2B /* Helper */,
+				CFBE907925C87A44006A5C2B /* Model */,
+				CFBE907A25C87A80006A5C2B /* View */,
+				CFBE907B25C87AAC006A5C2B /* Controller */,
+				CFBE908325C87B82006A5C2B /* Storyboard */,
+				CF6E4AA120DACFD8002349A7 /* AppDelegate.swift */,
+				CF6E4AA820DACFD9002349A7 /* Assets.xcassets */,
+				CF5EB7B92435778F006FF5A5 /* Launch Screen.storyboard */,
 				CF6E4AAD20DACFD9002349A7 /* Info.plist */,
 				CF81A59D2519435700ED93A2 /* Cumulus.entitlements */,
-				CF6E4AA120DACFD8002349A7 /* AppDelegate.swift */,
-				CF5EB7B92435778F006FF5A5 /* Launch Screen.storyboard */,
-				CF81A5EE2519443100ED93A2 /* Main.storyboard */,
-				CFAF60F1242E4BEE004FB831 /* Forecast */,
-				CFD10765241FDC8F007E1087 /* Locations */,
-				CF3AAF39211B52EF0084EFF6 /* Settings */,
-				CFAF60F5242E4CA5004FB831 /* Resources */,
-				CFD3DF7C242E617B005DA2D2 /* Models */,
-				CF42057F25B78ABA002C2F97 /* Extensions */,
+				CFBE908425C87BBA006A5C2B /* Dynamic App Icon */,
 			);
 			path = Cumulus;
 			sourceTree = "<group>";
 		};
-		CF90306C2442641300538D52 /* Controllers */ = {
+		CFBE906625C8794E006A5C2B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CFBE906725C879A8006A5C2B /* UISetup.swift */,
+				CFBE906D25C879C0006A5C2B /* Variables.swift */,
+				CFBE907125C879DD006A5C2B /* Functions.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		CFBE907925C87A44006A5C2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF1B83C0252269C400F305A6 /* AppIntentVocabulary.plist */,
+				CF824C3820E84EEB00E5F0A7 /* Locations.xcdatamodeld */,
+				CF4205AB25B78B68002C2F97 /* DarkSkyAPI.swift */,
+				CFD612AC259B8C9300FBC677 /* OpenWeatherAPI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFBE907A25C87A80006A5C2B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFB1E84420E5972200972F19 /* LocationCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CFBE907B25C87AAC006A5C2B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CFBE907C25C87AB8006A5C2B /* Forecast */,
+				CFBE907F25C87AE8006A5C2B /* Locations */,
+				CFBE908025C87AEC006A5C2B /* Settings */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFBE907C25C87AB8006A5C2B /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				CF6E4AA320DACFD8002349A7 /* ForecastViewController.swift */,
+			);
+			path = Forecast;
+			sourceTree = "<group>";
+		};
+		CFBE907F25C87AE8006A5C2B /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				CFA3259D20E44DE500F4AFBD /* LocationsViewController.swift */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
+		CFBE908025C87AEC006A5C2B /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				CFD1CD2220EE9544004ED831 /* SettingsTableViewController.swift */,
@@ -388,143 +385,78 @@
 				CFB693E420F8577200DE669A /* PrivacyAndTermsViewController.swift */,
 				CFD5E8FB20E669B0002A5F0C /* AcknowledgementsViewController.swift */,
 			);
-			path = Controllers;
+			path = Settings;
 			sourceTree = "<group>";
 		};
-		CF90306D244264BD00538D52 /* Controllers */ = {
+		CFBE908325C87B82006A5C2B /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				CF6E4AA320DACFD8002349A7 /* ForecastViewController.swift */,
+				CF81A5EE2519443100ED93A2 /* Main.storyboard */,
 			);
-			path = Controllers;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		CF90306E244264D500538D52 /* Controllers */ = {
+		CFBE908425C87BBA006A5C2B /* Dynamic App Icon */ = {
 			isa = PBXGroup;
 			children = (
-				CFA3259D20E44DE500F4AFBD /* LocationsViewController.swift */,
+				CFBE90AF25C87BC5006A5C2B /* ThunderstormiPad@3x.png */,
+				CFBE909225C87BBE006A5C2B /* LightsOut@2x.png */,
+				CFBE90AD25C87BC4006A5C2B /* SpringGreeniPad@2x.png */,
+				CFBE90AE25C87BC4006A5C2B /* 8-BitiPad@2x.png */,
+				CFBE909F25C87BC1006A5C2B /* 8-Bit@2x.png */,
+				CFBE909625C87BBF006A5C2B /* PlumpPurple@3x.png */,
+				CFBE90B325C87BC6006A5C2B /* PlumpPurple@2x.png */,
+				CFBE908A25C87BBC006A5C2B /* 8-BitiPad@3x.png */,
+				CFBE909B25C87BC0006A5C2B /* 8-Bit@3x.png */,
+				CFBE90B925C87BC7006A5C2B /* SpringGreeniPad@3x.png */,
+				CFBE909D25C87BC0006A5C2B /* LightsOut@3x.png */,
+				CFBE90A725C87BC3006A5C2B /* ThunderstormiPad@2x.png */,
+				CFBE90A225C87BC2006A5C2B /* MightyUmbrella@2x.png */,
+				CFBE90B825C87BC7006A5C2B /* SpringGreen@3x.png */,
+				CFBE908D25C87BBD006A5C2B /* WindyDay@2x.png */,
+				CFBE90AA25C87BC4006A5C2B /* RainDropiPad@3x.png */,
+				CFBE909925C87BC0006A5C2B /* Mango@3x.png */,
+				CFBE909C25C87BC0006A5C2B /* DodgerBlue@2x.png */,
+				CFBE90A125C87BC1006A5C2B /* DodgerBlue@3x.png */,
+				CFBE908725C87BBB006A5C2B /* Mango@2x.png */,
+				CFBE908825C87BBB006A5C2B /* RainDropiPad@2x.png */,
+				CFBE909025C87BBD006A5C2B /* WindyDay@3x.png */,
+				CFBE909E25C87BC1006A5C2B /* SpringGreen@2x.png */,
+				CFBE90B225C87BC5006A5C2B /* MightyUmbrella@3x.png */,
+				CFBE90B525C87BC6006A5C2B /* MangoiPad@3x.png */,
+				CFBE90A925C87BC3006A5C2B /* TwilightZone@2x.png */,
+				CFBE90AC25C87BC4006A5C2B /* RainDrop@3x.png */,
+				CFBE90B025C87BC5006A5C2B /* TwilightZoneiPad@2x.png */,
+				CFBE90A625C87BC3006A5C2B /* WindyDayiPad@2x.png */,
+				CFBE90A325C87BC2006A5C2B /* LightsOutiPad@2x.png */,
+				CFBE90BC25C87BC8006A5C2B /* OrchidiPad@3x.png */,
+				CFBE909125C87BBE006A5C2B /* OrchidiPad@2x.png */,
+				CFBE90BA25C87BC7006A5C2B /* LightsOutiPad@3x.png */,
+				CFBE909725C87BBF006A5C2B /* WindyDayiPad@3x.png */,
+				CFBE909525C87BBF006A5C2B /* TwilightZoneiPad@3x.png */,
+				CFBE908525C87BBB006A5C2B /* RainDrop@2x.png */,
+				CFBE908E25C87BBD006A5C2B /* TwilightZone@3x.png */,
+				CFBE908B25C87BBC006A5C2B /* MangoiPad@2x.png */,
+				CFBE909825C87BBF006A5C2B /* Moonlight@3x.png */,
+				CFBE908F25C87BBD006A5C2B /* DodgerBlueiPad@2x.png */,
+				CFBE90B125C87BC5006A5C2B /* MightyUmbrellaiPad@3x.png */,
+				CFBE90B625C87BC6006A5C2B /* Orchid@2x.png */,
+				CFBE909425C87BBE006A5C2B /* MaximumRed@2x.png */,
+				CFBE90A025C87BC1006A5C2B /* PlumpPurpleiPad@2x.png */,
+				CFBE90A525C87BC2006A5C2B /* MoonlightiPad@3x.png */,
+				CFBE909A25C87BC0006A5C2B /* Thunderstorm@3x.png */,
+				CFBE90BB25C87BC8006A5C2B /* MaximumRediPad@3x.png */,
+				CFBE908625C87BBB006A5C2B /* MaximumRediPad@2x.png */,
+				CFBE90A825C87BC3006A5C2B /* DodgerBluePad@3x.png */,
+				CFBE90AB25C87BC4006A5C2B /* Thunderstorm@2x.png */,
+				CFBE908925C87BBC006A5C2B /* MoonlightiPad@2x.png */,
+				CFBE908C25C87BBC006A5C2B /* PlumpPurpleiPad@3x.png */,
+				CFBE90B725C87BC7006A5C2B /* MaximumRed@3x.png */,
+				CFBE909325C87BBE006A5C2B /* Orchid@3x.png */,
+				CFBE90A425C87BC2006A5C2B /* MightyUmbrellaiPad@2x.png */,
+				CFBE90B425C87BC6006A5C2B /* Moonlight@2x.png */,
 			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		CFAF60CD242E48E1004FB831 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				CFB1E84420E5972200972F19 /* LocationCell.swift */,
-				CF824C3820E84EEB00E5F0A7 /* Locations.xcdatamodeld */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		CFAF60E8242E498D004FB831 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				CFAF60CF242E48E1004FB831 /* SettingsModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		CFAF60F1242E4BEE004FB831 /* Forecast */ = {
-			isa = PBXGroup;
-			children = (
-				CF90306D244264BD00538D52 /* Controllers */,
-				CFEF243125B9C9FE001B79E8 /* Models */,
-			);
-			path = Forecast;
-			sourceTree = "<group>";
-		};
-		CFAF60F5242E4CA5004FB831 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				CFD6670B24E3251600CFB98D /* Dynamic App Icon */,
-				CF6E4AA820DACFD9002349A7 /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		CFD10765241FDC8F007E1087 /* Locations */ = {
-			isa = PBXGroup;
-			children = (
-				CF90306E244264D500538D52 /* Controllers */,
-				CFAF60CD242E48E1004FB831 /* Models */,
-			);
-			path = Locations;
-			sourceTree = "<group>";
-		};
-		CFD3DF7C242E617B005DA2D2 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				CF4205AB25B78B68002C2F97 /* DarkSkyAPI.swift */,
-				CFD612AC259B8C9300FBC677 /* OpenWeatherAPI.swift */,
-				CFAF60CE242E48E1004FB831 /* InputFunctions.swift */,
-				CF602EA6247ED28E00E05491 /* LoadingScreenModel.swift */,
-				CF1B83C0252269C400F305A6 /* AppIntentVocabulary.plist */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		CFD6670B24E3251600CFB98D /* Dynamic App Icon */ = {
-			isa = PBXGroup;
-			children = (
-				CFD6670C24E3251600CFB98D /* ThunderstormiPad@3x.png */,
-				CFD6670D24E3251600CFB98D /* LightsOut@2x.png */,
-				CFD6670E24E3251600CFB98D /* SpringGreeniPad@2x.png */,
-				CFD6670F24E3251600CFB98D /* 8-BitiPad@2x.png */,
-				CFD6671024E3251600CFB98D /* 8-Bit@2x.png */,
-				CFD6671124E3251600CFB98D /* PlumpPurple@3x.png */,
-				CFD6671224E3251600CFB98D /* PlumpPurple@2x.png */,
-				CFD6671324E3251600CFB98D /* 8-BitiPad@3x.png */,
-				CFD6671424E3251600CFB98D /* 8-Bit@3x.png */,
-				CFD6671524E3251600CFB98D /* SpringGreeniPad@3x.png */,
-				CFD6671624E3251600CFB98D /* LightsOut@3x.png */,
-				CFD6671724E3251600CFB98D /* ThunderstormiPad@2x.png */,
-				CFD6671824E3251600CFB98D /* MightyUmbrella@2x.png */,
-				CFD6671924E3251600CFB98D /* SpringGreen@3x.png */,
-				CFD6671A24E3251600CFB98D /* WindyDay@2x.png */,
-				CFD6671B24E3251600CFB98D /* RainDropiPad@3x.png */,
-				CFD6671C24E3251600CFB98D /* Mango@3x.png */,
-				CFD6671D24E3251600CFB98D /* DodgerBlue@2x.png */,
-				CFD6671E24E3251600CFB98D /* DodgerBlue@3x.png */,
-				CFD6671F24E3251600CFB98D /* Mango@2x.png */,
-				CFD6672024E3251600CFB98D /* RainDropiPad@2x.png */,
-				CFD6672124E3251600CFB98D /* WindyDay@3x.png */,
-				CFD6672224E3251600CFB98D /* SpringGreen@2x.png */,
-				CFD6672324E3251600CFB98D /* MightyUmbrella@3x.png */,
-				CFD6672424E3251600CFB98D /* MangoiPad@3x.png */,
-				CFD6672524E3251600CFB98D /* TwilightZone@2x.png */,
-				CFD6672624E3251600CFB98D /* RainDrop@3x.png */,
-				CFD6672724E3251600CFB98D /* TwilightZoneiPad@2x.png */,
-				CFD6672824E3251600CFB98D /* WindyDayiPad@2x.png */,
-				CFD6672924E3251600CFB98D /* LightsOutiPad@2x.png */,
-				CFD6672A24E3251600CFB98D /* OrchidiPad@3x.png */,
-				CFD6672B24E3251600CFB98D /* OrchidiPad@2x.png */,
-				CFD6672C24E3251600CFB98D /* LightsOutiPad@3x.png */,
-				CFD6672D24E3251600CFB98D /* WindyDayiPad@3x.png */,
-				CFD6672E24E3251600CFB98D /* TwilightZoneiPad@3x.png */,
-				CFD6672F24E3251600CFB98D /* RainDrop@2x.png */,
-				CFD6673024E3251600CFB98D /* TwilightZone@3x.png */,
-				CFD6673124E3251600CFB98D /* MangoiPad@2x.png */,
-				CFD6673224E3251600CFB98D /* Moonlight@3x.png */,
-				CFD6673324E3251600CFB98D /* DodgerBlueiPad@2x.png */,
-				CFD6673424E3251600CFB98D /* MightyUmbrellaiPad@3x.png */,
-				CFD6673524E3251600CFB98D /* Orchid@2x.png */,
-				CFD6673624E3251600CFB98D /* MaximumRed@2x.png */,
-				CFD6673724E3251600CFB98D /* PlumpPurpleiPad@2x.png */,
-				CFD6673824E3251600CFB98D /* MoonlightiPad@3x.png */,
-				CFD6673924E3251600CFB98D /* Thunderstorm@3x.png */,
-				CFD6673A24E3251600CFB98D /* MaximumRediPad@3x.png */,
-				CFD6673B24E3251600CFB98D /* MaximumRediPad@2x.png */,
-				CFD6673C24E3251600CFB98D /* DodgerBluePad@3x.png */,
-				CFD6673D24E3251600CFB98D /* Thunderstorm@2x.png */,
-				CFD6673E24E3251600CFB98D /* MoonlightiPad@2x.png */,
-				CFD6673F24E3251600CFB98D /* PlumpPurpleiPad@3x.png */,
-				CFD6674024E3251600CFB98D /* MaximumRed@3x.png */,
-				CFD6674124E3251600CFB98D /* Orchid@3x.png */,
-				CFD6674224E3251600CFB98D /* MightyUmbrellaiPad@2x.png */,
-				CFD6674324E3251600CFB98D /* Moonlight@2x.png */,
-			);
-			name = "Dynamic App Icon";
-			path = "../../../Icon/Dynamic App Icon";
+			path = "Dynamic App Icon";
 			sourceTree = "<group>";
 		};
 		CFD9CDFD2535FD3200CB128E /* Cumulus Widget */ = {
@@ -536,14 +468,6 @@
 				CFE76B4125A11F610040D4C9 /* Cumulus WidgetExtension.entitlements */,
 			);
 			path = "Cumulus Widget";
-			sourceTree = "<group>";
-		};
-		CFEF243125B9C9FE001B79E8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				CFEF243225B9CA0F001B79E8 /* ForecastModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -650,67 +574,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFD6677124E3251600CFB98D /* Thunderstorm@3x.png in Resources */,
-				CFD6675724E3251600CFB98D /* Mango@2x.png in Resources */,
-				CFD6677224E3251600CFB98D /* MaximumRediPad@3x.png in Resources */,
-				CFD6677324E3251600CFB98D /* MaximumRediPad@2x.png in Resources */,
-				CFD6676C24E3251600CFB98D /* MightyUmbrellaiPad@3x.png in Resources */,
-				CFD6676F24E3251600CFB98D /* PlumpPurpleiPad@2x.png in Resources */,
-				CFD6676324E3251600CFB98D /* OrchidiPad@2x.png in Resources */,
-				CFD6674424E3251600CFB98D /* ThunderstormiPad@3x.png in Resources */,
-				CFD6677624E3251600CFB98D /* MoonlightiPad@2x.png in Resources */,
-				CFD6676A24E3251600CFB98D /* Moonlight@3x.png in Resources */,
-				CFD6677524E3251600CFB98D /* Thunderstorm@2x.png in Resources */,
-				CFD6676924E3251600CFB98D /* MangoiPad@2x.png in Resources */,
-				CFD6674E24E3251600CFB98D /* LightsOut@3x.png in Resources */,
-				CFD6675A24E3251600CFB98D /* SpringGreen@2x.png in Resources */,
-				CFD6675024E3251600CFB98D /* MightyUmbrella@2x.png in Resources */,
-				CFD6675B24E3251600CFB98D /* MightyUmbrella@3x.png in Resources */,
-				CFD6677B24E3251600CFB98D /* Moonlight@2x.png in Resources */,
-				CFD6675924E3251600CFB98D /* WindyDay@3x.png in Resources */,
-				CFD6674B24E3251600CFB98D /* 8-BitiPad@3x.png in Resources */,
-				CFD6675624E3251600CFB98D /* DodgerBlue@3x.png in Resources */,
-				CFD6676024E3251600CFB98D /* WindyDayiPad@2x.png in Resources */,
-				CFD6676624E3251600CFB98D /* TwilightZoneiPad@3x.png in Resources */,
-				CFD6676224E3251600CFB98D /* OrchidiPad@3x.png in Resources */,
-				CFD6676124E3251600CFB98D /* LightsOutiPad@2x.png in Resources */,
-				CFD6676524E3251600CFB98D /* WindyDayiPad@3x.png in Resources */,
-				CFD6677824E3251600CFB98D /* MaximumRed@3x.png in Resources */,
-				CFD6674A24E3251600CFB98D /* PlumpPurple@2x.png in Resources */,
-				CFD6676724E3251600CFB98D /* RainDrop@2x.png in Resources */,
 				CF81A5EF2519443100ED93A2 /* Main.storyboard in Resources */,
-				CFD6674F24E3251600CFB98D /* ThunderstormiPad@2x.png in Resources */,
 				CF5EB7BA2435778F006FF5A5 /* Launch Screen.storyboard in Resources */,
-				CFD6675F24E3251600CFB98D /* TwilightZoneiPad@2x.png in Resources */,
-				CFD6676E24E3251600CFB98D /* MaximumRed@2x.png in Resources */,
-				CFD6676424E3251600CFB98D /* LightsOutiPad@3x.png in Resources */,
-				CFD6675E24E3251600CFB98D /* RainDrop@3x.png in Resources */,
-				CFD6677424E3251600CFB98D /* DodgerBluePad@3x.png in Resources */,
-				CFD6677A24E3251600CFB98D /* MightyUmbrellaiPad@2x.png in Resources */,
 				CF4A0E5F2108B1B30061CAAD /* Default-568h@2x.png in Resources */,
-				CFD6674824E3251600CFB98D /* 8-Bit@2x.png in Resources */,
-				CFD6677724E3251600CFB98D /* PlumpPurpleiPad@3x.png in Resources */,
-				CFD6675824E3251600CFB98D /* RainDropiPad@2x.png in Resources */,
-				CFD6676B24E3251600CFB98D /* DodgerBlueiPad@2x.png in Resources */,
-				CFD6674C24E3251600CFB98D /* 8-Bit@3x.png in Resources */,
-				CFD6677024E3251600CFB98D /* MoonlightiPad@3x.png in Resources */,
-				CFD6674924E3251600CFB98D /* PlumpPurple@3x.png in Resources */,
 				CFFB787720DF0B44008216F8 /* License in Resources */,
-				CFD6674724E3251600CFB98D /* 8-BitiPad@2x.png in Resources */,
-				CFD6674624E3251600CFB98D /* SpringGreeniPad@2x.png in Resources */,
-				CFD6676D24E3251600CFB98D /* Orchid@2x.png in Resources */,
-				CFD6675124E3251600CFB98D /* SpringGreen@3x.png in Resources */,
-				CFD6675D24E3251600CFB98D /* TwilightZone@2x.png in Resources */,
-				CFD6675424E3251600CFB98D /* Mango@3x.png in Resources */,
-				CFD6677924E3251600CFB98D /* Orchid@3x.png in Resources */,
 				CFEE78B024705168001DE90B /* Assets.xcassets in Resources */,
-				CFD6675C24E3251600CFB98D /* MangoiPad@3x.png in Resources */,
-				CFD6675224E3251600CFB98D /* WindyDay@2x.png in Resources */,
-				CFD6675324E3251600CFB98D /* RainDropiPad@3x.png in Resources */,
-				CFD6674524E3251600CFB98D /* LightsOut@2x.png in Resources */,
-				CFD6674D24E3251600CFB98D /* SpringGreeniPad@3x.png in Resources */,
-				CFD6675524E3251600CFB98D /* DodgerBlue@2x.png in Resources */,
-				CFD6676824E3251600CFB98D /* TwilightZone@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,21 +699,22 @@
 				CFD790DA2151C4CD007E489D /* ThemeTableViewController.swift in Sources */,
 				CF6E4AA420DACFD8002349A7 /* ForecastViewController.swift in Sources */,
 				CFF0A964242E9A2500FDDAF1 /* Locations.xcdatamodeld in Sources */,
+				CFBE904F25C878B0006A5C2B /* Toolbar.swift in Sources */,
 				CFAB4446211F3A2000A7E3CB /* ForecastDataTableViewController.swift in Sources */,
 				CFD1CD2320EE9544004ED831 /* SettingsTableViewController.swift in Sources */,
-				CFAF60D7242E48E1004FB831 /* SettingsModel.swift in Sources */,
 				CFC186152131B8A800F56AD0 /* CumulusPlusTableViewController.swift in Sources */,
-				CFAF60D3242E48E1004FB831 /* InputFunctions.swift in Sources */,
-				CF42059625B78B25002C2F97 /* VariableExtensions.swift in Sources */,
+				CFBE906125C87907006A5C2B /* Doubles.swift in Sources */,
+				CFBE905D25C87901006A5C2B /* Strings.swift in Sources */,
+				CFBE907225C879DD006A5C2B /* Functions.swift in Sources */,
+				CFBE906825C879A8006A5C2B /* UISetup.swift in Sources */,
 				CFB693E520F8577200DE669A /* PrivacyAndTermsViewController.swift in Sources */,
-				CF42059F25B78B34002C2F97 /* DateExtensions.swift in Sources */,
-				CF42058D25B78B1D002C2F97 /* UIKitExtensions.swift in Sources */,
+				CFBE904B25C87898006A5C2B /* Color.swift in Sources */,
 				CFEA0F7C24D437B100E62E5F /* WeatherUnitsViewController.swift in Sources */,
-				CFEF243325B9CA0F001B79E8 /* ForecastModel.swift in Sources */,
 				CF4A0E612108B5580061CAAD /* AppIconTableViewController.swift in Sources */,
 				CFA3259E20E44DE500F4AFBD /* LocationsViewController.swift in Sources */,
-				CF602EA9247ED3D200E05491 /* LoadingScreenModel.swift in Sources */,
+				CFBE906E25C879C0006A5C2B /* Variables.swift in Sources */,
 				CF4205AC25B78B68002C2F97 /* DarkSkyAPI.swift in Sources */,
+				CFBE905725C878CA006A5C2B /* Date.swift in Sources */,
 				CFD5E8FC20E669B0002A5F0C /* AcknowledgementsViewController.swift in Sources */,
 				CF6E4AA220DACFD8002349A7 /* AppDelegate.swift in Sources */,
 				CFD612AD259B8C9300FBC677 /* OpenWeatherAPI.swift in Sources */,
@@ -857,15 +726,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF4205EA25B78D8D002C2F97 /* SettingsModel.swift in Sources */,
-				CF42059925B78B25002C2F97 /* VariableExtensions.swift in Sources */,
-				CFD9CE242535FE7700CB128E /* InputFunctions.swift in Sources */,
+				CFBE90D025C87C83006A5C2B /* Toolbar.swift in Sources */,
 				CFD9CDFF2535FD3200CB128E /* Cumulus_Widget.swift in Sources */,
+				CFBE90D425C87C83006A5C2B /* Color.swift in Sources */,
+				CFBE90D125C87C83006A5C2B /* Strings.swift in Sources */,
 				CF4205E525B78D0B002C2F97 /* OpenWeatherAPI.swift in Sources */,
+				CFBE90D325C87C83006A5C2B /* Doubles.swift in Sources */,
 				CF4205AF25B78B68002C2F97 /* DarkSkyAPI.swift in Sources */,
-				CF4205A225B78B34002C2F97 /* DateExtensions.swift in Sources */,
-				CF42059025B78B1D002C2F97 /* UIKitExtensions.swift in Sources */,
-				CFEF243625B9CA0F001B79E8 /* ForecastModel.swift in Sources */,
+				CFBE90C925C87C30006A5C2B /* UISetup.swift in Sources */,
+				CFBE90CC25C87C32006A5C2B /* Variables.swift in Sources */,
+				CFBE90D225C87C83006A5C2B /* Date.swift in Sources */,
+				CFBE90CD25C87C3E006A5C2B /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1005,7 +876,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.18;
+				CURRENT_PROJECT_VERSION = 2.2.19;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1030,7 +901,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.18;
+				CURRENT_PROJECT_VERSION = 2.2.19;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1054,7 +925,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Widget/Cumulus WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.18;
+				CURRENT_PROJECT_VERSION = 2.2.19;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "Cumulus Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1082,7 +953,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Widget/Cumulus WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.18;
+				CURRENT_PROJECT_VERSION = 2.2.19;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "Cumulus Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

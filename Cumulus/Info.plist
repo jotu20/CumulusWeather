@@ -36,6 +36,24 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+            <key>AppIcon-DarkDodgerBlue</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>DarkDodgerBlue</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+            <key>AppIcon-LightDodgerBlue</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>LightDodgerBlue</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
 			<key>AppIcon-LightsOut</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -54,6 +72,24 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+            <key>AppIcon-LightMango</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>LightMango</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+            <key>AppIcon-DarkMango</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>DarkMango</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
 			<key>AppIcon-MaximumRed</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -63,6 +99,24 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+            <key>AppIcon-LightMaximumRed</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>LightMaximumRed</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+            <key>AppIcon-DarkMaximumRed</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>DarkMaximumRed</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
 			<key>AppIcon-MightyUmbrella</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -90,6 +144,24 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+            <key>AppIcon-LightOrchid</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>LightOrchid</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+            <key>AppIcon-DarkOrchid</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>DarkOrchid</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
 			<key>AppIcon-PlumpPurple</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -99,6 +171,24 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+            <key>AppIcon-LightPlumpPurple</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>LightPlumpPurple</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+            <key>AppIcon-DarkPlumpPurple</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>DarkPlumpPurple</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
 			<key>AppIcon-RainDrop</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -117,6 +207,24 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+            <key>AppIcon-LightSpringGreen</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>LightSpringGreen</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+            <key>AppIcon-DarkSpringGreen</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>DarkSpringGreen</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
 			<key>AppIcon-Thunderstorm</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -144,6 +252,15 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+            <key>AppIcon-PartlyCloudy</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>PartlyCloudy</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
 		</dict>
 		<key>CFBundlePrimaryIcon</key>
 		<dict>
@@ -177,6 +294,24 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+            <key>AppIcon-LightDodgerBlue</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>LightDodgerBlueiPad</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+            <key>AppIcon-DarkDodgerBlue</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>DarkDodgerBlueiPad</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
 			<key>AppIcon-LightsOut</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -204,6 +339,24 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+            <key>AppIcon-LightMaximumRed</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>LightMaximumRediPad</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+            <key>AppIcon-DarkMaximumRed</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>DarkMaximumRediPad</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
 			<key>AppIcon-MightyUmbrella</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -231,6 +384,24 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+            <key>AppIcon-LightOrchid</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>LightOrchidiPad</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+            <key>AppIcon-DarkOrchid</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>DarkOrchidiPad</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
 			<key>AppIcon-PlumpPurple</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -240,6 +411,24 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+            <key>AppIcon-LightPlumpPurple</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>LightPlumpPurpleiPad</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+            <key>AppIcon-DarkPlumpPurple</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>DarkPlumpPurpleiPad</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
 			<key>AppIcon-RainDrop</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -258,6 +447,24 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+            <key>AppIcon-LightSpringGreen</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>LightSpringGreeniPad</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+            <key>AppIcon-DarkSpringGreen</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>DarkSpringGreeniPad</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
 			<key>AppIcon-Thunderstorm</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -285,6 +492,15 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+            <key>AppIcon-PartlyCloudy</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>PartlyCloudyiPad</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
 		</dict>
 		<key>CFBundlePrimaryIcon</key>
 		<dict>

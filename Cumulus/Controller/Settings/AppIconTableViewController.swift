@@ -601,13 +601,12 @@ class AppIconViewController: UIViewController {
             windyDayView.backgroundColor = color
             
             if setIcon == true {
-                
-            }
-            UIApplication.shared.setAlternateIconName("AppIcon-WindyDay") { error in
-                if let error = error {
-                    print(error.localizedDescription)
-                } else {
-                    print("Success! Icon has been changed")
+                UIApplication.shared.setAlternateIconName("AppIcon-WindyDay") { error in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    } else {
+                        print("Success! Icon has been changed")
+                    }
                 }
             }
         }

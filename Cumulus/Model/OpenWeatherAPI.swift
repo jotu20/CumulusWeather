@@ -215,9 +215,7 @@ func conditionIcon(id: Int, main: String, icon: String) -> String {
     } else if icon == "04d" || icon == "04n" || main == "clouds" {
         // broken clouds
         conditionIcon = "cloudy"
-    }
-    
-    if id == 500 {
+    } else if id == 500 {
         conditionIcon = "light-rain"
     } else if id == 501 {
         conditionIcon = "moderate-rain"

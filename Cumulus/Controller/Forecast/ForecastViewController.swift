@@ -1385,33 +1385,33 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         setDailyOutlets()
         
         if (defaults.string(forKey: "dataSource") == "OpenWeather") {
-            if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Precip") == true) {
+            if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Precipitation") == true) {
                 changedHourlyValues = "Precip"
-            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Temp") == true) {
+            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Temperature") == true) {
                 changedHourlyValues = "Temp"
             } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Humidity") == true) {
                 changedHourlyValues = "Humidity"
-            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("UV Index") == true) {
+            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("UV index") == true) {
                 changedHourlyValues = "UV Index"
-            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Wind") == true) {
+            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Wind speed") == true) {
                 changedHourlyValues = "Wind"
-            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Cloud") == true) {
+            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Cloud cover") == true) {
                 changedHourlyValues = "Cloud"
             }
         } else {
-            if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Precip") == true) {
+            if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Precipitation") == true) {
                 changedHourlyValues = "Precip"
-            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Accum") == true) {
+            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Accumulation") == true) {
                 changedHourlyValues = "Accum"
-            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Temp") == true) {
+            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Temperature") == true) {
                 changedHourlyValues = "Temp"
             } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Humidity") == true) {
                 changedHourlyValues = "Humidity"
-            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("UV Index") == true) {
+            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("UV index") == true) {
                 changedHourlyValues = "UV Index"
-            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Wind") == true) {
+            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Wind speed") == true) {
                 changedHourlyValues = "Wind"
-            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Cloud") == true) {
+            } else if (defaults.string(forKey: "defaultHourlyCondition")?.contains("Cloud cover") == true) {
                 changedHourlyValues = "Cloud"
             }
         }

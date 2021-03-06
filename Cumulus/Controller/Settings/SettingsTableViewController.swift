@@ -15,6 +15,8 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     @IBOutlet weak var weatherUnitsTableViewCell: UITableViewCell!
     @IBOutlet weak var weatherUnitsLabel: UILabel!
     
+    @IBOutlet weak var defaultSettingsTableViewCell: UITableViewCell!
+    
     @IBOutlet weak var twentyFourHourClockSwitch: UISwitch!
     @IBOutlet weak var hapticFeedbackTableCell: UITableViewCell!
     @IBOutlet weak var hapticFeedbackSwitch: UISwitch!
@@ -37,8 +39,6 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         self.navigationController?.navigationBar.topItem?.title = "Settings"
         self.tableView.tableFooterView = UIView(frame: .zero)
         
-        weatherUnitsLabel.text = defaults.string(forKey: "weatherUnits")
-        
         if UIDevice.current.userInterfaceIdiom == .pad {
             hapticFeedbackTableCell.isHidden = true
         } else {
@@ -57,6 +57,7 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
             hapticFeedbackSwitch.isOn = false
         }
         
+        weatherUnitsLabel.text = defaults.string(forKey: "weatherUnits")
         forecastDataLabel.text = defaults.string(forKey: "dataSource")
         appIconLabel.text = defaults.string(forKey: "userSavedAppIconString")
         themeLabel.text = defaults.string(forKey: "userSavedColorString")
@@ -103,10 +104,6 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         
         themeTableViewCell.detailTextLabel?.textColor = color
         themeLabel.textColor = color
-    }
-    
-    @IBAction func weatherUnitsTapped(_ sender: UITapGestureRecognizer) {
-        performSegue(withIdentifier: "weatherUnitsPush", sender: nil)
     }
     
     @IBAction func twentyFourHourClockSwitchTapped(_ sender: UISwitch) {
@@ -203,11 +200,19 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         }
     }
     
+    @IBAction func weatherUnitsTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "weatherUnitsPush", sender: nil)
+    }
+    
+    @IBAction func defaultSettingsTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "defaultSettingsPush", sender: nil)
+    }
+    
     @IBAction func forecastDataTapped(_ sender: UITapGestureRecognizer) {
         if (defaults.bool(forKey: "cumulusPlus") == false) {
             performSegue(withIdentifier: "cumulusPlusPush", sender: nil)
         } else {
-            performSegue(withIdentifier: "forecastDataPush", sender: nil)
+            performSegue(withIdentifier: "dataSourcePush", sender: nil)
         }
     }
     

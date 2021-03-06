@@ -93,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         if (defaults.string(forKey: "defaultHourlyCondition") == nil) || (defaults.bool(forKey: "cumulusPlus") == false) {
-            defaults.set("Precip (%)", forKey: "defaultHourlyCondition")
+            defaults.set("Precipitation", forKey: "defaultHourlyCondition")
         }
         
         if (defaults.string(forKey: "defaultConditionIcons") == nil) || (defaults.bool(forKey: "cumulusPlus") == false) {

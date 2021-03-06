@@ -30,10 +30,6 @@ class DefaultSettingsTableViewController: UITableViewController {
         setupBarButtonColor(button: doneBarButton)
         self.navigationItem.rightBarButtonItem = doneBarButton
         setSelectedCheckMark()
-
-        if (defaults.string(forKey: "dataSource") == "OpenWeather") {
-            accumulationCell.isHidden = true
-        }
         
         if (defaults.string(forKey: "defaultHourlyCondition")?.isEmpty == true) {
             defaultHourlyCondition = "Precipitation"
@@ -67,10 +63,12 @@ class DefaultSettingsTableViewController: UITableViewController {
     }
     
     @IBAction func accumulationTapped(_ sender: UITapGestureRecognizer) {
-        weatherLoaded = false
-        defaultHourlyCondition = "Accumulation"
-        defaults.set(defaultHourlyCondition, forKey: "defaultHourlyCondition")
-        setSelectedCheckMark()
+        if (defaults.string(forKey: "dataSource") == "Dark Sky") {
+            weatherLoaded = false
+            defaultHourlyCondition = "Accumulation"
+            defaults.set(defaultHourlyCondition, forKey: "defaultHourlyCondition")
+            setSelectedCheckMark()
+        }
     }
     
     @IBAction func temperatureTapped(_ sender: UITapGestureRecognizer) {

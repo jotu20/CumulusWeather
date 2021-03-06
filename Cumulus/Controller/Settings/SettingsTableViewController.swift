@@ -18,7 +18,6 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     @IBOutlet weak var defaultSettingsTableViewCell: UITableViewCell!
     
     @IBOutlet weak var twentyFourHourClockSwitch: UISwitch!
-    @IBOutlet weak var hapticFeedbackTableCell: UITableViewCell!
     @IBOutlet weak var hapticFeedbackSwitch: UISwitch!
     
     @IBOutlet weak var cumulusPlusTableViewCell: UITableViewCell!
@@ -38,12 +37,6 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.topItem?.title = "Settings"
         self.tableView.tableFooterView = UIView(frame: .zero)
-        
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            hapticFeedbackTableCell.isHidden = true
-        } else {
-            hapticFeedbackTableCell.isHidden = false
-        }
         
         if (defaults.bool(forKey: "twentyFourHourClockEnabled") == true) {
             twentyFourHourClockSwitch.isOn = true

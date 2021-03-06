@@ -35,8 +35,14 @@ class DefaultSettingsTableViewController: UITableViewController {
             accumulationCell.isHidden = true
         }
         
+        if (defaults.string(forKey: "defaultHourlyCondition")?.isEmpty == true) {
+            defaultHourlyCondition = "Precipitation"
+            defaults.set(defaultHourlyCondition, forKey: "defaultHourlyCondition")
+            setSelectedCheckMark()
+        }
+        
         if (defaults.string(forKey: "defaultConditionIcons")?.isEmpty == true) {
-            defaultConditionIcons = "Default"
+            defaultConditionIcons = ""
             defaults.set(defaultConditionIcons, forKey: "defaultConditionIcons")
             UserDefaults(suiteName: "group.com.josephszafarowicz.weather")!.set(defaultConditionIcons, forKey: "setIcons")
             setSelectedCheckMark()

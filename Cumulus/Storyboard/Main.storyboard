@@ -173,6 +173,7 @@
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="FP7-Zg-Ryw" appends="YES" id="KeC-qR-l7W"/>
+                                            <segue destination="0Fj-oA-sif" kind="show" identifier="defaultSettingsPush" id="Epx-ov-A9a"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="f5F-dJ-1gI">
@@ -326,6 +327,7 @@
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="3ex-04-jIs" appends="YES" id="Dnd-GS-FGr"/>
+                                            <segue destination="XnH-zv-orh" kind="show" identifier="forecastDataPush" id="hwN-7A-lK3"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="D5E-zy-Ram">
@@ -545,7 +547,6 @@
                 <tapGestureRecognizer id="3ex-04-jIs">
                     <connections>
                         <action selector="forecastDataTapped:" destination="QJa-Ff-GNZ" id="g4d-If-u02"/>
-                        <segue destination="XnH-zv-orh" kind="show" identifier="dataSourcePush" id="wtc-jR-v7x"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="xqS-zz-pds">
@@ -576,7 +577,6 @@
                 <tapGestureRecognizer id="FP7-Zg-Ryw">
                     <connections>
                         <action selector="defaultSettingsTapped:" destination="QJa-Ff-GNZ" id="osI-hV-G8O"/>
-                        <segue destination="0Fj-oA-sif" kind="show" identifier="defaultSettingsPush" id="gif-HG-rpZ"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

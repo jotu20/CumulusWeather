@@ -205,14 +205,18 @@ class SettingsTableViewController: UITableViewController, UITabBarControllerDele
     }
     
     @IBAction func defaultSettingsTapped(_ sender: UITapGestureRecognizer) {
-        performSegue(withIdentifier: "defaultSettingsPush", sender: nil)
+        if (defaults.bool(forKey: "cumulusPlus") == false) {
+            performSegue(withIdentifier: "cumulusPlusPush", sender: nil)
+        } else {
+            performSegue(withIdentifier: "defaultSettingsPush", sender: nil)
+        }
     }
     
     @IBAction func forecastDataTapped(_ sender: UITapGestureRecognizer) {
         if (defaults.bool(forKey: "cumulusPlus") == false) {
             performSegue(withIdentifier: "cumulusPlusPush", sender: nil)
         } else {
-            performSegue(withIdentifier: "dataSourcePush", sender: nil)
+            performSegue(withIdentifier: "forecastDataPush", sender: nil)
         }
     }
     

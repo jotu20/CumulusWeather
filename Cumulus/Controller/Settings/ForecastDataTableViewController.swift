@@ -17,7 +17,7 @@ class ForecastDataTableViewController: UITableViewController, UITabBarController
         super.viewDidLoad()
         self.tabBarController?.delegate = self
         self.navigationController?.isNavigationBarHidden = false
-        self.navigationController?.navigationBar.topItem?.title = "Default Settings"
+        self.navigationController?.navigationBar.topItem?.title = "Forecast Data"
         self.tableView.dataSource = self
         self.tableView.tableFooterView = UIView(frame: .zero)
         weatherLoaded = true

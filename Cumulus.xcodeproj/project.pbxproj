@@ -239,6 +239,8 @@
 		CF8C797D25E8006300220044 /* SpringGreeniPad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8C78A525E8006300220044 /* SpringGreeniPad@3x.png */; };
 		CF94774B2167E48E00DA8B38 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF94774A2167E48E00DA8B38 /* Intents.framework */; };
 		CFA3259E20E44DE500F4AFBD /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3259D20E44DE500F4AFBD /* LocationsViewController.swift */; };
+		CFA5487025FFB80900102006 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA5486F25FFB80900102006 /* Constants.swift */; };
+		CFA5487725FFB83E00102006 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA5486F25FFB80900102006 /* Constants.swift */; };
 		CFAB4446211F3A2000A7E3CB /* DefaultSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB4445211F3A2000A7E3CB /* DefaultSettingsTableViewController.swift */; };
 		CFB1E84520E5972200972F19 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1E84420E5972200972F19 /* LocationCell.swift */; };
 		CFB693E520F8577200DE669A /* PrivacyAndTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB693E420F8577200DE669A /* PrivacyAndTermsViewController.swift */; };
@@ -247,10 +249,8 @@
 		CFBE905725C878CA006A5C2B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE905625C878CA006A5C2B /* Date.swift */; };
 		CFBE905D25C87901006A5C2B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE905C25C87901006A5C2B /* Strings.swift */; };
 		CFBE906125C87907006A5C2B /* Doubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE906025C87907006A5C2B /* Doubles.swift */; };
-		CFBE906825C879A8006A5C2B /* UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE906725C879A8006A5C2B /* UISetup.swift */; };
 		CFBE906E25C879C0006A5C2B /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE906D25C879C0006A5C2B /* Variables.swift */; };
 		CFBE907225C879DD006A5C2B /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE907125C879DD006A5C2B /* Functions.swift */; };
-		CFBE90C925C87C30006A5C2B /* UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE906725C879A8006A5C2B /* UISetup.swift */; };
 		CFBE90CC25C87C32006A5C2B /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE906D25C879C0006A5C2B /* Variables.swift */; };
 		CFBE90CD25C87C3E006A5C2B /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE907125C879DD006A5C2B /* Functions.swift */; };
 		CFBE90D025C87C83006A5C2B /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE904E25C878B0006A5C2B /* Toolbar.swift */; };
@@ -447,6 +447,7 @@
 		CF94774A2167E48E00DA8B38 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		CF94775A2168080A00DA8B38 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		CFA3259D20E44DE500F4AFBD /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		CFA5486F25FFB80900102006 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CFAB4445211F3A2000A7E3CB /* DefaultSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingsTableViewController.swift; sourceTree = "<group>"; };
 		CFB1E84420E5972200972F19 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		CFB693E420F8577200DE669A /* PrivacyAndTermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyAndTermsViewController.swift; sourceTree = "<group>"; };
@@ -455,7 +456,6 @@
 		CFBE905625C878CA006A5C2B /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		CFBE905C25C87901006A5C2B /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		CFBE906025C87907006A5C2B /* Doubles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doubles.swift; sourceTree = "<group>"; };
-		CFBE906725C879A8006A5C2B /* UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISetup.swift; sourceTree = "<group>"; };
 		CFBE906D25C879C0006A5C2B /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		CFBE907125C879DD006A5C2B /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		CFC186142131B8A800F56AD0 /* CumulusPlusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CumulusPlusTableViewController.swift; sourceTree = "<group>"; };
@@ -591,8 +591,8 @@
 		CFBE906625C8794E006A5C2B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				CFBE906725C879A8006A5C2B /* UISetup.swift */,
 				CFBE906D25C879C0006A5C2B /* Variables.swift */,
+				CFA5486F25FFB80900102006 /* Constants.swift */,
 				CFBE907125C879DD006A5C2B /* Functions.swift */,
 			);
 			path = Helper;
@@ -1235,6 +1235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFA5487025FFB80900102006 /* Constants.swift in Sources */,
 				CFD790DA2151C4CD007E489D /* ThemeTableViewController.swift in Sources */,
 				CF6E4AA420DACFD8002349A7 /* ForecastViewController.swift in Sources */,
 				CFF0A964242E9A2500FDDAF1 /* Locations.xcdatamodeld in Sources */,
@@ -1245,7 +1246,6 @@
 				CFBE906125C87907006A5C2B /* Doubles.swift in Sources */,
 				CFBE905D25C87901006A5C2B /* Strings.swift in Sources */,
 				CFBE907225C879DD006A5C2B /* Functions.swift in Sources */,
-				CFBE906825C879A8006A5C2B /* UISetup.swift in Sources */,
 				CFB693E520F8577200DE669A /* PrivacyAndTermsViewController.swift in Sources */,
 				CFBE904B25C87898006A5C2B /* Color.swift in Sources */,
 				CFEA0F7C24D437B100E62E5F /* WeatherUnitsViewController.swift in Sources */,
@@ -1273,10 +1273,10 @@
 				CF4205E525B78D0B002C2F97 /* OpenWeatherAPI.swift in Sources */,
 				CFBE90D325C87C83006A5C2B /* Doubles.swift in Sources */,
 				CF4205AF25B78B68002C2F97 /* DarkSkyAPI.swift in Sources */,
-				CFBE90C925C87C30006A5C2B /* UISetup.swift in Sources */,
 				CFBE90CC25C87C32006A5C2B /* Variables.swift in Sources */,
 				CFBE90D225C87C83006A5C2B /* Date.swift in Sources */,
 				CFBE90CD25C87C3E006A5C2B /* Functions.swift in Sources */,
+				CFA5487725FFB83E00102006 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1416,7 +1416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.24;
+				CURRENT_PROJECT_VERSION = 2.2.25;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1424,7 +1424,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2.6;
+				MARKETING_VERSION = 2.2.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1441,7 +1441,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cumulus/Cumulus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.24;
+				CURRENT_PROJECT_VERSION = 2.2.25;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "$(SRCROOT)/Cumulus/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1449,7 +1449,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2.6;
+				MARKETING_VERSION = 2.2.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Cumulus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1465,7 +1465,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Widget/Cumulus WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.24;
+				CURRENT_PROJECT_VERSION = 2.2.25;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "Cumulus Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1474,7 +1474,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.6;
+				MARKETING_VERSION = 2.2.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.josephszafarowicz.Cumulus.Cumulus-Widget";
@@ -1493,7 +1493,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Cumulus Widget/Cumulus WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.24;
+				CURRENT_PROJECT_VERSION = 2.2.25;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				INFOPLIST_FILE = "Cumulus Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1502,7 +1502,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.6;
+				MARKETING_VERSION = 2.2.7;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.josephszafarowicz.Cumulus.Cumulus-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";

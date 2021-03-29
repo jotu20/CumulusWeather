@@ -598,7 +598,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     func setHourLabelAndIcons(hourTimeLabel: UILabel!, hourConditionIcon: UIImageView!, hourCondtionLabel: UILabel!, hourTimeString: String, hourIconString: String, hourConditionString: String) {
         
         hourTimeLabel.text = "\(hourTimeString)"
-        hourConditionIcon.image = UIImage(named: weatherCondition(condition: hourIconString, type: "image", circle: defaults.string(forKey: "defaultConditionIcons")!))
+        hourConditionIcon.image = UIImage(named: setWeatherConditionImage(condition: hourIconString, type: "image", circle: defaults.string(forKey: "defaultConditionIcons")!))
         hourCondtionLabel.text = "\(hourConditionString)"
     }
 
@@ -607,7 +607,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         
         dayViewHeight.constant = 60
         dayLabel.text = "\(dayString.capitalizingFirstLetter())"
-        dayConditionIcon.image = UIImage(named: weatherCondition(condition: dayConditionIconString, type: "daily", circle: defaults.string(forKey: "defaultConditionIcons")!))
+        dayConditionIcon.image = UIImage(named: setWeatherConditionImage(condition: dayConditionIconString, type: "daily", circle: defaults.string(forKey: "defaultConditionIcons")!))
         dayLowLabel.text = "\(dayLow)°"
         dayHighLabel.text = "\(dayHigh)°"
     }
@@ -1425,7 +1425,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         
         currentTemperatureLabel.text = "\(currentTemperature)°"
         currentConditonLabel.text = "\(currentSummary.capitalizingFirstLetter())"
-        currentConditionIcon.image = UIImage(named: weatherCondition(condition: currentCondition.lowercased(), type: "image", circle: defaults.string(forKey: "defaultConditionIcons")!))
+        currentConditionIcon.image = UIImage(named: setWeatherConditionImage(condition: currentCondition.lowercased(), type: "image", circle: defaults.string(forKey: "defaultConditionIcons")!))
         
         // If alert is active show button
         if alertTitle.isEmpty == false {

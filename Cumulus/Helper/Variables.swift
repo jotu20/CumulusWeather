@@ -13,14 +13,9 @@ import GooglePlaces
 
 var newLoad: Bool = false
 var loadFrame: CGRect = CGRect(x: 0, y: 0, width: 815, height: 815)
-let loadingView: UIView = UIView(frame: loadFrame)
-let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
 
-let defaults = UserDefaults.standard
 var cumulusPlus: Bool = false
 var placesClient: GMSPlacesClient!
-
-// Shared Secret for IAPs, API, and Ad keys
 var sharedSecret: String = "28d11783d1a94fb1895f62c10c4db49b"
 
 var clockChanged: Bool = false
@@ -31,24 +26,15 @@ var userInvocationPhrase: String = ""
 var twentyFourHourClockEnabled: Bool = false
 var hapticFeedbackEnabled: Bool = false
 
-// Colors
 var userSavedAppIconString: String = ""
 var autoThemeEnabled: Bool = false
 var userChangedTheme: Bool = false
 var userSavedColorString: String = ""
 var buttonColor: String = ""
-let alertColor = UIColor(rgb: 0xEA2027)
-let orchid = UIColor(rgb: 0xFFA9E7)
-let dodgerBlue = UIColor(rgb: 0x4361EE)
-let mango = UIColor(rgb: 0xFFA500)
-let maximumRed = UIColor(rgb: 0xD81F15)
-let plumpPurple = UIColor(rgb: 0x9572FF)
-let springGreen = UIColor(rgb: 0x137547)
 
 var defaultHourlyCondition: String = ""
 var defaultConditionIcons: String = ""
 
-// Weather Units
 var dataSource: String = ""
 var universalDataSource: String = ""
 var setDataSource: String = ""

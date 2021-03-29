@@ -10,6 +10,500 @@ import Foundation
 import CoreLocation
 import ForecastIO
 
+func setWeatherConditionImage(condition: String, type: String, circle: String) -> String {
+    switch condition {
+    case "clear-night":
+        if type == "text" {
+            return "Clear"
+        } else if type == "daily" {
+            return "Clear\(circle).pdf"
+        } else if type == "widget" {
+            return "ClearNightWidget\(circle)"
+        } else {
+            return "ClearNight\(circle).pdf"
+        }
+    case "clear-day":
+        if type == "text" {
+            return "Clear"
+        } else if type == "daily" {
+            return "Clear\(circle).pdf"
+        } else if type == "widget" {
+            return "ClearWidget\(circle)"
+        } else {
+            return "Clear\(circle).pdf"
+        }
+    case "clear":
+        if type == "text" {
+            return "Clear"
+        } else if type == "daily" {
+            return "Clear\(circle).pdf"
+        } else if type == "widget" {
+            return "ClearWidget\(circle)"
+        } else {
+            return "Clear\(circle).pdf"
+        }
+    case "cloudy":
+        if type == "text" {
+            return "Cloudy"
+        } else if type == "daily" {
+            return "Cloudy\(circle).pdf"
+        } else if type == "widget" {
+            return "CloudyWidget\(circle)"
+        } else {
+            return "Cloudy\(circle).pdf"
+        }
+    case "clouds":
+        if type == "text" {
+            return "Cloudy"
+        } else if type == "daily" {
+            return "Cloudy\(circle).pdf"
+        } else if type == "widget" {
+            return "CloudyWidget\(circle)"
+        } else {
+            return "Cloudy\(circle).pdf"
+        }
+    case "drizzle":
+        if type == "text" {
+            return "Drizzle"
+        } else if type == "daily" {
+            return "Drizzle\(circle).pdf"
+        } else if type == "widget" {
+            return "DrizzleWidget\(circle)"
+        } else {
+            return "Drizzle\(circle).pdf"
+        }
+    case "dust":
+        if type == "text" {
+            return "Dust"
+        } else if type == "daily" {
+            return "Dust\(circle).pdf"
+        } else if type == "widget" {
+            return "DustWidget\(circle)"
+        } else {
+            return "Dust\(circle).pdf"
+        }
+    case "ash":
+        if type == "text" {
+            return "Ash"
+        } else if type == "daily" {
+            return "Dust\(circle).pdf"
+        } else if type == "widget" {
+            return "DustWidget\(circle)"
+        } else {
+            return "Dust\(circle).pdf"
+        }
+    case "sand":
+        if type == "text" {
+            return "Sand"
+        } else if type == "daily" {
+            return "Dust\(circle).pdf"
+        } else if type == "widget" {
+            return "DustWidget\(circle)"
+        } else {
+            return "Dust\(circle).pdf"
+        }
+    case "flurries":
+        if type == "text" {
+            return "Flurries"
+        } else if type == "daily" {
+            return "Flurries\(circle).pdf"
+        } else if type == "widget" {
+            return "FlurriesWidget\(circle)"
+        } else {
+            return "Flurries\(circle).pdf"
+        }
+    case "light-fog":
+        if type == "text" {
+            return "LightFog"
+        } else if type == "daily" {
+            return "LightFog\(circle).pdf"
+        } else if type == "widget" {
+            return "LightFogWidget\(circle)"
+        } else {
+            return "LightFog\(circle).pdf"
+        }
+    case "fog":
+        if type == "text" {
+            return "Fog"
+        } else if type == "daily" {
+            return "Fog\(circle).pdf"
+        } else if type == "widget" {
+            return "FogWidget\(circle)"
+        } else {
+            return "Fog\(circle).pdf"
+        }
+    case "freezing-rain":
+        if type == "text" {
+            return "Freezing rain"
+        } else if type == "daily" {
+            return "FreezingRain\(circle).pdf"
+        } else if type == "widget" {
+            return "FreezingRainWidget\(circle)"
+        } else {
+            return "FreezingRain\(circle).pdf"
+        }
+    case "freezing-rain-heavy":
+        if type == "text" {
+            return "Heavy freezing rain"
+        } else if type == "daily" {
+            return "FreezingRainHeavy\(circle).pdf"
+        } else if type == "widget" {
+            return "FreezingRainHeavyWidget\(circle)"
+        } else {
+            return "FreezingRainHeavy\(circle).pdf"
+        }
+    case "light-ice-pellets":
+        if type == "text" {
+            return "Light ice pellets"
+        } else if type == "daily" {
+            return "LightIcePellets\(circle).pdf"
+        } else if type == "widget" {
+            return "LightIcePelletsWidget\(circle)"
+        } else {
+            return "LightIcePellets\(circle).pdf"
+        }
+    case "ice-pellets":
+        if type == "text" {
+            return "Ice pellets"
+        } else if type == "daily" {
+            return "IcePellets\(circle).pdf"
+        } else if type == "widget" {
+            return "IcePelletsWidget\(circle)"
+        } else {
+            return "IcePellets\(circle).pdf"
+        }
+    case "mist":
+        if type == "text" {
+            return "Mist"
+        } else if type == "daily" {
+            return "Mist\(circle).pdf"
+        } else if type == "widget" {
+            return "MistWidget\(circle)"
+        } else {
+            return "Mist\(circle).pdf"
+        }
+    case "smoke":
+        if type == "text" {
+            return "Smoke"
+        } else if type == "daily" {
+            return "Mist\(circle).pdf"
+        } else if type == "widget" {
+            return "MistWidget\(circle)"
+        } else {
+            return "Mist\(circle).pdf"
+        }
+    case "haze":
+        if type == "text" {
+            return "Haze"
+        } else if type == "daily" {
+            return "Mist\(circle).pdf"
+        } else if type == "widget" {
+            return "MistWidget\(circle)"
+        } else {
+            return "Mist\(circle).pdf"
+        }
+    case "mostly-clear":
+        if type == "text" {
+            return "Mostly clear"
+        } else if type == "daily" {
+            return "MostlyClear\(circle).pdf"
+        } else if type == "widget" {
+            return "MostlyClearWidget\(circle)"
+        } else {
+            return "MostlyClear\(circle).pdf"
+        }
+    case "mostly-clear-night":
+        if type == "text" {
+            return "Mostly clear"
+        } else if type == "daily" {
+            return "MostlyClearNight\(circle).pdf"
+        } else if type == "widget" {
+            return "MostlyClearNightWidget\(circle)"
+        } else {
+            return "MostlyClearNight\(circle).pdf"
+        }
+    case "mostly-cloudy":
+        if type == "text" {
+            return "Mostly cloudy"
+        } else if type == "daily" {
+            return "MostlyCloudy\(circle).pdf"
+        } else if type == "widget" {
+            return "MostlyCloudyWidget\(circle)"
+        } else {
+            return "MostlyCloudy\(circle).pdf"
+        }
+    case "partly-cloudy":
+        if type == "text" {
+            return "Partly cloudy"
+        } else if type == "daily" {
+            return "PartlyCloudy\(circle).pdf"
+        } else if type == "widget" {
+            return "PartlyCloudyWidget\(circle)"
+        } else {
+            return "PartlyCloudy\(circle).pdf"
+        }
+    case "partly-cloudy-night":
+        if type == "text" {
+            return "Partly cloudy"
+        } else if type == "daily" {
+            return "PartlyCloudyNight\(circle).pdf"
+        } else if type == "widget" {
+            return "PartlyCloudyNightWidget\(circle)"
+        } else {
+            return "PartlyCloudyNight\(circle).pdf"
+        }
+    case "light-rain":
+        if type == "text" {
+            return "Light rain"
+        } else if type == "daily" {
+            return "LightRain\(circle).pdf"
+        } else if type == "widget" {
+            return "LightRainWidget\(circle)"
+        } else {
+            return "LightRain\(circle).pdf"
+        }
+    case "rain":
+        if type == "text" {
+            return "Rain"
+        } else if type == "daily" {
+            return "Rain\(circle).pdf"
+        } else if type == "widget" {
+            return "RainWidget\(circle)"
+        } else {
+            return "Rain\(circle).pdf"
+        }
+    case "heavy-rain":
+        if type == "text" {
+            return "Heavy rain"
+        } else if type == "daily" {
+            return "HeavyRain\(circle).pdf"
+        } else if type == "widget" {
+            return "HeavyRainWidget\(circle)"
+        } else {
+            return "HeavyRain\(circle).pdf"
+        }
+    case "light-snow":
+        if type == "text" {
+            return "Light snow"
+        } else if type == "daily" {
+            return "LightSnow\(circle).pdf"
+        } else if type == "widget" {
+            return "LightSnowWidget\(circle)"
+        } else {
+            return "LightSnow\(circle).pdf"
+        }
+    case "snow":
+        if type == "text" {
+            return "Snow"
+        } else if type == "daily" {
+            return "Snow\(circle).pdf"
+        } else if type == "widget" {
+            return "SnowWidget\(circle)"
+        } else {
+            return "Snow\(circle).pdf"
+        }
+    case "heavy-snow":
+        if type == "text" {
+            return "Heavy snow"
+        } else if type == "daily" {
+            return "HeavySnow\(circle).pdf"
+        } else if type == "widget" {
+            return "HeavySnowWidget\(circle)"
+        } else {
+            return "HeavySnow\(circle).pdf"
+        }
+    case "thunderstorm":
+        if type == "text" {
+            return "Thunderstorm"
+        } else if type == "daily" {
+            return "Thunderstorm\(circle).pdf"
+        } else if type == "widget" {
+            return "ThunderstormWidget\(circle)"
+        } else {
+            return "Thunderstorm\(circle).pdf"
+        }
+    case "tornado":
+        if type == "text" {
+            return "Tornado"
+        } else if type == "daily" {
+            return "Tornado\(circle).pdf"
+        } else if type == "widget" {
+            return "TornadoWidget\(circle)"
+        } else {
+            return "Tornado\(circle).pdf"
+        }
+    case "wind":
+        if type == "text" {
+            return "Windy"
+        } else if type == "daily" {
+            return "Windy\(circle).pdf"
+        } else if type == "widget" {
+            return "WindyWidget\(circle)"
+        } else {
+            return "Windy\(circle).pdf"
+        }
+    case "squall":
+        if type == "text" {
+            return "Windy"
+        } else if type == "daily" {
+            return "Windy\(circle).pdf"
+        } else if type == "widget" {
+            return "WindyWidget\(circle)"
+        } else {
+            return "Windy\(circle).pdf"
+        }
+    default:
+        if type == "text" {
+            return "Clear"
+        } else if type == "daily" {
+            return "Clear\(circle).pdf"
+        } else if type == "widget" {
+            return "ClearWidget\(circle)"
+        } else {
+            return "Clear\(circle).pdf"
+        }
+    }
+}
+
+func setButtonTextColor(button: UIButton!) {
+    button.setTitleColor(UIColor.label, for: .normal)
+}
+
+func setupHourlyConditionText(label: UILabel!, condition: String, windDirection: String) {
+    label.text = "\(setWeatherConditionImage(condition: condition, type: "text", circle: defaults.string(forKey: "defaultConditionIcons")!))"
+    
+    // If condition is windy show wind direction
+    if label.text == "Wind" {
+        label.text = "\(setWeatherConditionImage(condition: condition, type: "text", circle: defaults.string(forKey: "defaultConditionIcons")!)) \(windDirection)"
+    }
+}
+
+func setTableViewCellColor(tableCell: UITableViewCell) {
+    if (defaults.string(forKey: "userSavedColorString") == "Mango") {
+        tableCell.tintColor = mango
+    } else if (defaults.string(forKey: "userSavedColorString") == "Maximum Red") {
+        tableCell.tintColor = maximumRed
+    } else if (defaults.string(forKey: "userSavedColorString") == "Dodger Blue") {
+        tableCell.tintColor = dodgerBlue
+    } else if (defaults.string(forKey: "userSavedColorString") == "Plump Purple") {
+        tableCell.tintColor = plumpPurple
+    } else if (defaults.string(forKey: "userSavedColorString") == "Orchid") {
+        tableCell.tintColor = orchid
+    } else if (defaults.string(forKey: "userSavedColorString") == "Spring Green") {
+        tableCell.tintColor = springGreen
+    } else {
+        tableCell.tintColor = dodgerBlue
+    }
+}
+
+func setTabBarColor(tabBar: UITabBarController) {
+    if (defaults.string(forKey: "userSavedColorString") == "Mango") {
+        tabBar.tabBar.tintColor = mango
+    } else if (defaults.string(forKey: "userSavedColorString") == "Maximum Red") {
+        tabBar.tabBar.tintColor = maximumRed
+    } else if (defaults.string(forKey: "userSavedColorString") == "Dodger Blue") {
+        tabBar.tabBar.tintColor = dodgerBlue
+    } else if (defaults.string(forKey: "userSavedColorString") == "Plump Purple") {
+        tabBar.tabBar.tintColor = plumpPurple
+    } else if (defaults.string(forKey: "userSavedColorString") == "Orchid") {
+        tabBar.tabBar.tintColor = orchid
+    } else if (defaults.string(forKey: "userSavedColorString") == "Spring Green") {
+        tabBar.tabBar.tintColor = springGreen
+    } else {
+        tabBar.tabBar.tintColor = dodgerBlue
+    }
+}
+
+func setupLabelColor(label: UILabel!) {
+    if (defaults.string(forKey: "userSavedColorString") == "Mango") {
+         label.textColor = mango
+    } else if (defaults.string(forKey: "userSavedColorString") == "Maximum Red") {
+         label.textColor = maximumRed
+    } else if (defaults.string(forKey: "userSavedColorString") == "Dodger Blue") {
+         label.textColor = dodgerBlue
+    } else if (defaults.string(forKey: "userSavedColorString") == "Plump Purple") {
+         label.textColor = plumpPurple
+    } else if (defaults.string(forKey: "userSavedColorString") == "Orchid") {
+         label.textColor = orchid
+    } else if (defaults.string(forKey: "userSavedColorString") == "Spring Green") {
+        label.textColor = springGreen
+    }else {
+         label.textColor = dodgerBlue
+    }
+}
+
+func setupButtonColor(button: UIButton!) {
+    if (defaults.string(forKey: "userSavedColorString") == "Mango") {
+         button.setTitleColor(mango, for: .normal)
+    } else if (defaults.string(forKey: "userSavedColorString") == "Maximum Red") {
+         button.setTitleColor(maximumRed, for: .normal)
+    } else if (defaults.string(forKey: "userSavedColorString") == "Dodger Blue") {
+         button.setTitleColor(dodgerBlue, for: .normal)
+    } else if (defaults.string(forKey: "userSavedColorString") == "Plump Purple") {
+         button.setTitleColor(plumpPurple, for: .normal)
+    } else if (defaults.string(forKey: "userSavedColorString") == "Orchid") {
+         button.setTitleColor(orchid, for: .normal)
+    } else if (defaults.string(forKey: "userSavedColorString") == "Spring Green") {
+         button.setTitleColor(springGreen, for: .normal)
+    } else {
+         button.setTitleColor(dodgerBlue, for: .normal)
+    }
+}
+
+func setupBarButtonColor(button: UIBarButtonItem!) {
+    if (defaults.string(forKey: "userSavedColorString") == "Mango") {
+        button.tintColor = mango
+    } else if (defaults.string(forKey: "userSavedColorString") == "Maximum Red") {
+        button.tintColor = maximumRed
+    } else if (defaults.string(forKey: "userSavedColorString") == "Dodger Blue") {
+        button.tintColor = dodgerBlue
+    } else if (defaults.string(forKey: "userSavedColorString") == "Plump Purple") {
+        button.tintColor = plumpPurple
+    } else if (defaults.string(forKey: "userSavedColorString") == "Orchid") {
+        button.tintColor = orchid
+    } else if (defaults.string(forKey: "userSavedColorString") == "Spring Green") {
+        button.tintColor = springGreen
+    } else {
+        button.tintColor = dodgerBlue
+    }
+}
+
+func setupSwitchColor(switchOne: UISwitch!) {
+    if (defaults.string(forKey: "userSavedColorString") == "Mango") {
+         switchOne.onTintColor = mango
+    } else if (defaults.string(forKey: "userSavedColorString") == "Maximum Red") {
+         switchOne.onTintColor = maximumRed
+    } else if (defaults.string(forKey: "userSavedColorString") == "Dodger Blue") {
+         switchOne.onTintColor = dodgerBlue
+    } else if (defaults.string(forKey: "userSavedColorString") == "Plump Purple") {
+         switchOne.onTintColor = plumpPurple
+    } else if (defaults.string(forKey: "userSavedColorString") == "Orchid") {
+         switchOne.onTintColor = orchid
+    } else if (defaults.string(forKey: "userSavedColorString") == "Spring Green") {
+         switchOne.onTintColor = springGreen
+    } else {
+         switchOne.onTintColor = dodgerBlue
+    }
+}
+
+func setupTextFieldColor(textField: UITextField!) {
+    if (defaults.string(forKey: "userSavedColorString") == "Mango") {
+         textField.textColor = mango
+    } else if (defaults.string(forKey: "userSavedColorString") == "Maximum Red") {
+         textField.textColor = maximumRed
+    } else if (defaults.string(forKey: "userSavedColorString") == "Dodger Blue") {
+         textField.textColor = dodgerBlue
+    } else if (defaults.string(forKey: "userSavedColorString") == "Plump Purple") {
+         textField.textColor = plumpPurple
+    } else if (defaults.string(forKey: "userSavedColorString") == "Orchid") {
+         textField.textColor = orchid
+    } else if (defaults.string(forKey: "userSavedColorString") == "Spring Green") {
+         textField.textColor = springGreen
+    } else {
+         textField.textColor = dodgerBlue
+    }
+}
+
 func universalSettings() {
     if let widgetSetDataSource = UserDefaults.init(suiteName: "group.com.josephszafarowicz.weather")?.string(forKey: "setDataSource") {
         universalDataSource = widgetSetDataSource
@@ -50,7 +544,6 @@ func geocode(latitude: Double, longitude: Double, completion: @escaping (CLPlace
     }
 }
 
-// MARK: - Get day name
 func dayFormat(date: Date, fullLength: Bool) -> String {
     var dayString: String = ""
     
@@ -74,7 +567,6 @@ func dateFormat(date: Date) -> String {
     return dateFormatter.string(from: date).uppercased()
 }
 
-// MARK: - Get hour times from date
 func hourFormat(date: Date) -> String {
     var timeString: String = ""
     if (defaults.bool(forKey: "twentyFourHourClockEnabled") == true) {

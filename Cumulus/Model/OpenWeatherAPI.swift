@@ -11,7 +11,6 @@ import Foundation
 
 var openWeatherUnits: String = ""
 
-// MARK: - OpenWeather
 struct OpenWeather: Codable {
     let lat, lon: Double
     let timezone: String
@@ -147,7 +146,6 @@ struct Temp: Codable {
     let eve, morn: Double
 }
 
-// MARK: - OpenWeatherAlerts
 struct OpenWeatherAlerts: Codable {
     let lat, lon: Double
     let timezone: String
@@ -173,7 +171,6 @@ struct Alert: Codable {
     }
 }
 
-// MARK: - OpenWeatherAQ
 struct OpenWeatherAQ: Codable {
     let coord: Coord
     let list: [List]
@@ -193,59 +190,59 @@ struct Main: Codable {
     let aqi: Int
 }
 
-// Fetches condition and returns a readable string for setting the conditions icon
 func conditionIcon(id: Int, main: String, icon: String) -> String {
-    var conditionIcon: String = ""
-
-    if icon == "01d" {
-        // clear sky
-        conditionIcon = "clear"
-    } else if icon == "01n" {
-        // clear sky
-        conditionIcon = "clear-night"
-    } else if icon == "02d" {
-        // few clouds
-        conditionIcon = "partly-cloudy"
-    } else if icon == "02n" {
-        // few clouds
-        conditionIcon = "partly-cloudy-night"
-    } else if icon == "03d" || icon == "03n" {
-        // scattered clouds
-        conditionIcon = "mostly-cloudy"
-    } else if icon == "04d" || icon == "04n" || main == "clouds" {
-        // broken clouds
-        conditionIcon = "cloudy"
-    } else if id == 500 {
-        conditionIcon = "light-rain"
-    } else if id == 501 {
-        conditionIcon = "moderate-rain"
-    } else if id == 502 || id == 503 || id == 504 {
-        conditionIcon = "heavy-rain"
-    } else if id == 511 {
-        conditionIcon = "freezing-rain"
-    } else if id == 600 {
-        conditionIcon = "light-snow"
-    } else if id == 601 {
-        conditionIcon = "snow"
-    } else if id == 602 {
-        conditionIcon = "heavy-snow"
-    } else if id == 611 {
-        conditionIcon = "ice-pellets"
-    } else if id == 612 {
-        conditionIcon = "light-ice-pellets"
-    } else if id == 613 {
-        conditionIcon = "heavy-ice-pellets"
-    } else if id == 620 {
-        conditionIcon = "light-snow"
-    } else if id == 621 {
-        conditionIcon = "snow"
-    } else if id == 622 {
-        conditionIcon = "heavy-snow"
-    } else {
-        conditionIcon = main
+    switch id {
+    case 800:
+        if icon.contains("n") {
+            return "clear-night"
+        } else {
+            return "clear"
+        }
+    case 801:
+        if icon.contains("n") {
+            return "partly-cloudy-night"
+        } else {
+            return "partly-cloudy"
+        }
+    case 802:
+        return "mostly-cloudy"
+    case 803:
+        return "mostly-cloudy"
+    case 804:
+        return "cloudy"
+    case 500:
+        return "light-rain"
+    case 501:
+        return "moderate-rain"
+    case 502:
+        return "heavy-rain"
+    case 503:
+        return "heavy-rain"
+    case 504:
+        return "heavy-rain"
+    case 511:
+        return "freezing-rain"
+    case 600:
+        return "light-snow"
+    case 601:
+        return "snow"
+    case 602:
+        return "heavy-snow"
+    case 611:
+        return "ice-pellets"
+    case 612:
+        return "light-ice-pellets"
+    case 613:
+        return "heavy-ice-pellets"
+    case 620:
+        return "light-snow"
+    case 621:
+        return "snow"
+    case 622:
+        return "heavy-snow"
+    default:
+        return main
     }
-    
-    return conditionIcon
 }
 
 func fetchOpenWeatherDataAlerts() {

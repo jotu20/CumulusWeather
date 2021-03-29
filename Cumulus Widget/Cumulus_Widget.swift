@@ -69,13 +69,12 @@ struct CurrentForecastWidgetView : View {
         ZStack {
             Color(UIColor.systemBackground)
             
-            // Current values
             VStack {
                 Text("\(data.currentLocation)")
                     .font(.system(size: 15, weight: .semibold, design: .default))
                     .frame(maxWidth: .infinity, maxHeight: 30, alignment: .bottom)
                 HStack {
-                    Image(weatherCondition(condition: data.currentCondition, type: "widget", circle: universalIcons))
+                    Image(setWeatherConditionImage(condition: data.currentCondition, type: "widget", circle: universalIcons))
                         .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                     Text("\(data.currentTemperature)°")
                         .font(.system(size: 30, weight: .semibold, design: .default))
@@ -99,7 +98,6 @@ struct HourlyForecastWidgetView : View {
         ZStack {
             Color(UIColor.systemBackground)
             
-            // Current values
             VStack {
                 Text("\(currentLocation)")
                     .font(.system(size: 15, weight: .semibold, design: .default))
@@ -120,13 +118,12 @@ struct HourlyForecastWidgetView : View {
                     }
                 }
 
-                // Hourly values
                 HStack(spacing: 10) {
                     VStack {
                         Text("NOW")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Image(weatherCondition(condition: conditionHour1, type: "widget", circle: universalIcons))
+                        Image(setWeatherConditionImage(condition: conditionHour1, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour0)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -136,7 +133,7 @@ struct HourlyForecastWidgetView : View {
                         Text("\(hour3)")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Image(weatherCondition(condition: conditionHour3, type: "widget", circle: universalIcons))
+                        Image(setWeatherConditionImage(condition: conditionHour3, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour3)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -146,7 +143,7 @@ struct HourlyForecastWidgetView : View {
                         Text("\(hour6)")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Image(weatherCondition(condition: conditionHour6, type: "widget", circle: universalIcons))
+                        Image(setWeatherConditionImage(condition: conditionHour6, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour6)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -156,7 +153,7 @@ struct HourlyForecastWidgetView : View {
                         Text("\(hour10)")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Image(weatherCondition(condition: conditionHour10, type: "widget", circle: universalIcons))
+                        Image(setWeatherConditionImage(condition: conditionHour10, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour10)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -166,7 +163,7 @@ struct HourlyForecastWidgetView : View {
                         Text("\(hour13)")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Image(weatherCondition(condition: conditionHour13, type: "widget", circle: universalIcons))
+                        Image(setWeatherConditionImage(condition: conditionHour13, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour13)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -176,7 +173,7 @@ struct HourlyForecastWidgetView : View {
                         Text("\(hour15)")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Image(weatherCondition(condition: conditionHour15, type: "widget", circle: universalIcons))
+                        Image(setWeatherConditionImage(condition: conditionHour15, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour15)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -195,7 +192,6 @@ struct DailyForecastWidgetView : View {
         ZStack {
             Color(UIColor.systemBackground)
             
-            // Current values
             VStack {
                 Text("\(currentLocation)")
                     .font(.system(size: 15, weight: .semibold, design: .default))
@@ -216,13 +212,12 @@ struct DailyForecastWidgetView : View {
                     }
                 }
 
-                // Hourly values
                 HStack(spacing: 10) {
                     VStack {
                         Text("NOW")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Image(weatherCondition(condition: conditionHour1, type: "widget", circle: universalIcons))
+                        Image(setWeatherConditionImage(condition: conditionHour1, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour0)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -232,7 +227,7 @@ struct DailyForecastWidgetView : View {
                         Text("\(hour3)")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Image(weatherCondition(condition: conditionHour3, type: "widget", circle: universalIcons))
+                        Image(setWeatherConditionImage(condition: conditionHour3, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour3)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -242,7 +237,7 @@ struct DailyForecastWidgetView : View {
                         Text("\(hour6)")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Image(weatherCondition(condition: conditionHour6, type: "widget", circle: universalIcons))
+                        Image(setWeatherConditionImage(condition: conditionHour6, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour6)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -252,7 +247,7 @@ struct DailyForecastWidgetView : View {
                         Text("\(hour10)")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Image(weatherCondition(condition: conditionHour10, type: "widget", circle: universalIcons))
+                        Image(setWeatherConditionImage(condition: conditionHour10, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour10)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -262,7 +257,7 @@ struct DailyForecastWidgetView : View {
                         Text("\(hour13)")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Image(weatherCondition(condition: conditionHour13, type: "widget", circle: universalIcons))
+                        Image(setWeatherConditionImage(condition: conditionHour13, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour13)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -272,7 +267,7 @@ struct DailyForecastWidgetView : View {
                         Text("\(hour15)")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 45, maxHeight: 10, alignment: .center)
-                        Image(weatherCondition(condition: conditionHour15, type: "widget", circle: universalIcons))
+                        Image(setWeatherConditionImage(condition: conditionHour15, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(tempHour15)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -280,13 +275,12 @@ struct DailyForecastWidgetView : View {
                     }
                 }
                 
-                // Daily values
                 VStack(spacing: 0) {
                     HStack {
                         Text("\(day1DayStringFull.capitalizingFirstLetter())")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
-                        Image(weatherCondition(condition: day1Condition, type: "widget", circle: universalIcons))
+                        Image(setWeatherConditionImage(condition: day1Condition, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day1High)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -300,7 +294,7 @@ struct DailyForecastWidgetView : View {
                         Text("\(day2DayStringFull.capitalizingFirstLetter())")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
-                        Image(weatherCondition(condition: day2Condition, type: "widget", circle: universalIcons))
+                        Image(setWeatherConditionImage(condition: day2Condition, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day2High)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -314,7 +308,7 @@ struct DailyForecastWidgetView : View {
                         Text("\(day3DayStringFull.capitalizingFirstLetter())")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
-                        Image(weatherCondition(condition: day3Condition, type: "widget", circle: universalIcons))
+                        Image(setWeatherConditionImage(condition: day3Condition, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day3High)°")
                             .font(.system(size: 12, weight: .regular, design: .default))
@@ -328,7 +322,7 @@ struct DailyForecastWidgetView : View {
                         Text("\(day4DayStringFull.capitalizingFirstLetter())")
                             .font(.system(size: 12, weight: .regular, design: .default))
                             .frame(maxWidth: 150, maxHeight: 10, alignment: .leading)
-                        Image(weatherCondition(condition: day4Condition, type: "widget", circle: universalIcons))
+                        Image(setWeatherConditionImage(condition: day4Condition, type: "widget", circle: universalIcons))
                             .frame(maxWidth: 45, maxHeight: 45, alignment: .center)
                         Text("\(day4High)°")
                             .font(.system(size: 12, weight: .regular, design: .default))

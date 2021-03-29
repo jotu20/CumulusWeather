@@ -322,7 +322,6 @@ public func fetchDarkSkyWeatherData() {
             }
             getMinutelyStatements()
             
-            // MARK: - Hourly
             if let hourly = currentForecast.hourly {
                 cloudCoverHour1 = hourCloudCover(value: 1, hour: hourly)
                 cloudCoverHour2 = hourCloudCover(value: 2, hour: hourly)
@@ -504,7 +503,6 @@ public func fetchDarkSkyWeatherData() {
                 cloudCoverHour15 = hourCloudCover(value: 15, hour: hourly)
             }
             
-            // Get alerts
             if let alerts = currentForecast.alerts {
                 let alertArray = alerts[0]
                 let fetchAlertArray = alertArray

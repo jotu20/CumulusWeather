@@ -8,16 +8,6 @@ target 'Cumulus' do
  	pod 'GooglePlaces', '3.9.0'
  	pod 'SwiftyStoreKit', '0.15.0'
 
-	target 'GetForecastIntent' do 
-
-	pod 'ForecastIO', '8.0.0'
- 	end
-	
-	target 'GetForecastIntentUI' do 
-
-	pod 'ForecastIO', '8.0.0'
- 	end
-
 	target 'Cumulus WidgetExtension' do 
 
 	pod 'ForecastIO', '8.0.0'

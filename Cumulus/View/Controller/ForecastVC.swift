@@ -704,58 +704,58 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         if type.contains("Precip") == true {
             hourlyLabel.text = "Hourly precipitation"
             
-            hour0Value = "\(precipHour0)%"
-            hour1Value = "\(precipHour1)%"
-            hour2Value = "\(precipHour2)%"
-            hour3Value = "\(precipHour3)%"
+            hour0Value = "\(HourlyPrecipitation.sharedInstance.hour0 ?? 0)%"
+            hour1Value = "\(HourlyPrecipitation.sharedInstance.hour1 ?? 0)%"
+            hour2Value = "\(HourlyPrecipitation.sharedInstance.hour2 ?? 0)%"
+            hour3Value = "\(HourlyPrecipitation.sharedInstance.hour3 ?? 0)%"
         } else if type.contains("Accum") == true {
             hourlyLabel.text = "Hourly accumulation"
             
-            hour0Value = "\(accumHour0)\(unitsPrecipitation)"
-            hour1Value = "\(accumHour1)\(unitsPrecipitation)"
-            hour2Value = "\(accumHour2)\(unitsPrecipitation)"
-            hour3Value = "\(accumHour3)\(unitsPrecipitation)"
+            hour0Value = "\(HourlyAccumulation.sharedInstance.hour0 ?? 0)\(unitsPrecipitation)"
+            hour1Value = "\(HourlyAccumulation.sharedInstance.hour1 ?? 0)\(unitsPrecipitation)"
+            hour2Value = "\(HourlyAccumulation.sharedInstance.hour2 ?? 0)\(unitsPrecipitation)"
+            hour3Value = "\(HourlyAccumulation.sharedInstance.hour3 ?? 0)\(unitsPrecipitation)"
         } else if type.contains("Temp") == true {
             hourlyLabel.text = "Hourly temperature"
             
-            hour0Value = "\(tempHour0)°"
-            hour1Value = "\(tempHour1)°"
-            hour2Value = "\(tempHour2)°"
-            hour3Value = "\(tempHour3)°"
+            hour0Value = "\(HourlyTemperature.sharedInstance.hour0 ?? 0)°"
+            hour1Value = "\(HourlyTemperature.sharedInstance.hour1 ?? 0)°"
+            hour2Value = "\(HourlyTemperature.sharedInstance.hour2 ?? 0)°"
+            hour3Value = "\(HourlyTemperature.sharedInstance.hour3 ?? 0)°"
         } else if type.contains("Humidity") == true {
             hourlyLabel.text = "Hourly humidity"
             
-            hour0Value = "\(humidityHour0)%"
-            hour1Value = "\(humidityHour1)%"
-            hour2Value = "\(humidityHour2)%"
-            hour3Value = "\(humidityHour3)%"
+            hour0Value = "\(HourlyHumidity.sharedInstance.hour0 ?? 0)%"
+            hour1Value = "\(HourlyHumidity.sharedInstance.hour1 ?? 0)%"
+            hour2Value = "\(HourlyHumidity.sharedInstance.hour2 ?? 0)%"
+            hour3Value = "\(HourlyHumidity.sharedInstance.hour3 ?? 0)%"
         } else if type.contains("UV Index") == true {
             hourlyLabel.text = "Hourly uv index"
             
-            hour0Value = "\(uvindexHour0)"
-            hour1Value = "\(uvindexHour1)"
-            hour2Value = "\(uvindexHour2)"
-            hour3Value = "\(uvindexHour3)"
+            hour0Value = "\(HourlyUVIndex.sharedInstance.hour0 ?? 0)"
+            hour1Value = "\(HourlyUVIndex.sharedInstance.hour1 ?? 0)"
+            hour2Value = "\(HourlyUVIndex.sharedInstance.hour2 ?? 0)"
+            hour3Value = "\(HourlyUVIndex.sharedInstance.hour3 ?? 0)"
         } else if type.contains("Wind") == true {
             hourlyLabel.text = "Hourly wind"
             
-            hour0Value = "\(windSpeedHour0)\(unitsWindSpeed)"
-            hour1Value = "\(windSpeedHour1)\(unitsWindSpeed)"
-            hour2Value = "\(windSpeedHour2)\(unitsWindSpeed)"
-            hour3Value = "\(windSpeedHour3)\(unitsWindSpeed)"
+            hour0Value = "\(HourlyWindSpeed.sharedInstance.hour0 ?? 0)\(unitsWindSpeed)"
+            hour1Value = "\(HourlyWindSpeed.sharedInstance.hour1 ?? 0)\(unitsWindSpeed)"
+            hour2Value = "\(HourlyWindSpeed.sharedInstance.hour2 ?? 0)\(unitsWindSpeed)"
+            hour3Value = "\(HourlyWindSpeed.sharedInstance.hour3 ?? 0)\(unitsWindSpeed)"
         } else if type.contains("Cloud") == true {
             hourlyLabel.text = "Hourly cloud cover"
             
-            hour0Value = "\(cloudCoverHour0)%"
-            hour1Value = "\(cloudCoverHour1)%"
-            hour2Value = "\(cloudCoverHour2)%"
-            hour3Value = "\(cloudCoverHour3)%"
+            hour0Value = "\(HourlyCloudCover.sharedInstance.hour0 ?? 0)%"
+            hour1Value = "\(HourlyCloudCover.sharedInstance.hour1 ?? 0)%"
+            hour2Value = "\(HourlyCloudCover.sharedInstance.hour2 ?? 0)%"
+            hour3Value = "\(HourlyCloudCover.sharedInstance.hour3 ?? 0)%"
         }
         
-        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: "NOW", hourIconString: conditionHour0, hourConditionString: hour0Value)
-        setHourLabelAndIcons(hourTimeLabel: hour1TimeLabel, hourConditionIcon: hour1ConditionIcon, hourCondtionLabel: hour1ConditionLabel, hourTimeString: hour1, hourIconString: conditionHour1, hourConditionString: hour1Value)
-        setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: hour2, hourIconString: conditionHour2, hourConditionString: hour2Value)
-        setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: hour3, hourIconString: conditionHour3, hourConditionString: hour3Value)
+        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: "NOW", hourIconString: HourlyCondition.sharedInstance.hour0 ?? "", hourConditionString: hour0Value)
+        setHourLabelAndIcons(hourTimeLabel: hour1TimeLabel, hourConditionIcon: hour1ConditionIcon, hourCondtionLabel: hour1ConditionLabel, hourTimeString: Hour.sharedInstance.hour1 ?? "", hourIconString: HourlyCondition.sharedInstance.hour1 ?? "", hourConditionString: hour1Value)
+        setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: Hour.sharedInstance.hour2 ?? "", hourIconString: HourlyCondition.sharedInstance.hour2 ?? "", hourConditionString: hour2Value)
+        setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: Hour.sharedInstance.hour3 ?? "", hourIconString: HourlyCondition.sharedInstance.hour3 ?? "", hourConditionString: hour3Value)
     }
     
     func setHourlyOutlets1(type: String) {
@@ -767,58 +767,58 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         if type.contains("Precip") == true {
             hourlyLabel.text = "Hourly precipitation"
             
-            hour0Value = "\(precipHour4)%"
-            hour1Value = "\(precipHour5)%"
-            hour2Value = "\(precipHour6)%"
-            hour3Value = "\(precipHour7)%"
+            hour0Value = "\(HourlyPrecipitation.sharedInstance.hour4 ?? 0)%"
+            hour1Value = "\(HourlyPrecipitation.sharedInstance.hour5 ?? 0)%"
+            hour2Value = "\(HourlyPrecipitation.sharedInstance.hour6 ?? 0)%"
+            hour3Value = "\(HourlyPrecipitation.sharedInstance.hour7 ?? 0)%"
          } else if type.contains("Accum") == true {
              hourlyLabel.text = "Hourly accumulation"
              
-             hour0Value = "\(accumHour4)\(unitsPrecipitation)"
-             hour1Value = "\(accumHour5)\(unitsPrecipitation)"
-             hour2Value = "\(accumHour6)\(unitsPrecipitation)"
-             hour3Value = "\(accumHour7)\(unitsPrecipitation)"
+            hour0Value = "\(HourlyAccumulation.sharedInstance.hour4 ?? 0)\(unitsPrecipitation)"
+            hour1Value = "\(HourlyAccumulation.sharedInstance.hour5 ?? 0)\(unitsPrecipitation)"
+            hour2Value = "\(HourlyAccumulation.sharedInstance.hour6 ?? 0)\(unitsPrecipitation)"
+            hour3Value = "\(HourlyAccumulation.sharedInstance.hour7 ?? 0)\(unitsPrecipitation)"
          } else if type.contains("Temp") == true {
             hourlyLabel.text = "Hourly temperature"
             
-            hour0Value = "\(tempHour4)°"
-            hour1Value = "\(tempHour5)°"
-            hour2Value = "\(tempHour6)°"
-            hour3Value = "\(tempHour7)°"
+            hour0Value = "\(HourlyTemperature.sharedInstance.hour4 ?? 0)°"
+            hour1Value = "\(HourlyTemperature.sharedInstance.hour5 ?? 0)°"
+            hour2Value = "\(HourlyTemperature.sharedInstance.hour6 ?? 0)°"
+            hour3Value = "\(HourlyTemperature.sharedInstance.hour7 ?? 0)°"
         } else if type.contains("Humidity") == true {
             hourlyLabel.text = "Hourly humidity"
             
-            hour0Value = "\(humidityHour4)%"
-            hour1Value = "\(humidityHour5)%"
-            hour2Value = "\(humidityHour6)%"
-            hour3Value = "\(humidityHour7)%"
+            hour0Value = "\(HourlyHumidity.sharedInstance.hour4 ?? 0)%"
+            hour1Value = "\(HourlyHumidity.sharedInstance.hour5 ?? 0)%"
+            hour2Value = "\(HourlyHumidity.sharedInstance.hour6 ?? 0)%"
+            hour3Value = "\(HourlyHumidity.sharedInstance.hour7 ?? 0)%"
         } else if type.contains("UV Index") == true {
             hourlyLabel.text = "Hourly uv index"
             
-            hour0Value = "\(uvindexHour4)"
-            hour1Value = "\(uvindexHour5)"
-            hour2Value = "\(uvindexHour6)"
-            hour3Value = "\(uvindexHour7)"
+            hour0Value = "\(HourlyUVIndex.sharedInstance.hour4 ?? 0)"
+            hour1Value = "\(HourlyUVIndex.sharedInstance.hour5 ?? 0)"
+            hour2Value = "\(HourlyUVIndex.sharedInstance.hour6 ?? 0)"
+            hour3Value = "\(HourlyUVIndex.sharedInstance.hour7 ?? 0)"
         } else if type.contains("Wind") == true {
             hourlyLabel.text = "Hourly wind"
             
-            hour0Value = "\(windSpeedHour4)\(unitsWindSpeed)"
-            hour1Value = "\(windSpeedHour5)\(unitsWindSpeed)"
-            hour2Value = "\(windSpeedHour6)\(unitsWindSpeed)"
-            hour3Value = "\(windSpeedHour7)\(unitsWindSpeed)"
+            hour0Value = "\(HourlyWindSpeed.sharedInstance.hour4 ?? 0)\(unitsWindSpeed)"
+            hour1Value = "\(HourlyWindSpeed.sharedInstance.hour5 ?? 0)\(unitsWindSpeed)"
+            hour2Value = "\(HourlyWindSpeed.sharedInstance.hour6 ?? 0)\(unitsWindSpeed)"
+            hour3Value = "\(HourlyWindSpeed.sharedInstance.hour7 ?? 0)\(unitsWindSpeed)"
         } else if type.contains("Cloud") == true {
             hourlyLabel.text = "Hourly cloud cover"
             
-            hour0Value = "\(cloudCoverHour4)%"
-            hour1Value = "\(cloudCoverHour5)%"
-            hour2Value = "\(cloudCoverHour6)%"
-            hour3Value = "\(cloudCoverHour7)%"
+            hour0Value = "\(HourlyCloudCover.sharedInstance.hour4 ?? 0)%"
+            hour1Value = "\(HourlyCloudCover.sharedInstance.hour5 ?? 0)%"
+            hour2Value = "\(HourlyCloudCover.sharedInstance.hour6 ?? 0)%"
+            hour3Value = "\(HourlyCloudCover.sharedInstance.hour7 ?? 0)%"
         }
         
-        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: hour4, hourIconString: conditionHour4, hourConditionString: hour0Value)
-        setHourLabelAndIcons(hourTimeLabel: hour1TimeLabel, hourConditionIcon: hour1ConditionIcon, hourCondtionLabel: hour1ConditionLabel, hourTimeString: hour5, hourIconString: conditionHour5, hourConditionString: hour1Value)
-        setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: hour6, hourIconString: conditionHour6, hourConditionString: hour2Value)
-        setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: hour7, hourIconString: conditionHour7, hourConditionString: hour3Value)
+        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: Hour.sharedInstance.hour4 ?? "", hourIconString: HourlyCondition.sharedInstance.hour4 ?? "", hourConditionString: hour0Value)
+        setHourLabelAndIcons(hourTimeLabel: hour1TimeLabel, hourConditionIcon: hour1ConditionIcon, hourCondtionLabel: hour1ConditionLabel, hourTimeString: Hour.sharedInstance.hour5 ?? "", hourIconString: HourlyCondition.sharedInstance.hour5 ?? "", hourConditionString: hour1Value)
+        setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: Hour.sharedInstance.hour6 ?? "", hourIconString: HourlyCondition.sharedInstance.hour6 ?? "", hourConditionString: hour2Value)
+        setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: Hour.sharedInstance.hour7 ?? "", hourIconString: HourlyCondition.sharedInstance.hour7 ?? "", hourConditionString: hour3Value)
     }
     
     func setHourlyOutlets2(type: String) {
@@ -830,58 +830,58 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         if type.contains("Precip") == true {
             hourlyLabel.text = "Hourly precipitation"
             
-            hour0Value = "\(precipHour8)%"
-            hour1Value = "\(precipHour9)%"
-            hour2Value = "\(precipHour10)%"
-            hour3Value = "\(precipHour11)%"
+            hour0Value = "\(HourlyPrecipitation.sharedInstance.hour8 ?? 0)%"
+            hour1Value = "\(HourlyPrecipitation.sharedInstance.hour9 ?? 0)%"
+            hour2Value = "\(HourlyPrecipitation.sharedInstance.hour10 ?? 0)%"
+            hour3Value = "\(HourlyPrecipitation.sharedInstance.hour11 ?? 0)%"
          } else if type.contains("Accum") == true {
              hourlyLabel.text = "Hourly accumulation"
              
-             hour0Value = "\(accumHour8)\(unitsPrecipitation)"
-             hour1Value = "\(accumHour9)\(unitsPrecipitation)"
-             hour2Value = "\(accumHour10)\(unitsPrecipitation)"
-             hour3Value = "\(accumHour11)\(unitsPrecipitation)"
+            hour0Value = "\(HourlyAccumulation.sharedInstance.hour8 ?? 0)\(unitsPrecipitation)"
+            hour1Value = "\(HourlyAccumulation.sharedInstance.hour9 ?? 0)\(unitsPrecipitation)"
+            hour2Value = "\(HourlyAccumulation.sharedInstance.hour10 ?? 0)\(unitsPrecipitation)"
+            hour3Value = "\(HourlyAccumulation.sharedInstance.hour11 ?? 0)\(unitsPrecipitation)"
          } else if type.contains("Temp") == true {
             hourlyLabel.text = "Hourly temperature"
             
-            hour0Value = "\(tempHour8)°"
-            hour1Value = "\(tempHour9)°"
-            hour2Value = "\(tempHour10)°"
-            hour3Value = "\(tempHour11)°"
+            hour0Value = "\(HourlyTemperature.sharedInstance.hour8 ?? 0)°"
+            hour1Value = "\(HourlyTemperature.sharedInstance.hour9 ?? 0)°"
+            hour2Value = "\(HourlyTemperature.sharedInstance.hour10 ?? 0)°"
+            hour3Value = "\(HourlyTemperature.sharedInstance.hour11 ?? 0)°"
         } else if type.contains("Humidity") == true {
             hourlyLabel.text = "Hourly humidity"
             
-            hour0Value = "\(humidityHour8)%"
-            hour1Value = "\(humidityHour9)%"
-            hour2Value = "\(humidityHour10)%"
-            hour3Value = "\(humidityHour11)%"
+            hour0Value = "\(HourlyHumidity.sharedInstance.hour8 ?? 0)%"
+            hour1Value = "\(HourlyHumidity.sharedInstance.hour9 ?? 0)%"
+            hour2Value = "\(HourlyHumidity.sharedInstance.hour10 ?? 0)%"
+            hour3Value = "\(HourlyHumidity.sharedInstance.hour11 ?? 0)%"
         } else if type.contains("UV Index") == true {
             hourlyLabel.text = "Hourly uv index"
             
-            hour0Value = "\(uvindexHour8)"
-            hour1Value = "\(uvindexHour9)"
-            hour2Value = "\(uvindexHour10)"
-            hour3Value = "\(uvindexHour11)"
+            hour0Value = "\(HourlyUVIndex.sharedInstance.hour8 ?? 0)"
+            hour1Value = "\(HourlyUVIndex.sharedInstance.hour9 ?? 0)"
+            hour2Value = "\(HourlyUVIndex.sharedInstance.hour10 ?? 0)"
+            hour3Value = "\(HourlyUVIndex.sharedInstance.hour11 ?? 0)"
         } else if type.contains("Wind") == true {
             hourlyLabel.text = "Hourly wind"
             
-            hour0Value = "\(windSpeedHour8)\(unitsWindSpeed)"
-            hour1Value = "\(windSpeedHour9)\(unitsWindSpeed)"
-            hour2Value = "\(windSpeedHour10)\(unitsWindSpeed)"
-            hour3Value = "\(windSpeedHour11)\(unitsWindSpeed)"
+            hour0Value = "\(HourlyWindSpeed.sharedInstance.hour8 ?? 0)\(unitsWindSpeed)"
+            hour1Value = "\(HourlyWindSpeed.sharedInstance.hour9 ?? 0)\(unitsWindSpeed)"
+            hour2Value = "\(HourlyWindSpeed.sharedInstance.hour10 ?? 0)\(unitsWindSpeed)"
+            hour3Value = "\(HourlyWindSpeed.sharedInstance.hour11 ?? 0)\(unitsWindSpeed)"
         } else if type.contains("Cloud") == true {
             hourlyLabel.text = "Hourly cloud cover"
             
-            hour0Value = "\(cloudCoverHour8)%"
-            hour1Value = "\(cloudCoverHour9)%"
-            hour2Value = "\(cloudCoverHour10)%"
-            hour3Value = "\(cloudCoverHour11)%"
+            hour0Value = "\(HourlyCloudCover.sharedInstance.hour8 ?? 0)%"
+            hour1Value = "\(HourlyCloudCover.sharedInstance.hour9 ?? 0)%"
+            hour2Value = "\(HourlyCloudCover.sharedInstance.hour10 ?? 0)%"
+            hour3Value = "\(HourlyCloudCover.sharedInstance.hour11 ?? 0)%"
         }
         
-        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: hour8, hourIconString: conditionHour8, hourConditionString: hour0Value)
-        setHourLabelAndIcons(hourTimeLabel: hour1TimeLabel, hourConditionIcon: hour1ConditionIcon, hourCondtionLabel: hour1ConditionLabel, hourTimeString: hour9, hourIconString: conditionHour9, hourConditionString: hour1Value)
-        setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: hour10, hourIconString: conditionHour10, hourConditionString: hour2Value)
-        setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: hour11, hourIconString: conditionHour11, hourConditionString: hour3Value)
+        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: Hour.sharedInstance.hour8 ?? "", hourIconString: HourlyCondition.sharedInstance.hour8 ?? "", hourConditionString: hour0Value)
+        setHourLabelAndIcons(hourTimeLabel: hour1TimeLabel, hourConditionIcon: hour1ConditionIcon, hourCondtionLabel: hour1ConditionLabel, hourTimeString: Hour.sharedInstance.hour9 ?? "", hourIconString: HourlyCondition.sharedInstance.hour9 ?? "", hourConditionString: hour1Value)
+        setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: Hour.sharedInstance.hour10 ?? "", hourIconString: HourlyCondition.sharedInstance.hour10 ?? "", hourConditionString: hour2Value)
+        setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: Hour.sharedInstance.hour11 ?? "", hourIconString: HourlyCondition.sharedInstance.hour11 ?? "", hourConditionString: hour3Value)
     }
     
     func setHourlyOutlets3(type: String) {
@@ -893,58 +893,58 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         if type.contains("Precip") == true {
             hourlyLabel.text = "Hourly precipitation"
             
-            hour0Value = "\(precipHour12)%"
-            hour1Value = "\(precipHour13)%"
-            hour2Value = "\(precipHour14)%"
-            hour3Value = "\(precipHour15)%"
+            hour0Value = "\(HourlyPrecipitation.sharedInstance.hour12 ?? 0)%"
+            hour1Value = "\(HourlyPrecipitation.sharedInstance.hour13 ?? 0)%"
+            hour2Value = "\(HourlyPrecipitation.sharedInstance.hour14 ?? 0)%"
+            hour3Value = "\(HourlyPrecipitation.sharedInstance.hour15 ?? 0)%"
          } else if type.contains("Accum") == true {
              hourlyLabel.text = "Hourly accumulation"
              
-             hour0Value = "\(accumHour12)\(unitsPrecipitation)"
-             hour1Value = "\(accumHour13)\(unitsPrecipitation)"
-             hour2Value = "\(accumHour14)\(unitsPrecipitation)"
-             hour3Value = "\(accumHour15)\(unitsPrecipitation)"
+            hour0Value = "\(HourlyAccumulation.sharedInstance.hour12 ?? 0)\(unitsPrecipitation)"
+            hour1Value = "\(HourlyAccumulation.sharedInstance.hour13 ?? 0)\(unitsPrecipitation)"
+            hour2Value = "\(HourlyAccumulation.sharedInstance.hour14 ?? 0)\(unitsPrecipitation)"
+            hour3Value = "\(HourlyAccumulation.sharedInstance.hour15 ?? 0)\(unitsPrecipitation)"
          } else if type.contains("Temp") == true {
             hourlyLabel.text = "Hourly temperature"
             
-            hour0Value = "\(tempHour12)°"
-            hour1Value = "\(tempHour13)°"
-            hour2Value = "\(tempHour14)°"
-            hour3Value = "\(tempHour15)°"
+            hour0Value = "\(HourlyTemperature.sharedInstance.hour12 ?? 0)°"
+            hour1Value = "\(HourlyTemperature.sharedInstance.hour13 ?? 0)°"
+            hour2Value = "\(HourlyTemperature.sharedInstance.hour14 ?? 0)°"
+            hour3Value = "\(HourlyTemperature.sharedInstance.hour15 ?? 0)°"
         } else if type.contains("Humidity") == true {
             hourlyLabel.text = "Hourly humidity"
             
-            hour0Value = "\(humidityHour12)%"
-            hour1Value = "\(humidityHour13)%"
-            hour2Value = "\(humidityHour14)%"
-            hour3Value = "\(humidityHour15)%"
+            hour0Value = "\(HourlyHumidity.sharedInstance.hour12 ?? 0)%"
+            hour1Value = "\(HourlyHumidity.sharedInstance.hour13 ?? 0)%"
+            hour2Value = "\(HourlyHumidity.sharedInstance.hour14 ?? 0)%"
+            hour3Value = "\(HourlyHumidity.sharedInstance.hour15 ?? 0)%"
         } else if type.contains("UV Index") == true {
             hourlyLabel.text = "Hourly uv index"
             
-            hour0Value = "\(uvindexHour12)"
-            hour1Value = "\(uvindexHour13)"
-            hour2Value = "\(uvindexHour14)"
-            hour3Value = "\(uvindexHour15)"
+            hour0Value = "\(HourlyUVIndex.sharedInstance.hour12 ?? 0)"
+            hour1Value = "\(HourlyUVIndex.sharedInstance.hour13 ?? 0)"
+            hour2Value = "\(HourlyUVIndex.sharedInstance.hour14 ?? 0)"
+            hour3Value = "\(HourlyUVIndex.sharedInstance.hour15 ?? 0)"
         } else if type.contains("Wind") == true {
             hourlyLabel.text = "Hourly wind"
             
-            hour0Value = "\(windSpeedHour12)\(unitsWindSpeed)"
-            hour1Value = "\(windSpeedHour13)\(unitsWindSpeed)"
-            hour2Value = "\(windSpeedHour14)\(unitsWindSpeed)"
-            hour3Value = "\(windSpeedHour15)\(unitsWindSpeed)"
+            hour0Value = "\(HourlyWindSpeed.sharedInstance.hour12 ?? 0)\(unitsWindSpeed)"
+            hour1Value = "\(HourlyWindSpeed.sharedInstance.hour13 ?? 0)\(unitsWindSpeed)"
+            hour2Value = "\(HourlyWindSpeed.sharedInstance.hour14 ?? 0)\(unitsWindSpeed)"
+            hour3Value = "\(HourlyWindSpeed.sharedInstance.hour15 ?? 0)\(unitsWindSpeed)"
         } else if type.contains("Cloud") == true {
             hourlyLabel.text = "Hourly cloud cover"
             
-            hour0Value = "\(cloudCoverHour12)%"
-            hour1Value = "\(cloudCoverHour13)%"
-            hour2Value = "\(cloudCoverHour14)%"
-            hour3Value = "\(cloudCoverHour15)%"
+            hour0Value = "\(HourlyCloudCover.sharedInstance.hour12 ?? 0)%"
+            hour1Value = "\(HourlyCloudCover.sharedInstance.hour13 ?? 0)%"
+            hour2Value = "\(HourlyCloudCover.sharedInstance.hour14 ?? 0)%"
+            hour3Value = "\(HourlyCloudCover.sharedInstance.hour15 ?? 0)%"
         }
         
-        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: hour12, hourIconString: conditionHour12, hourConditionString: hour0Value)
-        setHourLabelAndIcons(hourTimeLabel: hour1TimeLabel, hourConditionIcon: hour1ConditionIcon, hourCondtionLabel: hour1ConditionLabel, hourTimeString: hour13, hourIconString: conditionHour13, hourConditionString: hour1Value)
-        setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: hour14, hourIconString: conditionHour14, hourConditionString: hour2Value)
-        setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: hour15, hourIconString: conditionHour15, hourConditionString: hour3Value)
+        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: Hour.sharedInstance.hour12 ?? "", hourIconString: HourlyCondition.sharedInstance.hour12 ?? "", hourConditionString: hour0Value)
+        setHourLabelAndIcons(hourTimeLabel: hour1TimeLabel, hourConditionIcon: hour1ConditionIcon, hourCondtionLabel: hour1ConditionLabel, hourTimeString: Hour.sharedInstance.hour13 ?? "", hourIconString: HourlyCondition.sharedInstance.hour13 ?? "", hourConditionString: hour1Value)
+        setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: Hour.sharedInstance.hour14 ?? "", hourIconString: HourlyCondition.sharedInstance.hour14 ?? "", hourConditionString: hour2Value)
+        setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: Hour.sharedInstance.hour15 ?? "", hourIconString: HourlyCondition.sharedInstance.hour15 ?? "", hourConditionString: hour3Value)
     }
     
     func changeHourlyOutlets(type: String) {
@@ -956,58 +956,58 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         if type.contains("Precip") == true {
             hourlyLabel.text = "Hourly precipitation"
             
-            hour0Value = "\(precipHour0)%"
-            hour1Value = "\(precipHour1)%"
-            hour2Value = "\(precipHour2)%"
-            hour3Value = "\(precipHour3)%"
+            hour0Value = "\(HourlyPrecipitation.sharedInstance.hour0 ?? 0)%"
+            hour1Value = "\(HourlyPrecipitation.sharedInstance.hour1 ?? 0)%"
+            hour2Value = "\(HourlyPrecipitation.sharedInstance.hour2 ?? 0)%"
+            hour3Value = "\(HourlyPrecipitation.sharedInstance.hour3 ?? 0)%"
          } else if type.contains("Accum") == true {
              hourlyLabel.text = "Hourly accumulation"
              
-             hour0Value = "\(accumHour0)\(unitsPrecipitation)"
-             hour1Value = "\(accumHour1)\(unitsPrecipitation)"
-             hour2Value = "\(accumHour2)\(unitsPrecipitation)"
-             hour3Value = "\(accumHour3)\(unitsPrecipitation)"
+            hour0Value = "\(HourlyAccumulation.sharedInstance.hour0 ?? 0)\(unitsPrecipitation)"
+            hour1Value = "\(HourlyAccumulation.sharedInstance.hour1 ?? 0)\(unitsPrecipitation)"
+            hour2Value = "\(HourlyAccumulation.sharedInstance.hour2 ?? 0)\(unitsPrecipitation)"
+            hour3Value = "\(HourlyAccumulation.sharedInstance.hour3 ?? 0)\(unitsPrecipitation)"
          } else if type.contains("Temp") == true {
             hourlyLabel.text = "Hourly temperature"
             
-            hour0Value = "\(tempHour0)°"
-            hour1Value = "\(tempHour1)°"
-            hour2Value = "\(tempHour2)°"
-            hour3Value = "\(tempHour3)°"
+            hour0Value = "\(HourlyTemperature.sharedInstance.hour0 ?? 0)°"
+            hour1Value = "\(HourlyTemperature.sharedInstance.hour1 ?? 0)°"
+            hour2Value = "\(HourlyTemperature.sharedInstance.hour2 ?? 0)°"
+            hour3Value = "\(HourlyTemperature.sharedInstance.hour3 ?? 0)°"
         } else if type.contains("Humidity") == true {
             hourlyLabel.text = "Hourly humidity"
             
-            hour0Value = "\(humidityHour0)%"
-            hour1Value = "\(humidityHour1)%"
-            hour2Value = "\(humidityHour2)%"
-            hour3Value = "\(humidityHour3)%"
+            hour0Value = "\(HourlyHumidity.sharedInstance.hour0 ?? 0)%"
+            hour1Value = "\(HourlyHumidity.sharedInstance.hour1 ?? 0)%"
+            hour2Value = "\(HourlyHumidity.sharedInstance.hour2 ?? 0)%"
+            hour3Value = "\(HourlyHumidity.sharedInstance.hour3 ?? 0)%"
         } else if type.contains("UV Index") == true {
             hourlyLabel.text = "Hourly uv index"
             
-            hour0Value = "\(uvindexHour0)"
-            hour1Value = "\(uvindexHour1)"
-            hour2Value = "\(uvindexHour2)"
-            hour3Value = "\(uvindexHour3)"
+            hour0Value = "\(HourlyUVIndex.sharedInstance.hour0 ?? 0)"
+            hour1Value = "\(HourlyUVIndex.sharedInstance.hour1 ?? 0)"
+            hour2Value = "\(HourlyUVIndex.sharedInstance.hour2 ?? 0)"
+            hour3Value = "\(HourlyUVIndex.sharedInstance.hour3 ?? 0)"
         } else if type.contains("Wind") == true {
             hourlyLabel.text = "Hourly wind"
             
-            hour0Value = "\(windSpeedHour0)\(unitsWindSpeed)"
-            hour1Value = "\(windSpeedHour1)\(unitsWindSpeed)"
-            hour2Value = "\(windSpeedHour2)\(unitsWindSpeed)"
-            hour3Value = "\(windSpeedHour3)\(unitsWindSpeed)"
+            hour0Value = "\(HourlyWindSpeed.sharedInstance.hour0 ?? 0)\(unitsWindSpeed)"
+            hour1Value = "\(HourlyWindSpeed.sharedInstance.hour1 ?? 0)\(unitsWindSpeed)"
+            hour2Value = "\(HourlyWindSpeed.sharedInstance.hour2 ?? 0)\(unitsWindSpeed)"
+            hour3Value = "\(HourlyWindSpeed.sharedInstance.hour3 ?? 0)\(unitsWindSpeed)"
         } else if type.contains("Cloud") == true {
             hourlyLabel.text = "Hourly cloud cover"
             
-            hour0Value = "\(cloudCoverHour0)%"
-            hour1Value = "\(cloudCoverHour1)%"
-            hour2Value = "\(cloudCoverHour2)%"
-            hour3Value = "\(cloudCoverHour3)%"
+            hour0Value = "\(HourlyCloudCover.sharedInstance.hour0 ?? 0)%"
+            hour1Value = "\(HourlyCloudCover.sharedInstance.hour1 ?? 0)%"
+            hour2Value = "\(HourlyCloudCover.sharedInstance.hour2 ?? 0)%"
+            hour3Value = "\(HourlyCloudCover.sharedInstance.hour3 ?? 0)%"
         }
         
-        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: "NOW", hourIconString: conditionHour0, hourConditionString: hour0Value)
-        setHourLabelAndIcons(hourTimeLabel: hour1TimeLabel, hourConditionIcon: hour1ConditionIcon, hourCondtionLabel: hour1ConditionLabel, hourTimeString: hour1, hourIconString: conditionHour1, hourConditionString: hour1Value)
-        setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: hour2, hourIconString: conditionHour2, hourConditionString: hour2Value)
-        setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: hour3, hourIconString: conditionHour3, hourConditionString: hour3Value)
+        setHourLabelAndIcons(hourTimeLabel: hour0TimeLabel, hourConditionIcon: hour0ConditionIcon, hourCondtionLabel: hour0ConditionLabel, hourTimeString: "NOW", hourIconString: HourlyCondition.sharedInstance.hour0 ?? "", hourConditionString: hour0Value)
+        setHourLabelAndIcons(hourTimeLabel: hour1TimeLabel, hourConditionIcon: hour1ConditionIcon, hourCondtionLabel: hour1ConditionLabel, hourTimeString: Hour.sharedInstance.hour1 ?? "", hourIconString: HourlyCondition.sharedInstance.hour1 ?? "", hourConditionString: hour1Value)
+        setHourLabelAndIcons(hourTimeLabel: hour2TimeLabel, hourConditionIcon: hour2ConditionIcon, hourCondtionLabel: hour2ConditionLabel, hourTimeString: Hour.sharedInstance.hour2 ?? "", hourIconString: HourlyCondition.sharedInstance.hour2 ?? "", hourConditionString: hour2Value)
+        setHourLabelAndIcons(hourTimeLabel: hour3TimeLabel, hourConditionIcon: hour3ConditionIcon, hourCondtionLabel: hour3ConditionLabel, hourTimeString: Hour.sharedInstance.hour3 ?? "", hourIconString: HourlyCondition.sharedInstance.hour3 ?? "", hourConditionString: hour3Value)
     }
     
     func setDailyOutlets() {
@@ -1024,16 +1024,16 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         hideExtendedDayLabels(hidden: true, label0: day8SummaryLabel, label1: day8Slot1, label2: day8Slot2, label3: day8Slot3, label4: day8Slot4, label5: day8Slot5, label6: day8Slot6!, label7: day8Slot7, label8: day8Slot8, label9: day8Slot9, label10: day8Slot10)
         hideExtendedDayLabels(hidden: true, label0: day9SummaryLabel, label1: day9Slot1, label2: day9Slot2, label3: day9Slot3, label4: day9Slot4, label5: day9Slot5, label6: day9Slot6!, label7: day9Slot7, label8: day9Slot8, label9: day9Slot9, label10: day9Slot10)
         
-        setDayLabelAndIcons(dayViewHeight: day0Height, dayLabel: day0Label, dayConditionIcon: day0ConditionIcon, dayLowLabel: day0LowLabel, dayHighLabel: day0HighLabel, dayString: "TODAY", dateString: day0DateString, dayConditionIconString: day0Condition, dayLow: day0Low, dayHigh: day0High)
-        setDayLabelAndIcons(dayViewHeight: day1Height, dayLabel: day1Label, dayConditionIcon: day1ConditionIcon, dayLowLabel: day1LowLabel, dayHighLabel: day1HighLabel, dayString: day1DayStringFull, dateString: day1DateString, dayConditionIconString: day1Condition, dayLow: day1Low, dayHigh: day1High)
-        setDayLabelAndIcons(dayViewHeight: day2Height, dayLabel: day2Label, dayConditionIcon: day2ConditionIcon, dayLowLabel: day2LowLabel, dayHighLabel: day2HighLabel, dayString: day2DayStringFull, dateString: day2DateString, dayConditionIconString: day2Condition, dayLow: day2Low, dayHigh: day2High)
-        setDayLabelAndIcons(dayViewHeight: day3Height, dayLabel: day3Label, dayConditionIcon: day3ConditionIcon, dayLowLabel: day3LowLabel, dayHighLabel: day3HighLabel, dayString: day3DayStringFull, dateString: day3DateString, dayConditionIconString: day3Condition, dayLow: day3Low, dayHigh: day3High)
-        setDayLabelAndIcons(dayViewHeight: day4Height, dayLabel: day4Label, dayConditionIcon: day4ConditionIcon, dayLowLabel: day4LowLabel, dayHighLabel: day4HighLabel, dayString: day4DayStringFull, dateString: day4DateString, dayConditionIconString: day4Condition, dayLow: day4Low, dayHigh: day4High)
-        setDayLabelAndIcons(dayViewHeight: day5Height, dayLabel: day5Label, dayConditionIcon: day5ConditionIcon, dayLowLabel: day5LowLabel, dayHighLabel: day5HighLabel, dayString: day5DayStringFull, dateString: day5DateString, dayConditionIconString: day5Condition, dayLow: day5Low, dayHigh: day5High)
-        setDayLabelAndIcons(dayViewHeight: day6Height, dayLabel: day6Label, dayConditionIcon: day6ConditionIcon, dayLowLabel: day6LowLabel, dayHighLabel: day6HighLabel, dayString: day6DayStringFull, dateString: day6DateString, dayConditionIconString: day6Condition, dayLow: day6Low, dayHigh: day6High)
-        setDayLabelAndIcons(dayViewHeight: day7Height, dayLabel: day7Label, dayConditionIcon: day7ConditionIcon, dayLowLabel: day7LowLabel, dayHighLabel: day7HighLabel, dayString: day7DayStringFull, dateString: day7DateString, dayConditionIconString: day7Condition, dayLow: day7Low, dayHigh: day7High)
-        setDayLabelAndIcons(dayViewHeight: day8Height, dayLabel: day8Label, dayConditionIcon: day8ConditionIcon, dayLowLabel: day8LowLabel, dayHighLabel: day8HighLabel, dayString: day8DayStringFull, dateString: day8DateString, dayConditionIconString: day8Condition, dayLow: day8Low, dayHigh: day8High)
-        setDayLabelAndIcons(dayViewHeight: day9Height, dayLabel: day9Label, dayConditionIcon: day9ConditionIcon, dayLowLabel: day9LowLabel, dayHighLabel: day9HighLabel, dayString: day9DayStringFull, dateString: day9DateString, dayConditionIconString: day9Condition, dayLow: day9Low, dayHigh: day9High)
+        setDayLabelAndIcons(dayViewHeight: day0Height, dayLabel: day0Label, dayConditionIcon: day0ConditionIcon, dayLowLabel: day0LowLabel, dayHighLabel: day0HighLabel, dayString: Day0.sharedInstance.dayStringFull ?? "", dateString: Day0.sharedInstance.dateString ?? "", dayConditionIconString: Day0.sharedInstance.condition ?? "", dayLow: Day0.sharedInstance.low ?? 0, dayHigh: Day0.sharedInstance.high ?? 0)
+        setDayLabelAndIcons(dayViewHeight: day1Height, dayLabel: day1Label, dayConditionIcon: day1ConditionIcon, dayLowLabel: day1LowLabel, dayHighLabel: day1HighLabel, dayString: Day1.sharedInstance.dayStringFull ?? "", dateString: Day1.sharedInstance.dateString ?? "", dayConditionIconString: Day1.sharedInstance.condition ?? "", dayLow: Day1.sharedInstance.low ?? 0, dayHigh: Day1.sharedInstance.high ?? 0)
+        setDayLabelAndIcons(dayViewHeight: day2Height, dayLabel: day2Label, dayConditionIcon: day2ConditionIcon, dayLowLabel: day2LowLabel, dayHighLabel: day2HighLabel, dayString: Day2.sharedInstance.dayStringFull ?? "", dateString: Day2.sharedInstance.dateString ?? "", dayConditionIconString: Day2.sharedInstance.condition ?? "", dayLow: Day2.sharedInstance.low ?? 0, dayHigh: Day2.sharedInstance.high ?? 0)
+        setDayLabelAndIcons(dayViewHeight: day3Height, dayLabel: day3Label, dayConditionIcon: day3ConditionIcon, dayLowLabel: day3LowLabel, dayHighLabel: day3HighLabel, dayString: Day3.sharedInstance.dayStringFull ?? "", dateString: Day3.sharedInstance.dateString ?? "", dayConditionIconString: Day3.sharedInstance.condition ?? "", dayLow: Day3.sharedInstance.low ?? 0, dayHigh: Day3.sharedInstance.high ?? 0)
+        setDayLabelAndIcons(dayViewHeight: day4Height, dayLabel: day4Label, dayConditionIcon: day4ConditionIcon, dayLowLabel: day4LowLabel, dayHighLabel: day4HighLabel, dayString: Day4.sharedInstance.dayStringFull ?? "", dateString: Day4.sharedInstance.dateString ?? "", dayConditionIconString: Day4.sharedInstance.condition ?? "", dayLow: Day4.sharedInstance.low ?? 0, dayHigh: Day4.sharedInstance.high ?? 0)
+        setDayLabelAndIcons(dayViewHeight: day5Height, dayLabel: day5Label, dayConditionIcon: day5ConditionIcon, dayLowLabel: day5LowLabel, dayHighLabel: day5HighLabel, dayString: Day5.sharedInstance.dayStringFull ?? "", dateString: Day5.sharedInstance.dateString ?? "", dayConditionIconString: Day5.sharedInstance.condition ?? "", dayLow: Day5.sharedInstance.low ?? 0, dayHigh: Day5.sharedInstance.high ?? 0)
+        setDayLabelAndIcons(dayViewHeight: day6Height, dayLabel: day6Label, dayConditionIcon: day6ConditionIcon, dayLowLabel: day6LowLabel, dayHighLabel: day6HighLabel, dayString: Day6.sharedInstance.dayStringFull ?? "", dateString: Day6.sharedInstance.dateString ?? "", dayConditionIconString: Day6.sharedInstance.condition ?? "", dayLow: Day6.sharedInstance.low ?? 0, dayHigh: Day6.sharedInstance.high ?? 0)
+        setDayLabelAndIcons(dayViewHeight: day7Height, dayLabel: day7Label, dayConditionIcon: day7ConditionIcon, dayLowLabel: day7LowLabel, dayHighLabel: day7HighLabel, dayString: Day7.sharedInstance.dayStringFull ?? "", dateString: Day7.sharedInstance.dateString ?? "", dayConditionIconString: Day7.sharedInstance.condition ?? "", dayLow: Day7.sharedInstance.low ?? 0, dayHigh: Day7.sharedInstance.high ?? 0)
+        setDayLabelAndIcons(dayViewHeight: day8Height, dayLabel: day8Label, dayConditionIcon: day8ConditionIcon, dayLowLabel: day8LowLabel, dayHighLabel: day8HighLabel, dayString: Day8.sharedInstance.dayStringFull ?? "", dateString: Day8.sharedInstance.dateString ?? "", dayConditionIconString: Day8.sharedInstance.condition ?? "", dayLow: Day8.sharedInstance.low ?? 0, dayHigh: Day8.sharedInstance.high ?? 0)
+        setDayLabelAndIcons(dayViewHeight: day9Height, dayLabel: day9Label, dayConditionIcon: day9ConditionIcon, dayLowLabel: day9LowLabel, dayHighLabel: day9HighLabel, dayString: Day9.sharedInstance.dayStringFull ?? "", dateString: Day9.sharedInstance.dateString ?? "", dayConditionIconString: Day9.sharedInstance.condition ?? "", dayLow: Day9.sharedInstance.low ?? 0, dayHigh: Day9.sharedInstance.high ?? 0)
     }
     
     // MARK: - Action to show and open weather alerts
@@ -1104,11 +1104,11 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         
         if hour0TimeLabel.text == "NOW" {
             setHourlyOutlets0(type: changedHourlyValues)
-        } else if hour0TimeLabel.text == hour4 {
+        } else if hour0TimeLabel.text == Hour.sharedInstance.hour4 {
             setHourlyOutlets1(type: changedHourlyValues)
-        } else if hour0TimeLabel.text == hour8 {
+        } else if hour0TimeLabel.text == Hour.sharedInstance.hour8 {
             setHourlyOutlets2(type: changedHourlyValues)
-        } else if hour0TimeLabel.text == hour12 {
+        } else if hour0TimeLabel.text == Hour.sharedInstance.hour12 {
             setHourlyOutlets3(type: changedHourlyValues)
         }
     }
@@ -1117,11 +1117,11 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @IBAction func hourlyConditionsGestureSwipeLeftTapped(_ sender: UISwipeGestureRecognizer) {
         if hour0TimeLabel.text == "NOW" {
             setHourlyOutlets1(type: changedHourlyValues)
-        } else if hour0TimeLabel.text == hour4 {
+        } else if hour0TimeLabel.text == Hour.sharedInstance.hour4 {
             setHourlyOutlets2(type: changedHourlyValues)
-        } else if hour0TimeLabel.text == hour8 {
+        } else if hour0TimeLabel.text == Hour.sharedInstance.hour8 {
             setHourlyOutlets3(type: changedHourlyValues)
-        } else if hour0TimeLabel.text == hour12 {
+        } else if hour0TimeLabel.text == Hour.sharedInstance.hour12 {
             setHourlyOutlets0(type: changedHourlyValues)
         }
     }
@@ -1130,11 +1130,11 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
     @IBAction func hourlyConditionsGestureSwipeRightTapped(_ sender: UISwipeGestureRecognizer) {
         if hour0TimeLabel.text == "NOW" {
             setHourlyOutlets3(type: changedHourlyValues)
-        } else if hour0TimeLabel.text == hour12 {
+        } else if hour0TimeLabel.text == Hour.sharedInstance.hour12 {
             setHourlyOutlets2(type: changedHourlyValues)
-        } else if hour0TimeLabel.text == hour8 {
+        } else if hour0TimeLabel.text == Hour.sharedInstance.hour8 {
             setHourlyOutlets1(type: changedHourlyValues)
-        } else if hour0TimeLabel.text == hour4 {
+        } else if hour0TimeLabel.text == Hour.sharedInstance.hour4 {
             setHourlyOutlets0(type: changedHourlyValues)
         }
     }
@@ -1150,7 +1150,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             }
             
             hideExtendedDayLabels(hidden: false, label0: day0SummaryLabel, label1: day0Slot1, label2: day0Slot2, label3: day0Slot3, label4: day0Slot4, label5: day0Slot5, label6: day0Slot6!, label7: day0Slot7, label8: day0Slot8, label9: day0Slot9, label10: day0Slot10)
-            setExtendedDayLabels(summary: day0Summary, precip: day0Precip, humidity: day0Humidity, dewPoint: day0DewPoint, visibility: day0Visibility, sunrise: day0Sunrise, accum: day0PrecipAccum, wind: day0Wind, windGust: day0WindGust, windBearing: day0WindBearing, pressure: day0Pressure, uvIndex: day0UVIndex, sunset: day0Sunset, label0: day0SummaryLabel, label1: day0Slot1, label2: day0Slot2, label3: day0Slot3, label4: day0Slot4, label5: day0Slot5, label6: day0Slot6, label7: day0Slot7, label8: day0Slot8, label9: day0Slot9, label10: day0Slot10)
+            setExtendedDayLabels(summary: Day0.sharedInstance.summary ?? "", precip: Day0.sharedInstance.precip ?? 0, humidity: Day0.sharedInstance.humidity ?? 0, dewPoint: Day0.sharedInstance.dewPoint , visibility: Day0.sharedInstance.visibility, sunrise: Day0.sharedInstance.sunrise ?? "", accum: Day0.sharedInstance.precipAccum ?? 0, wind: Day0.sharedInstance.wind ?? 0, windGust: Day0.sharedInstance.windGust, windBearing: Day0.sharedInstance.windBearing, pressure: Day0.sharedInstance.pressure, uvIndex: Day0.sharedInstance.uvIndex, sunset: Day0.sharedInstance.sunset ?? "", label0: day0SummaryLabel, label1: day0Slot1, label2: day0Slot2, label3: day0Slot3, label4: day0Slot4, label5: day0Slot5, label6: day0Slot6, label7: day0Slot7, label8: day0Slot8, label9: day0Slot9, label10: day0Slot10)
         } else {
             day0Height.constant = 60
             hideExtendedDayLabels(hidden: true, label0: day0SummaryLabel, label1: day0Slot1, label2: day0Slot2, label3: day0Slot3, label4: day0Slot4, label5: day0Slot5, label6: day0Slot6!, label7: day0Slot7, label8: day0Slot8, label9: day0Slot9, label10: day0Slot10)
@@ -1168,7 +1168,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             }
             
             hideExtendedDayLabels(hidden: false, label0: day1SummaryLabel, label1: day1Slot1, label2: day1Slot2, label3: day1Slot3, label4: day1Slot4, label5: day1Slot5, label6: day1Slot6!, label7: day1Slot7, label8: day1Slot8, label9: day1Slot9, label10: day1Slot10)
-            setExtendedDayLabels(summary: day1Summary, precip: day1Precip, humidity: day1Humidity, dewPoint: day1DewPoint, visibility: day1Visibility, sunrise: day1Sunrise, accum: day1PrecipAccum, wind: day1Wind, windGust: day1WindGust, windBearing: day1WindBearing, pressure: day1Pressure, uvIndex: day1UVIndex, sunset: day1Sunset, label0: day1SummaryLabel, label1: day1Slot1, label2: day1Slot2, label3: day1Slot3, label4: day1Slot4, label5: day1Slot5, label6: day1Slot6, label7: day1Slot7, label8: day1Slot8, label9: day1Slot9, label10: day1Slot10)
+            setExtendedDayLabels(summary: Day1.sharedInstance.summary ?? "", precip: Day1.sharedInstance.precip ?? 0, humidity: Day1.sharedInstance.humidity ?? 0, dewPoint: Day1.sharedInstance.dewPoint , visibility: Day1.sharedInstance.visibility, sunrise: Day1.sharedInstance.sunrise ?? "", accum: Day1.sharedInstance.precipAccum ?? 0, wind: Day1.sharedInstance.wind ?? 0, windGust: Day1.sharedInstance.windGust, windBearing: Day1.sharedInstance.windBearing, pressure: Day1.sharedInstance.pressure, uvIndex: Day1.sharedInstance.uvIndex, sunset: Day1.sharedInstance.sunset ?? "", label0: day1SummaryLabel, label1: day1Slot1, label2: day1Slot2, label3: day1Slot3, label4: day1Slot4, label5: day1Slot5, label6: day1Slot6, label7: day1Slot7, label8: day1Slot8, label9: day1Slot9, label10: day1Slot10)
         } else {
             day1Height.constant = 60
             hideExtendedDayLabels(hidden: true, label0: day1SummaryLabel, label1: day1Slot1, label2: day1Slot2, label3: day1Slot3, label4: day1Slot4, label5: day1Slot5, label6: day1Slot6!, label7: day1Slot7, label8: day1Slot8, label9: day1Slot9, label10: day1Slot10)
@@ -1186,7 +1186,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             }
             
             hideExtendedDayLabels(hidden: false, label0: day2SummaryLabel, label1: day2Slot1, label2: day2Slot2, label3: day2Slot3, label4: day2Slot4, label5: day2Slot5, label6: day2Slot6!, label7: day2Slot7, label8: day2Slot8, label9: day2Slot9, label10: day2Slot10)
-            setExtendedDayLabels(summary: day2Summary, precip: day2Precip, humidity: day2Humidity, dewPoint: day2DewPoint, visibility: day2Visibility, sunrise: day2Sunrise, accum: day2PrecipAccum, wind: day2Wind, windGust: day2WindGust, windBearing: day2WindBearing, pressure: day2Pressure, uvIndex: day2UVIndex, sunset: day2Sunset, label0: day2SummaryLabel, label1: day2Slot1, label2: day2Slot2, label3: day2Slot3, label4: day2Slot4, label5: day2Slot5, label6: day2Slot6, label7: day2Slot7, label8: day2Slot8, label9: day2Slot9, label10: day2Slot10)
+            setExtendedDayLabels(summary: Day2.sharedInstance.summary ?? "", precip: Day2.sharedInstance.precip ?? 0, humidity: Day2.sharedInstance.humidity ?? 0, dewPoint: Day2.sharedInstance.dewPoint , visibility: Day2.sharedInstance.visibility, sunrise: Day2.sharedInstance.sunrise ?? "", accum: Day2.sharedInstance.precipAccum ?? 0, wind: Day2.sharedInstance.wind ?? 0, windGust: Day2.sharedInstance.windGust, windBearing: Day2.sharedInstance.windBearing, pressure: Day2.sharedInstance.pressure, uvIndex: Day2.sharedInstance.uvIndex, sunset: Day2.sharedInstance.sunset ?? "", label0: day2SummaryLabel, label1: day2Slot1, label2: day2Slot2, label3: day2Slot3, label4: day2Slot4, label5: day2Slot5, label6: day2Slot6, label7: day2Slot7, label8: day2Slot8, label9: day2Slot9, label10: day2Slot10)
         } else {
             day2Height.constant = 60
             hideExtendedDayLabels(hidden: true, label0: day2SummaryLabel, label1: day2Slot1, label2: day2Slot2, label3: day2Slot3, label4: day2Slot4, label5: day2Slot5, label6: day2Slot6!, label7: day2Slot7, label8: day2Slot8, label9: day2Slot9, label10: day2Slot10)
@@ -1204,7 +1204,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             }
             
             hideExtendedDayLabels(hidden: false, label0: day3SummaryLabel, label1: day3Slot1, label2: day3Slot2, label3: day3Slot3, label4: day3Slot4, label5: day3Slot5, label6: day3Slot6!, label7: day3Slot7, label8: day3Slot8, label9: day3Slot9, label10: day3Slot10)
-            setExtendedDayLabels(summary: day3Summary, precip: day3Precip, humidity: day3Humidity, dewPoint: day3DewPoint, visibility: day3Visibility, sunrise: day3Sunrise, accum: day3PrecipAccum, wind: day3Wind, windGust: day3WindGust, windBearing: day3WindBearing, pressure: day3Pressure, uvIndex: day3UVIndex, sunset: day3Sunset, label0: day3SummaryLabel, label1: day3Slot1, label2: day3Slot2, label3: day3Slot3, label4: day3Slot4, label5: day3Slot5, label6: day3Slot6, label7: day3Slot7, label8: day3Slot8, label9: day3Slot9, label10: day3Slot10)
+            setExtendedDayLabels(summary: Day3.sharedInstance.summary ?? "", precip: Day3.sharedInstance.precip ?? 0, humidity: Day3.sharedInstance.humidity ?? 0, dewPoint: Day3.sharedInstance.dewPoint , visibility: Day3.sharedInstance.visibility, sunrise: Day3.sharedInstance.sunrise ?? "", accum: Day3.sharedInstance.precipAccum ?? 0, wind: Day3.sharedInstance.wind ?? 0, windGust: Day3.sharedInstance.windGust, windBearing: Day3.sharedInstance.windBearing, pressure: Day3.sharedInstance.pressure, uvIndex: Day3.sharedInstance.uvIndex, sunset: Day3.sharedInstance.sunset ?? "", label0: day3SummaryLabel, label1: day3Slot1, label2: day3Slot2, label3: day3Slot3, label4: day3Slot4, label5: day3Slot5, label6: day3Slot6, label7: day3Slot7, label8: day3Slot8, label9: day3Slot9, label10: day3Slot10)
         } else {
             day3Height.constant = 60
             hideExtendedDayLabels(hidden: true, label0: day3SummaryLabel, label1: day3Slot1, label2: day3Slot2, label3: day3Slot3, label4: day3Slot4, label5: day3Slot5, label6: day3Slot6!, label7: day3Slot7, label8: day3Slot8, label9: day3Slot9, label10: day3Slot10)
@@ -1222,7 +1222,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             }
             
             hideExtendedDayLabels(hidden: false, label0: day4SummaryLabel, label1: day4Slot1, label2: day4Slot2, label3: day4Slot3, label4: day4Slot4, label5: day4Slot5, label6: day4Slot6!, label7: day4Slot7, label8: day4Slot8, label9: day4Slot9, label10: day4Slot10)
-            setExtendedDayLabels(summary: day4Summary, precip: day4Precip, humidity: day4Humidity, dewPoint: day4DewPoint, visibility: day4Visibility, sunrise: day4Sunrise, accum: day4PrecipAccum, wind: day4Wind, windGust: day4WindGust, windBearing: day4WindBearing, pressure: day4Pressure, uvIndex: day4UVIndex, sunset: day4Sunset, label0: day4SummaryLabel, label1: day4Slot1, label2: day4Slot2, label3: day4Slot3, label4: day4Slot4, label5: day4Slot5, label6: day4Slot6, label7: day4Slot7, label8: day4Slot8, label9: day4Slot9, label10: day4Slot10)
+            setExtendedDayLabels(summary: Day4.sharedInstance.summary ?? "", precip: Day4.sharedInstance.precip ?? 0, humidity: Day4.sharedInstance.humidity ?? 0, dewPoint: Day4.sharedInstance.dewPoint , visibility: Day4.sharedInstance.visibility, sunrise: Day4.sharedInstance.sunrise ?? "", accum: Day4.sharedInstance.precipAccum ?? 0, wind: Day4.sharedInstance.wind ?? 0, windGust: Day4.sharedInstance.windGust, windBearing: Day4.sharedInstance.windBearing, pressure: Day4.sharedInstance.pressure, uvIndex: Day4.sharedInstance.uvIndex, sunset: Day4.sharedInstance.sunset ?? "", label0: day4SummaryLabel, label1: day4Slot1, label2: day4Slot2, label3: day4Slot3, label4: day4Slot4, label5: day4Slot5, label6: day4Slot6, label7: day4Slot7, label8: day4Slot8, label9: day4Slot9, label10: day4Slot10)
         } else {
             day4Height.constant = 60
             hideExtendedDayLabels(hidden: true, label0: day4SummaryLabel, label1: day4Slot1, label2: day4Slot2, label3: day4Slot3, label4: day4Slot4, label5: day4Slot5, label6: day4Slot6!, label7: day4Slot7, label8: day4Slot8, label9: day4Slot9, label10: day4Slot10)
@@ -1240,7 +1240,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             }
             
             hideExtendedDayLabels(hidden: false, label0: day5SummaryLabel, label1: day5Slot1, label2: day5Slot2, label3: day5Slot3, label4: day5Slot4, label5: day5Slot5, label6: day5Slot6!, label7: day5Slot7, label8: day5Slot8, label9: day5Slot9, label10: day5Slot10)
-            setExtendedDayLabels(summary: day5Summary, precip: day5Precip, humidity: day5Humidity, dewPoint: day5DewPoint, visibility: day5Visibility, sunrise: day5Sunrise, accum: day5PrecipAccum, wind: day5Wind, windGust: day5WindGust, windBearing: day5WindBearing, pressure: day5Pressure, uvIndex: day5UVIndex, sunset: day5Sunset, label0: day5SummaryLabel, label1: day5Slot1, label2: day5Slot2, label3: day5Slot3, label4: day5Slot4, label5: day5Slot5, label6: day5Slot6, label7: day5Slot7, label8: day5Slot8, label9: day5Slot9, label10: day5Slot10)
+            setExtendedDayLabels(summary: Day5.sharedInstance.summary ?? "", precip: Day5.sharedInstance.precip ?? 0, humidity: Day5.sharedInstance.humidity ?? 0, dewPoint: Day5.sharedInstance.dewPoint , visibility: Day5.sharedInstance.visibility, sunrise: Day5.sharedInstance.sunrise ?? "", accum: Day5.sharedInstance.precipAccum ?? 0, wind: Day5.sharedInstance.wind ?? 0, windGust: Day5.sharedInstance.windGust, windBearing: Day5.sharedInstance.windBearing, pressure: Day5.sharedInstance.pressure, uvIndex: Day5.sharedInstance.uvIndex, sunset: Day5.sharedInstance.sunset ?? "", label0: day5SummaryLabel, label1: day5Slot1, label2: day5Slot2, label3: day5Slot3, label4: day5Slot4, label5: day5Slot5, label6: day5Slot6, label7: day5Slot7, label8: day5Slot8, label9: day5Slot9, label10: day5Slot10)
         } else {
             day5Height.constant = 60
             hideExtendedDayLabels(hidden: true, label0: day5SummaryLabel, label1: day5Slot1, label2: day5Slot2, label3: day5Slot3, label4: day5Slot4, label5: day5Slot5, label6: day5Slot6!, label7: day5Slot7, label8: day5Slot8, label9: day5Slot9, label10: day5Slot10)
@@ -1258,7 +1258,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             }
             
             hideExtendedDayLabels(hidden: false, label0: day6SummaryLabel, label1: day6Slot1, label2: day6Slot2, label3: day6Slot3, label4: day6Slot4, label5: day6Slot5, label6: day6Slot6!, label7: day6Slot7, label8: day6Slot8, label9: day6Slot9, label10: day6Slot10)
-            setExtendedDayLabels(summary: day6Summary, precip: day6Precip, humidity: day6Humidity, dewPoint: day6DewPoint, visibility: day6Visibility, sunrise: day6Sunrise, accum: day6PrecipAccum, wind: day6Wind, windGust: day6WindGust, windBearing: day6WindBearing, pressure: day6Pressure, uvIndex: day6UVIndex, sunset: day6Sunset, label0: day6SummaryLabel, label1: day6Slot1, label2: day6Slot2, label3: day6Slot3, label4: day6Slot4, label5: day6Slot5, label6: day6Slot6, label7: day6Slot7, label8: day6Slot8, label9: day6Slot9, label10: day6Slot10)
+            setExtendedDayLabels(summary: Day6.sharedInstance.summary ?? "", precip: Day6.sharedInstance.precip ?? 0, humidity: Day6.sharedInstance.humidity ?? 0, dewPoint: Day6.sharedInstance.dewPoint , visibility: Day6.sharedInstance.visibility, sunrise: Day6.sharedInstance.sunrise ?? "", accum: Day6.sharedInstance.precipAccum ?? 0, wind: Day6.sharedInstance.wind ?? 0, windGust: Day6.sharedInstance.windGust, windBearing: Day6.sharedInstance.windBearing, pressure: Day6.sharedInstance.pressure, uvIndex: Day6.sharedInstance.uvIndex, sunset: Day6.sharedInstance.sunset ?? "", label0: day6SummaryLabel, label1: day6Slot1, label2: day6Slot2, label3: day6Slot3, label4: day6Slot4, label5: day6Slot5, label6: day6Slot6, label7: day6Slot7, label8: day6Slot8, label9: day6Slot9, label10: day6Slot10)
         } else {
             day6Height.constant = 60
             hideExtendedDayLabels(hidden: true, label0: day6SummaryLabel, label1: day6Slot1, label2: day6Slot2, label3: day6Slot3, label4: day6Slot4, label5: day6Slot5, label6: day6Slot6!, label7: day6Slot7, label8: day6Slot8, label9: day6Slot9, label10: day6Slot10)
@@ -1276,7 +1276,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
             }
             
             hideExtendedDayLabels(hidden: false, label0: day7SummaryLabel, label1: day7Slot1, label2: day7Slot2, label3: day7Slot3, label4: day7Slot4, label5: day7Slot5, label6: day7Slot6!, label7: day7Slot7, label8: day7Slot8, label9: day7Slot9, label10: day7Slot10)
-            setExtendedDayLabels(summary: day7Summary, precip: day7Precip, humidity: day7Humidity, dewPoint: day7DewPoint, visibility: day7Visibility, sunrise: day7Sunrise, accum: day7PrecipAccum, wind: day7Wind, windGust: day7WindGust, windBearing: day7WindBearing, pressure: day7Pressure, uvIndex: day7UVIndex, sunset: day7Sunset, label0: day7SummaryLabel, label1: day7Slot1, label2: day7Slot2, label3: day7Slot3, label4: day7Slot4, label5: day7Slot5, label6: day7Slot6, label7: day7Slot7, label8: day7Slot8, label9: day7Slot9, label10: day7Slot10)
+            setExtendedDayLabels(summary: Day7.sharedInstance.summary ?? "", precip: Day7.sharedInstance.precip ?? 0, humidity: Day7.sharedInstance.humidity ?? 0, dewPoint: Day7.sharedInstance.dewPoint , visibility: Day7.sharedInstance.visibility, sunrise: Day7.sharedInstance.sunrise ?? "", accum: Day7.sharedInstance.precipAccum ?? 0, wind: Day7.sharedInstance.wind ?? 0, windGust: Day7.sharedInstance.windGust, windBearing: Day7.sharedInstance.windBearing, pressure: Day7.sharedInstance.pressure, uvIndex: Day7.sharedInstance.uvIndex, sunset: Day7.sharedInstance.sunset ?? "", label0: day7SummaryLabel, label1: day7Slot1, label2: day7Slot2, label3: day7Slot3, label4: day7Slot4, label5: day7Slot5, label6: day7Slot6, label7: day7Slot7, label8: day7Slot8, label9: day7Slot9, label10: day7Slot10)
         } else {
             day7Height.constant = 60
             hideExtendedDayLabels(hidden: true, label0: day7SummaryLabel, label1: day7Slot1, label2: day7Slot2, label3: day7Slot3, label4: day7Slot4, label5: day7Slot5, label6: day7Slot6!, label7: day7Slot7, label8: day7Slot8, label9: day7Slot9, label10: day7Slot10)
@@ -1289,7 +1289,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         if day8Height.constant == 60 {
             day8Height.constant = 220
             hideExtendedDayLabels(hidden: false, label0: day8SummaryLabel, label1: day8Slot1, label2: day8Slot2, label3: day8Slot3, label4: day8Slot4, label5: day8Slot5, label6: day8Slot6!, label7: day8Slot7, label8: day8Slot8, label9: day8Slot9, label10: day8Slot10)
-            setExtendedDayLabels(summary: day8Summary, precip: day8Precip, humidity: day8Humidity, dewPoint: day8DewPoint, visibility: day8Visibility, sunrise: day8Sunrise, accum: day8PrecipAccum, wind: day8Wind, windGust: day8WindGust, windBearing: day8WindBearing, pressure: day8Pressure, uvIndex: day8UVIndex, sunset: day8Sunset, label0: day8SummaryLabel, label1: day8Slot1, label2: day8Slot2, label3: day8Slot3, label4: day8Slot4, label5: day8Slot5, label6: day8Slot6, label7: day8Slot7, label8: day8Slot8, label9: day8Slot9, label10: day8Slot10)
+            setExtendedDayLabels(summary: Day8.sharedInstance.summary ?? "", precip: Day8.sharedInstance.precip ?? 0, humidity: Day8.sharedInstance.humidity ?? 0, dewPoint: Day8.sharedInstance.dewPoint , visibility: Day8.sharedInstance.visibility, sunrise: Day8.sharedInstance.sunrise ?? "", accum: Day8.sharedInstance.precipAccum ?? 0, wind: Day8.sharedInstance.wind ?? 0, windGust: Day8.sharedInstance.windGust, windBearing: Day8.sharedInstance.windBearing, pressure: Day8.sharedInstance.pressure, uvIndex: Day8.sharedInstance.uvIndex, sunset: Day8.sharedInstance.sunset ?? "", label0: day8SummaryLabel, label1: day8Slot1, label2: day8Slot2, label3: day8Slot3, label4: day8Slot4, label5: day8Slot5, label6: day8Slot6, label7: day8Slot7, label8: day8Slot8, label9: day8Slot9, label10: day8Slot10)
         } else {
             day8Height.constant = 60
             hideExtendedDayLabels(hidden: true, label0: day8SummaryLabel, label1: day8Slot1, label2: day8Slot2, label3: day8Slot3, label4: day8Slot4, label5: day8Slot5, label6: day8Slot6!, label7: day8Slot7, label8: day8Slot8, label9: day8Slot9, label10: day8Slot10)
@@ -1302,7 +1302,7 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         if day9Height.constant == 60 {
             day9Height.constant = 220
             hideExtendedDayLabels(hidden: false, label0: day9SummaryLabel, label1: day9Slot1, label2: day9Slot2, label3: day9Slot3, label4: day9Slot4, label5: day9Slot5, label6: day9Slot6!, label7: day9Slot7, label8: day9Slot8, label9: day9Slot9, label10: day9Slot10)
-            setExtendedDayLabels(summary: day9Summary, precip: day9Precip, humidity: day9Humidity, dewPoint: day9DewPoint, visibility: day9Visibility, sunrise: day9Sunrise, accum: day9PrecipAccum, wind: day9Wind, windGust: day9WindGust, windBearing: day9WindBearing, pressure: day9Pressure, uvIndex: day9UVIndex, sunset: day9Sunset, label0: day9SummaryLabel, label1: day9Slot1, label2: day9Slot2, label3: day9Slot3, label4: day9Slot4, label5: day9Slot5, label6: day9Slot6, label7: day9Slot7, label8: day9Slot8, label9: day9Slot9, label10: day9Slot10)
+            setExtendedDayLabels(summary: Day9.sharedInstance.summary ?? "", precip: Day9.sharedInstance.precip ?? 0, humidity: Day9.sharedInstance.humidity ?? 0, dewPoint: Day9.sharedInstance.dewPoint , visibility: Day9.sharedInstance.visibility, sunrise: Day9.sharedInstance.sunrise ?? "", accum: Day9.sharedInstance.precipAccum ?? 0, wind: Day9.sharedInstance.wind ?? 0, windGust: Day9.sharedInstance.windGust, windBearing: Day9.sharedInstance.windBearing, pressure: Day9.sharedInstance.pressure, uvIndex: Day9.sharedInstance.uvIndex, sunset: Day9.sharedInstance.sunset ?? "", label0: day9SummaryLabel, label1: day9Slot1, label2: day9Slot2, label3: day9Slot3, label4: day9Slot4, label5: day9Slot5, label6: day9Slot6, label7: day9Slot7, label8: day9Slot8, label9: day9Slot9, label10: day9Slot10)
         } else {
             day9Height.constant = 60
             hideExtendedDayLabels(hidden: true, label0: day9SummaryLabel, label1: day9Slot1, label2: day9Slot2, label3: day9Slot3, label4: day9Slot4, label5: day9Slot5, label6: day9Slot6!, label7: day9Slot7, label8: day9Slot8, label9: day9Slot9, label10: day9Slot10)
@@ -1317,13 +1317,6 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         } else {
             currentConditionViewHeight.constant = 115
             conditionSlotLabel4.isHidden = true
-        }
-        
-        if minuteSummary.isEmpty == false && minuteSummary != "none" {
-            // Check if there is current precipitation
-            if precipitation >= 80 && precipitationType != "none" && endingMinuteSummary != "none" {
-                currentConditonLabel.text = "\(precipitationType.capitalizingFirstLetter()) stops in \(endingMinuteSummary)."
-            }
         }
         
         conditionSlotLabel0.text = "Feels like \(feelsLikeTemperature)°"
@@ -1362,10 +1355,10 @@ class ForecastViewController: UIViewController, UITabBarControllerDelegate, CLLo
         conditionSlotLabel0.text = "Accum. \(precipAccumulation)\(unitsPrecipitation)"
         conditionSlotLabel1.text = "Humidity \(humidity)%"
         conditionSlotLabel2.text = "Pressure \(pressure)\(unitsPressure)"
-
-        if cloudCover > cloudCoverHour1 || cloudCover > cloudCoverHour2 || cloudCover > cloudCoverHour3 || cloudCover > cloudCoverHour4 {
+        
+        if cloudCover > HourlyCloudCover.sharedInstance.hour1 ?? 0 || cloudCover > HourlyCloudCover.sharedInstance.hour2 ?? 0 || cloudCover > HourlyCloudCover.sharedInstance.hour3 ?? 0 || cloudCover > HourlyCloudCover.sharedInstance.hour4 ?? 0 {
             conditionSlotLabel3.text = "Clouds \(cloudCover)% & decr."
-        } else if cloudCover < cloudCoverHour1 || cloudCover < cloudCoverHour2 || cloudCover < cloudCoverHour3 || cloudCover < cloudCoverHour4 {
+        } else if cloudCover < HourlyCloudCover.sharedInstance.hour1 ?? 0 || cloudCover < HourlyCloudCover.sharedInstance.hour2 ?? 0 || cloudCover < HourlyCloudCover.sharedInstance.hour3 ?? 0 || cloudCover < HourlyCloudCover.sharedInstance.hour4 ?? 0 {
             conditionSlotLabel3.text = "Clouds \(cloudCover)% & incr."
         } else {
             conditionSlotLabel3.text = "Clouds \(cloudCover)%"

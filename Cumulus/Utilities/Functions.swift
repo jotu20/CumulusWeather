@@ -793,51 +793,6 @@ func dailyCloudCoverProb(day: DataPoint) -> Int {
     return dailyValue
 }
 
-func minutePrecipProb(value: Int, minute: DataBlock?) -> Int {
-    var minuteValue: Int = 0
-    
-    let fetchMinute = minute!.data[value]
-    let minuteArray = fetchMinute
-    
-    if minuteArray.precipitationProbability != nil {
-        minuteValue = Int(minuteArray.precipitationProbability! * 100)
-    } else {
-        minuteValue = 0
-    }
-    
-    return minuteValue
-}
-
-func minutePrecipIntensity(value: Int, minute: DataBlock?) -> Double {
-    var minuteValue: Double = 0
-    
-    let fetchMinute = minute!.data[value]
-    let minuteArray = fetchMinute
-    
-    if minuteArray.precipitationIntensity != nil {
-        minuteValue = Double(minuteArray.precipitationIntensity!).rounded(toPlaces: 2)
-    } else {
-        minuteValue = 0
-    }
-    
-    return minuteValue
-}
-
-func minutePrecipType(value: Int, minute: DataBlock?) -> String {
-    var minuteValue: String = ""
-    
-    let fetchMinute = minute!.data[value]
-    let minuteArray = fetchMinute
-    
-    if minuteArray.precipitationType != nil {
-        minuteValue = "\(minuteArray.precipitationType!)"
-    } else {
-        minuteValue = "none"
-    }
-    
-    return minuteValue
-}
-
 func hourPrecipProb(value: Int, hour: DataBlock?) -> Int {
     var hourValue: Int = 0
     

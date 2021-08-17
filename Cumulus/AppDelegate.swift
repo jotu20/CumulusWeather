@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         checkSavedColor()
         
         // Initialize Google Places
-        GMSPlacesClient.provideAPIKey("AIzaSyD7itQU5T62p9XCRa9qXSXvqjTCB4f9nGI")
+        GMSPlacesClient.provideAPIKey("AIzaSyBajb_PcxUkLHvkNyQjVwbLD2IIBj62kdY")
         
         // Complete transactions
         SwiftyStoreKit.completeTransactions(atomically: true) { purchases in

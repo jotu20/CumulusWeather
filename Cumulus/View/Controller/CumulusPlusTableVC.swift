@@ -365,6 +365,8 @@ extension CumulusPlusTableViewController {
                 return alertWithTitle("Purchase failed", message: "Ineligible for offer")
             case .unsupportedPlatform:
                 return alertWithTitle("Purchase failed", message: "Uknown error")
+            case .overlayPresentedInBackgroundScene:
+                return alertWithTitle("Purchase failed", message: "Uknown error")
             @unknown default:
                 return alertWithTitle("Purchase failed", message: "Uknown error")
             }
